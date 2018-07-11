@@ -1,0 +1,23 @@
+{
+	"name": "TempLinearApproximate",
+	"type": "Plugin",
+	"description": "A temporal smoother",
+	"website": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth",
+	"doom9": "https://forum.doom9.org/showthread.php?t=169782",
+	"category": "Denoising",
+	"identifier": "denoising.temporal.templinearapproximate",
+	"namespace": "tla",
+	"releases": [{
+		"version": "r3",
+		"win32": {
+			"url": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth/downloads/templinearapproximate-r3.7z",
+			"files": ["templinearapproximate-r3/32bit/templinearapproximate.dll"],
+			"hash": { "templinearapproximate.dll": "4c09885b998070966274c97cb3b561fc65f379fb" }
+		},
+		"win64": {
+			"url": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth/downloads/templinearapproximate-r3.7z",
+			"files": ["templinearapproximate-r3/64bit/templinearapproximate.dll"],
+			"hash": { "templinearapproximate.dll": "1e4f6042fadb254ec77e295e244644e4d743f26f" }
+		}
+	}]
+}

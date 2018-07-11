@@ -1,0 +1,23 @@
+{
+	"name": "SmoothUV",
+	"type": "Plugin",
+	"description": "A spatial derainbow filter",
+	"website": "https://github.com/dubhater/vapoursynth-smoothuv",
+	"doom9": "https://forum.doom9.org/showthread.php?t=175520",
+	"category": "Derainbowing",
+	"identifier": "com.nodame.smoothuv",
+	"namespace": "smoothuv",
+	"releases": [{
+		"version": "v2",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win32.7z",
+			"files": ["libsmoothuv.dll"],
+			"hash": { "libsmoothuv.dll": "67cfb0cec822c5f8ca3caef2b48034ebf22082e6" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win64.7z",
+			"files": ["libsmoothuv.dll"],
+			"hash": { "libsmoothuv.dll": "2780e39bd1c974aea580c57f2f041233fc9db1e6" }
+		}
+	}]
+}

@@ -1,0 +1,23 @@
+{
+	"name": "Yadifmod",
+	"type": "Plugin",
+	"description": "Port of the Avisynth deinterlacer",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171028",
+	"category": "Deinterlacing",
+	"identifier": "com.holywu.yadifmod",
+	"namespace": "yadifmod",
+	"releases": [{
+		"version": "r10",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r10/Yadifmod-r10.7z",
+			"files": ["Win32/Yadifmod.dll"],
+			"hash": { "Yadifmod.dll": "d65bec50c505ddd4254b7735ec65b31614f884aa" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r10/Yadifmod-r10.7z",
+			"files": ["Win64/Yadifmod.dll"],
+			"hash": { "Yadifmod.dll": "d731d7a37faa954b140980e8dab09bf3e692b04d" }
+		}
+	}]
+}

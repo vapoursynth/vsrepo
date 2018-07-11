@@ -1,0 +1,19 @@
+{
+	"name": "RainbowSmooth",
+	"type": "PyScript",
+	"description": "RainbowSmooth is a script which adds edge detection to SmoothUV. It is a port of the Avisynth function rainbow_smooth()",
+	"website": "https://github.com/dubhater/vapoursynth-smoothuv",
+	"doom9": "https://forum.doom9.org/showthread.php?t=175520",
+	"category": "Derainbowing",
+	"identifier": "rainbowsmooth",
+	"modulename": "RainbowSmooth",
+	"dependencies": ["com.nodame.smoothuv"],
+		"releases": [{
+		"version": "v2",
+		"script": {
+			"url": "https://github.com/dubhater/vapoursynth-smoothuv/archive/v2.zip",
+			"files": ["vapoursynth-smoothuv-2/RainbowSmooth.py"],
+			"hash": { "RainbowSmooth.py": "2479c799ad1be9b1e6dfc2c50bf8595310934b2a" }
+		}
+	}]
+}

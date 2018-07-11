@@ -1,0 +1,23 @@
+{
+	"name": "TDeintMod",
+	"type": "Plugin",
+	"description": "Port of the Avisynth deinterlacer",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171295",
+	"category": "Deinterlacing",
+	"identifier": "com.holywu.tdeintmod",
+	"namespace": "tdm",
+	"releases": [{
+		"version": "r10",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r10/TDeintMod-r10.7z",
+			"files": ["Win32/TDeintMod.dll"],
+			"hash": { "TDeintMod.dll": "c180977547639696d58f87e13b49d2d341e9a4da" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r10/TDeintMod-r10.7z",
+			"files": ["Win64/TDeintMod.dll"],
+			"hash": { "TDeintMod.dll": "b985d7969765decde045461cf2b23b6128d84e82" }
+		}
+	}]
+}

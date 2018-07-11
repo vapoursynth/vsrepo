@@ -1,0 +1,23 @@
+{
+	"name": "TComb",
+	"type": "Plugin",
+	"description": "A temporal comb filter, it reduces rainbowing and dot crawl artifacts in static areas of the picture",
+	"website": "https://github.com/dubhater/vapoursynth-tcomb",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171124",
+	"category": "Dot Crawl and Rainbows",
+	"identifier": "com.nodame.tcomb",
+	"namespace": "tcomb",
+	"releases": [{
+		"version": "v3",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v3/vapoursynth-tcomb-v3-win32.7z",
+			"files": ["libtcomb.dll"],
+			"hash": { "libtcomb.dll": "4b4e576e78ae2f319081974465f8488374884519" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v3/vapoursynth-tcomb-v3-win64.7z",
+			"files": ["libtcomb.dll"],
+			"hash": { "libtcomb.dll": "17bfded31aadf5049d4bd5c0ea88ce641582c637" }
+		}
+	}]
+}

@@ -8,14 +8,14 @@
 	"identifier": "com.deinterlace.nnedi3.weights",
 	"modulename": "nnedi3_weights",
 	"releases": [{
-		"version": "git-1",
+		"version": "r1",
 		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-nnedi3/raw/v6/src/nnedi3_weights.bin",
+			"url": "https://github.com/sekrit-twc/znedi3/releases/download/r1/znedi3_r1.7z",
 			"files": ["nnedi3_weights.bin"],
 			"hash": { "nnedi3_weights.bin": "c0d51b072cfe6fe68b76bd196ddd593cb86adbff" }
 		},
 		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-nnedi3/raw/v6/src/nnedi3_weights.bin",
+			"url": "https://github.com/sekrit-twc/znedi3/releases/download/r1/znedi3_r1.7z",
 			"files": ["nnedi3_weights.bin"],
 			"hash": { "nnedi3_weights.bin": "c0d51b072cfe6fe68b76bd196ddd593cb86adbff" }
 		}

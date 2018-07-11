@@ -1,0 +1,23 @@
+{
+	"name": "EEDI2",
+	"type": "Plugin",
+	"description": "",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171136",
+	"category": "Deinterlacing",
+	"identifier": "com.holywu.eedi2",
+	"namespace": "eedi2",
+	"releases": [{
+		"version": "r7",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r7/EEDI2-r7.7z",
+			"files": ["Win32/EEDI2.dll"],
+			"hash": { "EEDI2.dll": "a4f30144a8e78d577a74d40bd6dbc7733047f8c2" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r7/EEDI2-r7.7z",
+			"files": ["Win64/EEDI2.dll"],
+			"hash": { "EEDI2.dll": "bc140e0230e8f0bdfc2b79ff1e43b0c6d5c86483" }
+		}
+	}]
+}

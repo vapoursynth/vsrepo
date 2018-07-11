@@ -1,0 +1,23 @@
+{
+	"name": "KNLMeansCL",
+	"type": "Plugin",
+	"description": "OpenCL Non-local means denoising",
+	"website": "https://github.com/Khanattila/KNLMeansCL",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171379",
+	"category": "Denoising",
+	"identifier": "com.Khanattila.KNLMeansCL",
+	"namespace": "knlm",
+	"releases": [{
+		"version": "v1.1.1",
+		"win32": {
+			"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.1/KNLMeansCL-v1.1.1.zip",
+			"files": ["KNLMeansCL.dll"],
+			"hash": { "KNLMeansCL.dll": "e21655519f572de93e8154a8bbe3613318f04b43" }
+		},
+		"win64": {
+			"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.1/KNLMeansCL-v1.1.1.zip",
+			"files": ["x64/KNLMeansCL.dll"],
+			"hash": { "KNLMeansCL.dll": "57d42afcd8fbefd63ac9e2838d4b4e4fe3da4378" }
+		}
+	}]
+}

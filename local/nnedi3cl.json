@@ -1,0 +1,24 @@
+{
+	"name": "NNEDI3CL",
+	"type": "Plugin",
+	"description": "OpenCL version of NNEDI3",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL",
+	"doom9": "https://forum.doom9.org/showthread.php?t=174902",
+	"category": "Deinterlacing",
+	"identifier": "com.holywu.nnedi3cl",
+	"namespace": "nnedi3cl",
+	"dependencies": ["com.deinterlace.nnedi3.weights"],
+	"releases": [{
+		"version": "r7",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r7/NNEDI3CL-r7.7z",
+			"files": ["Win32/NNEDI3CL.dll"],
+			"hash": { "NNEDI3CL.dll": "86f8f20542d9c8e6be27ada566cfdbf5d67dedf0" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r7/NNEDI3CL-r7.7z",
+			"files": ["Win64/NNEDI3CL.dll"],
+			"hash": { "NNEDI3CL.dll": "3cd11c2dc0dda3ca770b156791d129878885ee20" }
+		}
+	}]
+}

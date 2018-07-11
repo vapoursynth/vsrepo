@@ -1,0 +1,23 @@
+{
+	"name": "MVTools",
+	"type": "Plugin",
+	"description": "MVTools port",
+	"website": "https://github.com/dubhater/vapoursynth-mvtools",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171207",
+	"category": "Others",
+	"identifier": "com.nodame.mvtools",
+	"namespace": "mv",
+	"releases": [{
+		"version": "v20",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v20/vapoursynth-mvtools-v20-win32.7z",
+			"files": ["libmvtools.dll"],
+			"hash": { "libmvtools.dll": "2976b78aec302aeff0474e4d22a547d5b2e447e2" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v20/vapoursynth-mvtools-v20-win64.7z",
+			"files": ["libmvtools.dll"],
+			"hash": { "libmvtools.dll": "569b1f614cf340a8f7606e72b60a33a682e08b7d" }
+		}
+	}]
+}

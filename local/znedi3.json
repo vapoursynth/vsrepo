@@ -1,0 +1,18 @@
+{
+	"name": "ZNEDI3",
+	"type": "Plugin",
+	"description": "Alternate optimized version of NNEDI3",
+	"website": "https://github.com/sekrit-twc/znedi3",
+	"category": "Deinterlacing",
+	"identifier": "xxx.abc.znedi3",
+	"namespace": "znedi3",
+	"dependencies": ["com.deinterlace.nnedi3.weights"],
+	"releases": [{
+		"version": "r1",
+		"win64": {
+			"url": "https://github.com/sekrit-twc/znedi3/releases/download/r1/znedi3_r1.7z",
+			"files": ["vsznedi3.dll"],
+			"hash": { "vsznedi3.dll": "ea2ed6df68f355a2694d1fffa9544880288bcc51" }
+		}
+	}]
+}

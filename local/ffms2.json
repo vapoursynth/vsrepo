@@ -1,0 +1,35 @@
+{
+	"name": "FFmpegSource2",
+	"type": "Plugin",
+	"description": "A general source plugin based on FFmpeg",
+	"website": "https://github.com/FFMS/ffms2",
+	"doom9": "https://forum.doom9.org/showthread.php?t=127037",
+	"category": "Source/Output",
+	"identifier": "com.vapoursynth.ffms2",
+	"namespace": "ffms2",
+	"releases": [{
+		"version": "2.23.1",
+		"win32": {
+			"url": "https://github.com/FFMS/ffms2/releases/download/2.23/ffms2-2.23.1-msvc.7z",
+			"files": ["ffms2-2.23.1-msvc/x86/ffms2.dll"],
+			"hash": { "ffms2.dll": "99f8aedc2a3855d6779addc2c62bbceaca4ddfca" }
+		},
+		"win64": {
+			"url": "https://github.com/FFMS/ffms2/releases/download/2.23/ffms2-2.23.1-msvc.7z",
+			"files": ["ffms2-2.23.1-msvc/x64/ffms2.dll"],
+			"hash": { "ffms2.dll": "91fd8fa55f333acdd7f9d14aab293d02aab3fb37" }
+		}
+	}, {
+		"version": "2.22",
+		"win32": {
+			"url": "https://github.com/FFMS/ffms2/releases/download/2.22/ffms2-2.22-msvc.7z",
+			"files": ["ffms2-2.22-msvc/x86/ffms2.dll"],
+			"hash": { "ffms2.dll": "262b7d3a939b32bdfc56d43acf0d99029ea153bc" }
+		},
+		"win64": {
+			"url": "https://github.com/FFMS/ffms2/releases/download/2.22/ffms2-2.22-msvc.7z",
+			"files": ["ffms2-2.22-msvc/x64/ffms2.dll"],
+			"hash": { "ffms2.dll": "f9f0db746b6dc2363fb8bbdcc5253cdeca2ac4ee" }
+		}
+	}]
+}

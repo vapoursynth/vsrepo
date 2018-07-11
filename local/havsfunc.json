@@ -1,0 +1,22 @@
+{
+	"name": "havsfunc",
+	"type": "PyScript",
+	"description": "A collection of ported popular Avisynth scripts such as QTGMC",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/havsfunc",
+	"doom9": "https://forum.doom9.org/showthread.php?t=166582",
+	"category": "Scripts",
+	"identifier": "havsfunc",
+	"modulename": "havsfunc",
+	"dependencies": ["mvsfunc", "adjust", "nnedi3_resample", "xxx.abc.znedi3", "com.holywu.nnedi3cl",
+		"com.nodame.mvtools", "com.holywu.dfttest", "com.holywu.eedi2", "fmtconv", "com.holywu.eedi3",
+		"com.mio.sangnom", "com.holywu.deblock", "com.Khanattila.KNLMeansCL", "com.holywu.ttempsmooth",
+		"com.holywu.ctmf", "fft3dfilter"],
+	"releases": [{
+		"version": "r30",
+		"script": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/havsfunc/archive/r30.zip",
+			"files": ["havsfunc-r30/havsfunc.py"],
+			"hash": { "havsfunc.py": "aac23d25ca387e8ebc78c408be4804ff6a52c353" }
+		}
+	}]
+}

@@ -1,0 +1,23 @@
+{
+	"name": "SangNomMod",
+	"type": "Plugin",
+	"description": "SangNom is a single field deinterlacer using edge-directed interpolation but nowadays it's mainly used in anti-aliasing scripts.",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod",
+	"doom9": "https://forum.doom9.org/showthread.php?t=173752",
+	"category": "Deinterlacing",
+	"identifier": "com.mio.sangnom",
+	"namespace": "sangnom",
+	"releases": [{
+		"version": "v0.1-fix",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod/releases/download/v0.1-fix/sangnommod_v0.1.fix.zip",
+			"files": ["clang/x86/vs_sangnommod.dll"],
+			"hash": { "vs_sangnommod.dll": "1ca4c3ddda220bbc595a7ada15ed2c7cea5d997a" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod/releases/download/v0.1-fix/sangnommod_v0.1.fix.zip",
+			"files": ["clang/x64/vs_sangnommod.dll"],
+			"hash": { "vs_sangnommod.dll": "261667c03b6cf4a5401e4eac611e134c745744e4" }
+		}
+	}]
+}

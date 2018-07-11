@@ -1,0 +1,22 @@
+{
+	"name": "FFTW3 Library",
+	"type": "Plugin",
+	"description": "Package for the FFTW3 library shared between several plugins",
+	"website": "http://www.fftw.org/",
+	"category": "Plugin Dependency",
+	"identifier": "org.fftw.fftw3",
+	"modulename": "fftw3_library",
+	"releases": [{
+		"version": "3.3.5",
+		"win32": {
+			"url": "ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll32.zip",
+			"files": ["libfftw3f-3.dll"],
+			"hash": { "libfftw3f-3.dll": "cd9bac5983c339d43650ac081f86c903c6cd000e" }
+		},
+		"win64": {
+			"url": "ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll64.zip",
+			"files": ["libfftw3f-3.dll"],
+			"hash": { "libfftw3f-3.dll": "4e9eccb805eb876177a6b3a42f912ac52e9f20d2" }
+		}
+	}]
+}

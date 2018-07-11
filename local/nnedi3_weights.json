@@ -1,0 +1,23 @@
+{
+	"name": "NNEDI3 Weights",
+	"type": "Plugin",
+	"description": "Package for the NNEDI3 weights shared between several plugins",
+	"website": "https://github.com/dubhater/vapoursynth-nnedi3",
+	"doom9": "https://forum.doom9.org/showthread.php?t=166434",
+	"category": "Plugin Dependency",
+	"identifier": "com.deinterlace.nnedi3.weights",
+	"modulename": "nnedi3_weights",
+	"releases": [{
+		"version": "git-1",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-nnedi3/raw/v6/src/nnedi3_weights.bin",
+			"files": ["nnedi3_weights.bin"],
+			"hash": { "nnedi3_weights.bin": "c0d51b072cfe6fe68b76bd196ddd593cb86adbff" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-nnedi3/raw/v6/src/nnedi3_weights.bin",
+			"files": ["nnedi3_weights.bin"],
+			"hash": { "nnedi3_weights.bin": "c0d51b072cfe6fe68b76bd196ddd593cb86adbff" }
+		}
+	}]
+}

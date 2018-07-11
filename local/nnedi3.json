@@ -1,0 +1,24 @@
+{
+	"name": "NNEDI3",
+	"type": "Plugin",
+	"description": "Field interpolator/deinterlacer",
+	"website": "https://github.com/dubhater/vapoursynth-nnedi3",
+	"doom9": "https://forum.doom9.org/showthread.php?t=166434",
+	"category": "Deinterlacing",
+	"identifier": "com.deinterlace.nnedi3",
+	"namespace": "nnedi3",
+	"dependencies": ["com.deinterlace.nnedi3.weights"],
+	"releases": [{
+		"version": "v11",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v11/vapoursynth-nnedi3-v11-win32.7z",
+			"files": ["libnnedi3.dll"],
+			"hash": { "libnnedi3.dll": "d8aa0b20ece4f2130a9bdb39eb314763933c7cf9" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v11/vapoursynth-nnedi3-v11-win64.7z",
+			"files": ["libnnedi3.dll"],
+			"hash": { "libnnedi3.dll": "5d286607ac7ee087351336e5ad4976330f74bd30" }
+		}
+	}]
+}

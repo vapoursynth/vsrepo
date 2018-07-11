@@ -1,0 +1,18 @@
+{
+	"name": "mvsfunc",
+	"type": "PyScript",
+	"description": "Wrapper functions to make certain operations simpler",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/mvsfunc",
+	"doom9": "https://forum.doom9.org/showthread.php?t=172564",
+	"category": "Scripts",
+	"identifier": "mvsfunc",
+	"modulename": "mvsfunc",
+	"releases": [{
+		"version": "r8",
+		"script": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/mvsfunc/archive/r8.zip",
+			"files": ["mvsfunc-r8/mvsfunc.py"],
+			"hash": { "mvsfunc.py": "1ff51a028714f30013b7304ca4cf16858d5e595e" }
+		}
+	}]
+}

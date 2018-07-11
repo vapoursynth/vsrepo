@@ -1,0 +1,17 @@
+{
+	"name": "adjust",
+	"type": "PyScript",
+	"description": "A script equivalent of Avisynth's Tweak function",
+	"website": "https://github.com/dubhater/vapoursynth-adjust",
+	"category": "Script",
+	"identifier": "adjust",
+	"modulename": "adjust",
+	"releases": [{
+		"version": "v1",
+		"script": {
+			"url": "https://github.com/dubhater/vapoursynth-adjust/archive/v1.zip",
+			"files": ["vapoursynth-adjust-1/adjust.py"],
+			"hash": { "adjust.py": "752e99374166951e633447e8c51d5b62b7eb0ba5" }
+		}
+	}]
+}

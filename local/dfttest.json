@@ -1,0 +1,24 @@
+{
+	"name": "DFTTest",
+	"type": "Plugin",
+	"description": "",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171678",
+	"category": "Denoising",
+	"identifier": "com.holywu.dfttest",
+	"namespace": "dfttest",
+	"dependencies": ["org.fftw.fftw3"],
+	"releases": [{
+		"version": "r4",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r4/DFTTest-r4.7z",
+			"files": ["Win32/DFTTest.dll"],
+			"hash": { "DFTTest.dll": "b43748093c8ba91dd8178e3a367fb0d6c805bba2" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r4/DFTTest-r4.7z",
+			"files": ["Win64/DFTTest.dll"],
+			"hash": { "DFTTest.dll": "a5ae4dbcb07a94770d66525c4589ac503d4d69e3" }
+		}
+	}]
+}

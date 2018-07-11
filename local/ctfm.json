@@ -1,0 +1,23 @@
+{
+	"name": "CTMF",
+	"type": "Plugin",
+	"description": "Constant Time Median Filtering",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171213",
+	"category": "Others",
+	"identifier": "com.holywu.ctmf",
+	"namespace": "ctfm",
+	"releases": [{
+		"version": "r4",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r4/CTMF-r4.7z",
+			"files": ["Win32/CTMF.dll"],
+			"hash": { "CTMF.dll": "f068131fbbcb4910b218ca79a49dd505c512bd76" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r4/CTMF-r4.7z",
+			"files": ["Win64/CTMF.dll"],
+			"hash": { "CTMF.dll": "7017cc7942bfc8c7bbf2badd70615d8112282103" }
+		}
+	}]
+}

@@ -1,0 +1,23 @@
+{
+	"name": "fmtconv",
+	"type": "Plugin",
+	"description": "High quality bitdepth, colorspace conversion and resizing",
+	"website": "https://github.com/EleonoreMizo/fmtconv",
+	"doom9": "https://forum.doom9.org/showthread.php?t=166504",
+	"category": "Resizing and Format Conversion",
+	"identifier": "fmtconv",
+	"namespace": "fmtc",
+	"releases": [{
+		"version": "r20",
+		"win32": {
+			"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r20/fmtconv-r20.zip",
+			"files": ["win32/fmtconv.dll"],
+			"hash": { "fmtconv.dll": "356fdf4d8a1db8c2094601202a4bc36f16a7940e" }
+		},
+		"win64": {
+			"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r20/fmtconv-r20.zip",
+			"files": ["win64/fmtconv.dll"],
+			"hash": { "fmtconv.dll": "f1acad29d9f2f4695c9d7909ceefc58c7e474777" }
+		}
+	}]
+}

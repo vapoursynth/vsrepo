@@ -1,22 +1,21 @@
 {
-    "packagetypes": [
-	    "Plugin",
-        "PyScript"
+	"packagetypes": [
+		"Plugin",
+		"PyScript"
 	],	
-    "categories": [
-        "Source/Output",
-        "Subtitles",
-        "Resizing and Format Conversion",
-        "Deinterlacing",
-        "Inverse Telecine",
-        "Denoising",
-        "Dot Crawl and Rainbow removal",
-        "Metrics and Analysis",
-        "Other",
+	"categories": [
+		"Source/Output",
+		"Subtitles",
+		"Resizing and Format Conversion",
+		"Deinterlacing",
+		"Inverse Telecine",
+		"Denoising",
+		"Dot Crawl and Rainbow removal",
+		"Metrics and Analysis",
+		"Other",
 		"Script",
 		"Plugin Dependency"
-    ],
-    "sources": [
-
-    ]
+	],
+	"sources": [
+	]
 }

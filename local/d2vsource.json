@@ -1,0 +1,23 @@
+{
+	"name": "D2V Source",
+	"type": "Plugin",
+	"description": "Frame accurate mpeg2 source filter",
+	"website": "https://github.com/dwbuiten/d2vsource",
+	"doom9": "https://forum.doom9.org/showthread.php?t=166399",
+	"category": "Source/Output",
+	"identifier": "com.sources.d2vsource",
+	"namespace": "d2v",
+	"releases": [{
+		"version": "v1.1",
+		"win32": {
+			"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.1/d2vsource-1.1-windows.zip",
+			"files": ["win32/d2vsource.dll"],
+			"hash": { "d2vsource.dll": "de94a9c3d4652761a813fb89de5e62e615ba2435" }
+		},
+		"win64": {
+			"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.1/d2vsource-1.1-windows.zip",
+			"files": ["win64/d2vsource.dll"],
+			"hash": { "d2vsource.dll": "bd6df40d20735a19755e867688b096cf60174c51" }
+		}
+	}]
+}

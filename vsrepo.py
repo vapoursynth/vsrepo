@@ -7,6 +7,7 @@ import zipfile
 import io
 import site
 import os
+import os.path
 import subprocess
 import tempfile
 import argparse
@@ -14,6 +15,15 @@ import winreg
 
 if platform.system() != 'Windows':
     raise Exception('Windows required')
+
+def is_sitepackage_install_portable():
+    try:
+        import vapoursynth
+    except ImportError:
+        return False
+    else:
+        return os.path.exists(os.path.join(os.path.dirname(vapoursynth.__file__), 'portable.vs'))
+    
 
 is_64bits = sys.maxsize > 2**32
 
@@ -30,12 +40,26 @@ if ((args.operation == 'install') or (args.operation == 'upgrade')) == ((args.pa
     raise Exception('Package argument required for install and upgrade operations')
 
 py_script_path = '.\\' if args.portable else site.getusersitepackages() + '\\'
-plugin32_path = 'VapourSynth\\plugins32\\' if args.portable else os.getenv('APPDATA') + '\\VapourSynth\\plugins32\\'
-plugin64_path = 'VapourSynth\\plugins64\\' if args.portable else os.getenv('APPDATA') + '\\VapourSynth\\plugins64\\'
+
+if args.portable:
+    plugin32_path = 'vapoursynth32\\plugins\\'
+    plugin64_path = 'vapoursynth64\\plugins\\'
+elif is_sitepackage_install_portable():
+    import vapoursynth
+    base_path = os.path.dirname(vapoursynth.__file__)
+    plugin32_path = os.path.join(base_path, 'vapoursynth32', 'plugins')
+    plugin64_path = os.path.join(base_path, 'vapoursynth64', 'plugins')
+    del vapoursynth
+else:
+    plugin64_path = os.path.join(os.getenv('APPDATA') + '\\VapourSynth\\plugins32\\'
+    plugin32_path = os.getenv('APPDATA') + '\\VapourSynth\\plugins64\\'
+
 os.makedirs(py_script_path, exist_ok=True)
 os.makedirs(plugin32_path, exist_ok=True)
 os.makedirs(plugin64_path, exist_ok=True)
+
 plugin_path = plugin64_path if is_64bits else plugin32_path
+
 cmd7zip_path = '7z.exe'
 try:
     with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:

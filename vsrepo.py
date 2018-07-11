@@ -138,7 +138,7 @@ def detect_installed_packages():
                     installed_packages[p['identifier']] = 'Unknown'
 
 def list_installed_packages():
-    print_string = "{:20s} {:10s} {:10s} {:s}"
+    print_string = "{:25s} {:10s} {:10s} {:s}"
     print(print_string.format('Name', 'Version', 'Latest', 'Identifier'))
     installed_ids = installed_packages.keys()
     for id in installed_ids:

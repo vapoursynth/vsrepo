@@ -1,0 +1,23 @@
+{
+	"name": "vcmod",
+	"type": "Plugin",
+	"description": "Various filters such as histogram equalization, blur, and watershed segmentation",
+	"website": "http://www.avisynth.nl/users/vcmohan/vcmod/vcmod.html",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171414",
+	"category": "Others",
+	"identifier": "in.vcmohan.mod",
+	"namespace": "vcmod",
+	"releases": [{
+		"version": "17 Oct 2017",
+		"win32": {
+			"url": "http://www.avisynth.nl/users/vcmohan/vcmod/vcmod.7z",
+			"files": ["vcmod.dll"],
+			"hash": { "vcmod.dll": "7c5f51970c8a6f9f0b80b948eb0287b34f1f01f1" }
+		},
+		"win64": {
+			"url": "http://www.avisynth.nl/users/vcmohan/vcmod/vcmod64.7z",
+			"files": ["vcmod.dll"],
+			"hash": { "vcmod.dll": "ecf3edca05a4358e00289bab6747bb4ba1d62681" }
+		}
+	}]
+}

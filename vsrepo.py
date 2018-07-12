@@ -51,8 +51,8 @@ elif is_sitepackage_install_portable():
     plugin64_path = os.path.join(base_path, 'vapoursynth64', 'plugins')
     del vapoursynth
 else:
-    plugin64_path = os.path.join(os.getenv('APPDATA') + '\\VapourSynth\\plugins32\\'
-    plugin32_path = os.getenv('APPDATA') + '\\VapourSynth\\plugins64\\'
+    plugin32_path = os.path.join(os.getenv('APPDATA') + '\\VapourSynth\\plugins32\\'
+    plugin64_path = os.getenv('APPDATA') + '\\VapourSynth\\plugins64\\'
 
 os.makedirs(py_script_path, exist_ok=True)
 os.makedirs(plugin32_path, exist_ok=True)

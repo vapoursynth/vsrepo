@@ -75,6 +75,14 @@ def get_package_from_id(id, required = False):
     if required:
         raise Exception('No package with the identifier ' + id + ' found')
     return None
+	
+def get_package_from_plugin_name(name, required = False):
+    for p in package_list:
+        if p['name'].casefold() == name.casefold():
+            return p
+    if required:
+        raise Exception('No package with the identifier ' + id + ' found')
+    return None
 
 def get_package_from_namespace(namespace, required = False):
     for p in package_list:
@@ -100,6 +108,8 @@ def get_package_from_name(name):
         p = get_package_from_namespace(name)
     if p is None:
         p = get_package_from_modulename(name)
+    if p is None:
+        p = get_package_from_plugin_name(name)
     if p is None:
         raise Exception('Package ' + name + ' not found')
     return p

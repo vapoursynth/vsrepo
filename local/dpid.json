@@ -1,0 +1,18 @@
+{
+	"name": "Dpid",
+	"type": "Plugin",
+	"description": "Rapid, Detail-Preserving Image Downscaler",
+	"website": "https://github.com/WolframRhodium/VapourSynth-dpid",
+	"doom9": "",
+	"category": "Resizing and Format Conversion",
+	"identifier": "com.wolframrhodium.dpid",
+	"namespace": "dpid",
+	"releases": [{
+		"version": "r3",
+		"win64": {
+			"url": "https://github.com/WolframRhodium/VapourSynth-dpid/releases/download/r3/vapoursynth-dpid-r3.zip",
+			"files": ["vapoursynth-dpid-r3/x64/vapoursynth-dpid.dll", "vapoursynth-dpid-r3/x64/cudart64_80.dll"],
+			"hash": { "vapoursynth-dpid.dll": "74055738f66f0898e5b252b3d19996f880fc5726", "cudart64_80.dll": "8cc81b4e6223069d15f11582191f4d75a44ddbe4" }
+		}
+	}]
+}

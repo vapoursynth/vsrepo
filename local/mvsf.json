@@ -1,0 +1,18 @@
+{
+	"name": "MVTools (float)",
+	"type": "Plugin",
+	"description": "MVTools port",
+	"website": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf",
+	"doom9": "https://forum.doom9.org/showthread.php?t=172525",
+	"category": "Others",
+	"identifier": "com.nodame.mvsf",
+	"namespace": "mvsf",
+	"releases": [{
+		"version": "r9",
+		"win64": {
+			"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r9/libmvtools_sf_em64t.7z",
+			"files": ["libmvtools_sf_em64t.dll"],
+			"hash": { "libmvtools_sf_em64t.dll": "a47d9177964b424dfdfefc6f3ff278c81bdc5616" }
+		}
+	}]
+}

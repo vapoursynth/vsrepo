@@ -1,0 +1,19 @@
+{
+	"name": "MCDenoise",
+	"type": "PyScript",
+	"description": "A temporal smoother",
+	"website": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth",
+	"doom9": "https://forum.doom9.org/showthread.php?t=169782",
+	"category": "Denoising",
+	"identifier": "mcdenoise",
+	"modulename": "MCDenoise",
+	"dependencies": ["denoising.temporal.templinearapproximate", "com.holywu.dfttest", "com.nodame.mvsf"],
+	"releases": [{
+		"version": "r3",
+		"script": {
+			"url": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth/downloads/templinearapproximate-r3.7z",
+			"files": ["templinearapproximate-r3/py/MCDenoise.py"],
+			"hash": { "MCDenoise.py": "a6662cde93afb9327977bef972f160becf50a191" }
+		}
+	}]
+}

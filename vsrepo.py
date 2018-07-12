@@ -179,7 +179,7 @@ def detect_installed_packages():
             if bin_name in v:
                 for f in v[bin_name]['hash']:
                     try:
-                        with open(dest_path + f, 'rb') as fh:
+                        with open(os.path.join(dest_path, f), 'rb') as fh:
                             digest = hashlib.sha1(fh.read()).hexdigest()
                             ref_digest = v[bin_name]['hash'][f]
                             if digest != ref_digest:
@@ -226,7 +226,7 @@ def install_files(p):
                     ref_digest = p['releases'][0][bin_name]['hash'][stripped_fn]
                     if digest != ref_digest:
                         raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
-                    with open(dest_path + stripped_fn, 'wb') as outfile:
+                    with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
                         outfile.write(file_data)
     elif url.endswith('.7z'):
         tffd, tfpath = tempfile.mkstemp(prefix='vsm')
@@ -241,7 +241,7 @@ def install_files(p):
             ref_digest = p['releases'][0][bin_name]['hash'][stripped_fn]
             if digest != ref_digest:
                 raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
-            with open(dest_path + stripped_fn, 'wb') as outfile:
+            with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
                 outfile.write(result.stdout)
         os.remove(tfpath)
     elif len(p['releases'][0][bin_name]['files']) == 1:
@@ -251,7 +251,7 @@ def install_files(p):
         ref_digest = p['releases'][0][bin_name]['hash'][stripped_fn]
         if digest != ref_digest:
             raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
-        with open(dest_path + stripped_fn, 'wb') as outfile:
+        with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
             outfile.write(data)
     else:
         raise Exception('Unsupported compression type')

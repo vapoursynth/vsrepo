@@ -1,0 +1,20 @@
+{
+	"name": "Descale Script",
+	"type": "PyScript",
+	"description": "Undoes resizing",
+	"website": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale",
+	"doom9": "https://forum.doom9.org/showthread.php?t=174570",
+	"category": "Resizing and Format Conversion",
+	"identifier": "descale",
+	"namespace": "descale",
+	"modulename": "descale",
+	"dependencies": ["tegaf.asi.xe"],
+	"releases": [{
+		"version": "r2",
+		"script": {
+			"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r2/vapoursynth-descale-r2-win64.zip",
+			"files": ["descale.py"],
+			"hash": { "descale.py": "cd8528ccd075beeb9bc308c9f2d725a1d21bc20f" }
+		}
+	}]
+}

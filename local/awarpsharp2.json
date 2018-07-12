@@ -1,0 +1,23 @@
+{
+	"name": "AWarpSharp2",
+	"type": "Plugin",
+	"description": "AWarpSharp2 sharpens edges by warping them.",
+	"website": "https://github.com/dubhater/vapoursynth-awarpsharp2",
+	"doom9": "https://forum.doom9.org/showthread.php?t=172721",
+	"category": "Others",
+	"identifier": "com.nodame.awarpsharp2",
+	"namespace": "awarpsharp2",
+	"releases": [{
+		"version": "v4",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win32.7z",
+			"files": ["libawarpsharp2.dll"],
+			"hash": { "libawarpsharp2.dll": "4aaa32d096c9f96b80577744620260640d330ebd" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win64.7z",
+			"files": ["libawarpsharp2.dll"],
+			"hash": { "libawarpsharp2.dll": "7b615b7b430aea9b0d9a4ccaa986b5fdcd609c7f" }
+		}
+	}]
+}

@@ -1,0 +1,19 @@
+{
+	"name": "AvsProxy",
+	"type": "Plugin",
+	"description": "Avisynth 32-bit proxy",
+	"website": "https://github.com/sekrit-twc/avsproxy",
+	"doom9": "https://forum.doom9.org/showthread.php?t=175141",
+	"category": "Others",
+	"identifier": "xxx.abc.avsproxy",
+	"namespace": "avsw",
+	"dependencies": ["xxx.abc.avsproxy.binary"],
+	"releases": [{
+		"version": "r1a",
+		"win64": {
+			"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r1a/avsproxy_r1a.7z",
+			"files": ["avsproxy.dll"],
+			"hash": { "avsproxy.dll": "faaf09a922bd3fc25b495a4c12713a735b93cdec" }
+		}
+	}]
+}

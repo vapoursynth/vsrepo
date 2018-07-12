@@ -1,0 +1,19 @@
+{
+	"name": "vsTAAmbk",
+	"type": "PyScript",
+	"description": "AA-script",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/vsTAAmbk",
+	"category": "Scripts",
+	"identifier": "vstaambk",
+	"modulename": "vsTAAmbk",
+	"dependencies": ["com.holywu.eedi2", "xxx.abc.znedi3", "com.nodame.mvtools",
+		"fmtconv", "com.mio.sangnom", "com.holywu.tcanny", "com.nodame.msmoosh"],
+	"releases": [{
+		"version": "v0.8.0",
+		"script": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/vsTAAmbk/releases/download/v0.8.0/vsTAAmbk.v0.8.0.zip",
+			"files": ["vsTAAmbk/vsTAAmbk.py"],
+			"hash": { "vsTAAmbk.py": "a9b2fb80d20e642b36ce47855d05ff8b88d01cbd" }
+		}
+	}]
+}

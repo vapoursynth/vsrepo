@@ -1,0 +1,23 @@
+{
+	"name": "MSmoosh",
+	"type": "Plugin",
+	"description": "High quality bitdepth, colorspace conversion and resizing",
+	"website": "https://github.com/dubhater/vapoursynth-msmoosh",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171159",
+	"category": "Other",
+	"identifier": "com.nodame.msmoosh",
+	"namespace": "msmoosh",
+	"releases": [{
+		"version": "v1.1",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-msmoosh/releases/download/v1.1/vapoursynth-msmoosh-v1.1-win32.7z",
+			"files": ["libmsmoosh.dll"],
+			"hash": { "libmsmoosh.dll": "6e7fb738a0e5c8f0a953c2e7fb0fda68abf02be5" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-msmoosh/releases/download/v1.1/vapoursynth-msmoosh-v1.1-win64.7z",
+			"files": ["libmsmoosh.dll"],
+			"hash": { "libmsmoosh.dll": "0e825c8b34b652cb2dc3a9caef39c18de1293972" }
+		}
+	}]
+}

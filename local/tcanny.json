@@ -1,0 +1,23 @@
+{
+	"name": "TCanny",
+	"type": "Plugin",
+	"description": "Canny edge detection",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny",
+	"doom9": "https://forum.doom9.org/showthread.php?t=172158",
+	"category": "Other",
+	"identifier": "com.holywu.tcanny",
+	"namespace": "tcanny",
+	"releases": [{
+		"version": "r10",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r10/TCanny-r10.7z",
+			"files": ["Win32/TCanny.dll"],
+			"hash": { "TCanny.dll": "5c30f0fa16cacf5e3d8963a921d90a65d7cef913" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r10/TCanny-r10.7z",
+			"files": ["Win64/TCanny.dll"],
+			"hash": { "TCanny.dll": "4e482533be911e1f5d9dec8fb8c23d19c29741a6" }
+		}
+	}]
+}

@@ -1,0 +1,17 @@
+{
+	"name": "AvsProxy Binary",
+	"type": "Plugin",
+	"description": "Package for avsproxy",
+	"website": "https://github.com/sekrit-twc/avsproxy",
+	"category": "Plugin Dependency",
+	"identifier": "xxx.abc.avsproxy.binary",
+	"modulename": "avsproxy_binary",
+	"releases": [{
+		"version": "r1a",
+		"win64": {
+			"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r1a/avsproxy_r1a.7z",
+			"files": ["avshost_native.exe"],
+			"hash": { "avshost_native.exe": "729c8730cf8110db4549ecb5bcfd914ef53f66c6" }
+		}
+	}]
+}

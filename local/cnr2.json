@@ -1,0 +1,23 @@
+{
+	"name": "Cnr2",
+	"type": "Plugin",
+	"description": "Temporal chroma noise reducer",
+	"website": "https://github.com/dubhater/vapoursynth-cnr2",
+	"doom9": "https://forum.doom9.org/showthread.php?t=173659",
+	"category": "Denoising",
+	"identifier": "com.nodame.cnr2",
+	"namespace": "cnr2",
+	"releases": [{
+		"version": "v1",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-cnr2/releases/download/v1/vapoursynth-cnr2-v1-win32.7z",
+			"files": ["libcnr2.dll"],
+			"hash": { "libcnr2.dll": "c99e35e2f31c5788f1cba9ea1f3c7e34d64b7b2b" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-cnr2/releases/download/v1/vapoursynth-cnr2-v1-win64.7z",
+			"files": ["libcnr2.dll"],
+			"hash": { "libcnr2.dll": "f9f0fab456747d3e091385b258340ac73d3c8166" }
+		}
+	}]
+}

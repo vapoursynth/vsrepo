@@ -1,0 +1,22 @@
+{
+	"name": "TimeCube",
+	"type": "Plugin",
+	"description": "SIMULTANEOUS 4-DAY TIME CUBE",
+	"website": "https://github.com/sekrit-twc/timecube",
+	"category": "Others",
+	"identifier": "day.simultaneous.4",
+	"namespace": "timecube",
+	"releases": [{
+		"version": "r1",
+		"win32": {
+			"url": "https://github.com/sekrit-twc/timecube/releases/download/r1/timecube_r1.7z",
+			"files": ["timecube_r1/x86/vscube.dll"],
+			"hash": { "vscube.dll": "1c0219871d36e1100c245e612145e6c7734718af" }
+		},
+		"win64": {
+			"url": "https://github.com/sekrit-twc/timecube/releases/download/r1/timecube_r1.7z",
+			"files": ["timecube_r1/x64/vscube.dll"],
+			"hash": { "vscube.dll": "eaa09afb39067d701ed86f66f923f8b74e7482a8" }
+		}
+	}]
+}

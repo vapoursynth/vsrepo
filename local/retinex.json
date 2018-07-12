@@ -1,0 +1,23 @@
+{
+	"name": "Retinex",
+	"type": "Plugin",
+	"description": "Dynamic range compression",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171307",
+	"category": "Others",
+	"identifier": "com.invalid.identifier.retinex",
+	"namespace": "retinex",
+	"releases": [{
+		"version": "r3",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r3/Retinex-r3.7z",
+			"files": ["Win32/Retinex.dll"],
+			"hash": { "Retinex.dll": "88ed9c26441d30dbde4a7c2e39e09ff37982ea91" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r3/Retinex-r3.7z",
+			"files": ["x64/Retinex.dll"],
+			"hash": { "Retinex.dll": "23553ef9910d65502c5fb81b83bbfffcba7843c7" }
+		}
+	}]
+}

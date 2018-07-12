@@ -154,7 +154,7 @@ def install_files(p):
     dest_path = get_install_path(p)
     bin_name = get_bin_name(p)
     if not bin_name in p['releases'][0]:
-        print('No binaries available for ' + args.target + ' in package ' + p['name'] + ',  skipping installation')
+        print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
         return
     url = p['releases'][0][bin_name]['url']
     print('Fetching: ' + url)

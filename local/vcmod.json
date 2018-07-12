@@ -8,7 +8,7 @@
 	"identifier": "in.vcmohan.mod",
 	"namespace": "vcmod",
 	"releases": [{
-		"version": "17 Oct 2017",
+		"version": "2017-10-17",
 		"win32": {
 			"url": "http://www.avisynth.nl/users/vcmohan/vcmod/vcmod.7z",
 			"files": ["vcmod.dll"],

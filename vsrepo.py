@@ -89,6 +89,7 @@ try:
 except:
     pass
 
+download_cache = {}
 installed_packages = {}
 
 package_list = None
@@ -213,9 +214,12 @@ def install_files(p):
         print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
         return
     url = p['releases'][0][bin_name]['url']
-    print('Fetching: ' + url)
-    urlreq = urllib.request.urlopen(url)
-    data = urlreq.read()
+    data = download_cache.get(url, None)
+    if data is None:
+        print('Fetching: ' + url)
+        urlreq = urllib.request.urlopen(url)
+        data = urlreq.read()
+        download_cache[url] = data
     if url.endswith('.zip'):
         with zipfile.ZipFile(io.BytesIO(data)) as zf:
             for filename in p['releases'][0][bin_name]['files']:

@@ -127,7 +127,7 @@ def get_package_from_plugin_name(name, required = False):
         if p['name'].casefold() == name.casefold():
             return p
     if required:
-        raise Exception('No package with the identifier ' + id + ' found')
+        raise Exception('No package with the name ' + name + ' found')
     return None
 
 def get_package_from_namespace(namespace, required = False):

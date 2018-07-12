@@ -54,11 +54,11 @@ else:
     plugin32_path = os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'plugins32')
     plugin64_path = os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'plugins64')
 
-os.makedirs(py_script_path, exist_ok=True)
-os.makedirs(plugin32_path, exist_ok=True)
-os.makedirs(plugin64_path, exist_ok=True)
-
 plugin_path = plugin64_path if is_64bits else plugin32_path
+	
+os.makedirs(py_script_path, exist_ok=True)
+os.makedirs(plugin_path, exist_ok=True)
+
 
 cmd7zip_path = '7z.exe'
 try:

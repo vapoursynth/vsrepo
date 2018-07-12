@@ -7,7 +7,7 @@
 	"category": "Denoising",
 	"identifier": "mcdenoise",
 	"modulename": "MCDenoise",
-	"dependencies": ["denoising.temporal.templinearapproximate", "com.holywu.dfttest", "com.nodame.mvsf"],
+	"dependencies": ["denoising.temporal.templinearapproximate", "com.holywu.dfttest", "com.nodame.mvtools", "com.nodame.mvsf"],
 	"releases": [{
 		"version": "r3",
 		"script": {

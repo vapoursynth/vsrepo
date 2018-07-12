@@ -1,0 +1,23 @@
+{
+	"name": "vcfreq",
+	"type": "Plugin",
+	"description": "",
+	"website": "http://www.avisynth.nl/users/vcmohan/vcfreq/vcfreq.html",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171413",
+	"category": "Denoising",
+	"identifier": "in.vcmohan.freq",
+	"namespace": "freq",
+	"releases": [{
+		"version": "12 May 2016",
+		"win32": {
+			"url": "http://www.avisynth.nl/users/vcmohan/vcfreq/vcfreq.7z",
+			"files": ["vcfreq.dll"],
+			"hash": { "vcfreq.dll": "399667cee9c89f001d3032adb85be38989d1e5d2" }
+		},
+		"win64": {
+			"url": "http://www.avisynth.nl/users/vcmohan/vcfreq/vcfreq64.7z",
+			"files": ["vcfreq.dll"],
+			"hash": { "vcfreq.dll": "0aca7929c83c49c2bb607392100abdb8e1a3d76b" }
+		}
+	}]
+}

@@ -1,0 +1,24 @@
+{
+	"name": "BM3D",
+	"type": "Plugin",
+	"description": "",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D",
+	"doom9": "https://forum.doom9.org/showthread.php?t=172172",
+	"category": "Denoising",
+	"identifier": "com.vapoursynth.bm3d",
+	"namespace": "bm3d",
+	"dependencies": ["org.fftw.fftw3"],
+	"releases": [{
+		"version": "r7",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r7/BM3D-r7.7z",
+			"files": ["Win32/BM3D.dll"],
+			"hash": { "BM3D.dll": "9fb64f18024021c3025937b4c8c0b92c5a85d560" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r7/BM3D-r7.7z",
+			"files": ["Win64/BM3D.dll"],
+			"hash": { "BM3D.dll": "42734a1abab5f927f4a7802600239fe003c99935" }
+		}
+	}]
+}

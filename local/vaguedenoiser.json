@@ -1,0 +1,23 @@
+{
+	"name": "VagueDenoiser",
+	"type": "Plugin",
+	"description": "A wavelet based denoiser",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VagueDenoiser",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171723",
+	"category": "Denoising",
+	"identifier": "com.holywu.vaguedenoiser",
+	"namespace": "vaguedenoiser",
+	"releases": [{
+		"version": "r2",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VagueDenoiser/releases/download/r2/VagueDenoiser-r2.7z",
+			"files": ["Win32/VagueDenoiser.dll"],
+			"hash": { "VagueDenoiser.dll": "5979ed1566b10ac26335a75daec85716229447ec" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VagueDenoiser/releases/download/r2/VagueDenoiser-r2.7z",
+			"files": ["Win64/VagueDenoiser.dll"],
+			"hash": { "VagueDenoiser.dll": "4787fc12e61e9d911e6efc9e839a3d401fcfbab5" }
+		}
+	}]
+}

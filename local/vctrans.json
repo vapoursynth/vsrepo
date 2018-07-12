@@ -1,0 +1,23 @@
+{
+	"name": "vctrans",
+	"type": "Plugin",
+	"description": "Numerous functions for transitons",
+	"website": "http://www.avisynth.nl/users/vcmohan/vcmove/vcmove.html",
+	"doom9": "https://forum.doom9.org/showthread.php?t=172594",
+	"category": "Others",
+	"identifier": "in.trans.vcm",
+	"namespace": "trans",
+	"releases": [{
+		"version": "10 Sep 2015",
+		"win32": {
+			"url": "http://www.avisynth.nl/users/vcmohan/vctrans/vctrans.7z",
+			"files": ["vctrans.dll"],
+			"hash": { "vctrans.dll": "7f5728e3edccf1456542bc32709ea35ff7fcc58e" }
+		},
+		"win64": {
+			"url": "http://www.avisynth.nl/users/vcmohan/vctrans/vctrans64.7z",
+			"files": ["vctrans.dll"],
+			"hash": { "vctrans.dll": "ca0b5bfc2f1cd8f282137fa98b0025fe48cd9e26" }
+		}
+	}]
+}

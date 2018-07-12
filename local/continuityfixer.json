@@ -1,0 +1,23 @@
+{
+	"name": "ContinuityFixer",
+	"type": "Plugin",
+	"description": "Can help repair damaged borders of frames. edgefixer port.",
+	"website": "https://github.com/MonoS/VS-ContinuityFixer",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171785",
+	"category": "Others",
+	"identifier": "com.monos.edgefixer",
+	"namespace": "edgefixer",
+	"releases": [{
+		"version": "V6.1",
+		"win32": {
+			"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V6/Continuity.Fixer.zip",
+			"files": ["Continuity Fixer/32bit/continuity.dll"],
+			"hash": { "continuity.dll": "9c3cea5b64270e44036e33dfa21b064b19ee06c8" }
+		},
+		"win64": {
+			"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V6/Continuity.Fixer.zip",
+			"files": ["Continuity Fixer/64bit/continuity.dll"],
+			"hash": { "continuity.dll": "37c340d466d0a599f6bd6bcb3981ab4695b0b37b" }
+		}
+	}]
+}

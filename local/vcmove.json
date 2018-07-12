@@ -1,0 +1,23 @@
+{
+	"name": "vcmove",
+	"type": "Plugin",
+	"description": "Rotate, debarrel and other distortion correction filters",
+	"website": "http://www.avisynth.nl/users/vcmohan/vcmove/vcmove.html",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171414",
+	"category": "Others",
+	"identifier": "in.vcmohan.move",
+	"namespace": "vcmove",
+	"releases": [{
+		"version": "Apr 2016",
+		"win32": {
+			"url": "http://www.avisynth.nl/users/vcmohan/vcmove/vcmove.7z",
+			"files": ["vcmove.dll"],
+			"hash": { "vcmove.dll": "b42816260b0a4d1a4fcadfb8cd1649f22e3b4a5f" }
+		},
+		"win64": {
+			"url": "http://www.avisynth.nl/users/vcmohan/vcmove/vcmove64.7z",
+			"files": ["vcmove.dll"],
+			"hash": { "vcmove.dll": "e33928eac8b241a048afcd4e2649e5bdf8fbf2d4" }
+		}
+	}]
+}

@@ -1,0 +1,23 @@
+{
+	"name": "FluxSmooth",
+	"type": "Plugin",
+	"description": "Temporal-spatiotemporal denoiser",
+	"website": "https://github.com/dubhater/vapoursynth-fluxsmooth",
+	"doom9": "https://forum.doom9.org/showthread.php?t=173795",
+	"category": "Denoising",
+	"identifier": "com.nodame.fluxsmooth",
+	"namespace": "flux",
+	"releases": [{
+		"version": "v2",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v2/vapoursynth-fluxsmooth-v2-win32.7z",
+			"files": ["libfluxsmooth.dll"],
+			"hash": { "libfluxsmooth.dll": "0aa1f45cf6fe0c323a55b67e7ebf872059ae022f" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v2/vapoursynth-fluxsmooth-v2-win64.7z",
+			"files": ["libfluxsmooth.dll"],
+			"hash": { "libfluxsmooth.dll": "bf6db48b0bc7702ff06108b300415a365e6dbc5f" }
+		}
+	}]
+}

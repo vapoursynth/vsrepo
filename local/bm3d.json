@@ -1,7 +1,7 @@
 {
 	"name": "BM3D",
 	"type": "Plugin",
-	"description": "",
+	"description": "Denoising filter using the BM3D algorithm",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172172",
 	"category": "Denoising",

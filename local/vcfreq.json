@@ -1,7 +1,7 @@
 {
 	"name": "vcfreq",
 	"type": "Plugin",
-	"description": "",
+	"description": "Frequency domain denoiser",
 	"website": "http://www.avisynth.nl/users/vcmohan/vcfreq/vcfreq.html",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171413",
 	"category": "Denoising",

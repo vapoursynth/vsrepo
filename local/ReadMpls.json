@@ -1,0 +1,23 @@
+{
+	"name": "ReadMpls",
+	"type": "Plugin",
+	"description": "Returns a list of all files and paths in a mpls playlist",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls",
+	"doom9": "https://forum.doom9.org/showthread.php?t=174580",
+	"category": "Source/Output",
+	"identifier": "com.holywu.readmpls",
+	"namespace": "mpls",
+	"releases": [{
+		"version": "r3",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r3/ReadMpls-r3.7z",
+			"files": ["Win32/ReadMpls.dll"],
+			"hash": { "ReadMpls.dll": "2fb4d17e09259b8def65933c44272e2f7276d7d4" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r3/ReadMpls-r3.7z",
+			"files": ["Win64/ReadMpls.dll"],
+			"hash": { "ReadMpls.dll": "4990132afec8b8479e7b166609ba93a58f9f19bc" }
+		}
+	}]
+}

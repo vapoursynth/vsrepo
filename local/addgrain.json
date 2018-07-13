@@ -1,0 +1,23 @@
+{
+	"name": "AddGrain",
+	"type": "Plugin",
+	"description": "Port of the Avisynth AddGrain filter",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171073",
+	"category": "Others",
+	"identifier": "com.holywu.addgrain",
+	"namespace": "grain",
+	"releases": [{
+		"version": "r6",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r6/AddGrain-r6.7z",
+			"files": ["Win32/AddGrain.dll"],
+			"hash": { "AddGrain.dll": "546c0b177710fda203b62c2b7e83b7e1e24f1f1f" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r6/AddGrain-r6.7z",
+			"files": ["Win64/AddGrain.dll"],
+			"hash": { "AddGrain.dll": "0b0cf24733969f87dbba87816c4dd672fbb54575" }
+		}
+	}]
+}

@@ -10,7 +10,7 @@
 	"dependencies": ["mvsfunc", "adjust", "nnedi3_resample", "xxx.abc.znedi3", "com.holywu.nnedi3cl",
 		"com.nodame.mvtools", "com.holywu.dfttest", "com.holywu.eedi2", "fmtconv", "com.holywu.eedi3",
 		"com.mio.sangnom", "com.holywu.deblock", "com.Khanattila.KNLMeansCL", "com.holywu.ttempsmooth",
-		"com.holywu.ctmf", "fft3dfilter"],
+		"com.holywu.ctmf", "fft3dfilter", "com.holywu.addgrain"],
 	"releases": [{
 		"version": "r30",
 		"script": {

@@ -5,8 +5,8 @@
 	"website": "https://github.com/dubhater/vapoursynth-degrainmedian",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173758",
 	"category": "Denoising",
-	"identifier": "dgm",
-	"namespace": "com.nodame.degrainmedian",
+	"identifier": "com.nodame.degrainmedian",
+	"namespace": "dgm",
 	"releases": [{
 		"version": "v1",
 		"win32": {

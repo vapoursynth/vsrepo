@@ -8,7 +8,7 @@
 	"identifier": "in.trans.vcm",
 	"namespace": "trans",
 	"releases": [{
-		"version": "10 Sep 2015",
+		"version": "2015-09-10",
 		"win32": {
 			"url": "http://www.avisynth.nl/users/vcmohan/vctrans/vctrans.7z",
 			"files": ["vctrans.dll"],

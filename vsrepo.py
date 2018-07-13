@@ -1,3 +1,25 @@
+##    MIT License
+##
+##    Copyright (c) 2018 Fredrik Mellbin
+##
+##    Permission is hereby granted, free of charge, to any person obtaining a copy
+##    of this software and associated documentation files (the "Software"), to deal
+##    in the Software without restriction, including without limitation the rights
+##    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+##    copies of the Software, and to permit persons to whom the Software is
+##    furnished to do so, subject to the following conditions:
+##
+##    The above copyright notice and this permission notice shall be included in all
+##    copies or substantial portions of the Software.
+##
+##    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+##    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+##    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+##    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+##    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+##    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+##    SOFTWARE.
+
 import sys
 import json
 import hashlib
@@ -7,6 +29,7 @@ import zipfile
 import io
 import site
 import os
+import os.path
 import subprocess
 import tempfile
 import argparse
@@ -14,6 +37,15 @@ import winreg
 
 if platform.system() != 'Windows':
     raise Exception('Windows required')
+
+def is_sitepackage_install_portable():
+    try:
+        import vapoursynth
+    except ImportError:
+        return False
+    else:
+        return os.path.exists(os.path.join(os.path.dirname(vapoursynth.__file__), 'portable.vs'))
+    
 
 is_64bits = sys.maxsize > 2**32
 
@@ -30,12 +62,26 @@ if ((args.operation == 'install') or (args.operation == 'upgrade')) == ((args.pa
     raise Exception('Package argument required for install and upgrade operations')
 
 py_script_path = '.\\' if args.portable else site.getusersitepackages() + '\\'
-plugin32_path = 'VapourSynth\\plugins32\\' if args.portable else os.getenv('APPDATA') + '\\VapourSynth\\plugins32\\'
-plugin64_path = 'VapourSynth\\plugins64\\' if args.portable else os.getenv('APPDATA') + '\\VapourSynth\\plugins64\\'
-os.makedirs(py_script_path, exist_ok=True)
-os.makedirs(plugin32_path, exist_ok=True)
-os.makedirs(plugin64_path, exist_ok=True)
+
+if args.portable:
+    plugin32_path = 'vapoursynth32\\plugins\\'
+    plugin64_path = 'vapoursynth64\\plugins\\'
+elif is_sitepackage_install_portable():
+    import vapoursynth
+    base_path = os.path.dirname(vapoursynth.__file__)
+    plugin32_path = os.path.join(base_path, 'vapoursynth32', 'plugins')
+    plugin64_path = os.path.join(base_path, 'vapoursynth64', 'plugins')
+    del vapoursynth
+else:
+    plugin32_path = os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'plugins32')
+    plugin64_path = os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'plugins64')
+
 plugin_path = plugin64_path if is_64bits else plugin32_path
+	
+os.makedirs(py_script_path, exist_ok=True)
+os.makedirs(plugin_path, exist_ok=True)
+
+
 cmd7zip_path = '7z.exe'
 try:
     with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
@@ -43,6 +89,7 @@ try:
 except:
     pass
 
+download_cache = {}
 installed_packages = {}
 
 package_list = None
@@ -75,6 +122,14 @@ def get_package_from_id(id, required = False):
     if required:
         raise Exception('No package with the identifier ' + id + ' found')
     return None
+	
+def get_package_from_plugin_name(name, required = False):
+    for p in package_list:
+        if p['name'].casefold() == name.casefold():
+            return p
+    if required:
+        raise Exception('No package with the name ' + name + ' found')
+    return None
 
 def get_package_from_namespace(namespace, required = False):
     for p in package_list:
@@ -101,6 +156,8 @@ def get_package_from_name(name):
     if p is None:
         p = get_package_from_modulename(name)
     if p is None:
+        p = get_package_from_plugin_name(name)
+    if p is None:
         raise Exception('Package ' + name + ' not found')
     return p
 
@@ -123,7 +180,7 @@ def detect_installed_packages():
             if bin_name in v:
                 for f in v[bin_name]['hash']:
                     try:
-                        with open(dest_path + f, 'rb') as fh:
+                        with open(os.path.join(dest_path, f), 'rb') as fh:
                             digest = hashlib.sha1(fh.read()).hexdigest()
                             ref_digest = v[bin_name]['hash'][f]
                             if digest != ref_digest:
@@ -157,9 +214,12 @@ def install_files(p):
         print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
         return
     url = p['releases'][0][bin_name]['url']
-    print('Fetching: ' + url)
-    urlreq = urllib.request.urlopen(url)
-    data = urlreq.read()
+    data = download_cache.get(url, None)
+    if data is None:
+        print('Fetching: ' + url)
+        urlreq = urllib.request.urlopen(url)
+        data = urlreq.read()
+        download_cache[url] = data
     if url.endswith('.zip'):
         with zipfile.ZipFile(io.BytesIO(data)) as zf:
             for filename in p['releases'][0][bin_name]['files']:
@@ -170,7 +230,7 @@ def install_files(p):
                     ref_digest = p['releases'][0][bin_name]['hash'][stripped_fn]
                     if digest != ref_digest:
                         raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
-                    with open(dest_path + stripped_fn, 'wb') as outfile:
+                    with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
                         outfile.write(file_data)
     elif url.endswith('.7z'):
         tffd, tfpath = tempfile.mkstemp(prefix='vsm')
@@ -185,7 +245,7 @@ def install_files(p):
             ref_digest = p['releases'][0][bin_name]['hash'][stripped_fn]
             if digest != ref_digest:
                 raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
-            with open(dest_path + stripped_fn, 'wb') as outfile:
+            with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
                 outfile.write(result.stdout)
         os.remove(tfpath)
     elif len(p['releases'][0][bin_name]['files']) == 1:
@@ -195,7 +255,7 @@ def install_files(p):
         ref_digest = p['releases'][0][bin_name]['hash'][stripped_fn]
         if digest != ref_digest:
             raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
-        with open(dest_path + stripped_fn, 'wb') as outfile:
+        with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
             outfile.write(data)
     else:
         raise Exception('Unsupported compression type')

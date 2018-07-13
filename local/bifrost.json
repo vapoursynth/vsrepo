@@ -1,0 +1,23 @@
+{
+	"name": "Bifrost",
+	"type": "Plugin",
+	"description": "A rainbow remover based on the Bifrost filter for Avisynth",
+	"website": "https://github.com/dubhater/vapoursynth-bifrost",
+	"doom9": "https://forum.doom9.org/showthread.php?t=169758",
+	"category": "Dot Crawl and Rainbows",
+	"identifier": "com.nodame.bifrost",
+	"namespace": "bifrost",
+	"releases": [{
+		"version": "v2.2",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.2/vapoursynth-bifrost-v2.2-win32.7z",
+			"files": ["libbifrost.dll"],
+			"hash": { "libbifrost.dll": "e422f6f520b7314415ee5fb323ebc4c730faa68c" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.2/vapoursynth-bifrost-v2.2-win64.7z",
+			"files": ["libbifrost.dll"],
+			"hash": { "libbifrost.dll": "bb1a85145c77c37d7f2939aa8241db3bce4b3a09" }
+		}
+	}]
+}

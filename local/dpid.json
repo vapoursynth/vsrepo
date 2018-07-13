@@ -3,7 +3,6 @@
 	"type": "Plugin",
 	"description": "Rapid, Detail-Preserving Image Downscaler",
 	"website": "https://github.com/WolframRhodium/VapourSynth-dpid",
-	"doom9": "",
 	"category": "Resizing and Format Conversion",
 	"identifier": "com.wolframrhodium.dpid",
 	"namespace": "dpid",

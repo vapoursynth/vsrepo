@@ -6,7 +6,7 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=166434",
 	"category": "Plugin Dependency",
 	"identifier": "com.deinterlace.nnedi3.weights",
-	"modulename": "nnedi3_weights",
+	"namespace": "nnedi3_weights",
 	"releases": [{
 		"version": "r1",
 		"win32": {

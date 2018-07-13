@@ -1,0 +1,22 @@
+{
+	"name": "ColorBars",
+	"type": "Plugin",
+	"description": "SMPTE RP 219-2:2016 and ITU-R BT.2111 color bar generator for VapourSynth.",
+	"website": "https://github.com/ifb/vapoursynth-colorbars",
+	"category": "Source/Output",
+	"identifier": "com.ifb.colorbars",
+	"namespace": "colorbars",
+	"releases": [{
+		"version": "r2",
+		"win32": {
+			"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R2/colorbars-R2.7z",
+			"files": ["Win32/colorbars.dll"],
+			"hash": { "colorbars.dll": "d08a943c3722a55f4ac4ef866233ee737c6836fb" }
+		},
+		"win64": {
+			"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R2/colorbars-R2.7z",
+			"files": ["Win64/colorbars.dll"],
+			"hash": { "colorbars.dll": "3411412e60f887cb13da7f8c2457e61f9faf99ce" }
+		}
+	}]
+}

@@ -8,7 +8,7 @@
 	"identifier": "in.vcmohan.move",
 	"namespace": "vcmove",
 	"releases": [{
-		"version": "Apr 2016",
+		"version": "2016-04",
 		"win32": {
 			"url": "http://www.avisynth.nl/users/vcmohan/vcmove/vcmove.7z",
 			"files": ["vcmove.dll"],

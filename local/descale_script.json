@@ -6,7 +6,6 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=174570",
 	"category": "Resizing and Format Conversion",
 	"identifier": "descale",
-	"namespace": "descale",
 	"modulename": "descale",
 	"dependencies": ["tegaf.asi.xe"],
 	"releases": [{

@@ -7,6 +7,7 @@
 	"category": "Others",
 	"identifier": "com.nodame.mvtools",
 	"namespace": "mv",
+	"dependencies": ["org.fftw.fftw3"],
 	"releases": [{
 		"version": "v20",
 		"win32": {

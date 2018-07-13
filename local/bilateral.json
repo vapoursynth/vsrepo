@@ -1,0 +1,23 @@
+{
+	"name": "Bilateral",
+	"type": "Plugin",
+	"description": "Bilateral filter for VapourSynth",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171306",
+	"category": "Denoising",
+	"identifier": "com.invalid.identifier.bilateral",
+	"namespace": "bilateral",
+	"releases": [{
+		"version": "r3",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r3/Bilateral-r3.7z",
+			"files": ["Win32/Bilateral.dll"],
+			"hash": { "Bilateral.dll": "8df1104e370bc7722440d2c966103d7ca85c2ef1" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r3/Bilateral-r3.7z",
+			"files": ["x64/Bilateral.dll"],
+			"hash": { "Bilateral.dll": "65e07e20af4574c49085d3c89628e2a5228bb5dc" }
+		}
+	}]
+}

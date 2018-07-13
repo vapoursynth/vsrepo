@@ -8,7 +8,7 @@
 	"identifier": "in.vcmohan.freq",
 	"namespace": "freq",
 	"releases": [{
-		"version": "12 May 2016",
+		"version": "2016-05-12",
 		"win32": {
 			"url": "http://www.avisynth.nl/users/vcmohan/vcfreq/vcfreq.7z",
 			"files": ["vcfreq.dll"],

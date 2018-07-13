@@ -1,0 +1,22 @@
+{
+	"name": "fillborders",
+	"type": "Plugin",
+	"description": "A simple filter that fills the borders of a clip, without changing the clip's dimensions",
+	"website": "https://github.com/dubhater/vapoursynth-fillborders",
+	"category": "Others",
+	"identifier": "com.nodame.fillborders",
+	"namespace": "fb",
+	"releases": [{
+		"version": "v1.0",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-fillborders/releases/download/v1.0/vapoursynth-fillborders-v1.0-win32.7z",
+			"files": ["libfillborders.dll"],
+			"hash": { "libfillborders.dll": "ee437b00ebc1877c3283cb15ad929ab5f3652108" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-fillborders/releases/download/v1.0/vapoursynth-fillborders-v1.0-win64.7z",
+			"files": ["libfillborders.dll"],
+			"hash": { "libfillborders.dll": "2629bf04777bf02210d33784718cdd852f57dbbc" }
+		}
+	}]
+}

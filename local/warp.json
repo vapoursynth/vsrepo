@@ -6,7 +6,7 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=172721",
 	"category": "Others",
 	"identifier": "com.nodame.awarpsharp2",
-	"namespace": "awarpsharp2",
+	"namespace": "warp",
 	"releases": [{
 		"version": "v4",
 		"win32": {

@@ -7,7 +7,7 @@
 	"identifier": "muvsfunc",
 	"modulename": "muvsfunc",
 	"dependencies": ["havsfunc", "mvsfunc", "fmtconv", "com.holywu.eedi2", "com.deinterlace.nnedi3", "com.nodame.mvtools", 
-					"com.mio.sangnom", "com.holywu.tcanny", "com.nodame.awarpsharp2", "com.holywu.dfttest"],
+					"com.mio.sangnom", "com.holywu.tcanny", "com.nodame.awarpsharp2", "com.holywu.dfttest", "com.holywu.vsfilter", "com.holywu.vsfiltermod"],
 	"releases": [{
 		"version": "git:aacd759",
 		"script": {

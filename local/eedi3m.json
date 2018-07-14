@@ -12,12 +12,12 @@
 		"win32": {
 			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r3/EEDI3-r3.7z",
 			"files": ["Win32/EEDI3m.dll"],
-			"hash": { "EEDI3.dll": "413a0de66f621bd74fcf1a74ff65d3afa4c1f937" }
+			"hash": { "EEDI3m.dll": "413a0de66f621bd74fcf1a74ff65d3afa4c1f937" }
 		},
 		"win64": {
 			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r3/EEDI3-r3.7z",
 			"files": ["Win64/EEDI3m.dll"],
-			"hash": { "EEDI3.dll": "32f9293546302dd773ae9637470c62a6dad41ffd" }
+			"hash": { "EEDI3m.dll": "32f9293546302dd773ae9637470c62a6dad41ffd" }
 		}
 	}]
 }

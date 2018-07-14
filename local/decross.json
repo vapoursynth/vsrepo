@@ -1,0 +1,23 @@
+{
+	"name": "DeCross",
+	"type": "Plugin",
+	"description": "DeCross is a spatio-temporal cross color (rainbow) reduction filter",
+	"website": "https://github.com/dubhater/vapoursynth-decross",
+	"doom9": "https://forum.doom9.org/showthread.php?t=175527",
+	"category": "Dot Crawl and Rainbow removal",
+	"identifier": "com.nodame.decross",
+	"namespace": "decross",
+	"releases": [{
+		"version": "v1",
+		"win32": {
+			"url": "https://github.com/dubhater/vapoursynth-decross/releases/download/v1/vapoursynth-decross-v1-win32.7z",
+			"files": ["libdecross.dll"],
+			"hash": { "libdecross.dll": "dbfcbe1a373c8549b9ad1e9a9257d27a8ac5d67c" }
+		},
+		"win64": {
+			"url": "https://github.com/dubhater/vapoursynth-decross/releases/download/v1/vapoursynth-decross-v1-win64.7z",
+			"files": ["libdecross.dll"],
+			"hash": { "libdecross.dll": "d7e271e469226cb9f8b224d3242f25b923cb1e10" }
+		}
+	}]
+}

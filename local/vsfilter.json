@@ -1,0 +1,22 @@
+{
+	"name": "VSFilter",
+	"type": "Plugin",
+	"description": "VSFilter with VapourSynth interface added, based on the source of MPC-BE v1.4.6 (build 1478)",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VSFilter",
+	"category": "Subtitles",
+	"identifier": "com.holywu.vsfilter",
+	"namespace": "vsf",
+	"releases": [{
+		"version": "r2",
+		"win32": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VSFilter/releases/download/r2/VSFilter-r2.7z",
+			"files": ["Win32/VSFilter.dll"],
+			"hash": { "VSFilter.dll": "ecbedf66dba2580d2178f2aa38226f2de1363732" }
+		},
+		"win64": {
+			"url": "https://github.com/HomeOfVapourSynthEvolution/VSFilter/releases/download/r2/VSFilter-r2.7z",
+			"files": ["Win64/VSFilter.dll"],
+			"hash": { "VSFilter.dll": "17cc051c152154582f4336d52bc125547dd5dd78" }
+		}
+	}]
+}

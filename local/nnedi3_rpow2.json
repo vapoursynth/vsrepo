@@ -1,0 +1,18 @@
+{
+	"name": "nnedi3_rpow2",
+	"type": "PyScript",
+	"description": "Enlarges images by powers of 2",
+	"website": "https://gist.github.com/4re/342624c9e1a144a696c6",
+	"category": "Script",
+	"identifier": "nnedi3_rpow2",
+	"modulename": "nnedi3_rpow2",
+	"dependencies": ["com.deinterlace.nnedi3", "fmtconv"],
+	"releases": [{
+		"version": "rev3",
+		"script": {
+			"url": "https://gist.githubusercontent.com/4re/342624c9e1a144a696c6/raw/08df48752c70c66df4127f2791bbedbc1958da77/nnedi3_rpow2.py",
+			"files": ["nnedi3_resample.py"],
+			"hash": { "nnedi3_resample.py": "bb8b01834ae6369b209964a5a03aa274ff81c04d" }
+		}
+	}]
+}

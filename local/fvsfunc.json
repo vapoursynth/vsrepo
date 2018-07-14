@@ -1,0 +1,18 @@
+{
+	"name": "fvsfunc",
+	"type": "PyScript",
+	"description": "Mostly wrapper functions or ports of AviSynth functions",
+	"website": "https://github.com/Irrational-Encoding-Wizardry/fvsfunc",
+	"category": "Scripts",
+	"identifier": "fvsfunc",
+	"modulename": "fvsfunc",
+	"dependencies": ["havsfunc", "mvsfunc", "muvsfunc", "nnedi3_rpow2", "nnedi3", "fmtconv", "com.invalid.identifier.bilateral", "com.wolframrhodium.bilateralGPU", "com.holywu.dfttest", "tegaf.asi.xe"],
+	"releases": [{
+		"version": "git:cd6a442",
+		"script": {
+			"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/fvsfunc/cd6a442b1940fe85e3e3f10dbebda83f421bf08b/fvsfunc.py",
+			"files": ["fvsfunc.py"],
+			"hash": { "fvsfunc.py": "00a28cbf8332efed91c1c013b5794798fea5d492" }
+		}
+	}]
+}

@@ -1,0 +1,19 @@
+{
+	"name": "muvsfunc",
+	"type": "PyScript",
+	"description": "Muonium's VapourSynth functions",
+	"website": "https://github.com/WolframRhodium/muvsfunc",
+	"category": "Scripts",
+	"identifier": "muvsfunc",
+	"modulename": "muvsfunc",
+	"dependencies": ["havsfunc", "mvsfunc", "fmtconv", "com.holywu.eedi2", "com.deinterlace.nnedi3", "com.nodame.mvtools", 
+					"com.mio.sangnom", "com.holywu.tcanny", "com.nodame.awarpsharp2", "com.holywu.dfttest"],
+	"releases": [{
+		"version": "git:aacd759",
+		"script": {
+			"url": "https://raw.githubusercontent.com/WolframRhodium/muvsfunc/aacd759674c9f3862e364c2e0172dc66fa797f86/muvsfunc.py",
+			"files": ["muvsfunc.py"],
+			"hash": { "muvsfunc.py": "e1702d71bd68acf3ef86a270043a30d5a19846bf" }
+		}
+	}]
+}

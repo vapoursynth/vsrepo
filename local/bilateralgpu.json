@@ -1,0 +1,17 @@
+{
+	"name": "BilateralGPU",
+	"type": "Plugin",
+	"description": "Bilateral filter for VapourSynth based on the OpenCV-CUDA library",
+	"website": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU",
+	"category": "Denoising",
+	"identifier": "com.wolframrhodium.bilateralGPU",
+	"namespace": "bilateralgpu",
+	"releases": [{
+		"version": "r4",
+		"win64": {
+			"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r4/VapourSynth-BilateralGPU-r4.zip",
+			"files": ["VapourSynth-BilateralGPU-r4/x64/bilateralGPU.dll"],
+			"hash": { "bilateralGPU.dll": "9be18030555ed79b4d83d3d46e6a01f943f0d049" }
+		}
+	}]
+}

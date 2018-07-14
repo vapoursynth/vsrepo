@@ -4,7 +4,7 @@
 	"description": "RainbowSmooth is a script which adds edge detection to SmoothUV. It is a port of the Avisynth function rainbow_smooth()",
 	"website": "https://github.com/dubhater/vapoursynth-smoothuv",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175520",
-	"category": "Derainbowing",
+	"category": "Dot Crawl and Rainbow removal",
 	"identifier": "rainbowsmooth",
 	"modulename": "RainbowSmooth",
 	"dependencies": ["com.nodame.smoothuv"],

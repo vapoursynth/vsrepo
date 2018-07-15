@@ -1,0 +1,19 @@
+{
+	"name": "Oyster",
+	"type": "PyScript",
+	"description": "Oyster is an experimental implement of the Blocking Matching concept, designed specifically for compression artifacts removal.",
+	"website": "https://github.com/IFeelBloated/Oyster",
+	"doom9": "https://forum.doom9.org/showthread.php?t=173470",
+	"category": "Others",
+	"identifier": "oyster",
+	"modulename": "Oyster",
+	"dependencies": ["com.deinterlace.nnedi3", "com.Khanattila.KNLMeansCL", "com.vapoursynth.bm3d", "com.holywu.dfttest", "fmtconv", "com.nodame.mvsf"],
+		"releases": [{
+		"version": "git:54fe6c3",
+		"script": {
+			"url": "https://raw.githubusercontent.com/IFeelBloated/Oyster/54fe6c36c0fb90be60a2d7939d9cd5f62d765176/Oyster.py",
+			"files": ["Oyster.py"],
+			"hash": { "Oyster.py": "301cdd17dd80b2ce8491fff6a0dfc4aae31a9d55" }
+		}
+	}]
+}

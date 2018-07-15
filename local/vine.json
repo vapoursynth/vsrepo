@@ -1,0 +1,19 @@
+{
+	"name": "Vine",
+	"type": "PyScript",
+	"description": "Vine is a collection of a block/pixel matching based de-halo filter and a set of morphological filters.",
+	"website": "https://github.com/IFeelBloated/Vine",
+	"doom9": "https://forum.doom9.org/showthread.php?t=173703",
+	"category": "Others",
+	"identifier": "vine",
+	"modulename": "Vine",
+	"dependencies": ["com.deinterlace.nnedi3", "com.Khanattila.KNLMeansCL", "com.vapoursynth.bm3d", "fmtconv", "com.nodame.mvsf", "com.holywu.tcanny"],
+		"releases": [{
+		"version": "git:a6e68cd",
+		"script": {
+			"url": "https://raw.githubusercontent.com/IFeelBloated/Vine/master/Vine.py",
+			"files": ["Vine.py"],
+			"hash": { "Vine.py": "f2953fe3e9c9ec457687fc5463d9ecc236d69b5d" }
+		}
+	}]
+}

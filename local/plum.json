@@ -1,0 +1,19 @@
+{
+	"name": "Plum",
+	"type": "PyScript",
+	"description": "Plum is a sharpening/blind deconvolution suite with certain advanced features like Non-Local error, Block Matching, etc..",
+	"website": "https://github.com/IFeelBloated/Plum",
+	"doom9": "https://forum.doom9.org/showthread.php?t=173775",
+	"category": "Others",
+	"identifier": "plum",
+	"modulename": "Plum",
+	"dependencies": ["com.deinterlace.nnedi3", "com.Khanattila.KNLMeansCL", "com.vapoursynth.bm3d", "fmtconv", "com.nodame.mvsf", "in.vcmohan.freq"],
+		"releases": [{
+		"version": "git:f5d40e2",
+		"script": {
+			"url": "https://raw.githubusercontent.com/IFeelBloated/Plum/f5d40e2fa94770c8a5c8ffc10ba37012f0f7ed86/Plum.py",
+			"files": ["Plum.py"],
+			"hash": { "Plum.py": "442d6cdedf496c3cd5ac78a5fbbfbe631ff86a1d" }
+		}
+	}]
+}

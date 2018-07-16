@@ -11,7 +11,7 @@
 		"releases": [{
 		"version": "git:a6e68cd",
 		"script": {
-			"url": "https://raw.githubusercontent.com/IFeelBloated/Vine/master/Vine.py",
+			"url": "https://raw.githubusercontent.com/IFeelBloated/Vine/a6e68cd94a72db22c04cf7f2227511598975deaf/Vine.py",
 			"files": ["Vine.py"],
 			"hash": { "Vine.py": "f2953fe3e9c9ec457687fc5463d9ecc236d69b5d" }
 		}

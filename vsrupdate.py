@@ -70,12 +70,13 @@ def fetch_url(url):
     data = urlreq.read()
     return data
 
-def fetch_url_to_temp_file(url):
-    cache_path = 'dlcache/' + url.rsplit('/')[-1]
+def fetch_url_to_cache(url, name, tag_name):
+    cache_path = 'dlcache/' + name + '_' + tag_name + '/' + url.rsplit('/')[-1]
     if not os.path.isfile(cache_path):
+        os.makedirs(os.path.split(cache_path)[0], exist_ok=True)
         req = urllib.request.Request(url, method='HEAD')
         urlreq = urllib.request.urlopen(req)
-        cache_path = 'dlcache/' + urlreq.info().get_filename()
+        cache_path = 'dlcache/' + name + '_' + tag_name + '/' + urlreq.info().get_filename()
         if not os.path.isfile(cache_path):
             print('Download required: ' + url)
             urlreq = urllib.request.urlopen(url)
@@ -162,45 +163,42 @@ def update_package(name):
                         try:
                             if 'win32' in lastest_rel:
                                 dummy, new_url = get_most_similar(lastest_rel['win32']['url'], dl_files)
-                                temp_fn = fetch_url_to_temp_file(new_url)
+                                temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
                                 new_rel_entry['win32'] = { 'url': new_url, 'files': [], 'hash': {} }
                                 for fn in lastest_rel['win32']['files']:
                                     stripped_fn = fn.rsplit('/', 2)[-1]
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
                                     new_rel_entry['win32']['files'].append(new_fn)
                                     new_rel_entry['win32']['hash'][stripped_fn] = digest
-                                #os.remove(temp_fn)
                         except:
-                            del new_rel_entry['win32']
+                            new_rel_entry.pop('win32', None)
                             print('No win32 binary found')
                         try:
                             if 'win64' in lastest_rel:
                                 dummy, new_url = get_most_similar(lastest_rel['win64']['url'], dl_files)
-                                temp_fn = fetch_url_to_temp_file(new_url)
+                                temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
                                 new_rel_entry['win64'] = { 'url': new_url, 'files': [], 'hash': {} }
                                 for fn in lastest_rel['win64']['files']:
                                     stripped_fn = fn.rsplit('/', 2)[-1]
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
                                     new_rel_entry['win64']['files'].append(new_fn)
                                     new_rel_entry['win64']['hash'][stripped_fn] = digest
-                                #os.remove(temp_fn)
                         except:
-                            del new_rel_entry['win64']
+                            new_rel_entry.pop('win64', None)
                             print('No win64 binary found')
                     else:
                         new_rel_entry = { 'version': rel['tag_name'] }
                         try:
                             new_url = zipball
-                            temp_fn = fetch_url_to_temp_file(new_url)
+                            temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
                             new_rel_entry['script'] = { 'url': new_url, 'files': [], 'hash': {} }
                             for fn in lastest_rel['script']['files']:
                                 stripped_fn = fn.rsplit('/', 2)[-1]
                                 new_fn, digest = decompress_and_hash(temp_fn, fn)
                                 new_rel_entry['script']['files'].append(new_fn)
                                 new_rel_entry['script']['hash'][stripped_fn] = digest
-                            #os.remove(temp_fn)
                         except:
-                            del new_rel_entry['script']
+                            new_rel_entry.pop('script', None)
                             print('No script found')
                     new_rels[new_rel_entry['version']] = new_rel_entry
             has_new_releases = bool(new_rels)
@@ -253,11 +251,10 @@ if args.operation == 'compile':
 
     print('Done')
 elif args.operation == 'update-local':
-    update_package(args.package[0])
-    
-    #print(list_archive_files('templinearapproximate-r3.7z'))
-    #print(decompress_and_hash('templinearapproximate-r3.7z', 'templinearapproximate-r4/32bit/templinearapproximate.dll'))
-    
-    #for f in os.scandir('local'):
-    #    if f.is_file() and f.path.endswith('.json'):
-
+    if args.package[0] == 'all':
+        for f in os.scandir('local'):
+            if f.is_file() and f.path.endswith('.json'):
+                update_package(os.path.splitext(os.path.basename(f))[0])
+    else:
+        update_package(args.package[0])
+        

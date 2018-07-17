@@ -7,17 +7,39 @@
 	"category": "Others",
 	"identifier": "in.7086.delogo",
 	"namespace": "delogo",
-	"releases": [{
-		"version": "v0.4",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo/releases/download/v0.4/delogo_release_v0.4.zip",
-			"files": ["mingw/i686-w64-mingw32/libdelogo.dll"],
-			"hash": { "libdelogo.dll": "d35d3e1d34f7ac1f1fb3a972c551d623b880531b" }
+	"releases": [
+		{
+			"version": "v0.4",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo/releases/download/v0.4/delogo_release_v0.4.zip",
+				"files": [
+					"mingw/i686-w64-mingw32/libdelogo.dll"
+				],
+				"hash": {
+					"libdelogo.dll": "d35d3e1d34f7ac1f1fb3a972c551d623b880531b"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo/releases/download/v0.4/delogo_release_v0.4.zip",
+				"files": [
+					"mingw/x86_64-w64-mingw32/libdelogo.dll"
+				],
+				"hash": {
+					"libdelogo.dll": "f43475dac4346dc12b5063ac2686edf18c22e025"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo/releases/download/v0.4/delogo_release_v0.4.zip",
-			"files": ["mingw/x86_64-w64-mingw32/libdelogo.dll"],
-			"hash": { "libdelogo.dll": "f43475dac4346dc12b5063ac2686edf18c22e025" }
+		{
+			"version": "v0.3"
+		},
+		{
+			"version": "v0.2"
+		},
+		{
+			"version": "v0.11"
+		},
+		{
+			"version": "v0.1"
 		}
-	}]
+	]
 }

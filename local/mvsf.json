@@ -7,12 +7,114 @@
 	"category": "Others",
 	"identifier": "com.nodame.mvsf",
 	"namespace": "mvsf",
-	"releases": [{
-		"version": "r9",
-		"win64": {
-			"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r9/libmvtools_sf_em64t.7z",
-			"files": ["libmvtools_sf_em64t.dll"],
-			"hash": { "libmvtools_sf_em64t.dll": "a47d9177964b424dfdfefc6f3ff278c81bdc5616" }
+	"releases": [
+		{
+			"version": "r9",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r9/libmvtools_sf_em64t.7z",
+				"files": [
+					"libmvtools_sf_em64t.dll"
+				],
+				"hash": {
+					"libmvtools_sf_em64t.dll": "a47d9177964b424dfdfefc6f3ff278c81bdc5616"
+				}
+			}
+		},
+		{
+			"version": "r8",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r8/libmvtools_sf_em64t.7z",
+				"files": [
+					"libmvtools_sf_em64t.dll"
+				],
+				"hash": {
+					"libmvtools_sf_em64t.dll": "6459d7bbc076a391497c30982807a3cbaddf9e39"
+				}
+			}
+		},
+		{
+			"version": "r7",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r7/libmvtools_sf_em64t.7z",
+				"files": [
+					"libmvtools_sf_em64t.dll"
+				],
+				"hash": {
+					"libmvtools_sf_em64t.dll": "1e794dadf4def50529e4f655c259974c3539690e"
+				}
+			}
+		},
+		{
+			"version": "r6",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r6/libmvtools_sf_em64t.7z",
+				"files": [
+					"libmvtools_sf_em64t.dll"
+				],
+				"hash": {
+					"libmvtools_sf_em64t.dll": "a1992dd77946d6a7866ed0d0368f28dc369ecad7"
+				}
+			}
+		},
+		{
+			"version": "r5"
+		},
+		{
+			"version": "r4"
+		},
+		{
+			"version": "r3"
+		},
+		{
+			"version": "r2"
+		},
+		{
+			"version": "r1"
+		},
+		{
+			"version": "test15"
+		},
+		{
+			"version": "test14"
+		},
+		{
+			"version": "test13"
+		},
+		{
+			"version": "test12"
+		},
+		{
+			"version": "test11"
+		},
+		{
+			"version": "test10"
+		},
+		{
+			"version": "test9"
+		},
+		{
+			"version": "test8"
+		},
+		{
+			"version": "test7"
+		},
+		{
+			"version": "test6"
+		},
+		{
+			"version": "test5"
+		},
+		{
+			"version": "test4"
+		},
+		{
+			"version": "test3"
+		},
+		{
+			"version": "test2"
+		},
+		{
+			"version": "test1"
 		}
-	}]
+	]
 }

@@ -1,0 +1,18 @@
+{
+	"name": "hnwvsfunc",
+	"type": "PyScript",
+	"description": "Helenerineium (Wolfberry)'s Vapoursynth functions",
+	"website": "https://github.com/Helenerineium/hnwvsfunc",
+	"category": "Scripts",
+	"identifier": "hnwvsfunc",
+	"modulename": "hnwvsfunc",
+	"dependencies": ["havsfunc", "muvsfunc", "mvsfunc", "com.nodame.mvtools", "fft3dfilter", "rgsf"],
+	"releases": [{
+		"version": "git:62bf1d7",
+		"script": {
+			"url": "https://raw.githubusercontent.com/Helenerineium/hnwvsfunc/62bf1d7b0c956da0377497a86d47afd4bd284ae2/hnwvsfunc.py",
+			"files": ["hnwvsfunc.py"],
+			"hash": { "hnwvsfunc.py": "3210e3003f145e2bb43f825c6ddb944a05593589" }
+		}
+	}]
+}

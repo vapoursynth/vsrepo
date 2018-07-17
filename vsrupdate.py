@@ -35,8 +35,8 @@ import tempfile
 parser = argparse.ArgumentParser(description='Package list generator for VSRepo')
 parser.add_argument('operation', choices=['compile', 'update-local', 'check-updates'])
 parser.add_argument('-l', action='store_true', dest='local', help='Only use local sources when generating output')
-parser.add_argument('-g', dest='git_token', help='OAuth access token for github')
-parser.add_argument('-p', dest='package', help='Package to update')
+parser.add_argument('-g', dest='git_token', nargs=1, help='OAuth access token for github')
+parser.add_argument('-p', dest='package', nargs=1, help='Package to update')
 parser.add_argument('-o', action='store_true', dest='overwrite', help='Overwrite existing package file')
 args = parser.parse_args()
 
@@ -61,7 +61,7 @@ def get_most_similar(a, b):
 def get_git_api_url(url):
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
-        return 'https://api.github.com/repos/' + s[-2] + '/' + s[-1] + '/releases?access_token=' + args.git_token
+        return 'https://api.github.com/repos/' + s[-2] + '/' + s[-1] + '/releases?access_token=' + args.git_token[0]
     else:
         return None
 
@@ -87,18 +87,29 @@ def fetch_url_to_temp_file(url):
 def list_archive_files(fn):
     result = subprocess.run([cmd7zip_path, "l", "-ba", fn], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     result.check_returncode()
-    l = []
+    l = {}
     lines = result.stdout.decode('utf-8').splitlines()
     for line in lines:
-        l.append(line[53:].replace('\\', '/'))
+        t = line[53:].replace('\\', '/')
+        l[t.lower()] = t
     return l
-    
+
+def generate_fn_candidates(fn):
+    tmp_fn = fn.lower()
+    return [
+        tmp_fn,
+        tmp_fn.replace('x64', 'win64'),
+        tmp_fn.replace('win64', 'x64'),
+        tmp_fn.replace('x86', 'win32'),
+        tmp_fn.replace('win32', 'x86')]
+
 def decompress_and_hash(archivefn, fn):
     existing_files = list_archive_files(archivefn)
-    if fn in existing_files:  
-        result = subprocess.run([cmd7zip_path, "e", "-so", archivefn, fn], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        result.check_returncode()
-        return (fn, hashlib.sha1(result.stdout).hexdigest())
+    for fn_guess in generate_fn_candidates(fn):
+        if fn_guess in existing_files:  
+            result = subprocess.run([cmd7zip_path, "e", "-so", archivefn, fn_guess], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            result.check_returncode()
+            return (existing_files[fn_guess], hashlib.sha1(result.stdout).hexdigest())
     base_dirs = []
     for f in existing_files:
         bn = f.split('/')[0]
@@ -109,15 +120,11 @@ def decompress_and_hash(archivefn, fn):
         if len(sfn) > 1:
             sfn[0] = base_dirs[0]
             mfn = '/'.join(sfn)
-            result = subprocess.run([cmd7zip_path, "e", "-so", archivefn, mfn], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            result.check_returncode()
-            return (mfn, hashlib.sha1(result.stdout).hexdigest())
-    #try replacing x64 with win64 and so on
-    
-
-    x64_indicators = ['x64', 'Win64', 'win64', '64']
-    x86_indicators = ['x86', 'Win32', 'win32', '32']
-    
+            for fn_guess in generate_fn_candidates(mfn):
+                if fn_guess in existing_files:  
+                    result = subprocess.run([cmd7zip_path, "e", "-so", archivefn, fn_guess], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    result.check_returncode()
+                    return (existing_files[fn_guess], hashlib.sha1(result.stdout).hexdigest())
     raise Exception('No file match found')
 
 def update_package(name):
@@ -246,7 +253,7 @@ if args.operation == 'compile':
 
     print('Done')
 elif args.operation == 'update-local':
-    update_package(args.package)
+    update_package(args.package[0])
     
     #print(list_archive_files('templinearapproximate-r3.7z'))
     #print(decompress_and_hash('templinearapproximate-r3.7z', 'templinearapproximate-r4/32bit/templinearapproximate.dll'))

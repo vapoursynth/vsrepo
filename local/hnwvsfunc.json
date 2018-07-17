@@ -8,7 +8,7 @@
 	"modulename": "hnwvsfunc",
 	"dependencies": ["havsfunc", "muvsfunc", "mvsfunc", "com.nodame.mvtools", "fft3dfilter", "rgsf"],
 	"releases": [{
-		"version": "git:62bf1d7",
+		"version": "git-1",
 		"script": {
 			"url": "https://raw.githubusercontent.com/Helenerineium/hnwvsfunc/62bf1d7b0c956da0377497a86d47afd4bd284ae2/hnwvsfunc.py",
 			"files": ["hnwvsfunc.py"],

@@ -13,7 +13,7 @@
 			"url": "https://github.com/IFeelBloated/RGSF/releases/download/r5/RGSF.7z",
 			"files": ["RGSF_ia32.dll"],
 			"hash": { "RGSF_ia32.dll": "b77cfb808cea64658400f5df147d722e91d21255" }
-		}
+		},
 		"win64": {
 			"url": "https://github.com/IFeelBloated/RGSF/releases/download/r5/RGSF.7z",
 			"files": ["RGSF_x64.dll"],

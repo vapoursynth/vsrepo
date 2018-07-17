@@ -2,7 +2,7 @@
 	"name": "Deblock",
 	"type": "Plugin",
 	"description": "h.264 style deblocking",
-	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock",
 	"doom9": "https://forum.doom9.org/showthread.php?t=170975",
 	"category": "Others",
 	"identifier": "com.holywu.deblock",

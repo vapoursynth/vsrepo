@@ -34,7 +34,6 @@ import tempfile
 
 parser = argparse.ArgumentParser(description='Package list generator for VSRepo')
 parser.add_argument('operation', choices=['compile', 'update-local'])
-parser.add_argument('-l', action='store_true', dest='local', help='Only use local sources when generating output')
 parser.add_argument('-g', dest='git_token', nargs=1, help='OAuth access token for github')
 parser.add_argument('-p', dest='package', nargs=1, help='Package to update')
 parser.add_argument('-o', action='store_true', dest='overwrite', help='Overwrite existing package file')
@@ -234,15 +233,6 @@ if args.operation == 'compile':
             with open(f.path, 'r', encoding='utf-8') as ml:
                 print('Combining: ' + f.path)
                 combined.append(json.load(ml))
-
-    if not args.local:
-        with open('sources.json', 'r', encoding='utf-8') as sl:
-            source_list = json.load(sl)
-            for url in source_list['sources']:
-                print('Combining: ' + url)
-                urlreq = urllib.request.urlopen(url)
-                data = urlreq.read()
-                combined.append(json.loads(data))
 
     for p in combined:
         if p['identifier'] in seen:

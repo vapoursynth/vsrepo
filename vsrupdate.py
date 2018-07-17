@@ -56,7 +56,7 @@ def get_most_similar(a, b):
         v = similarity(a, s)
         if v >= res[0]:
             res = (v, s)
-    return res
+    return res[1]
 
 def get_git_api_url(url):
     if url.startswith('https://github.com/'):
@@ -162,7 +162,7 @@ def update_package(name):
                         new_rel_entry = { 'version': rel['tag_name'] }
                         try:
                             if 'win32' in lastest_rel:
-                                dummy, new_url = get_most_similar(lastest_rel['win32']['url'], dl_files)
+                                new_url = get_most_similar(lastest_rel['win32']['url'], dl_files)
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
                                 new_rel_entry['win32'] = { 'url': new_url, 'files': [], 'hash': {} }
                                 for fn in lastest_rel['win32']['files']:
@@ -175,7 +175,7 @@ def update_package(name):
                             print('No win32 binary found')
                         try:
                             if 'win64' in lastest_rel:
-                                dummy, new_url = get_most_similar(lastest_rel['win64']['url'], dl_files)
+                                new_url = get_most_similar(lastest_rel['win64']['url'], dl_files)
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
                                 new_rel_entry['win64'] = { 'url': new_url, 'files': [], 'hash': {} }
                                 for fn in lastest_rel['win64']['files']:
@@ -189,7 +189,11 @@ def update_package(name):
                     else:
                         new_rel_entry = { 'version': rel['tag_name'] }
                         try:
-                            new_url = zipball
+                            new_url = None
+                            if ('/archive/' in lastest_rel['script']['url']) or ('/zipball/' in lastest_rel['script']['url']):
+                                new_url = zipball
+                            else:
+                                new_url = get_most_similar(lastest_rel['script']['url'], dl_files)
                             temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
                             new_rel_entry['script'] = { 'url': new_url, 'files': [], 'hash': {} }
                             for fn in lastest_rel['script']['files']:

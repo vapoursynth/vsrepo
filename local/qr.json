@@ -6,17 +6,27 @@
 	"category": "Source/Output",
 	"identifier": "net.bigjungle.qr",
 	"namespace": "qr",
-	"releases": [{
-		"version": "1.0",
-		"win32": {
-			"url": "https://github.com/jeremypoulter/QRCodeSource/releases/download/Release_1.0.0.0/QRCodeSource-1.0.0.0.zip",
-			"files": ["Release/VS/Win32/QRCodeSourceVS.dll"],
-			"hash": { "QRCodeSourceVS.dll": "b1d35c65bcac06abae1ea87199750c77544cd323" }
-		},
-		"win64": {
-			"url": "https://github.com/jeremypoulter/QRCodeSource/releases/download/Release_1.0.0.0/QRCodeSource-1.0.0.0.zip",
-			"files": ["Release/VS/x64/QRCodeSourceVS.dll"],
-			"hash": { "QRCodeSourceVS.dll": "370efa3bb88dc87df2f13f38237431444e39bb86" }
+	"releases": [
+		{
+			"version": "Release_1.0.0.0",
+			"win32": {
+				"url": "https://github.com/jeremypoulter/QRCodeSource/releases/download/Release_1.0.0.0/QRCodeSource-1.0.0.0.zip",
+				"files": [
+					"Release/VS/Win32/QRCodeSourceVS.dll"
+				],
+				"hash": {
+					"QRCodeSourceVS.dll": "b1d35c65bcac06abae1ea87199750c77544cd323"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/jeremypoulter/QRCodeSource/releases/download/Release_1.0.0.0/QRCodeSource-1.0.0.0.zip",
+				"files": [
+					"Release/VS/x64/QRCodeSourceVS.dll"
+				],
+				"hash": {
+					"QRCodeSourceVS.dll": "370efa3bb88dc87df2f13f38237431444e39bb86"
+				}
+			}
 		}
-	}]
+	]
 }

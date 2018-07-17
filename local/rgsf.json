@@ -7,17 +7,60 @@
 	"category": "Denoising",
 	"identifier": "com.nodame.rgsf",
 	"namespace": "rgsf",
-	"releases": [{
-		"version": "r5",
-		"win32": {
-			"url": "https://github.com/IFeelBloated/RGSF/releases/download/r5/RGSF.7z",
-			"files": ["RGSF_ia32.dll"],
-			"hash": { "RGSF_ia32.dll": "b77cfb808cea64658400f5df147d722e91d21255" }
+	"releases": [
+		{
+			"version": "r5",
+			"win32": {
+				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r5/RGSF.7z",
+				"files": [
+					"RGSF_ia32.dll"
+				],
+				"hash": {
+					"RGSF_ia32.dll": "b77cfb808cea64658400f5df147d722e91d21255"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r5/RGSF.7z",
+				"files": [
+					"RGSF_x64.dll"
+				],
+				"hash": {
+					"RGSF_x64.dll": "624ba327f9c4fe880024c7437da718e72d0f14e9"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/IFeelBloated/RGSF/releases/download/r5/RGSF.7z",
-			"files": ["RGSF_x64.dll"],
-			"hash": { "RGSF_x64.dll": "624ba327f9c4fe880024c7437da718e72d0f14e9" }
+		{
+			"version": "r4",
+			"win32": {
+				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r4/RGSF.7z",
+				"files": [
+					"RGSF_IA32.dll"
+				],
+				"hash": {
+					"RGSF_ia32.dll": "7fb151fc57ef442a10fdedccc26dc6dff96476b8"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r4/RGSF.7z",
+				"files": [
+					"RGSF_x64.dll"
+				],
+				"hash": {
+					"RGSF_x64.dll": "5b6ef946d027abdcfb841f8eb6b59ab355c7fb04"
+				}
+			}
+		},
+		{
+			"version": "tmp"
+		},
+		{
+			"version": "r3"
+		},
+		{
+			"version": "r2"
+		},
+		{
+			"version": "r1"
 		}
-	}]
+	]
 }

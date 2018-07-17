@@ -6,12 +6,54 @@
 	"category": "Denoising",
 	"identifier": "com.wolframrhodium.bilateralGPU",
 	"namespace": "bilateralgpu",
-	"releases": [{
-		"version": "r4",
-		"win64": {
-			"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r4/VapourSynth-BilateralGPU-r4.zip",
-			"files": ["VapourSynth-BilateralGPU-r4/x64/bilateralGPU.dll"],
-			"hash": { "bilateralGPU.dll": "9be18030555ed79b4d83d3d46e6a01f943f0d049" }
+	"releases": [
+		{
+			"version": "r4",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r4/VapourSynth-BilateralGPU-r4.zip",
+				"files": [
+					"VapourSynth-BilateralGPU-r4/x64/bilateralGPU.dll"
+				],
+				"hash": {
+					"bilateralGPU.dll": "9be18030555ed79b4d83d3d46e6a01f943f0d049"
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r3/VapourSynth-BilateralGPU-r3.zip",
+				"files": [
+					"VapourSynth-BilateralGPU-r3/x64/bilateralGPU.dll"
+				],
+				"hash": {
+					"bilateralGPU.dll": "73cdcf95578679029201be10f5fef2a09fa152ac"
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r2/VapourSynth-BilateralGPU-r2.zip",
+				"files": [
+					"VapourSynth-BilateralGPU-r2/x64/bilateralGPU.dll"
+				],
+				"hash": {
+					"bilateralGPU.dll": "49fc52f605a2ad99ea765c0a645aa3c860c6bf20"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r1/VapourSynth-BilateralGPU-r1.zip",
+				"files": [
+					"VapourSynth-BilateralGPU-r1/x64/bilateralGPU.dll"
+				],
+				"hash": {
+					"bilateralGPU.dll": "73cdcf95578679029201be10f5fef2a09fa152ac"
+				}
+			}
 		}
-	}]
+	]
 }

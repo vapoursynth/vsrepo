@@ -6,12 +6,48 @@
 	"category": "Resizing and Format Conversion",
 	"identifier": "com.wolframrhodium.dpid",
 	"namespace": "dpid",
-	"releases": [{
-		"version": "r3",
-		"win64": {
-			"url": "https://github.com/WolframRhodium/VapourSynth-dpid/releases/download/r3/vapoursynth-dpid-r3.zip",
-			"files": ["vapoursynth-dpid-r3/x64/vapoursynth-dpid.dll", "vapoursynth-dpid-r3/x64/cudart64_80.dll"],
-			"hash": { "vapoursynth-dpid.dll": "74055738f66f0898e5b252b3d19996f880fc5726", "cudart64_80.dll": "8cc81b4e6223069d15f11582191f4d75a44ddbe4" }
+	"releases": [
+		{
+			"version": "r3",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-dpid/releases/download/r3/vapoursynth-dpid-r3.zip",
+				"files": [
+					"vapoursynth-dpid-r3/x64/vapoursynth-dpid.dll",
+					"vapoursynth-dpid-r3/x64/cudart64_80.dll"
+				],
+				"hash": {
+					"vapoursynth-dpid.dll": "74055738f66f0898e5b252b3d19996f880fc5726",
+					"cudart64_80.dll": "8cc81b4e6223069d15f11582191f4d75a44ddbe4"
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-dpid/releases/download/r2/vapoursynth-dpid-r2.zip",
+				"files": [
+					"vapoursynth-dpid-r2/x64/vapoursynth-dpid.dll",
+					"vapoursynth-dpid-r2/x64/cudart64_80.dll"
+				],
+				"hash": {
+					"vapoursynth-dpid.dll": "2b5267bdcb7c0e095d8585e61483e8148d45b8f5",
+					"cudart64_80.dll": "8cc81b4e6223069d15f11582191f4d75a44ddbe4"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-dpid/releases/download/r1/vapoursynth-dpid-r1.zip",
+				"files": [
+					"vapoursynth-dpid-r1/x64/vapoursynth-dpid.dll",
+					"vapoursynth-dpid-r1/x64/cudart64_80.dll"
+				],
+				"hash": {
+					"vapoursynth-dpid.dll": "ddf3e689b1ae9ed41cfe9f9f03c1e08e3f427f00",
+					"cudart64_80.dll": "8cc81b4e6223069d15f11582191f4d75a44ddbe4"
+				}
+			}
 		}
-	}]
+	]
 }

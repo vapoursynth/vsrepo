@@ -7,13 +7,37 @@
 	"category": "Others",
 	"identifier": "xxx.abc.avsproxy",
 	"namespace": "avsw",
-	"dependencies": ["xxx.abc.avsproxy.binary"],
-	"releases": [{
-		"version": "r1a",
-		"win64": {
-			"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r1a/avsproxy_r1a.7z",
-			"files": ["avsproxy.dll", "avshost_native.exe"],
-			"hash": { "avsproxy.dll": "faaf09a922bd3fc25b495a4c12713a735b93cdec", "avshost_native.exe": "729c8730cf8110db4549ecb5bcfd914ef53f66c6" }
+	"dependencies": [
+		"xxx.abc.avsproxy.binary"
+	],
+	"releases": [
+		{
+			"version": "r1a",
+			"win64": {
+				"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r1a/avsproxy_r1a.7z",
+				"files": [
+					"avsproxy.dll",
+					"avshost_native.exe"
+				],
+				"hash": {
+					"avsproxy.dll": "faaf09a922bd3fc25b495a4c12713a735b93cdec",
+					"avshost_native.exe": "729c8730cf8110db4549ecb5bcfd914ef53f66c6"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win64": {
+				"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r1/avsproxy_r1.7z",
+				"files": [
+					"avsproxy.dll",
+					"avshost_native.exe"
+				],
+				"hash": {
+					"avsproxy.dll": "4eac4d36035a8a666a7b73cab50c8d5e0c2beb04",
+					"avshost_native.exe": "729c8730cf8110db4549ecb5bcfd914ef53f66c6"
+				}
+			}
 		}
-	}]
+	]
 }

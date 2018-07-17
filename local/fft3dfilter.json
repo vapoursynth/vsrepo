@@ -6,18 +6,30 @@
 	"category": "Denoising",
 	"identifier": "systems.innocent.fft3dfilter",
 	"namespace": "fft3dfilter",
-	"dependencies": ["org.fftw.fftw3"],
-	"releases": [{
-		"version": "r1",
-		"win32": {
-			"url": "https://github.com/myrsloik/VapourSynth-FFT3DFilter/releases/download/R1/FFT3DFilter-r1.7z",
-			"files": ["Win32/fft3dfilter.dll"],
-			"hash": { "fft3dfilter.dll": "8389ba7e76dfcbcd8f5ee06566e111c6f0c5358d" }
-		},
-		"win64": {
-			"url": "https://github.com/myrsloik/VapourSynth-FFT3DFilter/releases/download/R1/FFT3DFilter-r1.7z",
-			"files": ["x64/fft3dfilter.dll"],
-			"hash": { "fft3dfilter.dll": "cad7519cd2817823a1837d41ea02fbfa1a5e8c05" }
+	"dependencies": [
+		"org.fftw.fftw3"
+	],
+	"releases": [
+		{
+			"version": "R1",
+			"win32": {
+				"url": "https://github.com/myrsloik/VapourSynth-FFT3DFilter/releases/download/R1/FFT3DFilter-r1.7z",
+				"files": [
+					"Win32/fft3dfilter.dll"
+				],
+				"hash": {
+					"fft3dfilter.dll": "8389ba7e76dfcbcd8f5ee06566e111c6f0c5358d"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/myrsloik/VapourSynth-FFT3DFilter/releases/download/R1/FFT3DFilter-r1.7z",
+				"files": [
+					"x64/fft3dfilter.dll"
+				],
+				"hash": {
+					"fft3dfilter.dll": "cad7519cd2817823a1837d41ea02fbfa1a5e8c05"
+				}
+			}
 		}
-	}]
+	]
 }

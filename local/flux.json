@@ -7,17 +7,48 @@
 	"category": "Denoising",
 	"identifier": "com.nodame.fluxsmooth",
 	"namespace": "flux",
-	"releases": [{
-		"version": "v2",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v2/vapoursynth-fluxsmooth-v2-win32.7z",
-			"files": ["libfluxsmooth.dll"],
-			"hash": { "libfluxsmooth.dll": "0aa1f45cf6fe0c323a55b67e7ebf872059ae022f" }
+	"releases": [
+		{
+			"version": "v2",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v2/vapoursynth-fluxsmooth-v2-win32.7z",
+				"files": [
+					"libfluxsmooth.dll"
+				],
+				"hash": {
+					"libfluxsmooth.dll": "0aa1f45cf6fe0c323a55b67e7ebf872059ae022f"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v2/vapoursynth-fluxsmooth-v2-win64.7z",
+				"files": [
+					"libfluxsmooth.dll"
+				],
+				"hash": {
+					"libfluxsmooth.dll": "bf6db48b0bc7702ff06108b300415a365e6dbc5f"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v2/vapoursynth-fluxsmooth-v2-win64.7z",
-			"files": ["libfluxsmooth.dll"],
-			"hash": { "libfluxsmooth.dll": "bf6db48b0bc7702ff06108b300415a365e6dbc5f" }
+		{
+			"version": "v1.0",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v1.0/vapoursynth-fluxsmooth-v1.0-win32.7z",
+				"files": [
+					"libfluxsmooth.dll"
+				],
+				"hash": {
+					"libfluxsmooth.dll": "44806d32726dc37730157844b6b61ce70c73c6bc"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v1.0/vapoursynth-fluxsmooth-v1.0-win64.7z",
+				"files": [
+					"libfluxsmooth.dll"
+				],
+				"hash": {
+					"libfluxsmooth.dll": "426f79bf3986027e04e0d4a56561ce3b26f566da"
+				}
+			}
 		}
-	}]
+	]
 }

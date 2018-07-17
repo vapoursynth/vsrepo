@@ -7,17 +7,69 @@
 	"category": "Dot Crawl and Rainbows",
 	"identifier": "com.nodame.tcomb",
 	"namespace": "tcomb",
-	"releases": [{
-		"version": "v3",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v3/vapoursynth-tcomb-v3-win32.7z",
-			"files": ["libtcomb.dll"],
-			"hash": { "libtcomb.dll": "4b4e576e78ae2f319081974465f8488374884519" }
+	"releases": [
+		{
+			"version": "v3",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v3/vapoursynth-tcomb-v3-win32.7z",
+				"files": [
+					"libtcomb.dll"
+				],
+				"hash": {
+					"libtcomb.dll": "4b4e576e78ae2f319081974465f8488374884519"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v3/vapoursynth-tcomb-v3-win64.7z",
+				"files": [
+					"libtcomb.dll"
+				],
+				"hash": {
+					"libtcomb.dll": "17bfded31aadf5049d4bd5c0ea88ce641582c637"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v3/vapoursynth-tcomb-v3-win64.7z",
-			"files": ["libtcomb.dll"],
-			"hash": { "libtcomb.dll": "17bfded31aadf5049d4bd5c0ea88ce641582c637" }
+		{
+			"version": "v2",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v2/vapoursynth-tcomb-v2-win32.7z",
+				"files": [
+					"libtcomb.dll"
+				],
+				"hash": {
+					"libtcomb.dll": "3ee9d35ac6a40488ae9ab9e9f4ef404d0381854e"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v2/vapoursynth-tcomb-v2-win64.7z",
+				"files": [
+					"libtcomb.dll"
+				],
+				"hash": {
+					"libtcomb.dll": "c924330256ac5a1a4d2c8b2762e749c3472c42e6"
+				}
+			}
+		},
+		{
+			"version": "v1.0",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v1.0/vapoursynth-tcomb-v1.0-win32.7z",
+				"files": [
+					"libtcomb.dll"
+				],
+				"hash": {
+					"libtcomb.dll": "b45d2820c1e3cb3d5cd9e05361ce9379eca1f201"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v1.0/vapoursynth-tcomb-v1.0-win64.7z",
+				"files": [
+					"libtcomb.dll"
+				],
+				"hash": {
+					"libtcomb.dll": "554e2aacca08298187545cfdbcf22d776a037399"
+				}
+			}
 		}
-	}]
+	]
 }

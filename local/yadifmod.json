@@ -7,17 +7,198 @@
 	"category": "Deinterlacing",
 	"identifier": "com.holywu.yadifmod",
 	"namespace": "yadifmod",
-	"releases": [{
-		"version": "r10",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r10/Yadifmod-r10.7z",
-			"files": ["Win32/Yadifmod.dll"],
-			"hash": { "Yadifmod.dll": "d65bec50c505ddd4254b7735ec65b31614f884aa" }
+	"releases": [
+		{
+			"version": "r10",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r10/Yadifmod-r10.7z",
+				"files": [
+					"Win32/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "d65bec50c505ddd4254b7735ec65b31614f884aa"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r10/Yadifmod-r10.7z",
+				"files": [
+					"Win64/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "d731d7a37faa954b140980e8dab09bf3e692b04d"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r10/Yadifmod-r10.7z",
-			"files": ["Win64/Yadifmod.dll"],
-			"hash": { "Yadifmod.dll": "d731d7a37faa954b140980e8dab09bf3e692b04d" }
+		{
+			"version": "r9",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r9/Yadifmod-r9.7z",
+				"files": [
+					"Win32/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "0c4c4e8f04e753beae3d88a465e986f7a8c9ba79"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r9/Yadifmod-r9.7z",
+				"files": [
+					"Win64/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "670ee9734fe7c318786c4345f9ebf29f5e802b57"
+				}
+			}
+		},
+		{
+			"version": "r8",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r8/Yadifmod-r8.7z",
+				"files": [
+					"Win32/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "da1ab7f4e8255a2621e3b16ac53bb4078fd70a94"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r8/Yadifmod-r8.7z",
+				"files": [
+					"Win64/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "07e593578cd6e26548d5d672dc4466f0af929f93"
+				}
+			}
+		},
+		{
+			"version": "r7",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r7/Yadifmod-r7.7z",
+				"files": [
+					"Win32/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "e2611306f3e7269276135fc7a8cf499a3ab5c5ac"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r7/Yadifmod-r7.7z",
+				"files": [
+					"Win64/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "7edb7111d3907598a529a2fa6ae0d352e2437615"
+				}
+			}
+		},
+		{
+			"version": "r6",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r6/Yadifmod-r6.7z",
+				"files": [
+					"Win32/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "609543b717df65fb9fa571a02244d29025f7cc67"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r6/Yadifmod-r6.7z",
+				"files": [
+					"Win64/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "6d3d54d587dfc3bc09d4092fba752a2b37177833"
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r5/Yadifmod-r5.7z",
+				"files": [
+					"Win32/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "892f080c17abdb688fd3fccb2c2930c7c1ab111e"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r5/Yadifmod-r5.7z",
+				"files": [
+					"Win64/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "a788fd64754ed9606b3c53cfd3389c198adc6411"
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r4/Yadifmod-r4.7z",
+				"files": [
+					"Win32/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "eafd66dc0b6ff7e129006ac7f02d2ce08b035434"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r4/Yadifmod-r4.7z",
+				"files": [
+					"Win64/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "8107053b823a5d46446a79d8d94fe6a1b97ff41f"
+				}
+			}
+		},
+		{
+			"version": "r3"
+		},
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r2/Yadifmod-r2.7z",
+				"files": [
+					"Win32/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "fb427d5639822e0375ec4043ddda3727fd953bb4"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r2/Yadifmod-r2.7z",
+				"files": [
+					"Win64/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "63f34970d751cc383166f7b3bc0445b82e2ec1d4"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r1/Yadifmod-r1.7z",
+				"files": [
+					"Win32/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "8085122482c007b706cbb9a825f996ee444c0b46"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod/releases/download/r1/Yadifmod-r1.7z",
+				"files": [
+					"Win64/Yadifmod.dll"
+				],
+				"hash": {
+					"Yadifmod.dll": "322a0cb6495cdb5ff187417f4d4ea39c77550570"
+				}
+			}
 		}
-	}]
+	]
 }

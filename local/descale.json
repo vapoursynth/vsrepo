@@ -7,12 +7,30 @@
 	"category": "Resizing and Format Conversion",
 	"identifier": "tegaf.asi.xe",
 	"namespace": "descale",
-	"releases": [{
-		"version": "r2",
-		"win64": {
-			"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r2/vapoursynth-descale-r2-win64.zip",
-			"files": ["libdescale.dll"],
-			"hash": { "libdescale.dll": "85448072bbb05e63dbd6a845a0331f05ef528c88" }
+	"releases": [
+		{
+			"version": "r2",
+			"win64": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r2/vapoursynth-descale-r2-win64.zip",
+				"files": [
+					"libdescale.dll"
+				],
+				"hash": {
+					"libdescale.dll": "85448072bbb05e63dbd6a845a0331f05ef528c88"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win64": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r1/vapoursynth-descale-r1-win64.zip",
+				"files": [
+					"libdescale.dll"
+				],
+				"hash": {
+					"libdescale.dll": "ecbb998b587af055829295ef3671ea5e76101ace"
+				}
+			}
 		}
-	}]
+	]
 }

@@ -7,17 +7,153 @@
 	"category": "Deinterlacing",
 	"identifier": "com.holywu.eedi2",
 	"namespace": "eedi2",
-	"releases": [{
-		"version": "r7",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r7/EEDI2-r7.7z",
-			"files": ["Win32/EEDI2.dll"],
-			"hash": { "EEDI2.dll": "a4f30144a8e78d577a74d40bd6dbc7733047f8c2" }
+	"releases": [
+		{
+			"version": "r7",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r7/EEDI2-r7.7z",
+				"files": [
+					"Win32/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "a4f30144a8e78d577a74d40bd6dbc7733047f8c2"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r7/EEDI2-r7.7z",
+				"files": [
+					"Win64/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "bc140e0230e8f0bdfc2b79ff1e43b0c6d5c86483"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r7/EEDI2-r7.7z",
-			"files": ["Win64/EEDI2.dll"],
-			"hash": { "EEDI2.dll": "bc140e0230e8f0bdfc2b79ff1e43b0c6d5c86483" }
+		{
+			"version": "r6",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r6/EEDI2-r6.7z",
+				"files": [
+					"Win32/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "b382340db8f32788239b38257fedaf8ef570709e"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r6/EEDI2-r6.7z",
+				"files": [
+					"Win64/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "bbdb8f5a9546efb290c2bf9f62ed987ac68684b7"
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r5/EEDI2-r5.7z",
+				"files": [
+					"Win32/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "dfe60672ec0cd89253d15772008bd5b60c1faada"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r5/EEDI2-r5.7z",
+				"files": [
+					"Win64/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "c46797cfaef1519650d0f31d11afd45835da693e"
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r4/EEDI2-r4.7z",
+				"files": [
+					"Win32/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "fc6d55f0481432a40c75aa2f48312db733c6c74b"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r4/EEDI2-r4.7z",
+				"files": [
+					"Win64/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "83e9e886c0ff80b952ac14b28285e6229d22cc1e"
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r3/EEDI2-r3.7z",
+				"files": [
+					"Win32/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "61137eece03b0876e192635e7629d9eab9442437"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r3/EEDI2-r3.7z",
+				"files": [
+					"Win64/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "76d7671bc2a5490d7f62f3b9ade34a5e6c6609f1"
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r2/EEDI2-r2.7z",
+				"files": [
+					"Win32/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "559433f82a8a7222ad359ec3dcd91abec9b05f16"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r2/EEDI2-r2.7z",
+				"files": [
+					"Win64/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "8a6b8721bc6a04bef7d5dea9310f98346caea525"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r1/EEDI2-r1.7z",
+				"files": [
+					"Win32/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "ba538b693a18828b94040dc388f78e705bcfdff4"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r1/EEDI2-r1.7z",
+				"files": [
+					"Win64/EEDI2.dll"
+				],
+				"hash": {
+					"EEDI2.dll": "9eb35291169ad82a22c7919adea2cc6383ea91ef"
+				}
+			}
 		}
-	}]
+	]
 }

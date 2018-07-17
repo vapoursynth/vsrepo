@@ -7,17 +7,69 @@
 	"category": "Others",
 	"identifier": "com.invalid.identifier.retinex",
 	"namespace": "retinex",
-	"releases": [{
-		"version": "r3",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r3/Retinex-r3.7z",
-			"files": ["Win32/Retinex.dll"],
-			"hash": { "Retinex.dll": "88ed9c26441d30dbde4a7c2e39e09ff37982ea91" }
+	"releases": [
+		{
+			"version": "r3",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r3/Retinex-r3.7z",
+				"files": [
+					"Win32/Retinex.dll"
+				],
+				"hash": {
+					"Retinex.dll": "88ed9c26441d30dbde4a7c2e39e09ff37982ea91"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r3/Retinex-r3.7z",
+				"files": [
+					"x64/Retinex.dll"
+				],
+				"hash": {
+					"Retinex.dll": "23553ef9910d65502c5fb81b83bbfffcba7843c7"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r3/Retinex-r3.7z",
-			"files": ["x64/Retinex.dll"],
-			"hash": { "Retinex.dll": "23553ef9910d65502c5fb81b83bbfffcba7843c7" }
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r2/Retinex-r2.7z",
+				"files": [
+					"Win32/Retinex.dll"
+				],
+				"hash": {
+					"Retinex.dll": "dbccf55d9296a8d94caa43520b3cf733d0c46a52"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r2/Retinex-r2.7z",
+				"files": [
+					"x64/Retinex.dll"
+				],
+				"hash": {
+					"Retinex.dll": "c76f220f3bea6fef5bbccf237e294981b31e6c97"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r1/Retinex-r1.7z",
+				"files": [
+					"Win32/Retinex.dll"
+				],
+				"hash": {
+					"Retinex.dll": "947b88e3209e3f79df101fa6dbfc6cca44c03c0a"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r1/Retinex-r1.7z",
+				"files": [
+					"x64/Retinex.dll"
+				],
+				"hash": {
+					"Retinex.dll": "560eeaa39857f7023bbb505c6ad48436c62909df"
+				}
+			}
 		}
-	}]
+	]
 }

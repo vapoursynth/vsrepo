@@ -7,17 +7,69 @@
 	"category": "Denoising",
 	"identifier": "com.Khanattila.KNLMeansCL",
 	"namespace": "knlm",
-	"releases": [{
-		"version": "v1.1.1",
-		"win32": {
-			"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.1/KNLMeansCL-v1.1.1.zip",
-			"files": ["KNLMeansCL.dll"],
-			"hash": { "KNLMeansCL.dll": "e21655519f572de93e8154a8bbe3613318f04b43" }
+	"releases": [
+		{
+			"version": "v1.1.1",
+			"win32": {
+				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.1/KNLMeansCL-v1.1.1.zip",
+				"files": [
+					"KNLMeansCL.dll"
+				],
+				"hash": {
+					"KNLMeansCL.dll": "e21655519f572de93e8154a8bbe3613318f04b43"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.1/KNLMeansCL-v1.1.1.zip",
+				"files": [
+					"x64/KNLMeansCL.dll"
+				],
+				"hash": {
+					"KNLMeansCL.dll": "57d42afcd8fbefd63ac9e2838d4b4e4fe3da4378"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.1/KNLMeansCL-v1.1.1.zip",
-			"files": ["x64/KNLMeansCL.dll"],
-			"hash": { "KNLMeansCL.dll": "57d42afcd8fbefd63ac9e2838d4b4e4fe3da4378" }
+		{
+			"version": "v1.1.0",
+			"win32": {
+				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.0/KNLMeansCL-v1.1.0.zip",
+				"files": [
+					"KNLMeansCL.dll"
+				],
+				"hash": {
+					"KNLMeansCL.dll": "4bbc5e5d34f1ed60fd90f072af446442ae544d5c"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.0/KNLMeansCL-v1.1.0.zip",
+				"files": [
+					"x64/KNLMeansCL.dll"
+				],
+				"hash": {
+					"KNLMeansCL.dll": "a3cb5be881dfac9c196dbbb55ead8ddde7f0c542"
+				}
+			}
+		},
+		{
+			"version": "v0.6.11",
+			"win32": {
+				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v0.6.11/KNLMeansCL-v0.6.11.zip",
+				"files": [
+					"KNLMeansCL.dll"
+				],
+				"hash": {
+					"KNLMeansCL.dll": "8f60a2f0c8402470c262897d370789c9326d25d5"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v0.6.11/KNLMeansCL-v0.6.11.zip",
+				"files": [
+					"x64/KNLMeansCL.dll"
+				],
+				"hash": {
+					"KNLMeansCL.dll": "ae75988dd4bd0739da0f17f9dbf79104577d0208"
+				}
+			}
 		}
-	}]
+	]
 }

@@ -7,18 +7,156 @@
 	"category": "Denoising",
 	"identifier": "com.vapoursynth.bm3d",
 	"namespace": "bm3d",
-	"dependencies": ["org.fftw.fftw3"],
-	"releases": [{
-		"version": "r7",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r7/BM3D-r7.7z",
-			"files": ["Win32/BM3D.dll"],
-			"hash": { "BM3D.dll": "9fb64f18024021c3025937b4c8c0b92c5a85d560" }
+	"dependencies": [
+		"org.fftw.fftw3"
+	],
+	"releases": [
+		{
+			"version": "r7",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r7/BM3D-r7.7z",
+				"files": [
+					"Win32/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "9fb64f18024021c3025937b4c8c0b92c5a85d560"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r7/BM3D-r7.7z",
+				"files": [
+					"Win64/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "42734a1abab5f927f4a7802600239fe003c99935"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r7/BM3D-r7.7z",
-			"files": ["Win64/BM3D.dll"],
-			"hash": { "BM3D.dll": "42734a1abab5f927f4a7802600239fe003c99935" }
+		{
+			"version": "r6",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r6/BM3D-r6.7z",
+				"files": [
+					"Win32/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "c4061c95be0d426c46074e103073e1ae03d88cf4"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r6/BM3D-r6.7z",
+				"files": [
+					"Win64/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "d213e0747092c4021ca6084a3aeef1b63f4be39f"
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r5/BM3D-r5.7z",
+				"files": [
+					"Win32/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "ec28dc1b39e9d67b8d40374f56db19cc63381e4f"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r5/BM3D-r5.7z",
+				"files": [
+					"x64/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "301f6b42fd284a9882fc1c4d78a8e3d131754453"
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r4/BM3D-r4.7z",
+				"files": [
+					"Win32/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "65474c70ff1453fa5d52c96f41ca9c7e81515870"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r4/BM3D-r4.7z",
+				"files": [
+					"x64/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "ca3951c5a4c23a8f41d3b6aeddd9a91e4fabef61"
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r3/BM3D-r3.7z",
+				"files": [
+					"Win32/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "e21c815aae589b3f7aa1b44fcf2bcf0aed545cb9"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r3/BM3D-r3.7z",
+				"files": [
+					"x64/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "d56323acf8bc697ac90cc794b74e9ebc315e5369"
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r2/BM3D-r2.7z",
+				"files": [
+					"Win32/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "0e24e2afc223a742693cc70214ce1d78335b368d"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r2/BM3D-r2.7z",
+				"files": [
+					"x64/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "d2db973e686af33a72f4fd16ce2e7d45018d2b1a"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r1/BM3D-r1.7z",
+				"files": [
+					"Win32/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "c3216f3a8900475cb1e6053e32f221454fa9306a"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r1/BM3D-r1.7z",
+				"files": [
+					"x64/BM3D.dll"
+				],
+				"hash": {
+					"BM3D.dll": "c02bb016ecfb0f12269f6a60830edc460cd0e383"
+				}
+			}
 		}
-	}]
+	]
 }

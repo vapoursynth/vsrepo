@@ -7,17 +7,63 @@
 	"category": "Inverse Telecine",
 	"identifier": "in.7086.it",
 	"namespace": "it",
-	"releases": [{
-		"version": "v1.2",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.2/it_release_v1.2.zip",
-			"files": ["msvc/x86/Release SSE/vs_it.dll"],
-			"hash": { "vs_it.dll": "a8a3169b01f1ca5d4692f5e0f82deec70785d765" }
+	"releases": [
+		{
+			"version": "v1.2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.2/it_release_v1.2.zip",
+				"files": [
+					"msvc/x86/Release SSE/vs_it.dll"
+				],
+				"hash": {
+					"vs_it.dll": "a8a3169b01f1ca5d4692f5e0f82deec70785d765"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.2/it_release_v1.2.zip",
+				"files": [
+					"msvc/x64/Release SSE/vs_it.dll"
+				],
+				"hash": {
+					"vs_it.dll": "e751718e4e2c13e3c0e0946a465c3530fc8118d9"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.2/it_release_v1.2.zip",
-			"files": ["msvc/x64/Release SSE/vs_it.dll"],
-			"hash": { "vs_it.dll": "e751718e4e2c13e3c0e0946a465c3530fc8118d9" }
+		{
+			"version": "v1.1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.1/it_release_v1.1.zip",
+				"files": [
+					"msvc/x86/Release SSE/vs_it.dll"
+				],
+				"hash": {
+					"vs_it.dll": "a2b3e12e469abb6a1023c08e473d9af798259746"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.1/it_release_v1.1.zip",
+				"files": [
+					"msvc/x64/Release SSE/vs_it.dll"
+				],
+				"hash": {
+					"vs_it.dll": "7d0f6e40d1a8b3facbbfcbd9cf71ce8ea6cd4a9f"
+				}
+			}
+		},
+		{
+			"version": "v1.0"
+		},
+		{
+			"version": "v0.4"
+		},
+		{
+			"version": "v0.3"
+		},
+		{
+			"version": "v0.2"
+		},
+		{
+			"version": "v0.1"
 		}
-	}]
+	]
 }

@@ -6,17 +6,48 @@
 	"category": "Source/Output",
 	"identifier": "com.ifb.colorbars",
 	"namespace": "colorbars",
-	"releases": [{
-		"version": "r2",
-		"win32": {
-			"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R2/colorbars-R2.7z",
-			"files": ["Win32/colorbars.dll"],
-			"hash": { "colorbars.dll": "d08a943c3722a55f4ac4ef866233ee737c6836fb" }
+	"releases": [
+		{
+			"version": "R2",
+			"win32": {
+				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R2/colorbars-R2.7z",
+				"files": [
+					"Win32/colorbars.dll"
+				],
+				"hash": {
+					"colorbars.dll": "d08a943c3722a55f4ac4ef866233ee737c6836fb"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R2/colorbars-R2.7z",
+				"files": [
+					"Win64/colorbars.dll"
+				],
+				"hash": {
+					"colorbars.dll": "3411412e60f887cb13da7f8c2457e61f9faf99ce"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R2/colorbars-R2.7z",
-			"files": ["Win64/colorbars.dll"],
-			"hash": { "colorbars.dll": "3411412e60f887cb13da7f8c2457e61f9faf99ce" }
+		{
+			"version": "R1",
+			"win32": {
+				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R1/colorbars-R1.7z",
+				"files": [
+					"Win32/colorbars.dll"
+				],
+				"hash": {
+					"colorbars.dll": "89cc5a1d27889b0b3a2963e3b3c7e60a93c151c8"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R1/colorbars-R1.7z",
+				"files": [
+					"Win64/colorbars.dll"
+				],
+				"hash": {
+					"colorbars.dll": "ff215f9f33bdf6b272a0305b5a257e2d05a499da"
+				}
+			}
 		}
-	}]
+	]
 }

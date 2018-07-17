@@ -7,17 +7,69 @@
 	"category": "Source/Output",
 	"identifier": "com.sources.d2vsource",
 	"namespace": "d2v",
-	"releases": [{
-		"version": "v1.1",
-		"win32": {
-			"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.1/d2vsource-1.1-windows.zip",
-			"files": ["win32/d2vsource.dll"],
-			"hash": { "d2vsource.dll": "de94a9c3d4652761a813fb89de5e62e615ba2435" }
+	"releases": [
+		{
+			"version": "v1.1",
+			"win32": {
+				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.1/d2vsource-1.1-windows.zip",
+				"files": [
+					"win32/d2vsource.dll"
+				],
+				"hash": {
+					"d2vsource.dll": "de94a9c3d4652761a813fb89de5e62e615ba2435"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.1/d2vsource-1.1-windows.zip",
+				"files": [
+					"win64/d2vsource.dll"
+				],
+				"hash": {
+					"d2vsource.dll": "bd6df40d20735a19755e867688b096cf60174c51"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.1/d2vsource-1.1-windows.zip",
-			"files": ["win64/d2vsource.dll"],
-			"hash": { "d2vsource.dll": "bd6df40d20735a19755e867688b096cf60174c51" }
+		{
+			"version": "v1.0",
+			"win32": {
+				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.0/d2vsource-1.0-windows.zip",
+				"files": [
+					"win32/d2vsource.dll"
+				],
+				"hash": {
+					"d2vsource.dll": "2c6cda6b35ba3cbc33b94d045fca204848a9c86b"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.0/d2vsource-1.0-windows.zip",
+				"files": [
+					"win64/d2vsource.dll"
+				],
+				"hash": {
+					"d2vsource.dll": "3a503f87a55055f4b6bc8726ff74c8d85d48eab5"
+				}
+			}
+		},
+		{
+			"version": "beta7"
+		},
+		{
+			"version": "beta6"
+		},
+		{
+			"version": "beta4"
+		},
+		{
+			"version": "beta3"
+		},
+		{
+			"version": "beta2"
+		},
+		{
+			"version": "beta1"
+		},
+		{
+			"version": "beta5"
 		}
-	}]
+	]
 }

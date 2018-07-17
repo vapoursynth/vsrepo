@@ -6,17 +6,27 @@
 	"category": "Resizing and Format Conversion",
 	"identifier": "com.ifb.tonemap",
 	"namespace": "tonemap",
-	"releases": [{
-		"version": "r1",
-		"win32": {
-			"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R1/tonemap-r1-win32.7z",
-			"files": ["tonemap.dll"],
-			"hash": { "tonemap.dll": "82ef9917c00ee9ef5185fc952a06b14cade4b4f2" }
-		},
-		"win64": {
-			"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R1/tonemap-r1-win64.7z",
-			"files": ["tonemap.dll"],
-			"hash": { "tonemap.dll": "049eda9eead9d82d90c47bdfab31f8fa55dc75b0" }
+	"releases": [
+		{
+			"version": "R1",
+			"win32": {
+				"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R1/tonemap-r1-win32.7z",
+				"files": [
+					"tonemap.dll"
+				],
+				"hash": {
+					"tonemap.dll": "82ef9917c00ee9ef5185fc952a06b14cade4b4f2"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R1/tonemap-r1-win64.7z",
+				"files": [
+					"tonemap.dll"
+				],
+				"hash": {
+					"tonemap.dll": "049eda9eead9d82d90c47bdfab31f8fa55dc75b0"
+				}
+			}
 		}
-	}]
+	]
 }

@@ -7,17 +7,48 @@
 	"category": "Dot Crawl and Rainbow removal",
 	"identifier": "com.nodame.smoothuv",
 	"namespace": "smoothuv",
-	"releases": [{
-		"version": "v2",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win32.7z",
-			"files": ["libsmoothuv.dll"],
-			"hash": { "libsmoothuv.dll": "67cfb0cec822c5f8ca3caef2b48034ebf22082e6" }
+	"releases": [
+		{
+			"version": "v2",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win32.7z",
+				"files": [
+					"libsmoothuv.dll"
+				],
+				"hash": {
+					"libsmoothuv.dll": "67cfb0cec822c5f8ca3caef2b48034ebf22082e6"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win64.7z",
+				"files": [
+					"libsmoothuv.dll"
+				],
+				"hash": {
+					"libsmoothuv.dll": "2780e39bd1c974aea580c57f2f041233fc9db1e6"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win64.7z",
-			"files": ["libsmoothuv.dll"],
-			"hash": { "libsmoothuv.dll": "2780e39bd1c974aea580c57f2f041233fc9db1e6" }
+		{
+			"version": "v1",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v1/vapoursynth-smoothuv-v1-win32.7z",
+				"files": [
+					"libsmoothuv.dll"
+				],
+				"hash": {
+					"libsmoothuv.dll": "5a77f2fd5cd8d4fad4662ea5f14d11be5b09da75"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v1/vapoursynth-smoothuv-v1-win64.7z",
+				"files": [
+					"libsmoothuv.dll"
+				],
+				"hash": {
+					"libsmoothuv.dll": "5abc5311ba283fafb7a021dd5b5d2ab74848cc63"
+				}
+			}
 		}
-	}]
+	]
 }

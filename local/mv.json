@@ -7,18 +7,450 @@
 	"category": "Others",
 	"identifier": "com.nodame.mvtools",
 	"namespace": "mv",
-	"dependencies": ["org.fftw.fftw3"],
-	"releases": [{
-		"version": "v20",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v20/vapoursynth-mvtools-v20-win32.7z",
-			"files": ["libmvtools.dll"],
-			"hash": { "libmvtools.dll": "2976b78aec302aeff0474e4d22a547d5b2e447e2" }
+	"dependencies": [
+		"org.fftw.fftw3"
+	],
+	"releases": [
+		{
+			"version": "v20",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v20/vapoursynth-mvtools-v20-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "2976b78aec302aeff0474e4d22a547d5b2e447e2"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v20/vapoursynth-mvtools-v20-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "569b1f614cf340a8f7606e72b60a33a682e08b7d"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v20/vapoursynth-mvtools-v20-win64.7z",
-			"files": ["libmvtools.dll"],
-			"hash": { "libmvtools.dll": "569b1f614cf340a8f7606e72b60a33a682e08b7d" }
+		{
+			"version": "v19",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v19/vapoursynth-mvtools-v19-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "363254a6e2962dcf876fdc14fa8f0ce0c3da8472"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v19/vapoursynth-mvtools-v19-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "b46882cfb02a6ac1fbde689fb9e7d891fa2e6e4e"
+				}
+			}
+		},
+		{
+			"version": "v18",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v18/vapoursynth-mvtools-v18-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "7a37f3b189fd869c7274927029077f4f491aecc5"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v18/vapoursynth-mvtools-v18-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "de84a328e6c109edfb101069399ff8755e2be17f"
+				}
+			}
+		},
+		{
+			"version": "v17",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v17/vapoursynth-mvtools-v17-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "98e4e9924479751db803d491b11443e62d24841e"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v17/vapoursynth-mvtools-v17-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "84350fa4e74f18abb1dfea02ebba521c8ac30209"
+				}
+			}
+		},
+		{
+			"version": "v16",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v16/vapoursynth-mvtools-v16-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "af919542a3ca324c86199dbb64476eb6c07207e1"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v16/vapoursynth-mvtools-v16-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "c45d68b530d6a96becd9fa3104b81c7f7ca8a85d"
+				}
+			}
+		},
+		{
+			"version": "v15",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v15/vapoursynth-mvtools-v15-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "2070617cba90a2eb2cf9cce917c180efd8e47a1c"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v15/vapoursynth-mvtools-v15-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "a4032344808acb836b4362137b0ee9f636b987a8"
+				}
+			}
+		},
+		{
+			"version": "v14",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v14/vapoursynth-mvtools-v14-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "b72a460d417d43943f7d94a9fb4c8ffc8b9312db"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v14/vapoursynth-mvtools-v14-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "90779f33faf9ce261a2ba2f767e95c9adc7e4c55"
+				}
+			}
+		},
+		{
+			"version": "v13",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v13/vapoursynth-mvtools-v13-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "a863ea198af758a018643ddfa30ea84289994902"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v13/vapoursynth-mvtools-v13-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "f3089dddb04d8bf9cb5e40632c0d67c32c72800c"
+				}
+			}
+		},
+		{
+			"version": "v12",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v12/vapoursynth-mvtools-v12-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "d3f15831492ad774544c115b655ca3d3ab334a3b"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v12/vapoursynth-mvtools-v12-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "a9de33bd03bec73ed60bc01defec2a983b50aecc"
+				}
+			}
+		},
+		{
+			"version": "v11",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v11/vapoursynth-mvtools-v11-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "155de40be19c284eba029d820b082da5dc2eb84a"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v11/vapoursynth-mvtools-v11-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "6c324f43ff1cdee9bdc8d599534a30eecd1acc96"
+				}
+			}
+		},
+		{
+			"version": "v10",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v10/vapoursynth-mvtools-v10-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "68149d3c9bd84168d22119c507d065012e7ae040"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v10/vapoursynth-mvtools-v10-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "c128497b0b47c0b53009b90e5dd8a68e1fa6a2d9"
+				}
+			}
+		},
+		{
+			"version": "v9",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v9/vapoursynth-mvtools-v9-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "d9d2a9a1dbb6e6a9eafff80ba781dbb5cb5d68b5"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v9/vapoursynth-mvtools-v9-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "2fb03db767b8da8a0a108abfbc97144b6921f3bb"
+				}
+			}
+		},
+		{
+			"version": "v8",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v8/vapoursynth-mvtools-v8-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "a7659026b170df92abdaca436e4f07fe690e9f32"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v8/vapoursynth-mvtools-v8-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "5e95b413599cf1ee5c916472aced4353fb70c63d"
+				}
+			}
+		},
+		{
+			"version": "v7",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v7/vapoursynth-mvtools-v7-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "8adae61e6cab321e3b6eb33e11bd42982a796461"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v7/vapoursynth-mvtools-v7-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "ddff36cc9eba86ef0eee8e91dfbf7a4457c212cf"
+				}
+			}
+		},
+		{
+			"version": "v6",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v6/vapoursynth-mvtools-v6-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "a327984c2f53585ccdbb1a625d68190c8e0bd601"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v6/vapoursynth-mvtools-v6-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "eaedb7e64c587757c11b63631e9991a4c6a23d76"
+				}
+			}
+		},
+		{
+			"version": "v5",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v5/vapoursynth-mvtools-v5-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "0275db4586be90118928f062dfcb2bdf136a4e86"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v5/vapoursynth-mvtools-v5-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "d4799349621e9bae21baa03c86b001e4968f614e"
+				}
+			}
+		},
+		{
+			"version": "v4",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v4/vapoursynth-mvtools-v4-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "e54923b3bf97d34082bd54307010433c958c2793"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v4/vapoursynth-mvtools-v4-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "e513da5212730b4ca3c3d54ad8bdaf05f5fe4636"
+				}
+			}
+		},
+		{
+			"version": "v3",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v3/vapoursynth-mvtools-v3-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "7a8ded77084d317d3ab5a50e2a1ff9ceb61474c6"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v3/vapoursynth-mvtools-v3-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "93d7a1d01ec32bb3001deac337c730d60eb45f43"
+				}
+			}
+		},
+		{
+			"version": "v2.0",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v2.0/vapoursynth-mvtools-v2.0-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "4da2c750fcb2600846a9f611100b70ff24a309f8"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v2.0/vapoursynth-mvtools-v2.0-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "dee015de7cbeb8cdd1ba53dc934422d749929611"
+				}
+			}
+		},
+		{
+			"version": "v1.1",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v1.1/vapoursynth-mvtools-v1.1-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "0d2005a485b055298b5c8e5b59ff1718b6d14e88"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v1.1/vapoursynth-mvtools-v1.1-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "ca0eaeb61b88fad25f5af3cf937acda1685c6e06"
+				}
+			}
+		},
+		{
+			"version": "v1.0",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v1.0/vapoursynth-mvtools-v1.0-win32.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "b1dc6551f6bc30f67f8a58881c2d27051c6fb763"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v1.0/vapoursynth-mvtools-v1.0-win64.7z",
+				"files": [
+					"libmvtools.dll"
+				],
+				"hash": {
+					"libmvtools.dll": "7d0a9bba416d82ba37998bee48c8456e074d896d"
+				}
+			}
 		}
-	}]
+	]
 }

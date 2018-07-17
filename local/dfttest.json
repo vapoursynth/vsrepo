@@ -7,18 +7,93 @@
 	"category": "Denoising",
 	"identifier": "com.holywu.dfttest",
 	"namespace": "dfttest",
-	"dependencies": ["org.fftw.fftw3"],
-	"releases": [{
-		"version": "r4",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r4/DFTTest-r4.7z",
-			"files": ["Win32/DFTTest.dll"],
-			"hash": { "DFTTest.dll": "b43748093c8ba91dd8178e3a367fb0d6c805bba2" }
+	"dependencies": [
+		"org.fftw.fftw3"
+	],
+	"releases": [
+		{
+			"version": "r4",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r4/DFTTest-r4.7z",
+				"files": [
+					"Win32/DFTTest.dll"
+				],
+				"hash": {
+					"DFTTest.dll": "b43748093c8ba91dd8178e3a367fb0d6c805bba2"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r4/DFTTest-r4.7z",
+				"files": [
+					"Win64/DFTTest.dll"
+				],
+				"hash": {
+					"DFTTest.dll": "a5ae4dbcb07a94770d66525c4589ac503d4d69e3"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r4/DFTTest-r4.7z",
-			"files": ["Win64/DFTTest.dll"],
-			"hash": { "DFTTest.dll": "a5ae4dbcb07a94770d66525c4589ac503d4d69e3" }
+		{
+			"version": "r3",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r3/DFTTest-r3.7z",
+				"files": [
+					"Win32/DFTTest.dll"
+				],
+				"hash": {
+					"DFTTest.dll": "040940bda890ac69cbba5b63cc0e1dc702b09560"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r3/DFTTest-r3.7z",
+				"files": [
+					"Win64/DFTTest.dll"
+				],
+				"hash": {
+					"DFTTest.dll": "44427b1f5f1885a57b9e778a19f01e42a419e6ea"
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r2/DFTTest-r2.7z",
+				"files": [
+					"Win32/DFTTest.dll"
+				],
+				"hash": {
+					"DFTTest.dll": "d52ad6b5a692bbfa16c02f1dc6dd765f257ca012"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r2/DFTTest-r2.7z",
+				"files": [
+					"Win64/DFTTest.dll"
+				],
+				"hash": {
+					"DFTTest.dll": "33eddbefd8dccbd8877e404de337126a6794f29b"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r1/DFTTest-r1.7z",
+				"files": [
+					"Win32/DFTTest.dll"
+				],
+				"hash": {
+					"DFTTest.dll": "72ae3cdee759a78e94868f2873b3aeddb6510171"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r1/DFTTest-r1.7z",
+				"files": [
+					"Win64/DFTTest.dll"
+				],
+				"hash": {
+					"DFTTest.dll": "101753f903d78cf033748e0ada4d7ee47ed4091d"
+				}
+			}
 		}
-	}]
+	]
 }

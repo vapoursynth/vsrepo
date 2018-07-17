@@ -7,17 +7,90 @@
 	"category": "Others",
 	"identifier": "com.monos.edgefixer",
 	"namespace": "edgefixer",
-	"releases": [{
-		"version": "V6.1",
-		"win32": {
-			"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V6/Continuity.Fixer.zip",
-			"files": ["Continuity Fixer/32bit/continuity.dll"],
-			"hash": { "continuity.dll": "9c3cea5b64270e44036e33dfa21b064b19ee06c8" }
+	"releases": [
+		{
+			"version": "V6",
+			"win32": {
+				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V6/Continuity.Fixer.zip",
+				"files": [
+					"Continuity Fixer/32bit/continuity.dll"
+				],
+				"hash": {
+					"continuity.dll": "9c3cea5b64270e44036e33dfa21b064b19ee06c8"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V6/Continuity.Fixer.zip",
+				"files": [
+					"Continuity Fixer/64bit/continuity.dll"
+				],
+				"hash": {
+					"continuity.dll": "37c340d466d0a599f6bd6bcb3981ab4695b0b37b"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V6/Continuity.Fixer.zip",
-			"files": ["Continuity Fixer/64bit/continuity.dll"],
-			"hash": { "continuity.dll": "37c340d466d0a599f6bd6bcb3981ab4695b0b37b" }
+		{
+			"version": "V5.1",
+			"win32": {
+				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V5.1/Continuity.Fixer.zip",
+				"files": [
+					"Continuity Fixer/32bit/continuity.dll"
+				],
+				"hash": {
+					"continuity.dll": "0d2ea7de44b4f1eb041c0de7382d44c02d8c2e09"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V5.1/Continuity.Fixer.zip",
+				"files": [
+					"Continuity Fixer/64bit/continuity.dll"
+				],
+				"hash": {
+					"continuity.dll": "4a6b7d508f815bf7bcad05838c64720b666c5698"
+				}
+			}
+		},
+		{
+			"version": "V5",
+			"win32": {
+				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V5/Continuity.Fixer.zip",
+				"files": [
+					"Continuity Fixer/32bit/continuity.dll"
+				],
+				"hash": {
+					"continuity.dll": "9c32e2b1caee00c1c0d95a08ccecfa7f756da72f"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V5/Continuity.Fixer.zip",
+				"files": [
+					"Continuity Fixer/64bit/continuity.dll"
+				],
+				"hash": {
+					"continuity.dll": "132f7c0a3e105b2f9e7aa7eb0a8f304449637704"
+				}
+			}
+		},
+		{
+			"version": "v4",
+			"win32": {
+				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/v4/Continuity.Fixer.zip",
+				"files": [
+					"Continuity Fixer/32bit/continuity.dll"
+				],
+				"hash": {
+					"continuity.dll": "e8633e7244bd6f809e5b774d43535dc0e2433c2e"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/v4/Continuity.Fixer.zip",
+				"files": [
+					"Continuity Fixer/64bit/continuity.dll"
+				],
+				"hash": {
+					"continuity.dll": "366d0ffc3744424e11a94e557818fca7398e1b48"
+				}
+			}
 		}
-	}]
+	]
 }

@@ -7,17 +7,132 @@
 	"category": "Others",
 	"identifier": "com.holywu.addgrain",
 	"namespace": "grain",
-	"releases": [{
-		"version": "r6",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r6/AddGrain-r6.7z",
-			"files": ["Win32/AddGrain.dll"],
-			"hash": { "AddGrain.dll": "546c0b177710fda203b62c2b7e83b7e1e24f1f1f" }
+	"releases": [
+		{
+			"version": "r6",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r6/AddGrain-r6.7z",
+				"files": [
+					"Win32/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "546c0b177710fda203b62c2b7e83b7e1e24f1f1f"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r6/AddGrain-r6.7z",
+				"files": [
+					"Win64/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "0b0cf24733969f87dbba87816c4dd672fbb54575"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r6/AddGrain-r6.7z",
-			"files": ["Win64/AddGrain.dll"],
-			"hash": { "AddGrain.dll": "0b0cf24733969f87dbba87816c4dd672fbb54575" }
+		{
+			"version": "r5",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r5/AddGrain-r5.7z",
+				"files": [
+					"Win32/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "dab482d8a8bf9ae4b5ae59d1629680c39e60243b"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r5/AddGrain-r5.7z",
+				"files": [
+					"Win64/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "4cd5c9ce25c23a6f847eaa188b4e39df9116cae3"
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r4/AddGrain-r4.7z",
+				"files": [
+					"Win32/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "24693e44d4b589c634b1719dc30bbce35804ee01"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r4/AddGrain-r4.7z",
+				"files": [
+					"Win64/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "1e9fda3c88376a80144d6c7b348f4ca48f0932ad"
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r3/AddGrain-r3.7z",
+				"files": [
+					"Win32/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "d202504e042f545e54ea6934f7e048c8f55d7579"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r3/AddGrain-r3.7z",
+				"files": [
+					"Win64/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "cdf92ea59548aeb3981ce17d546fee1bc4daf7c5"
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r2/AddGrain-r2.7z",
+				"files": [
+					"Win32/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "9ae163ccaaa69474c5fb95a52c06ae490a626dc0"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r2/AddGrain-r2.7z",
+				"files": [
+					"Win64/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "5982b44df97cdea904f0f2148e007b8c01001db8"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r1/AddGrain-r1.7z",
+				"files": [
+					"Win32/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "bb7a764e4e4f05b25a106db6df41c0c9adaf3e7e"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r1/AddGrain-r1.7z",
+				"files": [
+					"Win64/AddGrain.dll"
+				],
+				"hash": {
+					"AddGrain.dll": "43e5395db3104f52288bc4c0cd6021cd97337904"
+				}
+			}
 		}
-	}]
+	]
 }

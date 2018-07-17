@@ -7,17 +7,90 @@
 	"category": "Others",
 	"identifier": "com.holywu.ctmf",
 	"namespace": "ctfm",
-	"releases": [{
-		"version": "r4",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r4/CTMF-r4.7z",
-			"files": ["Win32/CTMF.dll"],
-			"hash": { "CTMF.dll": "f068131fbbcb4910b218ca79a49dd505c512bd76" }
+	"releases": [
+		{
+			"version": "r4",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r4/CTMF-r4.7z",
+				"files": [
+					"Win32/CTMF.dll"
+				],
+				"hash": {
+					"CTMF.dll": "f068131fbbcb4910b218ca79a49dd505c512bd76"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r4/CTMF-r4.7z",
+				"files": [
+					"Win64/CTMF.dll"
+				],
+				"hash": {
+					"CTMF.dll": "7017cc7942bfc8c7bbf2badd70615d8112282103"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r4/CTMF-r4.7z",
-			"files": ["Win64/CTMF.dll"],
-			"hash": { "CTMF.dll": "7017cc7942bfc8c7bbf2badd70615d8112282103" }
+		{
+			"version": "r3",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r3/CTMF-r3.7z",
+				"files": [
+					"Win32/CTMF.dll"
+				],
+				"hash": {
+					"CTMF.dll": "72f71708dee16e73b40211afa2f3d5d1d1bb1988"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r3/CTMF-r3.7z",
+				"files": [
+					"Win64/CTMF.dll"
+				],
+				"hash": {
+					"CTMF.dll": "b3d156d2184dcac1a87105045e8cfb28f9ac195b"
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r2/CTMF-r2.7z",
+				"files": [
+					"Win32/CTMF.dll"
+				],
+				"hash": {
+					"CTMF.dll": "327f67b987a412870fa8cf0582fc58a58f2d16f5"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r2/CTMF-r2.7z",
+				"files": [
+					"Win64/CTMF.dll"
+				],
+				"hash": {
+					"CTMF.dll": "34f21582ef02092e5fc76689c61d8d3f0cf39e0a"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r1/CTMF-r1.7z",
+				"files": [
+					"Win32/CTMF.dll"
+				],
+				"hash": {
+					"CTMF.dll": "17d804b6a107522215e30803b6df7530849fc1cc"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r1/CTMF-r1.7z",
+				"files": [
+					"Win64/CTMF.dll"
+				],
+				"hash": {
+					"CTMF.dll": "c72afd83910507845300c8328b5f62023989e0b5"
+				}
+			}
 		}
-	}]
+	]
 }

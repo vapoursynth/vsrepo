@@ -7,12 +7,48 @@
 	"category": "Others",
 	"identifier": "com.deinterlace.ftf",
 	"namespace": "ftf",
-	"releases": [{
-		"version": "r5",
-		"win64": {
-			"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r5/libftf_em64t_avx_fma.7z",
-			"files": ["libftf_em64t_avx_fma.dll"],
-			"hash": { "libftf_em64t_avx_fma.dll": "bab88c2741a116b93ea8e4a2614c3c0942abade7" }
+	"releases": [
+		{
+			"version": "r5",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r5/libftf_em64t_avx_fma.7z",
+				"files": [
+					"libftf_em64t_avx_fma.dll"
+				],
+				"hash": {
+					"libftf_em64t_avx_fma.dll": "bab88c2741a116b93ea8e4a2614c3c0942abade7"
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r4/libftf_em64t_avx_fma.7z",
+				"files": [
+					"libftf_em64t_avx_fma.dll"
+				],
+				"hash": {
+					"libftf_em64t_avx_fma.dll": "49f5e5c37f580416f41dbd8fe1756285662fc2ec"
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r3/libftf_em64t_avx_fma.7z",
+				"files": [
+					"libftf_em64t_avx_fma.dll"
+				],
+				"hash": {
+					"libftf_em64t_avx_fma.dll": "9c323a2f777177c7dbfa3349fec4714921140bc0"
+				}
+			}
+		},
+		{
+			"version": "r2"
+		},
+		{
+			"version": "r1"
 		}
-	}]
+	]
 }

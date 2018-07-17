@@ -7,17 +7,90 @@
 	"category": "Others",
 	"identifier": "com.nodame.awarpsharp2",
 	"namespace": "warp",
-	"releases": [{
-		"version": "v4",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win32.7z",
-			"files": ["libawarpsharp2.dll"],
-			"hash": { "libawarpsharp2.dll": "4aaa32d096c9f96b80577744620260640d330ebd" }
+	"releases": [
+		{
+			"version": "v4",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win32.7z",
+				"files": [
+					"libawarpsharp2.dll"
+				],
+				"hash": {
+					"libawarpsharp2.dll": "4aaa32d096c9f96b80577744620260640d330ebd"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win64.7z",
+				"files": [
+					"libawarpsharp2.dll"
+				],
+				"hash": {
+					"libawarpsharp2.dll": "7b615b7b430aea9b0d9a4ccaa986b5fdcd609c7f"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win64.7z",
-			"files": ["libawarpsharp2.dll"],
-			"hash": { "libawarpsharp2.dll": "7b615b7b430aea9b0d9a4ccaa986b5fdcd609c7f" }
+		{
+			"version": "v3",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v3/vapoursynth-awarpsharp2-v3-win32.7z",
+				"files": [
+					"libawarpsharp2.dll"
+				],
+				"hash": {
+					"libawarpsharp2.dll": "49ee47ebe9e99a9f5f450e610d0c35aec4df4c35"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v3/vapoursynth-awarpsharp2-v3-win64.7z",
+				"files": [
+					"libawarpsharp2.dll"
+				],
+				"hash": {
+					"libawarpsharp2.dll": "f722bde693ec1bcd77bedc848744879d799b70d0"
+				}
+			}
+		},
+		{
+			"version": "v2",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v2/vapoursynth-awarpsharp2-v2-win32.7z",
+				"files": [
+					"libawarpsharp2.dll"
+				],
+				"hash": {
+					"libawarpsharp2.dll": "621f373e3c1caeb9bac027292bcad8921daf0cdc"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v2/vapoursynth-awarpsharp2-v2-win64.7z",
+				"files": [
+					"libawarpsharp2.dll"
+				],
+				"hash": {
+					"libawarpsharp2.dll": "3a7a72eb2f59004ba7ac879a01ba67277c5bfbbc"
+				}
+			}
+		},
+		{
+			"version": "v1",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v1/vapoursynth-awarpsharp2-v1-win32.7z",
+				"files": [
+					"libawarpsharp2.dll"
+				],
+				"hash": {
+					"libawarpsharp2.dll": "f91023e5ab8ef4e148540c9914e15cb661c7ec5d"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v1/vapoursynth-awarpsharp2-v1-win64.7z",
+				"files": [
+					"libawarpsharp2.dll"
+				],
+				"hash": {
+					"libawarpsharp2.dll": "4ebb7941eb235fc76d0150860cec3ca10c1ce950"
+				}
+			}
 		}
-	}]
+	]
 }

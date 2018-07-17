@@ -7,18 +7,156 @@
 	"category": "Deinterlacing",
 	"identifier": "com.holywu.nnedi3cl",
 	"namespace": "nnedi3cl",
-	"dependencies": ["com.deinterlace.nnedi3.weights"],
-	"releases": [{
-		"version": "r7",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r7/NNEDI3CL-r7.7z",
-			"files": ["Win32/NNEDI3CL.dll"],
-			"hash": { "NNEDI3CL.dll": "86f8f20542d9c8e6be27ada566cfdbf5d67dedf0" }
+	"dependencies": [
+		"com.deinterlace.nnedi3.weights"
+	],
+	"releases": [
+		{
+			"version": "r7",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r7/NNEDI3CL-r7.7z",
+				"files": [
+					"Win32/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "86f8f20542d9c8e6be27ada566cfdbf5d67dedf0"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r7/NNEDI3CL-r7.7z",
+				"files": [
+					"Win64/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "3cd11c2dc0dda3ca770b156791d129878885ee20"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r7/NNEDI3CL-r7.7z",
-			"files": ["Win64/NNEDI3CL.dll"],
-			"hash": { "NNEDI3CL.dll": "3cd11c2dc0dda3ca770b156791d129878885ee20" }
+		{
+			"version": "r6",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r6/NNEDI3CL-r6.7z",
+				"files": [
+					"Win32/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "2663348c0664c0fd968fe33eb06c40b98f48109d"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r6/NNEDI3CL-r6.7z",
+				"files": [
+					"Win64/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "366e57752b0ff73e1f48c9030c98ce588829893c"
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r5/NNEDI3CL-r5.7z",
+				"files": [
+					"Win32/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "b7aa1d8cde0ec98297138ad2c8dd70a60f78b89a"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r5/NNEDI3CL-r5.7z",
+				"files": [
+					"Win64/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "b0394ce71590b96e3681ca61460f35ab2716ea82"
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r4/NNEDI3CL-r4.7z",
+				"files": [
+					"Win32/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "78e4036df28c5949eab6627abf218fbb776457b5"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r4/NNEDI3CL-r4.7z",
+				"files": [
+					"Win64/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "77d89d373a836247979867e151901b881b796e7a"
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r3/NNEDI3CL-r3.7z",
+				"files": [
+					"Win32/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "c66e93baba9ad392c61a3efe9ac5f1331b03be94"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r3/NNEDI3CL-r3.7z",
+				"files": [
+					"Win64/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "ade4f0e645ef8dcb7151d81e67cb9924fffaf793"
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r2/NNEDI3CL-r2.7z",
+				"files": [
+					"Win32/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "75f9dbae57388fb1500b3240eaeed582df7576db"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r2/NNEDI3CL-r2.7z",
+				"files": [
+					"Win64/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "3d6b74275ada0f247df98f5ddfbb9a2a16561792"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r1/NNEDI3CL-r1.7z",
+				"files": [
+					"Win32/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "4cbbf05437ceec0d0bfcb209d650fd93e0f897d6"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r1/NNEDI3CL-r1.7z",
+				"files": [
+					"Win64/NNEDI3CL.dll"
+				],
+				"hash": {
+					"NNEDI3CL.dll": "1514f3b7a8f051ad7f5d0e43a9acb51694696dcf"
+				}
+			}
 		}
-	}]
+	]
 }

@@ -7,13 +7,58 @@
 	"category": "Scripts",
 	"identifier": "mvsfunc",
 	"modulename": "mvsfunc",
-	"dependencies": ["fmtconv", "com.vapoursynth.bm3d"],
-	"releases": [{
-		"version": "r8",
-		"script": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/mvsfunc/archive/r8.zip",
-			"files": ["mvsfunc-r8/mvsfunc.py"],
-			"hash": { "mvsfunc.py": "1ff51a028714f30013b7304ca4cf16858d5e595e" }
+	"dependencies": [
+		"fmtconv",
+		"com.vapoursynth.bm3d"
+	],
+	"releases": [
+		{
+			"version": "r8",
+			"script": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/mvsfunc/archive/r8.zip",
+				"files": [
+					"mvsfunc-r8/mvsfunc.py"
+				],
+				"hash": {
+					"mvsfunc.py": "1ff51a028714f30013b7304ca4cf16858d5e595e"
+				}
+			}
+		},
+		{
+			"version": "r7",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r7",
+				"files": [
+					"HomeOfVapourSynthEvolution-mvsfunc-34270cb/mvsfunc.py"
+				],
+				"hash": {
+					"mvsfunc.py": "96caeb87d387638d56870114ec3292957c0816a6"
+				}
+			}
+		},
+		{
+			"version": "r6",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r6",
+				"files": [
+					"HomeOfVapourSynthEvolution-mvsfunc-6f93643/mvsfunc.py"
+				],
+				"hash": {
+					"mvsfunc.py": "e4f64d1c19edba7fbc89ed3098a49dd63bee71aa"
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r5",
+				"files": [
+					"HomeOfVapourSynthEvolution-mvsfunc-1e20b50/mvsfunc.py"
+				],
+				"hash": {
+					"mvsfunc.py": "1d9495c919e5187d8a320c13047b38ffb752189d"
+				}
+			}
 		}
-	}]
+	]
 }

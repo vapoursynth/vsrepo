@@ -7,17 +7,69 @@
 	"category": "Source/Output",
 	"identifier": "com.holywu.readmpls",
 	"namespace": "mpls",
-	"releases": [{
-		"version": "r3",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r3/ReadMpls-r3.7z",
-			"files": ["Win32/ReadMpls.dll"],
-			"hash": { "ReadMpls.dll": "2fb4d17e09259b8def65933c44272e2f7276d7d4" }
+	"releases": [
+		{
+			"version": "r3",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r3/ReadMpls-r3.7z",
+				"files": [
+					"Win32/ReadMpls.dll"
+				],
+				"hash": {
+					"ReadMpls.dll": "2fb4d17e09259b8def65933c44272e2f7276d7d4"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r3/ReadMpls-r3.7z",
+				"files": [
+					"Win64/ReadMpls.dll"
+				],
+				"hash": {
+					"ReadMpls.dll": "4990132afec8b8479e7b166609ba93a58f9f19bc"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r3/ReadMpls-r3.7z",
-			"files": ["Win64/ReadMpls.dll"],
-			"hash": { "ReadMpls.dll": "4990132afec8b8479e7b166609ba93a58f9f19bc" }
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r2/ReadMpls-r2.7z",
+				"files": [
+					"Win32/ReadMpls.dll"
+				],
+				"hash": {
+					"ReadMpls.dll": "b05431855f53011e9572ef0fb3d6b98ab62588cb"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r2/ReadMpls-r2.7z",
+				"files": [
+					"Win64/ReadMpls.dll"
+				],
+				"hash": {
+					"ReadMpls.dll": "c39df210b343d9242d370bfa07f26ee2d2b7dc50"
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r1/ReadMpls-r1.7z",
+				"files": [
+					"Win32/ReadMpls.dll"
+				],
+				"hash": {
+					"ReadMpls.dll": "010c0e6670ff1264cb3f4004a992525383d221a9"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r1/ReadMpls-r1.7z",
+				"files": [
+					"Win64/ReadMpls.dll"
+				],
+				"hash": {
+					"ReadMpls.dll": "3002dde4df371d12799bf3f7383046d5f7fb6e2d"
+				}
+			}
 		}
-	}]
+	]
 }

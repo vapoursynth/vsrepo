@@ -6,17 +6,48 @@
 	"category": "Subtitles",
 	"identifier": "com.holywu.vsfilter",
 	"namespace": "vsf",
-	"releases": [{
-		"version": "r2",
-		"win32": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VSFilter/releases/download/r2/VSFilter-r2.7z",
-			"files": ["Win32/VSFilter.dll"],
-			"hash": { "VSFilter.dll": "ecbedf66dba2580d2178f2aa38226f2de1363732" }
+	"releases": [
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VSFilter/releases/download/r2/VSFilter-r2.7z",
+				"files": [
+					"Win32/VSFilter.dll"
+				],
+				"hash": {
+					"VSFilter.dll": "ecbedf66dba2580d2178f2aa38226f2de1363732"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VSFilter/releases/download/r2/VSFilter-r2.7z",
+				"files": [
+					"Win64/VSFilter.dll"
+				],
+				"hash": {
+					"VSFilter.dll": "17cc051c152154582f4336d52bc125547dd5dd78"
+				}
+			}
 		},
-		"win64": {
-			"url": "https://github.com/HomeOfVapourSynthEvolution/VSFilter/releases/download/r2/VSFilter-r2.7z",
-			"files": ["Win64/VSFilter.dll"],
-			"hash": { "VSFilter.dll": "17cc051c152154582f4336d52bc125547dd5dd78" }
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VSFilter/releases/download/r1/VSFilter-r1.7z",
+				"files": [
+					"Win32/VSFilter.dll"
+				],
+				"hash": {
+					"VSFilter.dll": "616dce5ab15b1b670d85477f735d7fa4575804b8"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VSFilter/releases/download/r1/VSFilter-r1.7z",
+				"files": [
+					"Win64/VSFilter.dll"
+				],
+				"hash": {
+					"VSFilter.dll": "296aca0a01cc0bce30444ddc75d58bfc19d61f39"
+				}
+			}
 		}
-	}]
+	]
 }

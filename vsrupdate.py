@@ -245,7 +245,7 @@ if args.operation == 'compile':
 
     print('Done')
 elif args.operation == 'update-local':
-    if args.package[0] == 'all':
+    if args.package is None:
         for f in os.scandir('local'):
             if f.is_file() and f.path.endswith('.json'):
                 update_package(os.path.splitext(os.path.basename(f))[0])

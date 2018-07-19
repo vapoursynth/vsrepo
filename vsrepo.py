@@ -50,7 +50,7 @@ def is_sitepackage_install_portable():
 is_64bits = sys.maxsize > 2**32
 
 parser = argparse.ArgumentParser(description='A simple VapourSynth package manager')
-parser.add_argument('operation', choices=['install', 'upgrade', 'list'])
+parser.add_argument('operation', choices=['install', 'upgrade', 'list', 'available'])
 parser.add_argument('package', nargs='*', help='identifier, namespace or module to install or upgrade')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
 parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bits else 'win32', dest='target', help='binaries to install, defaults to python\'s architecture')
@@ -91,6 +91,8 @@ except:
 
 download_cache = {}
 installed_packages = {}
+
+package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 
 package_list = None
 with open('vspackages.json', 'r', encoding='utf-8') as pl:
@@ -195,8 +197,7 @@ def detect_installed_packages():
                     installed_packages[p['identifier']] = 'Unknown'
 
 def list_installed_packages():
-    print_string = "{:25s} {:10s} {:10s} {:s}"
-    print(print_string.format('Name', 'Version', 'Latest', 'Identifier'))
+    print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
     installed_ids = installed_packages.keys()
     for id in installed_ids:
         p = get_package_from_id(id, True)
@@ -205,7 +206,17 @@ def list_installed_packages():
             latest_version = latest_version + '*'
         elif is_package_upgradable(id, True):
             latest_version = latest_version + '+'  
-        print(print_string.format(p['name'], installed_packages[id], latest_version, p['identifier']))
+        print(package_print_string.format(p['name'], p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_packages[id], latest_version, p['identifier']))
+
+def list_available_packages():
+    print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
+    for p in package_list:
+        latest_version = p['releases'][0]['version']
+        if is_package_upgradable(id, False):
+            latest_version = latest_version + '*'
+        elif is_package_upgradable(id, True):
+            latest_version = latest_version + '+'
+        print(package_print_string.format(p['name'], p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_packages[p['identifier']] if p['identifier'] in installed_packages else '', p['releases'][0]['version'], p['identifier']))        
         
 def install_files(p):
     dest_path = get_install_path(p)
@@ -314,5 +325,6 @@ elif args.operation == 'upgrade':
         upgrade_package(name, args.force)
 elif args.operation == 'list':
     list_installed_packages()
-
+elif args.operation == 'available':
+    list_available_packages()
 

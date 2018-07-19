@@ -50,7 +50,7 @@ def is_sitepackage_install_portable():
 is_64bits = sys.maxsize > 2**32
 
 parser = argparse.ArgumentParser(description='A simple VapourSynth package manager')
-parser.add_argument('operation', choices=['install', 'upgrade', 'list', 'available'])
+parser.add_argument('operation', choices=['install', 'upgrade', 'installed', 'available'])
 parser.add_argument('package', nargs='*', help='identifier, namespace or module to install or upgrade')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
 parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bits else 'win32', dest='target', help='binaries to install, defaults to python\'s architecture')
@@ -323,7 +323,7 @@ if args.operation == 'install':
 elif args.operation == 'upgrade':
     for name in args.package:
         upgrade_package(name, args.force)
-elif args.operation == 'list':
+elif args.operation == 'installed':
     list_installed_packages()
 elif args.operation == 'available':
     list_available_packages()

@@ -31,6 +31,7 @@ import subprocess
 import winreg
 import difflib
 import tempfile
+import platform
 
 if platform.system() != 'Windows':
     raise Exception('Windows required')

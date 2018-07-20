@@ -220,14 +220,14 @@ def list_available_packages():
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
     for p in package_list:
         print_package_status(p)
-        
+
+def can_install(p):
+    return (get_bin_name(p) in p['releases'][0])
+    
 def install_files(p):
     dest_path = get_install_path(p)
     bin_name = get_bin_name(p)
     install_rel = p['releases'][0]
-    if not bin_name in install_rel:
-        print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
-        return
     url = install_rel[bin_name]['url']   
     data = fetch_url(url)
     if url.endswith('.7z') or url.endswith('.zip'):
@@ -262,21 +262,27 @@ def install_files(p):
 
 def install_package(name):    
     p = get_package_from_name(name)
-    result = False
-    if 'dependencies' in p:
-        for dep in p['dependencies']:
-            result = install_package(dep) or result
-    if not is_package_installed(p['identifier']):
-        install_files(p)
-        return True
-    return result
+    if can_install(p):
+        result = False
+        if 'dependencies' in p:
+            for dep in p['dependencies']:
+                result = install_package(dep) or result
+        if not is_package_installed(p['identifier']):
+            install_files(p)
+            return True
+        return result
+    else:
+        print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
 
 def upgrade_files(p):
-    if 'dependencies' in p:
-        for dep in p['dependencies']:
-            if not is_package_installed(dep):
-                install_files(get_package_from_id(dep, True))
-    install_files(p)
+    if can_install(p):
+        if 'dependencies' in p:
+            for dep in p['dependencies']:
+                if not is_package_installed(dep):
+                    install_package(dep)
+        install_files(p)
+    else:
+        print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
 
 def upgrade_package(name, force):
     if name == 'all':

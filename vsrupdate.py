@@ -32,6 +32,9 @@ import winreg
 import difflib
 import tempfile
 
+if platform.system() != 'Windows':
+    raise Exception('Windows required')
+
 parser = argparse.ArgumentParser(description='Package list generator for VSRepo')
 parser.add_argument('operation', choices=['compile', 'update-local'])
 parser.add_argument('-g', dest='git_token', nargs=1, help='OAuth access token for github')

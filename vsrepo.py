@@ -25,7 +25,6 @@ import json
 import hashlib
 import urllib.request
 import platform
-import zipfile
 import io
 import site
 import os
@@ -89,8 +88,17 @@ try:
 except:
     pass
 
-download_cache = {}
 installed_packages = {}
+download_cache = {}
+
+def fetch_url(url):
+    data = download_cache.get(url, None)
+    if data is None:
+        print('Fetching: ' + url)
+        urlreq = urllib.request.urlopen(url)
+        data = urlreq.read()
+        download_cache[url] = data
+    return data
 
 package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 
@@ -196,82 +204,61 @@ def detect_installed_packages():
                 elif exists:
                     installed_packages[p['identifier']] = 'Unknown'
 
+def print_package_status(p):
+    installed_version = installed_packages[p['identifier']] if p['identifier'] in installed_packages else ''
+    if is_package_upgradable(id, False):
+        installed_version = installed_version + '*'
+    print(package_print_string.format(p['name'], p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_version, p['releases'][0]['version'], p['identifier']))
+
 def list_installed_packages():
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
     installed_ids = installed_packages.keys()
     for id in installed_ids:
-        p = get_package_from_id(id, True)
-        latest_version = p['releases'][0]['version']     
-        if is_package_upgradable(id, False):
-            latest_version = latest_version + '*'
-        elif is_package_upgradable(id, True):
-            latest_version = latest_version + '+'  
-        print(package_print_string.format(p['name'], p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_packages[id], latest_version, p['identifier']))
+        print_package_status(get_package_from_id(id, True))
 
 def list_available_packages():
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
     for p in package_list:
-        latest_version = p['releases'][0]['version']
-        if is_package_upgradable(id, False):
-            latest_version = latest_version + '*'
-        elif is_package_upgradable(id, True):
-            latest_version = latest_version + '+'
-        print(package_print_string.format(p['name'], p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_packages[p['identifier']] if p['identifier'] in installed_packages else '', p['releases'][0]['version'], p['identifier']))        
+        print_package_status(p)
         
 def install_files(p):
     dest_path = get_install_path(p)
     bin_name = get_bin_name(p)
-    if not bin_name in p['releases'][0]:
+    install_rel = p['releases'][0]
+    if not bin_name in install_rel:
         print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
         return
-    url = p['releases'][0][bin_name]['url']
-    data = download_cache.get(url, None)
-    if data is None:
-        print('Fetching: ' + url)
-        urlreq = urllib.request.urlopen(url)
-        data = urlreq.read()
-        download_cache[url] = data
-    if url.endswith('.zip'):
-        with zipfile.ZipFile(io.BytesIO(data)) as zf:
-            for filename in p['releases'][0][bin_name]['files']:
-                stripped_fn = filename.rsplit('/', 2)[-1]
-                with zf.open(filename, 'r') as fileobj:
-                    file_data = fileobj.read()
-                    digest = hashlib.sha1(file_data).hexdigest()
-                    ref_digest = p['releases'][0][bin_name]['hash'][stripped_fn]
-                    if digest != ref_digest:
-                        raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
-                    with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
-                        outfile.write(file_data)
-    elif url.endswith('.7z'):
+    url = install_rel[bin_name]['url']   
+    data = fetch_url(url)
+    if url.endswith('.7z') or url.endswith('.zip'):
         tffd, tfpath = tempfile.mkstemp(prefix='vsm')
         tf = open(tffd, mode='wb')
         tf.write(data)
         tf.close()
-        for filename in p['releases'][0][bin_name]['files']:
+        for filename in install_rel[bin_name]['files']:
             result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             result.check_returncode()
             stripped_fn = filename.rsplit('/', 2)[-1]
             digest = hashlib.sha1(result.stdout).hexdigest()
-            ref_digest = p['releases'][0][bin_name]['hash'][stripped_fn]
+            ref_digest = install_rel[bin_name]['hash'][stripped_fn]
             if digest != ref_digest:
                 raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
             with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
                 outfile.write(result.stdout)
         os.remove(tfpath)
-    elif len(p['releases'][0][bin_name]['files']) == 1:
-        filename = p['releases'][0][bin_name]['files'][0]
+    elif len(install_rel[bin_name]['files']) == 1:
+        filename = install_rel[bin_name]['files'][0]
         stripped_fn = filename.rsplit('/', 2)[-1]
         digest = hashlib.sha1(data).hexdigest()
-        ref_digest = p['releases'][0][bin_name]['hash'][stripped_fn]
+        ref_digest = install_rel[bin_name]['hash'][stripped_fn]
         if digest != ref_digest:
             raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
         with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
             outfile.write(data)
     else:
         raise Exception('Unsupported compression type')
-    installed_packages[p['identifier']] = p['releases'][0]['version']
-    print('Successfully installed ' + p['name'] + ' ' + p['releases'][0]['version'])
+    installed_packages[p['identifier']] = install_rel['version']
+    print('Successfully installed ' + p['name'] + ' ' + install_rel['version'])
 
 def install_package(name):    
     p = get_package_from_name(name)

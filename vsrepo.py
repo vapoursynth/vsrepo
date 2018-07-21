@@ -293,7 +293,7 @@ def upgrade_files(p):
 def upgrade_package(name, force):
     inst = (0, 0)
     if name == 'all':
-        installed_ids = installed_packages.keys()       
+        installed_ids = installed_packages.keys()
         for id in installed_ids:
             if is_package_upgradable(id, force): 
                 res = upgrade_files(get_package_from_id(id, True))
@@ -301,13 +301,7 @@ def upgrade_package(name, force):
     else:
         p = get_package_from_name(name)
         if is_package_upgradable(p['identifier'], force):
-            if 'dependencies' in p:
-                for dep in p['dependencies']:
-                    if not is_package_installed(dep):
-                        res = install_package(dep)
-                        inst = (inst[0], inst[1] + res[1] + res[0])
-            install_files(p)
-            inst[0] = 1
+            inst = upgrade_files(p)
         elif not is_package_upgradable(p['identifier'], True):
             print('Package ' + p['name'] + ' not upgradaded, latest version installed')
         else:

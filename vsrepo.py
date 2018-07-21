@@ -106,10 +106,10 @@ package_list = None
 with open('vspackages.json', 'r', encoding='utf-8') as pl:
     package_list = json.load(pl)
 
-def get_bin_name(record):
-    if record['type'] == 'PyScript':
+def get_bin_name(p):
+    if p['type'] == 'PyScript':
         return 'script'
-    elif record['type'] == 'Plugin':
+    elif p['type'] == 'Plugin':
         if is_64bits:
             return 'win64'
         else:
@@ -117,10 +117,10 @@ def get_bin_name(record):
     else:
         raise Exception('Unknown install type')
 
-def get_install_path(record):
-    if record['type'] == 'PyScript':
+def get_install_path(p):
+    if p['type'] == 'PyScript':
         return py_script_path
-    elif record['type'] == 'Plugin':
+    elif p['type'] == 'Plugin':
         return plugin_path
     else:
         raise Exception('Unknown install type')
@@ -175,10 +175,11 @@ def is_package_installed(id):
     return id in installed_packages
 
 def is_package_upgradable(id, force):
+    lastest_installable = get_latest_installable_release(get_package_from_id(id, True))
     if force:
-        return (is_package_installed(id) and (installed_packages[id] != get_package_from_id(id, True)['releases'][0]['version']))
+        return (is_package_installed(id) and (lastest_installable is not None) and (installed_packages[id] != lastest_installable['version']))
     else:
-        return (is_package_installed(id) and (installed_packages[id] != 'Unknown') and (installed_packages[id] != get_package_from_id(id, True)['releases'][0]['version']))
+        return (is_package_installed(id) and (lastest_installable is not None) and (installed_packages[id] != 'Unknown') and (installed_packages[id] != lastest_installable['version']))
 
 def detect_installed_packages():
     for p in package_list:
@@ -205,12 +206,13 @@ def detect_installed_packages():
                     installed_packages[p['identifier']] = 'Unknown'
 
 def print_package_status(p):
+    lastest_installable = get_latest_installable_release(p)
     name = p['name']
     if is_package_upgradable(p['identifier'], False):
         name = '*' + name
     elif is_package_upgradable(p['identifier'], True):
         name = '+' + name
-    print(package_print_string.format(name, p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_packages[p['identifier']] if p['identifier'] in installed_packages else '', p['releases'][0]['version'], p['identifier']))
+    print(package_print_string.format(name, p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_packages[p['identifier']] if p['identifier'] in installed_packages else '', lastest_installable['version'] if lastest_installable is not None else '', p['identifier']))
 
 def list_installed_packages():
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
@@ -223,13 +225,20 @@ def list_available_packages():
     for p in package_list:
         print_package_status(p)
 
+def get_latest_installable_release(p):
+    bin_name = get_bin_name(p)
+    for rel in p['releases']:
+        if bin_name in rel:
+            return rel
+    return None
+
 def can_install(p):
-    return (get_bin_name(p) in p['releases'][0])
+    return get_latest_installable_release(p) is not None
     
 def install_files(p):
     dest_path = get_install_path(p)
     bin_name = get_bin_name(p)
-    install_rel = p['releases'][0]
+    install_rel = get_latest_installable_release(p)
     url = install_rel[bin_name]['url']   
     data = fetch_url(url)
     if url.endswith('.7z') or url.endswith('.zip'):

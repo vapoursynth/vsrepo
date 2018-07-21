@@ -7,9 +7,6 @@
 	"category": "Others",
 	"identifier": "xxx.abc.avsproxy",
 	"namespace": "avsw",
-	"dependencies": [
-		"xxx.abc.avsproxy.binary"
-	],
 	"releases": [
 		{
 			"version": "r1a",

@@ -205,10 +205,12 @@ def detect_installed_packages():
                     installed_packages[p['identifier']] = 'Unknown'
 
 def print_package_status(p):
-    installed_version = installed_packages[p['identifier']] if p['identifier'] in installed_packages else ''
-    if is_package_upgradable(id, False):
-        installed_version = installed_version + '*'
-    print(package_print_string.format(p['name'], p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_version, p['releases'][0]['version'], p['identifier']))
+    name = p['name']
+    if is_package_upgradable(p['identifier'], False):
+        name = '*' + name
+    elif is_package_upgradable(p['identifier'], True):
+        name = '+' + name
+    print(package_print_string.format(name, p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_packages[p['identifier']] if p['identifier'] in installed_packages else '', p['releases'][0]['version'], p['identifier']))
 
 def list_installed_packages():
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))

@@ -69,23 +69,22 @@ def get_git_api_url(url):
         return None
 
 def fetch_url(url):
-    urlreq = urllib.request.urlopen(url)
-    data = urlreq.read()
-    return data
+    with urllib.request.urlopen(url) as urlreq:
+        data = urlreq.read()
+        return data
 
 def fetch_url_to_cache(url, name, tag_name):
     cache_path = 'dlcache/' + name + '_' + tag_name + '/' + url.rsplit('/')[-1]
     if not os.path.isfile(cache_path):
         os.makedirs(os.path.split(cache_path)[0], exist_ok=True)
-        req = urllib.request.Request(url, method='HEAD')
-        urlreq = urllib.request.urlopen(req)
-        cache_path = 'dlcache/' + name + '_' + tag_name + '/' + urlreq.info().get_filename()
-        if not os.path.isfile(cache_path):
-            print('Download required: ' + url)
-            urlreq = urllib.request.urlopen(url)
-            data = urlreq.read()
-            with open(cache_path, 'wb') as pl:
-                pl.write(data)
+        with urllib.request.urlopen(urllib.request.Request(url, method='HEAD')) as urlreq:
+            cache_path = 'dlcache/' + name + '_' + tag_name + '/' + urlreq.info().get_filename()
+            if not os.path.isfile(cache_path):
+                print('Download required: ' + url)
+                with urllib.request.urlopen(url) as urlreq:
+                    data = urlreq.read()
+                    with open(cache_path, 'wb') as pl:
+                        pl.write(data)
     return cache_path
 
 def list_archive_files(fn):

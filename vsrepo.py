@@ -95,9 +95,9 @@ def fetch_url(url):
     data = download_cache.get(url, None)
     if data is None:
         print('Fetching: ' + url)
-        urlreq = urllib.request.urlopen(url)
-        data = urlreq.read()
-        download_cache[url] = data
+        with urllib.request.urlopen(url) as urlreq:
+            data = urlreq.read()
+            download_cache[url] = data
     return data
 
 package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"

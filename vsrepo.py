@@ -33,6 +33,9 @@ import subprocess
 import tempfile
 import argparse
 import winreg
+import email.utils
+import time
+import zipfile
 
 if platform.system() != 'Windows':
     raise Exception('Windows required')
@@ -49,7 +52,7 @@ def is_sitepackage_install_portable():
 is_64bits = sys.maxsize > 2**32
 
 parser = argparse.ArgumentParser(description='A simple VapourSynth package manager')
-parser.add_argument('operation', choices=['install', 'upgrade', 'installed', 'available'])
+parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'installed', 'available'])
 parser.add_argument('package', nargs='*', help='identifier, namespace or module to install or upgrade')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
 parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bits else 'win32', dest='target', help='binaries to install, defaults to python\'s architecture')
@@ -103,8 +106,11 @@ def fetch_url(url):
 package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 
 package_list = None
-with open('vspackages.json', 'r', encoding='utf-8') as pl:
-    package_list = json.load(pl)
+try:
+    with open('vspackages.json', 'r', encoding='utf-8') as pl:
+        package_list = json.load(pl)
+except:
+    pass
 
 def get_bin_name(p):
     if p['type'] == 'PyScript':
@@ -182,28 +188,32 @@ def is_package_upgradable(id, force):
         return (is_package_installed(id) and (lastest_installable is not None) and (installed_packages[id] != 'Unknown') and (installed_packages[id] != lastest_installable['version']))
 
 def detect_installed_packages():
-    for p in package_list:
-        dest_path = get_install_path(p)
-        for v in p['releases']:
-            matched = True
-            exists = True
-            bin_name = get_bin_name(p)
-            if bin_name in v:
-                for f in v[bin_name]['hash']:
-                    try:
-                        with open(os.path.join(dest_path, f), 'rb') as fh:
-                            digest = hashlib.sha1(fh.read()).hexdigest()
-                            ref_digest = v[bin_name]['hash'][f]
-                            if digest != ref_digest:
-                                matched = False
-                    except FileNotFoundError:
-                        exists = False
-                        matched = False
-                if matched:
-                    installed_packages[p['identifier']] = v['version']
-                    break
-                elif exists:
-                    installed_packages[p['identifier']] = 'Unknown'
+    if package_list is not None:
+        for p in package_list:
+            dest_path = get_install_path(p)
+            for v in p['releases']:
+                matched = True
+                exists = True
+                bin_name = get_bin_name(p)
+                if bin_name in v:
+                    for f in v[bin_name]['hash']:
+                        try:
+                            with open(os.path.join(dest_path, f), 'rb') as fh:
+                                digest = hashlib.sha1(fh.read()).hexdigest()
+                                ref_digest = v[bin_name]['hash'][f]
+                                if digest != ref_digest:
+                                    matched = False
+                        except FileNotFoundError:
+                            exists = False
+                            matched = False
+                    if matched:
+                        installed_packages[p['identifier']] = v['version']
+                        break
+                    elif exists:
+                        installed_packages[p['identifier']] = 'Unknown'
+    else:
+        print('No valid package definitions found. Run update command first!')
+        sys.exit(1)
 
 def print_package_status(p):
     lastest_installable = get_latest_installable_release(p)
@@ -319,9 +329,33 @@ def upgrade_package(name, force):
             print('Package ' + p['name'] + ' not upgraded, unknown version must use -f to force replacement')
     return inst
 
-detect_installed_packages()
+def update_package_definition(url):
+    localmtimeval = 0
+    try:
+        localmtimeval = os.path.getmtime('vspackages.json')
+    except:
+        pass
+    localmtime = email.utils.formatdate(localmtimeval + 10, usegmt=True)
+    req_obj = urllib.request.Request(url, headers={ 'If-Modified-Since': localmtime })
+    try:
+        with urllib.request.urlopen(req_obj) as urlreq:
+            remote_modtime = email.utils.mktime_tz(email.utils.parsedate_tz(urlreq.info()['Last-Modified']))
+            data = urlreq.read()
+            with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
+                with zf.open('vspackages.json') as pkgfile:
+                    with open('vspackages.json', 'wb') as dstfile:
+                        dstfile.write(pkgfile.read())
+                    os.utime('vspackages.json', times=(remote_modtime, remote_modtime))
+    except urllib.error.HTTPError as httperr:
+        if httperr.code == 304:
+            print('Local definitions already up to date: ' + email.utils.formatdate(localmtimeval, usegmt=True))
+        else:
+            raise
+    else:
+        print('Local definitions updated to: ' + email.utils.formatdate(remote_modtime, usegmt=True))
 
 if args.operation == 'install':
+    detect_installed_packages()
     inst = (0, 0)
     for name in args.package:
         res = install_package(name)
@@ -335,6 +369,7 @@ if args.operation == 'install':
     else:
         print('{} {} and {} additional {} installed'.format(inst[0], 'package' if inst[0] == 1 else 'packages', inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
 elif args.operation == 'upgrade':
+    detect_installed_packages()
     inst = (0, 0)
     for name in args.package:
         res = upgrade_package(name, args.force)
@@ -348,7 +383,10 @@ elif args.operation == 'upgrade':
     else:
         print('{} {} upgraded and {} additional {} installed'.format(inst[0], 'package' if inst[0] == 1 else 'packages', inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
 elif args.operation == 'installed':
+    detect_installed_packages()
     list_installed_packages()
 elif args.operation == 'available':
+    detect_installed_packages()
     list_available_packages()
-
+elif args.operation == 'update':
+    update_package_definition('http://www.vapoursynth.com/vsrepo/vspackages.zip')

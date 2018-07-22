@@ -52,7 +52,7 @@ def is_sitepackage_install_portable():
 is_64bits = sys.maxsize > 2**32
 
 parser = argparse.ArgumentParser(description='A simple VapourSynth package manager')
-parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'installed', 'available'])
+parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'uninstall', 'installed', 'available'])
 parser.add_argument('package', nargs='*', help='identifier, namespace or module to install or upgrade')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
 parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bits else 'win32', dest='target', help='binaries to install, defaults to python\'s architecture')
@@ -60,8 +60,8 @@ parser.add_argument('-p', action='store_true', dest='portable', help='portable m
 args = parser.parse_args()
 is_64bits = (args.target == 'win64')
 
-if ((args.operation == 'install') or (args.operation == 'upgrade')) == ((args.package is None) or len(args.package) == 0):
-    raise Exception('Package argument required for install and upgrade operations')
+if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is None) or len(args.package) == 0):
+    raise Exception('Package argument required for install, upgrade and uninstall operations')
 
 py_script_path = '.\\' if args.portable else site.getusersitepackages() + '\\'
 
@@ -329,6 +329,31 @@ def upgrade_package(name, force):
             print('Package ' + p['name'] + ' not upgraded, unknown version must use -f to force replacement')
     return inst
 
+def uninstall_files(p):
+    dest_path = get_install_path(p)
+    bin_name = get_bin_name(p)
+    installed_rel = None
+    for rel in p['releases']:
+        if rel['version'] == installed_packages[p['identifier']]:
+            installed_rel = rel
+            break
+    for f in installed_rel[bin_name]['hash']:
+        os.remove(os.path.join(dest_path, f))
+
+def uninstall_package(name):
+    p = get_package_from_name(name)
+    if is_package_installed(p['identifier']):
+        if installed_packages[p['identifier']] == 'Unknown':
+            print('Can\'t uninstall unknown version package: ' + p['name'])
+            return (0, 0)
+        else:
+            uninstall_files(p)
+            print('Uninstalled package: ' + p['name'] + ' ' + installed_packages[p['identifier']])
+            return (1, 0)
+    else:   
+        print('No files installed for ' + p['name'] + ', skipping uninstall')
+        return (0, 0)
+    
 def update_package_definition(url):
     localmtimeval = 0
     try:
@@ -382,6 +407,16 @@ elif args.operation == 'upgrade':
         print('{} missing {} installed'.format(inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
     else:
         print('{} {} upgraded and {} additional {} installed'.format(inst[0], 'package' if inst[0] == 1 else 'packages', inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
+elif args.operation == 'uninstall':
+    detect_installed_packages()
+    uninst = (0, 0)
+    for name in args.package:
+        res = uninstall_package(name)
+        uninst = (uninst[0] + res[0], uninst[1] + res[1])
+    if uninst[0] == 0:
+        print('No packages uninstalled')
+    else:
+        print('{} {} uninstalled'.format(uninst[0], 'package' if uninst[0] == 1 else 'packages'))
 elif args.operation == 'installed':
     detect_installed_packages()
     list_installed_packages()

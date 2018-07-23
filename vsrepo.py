@@ -257,7 +257,7 @@ def install_files(p):
     install_rel = get_latest_installable_release(p)
     url = install_rel[bin_name]['url']   
     data = fetch_url(url)
-    if url.endswith('.7z') or url.endswith('.zip'):
+    if url.endswith('.7z') or url.endswith('.rar') or url.endswith('.zip'):
         tffd, tfpath = tempfile.mkstemp(prefix='vsm')
         tf = open(tffd, mode='wb')
         tf.write(data)

@@ -1,0 +1,34 @@
+{
+	"name": "DGMVCSourceVS",
+	"type": "Plugin",
+	"description": "VapourSynth port of DGMVCSource, a MVC source filter",
+	"website": "https://github.com/kice/DGMVCSourceVS",
+	"category": "Source/Output",
+	"identifier": "systems.innocent.DGMVC",
+	"namespace": "DGMVC",
+	"releases": [
+	{
+			"version": "v1.0.0",
+			"win32": {
+				"url": "https://github.com/kice/DGMVCSourceVS/releases/download/v1.0.0/DGMVCSourceVS_x86.rar",
+				"files": [
+					"DGMVCSourceVS.dll", "libmfxsw32.dll"
+				],
+				"hash": {
+					"DGMVCSourceVS.dll": "c6a5d15b856aa7659aa7c7de329daa1e26b8a620",
+					"libmfxsw32.dll": "eca9ebaeb779dc14b829dbb333069e8fcb7f6ed4"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/kice/DGMVCSourceVS/releases/download/v1.0.0/DGMVCSourceVS_x64.rar",
+				"files": [
+					"DGMVCSourceVS.dll", "libmfxsw64.dll"
+				],
+				"hash": {
+					"DGMVCSourceVS.dll": "91e7bb8e6d5715d9d7d2eeeefb41e51fe9d7bb65",
+					"libmfxsw64.dll": "2a852573c3a25501d7b6bd013a514d2657ade10c"
+				}
+			}
+		}
+	]
+}

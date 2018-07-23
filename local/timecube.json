@@ -6,17 +6,27 @@
 	"category": "Others",
 	"identifier": "day.simultaneous.4",
 	"namespace": "timecube",
-	"releases": [{
-		"version": "r1",
-		"win32": {
-			"url": "https://github.com/sekrit-twc/timecube/releases/download/r1/timecube_r1.7z",
-			"files": ["timecube_r1/x86/vscube.dll"],
-			"hash": { "vscube.dll": "1c0219871d36e1100c245e612145e6c7734718af" }
-		},
-		"win64": {
-			"url": "https://github.com/sekrit-twc/timecube/releases/download/r1/timecube_r1.7z",
-			"files": ["timecube_r1/x64/vscube.dll"],
-			"hash": { "vscube.dll": "eaa09afb39067d701ed86f66f923f8b74e7482a8" }
+	"releases": [
+		{
+			"version": "r1",
+			"win32": {
+				"url": "https://github.com/sekrit-twc/timecube/releases/download/r1/timecube_r1.7z",
+				"files": [
+					"timecube_r1/x86/vscube.dll"
+				],
+				"hash": {
+					"vscube.dll": "03121bc63366bdffef03c08ca96add8e01ad7c42325f088fbca29060688668d7"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/sekrit-twc/timecube/releases/download/r1/timecube_r1.7z",
+				"files": [
+					"timecube_r1/x64/vscube.dll"
+				],
+				"hash": {
+					"vscube.dll": "7a1cf87078a461584e33462871725629c491154ebb63d0d2d8983fcdcacc7634"
+				}
+			}
 		}
-	}]
+	]
 }

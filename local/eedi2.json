@@ -16,7 +16,7 @@
 					"Win32/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "a4f30144a8e78d577a74d40bd6dbc7733047f8c2"
+					"EEDI2.dll": "b0c85d598a8bec700d9902cef84f4300784c4294bffc35139ce1dbbbdfa3eee1"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"Win64/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "bc140e0230e8f0bdfc2b79ff1e43b0c6d5c86483"
+					"EEDI2.dll": "83d28a7cc93e748bfc5788a7fafabd2c488e15f294d6ce5ae97932c0086111f7"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"Win32/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "b382340db8f32788239b38257fedaf8ef570709e"
+					"EEDI2.dll": "35a91e9f71645f8bed3f9f6293dbb32d6960e2200efd2f86171ef92ae5b122f7"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"Win64/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "bbdb8f5a9546efb290c2bf9f62ed987ac68684b7"
+					"EEDI2.dll": "6511d944abd7d63dd8f5bfc17ebd35ba531c9b9053aba3a68afbd003926d94ac"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"Win32/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "dfe60672ec0cd89253d15772008bd5b60c1faada"
+					"EEDI2.dll": "c5b894a1a15417668c37ed22a6638629638f0d4b3ec3f73cc3e730f83464a3db"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"Win64/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "c46797cfaef1519650d0f31d11afd45835da693e"
+					"EEDI2.dll": "6296aab9059fd6f4e1ff622191769576a491d0d7ad1e2f6e7b2b702d2ce6baf2"
 				}
 			}
 		},
@@ -79,7 +79,7 @@
 					"Win32/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "fc6d55f0481432a40c75aa2f48312db733c6c74b"
+					"EEDI2.dll": "5d97a24a31248eaa44e21f0b0fbb9fe4b511502a70141f9b3355cbbf5a17ae27"
 				}
 			},
 			"win64": {
@@ -88,7 +88,7 @@
 					"Win64/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "83e9e886c0ff80b952ac14b28285e6229d22cc1e"
+					"EEDI2.dll": "6ad9c8479d42cda042339e64bd1a97212cb912579e054462907537118a91b15e"
 				}
 			}
 		},
@@ -100,7 +100,7 @@
 					"Win32/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "61137eece03b0876e192635e7629d9eab9442437"
+					"EEDI2.dll": "7b9eaa35aad38aa0df56b85e53c6a45d0a5f66346252894f3eac199c6a6a2336"
 				}
 			},
 			"win64": {
@@ -109,7 +109,7 @@
 					"Win64/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "76d7671bc2a5490d7f62f3b9ade34a5e6c6609f1"
+					"EEDI2.dll": "ce0cd64324d48f023c85015107eee220279840588e84d01406c6860f3295b204"
 				}
 			}
 		},
@@ -121,7 +121,7 @@
 					"Win32/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "559433f82a8a7222ad359ec3dcd91abec9b05f16"
+					"EEDI2.dll": "18a537343213b537aa6b3fe7baab01a24a770a87e6c383c4cd0532813ff58ed8"
 				}
 			},
 			"win64": {
@@ -130,7 +130,7 @@
 					"Win64/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "8a6b8721bc6a04bef7d5dea9310f98346caea525"
+					"EEDI2.dll": "6a84995bd875a1fe6fe87b4d1578643328057af2aaf417d886593a58abfebdba"
 				}
 			}
 		},
@@ -142,7 +142,7 @@
 					"Win32/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "ba538b693a18828b94040dc388f78e705bcfdff4"
+					"EEDI2.dll": "53e2ffe70de4b006a2f78a707aa085623552fd5651d812505d09e157157ff938"
 				}
 			},
 			"win64": {
@@ -151,7 +151,7 @@
 					"Win64/EEDI2.dll"
 				],
 				"hash": {
-					"EEDI2.dll": "9eb35291169ad82a22c7919adea2cc6383ea91ef"
+					"EEDI2.dll": "d2571169d4198bc40607ba73a53d2dcf4f4a372e52284db55fdd1b2d900b37c8"
 				}
 			}
 		}

@@ -16,7 +16,7 @@
 					"mingw/i686-w64-mingw32/libdelogo.dll"
 				],
 				"hash": {
-					"libdelogo.dll": "d35d3e1d34f7ac1f1fb3a972c551d623b880531b"
+					"libdelogo.dll": "ef62d2f4cc7463ece3bc4f74f4fc0c4dab39143641e5be6c88198a0f6a2c60d7"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"mingw/x86_64-w64-mingw32/libdelogo.dll"
 				],
 				"hash": {
-					"libdelogo.dll": "f43475dac4346dc12b5063ac2686edf18c22e025"
+					"libdelogo.dll": "391cafb3a8d8a61394da9cf64fd8003599b0dcec6087c9b2bb341feabf052dd6"
 				}
 			}
 		},

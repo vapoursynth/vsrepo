@@ -19,7 +19,7 @@
 					"Win32/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "86f8f20542d9c8e6be27ada566cfdbf5d67dedf0"
+					"NNEDI3CL.dll": "9282f98913f37f69059e5e7fbd7c9778a068e6ce80c650b91b3120cade87d3bf"
 				}
 			},
 			"win64": {
@@ -28,7 +28,7 @@
 					"Win64/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "3cd11c2dc0dda3ca770b156791d129878885ee20"
+					"NNEDI3CL.dll": "7aa38ec620d472a87ee4e0728cc7bacba27e286363cf8c5009545cde2eb6525d"
 				}
 			}
 		},
@@ -40,7 +40,7 @@
 					"Win32/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "2663348c0664c0fd968fe33eb06c40b98f48109d"
+					"NNEDI3CL.dll": "29f73d4b9f91e0d93badee89b2a6f70727547bca321a80c62b1b0d8e6d265e3e"
 				}
 			},
 			"win64": {
@@ -49,7 +49,7 @@
 					"Win64/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "366e57752b0ff73e1f48c9030c98ce588829893c"
+					"NNEDI3CL.dll": "ee9fabc701f07d56145593c7fff1cabfb8696de429322b29e76681ad575f71c4"
 				}
 			}
 		},
@@ -61,7 +61,7 @@
 					"Win32/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "b7aa1d8cde0ec98297138ad2c8dd70a60f78b89a"
+					"NNEDI3CL.dll": "da8d1a5cf2ad9d6233d7b1051f0c6fccea053eda44b247dfd59bea39dbcdfc4d"
 				}
 			},
 			"win64": {
@@ -70,7 +70,7 @@
 					"Win64/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "b0394ce71590b96e3681ca61460f35ab2716ea82"
+					"NNEDI3CL.dll": "0e8efa76f28eac5fb3e87220277a470b21e741ce6ac186a382cde2e536b1ac46"
 				}
 			}
 		},
@@ -82,7 +82,7 @@
 					"Win32/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "78e4036df28c5949eab6627abf218fbb776457b5"
+					"NNEDI3CL.dll": "fef2e895956ddb710ca2ce35b8a655d9f3303bb3e5016f89497e3564b440c3e7"
 				}
 			},
 			"win64": {
@@ -91,7 +91,7 @@
 					"Win64/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "77d89d373a836247979867e151901b881b796e7a"
+					"NNEDI3CL.dll": "496602bfb0ec546fe2d53ce42aa3908c1c270a88b6a0180d604649fca1013dc6"
 				}
 			}
 		},
@@ -103,7 +103,7 @@
 					"Win32/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "c66e93baba9ad392c61a3efe9ac5f1331b03be94"
+					"NNEDI3CL.dll": "6d370284ea88234a71f1ca9461d6819af31e869ba5d1c7238e3f310ec78dffdf"
 				}
 			},
 			"win64": {
@@ -112,7 +112,7 @@
 					"Win64/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "ade4f0e645ef8dcb7151d81e67cb9924fffaf793"
+					"NNEDI3CL.dll": "3cf3627fc845a2f415bf7bd616c2ed0b376a6a97e2c85cabea26160531972ad8"
 				}
 			}
 		},
@@ -124,7 +124,7 @@
 					"Win32/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "75f9dbae57388fb1500b3240eaeed582df7576db"
+					"NNEDI3CL.dll": "136967b6d480b490cf74450408395155de2e5ec18234da6fcc823a6deb67b3d4"
 				}
 			},
 			"win64": {
@@ -133,7 +133,7 @@
 					"Win64/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "3d6b74275ada0f247df98f5ddfbb9a2a16561792"
+					"NNEDI3CL.dll": "884c3d06979ade12a95eab7d9f467dda4b1d0aa9763d408e4844a6398784bb27"
 				}
 			}
 		},
@@ -145,7 +145,7 @@
 					"Win32/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "4cbbf05437ceec0d0bfcb209d650fd93e0f897d6"
+					"NNEDI3CL.dll": "5f0e6399a5dcb11b108880e89a46ab48951eee88bb2b0a63ee2e8395cc0f7b8e"
 				}
 			},
 			"win64": {
@@ -154,7 +154,7 @@
 					"Win64/NNEDI3CL.dll"
 				],
 				"hash": {
-					"NNEDI3CL.dll": "1514f3b7a8f051ad7f5d0e43a9acb51694696dcf"
+					"NNEDI3CL.dll": "5ac8fc00a7f6bf1994cf8c2c60a5ad1040a2e36b983b23b059f07201c9d60213"
 				}
 			}
 		}

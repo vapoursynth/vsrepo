@@ -7,17 +7,27 @@
 	"category": "Denoising",
 	"identifier": "com.nodame.cnr2",
 	"namespace": "cnr2",
-	"releases": [{
-		"version": "v1",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-cnr2/releases/download/v1/vapoursynth-cnr2-v1-win32.7z",
-			"files": ["libcnr2.dll"],
-			"hash": { "libcnr2.dll": "c99e35e2f31c5788f1cba9ea1f3c7e34d64b7b2b" }
-		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-cnr2/releases/download/v1/vapoursynth-cnr2-v1-win64.7z",
-			"files": ["libcnr2.dll"],
-			"hash": { "libcnr2.dll": "f9f0fab456747d3e091385b258340ac73d3c8166" }
+	"releases": [
+		{
+			"version": "v1",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-cnr2/releases/download/v1/vapoursynth-cnr2-v1-win32.7z",
+				"files": [
+					"libcnr2.dll"
+				],
+				"hash": {
+					"libcnr2.dll": "6517b9600798663ce255691eff4803d5a0fb16f826cb2ee0e253873a152ad1ca"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-cnr2/releases/download/v1/vapoursynth-cnr2-v1-win64.7z",
+				"files": [
+					"libcnr2.dll"
+				],
+				"hash": {
+					"libcnr2.dll": "de187de995fbefdd07fcd07ff219934f63f96feba09ef0301fc7238be69dbe10"
+				}
+			}
 		}
-	}]
+	]
 }

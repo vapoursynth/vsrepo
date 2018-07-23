@@ -16,8 +16,8 @@
 					"vapoursynth-dpid-r3/x64/cudart64_80.dll"
 				],
 				"hash": {
-					"vapoursynth-dpid.dll": "74055738f66f0898e5b252b3d19996f880fc5726",
-					"cudart64_80.dll": "8cc81b4e6223069d15f11582191f4d75a44ddbe4"
+					"vapoursynth-dpid.dll": "80b73afa754921005c501a97d17f16437a6a71fac998cfbc8815b0037d99f2ca",
+					"cudart64_80.dll": "55d57e2854311915ae5fdcfd1673f92d5bb0cec42773fcda68f740befb655ed1"
 				}
 			}
 		},
@@ -30,8 +30,8 @@
 					"vapoursynth-dpid-r2/x64/cudart64_80.dll"
 				],
 				"hash": {
-					"vapoursynth-dpid.dll": "2b5267bdcb7c0e095d8585e61483e8148d45b8f5",
-					"cudart64_80.dll": "8cc81b4e6223069d15f11582191f4d75a44ddbe4"
+					"vapoursynth-dpid.dll": "cff1d7da5ae888d3f848c5209098b4ad94f387631ec51f3e9f05f68705ea4abf",
+					"cudart64_80.dll": "55d57e2854311915ae5fdcfd1673f92d5bb0cec42773fcda68f740befb655ed1"
 				}
 			}
 		},
@@ -44,8 +44,8 @@
 					"vapoursynth-dpid-r1/x64/cudart64_80.dll"
 				],
 				"hash": {
-					"vapoursynth-dpid.dll": "ddf3e689b1ae9ed41cfe9f9f03c1e08e3f427f00",
-					"cudart64_80.dll": "8cc81b4e6223069d15f11582191f4d75a44ddbe4"
+					"vapoursynth-dpid.dll": "a748990974d5eef1cba86088276259af1a3a3f4bb7633f82cefbb6bc0b86565e",
+					"cudart64_80.dll": "55d57e2854311915ae5fdcfd1673f92d5bb0cec42773fcda68f740befb655ed1"
 				}
 			}
 		}

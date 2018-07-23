@@ -18,7 +18,7 @@
 					"Win32/fft3dfilter.dll"
 				],
 				"hash": {
-					"fft3dfilter.dll": "8389ba7e76dfcbcd8f5ee06566e111c6f0c5358d"
+					"fft3dfilter.dll": "c272c0ea2e3b25c64f48321f8c304959c1a4194a5e6c5eb77a15173350c3119a"
 				}
 			},
 			"win64": {
@@ -27,7 +27,7 @@
 					"x64/fft3dfilter.dll"
 				],
 				"hash": {
-					"fft3dfilter.dll": "cad7519cd2817823a1837d41ea02fbfa1a5e8c05"
+					"fft3dfilter.dll": "fc9fcabff162c6612d74dd0043182f4ac82494d31122ca4ef1b09108c4c6df66"
 				}
 			}
 		}

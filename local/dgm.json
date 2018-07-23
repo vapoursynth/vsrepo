@@ -7,17 +7,27 @@
 	"category": "Denoising",
 	"identifier": "com.nodame.degrainmedian",
 	"namespace": "dgm",
-	"releases": [{
-		"version": "v1",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-degrainmedian/releases/download/v1/vapoursynth-degrainmedian-v1-win32.7z",
-			"files": ["libdegrainmedian.dll"],
-			"hash": { "libdegrainmedian.dll": "9bdd1d41af6959686d9be6a2854b66d43a3399e3" }
-		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-degrainmedian/releases/download/v1/vapoursynth-degrainmedian-v1-win64.7z",
-			"files": ["libdegrainmedian.dll"],
-			"hash": { "libdegrainmedian.dll": "4b058da23fc56012a80f978613b32f11091078eb" }
+	"releases": [
+		{
+			"version": "v1",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-degrainmedian/releases/download/v1/vapoursynth-degrainmedian-v1-win32.7z",
+				"files": [
+					"libdegrainmedian.dll"
+				],
+				"hash": {
+					"libdegrainmedian.dll": "51b8d9d98fee9204bdf2b1e2c58d1eff92d2b4532510017a132061c62db80c3a"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-degrainmedian/releases/download/v1/vapoursynth-degrainmedian-v1-win64.7z",
+				"files": [
+					"libdegrainmedian.dll"
+				],
+				"hash": {
+					"libdegrainmedian.dll": "c204e04282386c2319ccd01d52eea97f5c0e33cbed6c6f86ab9ff988fbe79897"
+				}
+			}
 		}
-	}]
+	]
 }

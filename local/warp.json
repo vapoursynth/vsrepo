@@ -16,7 +16,7 @@
 					"libawarpsharp2.dll"
 				],
 				"hash": {
-					"libawarpsharp2.dll": "4aaa32d096c9f96b80577744620260640d330ebd"
+					"libawarpsharp2.dll": "c22ec73cf0a3257d6bfc509d2e2210ebbc6657e985bd9b2bc295ecbff1ef168b"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"libawarpsharp2.dll"
 				],
 				"hash": {
-					"libawarpsharp2.dll": "7b615b7b430aea9b0d9a4ccaa986b5fdcd609c7f"
+					"libawarpsharp2.dll": "cea13e4ecf0d430e42a6455cb3a608d4eddd7f2c13f1215489604667b4bd8093"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"libawarpsharp2.dll"
 				],
 				"hash": {
-					"libawarpsharp2.dll": "49ee47ebe9e99a9f5f450e610d0c35aec4df4c35"
+					"libawarpsharp2.dll": "0a9cfe22d479971fae6a7db25930cd6abdf6eff47908e7982467d46675415b6b"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"libawarpsharp2.dll"
 				],
 				"hash": {
-					"libawarpsharp2.dll": "f722bde693ec1bcd77bedc848744879d799b70d0"
+					"libawarpsharp2.dll": "99c04e96514a3269244791e979233ccc810d128bb583bc82919062001a41b069"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"libawarpsharp2.dll"
 				],
 				"hash": {
-					"libawarpsharp2.dll": "621f373e3c1caeb9bac027292bcad8921daf0cdc"
+					"libawarpsharp2.dll": "477b0c34440bf70b257b6a6a81168aef56575ad0f25126adcf8880f4af6edcbf"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"libawarpsharp2.dll"
 				],
 				"hash": {
-					"libawarpsharp2.dll": "3a7a72eb2f59004ba7ac879a01ba67277c5bfbbc"
+					"libawarpsharp2.dll": "3cb6aa99eb50aa45307b52c18830ab243e49f3dab9cc7cabc8e017714bb29d0f"
 				}
 			}
 		},
@@ -79,7 +79,7 @@
 					"libawarpsharp2.dll"
 				],
 				"hash": {
-					"libawarpsharp2.dll": "f91023e5ab8ef4e148540c9914e15cb661c7ec5d"
+					"libawarpsharp2.dll": "4c0c7c663ced9999449ec89228eeec82f6af6733bd767c61dd2a72c4c4b116b0"
 				}
 			},
 			"win64": {
@@ -88,7 +88,7 @@
 					"libawarpsharp2.dll"
 				],
 				"hash": {
-					"libawarpsharp2.dll": "4ebb7941eb235fc76d0150860cec3ca10c1ce950"
+					"libawarpsharp2.dll": "43436cbce50ea917dcaccf7917826fd7f73dda8f7ed976cc238c211030dc3e84"
 				}
 			}
 		}

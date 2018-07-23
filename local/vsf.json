@@ -15,7 +15,7 @@
 					"Win32/VSFilter.dll"
 				],
 				"hash": {
-					"VSFilter.dll": "ecbedf66dba2580d2178f2aa38226f2de1363732"
+					"VSFilter.dll": "dca35d944f200a9e415becea526ae66859b5b63f87919c8f1144685ae5b45d8c"
 				}
 			},
 			"win64": {
@@ -24,7 +24,7 @@
 					"Win64/VSFilter.dll"
 				],
 				"hash": {
-					"VSFilter.dll": "17cc051c152154582f4336d52bc125547dd5dd78"
+					"VSFilter.dll": "07ce8ca88c4d1e447802aa1a152f940ceefd90104546f41b739ca1f4e4c36167"
 				}
 			}
 		},
@@ -36,7 +36,7 @@
 					"Win32/VSFilter.dll"
 				],
 				"hash": {
-					"VSFilter.dll": "616dce5ab15b1b670d85477f735d7fa4575804b8"
+					"VSFilter.dll": "6b2284c62e73fb70848611fec183a8088cb8a1957956a9ae15b13b19c60c984d"
 				}
 			},
 			"win64": {
@@ -45,7 +45,7 @@
 					"Win64/VSFilter.dll"
 				],
 				"hash": {
-					"VSFilter.dll": "296aca0a01cc0bce30444ddc75d58bfc19d61f39"
+					"VSFilter.dll": "1462e2230cd7dbb15fd516625aaba264975391d6b018c63706f09d6711a7d9cb"
 				}
 			}
 		}

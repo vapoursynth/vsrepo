@@ -16,7 +16,7 @@
 					"libmsmoosh.dll"
 				],
 				"hash": {
-					"libmsmoosh.dll": "6e7fb738a0e5c8f0a953c2e7fb0fda68abf02be5"
+					"libmsmoosh.dll": "f6cbbcc0ac1e65a7ab40642ed3349dcf601d3e3a9ed9e0c20c84ed74a5247865"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"libmsmoosh.dll"
 				],
 				"hash": {
-					"libmsmoosh.dll": "0e825c8b34b652cb2dc3a9caef39c18de1293972"
+					"libmsmoosh.dll": "3cc2ced0470e7e4e1115484739f87a81cb02519779049bf84f769afd6acf9544"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"libmsmoosh.dll"
 				],
 				"hash": {
-					"libmsmoosh.dll": "de1a60934d243007848dc96b511af546fff86e1f"
+					"libmsmoosh.dll": "3507ea2188b4ed1eb8c7061ff9a28e844ec8149484f00cddf1e8e8ba7bd7f5fe"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"libmsmoosh.dll"
 				],
 				"hash": {
-					"libmsmoosh.dll": "e5e89d03cfdba40bf3669ad23f17add6c3fd6e31"
+					"libmsmoosh.dll": "97a475a4234ba4a419a22ac6182d5a8fe0a7616620c601f25cd3bb05e5fc2f40"
 				}
 			}
 		}

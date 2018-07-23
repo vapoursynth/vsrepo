@@ -6,17 +6,27 @@
 	"category": "Dot Crawl and Rainbows",
 	"identifier": "com.nodame.ssiq",
 	"namespace": "ssiq",
-	"releases": [{
-		"version": "v1.0",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-ssiq/releases/download/v1.0/vapoursynth-ssiq-v1.0-win32.7z",
-			"files": ["libssiq.dll"],
-			"hash": { "libssiq.dll": "44fb8618de0436ebbfd494b215bc8fb358c03671" }
-		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-ssiq/releases/download/v1.0/vapoursynth-ssiq-v1.0-win64.7z",
-			"files": ["libssiq.dll"],
-			"hash": { "libssiq.dll": "b12b3d4e2f63cb5e73fc9d7ed261259cdfa81d51" }
+	"releases": [
+		{
+			"version": "v1.0",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-ssiq/releases/download/v1.0/vapoursynth-ssiq-v1.0-win32.7z",
+				"files": [
+					"libssiq.dll"
+				],
+				"hash": {
+					"libssiq.dll": "8f55f10d229d83c9bb22ed1215a24303a99c4284dd7f4c4cfa2fda478cea7f69"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-ssiq/releases/download/v1.0/vapoursynth-ssiq-v1.0-win64.7z",
+				"files": [
+					"libssiq.dll"
+				],
+				"hash": {
+					"libssiq.dll": "96d222a493bb488094306afc1837439396d03f419c4399aa4349178b4ecd2ef5"
+				}
+			}
 		}
-	}]
+	]
 }

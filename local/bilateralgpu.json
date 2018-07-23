@@ -15,7 +15,7 @@
 					"VapourSynth-BilateralGPU-r4/x64/bilateralGPU.dll"
 				],
 				"hash": {
-					"bilateralGPU.dll": "9be18030555ed79b4d83d3d46e6a01f943f0d049"
+					"bilateralGPU.dll": "0c5ba9f332a1d88b5972a6d8af6be81fdf61acd3735859c68723adc025ff1338"
 				}
 			}
 		},
@@ -27,7 +27,7 @@
 					"VapourSynth-BilateralGPU-r3/x64/bilateralGPU.dll"
 				],
 				"hash": {
-					"bilateralGPU.dll": "73cdcf95578679029201be10f5fef2a09fa152ac"
+					"bilateralGPU.dll": "ce033b6eecd05cb9043c7518552699917950bd790820fb2a5ab5417e8e247d5b"
 				}
 			}
 		},
@@ -39,7 +39,7 @@
 					"VapourSynth-BilateralGPU-r2/x64/bilateralGPU.dll"
 				],
 				"hash": {
-					"bilateralGPU.dll": "49fc52f605a2ad99ea765c0a645aa3c860c6bf20"
+					"bilateralGPU.dll": "283a8d65447dae3f0c35e2792669a620aede14c86b0da8c9611845632b84c2bb"
 				}
 			}
 		},
@@ -51,7 +51,7 @@
 					"VapourSynth-BilateralGPU-r1/x64/bilateralGPU.dll"
 				],
 				"hash": {
-					"bilateralGPU.dll": "73cdcf95578679029201be10f5fef2a09fa152ac"
+					"bilateralGPU.dll": "ce033b6eecd05cb9043c7518552699917950bd790820fb2a5ab5417e8e247d5b"
 				}
 			}
 		}

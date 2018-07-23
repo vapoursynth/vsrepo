@@ -16,7 +16,7 @@
 					"libbifrost.dll"
 				],
 				"hash": {
-					"libbifrost.dll": "e422f6f520b7314415ee5fb323ebc4c730faa68c"
+					"libbifrost.dll": "282f337d745eba05e04bc2cf6c2ad8fcdd297f8eb6cd6a954070e8380aabe7f0"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"libbifrost.dll"
 				],
 				"hash": {
-					"libbifrost.dll": "bb1a85145c77c37d7f2939aa8241db3bce4b3a09"
+					"libbifrost.dll": "d7665dbc24d743d8571d6a0c6f1f6a1f0d2364bb45c2ade9f8b886e3951262a9"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"libbifrost.dll"
 				],
 				"hash": {
-					"libbifrost.dll": "73e57a055dcd895e39ec7a99937c0508ca75f126"
+					"libbifrost.dll": "157b9c95d7eaa88085cb75066ad9059b376ea5ed9ab9e3c3143efa8c8c6e9382"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"libbifrost.dll"
 				],
 				"hash": {
-					"libbifrost.dll": "dfda7a6b48c73360b95dd4557b41f7a17824ecb8"
+					"libbifrost.dll": "fe797336dfda27347899193496f163870ea6e4b6a2371f869d8ee60edaca17ec"
 				}
 			}
 		},
@@ -61,7 +61,7 @@
 					"libbifrost.dll"
 				],
 				"hash": {
-					"libbifrost.dll": "38d1c8939d06f95ec5589f2b81c23f08c3752db2"
+					"libbifrost.dll": "bbf56e32f9c6a5cd9ce17609f6c56cda801288df3fdab541635cf465439cbeb7"
 				}
 			},
 			"win64": {
@@ -70,7 +70,7 @@
 					"libbifrost.dll"
 				],
 				"hash": {
-					"libbifrost.dll": "3452ea64a98e5b9196f4c8f365ba39886cf4f3df"
+					"libbifrost.dll": "853fcc2c9d3f6e9bbf65588bda59dbec5e280694d3d5b88a87dcc0484eee1eaa"
 				}
 			}
 		}

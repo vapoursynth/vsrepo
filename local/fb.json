@@ -6,17 +6,27 @@
 	"category": "Others",
 	"identifier": "com.nodame.fillborders",
 	"namespace": "fb",
-	"releases": [{
-		"version": "v1.0",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-fillborders/releases/download/v1.0/vapoursynth-fillborders-v1.0-win32.7z",
-			"files": ["libfillborders.dll"],
-			"hash": { "libfillborders.dll": "ee437b00ebc1877c3283cb15ad929ab5f3652108" }
-		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-fillborders/releases/download/v1.0/vapoursynth-fillborders-v1.0-win64.7z",
-			"files": ["libfillborders.dll"],
-			"hash": { "libfillborders.dll": "2629bf04777bf02210d33784718cdd852f57dbbc" }
+	"releases": [
+		{
+			"version": "v1.0",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-fillborders/releases/download/v1.0/vapoursynth-fillborders-v1.0-win32.7z",
+				"files": [
+					"libfillborders.dll"
+				],
+				"hash": {
+					"libfillborders.dll": "d9b01e551c8e6562dd43a83cd504152557cce34d4b73a629758f8247fac57a87"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-fillborders/releases/download/v1.0/vapoursynth-fillborders-v1.0-win64.7z",
+				"files": [
+					"libfillborders.dll"
+				],
+				"hash": {
+					"libfillborders.dll": "448e55db262f3271a289b2d3458e1c882d9b836732e847dd6292731afe3af95e"
+				}
+			}
 		}
-	}]
+	]
 }

@@ -16,7 +16,7 @@
 					"ffms2-2.23.1-msvc/x86/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "99f8aedc2a3855d6779addc2c62bbceaca4ddfca"
+					"ffms2.dll": "2557f058ba0e4c6535def49c3911618e2502f06f5a161b0ddcf2b3294b0f4488"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"ffms2-2.23.1-msvc/x64/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "91fd8fa55f333acdd7f9d14aab293d02aab3fb37"
+					"ffms2.dll": "efaf8ee93f318bba9eefd007dbde8ea430f06a60e5cbc5ed5ee32a13d2ab1b61"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"ffms2-2.22-msvc/x86/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "262b7d3a939b32bdfc56d43acf0d99029ea153bc"
+					"ffms2.dll": "a229f661cbd1a57589c5f7ad66137d3516151715164cb643353bdfe1ac21a956"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"ffms2-2.22-msvc/x64/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "f9f0db746b6dc2363fb8bbdcc5253cdeca2ac4ee"
+					"ffms2.dll": "cbeea2c85e11b63464d351eab41da12340896334d1c6b4165c50dcefc1db5904"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"ffms2-2.21-msvc/x86/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "8c8d096ea071081deb83fdf37989ebfb6547bf50"
+					"ffms2.dll": "66c1bb4aacb763842deb48f1e7c9532f9f43bdaa09aacc8d0811d4e0115b1326"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"ffms2-2.21-msvc/x64/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "63181498e2a8829bbeabad96d21502b5723e0f61"
+					"ffms2.dll": "cab72f6b5e6afeb4c207d5947ff55861cd6faa28624f6480c990f99b24b2000d"
 				}
 			}
 		},
@@ -79,7 +79,7 @@
 					"ffms2-2.20-msvc/x86/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "55dcc9b8f07de7ab2d145db574fc8165041ef8f3"
+					"ffms2.dll": "22c002e506cb86a211b715a923b3733e7b7d5a3067f2d12f7833964f9638bd8d"
 				}
 			},
 			"win64": {
@@ -88,7 +88,7 @@
 					"ffms2-2.20-msvc/x64/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "9a5aa1e93e6658b597c09f2038b90d4c71bb1103"
+					"ffms2.dll": "d5b7cc3fd1f369423ccd221bda26c3470132e068cd6aa9c96258c57616f49087"
 				}
 			}
 		},
@@ -103,7 +103,7 @@
 					"ffms2-2.19/x64/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "bc9fdb684047c89c2135972f82ecf39ec6188dda"
+					"ffms2.dll": "5e17c52486134fc288ffe8e1215b0203e5b55111d707b3c63428fa84d749600f"
 				}
 			}
 		},
@@ -121,7 +121,7 @@
 					"ffms2-2.18-rc1/x86/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "bce9c698bcf1388f758983b8188feeedd50860de"
+					"ffms2.dll": "43ce505d4963089fe0484d1568851028e50428673dc0f629a628a5d6eafce0fb"
 				}
 			},
 			"win64": {
@@ -130,7 +130,7 @@
 					"ffms2-2.18-rc1/x64/ffms2.dll"
 				],
 				"hash": {
-					"ffms2.dll": "9b146fcf47f7bef8b118310127d81a92439d007c"
+					"ffms2.dll": "b366a84d8f9f4efad24513e2d79f2c3bacecf7dd5f23de121405f60fb3c7467b"
 				}
 			}
 		}

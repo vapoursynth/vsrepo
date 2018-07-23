@@ -7,17 +7,27 @@
 	"category": "Denoising",
 	"identifier": "com.nodame.minideen",
 	"namespace": "minideen",
-	"releases": [{
-		"version": "v1",
-		"win32": {
-			"url": "https://github.com/dubhater/vapoursynth-minideen/releases/download/v1/vapoursynth-minideen-v1-win32.7z",
-			"files": ["libminideen.dll"],
-			"hash": { "libminideen.dll": "250be1497035a51cabca751692010bd9300d9353" }
-		},
-		"win64": {
-			"url": "https://github.com/dubhater/vapoursynth-minideen/releases/download/v1/vapoursynth-minideen-v1-win64.7z",
-			"files": ["libminideen.dll"],
-			"hash": { "libminideen.dll": "7dfbdd3c7adf05e0deb7e99feee6b72000008d27" }
+	"releases": [
+		{
+			"version": "v1",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-minideen/releases/download/v1/vapoursynth-minideen-v1-win32.7z",
+				"files": [
+					"libminideen.dll"
+				],
+				"hash": {
+					"libminideen.dll": "3b89e3d7636c01db928402233509a98f2c865491ea898e964b3cbb8a70ec8dbf"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-minideen/releases/download/v1/vapoursynth-minideen-v1-win64.7z",
+				"files": [
+					"libminideen.dll"
+				],
+				"hash": {
+					"libminideen.dll": "a6e220da8bfdece8fcac3acdbaeb7f2f40e8b1951a394f17c5a882aabe6ba081"
+				}
+			}
 		}
-	}]
+	]
 }

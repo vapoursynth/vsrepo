@@ -16,7 +16,7 @@
 					"Win32/Retinex.dll"
 				],
 				"hash": {
-					"Retinex.dll": "88ed9c26441d30dbde4a7c2e39e09ff37982ea91"
+					"Retinex.dll": "63bb69ac6b31b2448eaaf3398e4836486813e65d489e6ff2acaf61ecdeb99926"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"x64/Retinex.dll"
 				],
 				"hash": {
-					"Retinex.dll": "23553ef9910d65502c5fb81b83bbfffcba7843c7"
+					"Retinex.dll": "c1b9114e13509335cd3ecfc61d13cb7baab2e07ee1d00132853799824c29007e"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"Win32/Retinex.dll"
 				],
 				"hash": {
-					"Retinex.dll": "dbccf55d9296a8d94caa43520b3cf733d0c46a52"
+					"Retinex.dll": "182da6f48ce041e984f86f4985fd8af85a43cfa851d792185ce81f47ec4d3e8a"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"x64/Retinex.dll"
 				],
 				"hash": {
-					"Retinex.dll": "c76f220f3bea6fef5bbccf237e294981b31e6c97"
+					"Retinex.dll": "44dc1c713a4ddda7460657b76cbe31d3974f6e18256a56ffe0c6e16f4d6347f1"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"Win32/Retinex.dll"
 				],
 				"hash": {
-					"Retinex.dll": "947b88e3209e3f79df101fa6dbfc6cca44c03c0a"
+					"Retinex.dll": "a0801c72aa4fbc93fdba2eb696ec14a88966de3e789031726084f41f4849c672"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"x64/Retinex.dll"
 				],
 				"hash": {
-					"Retinex.dll": "560eeaa39857f7023bbb505c6ad48436c62909df"
+					"Retinex.dll": "9d085f7798c03ca9433155433592804810fce5567633a02a21618d0d52144efa"
 				}
 			}
 		}

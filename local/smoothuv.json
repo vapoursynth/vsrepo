@@ -16,7 +16,7 @@
 					"libsmoothuv.dll"
 				],
 				"hash": {
-					"libsmoothuv.dll": "67cfb0cec822c5f8ca3caef2b48034ebf22082e6"
+					"libsmoothuv.dll": "509f77e76de9fb2a56b17111548615b20bb0611c166f1e24707410c3a76c8715"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"libsmoothuv.dll"
 				],
 				"hash": {
-					"libsmoothuv.dll": "2780e39bd1c974aea580c57f2f041233fc9db1e6"
+					"libsmoothuv.dll": "83ded8f763e49155d9d0151a937731d318663f5bbf67003e1338c8bcae79523d"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"libsmoothuv.dll"
 				],
 				"hash": {
-					"libsmoothuv.dll": "5a77f2fd5cd8d4fad4662ea5f14d11be5b09da75"
+					"libsmoothuv.dll": "eeeba699b4b31ffb6da8a616bfe7028640591f60d0a491b9ba3b2f7abb00e3d3"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"libsmoothuv.dll"
 				],
 				"hash": {
-					"libsmoothuv.dll": "5abc5311ba283fafb7a021dd5b5d2ab74848cc63"
+					"libsmoothuv.dll": "9e67a7f769934b130b0ef4b9e4e32f77c1b6c55e663828e794968fa6b452881d"
 				}
 			}
 		}

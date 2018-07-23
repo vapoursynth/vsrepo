@@ -19,7 +19,7 @@
 					"Win32/DFTTest.dll"
 				],
 				"hash": {
-					"DFTTest.dll": "b43748093c8ba91dd8178e3a367fb0d6c805bba2"
+					"DFTTest.dll": "115b1a0662425e4eb3f0c6f1cbc2444b36385ffdccaa5b53220f706066026ac3"
 				}
 			},
 			"win64": {
@@ -28,7 +28,7 @@
 					"Win64/DFTTest.dll"
 				],
 				"hash": {
-					"DFTTest.dll": "a5ae4dbcb07a94770d66525c4589ac503d4d69e3"
+					"DFTTest.dll": "96d70218c895fce3117d5b877205111ebd766e52676be6b519e61290976041fa"
 				}
 			}
 		},
@@ -40,7 +40,7 @@
 					"Win32/DFTTest.dll"
 				],
 				"hash": {
-					"DFTTest.dll": "040940bda890ac69cbba5b63cc0e1dc702b09560"
+					"DFTTest.dll": "1affce1592680d7d357013a5e19b1b1bc6d707318280e9f649b870a94bb7d391"
 				}
 			},
 			"win64": {
@@ -49,7 +49,7 @@
 					"Win64/DFTTest.dll"
 				],
 				"hash": {
-					"DFTTest.dll": "44427b1f5f1885a57b9e778a19f01e42a419e6ea"
+					"DFTTest.dll": "99957910efdc0733b110036ef94558397741464497263292c3f86610b6fbc214"
 				}
 			}
 		},
@@ -61,7 +61,7 @@
 					"Win32/DFTTest.dll"
 				],
 				"hash": {
-					"DFTTest.dll": "d52ad6b5a692bbfa16c02f1dc6dd765f257ca012"
+					"DFTTest.dll": "56426dbf45c8f1aac13766768220a9e20d676990e90504076ef363e4739ca1f8"
 				}
 			},
 			"win64": {
@@ -70,7 +70,7 @@
 					"Win64/DFTTest.dll"
 				],
 				"hash": {
-					"DFTTest.dll": "33eddbefd8dccbd8877e404de337126a6794f29b"
+					"DFTTest.dll": "b9a090377f8c83c86c67d2afec84ec989d9563a8e23a2f7e566150ce73021a49"
 				}
 			}
 		},
@@ -82,7 +82,7 @@
 					"Win32/DFTTest.dll"
 				],
 				"hash": {
-					"DFTTest.dll": "72ae3cdee759a78e94868f2873b3aeddb6510171"
+					"DFTTest.dll": "e64798d8a76ceb8a93611a804faf596d9191c7b6b4f85ecee3f5c4a53636942f"
 				}
 			},
 			"win64": {
@@ -91,7 +91,7 @@
 					"Win64/DFTTest.dll"
 				],
 				"hash": {
-					"DFTTest.dll": "101753f903d78cf033748e0ada4d7ee47ed4091d"
+					"DFTTest.dll": "ca9fad95eb06b99c4777a5c8101763c1512280ec44c4771ac1d4b86039c50d50"
 				}
 			}
 		}

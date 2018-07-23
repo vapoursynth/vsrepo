@@ -16,7 +16,7 @@
 					"Win32/EEDI3m.dll"
 				],
 				"hash": {
-					"EEDI3m.dll": "413a0de66f621bd74fcf1a74ff65d3afa4c1f937"
+					"EEDI3m.dll": "4286d89ca9ca92b5eb0f0da85e421c4a76bef2e659b8510591d124f2bcf780cc"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"Win64/EEDI3m.dll"
 				],
 				"hash": {
-					"EEDI3m.dll": "32f9293546302dd773ae9637470c62a6dad41ffd"
+					"EEDI3m.dll": "343f245944dfd55fcd9ca85313c071b1436e3ea0ef81e27aaf20c8eb22211bc6"
 				}
 			}
 		},

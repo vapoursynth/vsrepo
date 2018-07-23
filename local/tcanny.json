@@ -16,7 +16,7 @@
 					"Win32/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "5c30f0fa16cacf5e3d8963a921d90a65d7cef913"
+					"TCanny.dll": "92a7b9dff0754a15eb30da7a073720066be82c844c1d99223ef6eecbb5868bf3"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"Win64/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "4e482533be911e1f5d9dec8fb8c23d19c29741a6"
+					"TCanny.dll": "dc29ec7746f60030e4d9e625d28052f62f7ecf9c35176398f54ca98ec9a43439"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"Win32/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "df1ba09f35195a28cc0d4faec6e4c1a188cbdfbf"
+					"TCanny.dll": "13d12d32ff4c32015df0f6bf3ed8feec3d36c8e1b7553c584cdc98b6958a5cc5"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"Win64/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "95bbacf1b05b77c4a2f0bf5b31f058287afd6755"
+					"TCanny.dll": "28394df3c6739ff9ede9930c5bc7bd9ddce77901fc51ffe7a5a6578154413eef"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"Win32/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "86d5eeba64223e7e3998687c5f740d4a61c15445"
+					"TCanny.dll": "093eeb4df19889b45a06c909511e31dc2023ea1c811d1bd76ca08614debb4033"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"Win64/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "d4f3e52ad91e08a1ebc475e230302d30c1d9daf1"
+					"TCanny.dll": "8c3ed3cc0c91d19f313849af558bb83900e41b2e49b99a7085919fcb9ac17f09"
 				}
 			}
 		},
@@ -79,7 +79,7 @@
 					"Win32/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "25aeb727deaf54fff2b3ac86548f5b879ded85ac"
+					"TCanny.dll": "7f51962aea1c9e36e50dbc21487fc1db8d0e48e6980615afc9bdf69592f5a417"
 				}
 			},
 			"win64": {
@@ -88,7 +88,7 @@
 					"Win64/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "8a7d65197aa13c3ed8aaa1cc82407fcff22258ac"
+					"TCanny.dll": "c1ab6b1edbb93895620d091bc020176218b269a23bf0dddae16fcc3dfdb583f0"
 				}
 			}
 		},
@@ -103,7 +103,7 @@
 					"Win32/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "06ebd4c679f8c356c6ce161c1e290aab483657f7"
+					"TCanny.dll": "f108db646806eea634009f09aea784dbbce9e0d9f745ab196c3bf27406bc9ab6"
 				}
 			},
 			"win64": {
@@ -112,7 +112,7 @@
 					"Win64/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "c63cb6fc5f65bb5cd78c7669712fb2d0bc798086"
+					"TCanny.dll": "b5ca9a5910625264e6fa31981915fa241ce91b4c53d8a4a838fe37bc0321c317"
 				}
 			}
 		},
@@ -124,7 +124,7 @@
 					"Win32/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "56fdb1f9e9e4e66f4876eadfb5209bdf710d0ca8"
+					"TCanny.dll": "3682313cb946b8a8286143da875e74b294f7002495067ce9997aa967246694f2"
 				}
 			},
 			"win64": {
@@ -133,7 +133,7 @@
 					"Win64/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "9775d1fad3e5d2de3ed1c1984db9a27f7e1b3ae0"
+					"TCanny.dll": "402000dd0b9e78037b407bdc85b8ac6152baa2ef7f762e29abf8cd7030756a51"
 				}
 			}
 		},
@@ -145,7 +145,7 @@
 					"Win32/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "a6f0309731881191d830424c3d1dffb59949675a"
+					"TCanny.dll": "1d3a876a9e547b4aecdaa539c853ac78cbffdad3f8e72bc3108e78bdcd2380fa"
 				}
 			},
 			"win64": {
@@ -154,7 +154,7 @@
 					"Win64/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "07c6d050694459535829b7ce700a5d0c85821182"
+					"TCanny.dll": "04d88bfaacd392efd8d5219ed9832c5125b9f23326c8910f998288dbfc8a2ca5"
 				}
 			}
 		},
@@ -166,7 +166,7 @@
 					"Win32/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "a9b0f4366e9a8e80b371c9fa12ae735974dd081f"
+					"TCanny.dll": "4653ff84e117be41ecad21da036ca9c315a1553f9047e431521e7f954010b0f3"
 				}
 			},
 			"win64": {
@@ -175,7 +175,7 @@
 					"Win64/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "74c1cea4d70e96249950a1fbb8dd45481df2c746"
+					"TCanny.dll": "f38e65230fbe53e4d1af076d95eeae16c4f0c268c6f468e716663e591a16e267"
 				}
 			}
 		},
@@ -187,7 +187,7 @@
 					"Win32/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "783f640b4b160597efe95a8f0fc55cd18c3df359"
+					"TCanny.dll": "1e0069e0736a49e1fd0b5fd6350aa798994b3daa7ca18205193783c012a29966"
 				}
 			},
 			"win64": {
@@ -196,7 +196,7 @@
 					"Win64/TCanny.dll"
 				],
 				"hash": {
-					"TCanny.dll": "a4c0eb5e78731d713ecfd747c8e702d62e195139"
+					"TCanny.dll": "df7a3c1a39f56e9078d79189b3b559ccc59a5fc37684b84f12d95aeb19fe740c"
 				}
 			}
 		}

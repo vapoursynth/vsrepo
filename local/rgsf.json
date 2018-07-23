@@ -16,7 +16,7 @@
 					"RGSF_ia32.dll"
 				],
 				"hash": {
-					"RGSF_ia32.dll": "b77cfb808cea64658400f5df147d722e91d21255"
+					"RGSF_ia32.dll": "0cd32dc43807c42d0cb5e6629199dc1916d932681c2c2f1295b24a6027eb0d1e"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"RGSF_x64.dll"
 				],
 				"hash": {
-					"RGSF_x64.dll": "624ba327f9c4fe880024c7437da718e72d0f14e9"
+					"RGSF_x64.dll": "6173b4760a1aca09b23c0ae1b26238c3eb3eee955c25d5011254114ab020ab49"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"RGSF_IA32.dll"
 				],
 				"hash": {
-					"RGSF_ia32.dll": "7fb151fc57ef442a10fdedccc26dc6dff96476b8"
+					"RGSF_IA32.dll": "9ff3ff23a0e965fdf0096636f59017fb3d27568f9a5c8d0e5b43fddfa02ab747"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"RGSF_x64.dll"
 				],
 				"hash": {
-					"RGSF_x64.dll": "5b6ef946d027abdcfb841f8eb6b59ab355c7fb04"
+					"RGSF_x64.dll": "2113a4c8347f3134f5398659ca93b546f1e41e8faf8ee299045bdadd30026dab"
 				}
 			}
 		},

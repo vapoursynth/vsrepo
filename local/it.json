@@ -16,7 +16,7 @@
 					"msvc/x86/Release SSE/vs_it.dll"
 				],
 				"hash": {
-					"vs_it.dll": "a8a3169b01f1ca5d4692f5e0f82deec70785d765"
+					"vs_it.dll": "0bab5291eee2043598ab1957d85fdbf6e1d28b61481dc91c1958133fc07d5fdb"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"msvc/x64/Release SSE/vs_it.dll"
 				],
 				"hash": {
-					"vs_it.dll": "e751718e4e2c13e3c0e0946a465c3530fc8118d9"
+					"vs_it.dll": "35a004bafcb3047db562219a22b5f10be926ccca250c9f035a82e2025ab36599"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"msvc/x86/Release SSE/vs_it.dll"
 				],
 				"hash": {
-					"vs_it.dll": "a2b3e12e469abb6a1023c08e473d9af798259746"
+					"vs_it.dll": "64ab36d78d11957ccb66e01ad6a1cac9f21ec23454aea29a9dc61c72935c020a"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"msvc/x64/Release SSE/vs_it.dll"
 				],
 				"hash": {
-					"vs_it.dll": "7d0f6e40d1a8b3facbbfcbd9cf71ce8ea6cd4a9f"
+					"vs_it.dll": "56f4b7d68412b84a4a0a94f3f426454438e665459d6e1d52ca2a6e9361211de2"
 				}
 			}
 		},

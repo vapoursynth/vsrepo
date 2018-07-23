@@ -15,7 +15,7 @@
 					"tonemap.dll"
 				],
 				"hash": {
-					"tonemap.dll": "82ef9917c00ee9ef5185fc952a06b14cade4b4f2"
+					"tonemap.dll": "dae53d52b6fb5d1fd99bb966753253c3da5e0f67eda73deb9e81049a07281164"
 				}
 			},
 			"win64": {
@@ -24,7 +24,7 @@
 					"tonemap.dll"
 				],
 				"hash": {
-					"tonemap.dll": "049eda9eead9d82d90c47bdfab31f8fa55dc75b0"
+					"tonemap.dll": "e366a039c3136824163c231c53cec784054ac252d8c2e55b09154c10adb22244"
 				}
 			}
 		}

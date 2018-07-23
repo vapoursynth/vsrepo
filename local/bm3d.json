@@ -19,7 +19,7 @@
 					"Win32/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "9fb64f18024021c3025937b4c8c0b92c5a85d560"
+					"BM3D.dll": "b3e255ece307ace16f017b424772605fe51e6795d12d84c3c1f9969055b29f94"
 				}
 			},
 			"win64": {
@@ -28,7 +28,7 @@
 					"Win64/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "42734a1abab5f927f4a7802600239fe003c99935"
+					"BM3D.dll": "8bb049ed2f5beb933cf9ee0d009596dd544c58529159014e7db4b25f87b8716e"
 				}
 			}
 		},
@@ -40,7 +40,7 @@
 					"Win32/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "c4061c95be0d426c46074e103073e1ae03d88cf4"
+					"BM3D.dll": "43dbd4d994a96592aa055c2a356d0b5a717fda720996bc174ee161a51de28452"
 				}
 			},
 			"win64": {
@@ -49,7 +49,7 @@
 					"Win64/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "d213e0747092c4021ca6084a3aeef1b63f4be39f"
+					"BM3D.dll": "88a7e4af502e1b68975c548dc378a184ff08c77788c8589548d6bdc67643a90d"
 				}
 			}
 		},
@@ -61,7 +61,7 @@
 					"Win32/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "ec28dc1b39e9d67b8d40374f56db19cc63381e4f"
+					"BM3D.dll": "adf5a910ce06ad3a8cfcfb2e79764edbc2aee1665d433ff5f0f3a3647088e41e"
 				}
 			},
 			"win64": {
@@ -70,7 +70,7 @@
 					"x64/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "301f6b42fd284a9882fc1c4d78a8e3d131754453"
+					"BM3D.dll": "ce1ba1953a31eb7a4f9418b8734ce7978e9fe0e09a52b56da2639b985543794a"
 				}
 			}
 		},
@@ -82,7 +82,7 @@
 					"Win32/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "65474c70ff1453fa5d52c96f41ca9c7e81515870"
+					"BM3D.dll": "5e80014ac8863e0357d87e796b8c0713584c3d320bf103aa4b97bf71b02da603"
 				}
 			},
 			"win64": {
@@ -91,7 +91,7 @@
 					"x64/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "ca3951c5a4c23a8f41d3b6aeddd9a91e4fabef61"
+					"BM3D.dll": "6f1bdcdba2ddd71f973316ebea32c5db5acb9230ecce782ee04ab95c884d6a6f"
 				}
 			}
 		},
@@ -103,7 +103,7 @@
 					"Win32/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "e21c815aae589b3f7aa1b44fcf2bcf0aed545cb9"
+					"BM3D.dll": "0ec0e76e497212509d2f80eb8ca2b545ed81a00d2b6b8de24e2c349006f992bf"
 				}
 			},
 			"win64": {
@@ -112,7 +112,7 @@
 					"x64/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "d56323acf8bc697ac90cc794b74e9ebc315e5369"
+					"BM3D.dll": "9a848427dddc9cb929ccf4cf09dacaf92266c0012fff22737f38e4dcd6a1d0c1"
 				}
 			}
 		},
@@ -124,7 +124,7 @@
 					"Win32/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "0e24e2afc223a742693cc70214ce1d78335b368d"
+					"BM3D.dll": "a6a8b6bd8fbd595adb5b6eabc8c0f0bcec9169b420ab1fafe98e1bfab0c50f93"
 				}
 			},
 			"win64": {
@@ -133,7 +133,7 @@
 					"x64/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "d2db973e686af33a72f4fd16ce2e7d45018d2b1a"
+					"BM3D.dll": "adfe53c3ffedff4f8240589c8d9d3491a284ff00dc1a346be96facb93f901302"
 				}
 			}
 		},
@@ -145,7 +145,7 @@
 					"Win32/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "c3216f3a8900475cb1e6053e32f221454fa9306a"
+					"BM3D.dll": "be7abbda104b886e36468bcebdd2542fcf5f6bdf706eb0a6581ad0e7a687852f"
 				}
 			},
 			"win64": {
@@ -154,7 +154,7 @@
 					"x64/BM3D.dll"
 				],
 				"hash": {
-					"BM3D.dll": "c02bb016ecfb0f12269f6a60830edc460cd0e383"
+					"BM3D.dll": "3c7d0dcba9e6f1d24957429334afc46c16133dcf1e6522096261fea122b2de80"
 				}
 			}
 		}

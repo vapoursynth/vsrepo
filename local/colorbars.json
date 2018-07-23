@@ -15,7 +15,7 @@
 					"Win32/colorbars.dll"
 				],
 				"hash": {
-					"colorbars.dll": "d08a943c3722a55f4ac4ef866233ee737c6836fb"
+					"colorbars.dll": "acf9ff10995d37b19b4e2a38c8a539bfa07a1ab08c86e21d172b45c4fccf4886"
 				}
 			},
 			"win64": {
@@ -24,7 +24,7 @@
 					"Win64/colorbars.dll"
 				],
 				"hash": {
-					"colorbars.dll": "3411412e60f887cb13da7f8c2457e61f9faf99ce"
+					"colorbars.dll": "eda2b63b72128d44a74aa146059f783ebd9942c745031388486083151011ce42"
 				}
 			}
 		},
@@ -36,7 +36,7 @@
 					"Win32/colorbars.dll"
 				],
 				"hash": {
-					"colorbars.dll": "89cc5a1d27889b0b3a2963e3b3c7e60a93c151c8"
+					"colorbars.dll": "d5d11ca83014d4debc4158741dfe0f1ca8d76c12b68b5ec42bd99b3568f49d1b"
 				}
 			},
 			"win64": {
@@ -45,7 +45,7 @@
 					"Win64/colorbars.dll"
 				],
 				"hash": {
-					"colorbars.dll": "ff215f9f33bdf6b272a0305b5a257e2d05a499da"
+					"colorbars.dll": "1964a12a98fe5c1f8e5d66d3212b9f77248bf245f50f13b537de9d351a21c7ba"
 				}
 			}
 		}

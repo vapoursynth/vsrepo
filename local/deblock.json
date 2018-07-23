@@ -13,19 +13,19 @@
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r6/Deblock-r6.7z",
 				"files": [
-					"Win32/deblock.dll"
+					"Win32/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "f1e7dec6f53e70ccc3f0a3b9ab9f6d7e27c2034c"
+					"Deblock.dll": "fca71dec7607cf1e76295b4d3350c942cdf5e609c5db008ce67998a4f427158e"
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r6/Deblock-r6.7z",
 				"files": [
-					"Win64/deblock.dll"
+					"Win64/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "e6a8b1c8e3eb6a60e7adc0e3a7b4f0633a0a7ae2"
+					"Deblock.dll": "e08e511dbbef2a21efbd79530085a85f204ef19d7faf3425fe0502c6891cab5f"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"Win32/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "e728bb3d91a5b6206d967923a7a67d3fc704e0b0"
+					"Deblock.dll": "aeee3684f5dd36ca8e7c9eb5ba913e22063ac6d408439f08d663d4b4f843fd14"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"Win64/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "696264d361c9cbfbc41c3ebf323d738f395b8231"
+					"Deblock.dll": "439198610fd1bf95249909eee19c07357e8805a94c4edef1721c8a80711f3a92"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"Win32/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "8485cc3b8fad62819d5737e6df78eb1b0da1246e"
+					"Deblock.dll": "06805d2c7b4e8213cad11e3f4df2f8e71311e1a13368d81962d08cff8b1b7f08"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"Win64/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "70620d190093ada87d0368c983bb0b7788fce0a3"
+					"Deblock.dll": "1c19461aa633d1cecf6278cfe6591121d4ef41a9ae1917d8bb967b9a8cf1fc89"
 				}
 			}
 		},
@@ -79,7 +79,7 @@
 					"Win32/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "360353fb172e767045ef790eb90cf346828a80f1"
+					"Deblock.dll": "124c62f01ad12830755e505e56efe6772607e8a0a03c5a02accc2132f8f9148d"
 				}
 			},
 			"win64": {
@@ -88,7 +88,7 @@
 					"Win64/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "14404951ec27a2b77b2461f951a3a15f1766c4fd"
+					"Deblock.dll": "8717939b3c9c66f2541d434cc8e8d36f80e1b49c0170fa198f703ac143eccb4b"
 				}
 			}
 		},
@@ -100,7 +100,7 @@
 					"Win32/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "4ac903cd0ac55c19a7a52bae586a84123f89c259"
+					"Deblock.dll": "00d788d12df4b092988a1adb1c4a5a439916381a953c1110d3aa206e9496e6ee"
 				}
 			},
 			"win64": {
@@ -109,7 +109,7 @@
 					"Win64/Deblock.dll"
 				],
 				"hash": {
-					"deblock.dll": "3d8d4a7ead6bfa103bd07eb649db8d434caa6ba5"
+					"Deblock.dll": "140651474e9a204829c813396cf17c07b28c2b2bbefb9b3b1d3f0152a14bd6d2"
 				}
 			}
 		},

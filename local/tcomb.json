@@ -16,7 +16,7 @@
 					"libtcomb.dll"
 				],
 				"hash": {
-					"libtcomb.dll": "4b4e576e78ae2f319081974465f8488374884519"
+					"libtcomb.dll": "a827efe5fdaf334b5092c7178ab938da8109861f5ecd1be6b80a6b3bdc548206"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"libtcomb.dll"
 				],
 				"hash": {
-					"libtcomb.dll": "17bfded31aadf5049d4bd5c0ea88ce641582c637"
+					"libtcomb.dll": "1641027a3930629ca0317d7467330d6a91639b1d0c8bc34c4a6cb234876a4222"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"libtcomb.dll"
 				],
 				"hash": {
-					"libtcomb.dll": "3ee9d35ac6a40488ae9ab9e9f4ef404d0381854e"
+					"libtcomb.dll": "7347b2dbcfd5b1d4a3fd23c03acb7e8a6a14128126351504d28254d36ba0ca39"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"libtcomb.dll"
 				],
 				"hash": {
-					"libtcomb.dll": "c924330256ac5a1a4d2c8b2762e749c3472c42e6"
+					"libtcomb.dll": "c935cc4544603fa50bbeb25cf54c463f6c143c4883dd24af32d904b57e449462"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"libtcomb.dll"
 				],
 				"hash": {
-					"libtcomb.dll": "b45d2820c1e3cb3d5cd9e05361ce9379eca1f201"
+					"libtcomb.dll": "61e4c5b3121264c72c5d2e43d6f5fafa4c5590b1a5b09c5e2d7e52b6ef5ee078"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"libtcomb.dll"
 				],
 				"hash": {
-					"libtcomb.dll": "554e2aacca08298187545cfdbcf22d776a037399"
+					"libtcomb.dll": "32da672a49352cdaa4440ac1e90f249ff32528189e9e0a2f6e98b9e0f3f82d1a"
 				}
 			}
 		}

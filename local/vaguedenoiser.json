@@ -16,7 +16,7 @@
 					"Win32/VagueDenoiser.dll"
 				],
 				"hash": {
-					"VagueDenoiser.dll": "5979ed1566b10ac26335a75daec85716229447ec"
+					"VagueDenoiser.dll": "c87feb4970d65e7d4dd5b8df58b27d418d124a88b025ba558afff51421c49a69"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"Win64/VagueDenoiser.dll"
 				],
 				"hash": {
-					"VagueDenoiser.dll": "4787fc12e61e9d911e6efc9e839a3d401fcfbab5"
+					"VagueDenoiser.dll": "a4addd1fa33a7c4295bd2ac577fa160e2b9a1f9e24efd9c817ad1e677bee8cd8"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"Win32/VagueDenoiser.dll"
 				],
 				"hash": {
-					"VagueDenoiser.dll": "366e58570fa30b2f7be861f44a2b872268b7576f"
+					"VagueDenoiser.dll": "eb8901fd663b0c8ddace895758fed1f309266f2c56906e41282892154d38557f"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"Win64/VagueDenoiser.dll"
 				],
 				"hash": {
-					"VagueDenoiser.dll": "93be9ef2de30859d52b0fe167318439c223f8cdd"
+					"VagueDenoiser.dll": "618898edb57ffb64fad93b14fe633ddaf20e195194b0955a553ba0bc7a0d056e"
 				}
 			}
 		}

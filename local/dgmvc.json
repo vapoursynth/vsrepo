@@ -7,26 +7,28 @@
 	"identifier": "systems.innocent.DGMVC",
 	"namespace": "DGMVC",
 	"releases": [
-	{
+		{
 			"version": "v1.0.0",
 			"win32": {
 				"url": "https://github.com/kice/DGMVCSourceVS/releases/download/v1.0.0/DGMVCSourceVS_x86.rar",
 				"files": [
-					"DGMVCSourceVS.dll", "libmfxsw32.dll"
+					"DGMVCSourceVS.dll",
+					"libmfxsw32.dll"
 				],
 				"hash": {
-					"DGMVCSourceVS.dll": "c6a5d15b856aa7659aa7c7de329daa1e26b8a620",
-					"libmfxsw32.dll": "eca9ebaeb779dc14b829dbb333069e8fcb7f6ed4"
+					"DGMVCSourceVS.dll": "85b41c4ac483539878f15e698ec463b42c831b66c5fb37ba88dd217ad5d114e2",
+					"libmfxsw32.dll": "5a75d1b2b81f1f831ff576a5d00796c14fd95dbb2409dd10ebb519f1477ee127"
 				}
 			},
 			"win64": {
 				"url": "https://github.com/kice/DGMVCSourceVS/releases/download/v1.0.0/DGMVCSourceVS_x64.rar",
 				"files": [
-					"DGMVCSourceVS.dll", "libmfxsw64.dll"
+					"DGMVCSourceVS.dll",
+					"libmfxsw64.dll"
 				],
 				"hash": {
-					"DGMVCSourceVS.dll": "91e7bb8e6d5715d9d7d2eeeefb41e51fe9d7bb65",
-					"libmfxsw64.dll": "2a852573c3a25501d7b6bd013a514d2657ade10c"
+					"DGMVCSourceVS.dll": "02cdbb151d78986c7d29bb0e971409edccc2f7bbb55eddfc1b090e07609d07d7",
+					"libmfxsw64.dll": "aa9f25d400edb309a548edd4efe908e66af64b5886cafd88882f8cd1307e971a"
 				}
 			}
 		}

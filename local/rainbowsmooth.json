@@ -8,18 +8,19 @@
 	"identifier": "rainbowsmooth",
 	"modulename": "RainbowSmooth",
 	"dependencies": [
-		"com.nodame.smoothuv", "kagefunc"
+		"com.nodame.smoothuv",
+		"kagefunc"
 	],
 	"releases": [
 		{
 			"version": "v2",
 			"script": {
-				"url": "https://github.com/dubhater/vapoursynth-smoothuv/archive/v2.zip",
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-smoothuv/zipball/v2",
 				"files": [
-					"vapoursynth-smoothuv-2/RainbowSmooth.py"
+					"dubhater-vapoursynth-smoothuv-64e5c8f/RainbowSmooth.py"
 				],
 				"hash": {
-					"RainbowSmooth.py": "2479c799ad1be9b1e6dfc2c50bf8595310934b2a"
+					"RainbowSmooth.py": "3f058ef1d5abe2201564d0aad0142422476b6b10daa83c43c87d0e496f8c5864"
 				}
 			}
 		},
@@ -31,7 +32,7 @@
 					"dubhater-vapoursynth-smoothuv-b9b78ed/RainbowSmooth.py"
 				],
 				"hash": {
-					"RainbowSmooth.py": "2479c799ad1be9b1e6dfc2c50bf8595310934b2a"
+					"RainbowSmooth.py": "3f058ef1d5abe2201564d0aad0142422476b6b10daa83c43c87d0e496f8c5864"
 				}
 			}
 		}

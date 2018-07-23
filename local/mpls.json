@@ -16,7 +16,7 @@
 					"Win32/ReadMpls.dll"
 				],
 				"hash": {
-					"ReadMpls.dll": "2fb4d17e09259b8def65933c44272e2f7276d7d4"
+					"ReadMpls.dll": "31d9ec61ed7edfd546b32edfce9bb1af5529b60a0215cf05c24d8f0758c41966"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"Win64/ReadMpls.dll"
 				],
 				"hash": {
-					"ReadMpls.dll": "4990132afec8b8479e7b166609ba93a58f9f19bc"
+					"ReadMpls.dll": "478762be0af1267bde8c4fb4be4a5e1cde6ca2b0161964437cf9133e224f8ff3"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"Win32/ReadMpls.dll"
 				],
 				"hash": {
-					"ReadMpls.dll": "b05431855f53011e9572ef0fb3d6b98ab62588cb"
+					"ReadMpls.dll": "fa6be5adfae01d58330dccb4e0fe140f050e0ccc3f4def74483027f0eb742aac"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"Win64/ReadMpls.dll"
 				],
 				"hash": {
-					"ReadMpls.dll": "c39df210b343d9242d370bfa07f26ee2d2b7dc50"
+					"ReadMpls.dll": "751b6681a000ecbc131a041839b6695617d3e4a48b4c06a0d0ac3aca26b2aa8b"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"Win32/ReadMpls.dll"
 				],
 				"hash": {
-					"ReadMpls.dll": "010c0e6670ff1264cb3f4004a992525383d221a9"
+					"ReadMpls.dll": "82adb9f6c3e17065b792314edeb064bed840f554a1856055e26606c8a36c268d"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"Win64/ReadMpls.dll"
 				],
 				"hash": {
-					"ReadMpls.dll": "3002dde4df371d12799bf3f7383046d5f7fb6e2d"
+					"ReadMpls.dll": "d7b8fd1758653c8593bda77a1870ff9cbbbfecbd9faef83b6f55a7fa40237a0a"
 				}
 			}
 		}

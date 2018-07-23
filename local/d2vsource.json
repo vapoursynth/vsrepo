@@ -16,7 +16,7 @@
 					"win32/d2vsource.dll"
 				],
 				"hash": {
-					"d2vsource.dll": "de94a9c3d4652761a813fb89de5e62e615ba2435"
+					"d2vsource.dll": "96aac31c83682f0a44e060c897136dd76ac3c63164477571e81ee32f5c8da86d"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"win64/d2vsource.dll"
 				],
 				"hash": {
-					"d2vsource.dll": "bd6df40d20735a19755e867688b096cf60174c51"
+					"d2vsource.dll": "3019bf2361b3216ae8a7d3f0ddd8bfafa3a0352d183deb962b34afc5f3bca76c"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"win32/d2vsource.dll"
 				],
 				"hash": {
-					"d2vsource.dll": "2c6cda6b35ba3cbc33b94d045fca204848a9c86b"
+					"d2vsource.dll": "a4e6d0ec71caec95ee60b920efdfe16e6b6ddf67c72bdac2d5e2896fbdf156c5"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"win64/d2vsource.dll"
 				],
 				"hash": {
-					"d2vsource.dll": "3a503f87a55055f4b6bc8726ff74c8d85d48eab5"
+					"d2vsource.dll": "e91cb223f5da6ffed78a77c80f77197ef19376e1343e47771879b7a6cb87e9f5"
 				}
 			}
 		},

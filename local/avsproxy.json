@@ -17,8 +17,8 @@
 					"avshost_native.exe"
 				],
 				"hash": {
-					"avsproxy.dll": "faaf09a922bd3fc25b495a4c12713a735b93cdec",
-					"avshost_native.exe": "729c8730cf8110db4549ecb5bcfd914ef53f66c6"
+					"avsproxy.dll": "736ca85a5e35e6784fd436f00653750fd0ae0dd96ed6bb3d3b81afa82617d145",
+					"avshost_native.exe": "ee3481e74e332795625657c69a7b90e508385fca9e6baf034eaeac413b672d96"
 				}
 			}
 		},
@@ -31,8 +31,8 @@
 					"avshost_native.exe"
 				],
 				"hash": {
-					"avsproxy.dll": "4eac4d36035a8a666a7b73cab50c8d5e0c2beb04",
-					"avshost_native.exe": "729c8730cf8110db4549ecb5bcfd914ef53f66c6"
+					"avsproxy.dll": "c1634639927d6a25821330bdb59e4f1f1eb357d367422c7fe30904cbab04a4e8",
+					"avshost_native.exe": "ee3481e74e332795625657c69a7b90e508385fca9e6baf034eaeac413b672d96"
 				}
 			}
 		}

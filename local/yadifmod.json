@@ -16,7 +16,7 @@
 					"Win32/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "d65bec50c505ddd4254b7735ec65b31614f884aa"
+					"Yadifmod.dll": "01d2ad7bb800720d21cfc8ed0e63a12d5edfed5aa471af4bcdfa8d2a33ccb2ba"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"Win64/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "d731d7a37faa954b140980e8dab09bf3e692b04d"
+					"Yadifmod.dll": "62575a35d1182ade1d878469dafc5de0c568a39f523114a003c28554bf5401a1"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"Win32/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "0c4c4e8f04e753beae3d88a465e986f7a8c9ba79"
+					"Yadifmod.dll": "9d162d1a1d096c2546dc4e831bc058a4a1fe8c44c2b06890f79e42e63c5d3ce1"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"Win64/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "670ee9734fe7c318786c4345f9ebf29f5e802b57"
+					"Yadifmod.dll": "b0097c583a45313c0669a4d516e244c969638127f4e3087c3ee6dd4f872c3d19"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"Win32/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "da1ab7f4e8255a2621e3b16ac53bb4078fd70a94"
+					"Yadifmod.dll": "c483b0d2910b8b46e835a25bd4ddf2a4c08a5245d9426074605f74f28b4b617d"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"Win64/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "07e593578cd6e26548d5d672dc4466f0af929f93"
+					"Yadifmod.dll": "20c7be01acb616ff2dff3e187a0ea4380e21e1515a8acea219ebf62aac489c68"
 				}
 			}
 		},
@@ -79,7 +79,7 @@
 					"Win32/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "e2611306f3e7269276135fc7a8cf499a3ab5c5ac"
+					"Yadifmod.dll": "d4b13d7b973471047fd08558283a453417081af06817cf64badf3ca842fc368e"
 				}
 			},
 			"win64": {
@@ -88,7 +88,7 @@
 					"Win64/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "7edb7111d3907598a529a2fa6ae0d352e2437615"
+					"Yadifmod.dll": "0da5964341921fdd90816dbf5a24d7b19f4748a849501e271727ed68875052f0"
 				}
 			}
 		},
@@ -100,7 +100,7 @@
 					"Win32/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "609543b717df65fb9fa571a02244d29025f7cc67"
+					"Yadifmod.dll": "5f7b99ef4647cdf4b608e82e8810337b3906c5429548bb964bd745bd1598fbd6"
 				}
 			},
 			"win64": {
@@ -109,7 +109,7 @@
 					"Win64/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "6d3d54d587dfc3bc09d4092fba752a2b37177833"
+					"Yadifmod.dll": "0034e3781098db5c3c1cdbb50db7a9b6da98b9f51b214473411a9bafdc686587"
 				}
 			}
 		},
@@ -121,7 +121,7 @@
 					"Win32/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "892f080c17abdb688fd3fccb2c2930c7c1ab111e"
+					"Yadifmod.dll": "0c508df5860889670db1339b32444bc404d78735bd8675d803fc6271bbb0ac3b"
 				}
 			},
 			"win64": {
@@ -130,7 +130,7 @@
 					"Win64/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "a788fd64754ed9606b3c53cfd3389c198adc6411"
+					"Yadifmod.dll": "d7f50690bfceb4d5b1e5128a34403664ffa92850441cb4b59dc0ae1e4a07c95d"
 				}
 			}
 		},
@@ -142,7 +142,7 @@
 					"Win32/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "eafd66dc0b6ff7e129006ac7f02d2ce08b035434"
+					"Yadifmod.dll": "e32d94b8663c0a22f910f48c9f2a79da6049778da629a4f520aacdb77b350f40"
 				}
 			},
 			"win64": {
@@ -151,7 +151,7 @@
 					"Win64/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "8107053b823a5d46446a79d8d94fe6a1b97ff41f"
+					"Yadifmod.dll": "742aee20cc63673d0b7b07d0ebe10604bf2e3d9ad280f547723d6cde7b349b26"
 				}
 			}
 		},
@@ -166,7 +166,7 @@
 					"Win32/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "fb427d5639822e0375ec4043ddda3727fd953bb4"
+					"Yadifmod.dll": "6cf1c4ad0b80fda7adae2fdbb22b93cba2745049a64d6f023806c395deb0cad1"
 				}
 			},
 			"win64": {
@@ -175,7 +175,7 @@
 					"Win64/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "63f34970d751cc383166f7b3bc0445b82e2ec1d4"
+					"Yadifmod.dll": "7b5c8003679b1ea840c65d3a37054f96a4401c6f991c5067c203324c7ab96787"
 				}
 			}
 		},
@@ -187,7 +187,7 @@
 					"Win32/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "8085122482c007b706cbb9a825f996ee444c0b46"
+					"Yadifmod.dll": "2a67f4cd2e6ce4c0ca175bf4d0d2d43033948f6c39709761e98cf1ee552b82c4"
 				}
 			},
 			"win64": {
@@ -196,7 +196,7 @@
 					"Win64/Yadifmod.dll"
 				],
 				"hash": {
-					"Yadifmod.dll": "322a0cb6495cdb5ff187417f4d4ea39c77550570"
+					"Yadifmod.dll": "9175143bb75fa9c4c20e992074c51e216948a016868c9dc69353a999f8124674"
 				}
 			}
 		}

@@ -6,17 +6,27 @@
 	"category": "Subtitles",
 	"identifier": "com.holywu.vsfiltermod",
 	"namespace": "vsfm",
-	"releases": [{
-		"version": "r5",
-		"win32": {
-			"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5/VSFilterMod_x86.7z",
-			"files": ["VSFilterMod.dll"],
-			"hash": { "VSFilterMod.dll": "41318ca9eacb7d95441733e3120e6c40081238ba" }
-		},
-		"win64": {
-			"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5/VSFilterMod_x64.7z",
-			"files": ["VSFilterMod.dll"],
-			"hash": { "VSFilterMod.dll": "6fa0984fcbef4a51920fc9eb8833694f0e23d9b5" }
+	"releases": [
+		{
+			"version": "r5",
+			"win32": {
+				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5/VSFilterMod_x86.7z",
+				"files": [
+					"VSFilterMod.dll"
+				],
+				"hash": {
+					"VSFilterMod.dll": "6a050765f7556abcca5dc06ae28b93b4fc30f530bf4fdfe385a11f12e2d81708"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5/VSFilterMod_x64.7z",
+				"files": [
+					"VSFilterMod.dll"
+				],
+				"hash": {
+					"VSFilterMod.dll": "3112446bb5954fa30363907422469c70e0c23fa0fd7c6e4ee411482170c811b4"
+				}
+			}
 		}
-	}]
+	]
 }

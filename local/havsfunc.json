@@ -30,12 +30,12 @@
 		{
 			"version": "r30",
 			"script": {
-				"url": "https://github.com/HomeOfVapourSynthEvolution/havsfunc/archive/r30.zip",
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r30",
 				"files": [
-					"havsfunc-r30/havsfunc.py"
+					"HomeOfVapourSynthEvolution-havsfunc-33c2817/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "aac23d25ca387e8ebc78c408be4804ff6a52c353"
+					"havsfunc.py": "b1a6eded17327f6677b915ceab2614c7a2d0092681da7864ff275743ea60e805"
 				}
 			}
 		},
@@ -47,7 +47,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-95db305/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "a758a4af6b7db0df7b09cc0d6b0eca60b70958cc"
+					"havsfunc.py": "79902cfd8cf6ff28994d9e2fe7b9204900ea0da11e2cd33d30fc0dae740ac320"
 				}
 			}
 		},
@@ -59,7 +59,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-222fb2e/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "17c0809890c3bf338640df01041d182918b0a049"
+					"havsfunc.py": "57fa6e411df379298df7831427eb312113b19dbf9ab02804be4a5cb9d7e16e11"
 				}
 			}
 		},
@@ -71,7 +71,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-9ad3f1e/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "32cceb4ac55006622f7dfe79cd1eda1c1e1aa479"
+					"havsfunc.py": "f5173fdc78088ce123c391fb42b9e1931992bf80d8536fabbd1312ec9bcf36df"
 				}
 			}
 		},
@@ -83,7 +83,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-932d64a/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "804556c6b84973796c822517f8f0b650d3aab229"
+					"havsfunc.py": "8ce5cb4aafe8b69a4702d627da10d834ad72079bdfe8885f69e831c01f762131"
 				}
 			}
 		},
@@ -95,7 +95,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-7edb567/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "51b205aca2579beaef9e4a90e1f3f136ea55e77a"
+					"havsfunc.py": "211a4d93437b04aff31385b1e569e743e2dc8b797c419dc6f72bb9c223bd7cb1"
 				}
 			}
 		},
@@ -107,7 +107,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-180fafd/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "d5632c975cc964b2442301d2b8d07e4c2f689e1d"
+					"havsfunc.py": "080c8e7998378027ec9e26ebca043b84814191911a9399aa83cf84f1a3b0e837"
 				}
 			}
 		},
@@ -119,7 +119,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-1cc35c4/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "d4ebe6889cf269fcdd5791009de27d68bb1ba2ec"
+					"havsfunc.py": "a97c8a398ebe6517c83e4b706e0c8ab30274b4b8f99cf50b6d5c6ce1a7f3be0d"
 				}
 			}
 		},
@@ -131,7 +131,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-d41402c/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "709e683932f9a2db947a41d8c8f805018c016859"
+					"havsfunc.py": "1bc6d654bab104483893d4dc5abdd527eb10e0c7a71b922ad3dfd3d2dbb17d8c"
 				}
 			}
 		},
@@ -143,7 +143,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-1c17eda/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "9d84d1c0d0176a5303d06054b08f034e8bcaf91d"
+					"havsfunc.py": "792a28732dffae53cae3df321c0e79fc4c9cb972b283c2ef08ae0022fd55b260"
 				}
 			}
 		},
@@ -155,7 +155,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-f6b2098/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "b479ddf650606d6abcdee18c27c1ca517ed15936"
+					"havsfunc.py": "a8b118c7a01c935f7fee42f3683cad89e03024576ae95aadece04c4071ba810f"
 				}
 			}
 		},
@@ -167,7 +167,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-1f0c8f0/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "d8a8a499684d4310e31be3c5fd4f0e170a36e8df"
+					"havsfunc.py": "7fcf2a052397942bf0b2cbffebbf34152bb015a82bf1bd6894675af49512890e"
 				}
 			}
 		},
@@ -179,7 +179,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-cebca61/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "459eb6240cf0ba49056459d1313b638b19dbaac9"
+					"havsfunc.py": "b28e138705154fd36adabe5d390e87af476db49c75beca538e9c9b584fe55d35"
 				}
 			}
 		},
@@ -191,7 +191,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-0803a78/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "7ca40c05ded930a9f279652a09de27d6249ac19d"
+					"havsfunc.py": "6f670f084c9602bd89cee971ee020ed79af0a928c590e70dc4d1c3c25c0fb857"
 				}
 			}
 		},
@@ -203,7 +203,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-530b6e2/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "3889941333106c203025f0f630ccde9115ff3bee"
+					"havsfunc.py": "dbfcfa9f624b66fbffbfdb1ecea9f234197c00bc231979e79b1f23fa879bda00"
 				}
 			}
 		},
@@ -215,7 +215,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-e6be2e5/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "500b0a4d487bb6f8de45c9f5f9e124c0f8bbeb42"
+					"havsfunc.py": "7e87a374664dcfd2f8f52012e01a196148e60b4140e69f780201c06d388c9797"
 				}
 			}
 		},
@@ -227,7 +227,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-e776678/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "a55c47513f56a2160d605973f09ffa4b03fecdfd"
+					"havsfunc.py": "df22fa90480b880a52e4f538ab6a29ede710377290f62e300a3426f0420cbde7"
 				}
 			}
 		},
@@ -239,7 +239,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-b4ce531/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "b76685751b02bdbe6561799ac09299137cde9530"
+					"havsfunc.py": "928f504e9889e9124852924bcc79b14033bc75f3de3c6d32feab91f71a61f72f"
 				}
 			}
 		},
@@ -251,7 +251,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-fe23e58/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "3dee3ac437024a284c471e041ad2dfdcb35dd16d"
+					"havsfunc.py": "b825068e3ae335610c8f4001b5676b4f4ccfaf450a7cfb2a268bc689c524e678"
 				}
 			}
 		},
@@ -263,7 +263,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-40aeeff/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "c4f8cee14df2be26a087b4ed2d56b63e583618f9"
+					"havsfunc.py": "78c86a5ffc263d64441fac9cc41bacebc7e46d615198f953c24a486e35bcea8c"
 				}
 			}
 		},
@@ -275,7 +275,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-a0af2ad/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "12c4d872e3035022b4f0ba741955179891d500c5"
+					"havsfunc.py": "993026e995ca67cb61912c057c8887bf9d09b10426d67dd740080196796749ee"
 				}
 			}
 		},
@@ -287,7 +287,7 @@
 					"HomeOfVapourSynthEvolution-havsfunc-9ab2651/havsfunc.py"
 				],
 				"hash": {
-					"havsfunc.py": "75cc57dea28efa6b65dc5bffc72a7c6b117d133d"
+					"havsfunc.py": "2a915d77c93470e7dabf12f2f18b3e7222bb36bf7343c29a65bc463aae4990a4"
 				}
 			}
 		}

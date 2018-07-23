@@ -16,7 +16,7 @@
 					"KNLMeansCL.dll"
 				],
 				"hash": {
-					"KNLMeansCL.dll": "e21655519f572de93e8154a8bbe3613318f04b43"
+					"KNLMeansCL.dll": "ecb018c14073eda28df00f09e715ce08fbe4ed07cee9fc3ad58d0ed4de5bc72b"
 				}
 			},
 			"win64": {
@@ -25,7 +25,7 @@
 					"x64/KNLMeansCL.dll"
 				],
 				"hash": {
-					"KNLMeansCL.dll": "57d42afcd8fbefd63ac9e2838d4b4e4fe3da4378"
+					"KNLMeansCL.dll": "bb60e8fa6cb531daa8d705a338c1188e202e38087f6c6c437fd2d4ee58477a42"
 				}
 			}
 		},
@@ -37,7 +37,7 @@
 					"KNLMeansCL.dll"
 				],
 				"hash": {
-					"KNLMeansCL.dll": "4bbc5e5d34f1ed60fd90f072af446442ae544d5c"
+					"KNLMeansCL.dll": "b506b87c52e4f36518382f54919650921db2234dd1c16119598ed8f7be679d8c"
 				}
 			},
 			"win64": {
@@ -46,7 +46,7 @@
 					"x64/KNLMeansCL.dll"
 				],
 				"hash": {
-					"KNLMeansCL.dll": "a3cb5be881dfac9c196dbbb55ead8ddde7f0c542"
+					"KNLMeansCL.dll": "95c3ff30cf04318d2c29e7389cbba7ca844dd1db9ee19eb56c2ea34deb88b983"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 					"KNLMeansCL.dll"
 				],
 				"hash": {
-					"KNLMeansCL.dll": "8f60a2f0c8402470c262897d370789c9326d25d5"
+					"KNLMeansCL.dll": "2007c657ec5ebce8136078e6302823275acad16e2c6b4ea7ba0247456f6b1b0e"
 				}
 			},
 			"win64": {
@@ -67,7 +67,7 @@
 					"x64/KNLMeansCL.dll"
 				],
 				"hash": {
-					"KNLMeansCL.dll": "ae75988dd4bd0739da0f17f9dbf79104577d0208"
+					"KNLMeansCL.dll": "d1c2db459a2cd26f56665f80b0ecb3cfa16e52c5c2c56a028dd85e0aadf40350"
 				}
 			}
 		}

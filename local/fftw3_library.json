@@ -10,13 +10,13 @@
 		"version": "3.3.5",
 		"win32": {
 			"url": "ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll32.zip",
-			"files": ["libfftw3f-3.dll"],
-			"hash": { "libfftw3f-3.dll": "cd9bac5983c339d43650ac081f86c903c6cd000e" }
+			"files": ["libfftw3f-3.dll", "libfftw3-3.dll"],
+			"hash": { "libfftw3f-3.dll": "cd9bac5983c339d43650ac081f86c903c6cd000e", "libfftw3-3.dll": "56a823114aa8363e5e74132a3a511a74a92454ef" }
 		},
 		"win64": {
 			"url": "ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll64.zip",
-			"files": ["libfftw3f-3.dll"],
-			"hash": { "libfftw3f-3.dll": "4e9eccb805eb876177a6b3a42f912ac52e9f20d2" }
+			"files": ["libfftw3f-3.dll", "libfftw3-3.dll"],
+			"hash": { "libfftw3f-3.dll": "4e9eccb805eb876177a6b3a42f912ac52e9f20d2", "libfftw3-3.dll": "3ff5f1b15af2d80e8081fb3132192b35b3b2cc8c" }
 		}
 	}]
 }

@@ -168,10 +168,9 @@ def update_package(name):
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
                                 new_rel_entry['win32'] = { 'url': new_url, 'files': [], 'hash': {} }
                                 for fn in lastest_rel['win32']['files']:
-                                    stripped_fn = fn.rsplit('/', 2)[-1]
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
                                     new_rel_entry['win32']['files'].append(new_fn)
-                                    new_rel_entry['win32']['hash'][stripped_fn] = digest
+                                    new_rel_entry['win32']['hash'][new_fn.rsplit('/', 2)[-1]] = digest
                         except:
                             new_rel_entry.pop('win32', None)
                             print('No win32 binary found')
@@ -181,10 +180,9 @@ def update_package(name):
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
                                 new_rel_entry['win64'] = { 'url': new_url, 'files': [], 'hash': {} }
                                 for fn in lastest_rel['win64']['files']:
-                                    stripped_fn = fn.rsplit('/', 2)[-1]
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
                                     new_rel_entry['win64']['files'].append(new_fn)
-                                    new_rel_entry['win64']['hash'][stripped_fn] = digest
+                                    new_rel_entry['win64']['hash'][new_fn.rsplit('/', 2)[-1]] = digest
                         except:
                             new_rel_entry.pop('win64', None)
                             print('No win64 binary found')
@@ -199,10 +197,9 @@ def update_package(name):
                             temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
                             new_rel_entry['script'] = { 'url': new_url, 'files': [], 'hash': {} }
                             for fn in lastest_rel['script']['files']:
-                                stripped_fn = fn.rsplit('/', 2)[-1]
                                 new_fn, digest = decompress_and_hash(temp_fn, fn)
                                 new_rel_entry['script']['files'].append(new_fn)
-                                new_rel_entry['script']['hash'][stripped_fn] = digest
+                                new_rel_entry['script']['hash'][new_fn.rsplit('/', 2)[-1]] = digest
                         except:
                             new_rel_entry.pop('script', None)
                             print('No script found')

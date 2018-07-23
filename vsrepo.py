@@ -112,6 +112,14 @@ try:
 except:
     pass
 
+def check_hash(data, ref_hash):
+    if len(ref_hash) == 40:
+        data_hash = hashlib.sha1(data).hexdigest()
+        return (data_hash == ref_hash, data_hash, ref_hash)
+    else:
+        data_hash = hashlib.sha256(data).hexdigest()
+        return (data_hash == ref_hash, data_hash, ref_hash)        
+
 def get_bin_name(p):
     if p['type'] == 'PyScript':
         return 'script'
@@ -199,9 +207,7 @@ def detect_installed_packages():
                     for f in v[bin_name]['hash']:
                         try:
                             with open(os.path.join(dest_path, f), 'rb') as fh:
-                                digest = hashlib.sha1(fh.read()).hexdigest()
-                                ref_digest = v[bin_name]['hash'][f]
-                                if digest != ref_digest:
+                                if not check_hash(fh.read(), v[bin_name]['hash'][f])[0]:
                                     matched = False
                         except FileNotFoundError:
                             exists = False
@@ -260,20 +266,18 @@ def install_files(p):
             result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             result.check_returncode()
             stripped_fn = filename.rsplit('/', 2)[-1]
-            digest = hashlib.sha1(result.stdout).hexdigest()
-            ref_digest = install_rel[bin_name]['hash'][stripped_fn]
-            if digest != ref_digest:
-                raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
+            hash_result = check_hash(result.stdout, install_rel[bin_name]['hash'][stripped_fn])
+            if not hash_result[0]:
+                raise Exception('Hash mismatch got ' + hash_result[1] + ' but expected ' + hash_result[2])
             with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
                 outfile.write(result.stdout)
         os.remove(tfpath)
     elif len(install_rel[bin_name]['files']) == 1:
         filename = install_rel[bin_name]['files'][0]
         stripped_fn = filename.rsplit('/', 2)[-1]
-        digest = hashlib.sha1(data).hexdigest()
-        ref_digest = install_rel[bin_name]['hash'][stripped_fn]
-        if digest != ref_digest:
-            raise Exception('Hash mismatch got ' + digest + ' but expected ' + ref_digest)
+        hash_result = check_hash(data, install_rel[bin_name]['hash'][stripped_fn])
+        if not hash_result[0]:
+            raise Exception('Hash mismatch got ' + hash_result[1] + ' but expected ' + hash_result[2])
         with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
             outfile.write(data)
     else:

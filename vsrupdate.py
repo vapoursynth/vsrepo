@@ -112,7 +112,7 @@ def decompress_and_hash(archivefn, fn):
         if fn_guess in existing_files:  
             result = subprocess.run([cmd7zip_path, "e", "-so", archivefn, fn_guess], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             result.check_returncode()
-            return (existing_files[fn_guess], hashlib.sha1(result.stdout).hexdigest())
+            return (existing_files[fn_guess], hashlib.sha256(result.stdout).hexdigest())
     base_dirs = []
     for f in existing_files:
         bn = f.split('/')[0]
@@ -127,7 +127,7 @@ def decompress_and_hash(archivefn, fn):
                 if fn_guess in existing_files:  
                     result = subprocess.run([cmd7zip_path, "e", "-so", archivefn, fn_guess], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     result.check_returncode()
-                    return (existing_files[fn_guess], hashlib.sha1(result.stdout).hexdigest())
+                    return (existing_files[fn_guess], hashlib.sha256(result.stdout).hexdigest())
     raise Exception('No file match found')
 
 def update_package(name):

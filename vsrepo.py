@@ -257,7 +257,15 @@ def install_files(p):
     install_rel = get_latest_installable_release(p)
     url = install_rel[bin_name]['url']   
     data = fetch_url(url)
-    if url.endswith('.7z') or url.endswith('.rar') or url.endswith('.zip'):
+    if (len(install_rel[bin_name]['files']) == 1) and (install_rel[bin_name]['files'][0] == url.rsplit('/', 2)[-1]):
+        filename = install_rel[bin_name]['files'][0]
+        stripped_fn = filename.rsplit('/', 2)[-1]
+        hash_result = check_hash(data, install_rel[bin_name]['hash'][stripped_fn])
+        if not hash_result[0]:
+            raise Exception('Hash mismatch got ' + hash_result[1] + ' but expected ' + hash_result[2])
+        with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
+            outfile.write(data)
+    else:
         tffd, tfpath = tempfile.mkstemp(prefix='vsm')
         tf = open(tffd, mode='wb')
         tf.write(data)
@@ -272,16 +280,6 @@ def install_files(p):
             with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
                 outfile.write(result.stdout)
         os.remove(tfpath)
-    elif len(install_rel[bin_name]['files']) == 1:
-        filename = install_rel[bin_name]['files'][0]
-        stripped_fn = filename.rsplit('/', 2)[-1]
-        hash_result = check_hash(data, install_rel[bin_name]['hash'][stripped_fn])
-        if not hash_result[0]:
-            raise Exception('Hash mismatch got ' + hash_result[1] + ' but expected ' + hash_result[2])
-        with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
-            outfile.write(data)
-    else:
-        raise Exception('Unsupported compression type')
     installed_packages[p['identifier']] = install_rel['version']
     print('Successfully installed ' + p['name'] + ' ' + install_rel['version'])
 

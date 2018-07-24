@@ -37,6 +37,12 @@ import email.utils
 import time
 import zipfile
 
+try:
+    import tqdm
+except ImportError:
+    pass
+
+
 if platform.system() != 'Windows':
     raise Exception('Windows required')
 
@@ -94,13 +100,28 @@ except:
 installed_packages = {}
 download_cache = {}
 
-def fetch_url(url):
+def fetch_ur1(url, desc = None):
+    with urllib.request.urlopen(url) as urlreq:
+        if 'tqdm' in sys.modules:
+            size = int(urlreq.headers['content-length'])
+            remaining = size
+            data = bytearray()
+            with tqdm.tqdm(total=size, unit='B', unit_scale=True, unit_divisor=1024, desc=desc) as t:
+                while remaining > 0:
+                    blocksize = min(remaining, 1024*128)
+                    data.extend(urlreq.read(blocksize))
+                    remaining = remaining - blocksize
+                    t.update(blocksize)
+            return data
+        else:
+            print('Fetching: ' + url)
+            return urlreq.read()
+
+def fetch_url_cached(url, desc):
     data = download_cache.get(url, None)
     if data is None:
-        print('Fetching: ' + url)
-        with urllib.request.urlopen(url) as urlreq:
-            data = urlreq.read()
-            download_cache[url] = data
+        data = fetch_ur1(url, desc)
+        download_cache[url] = data
     return data
 
 package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
@@ -260,7 +281,7 @@ def install_files(p):
     bin_name = get_bin_name(p)
     install_rel = get_latest_installable_release(p)
     url = install_rel[bin_name]['url']   
-    data = fetch_url(url)
+    data = fetch_url_cached(url, p['name'] + ' ' + install_rel['version'])
     uninstall_files(p)
     if (len(install_rel[bin_name]['files']) == 1) and (install_rel[bin_name]['files'][0] == url.rsplit('/', 2)[-1]):
         filename = install_rel[bin_name]['files'][0]

@@ -240,7 +240,7 @@ if args.operation == 'compile':
             seen[p['identifier']] = True
 
     with open('vspackages.json', 'w', encoding='utf-8') as pl:
-        json.dump(fp=pl, obj=combined, ensure_ascii=False, indent=4)
+        json.dump(fp=pl, obj={ 'file_format': 1, 'packages': combined}, ensure_ascii=False, indent=2)
 
     try:
         os.remove('vspackages.zip')

@@ -108,7 +108,11 @@ package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 package_list = None
 try:
     with open('vspackages.json', 'r', encoding='utf-8') as pl:
-        package_list = json.load(pl)
+        package_list = json.load(pl)       
+    if package_list['file_format'] != 1:
+        print('Package definition format is {} but only version 1 is supported'.format(package_list['file_format']))
+        package_list = None
+    package_list = package_list['packages']
 except:
     pass
 

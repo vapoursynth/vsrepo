@@ -257,6 +257,7 @@ def install_files(p):
     install_rel = get_latest_installable_release(p)
     url = install_rel[bin_name]['url']   
     data = fetch_url(url)
+    uninstall_files(p)
     if (len(install_rel[bin_name]['files']) == 1) and (install_rel[bin_name]['files'][0] == url.rsplit('/', 2)[-1]):
         filename = install_rel[bin_name]['files'][0]
         stripped_fn = filename.rsplit('/', 2)[-1]
@@ -335,12 +336,14 @@ def uninstall_files(p):
     dest_path = get_install_path(p)
     bin_name = get_bin_name(p)
     installed_rel = None
-    for rel in p['releases']:
-        if rel['version'] == installed_packages[p['identifier']]:
-            installed_rel = rel
-            break
-    for f in installed_rel[bin_name]['hash']:
-        os.remove(os.path.join(dest_path, f))
+    if p['identifier'] in installed_packages:
+        for rel in p['releases']:
+            if rel['version'] == installed_packages[p['identifier']]:
+                installed_rel = rel
+                break
+    if installed_rel is not None:
+        for f in installed_rel[bin_name]['hash']:
+            os.remove(os.path.join(dest_path, f))
 
 def uninstall_package(name):
     p = get_package_from_name(name)

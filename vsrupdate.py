@@ -25,7 +25,6 @@ import json
 import os
 import os.path
 import argparse
-import zipfile
 import hashlib
 import subprocess
 import winreg
@@ -243,6 +242,13 @@ if args.operation == 'compile':
     with open('vspackages.json', 'w', encoding='utf-8') as pl:
         json.dump(fp=pl, obj=combined, ensure_ascii=False, indent=4)
 
+    try:
+        os.remove('vspackages.zip')
+    except:
+        pass
+    result = subprocess.run([cmd7zip_path, 'a', '-tzip', 'vspackages.zip', 'vspackages.json'])
+    result.check_returncode()
+    
     print('Done')
 elif args.operation == 'update-local':
     if args.package is None:

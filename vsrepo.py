@@ -58,7 +58,7 @@ def is_sitepackage_install_portable():
 is_64bits = sys.maxsize > 2**32
 
 parser = argparse.ArgumentParser(description='A simple VapourSynth package manager')
-parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'uninstall', 'installed', 'available'])
+parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'upgrade-all', 'uninstall', 'installed', 'available'])
 parser.add_argument('package', nargs='*', help='identifier, namespace or module to install or upgrade')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
 parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bits else 'win32', dest='target', help='binaries to install, defaults to python\'s architecture')
@@ -341,20 +341,22 @@ def upgrade_files(p):
 
 def upgrade_package(name, force):
     inst = (0, 0)
-    if name == 'all':
-        installed_ids = installed_packages.keys()
-        for id in installed_ids:
-            if is_package_upgradable(id, force): 
-                res = upgrade_files(get_package_from_id(id, True))
-                inst = (inst[0] + res[0], inst[1] + res[1])
+    p = get_package_from_name(name)
+    if is_package_upgradable(p['identifier'], force):
+        inst = upgrade_files(p)
+    elif not is_package_upgradable(p['identifier'], True):
+        print('Package ' + p['name'] + ' not upgradaded, latest version installed')
     else:
-        p = get_package_from_name(name)
-        if is_package_upgradable(p['identifier'], force):
-            inst = upgrade_files(p)
-        elif not is_package_upgradable(p['identifier'], True):
-            print('Package ' + p['name'] + ' not upgradaded, latest version installed')
-        else:
-            print('Package ' + p['name'] + ' not upgraded, unknown version must use -f to force replacement')
+        print('Package ' + p['name'] + ' not upgraded, unknown version must use -f to force replacement')
+    return inst
+
+def upgrade_all_packages(force):
+    inst = (0, 0)
+    installed_ids = installed_packages.keys()
+    for id in installed_ids:
+        if is_package_upgradable(id, force): 
+            res = upgrade_files(get_package_from_id(id, True))
+            inst = (inst[0] + res[0], inst[1] + res[1])
     return inst
 
 def uninstall_files(p):
@@ -423,12 +425,15 @@ if args.operation == 'install':
         print('{} missing {} installed'.format(inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
     else:
         print('{} {} and {} additional {} installed'.format(inst[0], 'package' if inst[0] == 1 else 'packages', inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
-elif args.operation == 'upgrade':
+elif args.operation in ('upgrade', 'upgrade-all'):
     detect_installed_packages()
     inst = (0, 0)
-    for name in args.package:
-        res = upgrade_package(name, args.force)
-        inst = (inst[0] + res[0], inst[1] + res[1])
+    if args.operation == 'upgrade-all':
+        inst = upgrade_all_packages(args.force)
+    else:
+        for name in args.package:
+            res = upgrade_package(name, args.force)
+            inst = (inst[0] + res[0], inst[1] + res[1])
     if (inst[0] == 0) and (inst[1] == 0):
         print('All packages are already up to date')
     elif (inst[0] > 0) and (inst[1] == 0):

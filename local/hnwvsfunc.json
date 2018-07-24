@@ -11,8 +11,9 @@
 		"muvsfunc",
 		"mvsfunc",
 		"com.nodame.mvtools",
-		"fft3dfilter",
-		"rgsf"
+		"org.fftw.fftw3",
+		"com.nodame.rgsf",
+        "com.vapoursynth.hqdn3d"
 	],
 	"releases": [
 		{

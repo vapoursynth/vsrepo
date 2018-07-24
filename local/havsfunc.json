@@ -24,7 +24,8 @@
 		"com.holywu.ttempsmooth",
 		"com.holywu.ctmf",
 		"fft3dfilter",
-		"com.holywu.addgrain"
+		"com.holywu.addgrain",
+        "com.vapoursynth.hqdn3d"
 	],
 	"releases": [
 		{

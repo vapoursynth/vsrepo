@@ -23,7 +23,7 @@ vsrepo.py install havsfunc ffms2 d2v
 
 Update all installed packages to the latest version.
 ```
-vsrepo.py upgrade all
+vsrepo.py upgrade-all
 ```
 
 Fetch latest package definitions.

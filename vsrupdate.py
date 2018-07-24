@@ -31,6 +31,7 @@ import winreg
 import difflib
 import tempfile
 import platform
+import tqdm
 
 if platform.system() != 'Windows':
     raise Exception('Windows required')
@@ -67,23 +68,29 @@ def get_git_api_url(url):
     else:
         return None
 
-def fetch_url(url):
+def fetch_url(url, desc = None):
     with urllib.request.urlopen(url) as urlreq:
-        data = urlreq.read()
+        size = int(urlreq.headers['content-length'])
+        remaining = size
+        data = bytearray()
+        with tqdm.tqdm(total=size, unit='B', unit_scale=True, unit_divisor=1024, desc=desc) as t:
+            while remaining > 0:
+                blocksize = min(remaining, 1024*128)
+                data.extend(urlreq.read(blocksize))
+                remaining = remaining - blocksize
+                t.update(blocksize)
         return data
 
-def fetch_url_to_cache(url, name, tag_name):
+def fetch_url_to_cache(url, name, tag_name, desc = None):
     cache_path = 'dlcache/' + name + '_' + tag_name + '/' + url.rsplit('/')[-1]
     if not os.path.isfile(cache_path):
         os.makedirs(os.path.split(cache_path)[0], exist_ok=True)
         with urllib.request.urlopen(urllib.request.Request(url, method='HEAD')) as urlreq:
             cache_path = 'dlcache/' + name + '_' + tag_name + '/' + urlreq.info().get_filename()
             if not os.path.isfile(cache_path):
-                print('Download required: ' + url)
-                with urllib.request.urlopen(url) as urlreq:
-                    data = urlreq.read()
-                    with open(cache_path, 'wb') as pl:
-                        pl.write(data)
+                data = fetch_url(url, desc)
+                with open(cache_path, 'wb') as pl:
+                    pl.write(data)
     return cache_path
 
 def list_archive_files(fn):
@@ -141,16 +148,12 @@ def update_package(name):
         if url is None:
             print('Only github projects supported, ' + name + ' not scanned')
         else:
-            print('Scanning: ' + url)
             new_rels = {}
-            apifile = None
-            apifile = json.loads(fetch_url(get_git_api_url(pfile['website'])))
+            apifile = json.loads(fetch_url(get_git_api_url(pfile['website']), pfile['name']))
             is_plugin = (pfile['type'] == 'Plugin')
             for rel in apifile:
                 rel_order.append(rel['tag_name'])
-                if rel['tag_name'] in existing_rel_list:
-                    print(rel['tag_name'] + ' (known)')
-                else:
+                if rel['tag_name'] not in existing_rel_list:
                     print(rel['tag_name'] + ' (new)')
                     zipball = rel['zipball_url']
                     dl_files = []
@@ -164,7 +167,7 @@ def update_package(name):
                         try:
                             if 'win32' in lastest_rel:
                                 new_url = get_most_similar(lastest_rel['win32']['url'], dl_files)
-                                temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
+                                temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win32')
                                 new_rel_entry['win32'] = { 'url': new_url, 'files': [], 'hash': {} }
                                 for fn in lastest_rel['win32']['files']:
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
@@ -176,7 +179,7 @@ def update_package(name):
                         try:
                             if 'win64' in lastest_rel:
                                 new_url = get_most_similar(lastest_rel['win64']['url'], dl_files)
-                                temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
+                                temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win64')
                                 new_rel_entry['win64'] = { 'url': new_url, 'files': [], 'hash': {} }
                                 for fn in lastest_rel['win64']['files']:
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
@@ -193,7 +196,7 @@ def update_package(name):
                                 new_url = zipball
                             else:
                                 new_url = get_most_similar(lastest_rel['script']['url'], dl_files)
-                            temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'])
+                            temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
                             new_rel_entry['script'] = { 'url': new_url, 'files': [], 'hash': {} }
                             for fn in lastest_rel['script']['files']:
                                 new_fn, digest = decompress_and_hash(temp_fn, fn)

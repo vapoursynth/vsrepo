@@ -6,14 +6,32 @@
 	"category": "Scripts",
 	"identifier": "muvsfunc",
 	"modulename": "muvsfunc",
-	"dependencies": ["havsfunc", "mvsfunc", "fmtconv", "com.holywu.eedi2", "com.deinterlace.nnedi3", "com.nodame.mvtools", 
-					"com.mio.sangnom", "com.holywu.tcanny", "com.nodame.awarpsharp2", "com.holywu.dfttest", "com.holywu.vsfilter", "com.holywu.vsfiltermod"],
-	"releases": [{
-		"version": "git-1",
-		"script": {
-			"url": "https://raw.githubusercontent.com/WolframRhodium/muvsfunc/aacd759674c9f3862e364c2e0172dc66fa797f86/muvsfunc.py",
-			"files": ["muvsfunc.py"],
-			"hash": { "muvsfunc.py": "e1702d71bd68acf3ef86a270043a30d5a19846bf" }
+	"dependencies": [
+		"havsfunc",
+		"mvsfunc",
+		"fmtconv",
+		"com.holywu.eedi2",
+		"com.deinterlace.nnedi3",
+		"com.nodame.mvtools",
+		"com.mio.sangnom",
+		"com.holywu.tcanny",
+		"com.nodame.awarpsharp2",
+		"com.holywu.dfttest",
+		"com.holywu.vsfilter",
+		"com.holywu.vsfiltermod"
+	],
+	"releases": [
+		{
+			"version": "v0.1.0",
+			"script": {
+				"url": "https://github.com/WolframRhodium/muvsfunc/archive/v0.1.0.zip",
+				"files": [
+					"muvsfunc-0.1.0/muvsfunc.py"
+				],
+				"hash": {
+					"muvsfunc.py": "c25ebb3837b5dac8edfc6e3e34c480e71fee053f7104a77954c784f9da5c99d5"
+				}
+			}
 		}
-	}]
+	]
 }

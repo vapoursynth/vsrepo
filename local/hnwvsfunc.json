@@ -6,13 +6,26 @@
 	"category": "Scripts",
 	"identifier": "hnwvsfunc",
 	"modulename": "hnwvsfunc",
-	"dependencies": ["havsfunc", "muvsfunc", "mvsfunc", "com.nodame.mvtools", "fft3dfilter", "rgsf"],
-	"releases": [{
-		"version": "git-1",
-		"script": {
-			"url": "https://raw.githubusercontent.com/Helenerineium/hnwvsfunc/62bf1d7b0c956da0377497a86d47afd4bd284ae2/hnwvsfunc.py",
-			"files": ["hnwvsfunc.py"],
-			"hash": { "hnwvsfunc.py": "3210e3003f145e2bb43f825c6ddb944a05593589" }
+	"dependencies": [
+		"havsfunc",
+		"muvsfunc",
+		"mvsfunc",
+		"com.nodame.mvtools",
+		"fft3dfilter",
+		"rgsf"
+	],
+	"releases": [
+		{
+			"version": "v0.47",
+			"script": {
+				"url": "https://github.com/Helenerineium/hnwvsfunc/archive/v0.47.zip",
+				"files": [
+					"hnwvsfunc-0.47/hnwsfunc.py"
+				],
+				"hash": {
+					"hnwsfunc.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+				}
+			}
 		}
-	}]
+	]
 }

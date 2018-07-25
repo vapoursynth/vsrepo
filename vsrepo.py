@@ -264,8 +264,7 @@ def print_package_status(p):
 
 def list_installed_packages():
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
-    installed_ids = installed_packages.keys()
-    for id in installed_ids:
+    for id in installed_packages:
         print_package_status(get_package_from_id(id, True))
 
 def list_available_packages():
@@ -359,7 +358,7 @@ def upgrade_package(name, force):
 
 def upgrade_all_packages(force):
     inst = (0, 0)
-    installed_ids = installed_packages.keys()
+    installed_ids = list(installed_packages.keys())
     for id in installed_ids:
         if is_package_upgradable(id, force): 
             res = upgrade_files(get_package_from_id(id, True))

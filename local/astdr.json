@@ -4,8 +4,8 @@
 	"description": "ASTDR is a derainbow function. ASTDRmc performs motion compensation before calling ASTDR",
 	"website": "https://github.com/dubhater/vapoursynth-astdr",
 	"category": "Dot Crawl and Rainbow removal",
-	"identifier": "ASTDR",
-	"modulename": "ASTDR",
+	"identifier": "astdr",
+	"modulename": "astdr",
 	"dependencies": ["adjust", "com.nodame.decross", "com.vapoursynth.hqdn3d", "com.nodame.motionmask", "com.nodame.awarpsharp2", "com.nodame.fluxsmooth", "chikuzen.does.not.have.his.own.domain.focus2", "systems.innocent.fft3dfilter", "com.holywu.ctmf", "com.nodame.mvtools"],
 	"releases": [{
 		"version": "git:38e2fbd",

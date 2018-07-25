@@ -6,7 +6,7 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=175520",
 	"category": "Dot Crawl and Rainbow removal",
 	"identifier": "rainbowsmooth",
-	"modulename": "RainbowSmooth",
+	"modulename": "rainbowsmooth",
 	"dependencies": [
 		"com.nodame.smoothuv",
 		"kagefunc"

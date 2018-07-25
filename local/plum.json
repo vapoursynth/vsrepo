@@ -6,7 +6,7 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=173775",
 	"category": "Others",
 	"identifier": "plum",
-	"modulename": "Plum",
+	"modulename": "plum",
 	"dependencies": ["com.deinterlace.nnedi3", "com.Khanattila.KNLMeansCL", "com.vapoursynth.bm3d", "fmtconv", "com.nodame.mvsf", "in.vcmohan.freq"],
 		"releases": [{
 		"version": "git:f5d40e2",

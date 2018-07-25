@@ -6,7 +6,7 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=173703",
 	"category": "Others",
 	"identifier": "vine",
-	"modulename": "Vine",
+	"modulename": "vine",
 	"dependencies": ["com.deinterlace.nnedi3", "com.Khanattila.KNLMeansCL", "com.vapoursynth.bm3d", "fmtconv", "com.nodame.mvsf", "com.holywu.tcanny"],
 		"releases": [{
 		"version": "git:a6e68cd",

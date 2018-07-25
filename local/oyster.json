@@ -6,7 +6,7 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=173470",
 	"category": "Others",
 	"identifier": "oyster",
-	"modulename": "Oyster",
+	"modulename": "oyster",
 	"dependencies": ["com.deinterlace.nnedi3", "com.Khanattila.KNLMeansCL", "com.vapoursynth.bm3d", "com.holywu.dfttest", "fmtconv", "com.nodame.mvsf"],
 		"releases": [{
 		"version": "git:54fe6c3",

@@ -199,7 +199,6 @@ def update_package(name):
                         new_rel_entry = { 'version': rel['tag_name'] }
                         try:
                             latest_rel = get_latest_installable_release(pfile, 'script')
-                            print(latest_rel)
                             new_url = None
                             if ('/archive/' in latest_rel['script']['url']) or ('/zipball/' in latest_rel['script']['url']):
                                 new_url = zipball

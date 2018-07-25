@@ -136,6 +136,12 @@ def decompress_and_hash(archivefn, fn):
                     return (existing_files[fn_guess], hashlib.sha256(result.stdout).hexdigest())
     raise Exception('No file match found')
 
+def get_latest_installable_release(p, bin_name):
+    for rel in p['releases']:
+        if bin_name in rel:
+            return rel
+    return None
+
 def update_package(name):
     with open('local/' + name + '.json', 'r', encoding='utf-8') as ml:
         pfile = json.load(ml)
@@ -161,15 +167,15 @@ def update_package(name):
                         dl_files.append(asset['browser_download_url'])
                     
                     #ugly copypaste here because I'm lazy
-                    lastest_rel = pfile['releases'][0]
                     if is_plugin:
                         new_rel_entry = { 'version': rel['tag_name'] }
                         try:
-                            if 'win32' in lastest_rel:
-                                new_url = get_most_similar(lastest_rel['win32']['url'], dl_files)
+                            latest_rel = get_latest_installable_release(pfile, 'win32')
+                            if latest_rel is not None:
+                                new_url = get_most_similar(latest_rel['win32']['url'], dl_files)
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win32')
                                 new_rel_entry['win32'] = { 'url': new_url, 'files': [], 'hash': {} }
-                                for fn in lastest_rel['win32']['files']:
+                                for fn in latest_rel['win32']['files']:
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
                                     new_rel_entry['win32']['files'].append(new_fn)
                                     new_rel_entry['win32']['hash'][new_fn.rsplit('/', 2)[-1]] = digest
@@ -177,11 +183,12 @@ def update_package(name):
                             new_rel_entry.pop('win32', None)
                             print('No win32 binary found')
                         try:
-                            if 'win64' in lastest_rel:
-                                new_url = get_most_similar(lastest_rel['win64']['url'], dl_files)
+                            latest_rel = get_latest_installable_release(pfile, 'win64')
+                            if latest_rel is not None:
+                                new_url = get_most_similar(latest_rel['win64']['url'], dl_files)
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win64')
                                 new_rel_entry['win64'] = { 'url': new_url, 'files': [], 'hash': {} }
-                                for fn in lastest_rel['win64']['files']:
+                                for fn in latest_rel['win64']['files']:
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
                                     new_rel_entry['win64']['files'].append(new_fn)
                                     new_rel_entry['win64']['hash'][new_fn.rsplit('/', 2)[-1]] = digest
@@ -191,14 +198,16 @@ def update_package(name):
                     else:
                         new_rel_entry = { 'version': rel['tag_name'] }
                         try:
+                            latest_rel = get_latest_installable_release(pfile, 'script')
+                            print(latest_rel)
                             new_url = None
-                            if ('/archive/' in lastest_rel['script']['url']) or ('/zipball/' in lastest_rel['script']['url']):
+                            if ('/archive/' in latest_rel['script']['url']) or ('/zipball/' in latest_rel['script']['url']):
                                 new_url = zipball
                             else:
-                                new_url = get_most_similar(lastest_rel['script']['url'], dl_files)
+                                new_url = get_most_similar(latest_rel['script']['url'], dl_files)
                             temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
                             new_rel_entry['script'] = { 'url': new_url, 'files': [], 'hash': {} }
-                            for fn in lastest_rel['script']['files']:
+                            for fn in latest_rel['script']['files']:
                                 new_fn, digest = decompress_and_hash(temp_fn, fn)
                                 new_rel_entry['script']['files'].append(new_fn)
                                 new_rel_entry['script']['hash'][new_fn.rsplit('/', 2)[-1]] = digest

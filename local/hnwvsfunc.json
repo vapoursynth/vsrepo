@@ -13,18 +13,30 @@
 		"com.nodame.mvtools",
 		"org.fftw.fftw3",
 		"com.nodame.rgsf",
-        "com.vapoursynth.hqdn3d"
+		"com.vapoursynth.hqdn3d"
 	],
 	"releases": [
+		{
+			"version": "v0.57",
+			"script": {
+				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.57",
+				"files": [
+					"Helenerineium-hnwvsfunc-ea49c13/hnwvsfunc.py"
+				],
+				"hash": {
+					"hnwvsfunc.py": "7a4059056ef827874a4ac7f185cffd4041b19a89e2b91112ad12522a8f3b7f8f"
+				}
+			}
+		},
 		{
 			"version": "v0.47",
 			"script": {
 				"url": "https://github.com/Helenerineium/hnwvsfunc/archive/v0.47.zip",
 				"files": [
-					"hnwvsfunc-0.47/hnwsfunc.py"
+					"hnwvsfunc-0.47/hnwvsfunc.py"
 				],
 				"hash": {
-					"hnwsfunc.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					"hnwvsfunc.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 				}
 			}
 		}

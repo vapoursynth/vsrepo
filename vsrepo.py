@@ -58,18 +58,23 @@ def is_sitepackage_install_portable():
 is_64bits = sys.maxsize > 2**32
 
 parser = argparse.ArgumentParser(description='A simple VapourSynth package manager')
-parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'upgrade-all', 'uninstall', 'installed', 'available'])
-parser.add_argument('package', nargs='*', help='identifier, namespace or module to install or upgrade')
+parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'upgrade-all', 'uninstall', 'installed', 'available', 'paths'])
+parser.add_argument('package', nargs='*', help='identifier, namespace or module to install, upgrade or uninstall')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
 parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bits else 'win32', dest='target', help='binaries to install, defaults to python\'s architecture')
-parser.add_argument('-p', action='store_true', dest='portable', help='portable mode')
+parser.add_argument('-p', action='store_true', dest='portable', help='use paths suitable for portable installs')
+parser.add_argument('-b', dest='binary_path', help='custom binary install path')
+parser.add_argument('-s', dest='script_path', help='custom script install path')
 args = parser.parse_args()
 is_64bits = (args.target == 'win64')
 
 if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is None) or len(args.package) == 0):
-    raise Exception('Package argument required for install, upgrade and uninstall operations')
+    print('Package argument only required for install, upgrade and uninstall operations')
+    exit(1)
 
 py_script_path = '.\\' if args.portable else site.getusersitepackages() + '\\'
+if args.script_path is not None:
+    py_script_path = args.script_path
 
 if args.portable:
     plugin32_path = 'vapoursynth32\\plugins\\'
@@ -85,6 +90,8 @@ else:
     plugin64_path = os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'plugins64')
 
 plugin_path = plugin64_path if is_64bits else plugin32_path
+if args.binary_path is not None:
+    plugin_path = args.binary_path
 	
 os.makedirs(py_script_path, exist_ok=True)
 os.makedirs(plugin_path, exist_ok=True)
@@ -411,6 +418,11 @@ def update_package_definition(url):
     else:
         print('Local definitions updated to: ' + email.utils.formatdate(remote_modtime, usegmt=True))
 
+def print_paths():
+    print('Destination paths:')
+    print('Binaries: ' + plugin_path)
+    print('Scripts: ' + py_script_path)    
+
 if args.operation == 'install':
     detect_installed_packages()
     inst = (0, 0)
@@ -460,3 +472,5 @@ elif args.operation == 'available':
     list_available_packages()
 elif args.operation == 'update':
     update_package_definition('http://www.vapoursynth.com/vsrepo/vspackages.zip')
+elif args.operation == 'paths':
+    print_paths()

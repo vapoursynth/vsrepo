@@ -1,0 +1,32 @@
+{
+	"name": "DFMDerainbow",
+	"type": "PyScript",
+	"description": "DFMDerainbow is a derainbow function. DFMDerainbowMC performs motion compensation before calling DFMDerainbow.",
+	"website": "https://github.com/dubhater/vapoursynth-dfmderainbow",
+	"category": "Dot Crawl and Rainbow removal",
+	"identifier": "dfmderainbow",
+	"modulename": "dfmderainbow",
+	"dependencies": [
+		"com.nodame.temporalmedian",
+		"chikuzen.does.not.have.his.own.domain.focus2",
+		"com.nodame.fluxsmooth",
+		"com.nodame.mvtools",
+		"com.nodame.msmoosh",
+		"com.nodame.minideen",
+		"systems.innocent.fft3dfilter"
+	],
+	"releases": [
+		{
+			"version": "git:33bc584",
+			"script": {
+				"url": "https://raw.githubusercontent.com/dubhater/vapoursynth-dfmderainbow/33bc584bd9447dc28d9225850f349826f596e609/dfmderainbow.py",
+				"files": [
+					"dfmderainbow.py"
+				],
+				"hash": {
+					"dfmderainbow.py": "8b737675e16963ab0312c3d8171f2bd8c426213309e58f209608a22457083a7a"
+				}
+			}
+		}
+	]
+}

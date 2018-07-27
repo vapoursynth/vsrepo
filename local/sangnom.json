@@ -1,52 +1,22 @@
 {
-	"name": "SangNomMod",
+	"name": "SangNom",
 	"type": "Plugin",
 	"description": "SangNom is a single field deinterlacer using edge-directed interpolation but nowadays it's mainly used in anti-aliasing scripts.",
-	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod",
+	"website": "https://bitbucket.org/James1201/vapoursynth-sangnom",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173752",
 	"category": "Deinterlacing",
 	"identifier": "com.mio.sangnom",
 	"namespace": "sangnom",
 	"releases": [
 		{
-			"version": "v0.1-fix",
-			"win32": {
-				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod/releases/download/v0.1-fix/sangnommod_v0.1.fix.zip",
-				"files": [
-					"clang/x86/vs_sangnommod.dll"
-				],
-				"hash": {
-					"vs_sangnommod.dll": "92e756039cf32517587ff90b00178950e764c67a4f428f71f6efd718ba44aacc"
-				}
-			},
+			"version": "r40",
 			"win64": {
-				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod/releases/download/v0.1-fix/sangnommod_v0.1.fix.zip",
+				"url": "https://bitbucket.org/James1201/vapoursynth-sangnom/downloads/libsangnom%20r40%20win64.7z",
 				"files": [
-					"clang/x64/vs_sangnommod.dll"
+					"libsangnom r40 win64/gcc/libsangnom.dll"
 				],
 				"hash": {
-					"vs_sangnommod.dll": "97ddb73849c00f96895ca4b96e309da644e4fb41473b1f1ae0b61b4e977ad86a"
-				}
-			}
-		},
-		{
-			"version": "v0.1",
-			"win32": {
-				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod/releases/download/v0.1/sangnommod_v0.1a.zip",
-				"files": [
-					"clang/x86/vs_sangnommod.dll"
-				],
-				"hash": {
-					"vs_sangnommod.dll": "b4300a25db9ae2d382f4559cae3254d5bdd99794f7bcd41f87b3c4d0b8d8c417"
-				}
-			},
-			"win64": {
-				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod/releases/download/v0.1/sangnommod_v0.1a.zip",
-				"files": [
-					"clang/x64/vs_sangnommod.dll"
-				],
-				"hash": {
-					"vs_sangnommod.dll": "2d7219b30661b9e0cc2eb300c52072be752ed173b32dc74a57ee5c603381162c"
+					"libsangnom.dll": "cd62d7e54f086e5752965072b07cc9e90b168517768472c76e754007763de9ae"
 				}
 			}
 		}

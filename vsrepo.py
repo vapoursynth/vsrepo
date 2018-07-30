@@ -145,12 +145,8 @@ except:
     pass
 
 def check_hash(data, ref_hash):
-    if len(ref_hash) == 40:
-        data_hash = hashlib.sha1(data).hexdigest()
-        return (data_hash == ref_hash, data_hash, ref_hash)
-    else:
-        data_hash = hashlib.sha256(data).hexdigest()
-        return (data_hash == ref_hash, data_hash, ref_hash)        
+    data_hash = hashlib.sha256(data).hexdigest()
+    return (data_hash == ref_hash, data_hash, ref_hash)        
 
 def get_bin_name(p):
     if p['type'] == 'PyScript':

@@ -13,7 +13,7 @@
 		"script": {
 			"url": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth/downloads/templinearapproximate-r3.7z",
 			"files": ["templinearapproximate-r3/py/MCDenoise.py"],
-			"hash": { "MCDenoise.py": "a6662cde93afb9327977bef972f160becf50a191" }
+			"hash": { "MCDenoise.py": "483e4b39268a125a4896c3b21dabb6e8ec31fbbf29f70888f14089dabf37cc17" }
 		}
 	}]
 }

@@ -12,7 +12,7 @@
 		"script": {
 			"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/fvsfunc/cd6a442b1940fe85e3e3f10dbebda83f421bf08b/fvsfunc.py",
 			"files": ["fvsfunc.py"],
-			"hash": { "fvsfunc.py": "00a28cbf8332efed91c1c013b5794798fea5d492" }
+			"hash": { "fvsfunc.py": "c44cebfd50903c8155187bb93b46843dca68dc6ad67dcb9287aacbb19f803ebd" }
 		}
 	}]
 }

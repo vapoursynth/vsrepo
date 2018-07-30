@@ -12,12 +12,12 @@
 		"win32": {
 			"url": "http://www.avisynth.nl/users/vcmohan/vcmod/vcmod.7z",
 			"files": ["vcmod.dll"],
-			"hash": { "vcmod.dll": "7c5f51970c8a6f9f0b80b948eb0287b34f1f01f1" }
+			"hash": { "vcmod.dll": "da8a241cd5ba00dc37b6f9154327297e9181c8be8cf55c7292fb93f57ac74f8a" }
 		},
 		"win64": {
 			"url": "http://www.avisynth.nl/users/vcmohan/vcmod/vcmod64.7z",
 			"files": ["vcmod.dll"],
-			"hash": { "vcmod.dll": "ecf3edca05a4358e00289bab6747bb4ba1d62681" }
+			"hash": { "vcmod.dll": "c1dc17e129be67bbf517e7790a368c803ff5497f679fd938af5b7d1f858a0381" }
 		}
 	}]
 }

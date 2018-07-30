@@ -11,12 +11,12 @@
 		"win32": {
 			"url": "https://github.com/sekrit-twc/znedi3/releases/download/r1/znedi3_r1.7z",
 			"files": ["nnedi3_weights.bin"],
-			"hash": { "nnedi3_weights.bin": "c0d51b072cfe6fe68b76bd196ddd593cb86adbff" }
+			"hash": { "nnedi3_weights.bin": "27f382430435bb7613deb1c52f3c79c300c9869812cfe29079432a9c82251d42" }
 		},
 		"win64": {
 			"url": "https://github.com/sekrit-twc/znedi3/releases/download/r1/znedi3_r1.7z",
 			"files": ["nnedi3_weights.bin"],
-			"hash": { "nnedi3_weights.bin": "c0d51b072cfe6fe68b76bd196ddd593cb86adbff" }
+			"hash": { "nnedi3_weights.bin": "27f382430435bb7613deb1c52f3c79c300c9869812cfe29079432a9c82251d42" }
 		}
 	}]
 }

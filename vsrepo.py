@@ -109,7 +109,7 @@ download_cache = {}
 
 def fetch_ur1(url, desc = None):
     with urllib.request.urlopen(url) as urlreq:
-        if 'tqdm' in sys.modules:
+        if ('tqdm' in sys.modules) and (urlreq.headers['content-length'] is not None):
             size = int(urlreq.headers['content-length'])
             remaining = size
             data = bytearray()

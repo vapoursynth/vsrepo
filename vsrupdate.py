@@ -22,6 +22,7 @@
 
 import urllib.request
 import json
+import sys
 import os
 import os.path
 import argparse
@@ -70,16 +71,20 @@ def get_git_api_url(url):
 
 def fetch_url(url, desc = None):
     with urllib.request.urlopen(url) as urlreq:
-        size = int(urlreq.headers['content-length'])
-        remaining = size
-        data = bytearray()
-        with tqdm.tqdm(total=size, unit='B', unit_scale=True, unit_divisor=1024, desc=desc) as t:
-            while remaining > 0:
-                blocksize = min(remaining, 1024*128)
-                data.extend(urlreq.read(blocksize))
-                remaining = remaining - blocksize
-                t.update(blocksize)
-        return data
+        if ('tqdm' in sys.modules) and (urlreq.headers['content-length'] is not None):
+            size = int(urlreq.headers['content-length'])
+            remaining = size
+            data = bytearray()
+            with tqdm.tqdm(total=size, unit='B', unit_scale=True, unit_divisor=1024, desc=desc) as t:
+                while remaining > 0:
+                    blocksize = min(remaining, 1024*128)
+                    data.extend(urlreq.read(blocksize))
+                    remaining = remaining - blocksize
+                    t.update(blocksize)
+            return data
+        else:
+            print('Fetching: ' + url)
+            return urlreq.read()
 
 def fetch_url_to_cache(url, name, tag_name, desc = None):
     cache_path = 'dlcache/' + name + '_' + tag_name + '/' + url.rsplit('/')[-1]

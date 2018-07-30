@@ -12,12 +12,12 @@
 		"win32": {
 			"url": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth/downloads/templinearapproximate-r3.7z",
 			"files": ["templinearapproximate-r3/32bit/templinearapproximate.dll"],
-			"hash": { "templinearapproximate.dll": "4c09885b998070966274c97cb3b561fc65f379fb" }
+			"hash": { "templinearapproximate.dll": "fd756a60b756f181b418631b69ce42dae19437460d15b8b4525f690da4255040" }
 		},
 		"win64": {
 			"url": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth/downloads/templinearapproximate-r3.7z",
 			"files": ["templinearapproximate-r3/64bit/templinearapproximate.dll"],
-			"hash": { "templinearapproximate.dll": "1e4f6042fadb254ec77e295e244644e4d743f26f" }
+			"hash": { "templinearapproximate.dll": "ff67e17b5a71422b630a642f7850563ab7f17d12c06c0bff5f30409ae41d4f6b" }
 		}
 	}]
 }

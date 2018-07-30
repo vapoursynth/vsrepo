@@ -11,7 +11,7 @@
 		"script": {
 			"url": "https://github.com/dubhater/vapoursynth-adjust/archive/v1.zip",
 			"files": ["vapoursynth-adjust-1/adjust.py"],
-			"hash": { "adjust.py": "752e99374166951e633447e8c51d5b62b7eb0ba5" }
+			"hash": { "adjust.py": "705389396713b9974b7f18eb75887d8ac6b36eef8cc9ab8ff4ce185d48aafd94" }
 		}
 	}]
 }

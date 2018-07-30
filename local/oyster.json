@@ -13,7 +13,7 @@
 		"script": {
 			"url": "https://raw.githubusercontent.com/IFeelBloated/Oyster/54fe6c36c0fb90be60a2d7939d9cd5f62d765176/Oyster.py",
 			"files": ["Oyster.py"],
-			"hash": { "Oyster.py": "301cdd17dd80b2ce8491fff6a0dfc4aae31a9d55" }
+			"hash": { "Oyster.py": "d77590c31703513b9b69d3ad852da7b568c7bd34420ca010bbeea041d6c4e22d" }
 		}
 	}]
 }

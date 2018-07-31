@@ -8,6 +8,27 @@
 	"namespace": "vsfm",
 	"releases": [
 		{
+			"version": "r5.1",
+			"win32": {
+				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5.1/VSFilterMod_x86.7z",
+				"files": [
+					"VSFilterMod.dll"
+				],
+				"hash": {
+					"VSFilterMod.dll": "66cbe9dac2485280d00709a54f4c46c84e2b56c6699f5ba3e940ff53b4499eb2"
+				}
+			},
+			"win64": {
+				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5.1/VSFilterMod_x64.7z",
+				"files": [
+					"VSFilterMod.dll"
+				],
+				"hash": {
+					"VSFilterMod.dll": "615b0e33bca142f72cdb649c15707811b3115227b27edd25aea11f262dabd5e3"
+				}
+			}
+		},
+		{
 			"version": "r5",
 			"win32": {
 				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5/VSFilterMod_x86.7z",

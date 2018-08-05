@@ -4,7 +4,7 @@
 	"description": "Dedot is a temporal cross color (rainbow) and cross luminance (dotcrawl) reduction filter.",
 	"website": "https://github.com/dubhater/vapoursynth-dedot",
 	"category": "Dot Crawl and Rainbow removal",
-	"identifier": "om.nodame.dedot",
+	"identifier": "com.nodame.dedot",
 	"namespace": "dedot",
 	"releases": [
 		{

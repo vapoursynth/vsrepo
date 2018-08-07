@@ -1,31 +1,32 @@
 {
 	"name": "Retinex",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Dynamic range compression",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171307",
 	"category": "Others",
 	"identifier": "com.invalid.identifier.retinex",
 	"namespace": "retinex",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex",
 	"releases": [
 		{
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r3/Retinex-r3.7z",
-				"files": [
-					"Win32/Retinex.dll"
-				],
-				"hash": {
-					"Retinex.dll": "63bb69ac6b31b2448eaaf3398e4836486813e65d489e6ff2acaf61ecdeb99926"
+				"files": {
+					"Retinex.dll": [
+						"Win32/Retinex.dll",
+						"63bb69ac6b31b2448eaaf3398e4836486813e65d489e6ff2acaf61ecdeb99926"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r3/Retinex-r3.7z",
-				"files": [
-					"x64/Retinex.dll"
-				],
-				"hash": {
-					"Retinex.dll": "c1b9114e13509335cd3ecfc61d13cb7baab2e07ee1d00132853799824c29007e"
+				"files": {
+					"Retinex.dll": [
+						"x64/Retinex.dll",
+						"c1b9114e13509335cd3ecfc61d13cb7baab2e07ee1d00132853799824c29007e"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r2/Retinex-r2.7z",
-				"files": [
-					"Win32/Retinex.dll"
-				],
-				"hash": {
-					"Retinex.dll": "182da6f48ce041e984f86f4985fd8af85a43cfa851d792185ce81f47ec4d3e8a"
+				"files": {
+					"Retinex.dll": [
+						"Win32/Retinex.dll",
+						"182da6f48ce041e984f86f4985fd8af85a43cfa851d792185ce81f47ec4d3e8a"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r2/Retinex-r2.7z",
-				"files": [
-					"x64/Retinex.dll"
-				],
-				"hash": {
-					"Retinex.dll": "44dc1c713a4ddda7460657b76cbe31d3974f6e18256a56ffe0c6e16f4d6347f1"
+				"files": {
+					"Retinex.dll": [
+						"x64/Retinex.dll",
+						"44dc1c713a4ddda7460657b76cbe31d3974f6e18256a56ffe0c6e16f4d6347f1"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r1/Retinex-r1.7z",
-				"files": [
-					"Win32/Retinex.dll"
-				],
-				"hash": {
-					"Retinex.dll": "a0801c72aa4fbc93fdba2eb696ec14a88966de3e789031726084f41f4849c672"
+				"files": {
+					"Retinex.dll": [
+						"Win32/Retinex.dll",
+						"a0801c72aa4fbc93fdba2eb696ec14a88966de3e789031726084f41f4849c672"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r1/Retinex-r1.7z",
-				"files": [
-					"x64/Retinex.dll"
-				],
-				"hash": {
-					"Retinex.dll": "9d085f7798c03ca9433155433592804810fce5567633a02a21618d0d52144efa"
+				"files": {
+					"Retinex.dll": [
+						"x64/Retinex.dll",
+						"9d085f7798c03ca9433155433592804810fce5567633a02a21618d0d52144efa"
+					]
 				}
 			}
 		}

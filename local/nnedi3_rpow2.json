@@ -6,13 +6,22 @@
 	"category": "Script",
 	"identifier": "nnedi3_rpow2",
 	"modulename": "nnedi3_rpow2",
-	"dependencies": ["com.deinterlace.nnedi3", "fmtconv"],
-	"releases": [{
-		"version": "rev3",
-		"script": {
-			"url": "https://gist.githubusercontent.com/4re/342624c9e1a144a696c6/raw/08df48752c70c66df4127f2791bbedbc1958da77/nnedi3_rpow2.py",
-			"files": ["nnedi3_rpow2.py"],
-			"hash": { "nnedi3_rpow2.py": "982a1d0d37636967d45aa6315e4f7f8de419c56d58792c99a4427dade518053b" }
+	"dependencies": [
+		"com.deinterlace.nnedi3",
+		"fmtconv"
+	],
+	"releases": [
+		{
+			"version": "rev3",
+			"script": {
+				"url": "https://gist.githubusercontent.com/4re/342624c9e1a144a696c6/raw/08df48752c70c66df4127f2791bbedbc1958da77/nnedi3_rpow2.py",
+				"files": {
+					"nnedi3_rpow2.py": [
+						"nnedi3_rpow2.py",
+						"982a1d0d37636967d45aa6315e4f7f8de419c56d58792c99a4427dade518053b"
+					]
+				}
+			}
 		}
-	}]
+	]
 }

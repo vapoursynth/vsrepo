@@ -137,7 +137,7 @@ package_list = None
 try:
     with open('vspackages.json', 'r', encoding='utf-8') as pl:
         package_list = json.load(pl)       
-    if package_list['file_format'] != 1:
+    if package_list['file_format'] != 2:
         print('Package definition format is {} but only version 1 is supported'.format(package_list['file_format']))
         package_list = None
     package_list = package_list['packages']
@@ -151,7 +151,7 @@ def check_hash(data, ref_hash):
 def get_bin_name(p):
     if p['type'] == 'PyScript':
         return 'script'
-    elif p['type'] == 'Plugin':
+    elif p['type'] == 'VSPlugin':
         if is_64bits:
             return 'win64'
         else:
@@ -162,7 +162,7 @@ def get_bin_name(p):
 def get_install_path(p):
     if p['type'] == 'PyScript':
         return py_script_path
-    elif p['type'] == 'Plugin':
+    elif p['type'] == 'VSPlugin':
         return plugin_path
     else:
         raise Exception('Unknown install type')
@@ -232,10 +232,10 @@ def detect_installed_packages():
                 exists = True
                 bin_name = get_bin_name(p)
                 if bin_name in v:
-                    for f in v[bin_name]['hash']:
+                    for f in v[bin_name]['files']:
                         try:
                             with open(os.path.join(dest_path, f), 'rb') as fh:
-                                if not check_hash(fh.read(), v[bin_name]['hash'][f])[0]:
+                                if not check_hash(fh.read(), v[bin_name]['files'][f][1])[0]:
                                     matched = False
                         except FileNotFoundError:
                             exists = False
@@ -256,7 +256,7 @@ def print_package_status(p):
         name = '*' + name
     elif is_package_upgradable(p['identifier'], True):
         name = '+' + name
-    print(package_print_string.format(name, p['namespace'] if p['type'] == 'Plugin' else p['modulename'], installed_packages[p['identifier']] if p['identifier'] in installed_packages else '', lastest_installable['version'] if lastest_installable is not None else '', p['identifier']))
+    print(package_print_string.format(name, p['namespace'] if p['type'] == 'VSPlugin' else p['modulename'], installed_packages[p['identifier']] if p['identifier'] in installed_packages else '', lastest_installable['version'] if lastest_installable is not None else '', p['identifier']))
 
 def list_installed_packages():
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
@@ -285,6 +285,7 @@ def install_files(p):
     url = install_rel[bin_name]['url']   
     data = fetch_url_cached(url, p['name'] + ' ' + install_rel['version'])
     uninstall_files(p)
+    
     if (len(install_rel[bin_name]['files']) == 1) and (install_rel[bin_name]['files'][0] == url.rsplit('/', 2)[-1]):
         filename = install_rel[bin_name]['files'][0]
         stripped_fn = filename.rsplit('/', 2)[-1]
@@ -298,14 +299,13 @@ def install_files(p):
         tf = open(tffd, mode='wb')
         tf.write(data)
         tf.close()
-        for filename in install_rel[bin_name]['files']:
-            result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        for install_fn, src_info in install_rel[bin_name]['files']:
+            result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, src_info[0]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             result.check_returncode()
-            stripped_fn = filename.rsplit('/', 2)[-1]
-            hash_result = check_hash(result.stdout, install_rel[bin_name]['hash'][stripped_fn])
+            hash_result = check_hash(result.stdout, src_info[1])
             if not hash_result[0]:
                 raise Exception('Hash mismatch got ' + hash_result[1] + ' but expected ' + hash_result[2])
-            with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
+            with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
                 outfile.write(result.stdout)
         os.remove(tfpath)
     installed_packages[p['identifier']] = install_rel['version']
@@ -371,7 +371,7 @@ def uninstall_files(p):
                 installed_rel = rel
                 break
     if installed_rel is not None:
-        for f in installed_rel[bin_name]['hash']:
+        for f in installed_rel[bin_name]['files']:
             os.remove(os.path.join(dest_path, f))
 
 def uninstall_package(name):

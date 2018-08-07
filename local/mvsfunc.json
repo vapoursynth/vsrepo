@@ -7,6 +7,7 @@
 	"category": "Scripts",
 	"identifier": "mvsfunc",
 	"modulename": "mvsfunc",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/mvsfunc",
 	"dependencies": [
 		"fmtconv",
 		"com.vapoursynth.bm3d"
@@ -16,11 +17,11 @@
 			"version": "r8",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r8",
-				"files": [
-					"HomeOfVapourSynthEvolution-mvsfunc-71c293a/mvsfunc.py"
-				],
-				"hash": {
-					"mvsfunc.py": "7f1c5d783ee23b7bb4da9f54eef8b2de209f7b052e564c378a368f87af550d52"
+				"files": {
+					"mvsfunc.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-71c293a/mvsfunc.py",
+						"7f1c5d783ee23b7bb4da9f54eef8b2de209f7b052e564c378a368f87af550d52"
+					]
 				}
 			}
 		},
@@ -28,11 +29,11 @@
 			"version": "r7",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r7",
-				"files": [
-					"HomeOfVapourSynthEvolution-mvsfunc-34270cb/mvsfunc.py"
-				],
-				"hash": {
-					"mvsfunc.py": "b1414ff02514eee709ad01810b5c448bac48a4b5d7e2a6c7f0aa6a6ef36e03a8"
+				"files": {
+					"mvsfunc.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-34270cb/mvsfunc.py",
+						"b1414ff02514eee709ad01810b5c448bac48a4b5d7e2a6c7f0aa6a6ef36e03a8"
+					]
 				}
 			}
 		},
@@ -40,11 +41,11 @@
 			"version": "r6",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r6",
-				"files": [
-					"HomeOfVapourSynthEvolution-mvsfunc-6f93643/mvsfunc.py"
-				],
-				"hash": {
-					"mvsfunc.py": "a418d40e0ba60d602ac9bdd05e478c4962ce5978a78a22e1f8fd54d654e98c74"
+				"files": {
+					"mvsfunc.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-6f93643/mvsfunc.py",
+						"a418d40e0ba60d602ac9bdd05e478c4962ce5978a78a22e1f8fd54d654e98c74"
+					]
 				}
 			}
 		},
@@ -52,11 +53,11 @@
 			"version": "r5",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r5",
-				"files": [
-					"HomeOfVapourSynthEvolution-mvsfunc-1e20b50/mvsfunc.py"
-				],
-				"hash": {
-					"mvsfunc.py": "4f6745ae60a7b5d741f02a6175825710760bfe8a7b2917fca734c906ee1a7f6a"
+				"files": {
+					"mvsfunc.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-1e20b50/mvsfunc.py",
+						"4f6745ae60a7b5d741f02a6175825710760bfe8a7b2917fca734c906ee1a7f6a"
+					]
 				}
 			}
 		}

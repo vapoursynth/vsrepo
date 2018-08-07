@@ -1,31 +1,32 @@
 {
 	"name": "IT",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Port of the inverse telecine filter for Avisynth",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171246",
 	"category": "Inverse Telecine",
 	"identifier": "in.7086.it",
 	"namespace": "it",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT",
 	"releases": [
 		{
 			"version": "v1.2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.2/it_release_v1.2.zip",
-				"files": [
-					"msvc/x86/Release SSE/vs_it.dll"
-				],
-				"hash": {
-					"vs_it.dll": "0bab5291eee2043598ab1957d85fdbf6e1d28b61481dc91c1958133fc07d5fdb"
+				"files": {
+					"vs_it.dll": [
+						"msvc/x86/Release SSE/vs_it.dll",
+						"0bab5291eee2043598ab1957d85fdbf6e1d28b61481dc91c1958133fc07d5fdb"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.2/it_release_v1.2.zip",
-				"files": [
-					"msvc/x64/Release SSE/vs_it.dll"
-				],
-				"hash": {
-					"vs_it.dll": "35a004bafcb3047db562219a22b5f10be926ccca250c9f035a82e2025ab36599"
+				"files": {
+					"vs_it.dll": [
+						"msvc/x64/Release SSE/vs_it.dll",
+						"35a004bafcb3047db562219a22b5f10be926ccca250c9f035a82e2025ab36599"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "v1.1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.1/it_release_v1.1.zip",
-				"files": [
-					"msvc/x86/Release SSE/vs_it.dll"
-				],
-				"hash": {
-					"vs_it.dll": "64ab36d78d11957ccb66e01ad6a1cac9f21ec23454aea29a9dc61c72935c020a"
+				"files": {
+					"vs_it.dll": [
+						"msvc/x86/Release SSE/vs_it.dll",
+						"64ab36d78d11957ccb66e01ad6a1cac9f21ec23454aea29a9dc61c72935c020a"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.1/it_release_v1.1.zip",
-				"files": [
-					"msvc/x64/Release SSE/vs_it.dll"
-				],
-				"hash": {
-					"vs_it.dll": "56f4b7d68412b84a4a0a94f3f426454438e665459d6e1d52ca2a6e9361211de2"
+				"files": {
+					"vs_it.dll": [
+						"msvc/x64/Release SSE/vs_it.dll",
+						"56f4b7d68412b84a4a0a94f3f426454438e665459d6e1d52ca2a6e9361211de2"
+					]
 				}
 			}
 		},

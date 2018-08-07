@@ -1,12 +1,13 @@
 {
 	"name": "DFTTest",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171678",
 	"category": "Denoising",
 	"identifier": "com.holywu.dfttest",
 	"namespace": "dfttest",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest",
 	"dependencies": [
 		"org.fftw.fftw3"
 	],
@@ -15,20 +16,20 @@
 			"version": "r4",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r4/DFTTest-r4.7z",
-				"files": [
-					"Win32/DFTTest.dll"
-				],
-				"hash": {
-					"DFTTest.dll": "115b1a0662425e4eb3f0c6f1cbc2444b36385ffdccaa5b53220f706066026ac3"
+				"files": {
+					"DFTTest.dll": [
+						"Win32/DFTTest.dll",
+						"115b1a0662425e4eb3f0c6f1cbc2444b36385ffdccaa5b53220f706066026ac3"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r4/DFTTest-r4.7z",
-				"files": [
-					"Win64/DFTTest.dll"
-				],
-				"hash": {
-					"DFTTest.dll": "96d70218c895fce3117d5b877205111ebd766e52676be6b519e61290976041fa"
+				"files": {
+					"DFTTest.dll": [
+						"Win64/DFTTest.dll",
+						"96d70218c895fce3117d5b877205111ebd766e52676be6b519e61290976041fa"
+					]
 				}
 			}
 		},
@@ -36,20 +37,20 @@
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r3/DFTTest-r3.7z",
-				"files": [
-					"Win32/DFTTest.dll"
-				],
-				"hash": {
-					"DFTTest.dll": "1affce1592680d7d357013a5e19b1b1bc6d707318280e9f649b870a94bb7d391"
+				"files": {
+					"DFTTest.dll": [
+						"Win32/DFTTest.dll",
+						"1affce1592680d7d357013a5e19b1b1bc6d707318280e9f649b870a94bb7d391"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r3/DFTTest-r3.7z",
-				"files": [
-					"Win64/DFTTest.dll"
-				],
-				"hash": {
-					"DFTTest.dll": "99957910efdc0733b110036ef94558397741464497263292c3f86610b6fbc214"
+				"files": {
+					"DFTTest.dll": [
+						"Win64/DFTTest.dll",
+						"99957910efdc0733b110036ef94558397741464497263292c3f86610b6fbc214"
+					]
 				}
 			}
 		},
@@ -57,20 +58,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r2/DFTTest-r2.7z",
-				"files": [
-					"Win32/DFTTest.dll"
-				],
-				"hash": {
-					"DFTTest.dll": "56426dbf45c8f1aac13766768220a9e20d676990e90504076ef363e4739ca1f8"
+				"files": {
+					"DFTTest.dll": [
+						"Win32/DFTTest.dll",
+						"56426dbf45c8f1aac13766768220a9e20d676990e90504076ef363e4739ca1f8"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r2/DFTTest-r2.7z",
-				"files": [
-					"Win64/DFTTest.dll"
-				],
-				"hash": {
-					"DFTTest.dll": "b9a090377f8c83c86c67d2afec84ec989d9563a8e23a2f7e566150ce73021a49"
+				"files": {
+					"DFTTest.dll": [
+						"Win64/DFTTest.dll",
+						"b9a090377f8c83c86c67d2afec84ec989d9563a8e23a2f7e566150ce73021a49"
+					]
 				}
 			}
 		},
@@ -78,20 +79,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r1/DFTTest-r1.7z",
-				"files": [
-					"Win32/DFTTest.dll"
-				],
-				"hash": {
-					"DFTTest.dll": "e64798d8a76ceb8a93611a804faf596d9191c7b6b4f85ecee3f5c4a53636942f"
+				"files": {
+					"DFTTest.dll": [
+						"Win32/DFTTest.dll",
+						"e64798d8a76ceb8a93611a804faf596d9191c7b6b4f85ecee3f5c4a53636942f"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r1/DFTTest-r1.7z",
-				"files": [
-					"Win64/DFTTest.dll"
-				],
-				"hash": {
-					"DFTTest.dll": "ca9fad95eb06b99c4777a5c8101763c1512280ec44c4771ac1d4b86039c50d50"
+				"files": {
+					"DFTTest.dll": [
+						"Win64/DFTTest.dll",
+						"ca9fad95eb06b99c4777a5c8101763c1512280ec44c4771ac1d4b86039c50d50"
+					]
 				}
 			}
 		}

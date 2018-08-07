@@ -1,22 +1,23 @@
 {
 	"name": "Fix-Telecined-Fades",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Fix Telecined Fades",
 	"website": "https://github.com/IFeelBloated/Fix-Telecined-Fades",
 	"doom9": "https://forum.doom9.org/showthread.php?t=174151",
 	"category": "Others",
 	"identifier": "com.deinterlace.ftf",
 	"namespace": "ftf",
+	"github": "https://github.com/IFeelBloated/Fix-Telecined-Fades",
 	"releases": [
 		{
 			"version": "r5",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r5/libftf_em64t_avx_fma.7z",
-				"files": [
-					"libftf_em64t_avx_fma.dll"
-				],
-				"hash": {
-					"libftf_em64t_avx_fma.dll": "d49751562c8e10c740b373c0966752b713307298b6b0e18b894ad0faa678a438"
+				"files": {
+					"libftf_em64t_avx_fma.dll": [
+						"libftf_em64t_avx_fma.dll",
+						"d49751562c8e10c740b373c0966752b713307298b6b0e18b894ad0faa678a438"
+					]
 				}
 			}
 		},
@@ -24,11 +25,11 @@
 			"version": "r4",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r4/libftf_em64t_avx_fma.7z",
-				"files": [
-					"libftf_em64t_avx_fma.dll"
-				],
-				"hash": {
-					"libftf_em64t_avx_fma.dll": "086cc5fc69a0b251d864ee3f0236e1ad0cf756c3e58821bdda52b2fab9402f07"
+				"files": {
+					"libftf_em64t_avx_fma.dll": [
+						"libftf_em64t_avx_fma.dll",
+						"086cc5fc69a0b251d864ee3f0236e1ad0cf756c3e58821bdda52b2fab9402f07"
+					]
 				}
 			}
 		},
@@ -36,11 +37,11 @@
 			"version": "r3",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r3/libftf_em64t_avx_fma.7z",
-				"files": [
-					"libftf_em64t_avx_fma.dll"
-				],
-				"hash": {
-					"libftf_em64t_avx_fma.dll": "65bfca35c0400d1e99515dbd1471420fb9c2e333a9f4a2f33f0fc031bc419732"
+				"files": {
+					"libftf_em64t_avx_fma.dll": [
+						"libftf_em64t_avx_fma.dll",
+						"65bfca35c0400d1e99515dbd1471420fb9c2e333a9f4a2f33f0fc031bc419732"
+					]
 				}
 			}
 		},

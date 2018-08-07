@@ -1,31 +1,32 @@
 {
 	"name": "KNLMeansCL",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "OpenCL Non-local means denoising",
 	"website": "https://github.com/Khanattila/KNLMeansCL",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171379",
 	"category": "Denoising",
 	"identifier": "com.Khanattila.KNLMeansCL",
 	"namespace": "knlm",
+	"github": "https://github.com/Khanattila/KNLMeansCL",
 	"releases": [
 		{
 			"version": "v1.1.1",
 			"win32": {
 				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.1/KNLMeansCL-v1.1.1.zip",
-				"files": [
-					"KNLMeansCL.dll"
-				],
-				"hash": {
-					"KNLMeansCL.dll": "ecb018c14073eda28df00f09e715ce08fbe4ed07cee9fc3ad58d0ed4de5bc72b"
+				"files": {
+					"KNLMeansCL.dll": [
+						"KNLMeansCL.dll",
+						"ecb018c14073eda28df00f09e715ce08fbe4ed07cee9fc3ad58d0ed4de5bc72b"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.1/KNLMeansCL-v1.1.1.zip",
-				"files": [
-					"x64/KNLMeansCL.dll"
-				],
-				"hash": {
-					"KNLMeansCL.dll": "bb60e8fa6cb531daa8d705a338c1188e202e38087f6c6c437fd2d4ee58477a42"
+				"files": {
+					"KNLMeansCL.dll": [
+						"x64/KNLMeansCL.dll",
+						"bb60e8fa6cb531daa8d705a338c1188e202e38087f6c6c437fd2d4ee58477a42"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "v1.1.0",
 			"win32": {
 				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.0/KNLMeansCL-v1.1.0.zip",
-				"files": [
-					"KNLMeansCL.dll"
-				],
-				"hash": {
-					"KNLMeansCL.dll": "b506b87c52e4f36518382f54919650921db2234dd1c16119598ed8f7be679d8c"
+				"files": {
+					"KNLMeansCL.dll": [
+						"KNLMeansCL.dll",
+						"b506b87c52e4f36518382f54919650921db2234dd1c16119598ed8f7be679d8c"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.0/KNLMeansCL-v1.1.0.zip",
-				"files": [
-					"x64/KNLMeansCL.dll"
-				],
-				"hash": {
-					"KNLMeansCL.dll": "95c3ff30cf04318d2c29e7389cbba7ca844dd1db9ee19eb56c2ea34deb88b983"
+				"files": {
+					"KNLMeansCL.dll": [
+						"x64/KNLMeansCL.dll",
+						"95c3ff30cf04318d2c29e7389cbba7ca844dd1db9ee19eb56c2ea34deb88b983"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "v0.6.11",
 			"win32": {
 				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v0.6.11/KNLMeansCL-v0.6.11.zip",
-				"files": [
-					"KNLMeansCL.dll"
-				],
-				"hash": {
-					"KNLMeansCL.dll": "2007c657ec5ebce8136078e6302823275acad16e2c6b4ea7ba0247456f6b1b0e"
+				"files": {
+					"KNLMeansCL.dll": [
+						"KNLMeansCL.dll",
+						"2007c657ec5ebce8136078e6302823275acad16e2c6b4ea7ba0247456f6b1b0e"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v0.6.11/KNLMeansCL-v0.6.11.zip",
-				"files": [
-					"x64/KNLMeansCL.dll"
-				],
-				"hash": {
-					"KNLMeansCL.dll": "d1c2db459a2cd26f56665f80b0ecb3cfa16e52c5c2c56a028dd85e0aadf40350"
+				"files": {
+					"KNLMeansCL.dll": [
+						"x64/KNLMeansCL.dll",
+						"d1c2db459a2cd26f56665f80b0ecb3cfa16e52c5c2c56a028dd85e0aadf40350"
+					]
 				}
 			}
 		}

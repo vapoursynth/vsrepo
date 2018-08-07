@@ -1,31 +1,32 @@
 {
 	"name": "FFmpegSource2",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "A general source plugin based on FFmpeg",
 	"website": "https://github.com/FFMS/ffms2",
 	"doom9": "https://forum.doom9.org/showthread.php?t=127037",
 	"category": "Source/Output",
 	"identifier": "com.vapoursynth.ffms2",
 	"namespace": "ffms2",
+	"github": "https://github.com/FFMS/ffms2",
 	"releases": [
 		{
 			"version": "2.23",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.23/ffms2-2.23.1-msvc.7z",
-				"files": [
-					"ffms2-2.23.1-msvc/x86/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "2557f058ba0e4c6535def49c3911618e2502f06f5a161b0ddcf2b3294b0f4488"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.23.1-msvc/x86/ffms2.dll",
+						"2557f058ba0e4c6535def49c3911618e2502f06f5a161b0ddcf2b3294b0f4488"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.23/ffms2-2.23.1-msvc.7z",
-				"files": [
-					"ffms2-2.23.1-msvc/x64/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "efaf8ee93f318bba9eefd007dbde8ea430f06a60e5cbc5ed5ee32a13d2ab1b61"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.23.1-msvc/x64/ffms2.dll",
+						"efaf8ee93f318bba9eefd007dbde8ea430f06a60e5cbc5ed5ee32a13d2ab1b61"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "2.22",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.22/ffms2-2.22-msvc.7z",
-				"files": [
-					"ffms2-2.22-msvc/x86/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "a229f661cbd1a57589c5f7ad66137d3516151715164cb643353bdfe1ac21a956"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.22-msvc/x86/ffms2.dll",
+						"a229f661cbd1a57589c5f7ad66137d3516151715164cb643353bdfe1ac21a956"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.22/ffms2-2.22-msvc.7z",
-				"files": [
-					"ffms2-2.22-msvc/x64/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "cbeea2c85e11b63464d351eab41da12340896334d1c6b4165c50dcefc1db5904"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.22-msvc/x64/ffms2.dll",
+						"cbeea2c85e11b63464d351eab41da12340896334d1c6b4165c50dcefc1db5904"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "2.21",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.21/ffms2-2.21-msvc.7z",
-				"files": [
-					"ffms2-2.21-msvc/x86/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "66c1bb4aacb763842deb48f1e7c9532f9f43bdaa09aacc8d0811d4e0115b1326"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.21-msvc/x86/ffms2.dll",
+						"66c1bb4aacb763842deb48f1e7c9532f9f43bdaa09aacc8d0811d4e0115b1326"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.21/ffms2-2.21-msvc.7z",
-				"files": [
-					"ffms2-2.21-msvc/x64/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "cab72f6b5e6afeb4c207d5947ff55861cd6faa28624f6480c990f99b24b2000d"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.21-msvc/x64/ffms2.dll",
+						"cab72f6b5e6afeb4c207d5947ff55861cd6faa28624f6480c990f99b24b2000d"
+					]
 				}
 			}
 		},
@@ -75,20 +76,20 @@
 			"version": "2.20",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.20/ffms2-2.20-msvc.7z",
-				"files": [
-					"ffms2-2.20-msvc/x86/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "22c002e506cb86a211b715a923b3733e7b7d5a3067f2d12f7833964f9638bd8d"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.20-msvc/x86/ffms2.dll",
+						"22c002e506cb86a211b715a923b3733e7b7d5a3067f2d12f7833964f9638bd8d"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.20/ffms2-2.20-msvc.7z",
-				"files": [
-					"ffms2-2.20-msvc/x64/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "d5b7cc3fd1f369423ccd221bda26c3470132e068cd6aa9c96258c57616f49087"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.20-msvc/x64/ffms2.dll",
+						"d5b7cc3fd1f369423ccd221bda26c3470132e068cd6aa9c96258c57616f49087"
+					]
 				}
 			}
 		},
@@ -99,11 +100,11 @@
 			"version": "2.19",
 			"win64": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.19/ffms2-2.19.7z",
-				"files": [
-					"ffms2-2.19/x64/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "5e17c52486134fc288ffe8e1215b0203e5b55111d707b3c63428fa84d749600f"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.19/x64/ffms2.dll",
+						"5e17c52486134fc288ffe8e1215b0203e5b55111d707b3c63428fa84d749600f"
+					]
 				}
 			}
 		},
@@ -117,20 +118,20 @@
 			"version": "2.18-rc1",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.18-rc1/ffms2-2.18-rc1.7z",
-				"files": [
-					"ffms2-2.18-rc1/x86/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "43ce505d4963089fe0484d1568851028e50428673dc0f629a628a5d6eafce0fb"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.18-rc1/x86/ffms2.dll",
+						"43ce505d4963089fe0484d1568851028e50428673dc0f629a628a5d6eafce0fb"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.18-rc1/ffms2-2.18-rc1.7z",
-				"files": [
-					"ffms2-2.18-rc1/x64/ffms2.dll"
-				],
-				"hash": {
-					"ffms2.dll": "b366a84d8f9f4efad24513e2d79f2c3bacecf7dd5f23de121405f60fb3c7467b"
+				"files": {
+					"ffms2.dll": [
+						"ffms2-2.18-rc1/x64/ffms2.dll",
+						"b366a84d8f9f4efad24513e2d79f2c3bacecf7dd5f23de121405f60fb3c7467b"
+					]
 				}
 			}
 		}

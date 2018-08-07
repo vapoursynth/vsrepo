@@ -1,12 +1,13 @@
 {
 	"name": "BM3D",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Denoising filter using the BM3D algorithm",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172172",
 	"category": "Denoising",
 	"identifier": "com.vapoursynth.bm3d",
 	"namespace": "bm3d",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D",
 	"dependencies": [
 		"org.fftw.fftw3"
 	],
@@ -15,20 +16,20 @@
 			"version": "r7",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r7/BM3D-r7.7z",
-				"files": [
-					"Win32/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "b3e255ece307ace16f017b424772605fe51e6795d12d84c3c1f9969055b29f94"
+				"files": {
+					"BM3D.dll": [
+						"Win32/BM3D.dll",
+						"b3e255ece307ace16f017b424772605fe51e6795d12d84c3c1f9969055b29f94"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r7/BM3D-r7.7z",
-				"files": [
-					"Win64/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "8bb049ed2f5beb933cf9ee0d009596dd544c58529159014e7db4b25f87b8716e"
+				"files": {
+					"BM3D.dll": [
+						"Win64/BM3D.dll",
+						"8bb049ed2f5beb933cf9ee0d009596dd544c58529159014e7db4b25f87b8716e"
+					]
 				}
 			}
 		},
@@ -36,20 +37,20 @@
 			"version": "r6",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r6/BM3D-r6.7z",
-				"files": [
-					"Win32/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "43dbd4d994a96592aa055c2a356d0b5a717fda720996bc174ee161a51de28452"
+				"files": {
+					"BM3D.dll": [
+						"Win32/BM3D.dll",
+						"43dbd4d994a96592aa055c2a356d0b5a717fda720996bc174ee161a51de28452"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r6/BM3D-r6.7z",
-				"files": [
-					"Win64/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "88a7e4af502e1b68975c548dc378a184ff08c77788c8589548d6bdc67643a90d"
+				"files": {
+					"BM3D.dll": [
+						"Win64/BM3D.dll",
+						"88a7e4af502e1b68975c548dc378a184ff08c77788c8589548d6bdc67643a90d"
+					]
 				}
 			}
 		},
@@ -57,20 +58,20 @@
 			"version": "r5",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r5/BM3D-r5.7z",
-				"files": [
-					"Win32/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "adf5a910ce06ad3a8cfcfb2e79764edbc2aee1665d433ff5f0f3a3647088e41e"
+				"files": {
+					"BM3D.dll": [
+						"Win32/BM3D.dll",
+						"adf5a910ce06ad3a8cfcfb2e79764edbc2aee1665d433ff5f0f3a3647088e41e"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r5/BM3D-r5.7z",
-				"files": [
-					"x64/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "ce1ba1953a31eb7a4f9418b8734ce7978e9fe0e09a52b56da2639b985543794a"
+				"files": {
+					"BM3D.dll": [
+						"x64/BM3D.dll",
+						"ce1ba1953a31eb7a4f9418b8734ce7978e9fe0e09a52b56da2639b985543794a"
+					]
 				}
 			}
 		},
@@ -78,20 +79,20 @@
 			"version": "r4",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r4/BM3D-r4.7z",
-				"files": [
-					"Win32/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "5e80014ac8863e0357d87e796b8c0713584c3d320bf103aa4b97bf71b02da603"
+				"files": {
+					"BM3D.dll": [
+						"Win32/BM3D.dll",
+						"5e80014ac8863e0357d87e796b8c0713584c3d320bf103aa4b97bf71b02da603"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r4/BM3D-r4.7z",
-				"files": [
-					"x64/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "6f1bdcdba2ddd71f973316ebea32c5db5acb9230ecce782ee04ab95c884d6a6f"
+				"files": {
+					"BM3D.dll": [
+						"x64/BM3D.dll",
+						"6f1bdcdba2ddd71f973316ebea32c5db5acb9230ecce782ee04ab95c884d6a6f"
+					]
 				}
 			}
 		},
@@ -99,20 +100,20 @@
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r3/BM3D-r3.7z",
-				"files": [
-					"Win32/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "0ec0e76e497212509d2f80eb8ca2b545ed81a00d2b6b8de24e2c349006f992bf"
+				"files": {
+					"BM3D.dll": [
+						"Win32/BM3D.dll",
+						"0ec0e76e497212509d2f80eb8ca2b545ed81a00d2b6b8de24e2c349006f992bf"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r3/BM3D-r3.7z",
-				"files": [
-					"x64/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "9a848427dddc9cb929ccf4cf09dacaf92266c0012fff22737f38e4dcd6a1d0c1"
+				"files": {
+					"BM3D.dll": [
+						"x64/BM3D.dll",
+						"9a848427dddc9cb929ccf4cf09dacaf92266c0012fff22737f38e4dcd6a1d0c1"
+					]
 				}
 			}
 		},
@@ -120,20 +121,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r2/BM3D-r2.7z",
-				"files": [
-					"Win32/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "a6a8b6bd8fbd595adb5b6eabc8c0f0bcec9169b420ab1fafe98e1bfab0c50f93"
+				"files": {
+					"BM3D.dll": [
+						"Win32/BM3D.dll",
+						"a6a8b6bd8fbd595adb5b6eabc8c0f0bcec9169b420ab1fafe98e1bfab0c50f93"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r2/BM3D-r2.7z",
-				"files": [
-					"x64/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "adfe53c3ffedff4f8240589c8d9d3491a284ff00dc1a346be96facb93f901302"
+				"files": {
+					"BM3D.dll": [
+						"x64/BM3D.dll",
+						"adfe53c3ffedff4f8240589c8d9d3491a284ff00dc1a346be96facb93f901302"
+					]
 				}
 			}
 		},
@@ -141,20 +142,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r1/BM3D-r1.7z",
-				"files": [
-					"Win32/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "be7abbda104b886e36468bcebdd2542fcf5f6bdf706eb0a6581ad0e7a687852f"
+				"files": {
+					"BM3D.dll": [
+						"Win32/BM3D.dll",
+						"be7abbda104b886e36468bcebdd2542fcf5f6bdf706eb0a6581ad0e7a687852f"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r1/BM3D-r1.7z",
-				"files": [
-					"x64/BM3D.dll"
-				],
-				"hash": {
-					"BM3D.dll": "3c7d0dcba9e6f1d24957429334afc46c16133dcf1e6522096261fea122b2de80"
+				"files": {
+					"BM3D.dll": [
+						"x64/BM3D.dll",
+						"3c7d0dcba9e6f1d24957429334afc46c16133dcf1e6522096261fea122b2de80"
+					]
 				}
 			}
 		}

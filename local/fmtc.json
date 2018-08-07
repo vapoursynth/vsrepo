@@ -1,31 +1,32 @@
 {
 	"name": "fmtconv",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "High quality bitdepth, colorspace conversion and resizing",
 	"website": "https://github.com/EleonoreMizo/fmtconv",
 	"doom9": "https://forum.doom9.org/showthread.php?t=166504",
 	"category": "Resizing and Format Conversion",
 	"identifier": "fmtconv",
 	"namespace": "fmtc",
+	"github": "https://github.com/EleonoreMizo/fmtconv",
 	"releases": [
 		{
 			"version": "r20",
 			"win32": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r20/fmtconv-r20.zip",
-				"files": [
-					"win32/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "2abdd9f966b63c235ada526bb3c58fc98258a3cd53a5f3c7a5cd56f00bda9464"
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"2abdd9f966b63c235ada526bb3c58fc98258a3cd53a5f3c7a5cd56f00bda9464"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r20/fmtconv-r20.zip",
-				"files": [
-					"win64/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "8dc6011e3c5b8589c616d318954d897f2c74272a8e2a303288fb09de84313ebf"
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"8dc6011e3c5b8589c616d318954d897f2c74272a8e2a303288fb09de84313ebf"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r19",
 			"win32": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r19/fmtconv-r19.zip",
-				"files": [
-					"win32/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "9260227215e104b92d113f337ec9629dff601007a2633c3b4199b7610abcec67"
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"9260227215e104b92d113f337ec9629dff601007a2633c3b4199b7610abcec67"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r19/fmtconv-r19.zip",
-				"files": [
-					"win64/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "646666517513886175c6333acdd06ab2263a9104d37ae6e96d45bb4aaf0a33c8"
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"646666517513886175c6333acdd06ab2263a9104d37ae6e96d45bb4aaf0a33c8"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "r18",
 			"win32": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r18/fmtconv-r18.zip",
-				"files": [
-					"win32/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "03a76dc521d3542a60b8fec0c6b70ad5a084c63dcc48ec71d706764fb725a02d"
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"03a76dc521d3542a60b8fec0c6b70ad5a084c63dcc48ec71d706764fb725a02d"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r18/fmtconv-r18.zip",
-				"files": [
-					"win64/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "66d4071d78a64e86de88a713f5840444a04ac99b83ffaece5fef261279b017f9"
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"66d4071d78a64e86de88a713f5840444a04ac99b83ffaece5fef261279b017f9"
+					]
 				}
 			}
 		},
@@ -75,20 +76,20 @@
 			"version": "r17",
 			"win32": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r17/fmtconv-r17.zip",
-				"files": [
-					"win32/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "6c27f11a7615c025d6fb2b50f09e96554b8fbfacbd9155e8b46d722770793086"
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"6c27f11a7615c025d6fb2b50f09e96554b8fbfacbd9155e8b46d722770793086"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r17/fmtconv-r17.zip",
-				"files": [
-					"win64/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "affa70886167bbf4e9c7d2e848d973723d80a062dc7f94c7ad7231dfa411fd2e"
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"affa70886167bbf4e9c7d2e848d973723d80a062dc7f94c7ad7231dfa411fd2e"
+					]
 				}
 			}
 		},
@@ -96,20 +97,20 @@
 			"version": "r16",
 			"win32": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r16/fmtconv-r16.zip",
-				"files": [
-					"win32/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "9e0c14f29a47ea5196dd939c19a27e4db3973726c6ed989be0ad1f226beef029"
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"9e0c14f29a47ea5196dd939c19a27e4db3973726c6ed989be0ad1f226beef029"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r16/fmtconv-r16.zip",
-				"files": [
-					"win64/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "f7f4c39aa10eba4c03858a11e4098c8061f4b46748af6b57290797d6b4f78e46"
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"f7f4c39aa10eba4c03858a11e4098c8061f4b46748af6b57290797d6b4f78e46"
+					]
 				}
 			}
 		},
@@ -117,20 +118,20 @@
 			"version": "r15",
 			"win32": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r15/fmtconv-r15.zip",
-				"files": [
-					"win32/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "76b3ec834686594ae514bf2d5a2cc34786fc2a3a9e3a5c146d0cb9812f7973cd"
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"76b3ec834686594ae514bf2d5a2cc34786fc2a3a9e3a5c146d0cb9812f7973cd"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r15/fmtconv-r15.zip",
-				"files": [
-					"win64/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "47e8e32826a36538a7fe7b1db904af89138155ec6fc0c7eb1b7d753e3780c00b"
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"47e8e32826a36538a7fe7b1db904af89138155ec6fc0c7eb1b7d753e3780c00b"
+					]
 				}
 			}
 		},
@@ -138,20 +139,20 @@
 			"version": "r14",
 			"win32": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r14/fmtconv-r14.zip",
-				"files": [
-					"win32/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "24a2f1518547c7ba93b4c2514576071676d179414a2e5a5212592ecaf0e07f2f"
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"24a2f1518547c7ba93b4c2514576071676d179414a2e5a5212592ecaf0e07f2f"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r14/fmtconv-r14.zip",
-				"files": [
-					"win64/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "90a6b7621790101f74cb39944ab3e457e8725f97edbc0b61089f868c06e9115a"
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"90a6b7621790101f74cb39944ab3e457e8725f97edbc0b61089f868c06e9115a"
+					]
 				}
 			}
 		},
@@ -159,20 +160,20 @@
 			"version": "r13",
 			"win32": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r13/fmtconv-r13.zip",
-				"files": [
-					"win32/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "c6391ec3bf3b84f42fcb78435846b322c2e597435d7024c07eb2fb2500e5f66b"
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"c6391ec3bf3b84f42fcb78435846b322c2e597435d7024c07eb2fb2500e5f66b"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r13/fmtconv-r13.zip",
-				"files": [
-					"win64/fmtconv.dll"
-				],
-				"hash": {
-					"fmtconv.dll": "25dbab8f32a7ce4486e31dbe05875fbdb369b55a9050d39800956ee463ba0c07"
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"25dbab8f32a7ce4486e31dbe05875fbdb369b55a9050d39800956ee463ba0c07"
+					]
 				}
 			}
 		}

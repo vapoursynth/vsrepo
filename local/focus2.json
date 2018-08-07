@@ -1,30 +1,31 @@
 {
 	"name": "TemporalSoften2",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Remove noise from a video clip by selectively blending pixels",
 	"website": "https://github.com/dubhater/vapoursynth-temporalsoften2",
 	"category": "Denoising",
 	"identifier": "chikuzen.does.not.have.his.own.domain.focus2",
 	"namespace": "focus2",
+	"github": "https://github.com/dubhater/vapoursynth-temporalsoften2",
 	"releases": [
 		{
 			"version": "v1",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-temporalsoften2/releases/download/v1/vapoursynth-temporalsoften2-v1-win32.7z",
-				"files": [
-					"libtemporalsoften2.dll"
-				],
-				"hash": {
-					"libtemporalsoften2.dll": "38a05f350f8e9e379c77397b968dd6ffaa05c237e1417d5210ea4f8b501f6819"
+				"files": {
+					"libtemporalsoften2.dll": [
+						"libtemporalsoften2.dll",
+						"38a05f350f8e9e379c77397b968dd6ffaa05c237e1417d5210ea4f8b501f6819"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-temporalsoften2/releases/download/v1/vapoursynth-temporalsoften2-v1-win64.7z",
-				"files": [
-					"libtemporalsoften2.dll"
-				],
-				"hash": {
-					"libtemporalsoften2.dll": "9a3dd72e9b91916ee23fbad8107a73f5e573cda2343f15a23195aa0b1c54a1b6"
+				"files": {
+					"libtemporalsoften2.dll": [
+						"libtemporalsoften2.dll",
+						"9a3dd72e9b91916ee23fbad8107a73f5e573cda2343f15a23195aa0b1c54a1b6"
+					]
 				}
 			}
 		}

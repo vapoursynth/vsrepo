@@ -1,34 +1,39 @@
 {
 	"name": "DGMVCSourceVS",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "VapourSynth port of DGMVCSource, a MVC source filter",
 	"website": "https://github.com/kice/DGMVCSourceVS",
 	"category": "Source/Output",
 	"identifier": "systems.innocent.DGMVC",
 	"namespace": "DGMVC",
+	"github": "https://github.com/kice/DGMVCSourceVS",
 	"releases": [
 		{
 			"version": "v1.0.0",
 			"win32": {
 				"url": "https://github.com/kice/DGMVCSourceVS/releases/download/v1.0.0/DGMVCSourceVS_x86.rar",
-				"files": [
-					"DGMVCSourceVS.dll",
-					"libmfxsw32.dll"
-				],
-				"hash": {
-					"DGMVCSourceVS.dll": "85b41c4ac483539878f15e698ec463b42c831b66c5fb37ba88dd217ad5d114e2",
-					"libmfxsw32.dll": "5a75d1b2b81f1f831ff576a5d00796c14fd95dbb2409dd10ebb519f1477ee127"
+				"files": {
+					"DGMVCSourceVS.dll": [
+						"DGMVCSourceVS.dll",
+						"85b41c4ac483539878f15e698ec463b42c831b66c5fb37ba88dd217ad5d114e2"
+					],
+					"libmfxsw32.dll": [
+						"libmfxsw32.dll",
+						"5a75d1b2b81f1f831ff576a5d00796c14fd95dbb2409dd10ebb519f1477ee127"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/kice/DGMVCSourceVS/releases/download/v1.0.0/DGMVCSourceVS_x64.rar",
-				"files": [
-					"DGMVCSourceVS.dll",
-					"libmfxsw64.dll"
-				],
-				"hash": {
-					"DGMVCSourceVS.dll": "02cdbb151d78986c7d29bb0e971409edccc2f7bbb55eddfc1b090e07609d07d7",
-					"libmfxsw64.dll": "aa9f25d400edb309a548edd4efe908e66af64b5886cafd88882f8cd1307e971a"
+				"files": {
+					"DGMVCSourceVS.dll": [
+						"DGMVCSourceVS.dll",
+						"02cdbb151d78986c7d29bb0e971409edccc2f7bbb55eddfc1b090e07609d07d7"
+					],
+					"libmfxsw64.dll": [
+						"libmfxsw64.dll",
+						"aa9f25d400edb309a548edd4efe908e66af64b5886cafd88882f8cd1307e971a"
+					]
 				}
 			}
 		}

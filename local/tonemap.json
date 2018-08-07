@@ -1,30 +1,31 @@
 {
 	"name": "Tonemap",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "A filter for converting high dynamic range (HDR) video to standard dynamic range (SDR).",
 	"website": "https://github.com/ifb/vapoursynth-tonemap",
 	"category": "Resizing and Format Conversion",
 	"identifier": "com.ifb.tonemap",
 	"namespace": "tonemap",
+	"github": "https://github.com/ifb/vapoursynth-tonemap",
 	"releases": [
 		{
 			"version": "R1",
 			"win32": {
 				"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R1/tonemap-r1-win32.7z",
-				"files": [
-					"tonemap.dll"
-				],
-				"hash": {
-					"tonemap.dll": "dae53d52b6fb5d1fd99bb966753253c3da5e0f67eda73deb9e81049a07281164"
+				"files": {
+					"tonemap.dll": [
+						"tonemap.dll",
+						"dae53d52b6fb5d1fd99bb966753253c3da5e0f67eda73deb9e81049a07281164"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R1/tonemap-r1-win64.7z",
-				"files": [
-					"tonemap.dll"
-				],
-				"hash": {
-					"tonemap.dll": "e366a039c3136824163c231c53cec784054ac252d8c2e55b09154c10adb22244"
+				"files": {
+					"tonemap.dll": [
+						"tonemap.dll",
+						"e366a039c3136824163c231c53cec784054ac252d8c2e55b09154c10adb22244"
+					]
 				}
 			}
 		}

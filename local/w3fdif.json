@@ -1,30 +1,31 @@
 {
 	"name": "W3FDIF",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Weston 3 Field Deinterlacing Filter.",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-W3FDIF",
 	"category": "Deinterlacing",
 	"identifier": "com.holywu.w3fdif",
 	"namespace": "w3fdif",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-W3FDIF",
 	"releases": [
 		{
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-W3FDIF/releases/download/r1/W3FDIF-r1.7z",
-				"files": [
-					"Win32/W3FDIF.dll"
-				],
-				"hash": {
-					"W3FDIF.dll": "efecda5866ed69fbf640fbb93b622df415bdd96316a24acd0ae10bef9a5d7ce7"
+				"files": {
+					"W3FDIF.dll": [
+						"Win32/W3FDIF.dll",
+						"efecda5866ed69fbf640fbb93b622df415bdd96316a24acd0ae10bef9a5d7ce7"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-W3FDIF/releases/download/r1/W3FDIF-r1.7z",
-				"files": [
-					"Win64/W3FDIF.dll"
-				],
-				"hash": {
-					"W3FDIF.dll": "d8df4f789dbcb7c0d0e9b3b9799c3b4446932e04b639203e410f1aa6718e2e0d"
+				"files": {
+					"W3FDIF.dll": [
+						"Win64/W3FDIF.dll",
+						"d8df4f789dbcb7c0d0e9b3b9799c3b4446932e04b639203e410f1aa6718e2e0d"
+					]
 				}
 			}
 		}

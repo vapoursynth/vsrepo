@@ -7,6 +7,7 @@
 	"category": "Dot Crawl and Rainbow removal",
 	"identifier": "rainbowsmooth",
 	"modulename": "RainbowSmooth",
+	"github": "https://github.com/dubhater/vapoursynth-smoothuv",
 	"dependencies": [
 		"com.nodame.smoothuv",
 		"kagefunc"
@@ -16,11 +17,11 @@
 			"version": "v2",
 			"script": {
 				"url": "https://api.github.com/repos/dubhater/vapoursynth-smoothuv/zipball/v2",
-				"files": [
-					"dubhater-vapoursynth-smoothuv-64e5c8f/RainbowSmooth.py"
-				],
-				"hash": {
-					"RainbowSmooth.py": "3f058ef1d5abe2201564d0aad0142422476b6b10daa83c43c87d0e496f8c5864"
+				"files": {
+					"RainbowSmooth.py": [
+						"dubhater-vapoursynth-smoothuv-64e5c8f/RainbowSmooth.py",
+						"3f058ef1d5abe2201564d0aad0142422476b6b10daa83c43c87d0e496f8c5864"
+					]
 				}
 			}
 		},
@@ -28,11 +29,11 @@
 			"version": "v1",
 			"script": {
 				"url": "https://api.github.com/repos/dubhater/vapoursynth-smoothuv/zipball/v1",
-				"files": [
-					"dubhater-vapoursynth-smoothuv-b9b78ed/RainbowSmooth.py"
-				],
-				"hash": {
-					"RainbowSmooth.py": "3f058ef1d5abe2201564d0aad0142422476b6b10daa83c43c87d0e496f8c5864"
+				"files": {
+					"RainbowSmooth.py": [
+						"dubhater-vapoursynth-smoothuv-b9b78ed/RainbowSmooth.py",
+						"3f058ef1d5abe2201564d0aad0142422476b6b10daa83c43c87d0e496f8c5864"
+					]
 				}
 			}
 		}

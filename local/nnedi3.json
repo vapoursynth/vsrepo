@@ -1,12 +1,13 @@
 {
 	"name": "NNEDI3",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Field interpolator/deinterlacer",
 	"website": "https://github.com/dubhater/vapoursynth-nnedi3",
 	"doom9": "https://forum.doom9.org/showthread.php?t=166434",
 	"category": "Deinterlacing",
 	"identifier": "com.deinterlace.nnedi3",
 	"namespace": "nnedi3",
+	"github": "https://github.com/dubhater/vapoursynth-nnedi3",
 	"dependencies": [
 		"com.deinterlace.nnedi3.weights"
 	],
@@ -15,20 +16,20 @@
 			"version": "v11",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v11/vapoursynth-nnedi3-v11-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "640b81d30cc9531a5cfbaeaf5b7bd1756148aa4ee1d7d6bc7179db11f413ac28"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"640b81d30cc9531a5cfbaeaf5b7bd1756148aa4ee1d7d6bc7179db11f413ac28"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v11/vapoursynth-nnedi3-v11-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "0e4473d462014890b784551e583a3d544752938789b598d33b7046b4b6f36dae"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"0e4473d462014890b784551e583a3d544752938789b598d33b7046b4b6f36dae"
+					]
 				}
 			}
 		},
@@ -36,20 +37,20 @@
 			"version": "v10",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v10/vapoursynth-nnedi3-v10-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "db79796976e26c24d65b68bac3e143a6852e50a512b536c4c3edc4d416d56d28"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"db79796976e26c24d65b68bac3e143a6852e50a512b536c4c3edc4d416d56d28"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v10/vapoursynth-nnedi3-v10-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "a6b2454cd95a94445967899d6bfea61a10ae0ead53b9386fc80b834c7062775f"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"a6b2454cd95a94445967899d6bfea61a10ae0ead53b9386fc80b834c7062775f"
+					]
 				}
 			}
 		},
@@ -57,20 +58,20 @@
 			"version": "v9",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v9/vapoursynth-nnedi3-v9-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "598e881ee77b40458a2cef526262979c34ebfdeedbc8440b33acf983395f4b48"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"598e881ee77b40458a2cef526262979c34ebfdeedbc8440b33acf983395f4b48"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v9/vapoursynth-nnedi3-v9-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "62d202364e85e5db3f9930855ba36c3eef4a91b335fb9d319f7b11965859931e"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"62d202364e85e5db3f9930855ba36c3eef4a91b335fb9d319f7b11965859931e"
+					]
 				}
 			}
 		},
@@ -78,20 +79,20 @@
 			"version": "v8",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v8/vapoursynth-nnedi3-v8-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "f71dbcb4ba4f0ffcf9196b14aeea6932aeb84fcefb24a38bcc94edfbee3a2631"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"f71dbcb4ba4f0ffcf9196b14aeea6932aeb84fcefb24a38bcc94edfbee3a2631"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v8/vapoursynth-nnedi3-v8-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "b8f26444a31eca84ced3f442bc063e104a0baae319115ed377d38cc651689c3f"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"b8f26444a31eca84ced3f442bc063e104a0baae319115ed377d38cc651689c3f"
+					]
 				}
 			}
 		},
@@ -99,20 +100,20 @@
 			"version": "v7",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v7/vapoursynth-nnedi3-v7-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "eada185a0ad132e9902a5b29e701c565402311256d7590991eb20ebd533b7452"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"eada185a0ad132e9902a5b29e701c565402311256d7590991eb20ebd533b7452"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v7/vapoursynth-nnedi3-v7-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "c024d895c793dac47361d6e1a15c950b3a5db2f4d78a1965b37cfee70cfe6104"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"c024d895c793dac47361d6e1a15c950b3a5db2f4d78a1965b37cfee70cfe6104"
+					]
 				}
 			}
 		},
@@ -120,20 +121,20 @@
 			"version": "v6",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v6/vapoursynth-nnedi3-v6-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "48e95ae4161536d053b236f255df5f3cba8803c25c0d2a645e26041574288a2d"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"48e95ae4161536d053b236f255df5f3cba8803c25c0d2a645e26041574288a2d"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v6/vapoursynth-nnedi3-v6-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "d41317e174b26e2ccd9fc38f75c02f4d964f206fbce7aa6b8e70839a481b6210"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"d41317e174b26e2ccd9fc38f75c02f4d964f206fbce7aa6b8e70839a481b6210"
+					]
 				}
 			}
 		},
@@ -141,20 +142,20 @@
 			"version": "v5",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v5/vapoursynth-nnedi3-v5-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "d5752bd1c5eb32b0d48bc524da50f057972ab314423c78456c2aa06f13efa48e"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"d5752bd1c5eb32b0d48bc524da50f057972ab314423c78456c2aa06f13efa48e"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v5/vapoursynth-nnedi3-v5-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "e3635ac4f4f04f66dc0187fd7d8c1e42ba2e96d17cef6c28972d50b3e40270ec"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"e3635ac4f4f04f66dc0187fd7d8c1e42ba2e96d17cef6c28972d50b3e40270ec"
+					]
 				}
 			}
 		},
@@ -162,20 +163,20 @@
 			"version": "v4",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v4/vapoursynth-nnedi3-v4-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "5035c865ff2bde5712a139af4658afe09c4185c43989c7a0d24a5be725dd0792"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"5035c865ff2bde5712a139af4658afe09c4185c43989c7a0d24a5be725dd0792"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v4/vapoursynth-nnedi3-v4-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "150cfe2e5474d36341fda5e3dfc23ef14a991811684997c4c24a8dddd6b753c7"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"150cfe2e5474d36341fda5e3dfc23ef14a991811684997c4c24a8dddd6b753c7"
+					]
 				}
 			}
 		},
@@ -183,20 +184,20 @@
 			"version": "v3",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v3/vapoursynth-nnedi3-v3-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "f30ec207aa233c1b5a67286b369819bc948b65b57e788f319cb2829a42704388"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"f30ec207aa233c1b5a67286b369819bc948b65b57e788f319cb2829a42704388"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v3/vapoursynth-nnedi3-v3-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "e12aa5f95ab9bf8a7c94056c4ad291e134e75d863bd064d9bcfa5e1d36683582"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"e12aa5f95ab9bf8a7c94056c4ad291e134e75d863bd064d9bcfa5e1d36683582"
+					]
 				}
 			}
 		},
@@ -204,20 +205,20 @@
 			"version": "v2.1",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v2.1/vapoursynth-nnedi3-v2.1-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "c967a4fa65af21d9c9570c37534ec89c1c7e06a93154f7af5294eda704e10ba8"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"c967a4fa65af21d9c9570c37534ec89c1c7e06a93154f7af5294eda704e10ba8"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v2.1/vapoursynth-nnedi3-v2.1-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "d032dadd1e1712cc69f28213d787681c1b68992e384b560357e0ce94eacc8d00"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"d032dadd1e1712cc69f28213d787681c1b68992e384b560357e0ce94eacc8d00"
+					]
 				}
 			}
 		},
@@ -225,20 +226,20 @@
 			"version": "v2.0",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v2.0/vapoursynth-nnedi3-v2.0-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "30316236fb442709f9bdbc03b4d3d0717a990ab3d3d6fe5e08cc8a57894fb828"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"30316236fb442709f9bdbc03b4d3d0717a990ab3d3d6fe5e08cc8a57894fb828"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v2.0/vapoursynth-nnedi3-v2.0-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "66c13e86378458d20ee5bf85c52c7d5454c52d8df167116b6eb5837afa2ee7c6"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"66c13e86378458d20ee5bf85c52c7d5454c52d8df167116b6eb5837afa2ee7c6"
+					]
 				}
 			}
 		},
@@ -246,20 +247,20 @@
 			"version": "v1.1",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v1.1/vapoursynth-nnedi3-v1.1-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "26e82267a25f40f2ca7505d3f3c8097c8cbfc4745d7ece195b4cf6a2caa4c34d"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"26e82267a25f40f2ca7505d3f3c8097c8cbfc4745d7ece195b4cf6a2caa4c34d"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v1.1/vapoursynth-nnedi3-v1.1-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "26e82267a25f40f2ca7505d3f3c8097c8cbfc4745d7ece195b4cf6a2caa4c34d"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"26e82267a25f40f2ca7505d3f3c8097c8cbfc4745d7ece195b4cf6a2caa4c34d"
+					]
 				}
 			}
 		},
@@ -267,20 +268,20 @@
 			"version": "v1.0",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v1.0/vapoursynth-nnedi3-v1.0-win32.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "1a72c12d65bf1762b8f9b52b0b561771e2695f0b2aee630d8b47926ab9b03a51"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"1a72c12d65bf1762b8f9b52b0b561771e2695f0b2aee630d8b47926ab9b03a51"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v1.0/vapoursynth-nnedi3-v1.0-win64.7z",
-				"files": [
-					"libnnedi3.dll"
-				],
-				"hash": {
-					"libnnedi3.dll": "baeda157c46c16e5a6e92cce4a10092373ee1edb39c095dbc036afc4764babc8"
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"baeda157c46c16e5a6e92cce4a10092373ee1edb39c095dbc036afc4764babc8"
+					]
 				}
 			}
 		}

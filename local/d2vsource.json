@@ -1,31 +1,32 @@
 {
 	"name": "D2V Source",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Frame accurate mpeg2 source filter",
 	"website": "https://github.com/dwbuiten/d2vsource",
 	"doom9": "https://forum.doom9.org/showthread.php?t=166399",
 	"category": "Source/Output",
 	"identifier": "com.sources.d2vsource",
 	"namespace": "d2v",
+	"github": "https://github.com/dwbuiten/d2vsource",
 	"releases": [
 		{
 			"version": "v1.1",
 			"win32": {
 				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.1/d2vsource-1.1-windows.zip",
-				"files": [
-					"win32/d2vsource.dll"
-				],
-				"hash": {
-					"d2vsource.dll": "96aac31c83682f0a44e060c897136dd76ac3c63164477571e81ee32f5c8da86d"
+				"files": {
+					"d2vsource.dll": [
+						"win32/d2vsource.dll",
+						"96aac31c83682f0a44e060c897136dd76ac3c63164477571e81ee32f5c8da86d"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.1/d2vsource-1.1-windows.zip",
-				"files": [
-					"win64/d2vsource.dll"
-				],
-				"hash": {
-					"d2vsource.dll": "3019bf2361b3216ae8a7d3f0ddd8bfafa3a0352d183deb962b34afc5f3bca76c"
+				"files": {
+					"d2vsource.dll": [
+						"win64/d2vsource.dll",
+						"3019bf2361b3216ae8a7d3f0ddd8bfafa3a0352d183deb962b34afc5f3bca76c"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "v1.0",
 			"win32": {
 				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.0/d2vsource-1.0-windows.zip",
-				"files": [
-					"win32/d2vsource.dll"
-				],
-				"hash": {
-					"d2vsource.dll": "a4e6d0ec71caec95ee60b920efdfe16e6b6ddf67c72bdac2d5e2896fbdf156c5"
+				"files": {
+					"d2vsource.dll": [
+						"win32/d2vsource.dll",
+						"a4e6d0ec71caec95ee60b920efdfe16e6b6ddf67c72bdac2d5e2896fbdf156c5"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.0/d2vsource-1.0-windows.zip",
-				"files": [
-					"win64/d2vsource.dll"
-				],
-				"hash": {
-					"d2vsource.dll": "e91cb223f5da6ffed78a77c80f77197ef19376e1343e47771879b7a6cb87e9f5"
+				"files": {
+					"d2vsource.dll": [
+						"win64/d2vsource.dll",
+						"e91cb223f5da6ffed78a77c80f77197ef19376e1343e47771879b7a6cb87e9f5"
+					]
 				}
 			}
 		},

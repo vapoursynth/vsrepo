@@ -154,14 +154,12 @@ def update_package(name):
         rel_order = []
         for rel in pfile['releases']:
             existing_rel_list.append(rel['version'])
-        
-        url = get_git_api_url(pfile['website'])
-        if url is None:
-            print('Only github projects supported, ' + name + ' not scanned')
-        else:
+
+        if 'github' in pfile:
+            url = get_git_api_url(pfile['github'])
             new_rels = {}
             apifile = json.loads(fetch_url(get_git_api_url(pfile['website']), pfile['name']))
-            is_plugin = (pfile['type'] == 'Plugin')
+            is_plugin = (pfile['type'] == 'VSPlugin')
             for rel in apifile:
                 rel_order.append(rel['tag_name'])
                 if rel['tag_name'] not in existing_rel_list:
@@ -179,11 +177,10 @@ def update_package(name):
                             if latest_rel is not None:
                                 new_url = get_most_similar(latest_rel['win32']['url'], dl_files)
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win32')
-                                new_rel_entry['win32'] = { 'url': new_url, 'files': [], 'hash': {} }
+                                new_rel_entry['win32'] = { 'url': new_url, 'files': {}}
                                 for fn in latest_rel['win32']['files']:
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
-                                    new_rel_entry['win32']['files'].append(new_fn)
-                                    new_rel_entry['win32']['hash'][new_fn.rsplit('/', 2)[-1]] = digest
+                                    new_rel_entry['win32']['files'][new_fn.rsplit('/', 2)[-1]] = [new_fn, digest]
                         except:
                             new_rel_entry.pop('win32', None)
                             print('No win32 binary found')
@@ -192,11 +189,10 @@ def update_package(name):
                             if latest_rel is not None:
                                 new_url = get_most_similar(latest_rel['win64']['url'], dl_files)
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win64')
-                                new_rel_entry['win64'] = { 'url': new_url, 'files': [], 'hash': {} }
+                                new_rel_entry['win64'] = { 'url': new_url, 'files': {} }
                                 for fn in latest_rel['win64']['files']:
                                     new_fn, digest = decompress_and_hash(temp_fn, fn)
-                                    new_rel_entry['win64']['files'].append(new_fn)
-                                    new_rel_entry['win64']['hash'][new_fn.rsplit('/', 2)[-1]] = digest
+                                    new_rel_entry['win64']['files'][new_fn.rsplit('/', 2)[-1]] = [new_fn, digest]
                         except:
                             new_rel_entry.pop('win64', None)
                             print('No win64 binary found')
@@ -210,11 +206,10 @@ def update_package(name):
                             else:
                                 new_url = get_most_similar(latest_rel['script']['url'], dl_files)
                             temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
-                            new_rel_entry['script'] = { 'url': new_url, 'files': [], 'hash': {} }
+                            new_rel_entry['script'] = { 'url': new_url, 'files': {} }
                             for fn in latest_rel['script']['files']:
                                 new_fn, digest = decompress_and_hash(temp_fn, fn)
-                                new_rel_entry['script']['files'].append(new_fn)
-                                new_rel_entry['script']['hash'][new_fn.rsplit('/', 2)[-1]] = digest
+                                new_rel_entry['script']['files'][new_fn.rsplit('/', 2)[-1]] = [new_fn, digest]
                         except:
                             new_rel_entry.pop('script', None)
                             print('No script found')
@@ -237,7 +232,8 @@ def update_package(name):
                 print('Release file updated')
             else:
                 print('Release file already up to date')
-                
+        else:
+            print('Only github projects supported, ' + name + ' not scanned')
 
 if args.operation == 'compile':
     combined = []
@@ -256,7 +252,7 @@ if args.operation == 'compile':
             seen[p['identifier']] = True
 
     with open('vspackages.json', 'w', encoding='utf-8') as pl:
-        json.dump(fp=pl, obj={ 'file_format': 1, 'packages': combined}, ensure_ascii=False, indent=2)
+        json.dump(fp=pl, obj={ 'file_format': 2, 'packages': combined}, ensure_ascii=False, indent=2)
 
     try:
         os.remove('vspackages.zip')

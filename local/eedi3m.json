@@ -1,31 +1,32 @@
 {
 	"name": "EEDI3m",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "EEDI3 fork with OpenCL and speed optimization by HolyWu",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171136",
 	"category": "Deinterlacing",
 	"identifier": "com.holywu.eedi3",
 	"namespace": "eedi3m",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3",
 	"releases": [
 		{
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r3/EEDI3-r3.7z",
-				"files": [
-					"Win32/EEDI3m.dll"
-				],
-				"hash": {
-					"EEDI3m.dll": "4286d89ca9ca92b5eb0f0da85e421c4a76bef2e659b8510591d124f2bcf780cc"
+				"files": {
+					"EEDI3m.dll": [
+						"Win32/EEDI3m.dll",
+						"4286d89ca9ca92b5eb0f0da85e421c4a76bef2e659b8510591d124f2bcf780cc"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r3/EEDI3-r3.7z",
-				"files": [
-					"Win64/EEDI3m.dll"
-				],
-				"hash": {
-					"EEDI3m.dll": "343f245944dfd55fcd9ca85313c071b1436e3ea0ef81e27aaf20c8eb22211bc6"
+				"files": {
+					"EEDI3m.dll": [
+						"Win64/EEDI3m.dll",
+						"343f245944dfd55fcd9ca85313c071b1436e3ea0ef81e27aaf20c8eb22211bc6"
+					]
 				}
 			}
 		},

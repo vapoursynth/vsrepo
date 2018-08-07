@@ -1,21 +1,22 @@
 {
 	"name": "BilateralGPU",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Bilateral filter for VapourSynth based on the OpenCV-CUDA library",
 	"website": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU",
 	"category": "Denoising",
 	"identifier": "com.wolframrhodium.bilateralGPU",
 	"namespace": "bilateralgpu",
+	"github": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU",
 	"releases": [
 		{
 			"version": "r4",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r4/VapourSynth-BilateralGPU-r4.zip",
-				"files": [
-					"VapourSynth-BilateralGPU-r4/x64/bilateralGPU.dll"
-				],
-				"hash": {
-					"bilateralGPU.dll": "0c5ba9f332a1d88b5972a6d8af6be81fdf61acd3735859c68723adc025ff1338"
+				"files": {
+					"bilateralGPU.dll": [
+						"VapourSynth-BilateralGPU-r4/x64/bilateralGPU.dll",
+						"0c5ba9f332a1d88b5972a6d8af6be81fdf61acd3735859c68723adc025ff1338"
+					]
 				}
 			}
 		},
@@ -23,11 +24,11 @@
 			"version": "r3",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r3/VapourSynth-BilateralGPU-r3.zip",
-				"files": [
-					"VapourSynth-BilateralGPU-r3/x64/bilateralGPU.dll"
-				],
-				"hash": {
-					"bilateralGPU.dll": "ce033b6eecd05cb9043c7518552699917950bd790820fb2a5ab5417e8e247d5b"
+				"files": {
+					"bilateralGPU.dll": [
+						"VapourSynth-BilateralGPU-r3/x64/bilateralGPU.dll",
+						"ce033b6eecd05cb9043c7518552699917950bd790820fb2a5ab5417e8e247d5b"
+					]
 				}
 			}
 		},
@@ -35,11 +36,11 @@
 			"version": "r2",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r2/VapourSynth-BilateralGPU-r2.zip",
-				"files": [
-					"VapourSynth-BilateralGPU-r2/x64/bilateralGPU.dll"
-				],
-				"hash": {
-					"bilateralGPU.dll": "283a8d65447dae3f0c35e2792669a620aede14c86b0da8c9611845632b84c2bb"
+				"files": {
+					"bilateralGPU.dll": [
+						"VapourSynth-BilateralGPU-r2/x64/bilateralGPU.dll",
+						"283a8d65447dae3f0c35e2792669a620aede14c86b0da8c9611845632b84c2bb"
+					]
 				}
 			}
 		},
@@ -47,11 +48,11 @@
 			"version": "r1",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r1/VapourSynth-BilateralGPU-r1.zip",
-				"files": [
-					"VapourSynth-BilateralGPU-r1/x64/bilateralGPU.dll"
-				],
-				"hash": {
-					"bilateralGPU.dll": "ce033b6eecd05cb9043c7518552699917950bd790820fb2a5ab5417e8e247d5b"
+				"files": {
+					"bilateralGPU.dll": [
+						"VapourSynth-BilateralGPU-r1/x64/bilateralGPU.dll",
+						"ce033b6eecd05cb9043c7518552699917950bd790820fb2a5ab5417e8e247d5b"
+					]
 				}
 			}
 		}

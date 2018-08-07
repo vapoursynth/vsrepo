@@ -1,31 +1,32 @@
 {
 	"name": "Deblock",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "h.264 style deblocking",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock",
 	"doom9": "https://forum.doom9.org/showthread.php?t=170975",
 	"category": "Others",
 	"identifier": "com.holywu.deblock",
 	"namespace": "deblock",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock",
 	"releases": [
 		{
 			"version": "r6",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r6/Deblock-r6.7z",
-				"files": [
-					"Win32/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "fca71dec7607cf1e76295b4d3350c942cdf5e609c5db008ce67998a4f427158e"
+				"files": {
+					"Deblock.dll": [
+						"Win32/Deblock.dll",
+						"fca71dec7607cf1e76295b4d3350c942cdf5e609c5db008ce67998a4f427158e"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r6/Deblock-r6.7z",
-				"files": [
-					"Win64/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "e08e511dbbef2a21efbd79530085a85f204ef19d7faf3425fe0502c6891cab5f"
+				"files": {
+					"Deblock.dll": [
+						"Win64/Deblock.dll",
+						"e08e511dbbef2a21efbd79530085a85f204ef19d7faf3425fe0502c6891cab5f"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r5",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r5/Deblock-r5.7z",
-				"files": [
-					"Win32/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "aeee3684f5dd36ca8e7c9eb5ba913e22063ac6d408439f08d663d4b4f843fd14"
+				"files": {
+					"Deblock.dll": [
+						"Win32/Deblock.dll",
+						"aeee3684f5dd36ca8e7c9eb5ba913e22063ac6d408439f08d663d4b4f843fd14"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r5/Deblock-r5.7z",
-				"files": [
-					"Win64/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "439198610fd1bf95249909eee19c07357e8805a94c4edef1721c8a80711f3a92"
+				"files": {
+					"Deblock.dll": [
+						"Win64/Deblock.dll",
+						"439198610fd1bf95249909eee19c07357e8805a94c4edef1721c8a80711f3a92"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "r4",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r4/Deblock-r4.7z",
-				"files": [
-					"Win32/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "06805d2c7b4e8213cad11e3f4df2f8e71311e1a13368d81962d08cff8b1b7f08"
+				"files": {
+					"Deblock.dll": [
+						"Win32/Deblock.dll",
+						"06805d2c7b4e8213cad11e3f4df2f8e71311e1a13368d81962d08cff8b1b7f08"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r4/Deblock-r4.7z",
-				"files": [
-					"Win64/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "1c19461aa633d1cecf6278cfe6591121d4ef41a9ae1917d8bb967b9a8cf1fc89"
+				"files": {
+					"Deblock.dll": [
+						"Win64/Deblock.dll",
+						"1c19461aa633d1cecf6278cfe6591121d4ef41a9ae1917d8bb967b9a8cf1fc89"
+					]
 				}
 			}
 		},
@@ -75,20 +76,20 @@
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r3/Deblock-r3.7z",
-				"files": [
-					"Win32/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "124c62f01ad12830755e505e56efe6772607e8a0a03c5a02accc2132f8f9148d"
+				"files": {
+					"Deblock.dll": [
+						"Win32/Deblock.dll",
+						"124c62f01ad12830755e505e56efe6772607e8a0a03c5a02accc2132f8f9148d"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r3/Deblock-r3.7z",
-				"files": [
-					"Win64/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "8717939b3c9c66f2541d434cc8e8d36f80e1b49c0170fa198f703ac143eccb4b"
+				"files": {
+					"Deblock.dll": [
+						"Win64/Deblock.dll",
+						"8717939b3c9c66f2541d434cc8e8d36f80e1b49c0170fa198f703ac143eccb4b"
+					]
 				}
 			}
 		},
@@ -96,20 +97,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r2/Deblock-r2.7z",
-				"files": [
-					"Win32/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "00d788d12df4b092988a1adb1c4a5a439916381a953c1110d3aa206e9496e6ee"
+				"files": {
+					"Deblock.dll": [
+						"Win32/Deblock.dll",
+						"00d788d12df4b092988a1adb1c4a5a439916381a953c1110d3aa206e9496e6ee"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r2/Deblock-r2.7z",
-				"files": [
-					"Win64/Deblock.dll"
-				],
-				"hash": {
-					"Deblock.dll": "140651474e9a204829c813396cf17c07b28c2b2bbefb9b3b1d3f0152a14bd6d2"
+				"files": {
+					"Deblock.dll": [
+						"Win64/Deblock.dll",
+						"140651474e9a204829c813396cf17c07b28c2b2bbefb9b3b1d3f0152a14bd6d2"
+					]
 				}
 			}
 		},

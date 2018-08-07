@@ -1,31 +1,32 @@
 {
 	"name": "FluxSmooth",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Temporal-spatiotemporal denoiser",
 	"website": "https://github.com/dubhater/vapoursynth-fluxsmooth",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173795",
 	"category": "Denoising",
 	"identifier": "com.nodame.fluxsmooth",
 	"namespace": "flux",
+	"github": "https://github.com/dubhater/vapoursynth-fluxsmooth",
 	"releases": [
 		{
 			"version": "v2",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v2/vapoursynth-fluxsmooth-v2-win32.7z",
-				"files": [
-					"libfluxsmooth.dll"
-				],
-				"hash": {
-					"libfluxsmooth.dll": "8e87e56dc0418b017e221c49ec56c2052f13124ff300e3727299744b35665202"
+				"files": {
+					"libfluxsmooth.dll": [
+						"libfluxsmooth.dll",
+						"8e87e56dc0418b017e221c49ec56c2052f13124ff300e3727299744b35665202"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v2/vapoursynth-fluxsmooth-v2-win64.7z",
-				"files": [
-					"libfluxsmooth.dll"
-				],
-				"hash": {
-					"libfluxsmooth.dll": "c4a7e5cc6ee1feb6279d36377208337a4fc6fa7c3849f355893d505a37c0ed8a"
+				"files": {
+					"libfluxsmooth.dll": [
+						"libfluxsmooth.dll",
+						"c4a7e5cc6ee1feb6279d36377208337a4fc6fa7c3849f355893d505a37c0ed8a"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "v1.0",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v1.0/vapoursynth-fluxsmooth-v1.0-win32.7z",
-				"files": [
-					"libfluxsmooth.dll"
-				],
-				"hash": {
-					"libfluxsmooth.dll": "49b743922b71e63ce2d7233199464be2b217ad3c6e3bc390e2d7e6025ce11e4c"
+				"files": {
+					"libfluxsmooth.dll": [
+						"libfluxsmooth.dll",
+						"49b743922b71e63ce2d7233199464be2b217ad3c6e3bc390e2d7e6025ce11e4c"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v1.0/vapoursynth-fluxsmooth-v1.0-win64.7z",
-				"files": [
-					"libfluxsmooth.dll"
-				],
-				"hash": {
-					"libfluxsmooth.dll": "eae37bd6cfc5ef9537f4eb61320d8a42ef2720c49bcb5523f6a75601f5cfacf6"
+				"files": {
+					"libfluxsmooth.dll": [
+						"libfluxsmooth.dll",
+						"eae37bd6cfc5ef9537f4eb61320d8a42ef2720c49bcb5523f6a75601f5cfacf6"
+					]
 				}
 			}
 		}

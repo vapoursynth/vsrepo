@@ -7,13 +7,27 @@
 	"category": "Others",
 	"identifier": "plum",
 	"modulename": "Plum",
-	"dependencies": ["com.deinterlace.nnedi3", "com.Khanattila.KNLMeansCL", "com.vapoursynth.bm3d", "fmtconv", "com.nodame.mvsf", "in.vcmohan.freq"],
-		"releases": [{
-		"version": "git:f5d40e2",
-		"script": {
-			"url": "https://raw.githubusercontent.com/IFeelBloated/Plum/f5d40e2fa94770c8a5c8ffc10ba37012f0f7ed86/Plum.py",
-			"files": ["Plum.py"],
-			"hash": { "Plum.py": "86b9efa72e0a67233256b3b26d895d3a1d6632d72312d20c5a8c9837338a4348" }
+	"github": "https://github.com/IFeelBloated/Plum",
+	"dependencies": [
+		"com.deinterlace.nnedi3",
+		"com.Khanattila.KNLMeansCL",
+		"com.vapoursynth.bm3d",
+		"fmtconv",
+		"com.nodame.mvsf",
+		"in.vcmohan.freq"
+	],
+	"releases": [
+		{
+			"version": "git:f5d40e2",
+			"script": {
+				"url": "https://raw.githubusercontent.com/IFeelBloated/Plum/f5d40e2fa94770c8a5c8ffc10ba37012f0f7ed86/Plum.py",
+				"files": {
+					"Plum.py": [
+						"Plum.py",
+						"86b9efa72e0a67233256b3b26d895d3a1d6632d72312d20c5a8c9837338a4348"
+					]
+				}
+			}
 		}
-	}]
+	]
 }

@@ -6,6 +6,7 @@
 	"category": "Scripts",
 	"identifier": "vstaambk",
 	"modulename": "vsTAAmbk",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/vsTAAmbk",
 	"dependencies": [
 		"com.holywu.eedi2",
 		"xxx.abc.znedi3",
@@ -20,11 +21,11 @@
 			"version": "v0.8.0",
 			"script": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/vsTAAmbk/releases/download/v0.8.0/vsTAAmbk.v0.8.0.zip",
-				"files": [
-					"vsTAAmbk/vsTAAmbk.py"
-				],
-				"hash": {
-					"vsTAAmbk.py": "d55ba729d7aef35482f2171c67db3e4ed68ade1f3542e51e2309c6d61e5ee256"
+				"files": {
+					"vsTAAmbk.py": [
+						"vsTAAmbk/vsTAAmbk.py",
+						"d55ba729d7aef35482f2171c67db3e4ed68ade1f3542e51e2309c6d61e5ee256"
+					]
 				}
 			}
 		},

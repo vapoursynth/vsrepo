@@ -1,11 +1,12 @@
 {
 	"name": "FFT3DFilter",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "3D frequency domain denoiser/sharpener",
 	"website": "https://github.com/myrsloik/VapourSynth-FFT3DFilter",
 	"category": "Denoising",
 	"identifier": "systems.innocent.fft3dfilter",
 	"namespace": "fft3dfilter",
+	"github": "https://github.com/myrsloik/VapourSynth-FFT3DFilter",
 	"dependencies": [
 		"org.fftw.fftw3"
 	],
@@ -14,20 +15,20 @@
 			"version": "R1",
 			"win32": {
 				"url": "https://github.com/myrsloik/VapourSynth-FFT3DFilter/releases/download/R1/FFT3DFilter-r1.7z",
-				"files": [
-					"Win32/fft3dfilter.dll"
-				],
-				"hash": {
-					"fft3dfilter.dll": "c272c0ea2e3b25c64f48321f8c304959c1a4194a5e6c5eb77a15173350c3119a"
+				"files": {
+					"fft3dfilter.dll": [
+						"Win32/fft3dfilter.dll",
+						"c272c0ea2e3b25c64f48321f8c304959c1a4194a5e6c5eb77a15173350c3119a"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/myrsloik/VapourSynth-FFT3DFilter/releases/download/R1/FFT3DFilter-r1.7z",
-				"files": [
-					"x64/fft3dfilter.dll"
-				],
-				"hash": {
-					"fft3dfilter.dll": "fc9fcabff162c6612d74dd0043182f4ac82494d31122ca4ef1b09108c4c6df66"
+				"files": {
+					"fft3dfilter.dll": [
+						"x64/fft3dfilter.dll",
+						"fc9fcabff162c6612d74dd0043182f4ac82494d31122ca4ef1b09108c4c6df66"
+					]
 				}
 			}
 		}

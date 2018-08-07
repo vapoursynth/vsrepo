@@ -1,30 +1,31 @@
 {
 	"name": "TNLMeans",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "TNLMeans is an implementation of the Non-local means denoising denoising algorithm. It also supports extension into 3D and a faster, block based approach.",
 	"website": "https://github.com/VFR-maniac/VapourSynth-TNLMeans",
 	"category": "Denoising",
 	"identifier": "systems.innocent.tnlm",
 	"namespace": "tnlm",
+	"github": "https://github.com/VFR-maniac/VapourSynth-TNLMeans",
 	"releases": [
 		{
 			"version": "rev39",
 			"win32": {
 				"url": "https://vfrmaniac.fushizen.eu/works/vstnlmeans_r39-22a40af.7z",
-				"files": [
-					"vstnlmeans_r39-22a40af/x86/vstnlmeans.dll"
-				],
-				"hash": {
-					"vstnlmeans.dll": "82e688fe7216c8ee88c745f4fa1435d9fd3c8d179f35b465e6c3f26c19df86a8"
+				"files": {
+					"vstnlmeans.dll": [
+						"vstnlmeans_r39-22a40af/x86/vstnlmeans.dll",
+						"82e688fe7216c8ee88c745f4fa1435d9fd3c8d179f35b465e6c3f26c19df86a8"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://vfrmaniac.fushizen.eu/works/vstnlmeans_r39-22a40af.7z",
-				"files": [
-					"vstnlmeans_r39-22a40af/x64/vstnlmeans.dll"
-				],
-				"hash": {
-					"vstnlmeans.dll": "885e6b9e94bba21f6aca4c46688b1891c9fa4b3e5b212de72b6af9249a95bf54"
+				"files": {
+					"vstnlmeans.dll": [
+						"vstnlmeans_r39-22a40af/x64/vstnlmeans.dll",
+						"885e6b9e94bba21f6aca4c46688b1891c9fa4b3e5b212de72b6af9249a95bf54"
+					]
 				}
 			}
 		}

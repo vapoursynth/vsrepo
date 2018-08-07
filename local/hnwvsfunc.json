@@ -6,6 +6,7 @@
 	"category": "Scripts",
 	"identifier": "hnwvsfunc",
 	"modulename": "hnwvsfunc",
+	"github": "https://github.com/Helenerineium/hnwvsfunc",
 	"dependencies": [
 		"havsfunc",
 		"muvsfunc",
@@ -20,11 +21,11 @@
 			"version": "v0.70",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.70",
-				"files": [
-					"Helenerineium-hnwvsfunc-16c8402/hnwvsfunc.py"
-				],
-				"hash": {
-					"hnwvsfunc.py": "2a3edbd3065b01b81e6df532c13b795161a87f78338bc1bc341eb75aea2eb593"
+				"files": {
+					"hnwvsfunc.py": [
+						"Helenerineium-hnwvsfunc-16c8402/hnwvsfunc.py",
+						"2a3edbd3065b01b81e6df532c13b795161a87f78338bc1bc341eb75aea2eb593"
+					]
 				}
 			}
 		},
@@ -32,11 +33,11 @@
 			"version": "v0.69",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.69",
-				"files": [
-					"Helenerineium-hnwvsfunc-e9f8d6f/hnwvsfunc.py"
-				],
-				"hash": {
-					"hnwvsfunc.py": "02204deb364fe0f6c697e167497fea72b88d34b66779729aaf2ebffdcd67bbe4"
+				"files": {
+					"hnwvsfunc.py": [
+						"Helenerineium-hnwvsfunc-e9f8d6f/hnwvsfunc.py",
+						"02204deb364fe0f6c697e167497fea72b88d34b66779729aaf2ebffdcd67bbe4"
+					]
 				}
 			}
 		},
@@ -44,11 +45,11 @@
 			"version": "v0.64",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.64",
-				"files": [
-					"Helenerineium-hnwvsfunc-8a278e0/hnwvsfunc.py"
-				],
-				"hash": {
-					"hnwvsfunc.py": "c97abf546aa68dfd629c8880036e206c3fe93529f9832c7bfa24724ebcc871e0"
+				"files": {
+					"hnwvsfunc.py": [
+						"Helenerineium-hnwvsfunc-8a278e0/hnwvsfunc.py",
+						"c97abf546aa68dfd629c8880036e206c3fe93529f9832c7bfa24724ebcc871e0"
+					]
 				}
 			}
 		},
@@ -56,11 +57,11 @@
 			"version": "v0.57",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.57",
-				"files": [
-					"Helenerineium-hnwvsfunc-ea49c13/hnwvsfunc.py"
-				],
-				"hash": {
-					"hnwvsfunc.py": "7a4059056ef827874a4ac7f185cffd4041b19a89e2b91112ad12522a8f3b7f8f"
+				"files": {
+					"hnwvsfunc.py": [
+						"Helenerineium-hnwvsfunc-ea49c13/hnwvsfunc.py",
+						"7a4059056ef827874a4ac7f185cffd4041b19a89e2b91112ad12522a8f3b7f8f"
+					]
 				}
 			}
 		},
@@ -68,11 +69,11 @@
 			"version": "v0.47",
 			"script": {
 				"url": "https://github.com/Helenerineium/hnwvsfunc/archive/v0.47.zip",
-				"files": [
-					"hnwvsfunc-0.47/hnwvsfunc.py"
-				],
-				"hash": {
-					"hnwvsfunc.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+				"files": {
+					"hnwvsfunc.py": [
+						"hnwvsfunc-0.47/hnwvsfunc.py",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					]
 				}
 			}
 		}

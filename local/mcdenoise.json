@@ -7,13 +7,24 @@
 	"category": "Denoising",
 	"identifier": "mcdenoise",
 	"modulename": "MCDenoise",
-	"dependencies": ["denoising.temporal.templinearapproximate", "com.holywu.dfttest", "com.nodame.mvtools", "com.nodame.mvsf"],
-	"releases": [{
-		"version": "r3",
-		"script": {
-			"url": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth/downloads/templinearapproximate-r3.7z",
-			"files": ["templinearapproximate-r3/py/MCDenoise.py"],
-			"hash": { "MCDenoise.py": "483e4b39268a125a4896c3b21dabb6e8ec31fbbf29f70888f14089dabf37cc17" }
+	"dependencies": [
+		"denoising.temporal.templinearapproximate",
+		"com.holywu.dfttest",
+		"com.nodame.mvtools",
+		"com.nodame.mvsf"
+	],
+	"releases": [
+		{
+			"version": "r3",
+			"script": {
+				"url": "https://bitbucket.org/mystery_keeper/templinearapproximate-vapoursynth/downloads/templinearapproximate-r3.7z",
+				"files": {
+					"MCDenoise.py": [
+						"templinearapproximate-r3/py/MCDenoise.py",
+						"483e4b39268a125a4896c3b21dabb6e8ec31fbbf29f70888f14089dabf37cc17"
+					]
+				}
+			}
 		}
-	}]
+	]
 }

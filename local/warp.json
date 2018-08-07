@@ -1,31 +1,32 @@
 {
 	"name": "AWarpSharp2",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "AWarpSharp2 sharpens edges by warping them.",
 	"website": "https://github.com/dubhater/vapoursynth-awarpsharp2",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172721",
 	"category": "Others",
 	"identifier": "com.nodame.awarpsharp2",
 	"namespace": "warp",
+	"github": "https://github.com/dubhater/vapoursynth-awarpsharp2",
 	"releases": [
 		{
 			"version": "v4",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win32.7z",
-				"files": [
-					"libawarpsharp2.dll"
-				],
-				"hash": {
-					"libawarpsharp2.dll": "c22ec73cf0a3257d6bfc509d2e2210ebbc6657e985bd9b2bc295ecbff1ef168b"
+				"files": {
+					"libawarpsharp2.dll": [
+						"libawarpsharp2.dll",
+						"c22ec73cf0a3257d6bfc509d2e2210ebbc6657e985bd9b2bc295ecbff1ef168b"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win64.7z",
-				"files": [
-					"libawarpsharp2.dll"
-				],
-				"hash": {
-					"libawarpsharp2.dll": "cea13e4ecf0d430e42a6455cb3a608d4eddd7f2c13f1215489604667b4bd8093"
+				"files": {
+					"libawarpsharp2.dll": [
+						"libawarpsharp2.dll",
+						"cea13e4ecf0d430e42a6455cb3a608d4eddd7f2c13f1215489604667b4bd8093"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "v3",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v3/vapoursynth-awarpsharp2-v3-win32.7z",
-				"files": [
-					"libawarpsharp2.dll"
-				],
-				"hash": {
-					"libawarpsharp2.dll": "0a9cfe22d479971fae6a7db25930cd6abdf6eff47908e7982467d46675415b6b"
+				"files": {
+					"libawarpsharp2.dll": [
+						"libawarpsharp2.dll",
+						"0a9cfe22d479971fae6a7db25930cd6abdf6eff47908e7982467d46675415b6b"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v3/vapoursynth-awarpsharp2-v3-win64.7z",
-				"files": [
-					"libawarpsharp2.dll"
-				],
-				"hash": {
-					"libawarpsharp2.dll": "99c04e96514a3269244791e979233ccc810d128bb583bc82919062001a41b069"
+				"files": {
+					"libawarpsharp2.dll": [
+						"libawarpsharp2.dll",
+						"99c04e96514a3269244791e979233ccc810d128bb583bc82919062001a41b069"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "v2",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v2/vapoursynth-awarpsharp2-v2-win32.7z",
-				"files": [
-					"libawarpsharp2.dll"
-				],
-				"hash": {
-					"libawarpsharp2.dll": "477b0c34440bf70b257b6a6a81168aef56575ad0f25126adcf8880f4af6edcbf"
+				"files": {
+					"libawarpsharp2.dll": [
+						"libawarpsharp2.dll",
+						"477b0c34440bf70b257b6a6a81168aef56575ad0f25126adcf8880f4af6edcbf"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v2/vapoursynth-awarpsharp2-v2-win64.7z",
-				"files": [
-					"libawarpsharp2.dll"
-				],
-				"hash": {
-					"libawarpsharp2.dll": "3cb6aa99eb50aa45307b52c18830ab243e49f3dab9cc7cabc8e017714bb29d0f"
+				"files": {
+					"libawarpsharp2.dll": [
+						"libawarpsharp2.dll",
+						"3cb6aa99eb50aa45307b52c18830ab243e49f3dab9cc7cabc8e017714bb29d0f"
+					]
 				}
 			}
 		},
@@ -75,20 +76,20 @@
 			"version": "v1",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v1/vapoursynth-awarpsharp2-v1-win32.7z",
-				"files": [
-					"libawarpsharp2.dll"
-				],
-				"hash": {
-					"libawarpsharp2.dll": "4c0c7c663ced9999449ec89228eeec82f6af6733bd767c61dd2a72c4c4b116b0"
+				"files": {
+					"libawarpsharp2.dll": [
+						"libawarpsharp2.dll",
+						"4c0c7c663ced9999449ec89228eeec82f6af6733bd767c61dd2a72c4c4b116b0"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v1/vapoursynth-awarpsharp2-v1-win64.7z",
-				"files": [
-					"libawarpsharp2.dll"
-				],
-				"hash": {
-					"libawarpsharp2.dll": "43436cbce50ea917dcaccf7917826fd7f73dda8f7ed976cc238c211030dc3e84"
+				"files": {
+					"libawarpsharp2.dll": [
+						"libawarpsharp2.dll",
+						"43436cbce50ea917dcaccf7917826fd7f73dda8f7ed976cc238c211030dc3e84"
+					]
 				}
 			}
 		}

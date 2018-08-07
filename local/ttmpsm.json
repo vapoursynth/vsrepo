@@ -1,31 +1,32 @@
 {
 	"name": "TTempSmooth",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "TTempSmooth is a motion adaptive (it only works on stationary parts of the picture), temporal smoothing filter.",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175351",
 	"category": "Denoising",
 	"identifier": "com.holywu.ttempsmooth",
 	"namespace": "ttmpsm",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth",
 	"releases": [
 		{
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r3/TTempSmooth-r3.7z",
-				"files": [
-					"Win32/TTempSmooth.dll"
-				],
-				"hash": {
-					"TTempSmooth.dll": "a2b05adcbff46822022f53fed396191998b6619357898f5fa71637d4513ceb31"
+				"files": {
+					"TTempSmooth.dll": [
+						"Win32/TTempSmooth.dll",
+						"a2b05adcbff46822022f53fed396191998b6619357898f5fa71637d4513ceb31"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r3/TTempSmooth-r3.7z",
-				"files": [
-					"Win64/TTempSmooth.dll"
-				],
-				"hash": {
-					"TTempSmooth.dll": "56e11b65db5032d13ee879979963cdbcc4846ae4911c6d98b1ba00021a09dcf9"
+				"files": {
+					"TTempSmooth.dll": [
+						"Win64/TTempSmooth.dll",
+						"56e11b65db5032d13ee879979963cdbcc4846ae4911c6d98b1ba00021a09dcf9"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r2/TTempSmooth-r2.7z",
-				"files": [
-					"Win32/TTempSmooth.dll"
-				],
-				"hash": {
-					"TTempSmooth.dll": "07420121500e6b964092edf07ef688d9a94b81cba2eee4f98bbbd0b065e672df"
+				"files": {
+					"TTempSmooth.dll": [
+						"Win32/TTempSmooth.dll",
+						"07420121500e6b964092edf07ef688d9a94b81cba2eee4f98bbbd0b065e672df"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r2/TTempSmooth-r2.7z",
-				"files": [
-					"Win64/TTempSmooth.dll"
-				],
-				"hash": {
-					"TTempSmooth.dll": "ef699c2451f943406df7bd0074bedeeb91484f720805fc856b2232850bd620f8"
+				"files": {
+					"TTempSmooth.dll": [
+						"Win64/TTempSmooth.dll",
+						"ef699c2451f943406df7bd0074bedeeb91484f720805fc856b2232850bd620f8"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r1/TTempSmooth-r1.7z",
-				"files": [
-					"Win32/TTempSmooth.dll"
-				],
-				"hash": {
-					"TTempSmooth.dll": "eb4904cf6142bd1216d95b1672f28683a4abaca5a21ad459ed121c7e13029902"
+				"files": {
+					"TTempSmooth.dll": [
+						"Win32/TTempSmooth.dll",
+						"eb4904cf6142bd1216d95b1672f28683a4abaca5a21ad459ed121c7e13029902"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r1/TTempSmooth-r1.7z",
-				"files": [
-					"Win64/TTempSmooth.dll"
-				],
-				"hash": {
-					"TTempSmooth.dll": "984558f2d4034687aa3b19d0f7b37beffbee1c039d445401a7aaf114a9afc554"
+				"files": {
+					"TTempSmooth.dll": [
+						"Win64/TTempSmooth.dll",
+						"984558f2d4034687aa3b19d0f7b37beffbee1c039d445401a7aaf114a9afc554"
+					]
 				}
 			}
 		}

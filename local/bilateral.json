@@ -1,31 +1,32 @@
 {
 	"name": "Bilateral",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Bilateral filter for VapourSynth",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171306",
 	"category": "Denoising",
 	"identifier": "com.invalid.identifier.bilateral",
 	"namespace": "bilateral",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral",
 	"releases": [
 		{
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r3/Bilateral-r3.7z",
-				"files": [
-					"Win32/Bilateral.dll"
-				],
-				"hash": {
-					"Bilateral.dll": "300e5d90c6b91105a67636493492dc030a51e0fd34dfee2e132b242cca3f9585"
+				"files": {
+					"Bilateral.dll": [
+						"Win32/Bilateral.dll",
+						"300e5d90c6b91105a67636493492dc030a51e0fd34dfee2e132b242cca3f9585"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r3/Bilateral-r3.7z",
-				"files": [
-					"x64/Bilateral.dll"
-				],
-				"hash": {
-					"Bilateral.dll": "a9ea5ebd604611701fc988262f078a697f3110f9b8fb5ec748aa0957cad5e0a0"
+				"files": {
+					"Bilateral.dll": [
+						"x64/Bilateral.dll",
+						"a9ea5ebd604611701fc988262f078a697f3110f9b8fb5ec748aa0957cad5e0a0"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r2/Bilateral-r2.7z",
-				"files": [
-					"Win32/Bilateral.dll"
-				],
-				"hash": {
-					"Bilateral.dll": "f430f184f6a097d02a8c184eeb71438a4800e71aaf55489a0d60ad39a2fd9cf4"
+				"files": {
+					"Bilateral.dll": [
+						"Win32/Bilateral.dll",
+						"f430f184f6a097d02a8c184eeb71438a4800e71aaf55489a0d60ad39a2fd9cf4"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r2/Bilateral-r2.7z",
-				"files": [
-					"x64/Bilateral.dll"
-				],
-				"hash": {
-					"Bilateral.dll": "f6e8e3171f7f0272a409a8193421536a68e8d24b76a1167b203b7ef573c175c8"
+				"files": {
+					"Bilateral.dll": [
+						"x64/Bilateral.dll",
+						"f6e8e3171f7f0272a409a8193421536a68e8d24b76a1167b203b7ef573c175c8"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r1/Bilateral-r1.7z",
-				"files": [
-					"win32/Bilateral.dll"
-				],
-				"hash": {
-					"Bilateral.dll": "743a2c05ba297c6514237e8181d815fbdbeccec492cdd0f57187e68aabadd658"
+				"files": {
+					"Bilateral.dll": [
+						"win32/Bilateral.dll",
+						"743a2c05ba297c6514237e8181d815fbdbeccec492cdd0f57187e68aabadd658"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r1/Bilateral-r1.7z",
-				"files": [
-					"win64/Bilateral.dll"
-				],
-				"hash": {
-					"Bilateral.dll": "48662f2c75dac324df8cd1e92c5e977760075367920aa43976020827fb2b8f2b"
+				"files": {
+					"Bilateral.dll": [
+						"win64/Bilateral.dll",
+						"48662f2c75dac324df8cd1e92c5e977760075367920aa43976020827fb2b8f2b"
+					]
 				}
 			}
 		}

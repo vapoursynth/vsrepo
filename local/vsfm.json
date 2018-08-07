@@ -1,30 +1,31 @@
 {
 	"name": "VSFilterMod",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "VSFilterMod with VapourSynth interface added",
 	"website": "https://github.com/sorayuki/VSFilterMod",
 	"category": "Subtitles",
 	"identifier": "com.holywu.vsfiltermod",
 	"namespace": "vsfm",
+	"github": "https://github.com/sorayuki/VSFilterMod",
 	"releases": [
 		{
 			"version": "r5.1",
 			"win32": {
 				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5.1/VSFilterMod_x86.7z",
-				"files": [
-					"VSFilterMod.dll"
-				],
-				"hash": {
-					"VSFilterMod.dll": "66cbe9dac2485280d00709a54f4c46c84e2b56c6699f5ba3e940ff53b4499eb2"
+				"files": {
+					"VSFilterMod.dll": [
+						"VSFilterMod.dll",
+						"66cbe9dac2485280d00709a54f4c46c84e2b56c6699f5ba3e940ff53b4499eb2"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5.1/VSFilterMod_x64.7z",
-				"files": [
-					"VSFilterMod.dll"
-				],
-				"hash": {
-					"VSFilterMod.dll": "615b0e33bca142f72cdb649c15707811b3115227b27edd25aea11f262dabd5e3"
+				"files": {
+					"VSFilterMod.dll": [
+						"VSFilterMod.dll",
+						"615b0e33bca142f72cdb649c15707811b3115227b27edd25aea11f262dabd5e3"
+					]
 				}
 			}
 		},
@@ -32,20 +33,20 @@
 			"version": "r5",
 			"win32": {
 				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5/VSFilterMod_x86.7z",
-				"files": [
-					"VSFilterMod.dll"
-				],
-				"hash": {
-					"VSFilterMod.dll": "6a050765f7556abcca5dc06ae28b93b4fc30f530bf4fdfe385a11f12e2d81708"
+				"files": {
+					"VSFilterMod.dll": [
+						"VSFilterMod.dll",
+						"6a050765f7556abcca5dc06ae28b93b4fc30f530bf4fdfe385a11f12e2d81708"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5/VSFilterMod_x64.7z",
-				"files": [
-					"VSFilterMod.dll"
-				],
-				"hash": {
-					"VSFilterMod.dll": "3112446bb5954fa30363907422469c70e0c23fa0fd7c6e4ee411482170c811b4"
+				"files": {
+					"VSFilterMod.dll": [
+						"VSFilterMod.dll",
+						"3112446bb5954fa30363907422469c70e0c23fa0fd7c6e4ee411482170c811b4"
+					]
 				}
 			}
 		}

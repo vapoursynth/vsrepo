@@ -7,13 +7,27 @@
 	"category": "Others",
 	"identifier": "oyster",
 	"modulename": "Oyster",
-	"dependencies": ["com.deinterlace.nnedi3", "com.Khanattila.KNLMeansCL", "com.vapoursynth.bm3d", "com.holywu.dfttest", "fmtconv", "com.nodame.mvsf"],
-		"releases": [{
-		"version": "git:54fe6c3",
-		"script": {
-			"url": "https://raw.githubusercontent.com/IFeelBloated/Oyster/54fe6c36c0fb90be60a2d7939d9cd5f62d765176/Oyster.py",
-			"files": ["Oyster.py"],
-			"hash": { "Oyster.py": "d77590c31703513b9b69d3ad852da7b568c7bd34420ca010bbeea041d6c4e22d" }
+	"github": "https://github.com/IFeelBloated/Oyster",
+	"dependencies": [
+		"com.deinterlace.nnedi3",
+		"com.Khanattila.KNLMeansCL",
+		"com.vapoursynth.bm3d",
+		"com.holywu.dfttest",
+		"fmtconv",
+		"com.nodame.mvsf"
+	],
+	"releases": [
+		{
+			"version": "git:54fe6c3",
+			"script": {
+				"url": "https://raw.githubusercontent.com/IFeelBloated/Oyster/54fe6c36c0fb90be60a2d7939d9cd5f62d765176/Oyster.py",
+				"files": {
+					"Oyster.py": [
+						"Oyster.py",
+						"d77590c31703513b9b69d3ad852da7b568c7bd34420ca010bbeea041d6c4e22d"
+					]
+				}
+			}
 		}
-	}]
+	]
 }

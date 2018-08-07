@@ -1,31 +1,32 @@
 {
 	"name": "AddGrain",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Port of the Avisynth AddGrain filter",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171073",
 	"category": "Others",
 	"identifier": "com.holywu.addgrain",
 	"namespace": "grain",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain",
 	"releases": [
 		{
 			"version": "r6",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r6/AddGrain-r6.7z",
-				"files": [
-					"Win32/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "4a1fcab733c20244161c353354f061dc1a6226181bb131ce3779311a5ecacb58"
+				"files": {
+					"AddGrain.dll": [
+						"Win32/AddGrain.dll",
+						"4a1fcab733c20244161c353354f061dc1a6226181bb131ce3779311a5ecacb58"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r6/AddGrain-r6.7z",
-				"files": [
-					"Win64/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "cecf7b48c548156bf172b6b1eb55a8adb9ac8d63882f6272e2430e9581cd59cb"
+				"files": {
+					"AddGrain.dll": [
+						"Win64/AddGrain.dll",
+						"cecf7b48c548156bf172b6b1eb55a8adb9ac8d63882f6272e2430e9581cd59cb"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r5",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r5/AddGrain-r5.7z",
-				"files": [
-					"Win32/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "dd1d7c73ffe434050a1c20b2a030170731499503ac9100ff04fa757378a59d46"
+				"files": {
+					"AddGrain.dll": [
+						"Win32/AddGrain.dll",
+						"dd1d7c73ffe434050a1c20b2a030170731499503ac9100ff04fa757378a59d46"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r5/AddGrain-r5.7z",
-				"files": [
-					"Win64/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "3b3a8de3112c0f9dc4450afb4a135255e3a744ed07a460f3eb9194ea8d3394df"
+				"files": {
+					"AddGrain.dll": [
+						"Win64/AddGrain.dll",
+						"3b3a8de3112c0f9dc4450afb4a135255e3a744ed07a460f3eb9194ea8d3394df"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "r4",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r4/AddGrain-r4.7z",
-				"files": [
-					"Win32/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "6bbf0a844a54569583ee0b5d2a457da5304d9a505ebf2608071bc8d872c537e7"
+				"files": {
+					"AddGrain.dll": [
+						"Win32/AddGrain.dll",
+						"6bbf0a844a54569583ee0b5d2a457da5304d9a505ebf2608071bc8d872c537e7"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r4/AddGrain-r4.7z",
-				"files": [
-					"Win64/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "a02a5369a71a766882710a1d37ad9f660f499248b5b7daf7831800ea19f0a4c5"
+				"files": {
+					"AddGrain.dll": [
+						"Win64/AddGrain.dll",
+						"a02a5369a71a766882710a1d37ad9f660f499248b5b7daf7831800ea19f0a4c5"
+					]
 				}
 			}
 		},
@@ -75,20 +76,20 @@
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r3/AddGrain-r3.7z",
-				"files": [
-					"Win32/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "b7a009de665f7cb47a07ad8a48d28df06a71dbd2c796e337e197014b1a0e4e4f"
+				"files": {
+					"AddGrain.dll": [
+						"Win32/AddGrain.dll",
+						"b7a009de665f7cb47a07ad8a48d28df06a71dbd2c796e337e197014b1a0e4e4f"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r3/AddGrain-r3.7z",
-				"files": [
-					"Win64/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "7e6366cd0fa6bf502eab0aa1b55ddf3fcd7902b6620c3af6afe366ea0ff2c2c6"
+				"files": {
+					"AddGrain.dll": [
+						"Win64/AddGrain.dll",
+						"7e6366cd0fa6bf502eab0aa1b55ddf3fcd7902b6620c3af6afe366ea0ff2c2c6"
+					]
 				}
 			}
 		},
@@ -96,20 +97,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r2/AddGrain-r2.7z",
-				"files": [
-					"Win32/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "898da6a216731db3451894bfa6ba596f738dcd69f51bac1abfa5f315341b7655"
+				"files": {
+					"AddGrain.dll": [
+						"Win32/AddGrain.dll",
+						"898da6a216731db3451894bfa6ba596f738dcd69f51bac1abfa5f315341b7655"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r2/AddGrain-r2.7z",
-				"files": [
-					"Win64/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "df9837c0d44aca6878fbbb424ccf15f8f6a60aa554f01506f8659d0fbbaabbcf"
+				"files": {
+					"AddGrain.dll": [
+						"Win64/AddGrain.dll",
+						"df9837c0d44aca6878fbbb424ccf15f8f6a60aa554f01506f8659d0fbbaabbcf"
+					]
 				}
 			}
 		},
@@ -117,20 +118,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r1/AddGrain-r1.7z",
-				"files": [
-					"Win32/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "e4b5da588e22b5a1499b18b60a25c08dcdb45fb053f69c77912a8b682966e7f5"
+				"files": {
+					"AddGrain.dll": [
+						"Win32/AddGrain.dll",
+						"e4b5da588e22b5a1499b18b60a25c08dcdb45fb053f69c77912a8b682966e7f5"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r1/AddGrain-r1.7z",
-				"files": [
-					"Win64/AddGrain.dll"
-				],
-				"hash": {
-					"AddGrain.dll": "125abe10c33ed152086f258d722e2ae953a25562d894e6f3dcddb0490b6a2513"
+				"files": {
+					"AddGrain.dll": [
+						"Win64/AddGrain.dll",
+						"125abe10c33ed152086f258d722e2ae953a25562d894e6f3dcddb0490b6a2513"
+					]
 				}
 			}
 		}

@@ -7,6 +7,7 @@
 	"category": "Scripts",
 	"identifier": "havsfunc",
 	"modulename": "havsfunc",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/havsfunc",
 	"dependencies": [
 		"mvsfunc",
 		"adjust",
@@ -25,18 +26,18 @@
 		"com.holywu.ctmf",
 		"fft3dfilter",
 		"com.holywu.addgrain",
-        "com.vapoursynth.hqdn3d"
+		"com.vapoursynth.hqdn3d"
 	],
 	"releases": [
 		{
 			"version": "r30",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r30",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-33c2817/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "b1a6eded17327f6677b915ceab2614c7a2d0092681da7864ff275743ea60e805"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-33c2817/havsfunc.py",
+						"b1a6eded17327f6677b915ceab2614c7a2d0092681da7864ff275743ea60e805"
+					]
 				}
 			}
 		},
@@ -44,11 +45,11 @@
 			"version": "r29",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r29",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-95db305/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "79902cfd8cf6ff28994d9e2fe7b9204900ea0da11e2cd33d30fc0dae740ac320"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-95db305/havsfunc.py",
+						"79902cfd8cf6ff28994d9e2fe7b9204900ea0da11e2cd33d30fc0dae740ac320"
+					]
 				}
 			}
 		},
@@ -56,11 +57,11 @@
 			"version": "r28",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r28",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-222fb2e/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "57fa6e411df379298df7831427eb312113b19dbf9ab02804be4a5cb9d7e16e11"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-222fb2e/havsfunc.py",
+						"57fa6e411df379298df7831427eb312113b19dbf9ab02804be4a5cb9d7e16e11"
+					]
 				}
 			}
 		},
@@ -68,11 +69,11 @@
 			"version": "r27",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r27",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-9ad3f1e/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "f5173fdc78088ce123c391fb42b9e1931992bf80d8536fabbd1312ec9bcf36df"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-9ad3f1e/havsfunc.py",
+						"f5173fdc78088ce123c391fb42b9e1931992bf80d8536fabbd1312ec9bcf36df"
+					]
 				}
 			}
 		},
@@ -80,11 +81,11 @@
 			"version": "r26",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r26",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-932d64a/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "8ce5cb4aafe8b69a4702d627da10d834ad72079bdfe8885f69e831c01f762131"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-932d64a/havsfunc.py",
+						"8ce5cb4aafe8b69a4702d627da10d834ad72079bdfe8885f69e831c01f762131"
+					]
 				}
 			}
 		},
@@ -92,11 +93,11 @@
 			"version": "r25",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r25",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-7edb567/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "211a4d93437b04aff31385b1e569e743e2dc8b797c419dc6f72bb9c223bd7cb1"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-7edb567/havsfunc.py",
+						"211a4d93437b04aff31385b1e569e743e2dc8b797c419dc6f72bb9c223bd7cb1"
+					]
 				}
 			}
 		},
@@ -104,11 +105,11 @@
 			"version": "r24",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r24",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-180fafd/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "080c8e7998378027ec9e26ebca043b84814191911a9399aa83cf84f1a3b0e837"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-180fafd/havsfunc.py",
+						"080c8e7998378027ec9e26ebca043b84814191911a9399aa83cf84f1a3b0e837"
+					]
 				}
 			}
 		},
@@ -116,11 +117,11 @@
 			"version": "r23",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r23",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-1cc35c4/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "a97c8a398ebe6517c83e4b706e0c8ab30274b4b8f99cf50b6d5c6ce1a7f3be0d"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-1cc35c4/havsfunc.py",
+						"a97c8a398ebe6517c83e4b706e0c8ab30274b4b8f99cf50b6d5c6ce1a7f3be0d"
+					]
 				}
 			}
 		},
@@ -128,11 +129,11 @@
 			"version": "r22",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r22",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-d41402c/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "1bc6d654bab104483893d4dc5abdd527eb10e0c7a71b922ad3dfd3d2dbb17d8c"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-d41402c/havsfunc.py",
+						"1bc6d654bab104483893d4dc5abdd527eb10e0c7a71b922ad3dfd3d2dbb17d8c"
+					]
 				}
 			}
 		},
@@ -140,11 +141,11 @@
 			"version": "r21",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r21",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-1c17eda/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "792a28732dffae53cae3df321c0e79fc4c9cb972b283c2ef08ae0022fd55b260"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-1c17eda/havsfunc.py",
+						"792a28732dffae53cae3df321c0e79fc4c9cb972b283c2ef08ae0022fd55b260"
+					]
 				}
 			}
 		},
@@ -152,11 +153,11 @@
 			"version": "r20",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r20",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-f6b2098/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "a8b118c7a01c935f7fee42f3683cad89e03024576ae95aadece04c4071ba810f"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-f6b2098/havsfunc.py",
+						"a8b118c7a01c935f7fee42f3683cad89e03024576ae95aadece04c4071ba810f"
+					]
 				}
 			}
 		},
@@ -164,11 +165,11 @@
 			"version": "r19",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r19",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-1f0c8f0/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "7fcf2a052397942bf0b2cbffebbf34152bb015a82bf1bd6894675af49512890e"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-1f0c8f0/havsfunc.py",
+						"7fcf2a052397942bf0b2cbffebbf34152bb015a82bf1bd6894675af49512890e"
+					]
 				}
 			}
 		},
@@ -176,11 +177,11 @@
 			"version": "r18",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r18",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-cebca61/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "b28e138705154fd36adabe5d390e87af476db49c75beca538e9c9b584fe55d35"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-cebca61/havsfunc.py",
+						"b28e138705154fd36adabe5d390e87af476db49c75beca538e9c9b584fe55d35"
+					]
 				}
 			}
 		},
@@ -188,11 +189,11 @@
 			"version": "r17",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r17",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-0803a78/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "6f670f084c9602bd89cee971ee020ed79af0a928c590e70dc4d1c3c25c0fb857"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-0803a78/havsfunc.py",
+						"6f670f084c9602bd89cee971ee020ed79af0a928c590e70dc4d1c3c25c0fb857"
+					]
 				}
 			}
 		},
@@ -200,11 +201,11 @@
 			"version": "r16",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r16",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-530b6e2/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "dbfcfa9f624b66fbffbfdb1ecea9f234197c00bc231979e79b1f23fa879bda00"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-530b6e2/havsfunc.py",
+						"dbfcfa9f624b66fbffbfdb1ecea9f234197c00bc231979e79b1f23fa879bda00"
+					]
 				}
 			}
 		},
@@ -212,11 +213,11 @@
 			"version": "r15",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r15",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-e6be2e5/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "7e87a374664dcfd2f8f52012e01a196148e60b4140e69f780201c06d388c9797"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-e6be2e5/havsfunc.py",
+						"7e87a374664dcfd2f8f52012e01a196148e60b4140e69f780201c06d388c9797"
+					]
 				}
 			}
 		},
@@ -224,11 +225,11 @@
 			"version": "r14",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r14",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-e776678/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "df22fa90480b880a52e4f538ab6a29ede710377290f62e300a3426f0420cbde7"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-e776678/havsfunc.py",
+						"df22fa90480b880a52e4f538ab6a29ede710377290f62e300a3426f0420cbde7"
+					]
 				}
 			}
 		},
@@ -236,11 +237,11 @@
 			"version": "r13",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r13",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-b4ce531/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "928f504e9889e9124852924bcc79b14033bc75f3de3c6d32feab91f71a61f72f"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-b4ce531/havsfunc.py",
+						"928f504e9889e9124852924bcc79b14033bc75f3de3c6d32feab91f71a61f72f"
+					]
 				}
 			}
 		},
@@ -248,11 +249,11 @@
 			"version": "r12",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r12",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-fe23e58/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "b825068e3ae335610c8f4001b5676b4f4ccfaf450a7cfb2a268bc689c524e678"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-fe23e58/havsfunc.py",
+						"b825068e3ae335610c8f4001b5676b4f4ccfaf450a7cfb2a268bc689c524e678"
+					]
 				}
 			}
 		},
@@ -260,11 +261,11 @@
 			"version": "r11",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r11",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-40aeeff/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "78c86a5ffc263d64441fac9cc41bacebc7e46d615198f953c24a486e35bcea8c"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-40aeeff/havsfunc.py",
+						"78c86a5ffc263d64441fac9cc41bacebc7e46d615198f953c24a486e35bcea8c"
+					]
 				}
 			}
 		},
@@ -272,11 +273,11 @@
 			"version": "r10",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r10",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-a0af2ad/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "993026e995ca67cb61912c057c8887bf9d09b10426d67dd740080196796749ee"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-a0af2ad/havsfunc.py",
+						"993026e995ca67cb61912c057c8887bf9d09b10426d67dd740080196796749ee"
+					]
 				}
 			}
 		},
@@ -284,11 +285,11 @@
 			"version": "r9",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r9",
-				"files": [
-					"HomeOfVapourSynthEvolution-havsfunc-9ab2651/havsfunc.py"
-				],
-				"hash": {
-					"havsfunc.py": "2a915d77c93470e7dabf12f2f18b3e7222bb36bf7343c29a65bc463aae4990a4"
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-9ab2651/havsfunc.py",
+						"2a915d77c93470e7dabf12f2f18b3e7222bb36bf7343c29a65bc463aae4990a4"
+					]
 				}
 			}
 		}

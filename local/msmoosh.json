@@ -1,31 +1,32 @@
 {
 	"name": "MSmoosh",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "High quality bitdepth, colorspace conversion and resizing",
 	"website": "https://github.com/dubhater/vapoursynth-msmoosh",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171159",
 	"category": "Other",
 	"identifier": "com.nodame.msmoosh",
 	"namespace": "msmoosh",
+	"github": "https://github.com/dubhater/vapoursynth-msmoosh",
 	"releases": [
 		{
 			"version": "v1.1",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-msmoosh/releases/download/v1.1/vapoursynth-msmoosh-v1.1-win32.7z",
-				"files": [
-					"libmsmoosh.dll"
-				],
-				"hash": {
-					"libmsmoosh.dll": "f6cbbcc0ac1e65a7ab40642ed3349dcf601d3e3a9ed9e0c20c84ed74a5247865"
+				"files": {
+					"libmsmoosh.dll": [
+						"libmsmoosh.dll",
+						"f6cbbcc0ac1e65a7ab40642ed3349dcf601d3e3a9ed9e0c20c84ed74a5247865"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-msmoosh/releases/download/v1.1/vapoursynth-msmoosh-v1.1-win64.7z",
-				"files": [
-					"libmsmoosh.dll"
-				],
-				"hash": {
-					"libmsmoosh.dll": "3cc2ced0470e7e4e1115484739f87a81cb02519779049bf84f769afd6acf9544"
+				"files": {
+					"libmsmoosh.dll": [
+						"libmsmoosh.dll",
+						"3cc2ced0470e7e4e1115484739f87a81cb02519779049bf84f769afd6acf9544"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "v1.0",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-msmoosh/releases/download/v1.0/vapoursynth-msmoosh-v1.0-win32.7z",
-				"files": [
-					"libmsmoosh.dll"
-				],
-				"hash": {
-					"libmsmoosh.dll": "3507ea2188b4ed1eb8c7061ff9a28e844ec8149484f00cddf1e8e8ba7bd7f5fe"
+				"files": {
+					"libmsmoosh.dll": [
+						"libmsmoosh.dll",
+						"3507ea2188b4ed1eb8c7061ff9a28e844ec8149484f00cddf1e8e8ba7bd7f5fe"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-msmoosh/releases/download/v1.0/vapoursynth-msmoosh-v1.0-win64.7z",
-				"files": [
-					"libmsmoosh.dll"
-				],
-				"hash": {
-					"libmsmoosh.dll": "97a475a4234ba4a419a22ac6182d5a8fe0a7616620c601f25cd3bb05e5fc2f40"
+				"files": {
+					"libmsmoosh.dll": [
+						"libmsmoosh.dll",
+						"97a475a4234ba4a419a22ac6182d5a8fe0a7616620c601f25cd3bb05e5fc2f40"
+					]
 				}
 			}
 		}

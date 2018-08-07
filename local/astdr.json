@@ -6,13 +6,31 @@
 	"category": "Dot Crawl and Rainbow removal",
 	"identifier": "ASTDR",
 	"modulename": "ASTDR",
-	"dependencies": ["adjust", "com.nodame.decross", "com.vapoursynth.hqdn3d", "com.nodame.motionmask", "com.nodame.awarpsharp2", "com.nodame.fluxsmooth", "chikuzen.does.not.have.his.own.domain.focus2", "systems.innocent.fft3dfilter", "com.holywu.ctmf", "com.nodame.mvtools"],
-	"releases": [{
-		"version": "git:38e2fbd",
-		"script": {
-			"url": "https://raw.githubusercontent.com/dubhater/vapoursynth-astdr/38e2fbd1b346a5d80ccf76e94e5a7b56f524b363/ASTDR.py",
-			"files": ["ASTDR.py"],
-			"hash": { "ASTDR.py": "96e8426eedc84e120f4967de0639cb3a8cbf7c0d530ea571e1052cc6a520c11c" }
+	"github": "https://github.com/dubhater/vapoursynth-astdr",
+	"dependencies": [
+		"adjust",
+		"com.nodame.decross",
+		"com.vapoursynth.hqdn3d",
+		"com.nodame.motionmask",
+		"com.nodame.awarpsharp2",
+		"com.nodame.fluxsmooth",
+		"chikuzen.does.not.have.his.own.domain.focus2",
+		"systems.innocent.fft3dfilter",
+		"com.holywu.ctmf",
+		"com.nodame.mvtools"
+	],
+	"releases": [
+		{
+			"version": "git:38e2fbd",
+			"script": {
+				"url": "https://raw.githubusercontent.com/dubhater/vapoursynth-astdr/38e2fbd1b346a5d80ccf76e94e5a7b56f524b363/ASTDR.py",
+				"files": {
+					"ASTDR.py": [
+						"ASTDR.py",
+						"96e8426eedc84e120f4967de0639cb3a8cbf7c0d530ea571e1052cc6a520c11c"
+					]
+				}
+			}
 		}
-	}]
+	]
 }

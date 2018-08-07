@@ -1,21 +1,22 @@
 {
 	"name": "HQDn3D",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Port of the HQDn3D filter for mplayer",
 	"website": "https://github.com/theChaosCoder/vapoursynth-hqdn3d",
 	"category": "Denoising",
 	"identifier": "com.vapoursynth.hqdn3d",
 	"namespace": "hqdn3d",
+	"github": "https://github.com/theChaosCoder/vapoursynth-hqdn3d",
 	"releases": [
 		{
 			"version": "r2",
 			"win64": {
 				"url": "https://github.com/theChaosCoder/vapoursynth-hqdn3d/releases/download/r2/vapoursynth-hqdn3d-r2-win64.zip",
-				"files": [
-					"libhqdn3d.dll"
-				],
-				"hash": {
-					"libhqdn3d.dll": "ed1e9c223755c1f5e970ecb0dd891767a8af569aa250faafe9ac4a37ecb577cb"
+				"files": {
+					"libhqdn3d.dll": [
+						"libhqdn3d.dll",
+						"ed1e9c223755c1f5e970ecb0dd891767a8af569aa250faafe9ac4a37ecb577cb"
+					]
 				}
 			}
 		}

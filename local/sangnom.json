@@ -1,6 +1,6 @@
 {
 	"name": "SangNom",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "SangNom is a single field deinterlacer using edge-directed interpolation but nowadays it's mainly used in anti-aliasing scripts.",
 	"website": "https://bitbucket.org/James1201/vapoursynth-sangnom",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173752",
@@ -12,11 +12,11 @@
 			"version": "r40",
 			"win64": {
 				"url": "https://bitbucket.org/James1201/vapoursynth-sangnom/downloads/libsangnom%20r40%20win64.7z",
-				"files": [
-					"libsangnom r40 win64/gcc/libsangnom.dll"
-				],
-				"hash": {
-					"libsangnom.dll": "cd62d7e54f086e5752965072b07cc9e90b168517768472c76e754007763de9ae"
+				"files": {
+					"libsangnom.dll": [
+						"libsangnom r40 win64/gcc/libsangnom.dll",
+						"cd62d7e54f086e5752965072b07cc9e90b168517768472c76e754007763de9ae"
+					]
 				}
 			}
 		}

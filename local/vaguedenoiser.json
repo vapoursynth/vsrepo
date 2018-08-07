@@ -1,31 +1,32 @@
 {
 	"name": "VagueDenoiser",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "A wavelet based denoiser",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VagueDenoiser",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171723",
 	"category": "Denoising",
 	"identifier": "com.holywu.vaguedenoiser",
 	"namespace": "vaguedenoiser",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VagueDenoiser",
 	"releases": [
 		{
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VagueDenoiser/releases/download/r2/VagueDenoiser-r2.7z",
-				"files": [
-					"Win32/VagueDenoiser.dll"
-				],
-				"hash": {
-					"VagueDenoiser.dll": "c87feb4970d65e7d4dd5b8df58b27d418d124a88b025ba558afff51421c49a69"
+				"files": {
+					"VagueDenoiser.dll": [
+						"Win32/VagueDenoiser.dll",
+						"c87feb4970d65e7d4dd5b8df58b27d418d124a88b025ba558afff51421c49a69"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VagueDenoiser/releases/download/r2/VagueDenoiser-r2.7z",
-				"files": [
-					"Win64/VagueDenoiser.dll"
-				],
-				"hash": {
-					"VagueDenoiser.dll": "a4addd1fa33a7c4295bd2ac577fa160e2b9a1f9e24efd9c817ad1e677bee8cd8"
+				"files": {
+					"VagueDenoiser.dll": [
+						"Win64/VagueDenoiser.dll",
+						"a4addd1fa33a7c4295bd2ac577fa160e2b9a1f9e24efd9c817ad1e677bee8cd8"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VagueDenoiser/releases/download/r1/VagueDenoiser-r1.7z",
-				"files": [
-					"Win32/VagueDenoiser.dll"
-				],
-				"hash": {
-					"VagueDenoiser.dll": "eb8901fd663b0c8ddace895758fed1f309266f2c56906e41282892154d38557f"
+				"files": {
+					"VagueDenoiser.dll": [
+						"Win32/VagueDenoiser.dll",
+						"eb8901fd663b0c8ddace895758fed1f309266f2c56906e41282892154d38557f"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VagueDenoiser/releases/download/r1/VagueDenoiser-r1.7z",
-				"files": [
-					"Win64/VagueDenoiser.dll"
-				],
-				"hash": {
-					"VagueDenoiser.dll": "618898edb57ffb64fad93b14fe633ddaf20e195194b0955a553ba0bc7a0d056e"
+				"files": {
+					"VagueDenoiser.dll": [
+						"Win64/VagueDenoiser.dll",
+						"618898edb57ffb64fad93b14fe633ddaf20e195194b0955a553ba0bc7a0d056e"
+					]
 				}
 			}
 		}

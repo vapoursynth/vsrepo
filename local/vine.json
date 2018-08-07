@@ -7,13 +7,27 @@
 	"category": "Others",
 	"identifier": "vine",
 	"modulename": "Vine",
-	"dependencies": ["com.deinterlace.nnedi3", "com.Khanattila.KNLMeansCL", "com.vapoursynth.bm3d", "fmtconv", "com.nodame.mvsf", "com.holywu.tcanny"],
-		"releases": [{
-		"version": "git:a6e68cd",
-		"script": {
-			"url": "https://raw.githubusercontent.com/IFeelBloated/Vine/a6e68cd94a72db22c04cf7f2227511598975deaf/Vine.py",
-			"files": ["Vine.py"],
-			"hash": { "Vine.py": "3febeae7b2bb6ef9731e06d720524c0543a03fb48c1e57720aa8f86007ec7be7" }
+	"github": "https://github.com/IFeelBloated/Vine",
+	"dependencies": [
+		"com.deinterlace.nnedi3",
+		"com.Khanattila.KNLMeansCL",
+		"com.vapoursynth.bm3d",
+		"fmtconv",
+		"com.nodame.mvsf",
+		"com.holywu.tcanny"
+	],
+	"releases": [
+		{
+			"version": "git:a6e68cd",
+			"script": {
+				"url": "https://raw.githubusercontent.com/IFeelBloated/Vine/a6e68cd94a72db22c04cf7f2227511598975deaf/Vine.py",
+				"files": {
+					"Vine.py": [
+						"Vine.py",
+						"3febeae7b2bb6ef9731e06d720524c0543a03fb48c1e57720aa8f86007ec7be7"
+					]
+				}
+			}
 		}
-	}]
+	]
 }

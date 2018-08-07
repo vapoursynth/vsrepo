@@ -1,30 +1,31 @@
 {
 	"name": "QRCodeSource",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "VapourSynth & Avisynth plugin to provide a means to embed QR codes in video",
 	"website": "https://github.com/jeremypoulter/QRCodeSource",
 	"category": "Source/Output",
 	"identifier": "net.bigjungle.qr",
 	"namespace": "qr",
+	"github": "https://github.com/jeremypoulter/QRCodeSource",
 	"releases": [
 		{
 			"version": "Release_1.0.0.0",
 			"win32": {
 				"url": "https://github.com/jeremypoulter/QRCodeSource/releases/download/Release_1.0.0.0/QRCodeSource-1.0.0.0.zip",
-				"files": [
-					"Release/VS/Win32/QRCodeSourceVS.dll"
-				],
-				"hash": {
-					"QRCodeSourceVS.dll": "bdb095e1a05392ca92495d012b26af91d2dd4f320ec08346c02fe63723182987"
+				"files": {
+					"QRCodeSourceVS.dll": [
+						"Release/VS/Win32/QRCodeSourceVS.dll",
+						"bdb095e1a05392ca92495d012b26af91d2dd4f320ec08346c02fe63723182987"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/jeremypoulter/QRCodeSource/releases/download/Release_1.0.0.0/QRCodeSource-1.0.0.0.zip",
-				"files": [
-					"Release/VS/x64/QRCodeSourceVS.dll"
-				],
-				"hash": {
-					"QRCodeSourceVS.dll": "bac706bcc6b51150f628ce5241331aaedadd65dc7fd2e1930b195f85c2f1cbf1"
+				"files": {
+					"QRCodeSourceVS.dll": [
+						"Release/VS/x64/QRCodeSourceVS.dll",
+						"bac706bcc6b51150f628ce5241331aaedadd65dc7fd2e1930b195f85c2f1cbf1"
+					]
 				}
 			}
 		}

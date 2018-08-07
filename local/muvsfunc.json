@@ -6,6 +6,7 @@
 	"category": "Scripts",
 	"identifier": "muvsfunc",
 	"modulename": "muvsfunc",
+	"github": "https://github.com/WolframRhodium/muvsfunc",
 	"dependencies": [
 		"havsfunc",
 		"mvsfunc",
@@ -25,11 +26,11 @@
 			"version": "v0.1.0",
 			"script": {
 				"url": "https://github.com/WolframRhodium/muvsfunc/archive/v0.1.0.zip",
-				"files": [
-					"muvsfunc-0.1.0/muvsfunc.py"
-				],
-				"hash": {
-					"muvsfunc.py": "c25ebb3837b5dac8edfc6e3e34c480e71fee053f7104a77954c784f9da5c99d5"
+				"files": {
+					"muvsfunc.py": [
+						"muvsfunc-0.1.0/muvsfunc.py",
+						"c25ebb3837b5dac8edfc6e3e34c480e71fee053f7104a77954c784f9da5c99d5"
+					]
 				}
 			}
 		}

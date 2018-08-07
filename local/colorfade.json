@@ -6,16 +6,17 @@
 	"category": "Others",
 	"identifier": "colorfade",
 	"modulename": "colorfade",
+	"github": "https://github.com/tormaid/colorfade",
 	"releases": [
 		{
 			"version": "git:bed42cc",
 			"script": {
 				"url": "https://raw.githubusercontent.com/tormaid/colorfade/bed42cc9755e0b4f7445ccadab0ae292589c3100/colorfade.py",
-				"files": [
-					"colorfade.py"
-				],
-				"hash": {
-					"colorfade.py": "834ea9f2ae8079887cfc52e6dc48e6a7951236a2571dd5632af4ce576880480f"
+				"files": {
+					"colorfade.py": [
+						"colorfade.py",
+						"834ea9f2ae8079887cfc52e6dc48e6a7951236a2571dd5632af4ce576880480f"
+					]
 				}
 			}
 		}

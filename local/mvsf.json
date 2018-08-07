@@ -1,22 +1,23 @@
 {
 	"name": "MVTools (float)",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "MVTools port",
 	"website": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172525",
 	"category": "Others",
 	"identifier": "com.nodame.mvsf",
 	"namespace": "mvsf",
+	"github": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf",
 	"releases": [
 		{
 			"version": "r9",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r9/libmvtools_sf_em64t.7z",
-				"files": [
-					"libmvtools_sf_em64t.dll"
-				],
-				"hash": {
-					"libmvtools_sf_em64t.dll": "023188f29cb0dcf733b9dbc2d4af42b36978661beb05298a8a8ef0c84e4668c6"
+				"files": {
+					"libmvtools_sf_em64t.dll": [
+						"libmvtools_sf_em64t.dll",
+						"023188f29cb0dcf733b9dbc2d4af42b36978661beb05298a8a8ef0c84e4668c6"
+					]
 				}
 			}
 		},
@@ -24,11 +25,11 @@
 			"version": "r8",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r8/libmvtools_sf_em64t.7z",
-				"files": [
-					"libmvtools_sf_em64t.dll"
-				],
-				"hash": {
-					"libmvtools_sf_em64t.dll": "3c0e725316387ba33b4943e18510f9c2a21847e80f38b4e902ca445db549aeab"
+				"files": {
+					"libmvtools_sf_em64t.dll": [
+						"libmvtools_sf_em64t.dll",
+						"3c0e725316387ba33b4943e18510f9c2a21847e80f38b4e902ca445db549aeab"
+					]
 				}
 			}
 		},
@@ -36,11 +37,11 @@
 			"version": "r7",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r7/libmvtools_sf_em64t.7z",
-				"files": [
-					"libmvtools_sf_em64t.dll"
-				],
-				"hash": {
-					"libmvtools_sf_em64t.dll": "0134c347702682d64b09722c838823b6ae1a520b4f5617b42e753e243a8c3bba"
+				"files": {
+					"libmvtools_sf_em64t.dll": [
+						"libmvtools_sf_em64t.dll",
+						"0134c347702682d64b09722c838823b6ae1a520b4f5617b42e753e243a8c3bba"
+					]
 				}
 			}
 		},
@@ -48,11 +49,11 @@
 			"version": "r6",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r6/libmvtools_sf_em64t.7z",
-				"files": [
-					"libmvtools_sf_em64t.dll"
-				],
-				"hash": {
-					"libmvtools_sf_em64t.dll": "1a29a9d252627de4b048592e024a7ad0c3252e852bdbccb0ebd9229a19444d19"
+				"files": {
+					"libmvtools_sf_em64t.dll": [
+						"libmvtools_sf_em64t.dll",
+						"1a29a9d252627de4b048592e024a7ad0c3252e852bdbccb0ebd9229a19444d19"
+					]
 				}
 			}
 		},

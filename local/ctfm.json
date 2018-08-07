@@ -1,31 +1,32 @@
 {
 	"name": "CTMF",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Constant Time Median Filtering",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171213",
 	"category": "Others",
 	"identifier": "com.holywu.ctmf",
 	"namespace": "ctfm",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF",
 	"releases": [
 		{
 			"version": "r4",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r4/CTMF-r4.7z",
-				"files": [
-					"Win32/CTMF.dll"
-				],
-				"hash": {
-					"CTMF.dll": "e5a9bba3e469eb5e6da6a1ad80917009c4ca8da91b4ecd87351cae2f6b23b3c5"
+				"files": {
+					"CTMF.dll": [
+						"Win32/CTMF.dll",
+						"e5a9bba3e469eb5e6da6a1ad80917009c4ca8da91b4ecd87351cae2f6b23b3c5"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r4/CTMF-r4.7z",
-				"files": [
-					"Win64/CTMF.dll"
-				],
-				"hash": {
-					"CTMF.dll": "4356adc8fc3d09b6c70ae39c9a9926e587b37bd031839f7906547919e9178048"
+				"files": {
+					"CTMF.dll": [
+						"Win64/CTMF.dll",
+						"4356adc8fc3d09b6c70ae39c9a9926e587b37bd031839f7906547919e9178048"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r3/CTMF-r3.7z",
-				"files": [
-					"Win32/CTMF.dll"
-				],
-				"hash": {
-					"CTMF.dll": "6e6041ad3767e45d96c13d255c0e05f0452a4567ac6d02a2205784df7e9c87f3"
+				"files": {
+					"CTMF.dll": [
+						"Win32/CTMF.dll",
+						"6e6041ad3767e45d96c13d255c0e05f0452a4567ac6d02a2205784df7e9c87f3"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r3/CTMF-r3.7z",
-				"files": [
-					"Win64/CTMF.dll"
-				],
-				"hash": {
-					"CTMF.dll": "3ceb8ed19773b498f58d2eac9570746fb297454ec0c98c5b196b5abbc0644342"
+				"files": {
+					"CTMF.dll": [
+						"Win64/CTMF.dll",
+						"3ceb8ed19773b498f58d2eac9570746fb297454ec0c98c5b196b5abbc0644342"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r2/CTMF-r2.7z",
-				"files": [
-					"Win32/CTMF.dll"
-				],
-				"hash": {
-					"CTMF.dll": "ac71a1e4026246212b8f8210e0c9be03e44abba3271d94bdfd0cb33385277d1a"
+				"files": {
+					"CTMF.dll": [
+						"Win32/CTMF.dll",
+						"ac71a1e4026246212b8f8210e0c9be03e44abba3271d94bdfd0cb33385277d1a"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r2/CTMF-r2.7z",
-				"files": [
-					"Win64/CTMF.dll"
-				],
-				"hash": {
-					"CTMF.dll": "bb9e6c0ce17197fd18ec6d9e95c046421ac8a44d46e063f709cf5a311c10279b"
+				"files": {
+					"CTMF.dll": [
+						"Win64/CTMF.dll",
+						"bb9e6c0ce17197fd18ec6d9e95c046421ac8a44d46e063f709cf5a311c10279b"
+					]
 				}
 			}
 		},
@@ -75,20 +76,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r1/CTMF-r1.7z",
-				"files": [
-					"Win32/CTMF.dll"
-				],
-				"hash": {
-					"CTMF.dll": "ed10f8cb0d148e5677837ca7b4e5037b2aafaa0a99d0ea8a783c1501d5a9bffc"
+				"files": {
+					"CTMF.dll": [
+						"Win32/CTMF.dll",
+						"ed10f8cb0d148e5677837ca7b4e5037b2aafaa0a99d0ea8a783c1501d5a9bffc"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r1/CTMF-r1.7z",
-				"files": [
-					"Win64/CTMF.dll"
-				],
-				"hash": {
-					"CTMF.dll": "b88e54b380c4f4e46fcfd2b64c719e784e34752ca5e41a522990bf310ed8f938"
+				"files": {
+					"CTMF.dll": [
+						"Win64/CTMF.dll",
+						"b88e54b380c4f4e46fcfd2b64c719e784e34752ca5e41a522990bf310ed8f938"
+					]
 				}
 			}
 		}

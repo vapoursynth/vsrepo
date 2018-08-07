@@ -1,31 +1,32 @@
 {
 	"name": "degrainmedian",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Spatio-temporal limited median denoiser",
 	"website": "https://github.com/dubhater/vapoursynth-degrainmedian",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173758",
 	"category": "Denoising",
 	"identifier": "com.nodame.degrainmedian",
 	"namespace": "dgm",
+	"github": "https://github.com/dubhater/vapoursynth-degrainmedian",
 	"releases": [
 		{
 			"version": "v1",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-degrainmedian/releases/download/v1/vapoursynth-degrainmedian-v1-win32.7z",
-				"files": [
-					"libdegrainmedian.dll"
-				],
-				"hash": {
-					"libdegrainmedian.dll": "51b8d9d98fee9204bdf2b1e2c58d1eff92d2b4532510017a132061c62db80c3a"
+				"files": {
+					"libdegrainmedian.dll": [
+						"libdegrainmedian.dll",
+						"51b8d9d98fee9204bdf2b1e2c58d1eff92d2b4532510017a132061c62db80c3a"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-degrainmedian/releases/download/v1/vapoursynth-degrainmedian-v1-win64.7z",
-				"files": [
-					"libdegrainmedian.dll"
-				],
-				"hash": {
-					"libdegrainmedian.dll": "c204e04282386c2319ccd01d52eea97f5c0e33cbed6c6f86ab9ff988fbe79897"
+				"files": {
+					"libdegrainmedian.dll": [
+						"libdegrainmedian.dll",
+						"c204e04282386c2319ccd01d52eea97f5c0e33cbed6c6f86ab9ff988fbe79897"
+					]
 				}
 			}
 		}

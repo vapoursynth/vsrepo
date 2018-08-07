@@ -1,31 +1,32 @@
 {
 	"name": "DeLogo",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Port of the Avisynth logo removal filter",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171252",
 	"category": "Others",
 	"identifier": "in.7086.delogo",
 	"namespace": "delogo",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo",
 	"releases": [
 		{
 			"version": "v0.4",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo/releases/download/v0.4/delogo_release_v0.4.zip",
-				"files": [
-					"mingw/i686-w64-mingw32/libdelogo.dll"
-				],
-				"hash": {
-					"libdelogo.dll": "ef62d2f4cc7463ece3bc4f74f4fc0c4dab39143641e5be6c88198a0f6a2c60d7"
+				"files": {
+					"libdelogo.dll": [
+						"mingw/i686-w64-mingw32/libdelogo.dll",
+						"ef62d2f4cc7463ece3bc4f74f4fc0c4dab39143641e5be6c88198a0f6a2c60d7"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo/releases/download/v0.4/delogo_release_v0.4.zip",
-				"files": [
-					"mingw/x86_64-w64-mingw32/libdelogo.dll"
-				],
-				"hash": {
-					"libdelogo.dll": "391cafb3a8d8a61394da9cf64fd8003599b0dcec6087c9b2bb341feabf052dd6"
+				"files": {
+					"libdelogo.dll": [
+						"mingw/x86_64-w64-mingw32/libdelogo.dll",
+						"391cafb3a8d8a61394da9cf64fd8003599b0dcec6087c9b2bb341feabf052dd6"
+					]
 				}
 			}
 		},

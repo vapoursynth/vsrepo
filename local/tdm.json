@@ -1,31 +1,32 @@
 {
 	"name": "TDeintMod",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Port of the Avisynth deinterlacer",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171295",
 	"category": "Deinterlacing",
 	"identifier": "com.holywu.tdeintmod",
 	"namespace": "tdm",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod",
 	"releases": [
 		{
 			"version": "r10",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r10/TDeintMod-r10.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "4fa17c5d2c1cbbbba0af76003f3e8ff195a47cd64106874765b3606f06712252"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"4fa17c5d2c1cbbbba0af76003f3e8ff195a47cd64106874765b3606f06712252"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r10/TDeintMod-r10.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "b00caef01d9a416273bb6cac02f76781361f84d5f18712deb5984d21c315578b"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"b00caef01d9a416273bb6cac02f76781361f84d5f18712deb5984d21c315578b"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r9",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r9/TDeintMod-r9.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "8b3b5955f026812ac39ce3037830c63389dd377009992a3140e5d8d501953946"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"8b3b5955f026812ac39ce3037830c63389dd377009992a3140e5d8d501953946"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r9/TDeintMod-r9.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "d77ea5ccef5de4afd61068d1480c31b49b8cbbc639df7c8b7fd92dd5ef935c93"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"d77ea5ccef5de4afd61068d1480c31b49b8cbbc639df7c8b7fd92dd5ef935c93"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "r8",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r8/TDeintMod-r8.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "fefbab89f8bb1b540304ef1c6e7c5192e4a1f7897bdc6a1f3953ee98079f5142"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"fefbab89f8bb1b540304ef1c6e7c5192e4a1f7897bdc6a1f3953ee98079f5142"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r8/TDeintMod-r8.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "95290a1a90096ac6f78e24ea65ebd14e1318fd0b4bbac5dfbd2f405c5a46a4a2"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"95290a1a90096ac6f78e24ea65ebd14e1318fd0b4bbac5dfbd2f405c5a46a4a2"
+					]
 				}
 			}
 		},
@@ -75,20 +76,20 @@
 			"version": "r7",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r7/TDeintMod-r7.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "0eade3dc3d42914d16dd962b3304f794e5b310a77a467c9d7094b31fc58f0282"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"0eade3dc3d42914d16dd962b3304f794e5b310a77a467c9d7094b31fc58f0282"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r7/TDeintMod-r7.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "6b9d99301169bc5748858fe7ac3a7535f9dba0377e54eb8bf317ef80d26b9d4e"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"6b9d99301169bc5748858fe7ac3a7535f9dba0377e54eb8bf317ef80d26b9d4e"
+					]
 				}
 			}
 		},
@@ -96,20 +97,20 @@
 			"version": "r6",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r6/TDeintMod-r6.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "0af2f431351569f314f044e3de9082210877e185b64c59fe3ed40d8c5cbab806"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"0af2f431351569f314f044e3de9082210877e185b64c59fe3ed40d8c5cbab806"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r6/TDeintMod-r6.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "b8597f40c04fd2b044dcbaacded2b766255846fe4462b5ce1c20707c31112782"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"b8597f40c04fd2b044dcbaacded2b766255846fe4462b5ce1c20707c31112782"
+					]
 				}
 			}
 		},
@@ -117,20 +118,20 @@
 			"version": "r5",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r5/TDeintMod-r5.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "88c7c6426cc8d67183beb480024bcc72d4582ee676e945ed4730a25f78846be9"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"88c7c6426cc8d67183beb480024bcc72d4582ee676e945ed4730a25f78846be9"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r5/TDeintMod-r5.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "bac3cbc38c851fbaaa681df6e6a7df215404a74b19a6e0452923e7a4df9f9c07"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"bac3cbc38c851fbaaa681df6e6a7df215404a74b19a6e0452923e7a4df9f9c07"
+					]
 				}
 			}
 		},
@@ -138,20 +139,20 @@
 			"version": "r4",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r4/TDeintMod-r4.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "fdd47820925bd5aaba41c990a60e5c99e3f4761e7a5e97ee2440744569474987"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"fdd47820925bd5aaba41c990a60e5c99e3f4761e7a5e97ee2440744569474987"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r4/TDeintMod-r4.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "81c559c79da4f2e3cf6144543f59da131ee3bd42ace85a3175f33a281adae97a"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"81c559c79da4f2e3cf6144543f59da131ee3bd42ace85a3175f33a281adae97a"
+					]
 				}
 			}
 		},
@@ -159,20 +160,20 @@
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r3/TDeintMod-r3.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "4d42e48d8f681f7a37b071a2e703c56f60aa5dbbfc794e7bb39706e1d6f5aef0"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"4d42e48d8f681f7a37b071a2e703c56f60aa5dbbfc794e7bb39706e1d6f5aef0"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r3/TDeintMod-r3.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "956a8da023af87ee5f40fd5baaddfdc2d02b6b1e2f279a3099c74e7294da2f73"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"956a8da023af87ee5f40fd5baaddfdc2d02b6b1e2f279a3099c74e7294da2f73"
+					]
 				}
 			}
 		},
@@ -180,20 +181,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r2/TDeintMod-r2.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "0f3b74a8c87c518a6be54d4e1369aaea959980d5125029d8d00fd208bbb1d35b"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"0f3b74a8c87c518a6be54d4e1369aaea959980d5125029d8d00fd208bbb1d35b"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r2/TDeintMod-r2.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "7bb759aa52739f612fb3f8e48b314a2e33e29b4509b1ed402be42bd1fe84b7a9"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"7bb759aa52739f612fb3f8e48b314a2e33e29b4509b1ed402be42bd1fe84b7a9"
+					]
 				}
 			}
 		},
@@ -201,20 +202,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r1/TDeintMod-r1.7z",
-				"files": [
-					"Win32/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "5e7efaffbaf05f48eca29f5ca05dea16309ea83b76b2cd5c571a3648e173a7f4"
+				"files": {
+					"TDeintMod.dll": [
+						"Win32/TDeintMod.dll",
+						"5e7efaffbaf05f48eca29f5ca05dea16309ea83b76b2cd5c571a3648e173a7f4"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r1/TDeintMod-r1.7z",
-				"files": [
-					"Win64/TDeintMod.dll"
-				],
-				"hash": {
-					"TDeintMod.dll": "5af02b1dfafd47cc8be20362fd2f46de6f210ee91f4b046e02db033cdd0ced1c"
+				"files": {
+					"TDeintMod.dll": [
+						"Win64/TDeintMod.dll",
+						"5af02b1dfafd47cc8be20362fd2f46de6f210ee91f4b046e02db033cdd0ced1c"
+					]
 				}
 			}
 		}

@@ -6,13 +6,22 @@
 	"category": "Script",
 	"identifier": "nnedi3_resample",
 	"modulename": "nnedi3_resample",
-	"dependencies": ["com.deinterlace.nnedi3"],
-	"releases": [{
-		"version": "git-1",
-		"script": {
-			"url": "https://raw.githubusercontent.com/mawen1250/VapourSynth-script/master/nnedi3_resample.py",
-			"files": ["nnedi3_resample.py"],
-			"hash": { "nnedi3_resample.py": "67fb4c9922417a42c5caca0714ffb638b0e00c8264f82afa5667e4b11e064c31" }
+	"github": "https://github.com/mawen1250/VapourSynth-script",
+	"dependencies": [
+		"com.deinterlace.nnedi3"
+	],
+	"releases": [
+		{
+			"version": "git-1",
+			"script": {
+				"url": "https://raw.githubusercontent.com/mawen1250/VapourSynth-script/master/nnedi3_resample.py",
+				"files": {
+					"nnedi3_resample.py": [
+						"nnedi3_resample.py",
+						"67fb4c9922417a42c5caca0714ffb638b0e00c8264f82afa5667e4b11e064c31"
+					]
+				}
+			}
 		}
-	}]
+	]
 }

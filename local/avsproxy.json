@@ -1,24 +1,27 @@
 {
 	"name": "AvsProxy",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Avisynth 32-bit proxy",
 	"website": "https://github.com/sekrit-twc/avsproxy",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175141",
 	"category": "Others",
 	"identifier": "xxx.abc.avsproxy",
 	"namespace": "avsw",
+	"github": "https://github.com/sekrit-twc/avsproxy",
 	"releases": [
 		{
 			"version": "r1a",
 			"win64": {
 				"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r1a/avsproxy_r1a.7z",
-				"files": [
-					"avsproxy.dll",
-					"avshost_native.exe"
-				],
-				"hash": {
-					"avsproxy.dll": "736ca85a5e35e6784fd436f00653750fd0ae0dd96ed6bb3d3b81afa82617d145",
-					"avshost_native.exe": "ee3481e74e332795625657c69a7b90e508385fca9e6baf034eaeac413b672d96"
+				"files": {
+					"avsproxy.dll": [
+						"avsproxy.dll",
+						"736ca85a5e35e6784fd436f00653750fd0ae0dd96ed6bb3d3b81afa82617d145"
+					],
+					"avshost_native.exe": [
+						"avshost_native.exe",
+						"ee3481e74e332795625657c69a7b90e508385fca9e6baf034eaeac413b672d96"
+					]
 				}
 			}
 		},
@@ -26,13 +29,15 @@
 			"version": "r1",
 			"win64": {
 				"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r1/avsproxy_r1.7z",
-				"files": [
-					"avsproxy.dll",
-					"avshost_native.exe"
-				],
-				"hash": {
-					"avsproxy.dll": "c1634639927d6a25821330bdb59e4f1f1eb357d367422c7fe30904cbab04a4e8",
-					"avshost_native.exe": "ee3481e74e332795625657c69a7b90e508385fca9e6baf034eaeac413b672d96"
+				"files": {
+					"avsproxy.dll": [
+						"avsproxy.dll",
+						"c1634639927d6a25821330bdb59e4f1f1eb357d367422c7fe30904cbab04a4e8"
+					],
+					"avshost_native.exe": [
+						"avshost_native.exe",
+						"ee3481e74e332795625657c69a7b90e508385fca9e6baf034eaeac413b672d96"
+					]
 				}
 			}
 		}

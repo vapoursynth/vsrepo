@@ -1,31 +1,32 @@
 {
 	"name": "MiniDeen",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "MiniDeen is a spatial denoising filter. It replaces every pixel with the average of its neighbourhood. This is a port of the 'a2d' method from the Avisynth plugin Deen, version beta 2.",
 	"website": "https://github.com/dubhater/vapoursynth-minideen",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175587",
 	"category": "Denoising",
 	"identifier": "com.nodame.minideen",
 	"namespace": "minideen",
+	"github": "https://github.com/dubhater/vapoursynth-minideen",
 	"releases": [
 		{
 			"version": "v1",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-minideen/releases/download/v1/vapoursynth-minideen-v1-win32.7z",
-				"files": [
-					"libminideen.dll"
-				],
-				"hash": {
-					"libminideen.dll": "3b89e3d7636c01db928402233509a98f2c865491ea898e964b3cbb8a70ec8dbf"
+				"files": {
+					"libminideen.dll": [
+						"libminideen.dll",
+						"3b89e3d7636c01db928402233509a98f2c865491ea898e964b3cbb8a70ec8dbf"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-minideen/releases/download/v1/vapoursynth-minideen-v1-win64.7z",
-				"files": [
-					"libminideen.dll"
-				],
-				"hash": {
-					"libminideen.dll": "a6e220da8bfdece8fcac3acdbaeb7f2f40e8b1951a394f17c5a882aabe6ba081"
+				"files": {
+					"libminideen.dll": [
+						"libminideen.dll",
+						"a6e220da8bfdece8fcac3acdbaeb7f2f40e8b1951a394f17c5a882aabe6ba081"
+					]
 				}
 			}
 		}

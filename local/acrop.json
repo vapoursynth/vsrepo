@@ -1,30 +1,31 @@
 {
 	"name": "autocrop",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "AutoCrop for Vapoursynth",
 	"website": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-autocrop",
 	"category": "Others",
 	"identifier": "autocrop.infiistgott.info",
 	"namespace": "acrop",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-autocrop",
 	"releases": [
 		{
 			"version": "0.1",
 			"win32": {
 				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-autocrop/releases/download/0.1/AutoCrop.zip",
-				"files": [
-					"AutoCrop/32bit/autocrop.dll"
-				],
-				"hash": {
-					"autocrop.dll": "6aabc63e86e744e3695d4df91e351022b1b8e7e74f64c0df5662a142b223d2af"
+				"files": {
+					"autocrop.dll": [
+						"AutoCrop/32bit/autocrop.dll",
+						"6aabc63e86e744e3695d4df91e351022b1b8e7e74f64c0df5662a142b223d2af"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-autocrop/releases/download/0.1/AutoCrop.zip",
-				"files": [
-					"AutoCrop/64bit/autocrop.dll"
-				],
-				"hash": {
-					"autocrop.dll": "112177ac477e5f7e0db62494c8ef2122647a8be7396fd886ea8ff8501f8f0643"
+				"files": {
+					"autocrop.dll": [
+						"AutoCrop/64bit/autocrop.dll",
+						"112177ac477e5f7e0db62494c8ef2122647a8be7396fd886ea8ff8501f8f0643"
+					]
 				}
 			}
 		}

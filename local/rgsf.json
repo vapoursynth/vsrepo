@@ -1,31 +1,32 @@
 {
 	"name": "RGVS (float)",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "RGVS Single Precision",
 	"website": "https://github.com/IFeelBloated/RGSF",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172270",
 	"category": "Denoising",
 	"identifier": "com.nodame.rgsf",
 	"namespace": "rgsf",
+	"github": "https://github.com/IFeelBloated/RGSF",
 	"releases": [
 		{
 			"version": "r5",
 			"win32": {
 				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r5/RGSF.7z",
-				"files": [
-					"RGSF_ia32.dll"
-				],
-				"hash": {
-					"RGSF_ia32.dll": "0cd32dc43807c42d0cb5e6629199dc1916d932681c2c2f1295b24a6027eb0d1e"
+				"files": {
+					"RGSF_ia32.dll": [
+						"RGSF_ia32.dll",
+						"0cd32dc43807c42d0cb5e6629199dc1916d932681c2c2f1295b24a6027eb0d1e"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r5/RGSF.7z",
-				"files": [
-					"RGSF_x64.dll"
-				],
-				"hash": {
-					"RGSF_x64.dll": "6173b4760a1aca09b23c0ae1b26238c3eb3eee955c25d5011254114ab020ab49"
+				"files": {
+					"RGSF_x64.dll": [
+						"RGSF_x64.dll",
+						"6173b4760a1aca09b23c0ae1b26238c3eb3eee955c25d5011254114ab020ab49"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r4",
 			"win32": {
 				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r4/RGSF.7z",
-				"files": [
-					"RGSF_IA32.dll"
-				],
-				"hash": {
-					"RGSF_IA32.dll": "9ff3ff23a0e965fdf0096636f59017fb3d27568f9a5c8d0e5b43fddfa02ab747"
+				"files": {
+					"RGSF_IA32.dll": [
+						"RGSF_IA32.dll",
+						"9ff3ff23a0e965fdf0096636f59017fb3d27568f9a5c8d0e5b43fddfa02ab747"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r4/RGSF.7z",
-				"files": [
-					"RGSF_x64.dll"
-				],
-				"hash": {
-					"RGSF_x64.dll": "2113a4c8347f3134f5398659ca93b546f1e41e8faf8ee299045bdadd30026dab"
+				"files": {
+					"RGSF_x64.dll": [
+						"RGSF_x64.dll",
+						"2113a4c8347f3134f5398659ca93b546f1e41e8faf8ee299045bdadd30026dab"
+					]
 				}
 			}
 		},

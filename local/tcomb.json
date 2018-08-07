@@ -1,31 +1,32 @@
 {
 	"name": "TComb",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "A temporal comb filter, it reduces rainbowing and dot crawl artifacts in static areas of the picture",
 	"website": "https://github.com/dubhater/vapoursynth-tcomb",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171124",
 	"category": "Dot Crawl and Rainbows",
 	"identifier": "com.nodame.tcomb",
 	"namespace": "tcomb",
+	"github": "https://github.com/dubhater/vapoursynth-tcomb",
 	"releases": [
 		{
 			"version": "v3",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v3/vapoursynth-tcomb-v3-win32.7z",
-				"files": [
-					"libtcomb.dll"
-				],
-				"hash": {
-					"libtcomb.dll": "a827efe5fdaf334b5092c7178ab938da8109861f5ecd1be6b80a6b3bdc548206"
+				"files": {
+					"libtcomb.dll": [
+						"libtcomb.dll",
+						"a827efe5fdaf334b5092c7178ab938da8109861f5ecd1be6b80a6b3bdc548206"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v3/vapoursynth-tcomb-v3-win64.7z",
-				"files": [
-					"libtcomb.dll"
-				],
-				"hash": {
-					"libtcomb.dll": "1641027a3930629ca0317d7467330d6a91639b1d0c8bc34c4a6cb234876a4222"
+				"files": {
+					"libtcomb.dll": [
+						"libtcomb.dll",
+						"1641027a3930629ca0317d7467330d6a91639b1d0c8bc34c4a6cb234876a4222"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "v2",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v2/vapoursynth-tcomb-v2-win32.7z",
-				"files": [
-					"libtcomb.dll"
-				],
-				"hash": {
-					"libtcomb.dll": "7347b2dbcfd5b1d4a3fd23c03acb7e8a6a14128126351504d28254d36ba0ca39"
+				"files": {
+					"libtcomb.dll": [
+						"libtcomb.dll",
+						"7347b2dbcfd5b1d4a3fd23c03acb7e8a6a14128126351504d28254d36ba0ca39"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v2/vapoursynth-tcomb-v2-win64.7z",
-				"files": [
-					"libtcomb.dll"
-				],
-				"hash": {
-					"libtcomb.dll": "c935cc4544603fa50bbeb25cf54c463f6c143c4883dd24af32d904b57e449462"
+				"files": {
+					"libtcomb.dll": [
+						"libtcomb.dll",
+						"c935cc4544603fa50bbeb25cf54c463f6c143c4883dd24af32d904b57e449462"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "v1.0",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v1.0/vapoursynth-tcomb-v1.0-win32.7z",
-				"files": [
-					"libtcomb.dll"
-				],
-				"hash": {
-					"libtcomb.dll": "61e4c5b3121264c72c5d2e43d6f5fafa4c5590b1a5b09c5e2d7e52b6ef5ee078"
+				"files": {
+					"libtcomb.dll": [
+						"libtcomb.dll",
+						"61e4c5b3121264c72c5d2e43d6f5fafa4c5590b1a5b09c5e2d7e52b6ef5ee078"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v1.0/vapoursynth-tcomb-v1.0-win64.7z",
-				"files": [
-					"libtcomb.dll"
-				],
-				"hash": {
-					"libtcomb.dll": "32da672a49352cdaa4440ac1e90f249ff32528189e9e0a2f6e98b9e0f3f82d1a"
+				"files": {
+					"libtcomb.dll": [
+						"libtcomb.dll",
+						"32da672a49352cdaa4440ac1e90f249ff32528189e9e0a2f6e98b9e0f3f82d1a"
+					]
 				}
 			}
 		}

@@ -6,13 +6,30 @@
 	"category": "Scripts",
 	"identifier": "kagefunc",
 	"modulename": "kagefunc",
-	"dependencies": ["mvsfunc", "fvsfunc", "tegaf.asi.xe", "fmtconv", "com.invalid.identifier.retinex", "com.vapoursynth.bm3d", "com.Khanattila.KNLMeansCL", "com.holywu.tcanny", "com.holywu.addgrain"],
-	"releases": [{
-		"version": "git:1e135a2",
-		"script": {
-			"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/kagefunc/1e135a2ab2ad2e2431c071804a09dd616ebbe40e/kagefunc.py",
-			"files": ["kagefunc.py"],
-			"hash": { "kagefunc.py": "0c55d14f4ab5df152d19a575cf6da72f413e6cafa1dbd3ef7a52c5dd3c9c93be" }
+	"github": "https://github.com/Irrational-Encoding-Wizardry/kagefunc",
+	"dependencies": [
+		"mvsfunc",
+		"fvsfunc",
+		"tegaf.asi.xe",
+		"fmtconv",
+		"com.invalid.identifier.retinex",
+		"com.vapoursynth.bm3d",
+		"com.Khanattila.KNLMeansCL",
+		"com.holywu.tcanny",
+		"com.holywu.addgrain"
+	],
+	"releases": [
+		{
+			"version": "git:1e135a2",
+			"script": {
+				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/kagefunc/1e135a2ab2ad2e2431c071804a09dd616ebbe40e/kagefunc.py",
+				"files": {
+					"kagefunc.py": [
+						"kagefunc.py",
+						"0c55d14f4ab5df152d19a575cf6da72f413e6cafa1dbd3ef7a52c5dd3c9c93be"
+					]
+				}
+			}
 		}
-	}]
+	]
 }

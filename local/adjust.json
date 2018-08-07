@@ -6,12 +6,19 @@
 	"category": "Script",
 	"identifier": "adjust",
 	"modulename": "adjust",
-	"releases": [{
-		"version": "v1",
-		"script": {
-			"url": "https://github.com/dubhater/vapoursynth-adjust/archive/v1.zip",
-			"files": ["vapoursynth-adjust-1/adjust.py"],
-			"hash": { "adjust.py": "705389396713b9974b7f18eb75887d8ac6b36eef8cc9ab8ff4ce185d48aafd94" }
+	"github": "https://github.com/dubhater/vapoursynth-adjust",
+	"releases": [
+		{
+			"version": "v1",
+			"script": {
+				"url": "https://github.com/dubhater/vapoursynth-adjust/archive/v1.zip",
+				"files": {
+					"adjust.py": [
+						"vapoursynth-adjust-1/adjust.py",
+						"705389396713b9974b7f18eb75887d8ac6b36eef8cc9ab8ff4ce185d48aafd94"
+					]
+				}
+			}
 		}
-	}]
+	]
 }

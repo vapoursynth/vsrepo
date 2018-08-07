@@ -7,6 +7,7 @@
 	"category": "Resizing and Format Conversion",
 	"identifier": "descale",
 	"modulename": "descale",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale",
 	"dependencies": [
 		"tegaf.asi.xe"
 	],
@@ -15,11 +16,11 @@
 			"version": "r2",
 			"script": {
 				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r2/vapoursynth-descale-r2-win64.zip",
-				"files": [
-					"descale.py"
-				],
-				"hash": {
-					"descale.py": "34329b45a03a4ad787528a279ab5b36152cdab15eafcfcf1d189a0e0b745088e"
+				"files": {
+					"descale.py": [
+						"descale.py",
+						"34329b45a03a4ad787528a279ab5b36152cdab15eafcfcf1d189a0e0b745088e"
+					]
 				}
 			}
 		},
@@ -27,11 +28,11 @@
 			"version": "r1",
 			"script": {
 				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r1/vapoursynth-descale-r1-win64.zip",
-				"files": [
-					"descale.py"
-				],
-				"hash": {
-					"descale.py": "a91306d1c870d634896db55043c29599f20d0b5f25b4ab432f8a6760c015de51"
+				"files": {
+					"descale.py": [
+						"descale.py",
+						"a91306d1c870d634896db55043c29599f20d0b5f25b4ab432f8a6760c015de51"
+					]
 				}
 			}
 		}

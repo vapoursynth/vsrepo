@@ -1,31 +1,32 @@
 {
 	"name": "TCanny",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Canny edge detection",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172158",
 	"category": "Other",
 	"identifier": "com.holywu.tcanny",
 	"namespace": "tcanny",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny",
 	"releases": [
 		{
 			"version": "r10",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r10/TCanny-r10.7z",
-				"files": [
-					"Win32/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "92a7b9dff0754a15eb30da7a073720066be82c844c1d99223ef6eecbb5868bf3"
+				"files": {
+					"TCanny.dll": [
+						"Win32/TCanny.dll",
+						"92a7b9dff0754a15eb30da7a073720066be82c844c1d99223ef6eecbb5868bf3"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r10/TCanny-r10.7z",
-				"files": [
-					"Win64/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "dc29ec7746f60030e4d9e625d28052f62f7ecf9c35176398f54ca98ec9a43439"
+				"files": {
+					"TCanny.dll": [
+						"Win64/TCanny.dll",
+						"dc29ec7746f60030e4d9e625d28052f62f7ecf9c35176398f54ca98ec9a43439"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "r9",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r9/TCanny-r9.7z",
-				"files": [
-					"Win32/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "13d12d32ff4c32015df0f6bf3ed8feec3d36c8e1b7553c584cdc98b6958a5cc5"
+				"files": {
+					"TCanny.dll": [
+						"Win32/TCanny.dll",
+						"13d12d32ff4c32015df0f6bf3ed8feec3d36c8e1b7553c584cdc98b6958a5cc5"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r9/TCanny-r9.7z",
-				"files": [
-					"Win64/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "28394df3c6739ff9ede9930c5bc7bd9ddce77901fc51ffe7a5a6578154413eef"
+				"files": {
+					"TCanny.dll": [
+						"Win64/TCanny.dll",
+						"28394df3c6739ff9ede9930c5bc7bd9ddce77901fc51ffe7a5a6578154413eef"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "r8",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r8/TCanny-r8.7z",
-				"files": [
-					"Win32/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "093eeb4df19889b45a06c909511e31dc2023ea1c811d1bd76ca08614debb4033"
+				"files": {
+					"TCanny.dll": [
+						"Win32/TCanny.dll",
+						"093eeb4df19889b45a06c909511e31dc2023ea1c811d1bd76ca08614debb4033"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r8/TCanny-r8.7z",
-				"files": [
-					"Win64/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "8c3ed3cc0c91d19f313849af558bb83900e41b2e49b99a7085919fcb9ac17f09"
+				"files": {
+					"TCanny.dll": [
+						"Win64/TCanny.dll",
+						"8c3ed3cc0c91d19f313849af558bb83900e41b2e49b99a7085919fcb9ac17f09"
+					]
 				}
 			}
 		},
@@ -75,20 +76,20 @@
 			"version": "r7",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r7/TCanny-r7.7z",
-				"files": [
-					"Win32/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "7f51962aea1c9e36e50dbc21487fc1db8d0e48e6980615afc9bdf69592f5a417"
+				"files": {
+					"TCanny.dll": [
+						"Win32/TCanny.dll",
+						"7f51962aea1c9e36e50dbc21487fc1db8d0e48e6980615afc9bdf69592f5a417"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r7/TCanny-r7.7z",
-				"files": [
-					"Win64/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "c1ab6b1edbb93895620d091bc020176218b269a23bf0dddae16fcc3dfdb583f0"
+				"files": {
+					"TCanny.dll": [
+						"Win64/TCanny.dll",
+						"c1ab6b1edbb93895620d091bc020176218b269a23bf0dddae16fcc3dfdb583f0"
+					]
 				}
 			}
 		},
@@ -99,20 +100,20 @@
 			"version": "r5",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r5/TCanny-r5.7z",
-				"files": [
-					"Win32/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "f108db646806eea634009f09aea784dbbce9e0d9f745ab196c3bf27406bc9ab6"
+				"files": {
+					"TCanny.dll": [
+						"Win32/TCanny.dll",
+						"f108db646806eea634009f09aea784dbbce9e0d9f745ab196c3bf27406bc9ab6"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r5/TCanny-r5.7z",
-				"files": [
-					"Win64/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "b5ca9a5910625264e6fa31981915fa241ce91b4c53d8a4a838fe37bc0321c317"
+				"files": {
+					"TCanny.dll": [
+						"Win64/TCanny.dll",
+						"b5ca9a5910625264e6fa31981915fa241ce91b4c53d8a4a838fe37bc0321c317"
+					]
 				}
 			}
 		},
@@ -120,20 +121,20 @@
 			"version": "r4",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r4/TCanny-r4.7z",
-				"files": [
-					"Win32/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "3682313cb946b8a8286143da875e74b294f7002495067ce9997aa967246694f2"
+				"files": {
+					"TCanny.dll": [
+						"Win32/TCanny.dll",
+						"3682313cb946b8a8286143da875e74b294f7002495067ce9997aa967246694f2"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r4/TCanny-r4.7z",
-				"files": [
-					"Win64/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "402000dd0b9e78037b407bdc85b8ac6152baa2ef7f762e29abf8cd7030756a51"
+				"files": {
+					"TCanny.dll": [
+						"Win64/TCanny.dll",
+						"402000dd0b9e78037b407bdc85b8ac6152baa2ef7f762e29abf8cd7030756a51"
+					]
 				}
 			}
 		},
@@ -141,20 +142,20 @@
 			"version": "r3",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r3/TCanny-r3.7z",
-				"files": [
-					"Win32/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "1d3a876a9e547b4aecdaa539c853ac78cbffdad3f8e72bc3108e78bdcd2380fa"
+				"files": {
+					"TCanny.dll": [
+						"Win32/TCanny.dll",
+						"1d3a876a9e547b4aecdaa539c853ac78cbffdad3f8e72bc3108e78bdcd2380fa"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r3/TCanny-r3.7z",
-				"files": [
-					"Win64/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "04d88bfaacd392efd8d5219ed9832c5125b9f23326c8910f998288dbfc8a2ca5"
+				"files": {
+					"TCanny.dll": [
+						"Win64/TCanny.dll",
+						"04d88bfaacd392efd8d5219ed9832c5125b9f23326c8910f998288dbfc8a2ca5"
+					]
 				}
 			}
 		},
@@ -162,20 +163,20 @@
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r2/TCanny-r2.7z",
-				"files": [
-					"Win32/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "4653ff84e117be41ecad21da036ca9c315a1553f9047e431521e7f954010b0f3"
+				"files": {
+					"TCanny.dll": [
+						"Win32/TCanny.dll",
+						"4653ff84e117be41ecad21da036ca9c315a1553f9047e431521e7f954010b0f3"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r2/TCanny-r2.7z",
-				"files": [
-					"Win64/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "f38e65230fbe53e4d1af076d95eeae16c4f0c268c6f468e716663e591a16e267"
+				"files": {
+					"TCanny.dll": [
+						"Win64/TCanny.dll",
+						"f38e65230fbe53e4d1af076d95eeae16c4f0c268c6f468e716663e591a16e267"
+					]
 				}
 			}
 		},
@@ -183,20 +184,20 @@
 			"version": "r1",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r1/TCanny-r1.7z",
-				"files": [
-					"Win32/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "1e0069e0736a49e1fd0b5fd6350aa798994b3daa7ca18205193783c012a29966"
+				"files": {
+					"TCanny.dll": [
+						"Win32/TCanny.dll",
+						"1e0069e0736a49e1fd0b5fd6350aa798994b3daa7ca18205193783c012a29966"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r1/TCanny-r1.7z",
-				"files": [
-					"Win64/TCanny.dll"
-				],
-				"hash": {
-					"TCanny.dll": "df7a3c1a39f56e9078d79189b3b559ccc59a5fc37684b84f12d95aeb19fe740c"
+				"files": {
+					"TCanny.dll": [
+						"Win64/TCanny.dll",
+						"df7a3c1a39f56e9078d79189b3b559ccc59a5fc37684b84f12d95aeb19fe740c"
+					]
 				}
 			}
 		}

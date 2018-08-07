@@ -1,31 +1,32 @@
 {
 	"name": "MotionMask",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "MotionMask creates a mask of moving pixels. Every output pixel will be set to the absolute difference between the current frame and the previous frame.",
 	"website": "https://github.com/dubhater/vapoursynth-motionmask",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175587",
 	"category": "Others",
 	"identifier": "com.nodame.motionmask",
 	"namespace": "motionmask",
+	"github": "https://github.com/dubhater/vapoursynth-motionmask",
 	"releases": [
 		{
 			"version": "v2",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-motionmask/releases/download/v2/vapoursynth-motionmask-v2-win32.7z",
-				"files": [
-					"libmotionmask.dll"
-				],
-				"hash": {
-					"libmotionmask.dll": "ead669a875cc505a53844d6e1babb642e0a43738ab5cbfbb1a2a7d4667391c14"
+				"files": {
+					"libmotionmask.dll": [
+						"libmotionmask.dll",
+						"ead669a875cc505a53844d6e1babb642e0a43738ab5cbfbb1a2a7d4667391c14"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-motionmask/releases/download/v2/vapoursynth-motionmask-v2-win64.7z",
-				"files": [
-					"libmotionmask.dll"
-				],
-				"hash": {
-					"libmotionmask.dll": "9d63a09eca226b1d035e62c227847ec30ce3bc06ecb6ff44431bbccb1f51b2ee"
+				"files": {
+					"libmotionmask.dll": [
+						"libmotionmask.dll",
+						"9d63a09eca226b1d035e62c227847ec30ce3bc06ecb6ff44431bbccb1f51b2ee"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "v1",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-motionmask/releases/download/v1/vapoursynth-motionmask-v1-win32.7z",
-				"files": [
-					"libmotionmask.dll"
-				],
-				"hash": {
-					"libmotionmask.dll": "4b5ab5099b1433334fc4fc35b837217f620eb9a2e362b90c6508397167f508fa"
+				"files": {
+					"libmotionmask.dll": [
+						"libmotionmask.dll",
+						"4b5ab5099b1433334fc4fc35b837217f620eb9a2e362b90c6508397167f508fa"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/dubhater/vapoursynth-motionmask/releases/download/v1/vapoursynth-motionmask-v1-win64.7z",
-				"files": [
-					"libmotionmask.dll"
-				],
-				"hash": {
-					"libmotionmask.dll": "ba04784182c59fc94339a353bd014559a955807e90fcf9e4174b6d621d9987b4"
+				"files": {
+					"libmotionmask.dll": [
+						"libmotionmask.dll",
+						"ba04784182c59fc94339a353bd014559a955807e90fcf9e4174b6d621d9987b4"
+					]
 				}
 			}
 		}

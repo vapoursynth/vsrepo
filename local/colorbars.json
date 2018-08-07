@@ -1,30 +1,31 @@
 {
 	"name": "ColorBars",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "SMPTE RP 219-2:2016 and ITU-R BT.2111 color bar generator for VapourSynth.",
 	"website": "https://github.com/ifb/vapoursynth-colorbars",
 	"category": "Source/Output",
 	"identifier": "com.ifb.colorbars",
 	"namespace": "colorbars",
+	"github": "https://github.com/ifb/vapoursynth-colorbars",
 	"releases": [
 		{
 			"version": "R2",
 			"win32": {
 				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R2/colorbars-R2.7z",
-				"files": [
-					"Win32/colorbars.dll"
-				],
-				"hash": {
-					"colorbars.dll": "acf9ff10995d37b19b4e2a38c8a539bfa07a1ab08c86e21d172b45c4fccf4886"
+				"files": {
+					"colorbars.dll": [
+						"Win32/colorbars.dll",
+						"acf9ff10995d37b19b4e2a38c8a539bfa07a1ab08c86e21d172b45c4fccf4886"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R2/colorbars-R2.7z",
-				"files": [
-					"Win64/colorbars.dll"
-				],
-				"hash": {
-					"colorbars.dll": "eda2b63b72128d44a74aa146059f783ebd9942c745031388486083151011ce42"
+				"files": {
+					"colorbars.dll": [
+						"Win64/colorbars.dll",
+						"eda2b63b72128d44a74aa146059f783ebd9942c745031388486083151011ce42"
+					]
 				}
 			}
 		},
@@ -32,20 +33,20 @@
 			"version": "R1",
 			"win32": {
 				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R1/colorbars-R1.7z",
-				"files": [
-					"Win32/colorbars.dll"
-				],
-				"hash": {
-					"colorbars.dll": "d5d11ca83014d4debc4158741dfe0f1ca8d76c12b68b5ec42bd99b3568f49d1b"
+				"files": {
+					"colorbars.dll": [
+						"Win32/colorbars.dll",
+						"d5d11ca83014d4debc4158741dfe0f1ca8d76c12b68b5ec42bd99b3568f49d1b"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R1/colorbars-R1.7z",
-				"files": [
-					"Win64/colorbars.dll"
-				],
-				"hash": {
-					"colorbars.dll": "1964a12a98fe5c1f8e5d66d3212b9f77248bf245f50f13b537de9d351a21c7ba"
+				"files": {
+					"colorbars.dll": [
+						"Win64/colorbars.dll",
+						"1964a12a98fe5c1f8e5d66d3212b9f77248bf245f50f13b537de9d351a21c7ba"
+					]
 				}
 			}
 		}

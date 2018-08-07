@@ -1,30 +1,31 @@
 {
 	"name": "BezierCurve",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Vapoursynth-BezierCurve is a plugin which allow you to adjust a clip by specifying a quadratic or a cubic bezier curve.",
 	"website": "https://github.com/kewenyu/VapourSynth-BezierCurve",
 	"category": "Others",
 	"identifier": "com.kewenyu.bezier",
 	"namespace": "bezier",
+	"github": "https://github.com/kewenyu/VapourSynth-BezierCurve",
 	"releases": [
 		{
 			"version": "r2",
 			"win32": {
 				"url": "https://github.com/kewenyu/VapourSynth-BezierCurve/releases/download/r2/VapourSynth-BezierCurve.zip",
-				"files": [
-					"VapourSynth-BezierCurve/msvc/x86/VapourSynth-BezierCurve.dll"
-				],
-				"hash": {
-					"VapourSynth-BezierCurve.dll": "fb85b49869ad83ad23386f16af0faf315ec7c4a4c15da24e7cce962d979f49a4"
+				"files": {
+					"VapourSynth-BezierCurve.dll": [
+						"VapourSynth-BezierCurve/msvc/x86/VapourSynth-BezierCurve.dll",
+						"fb85b49869ad83ad23386f16af0faf315ec7c4a4c15da24e7cce962d979f49a4"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/kewenyu/VapourSynth-BezierCurve/releases/download/r2/VapourSynth-BezierCurve.zip",
-				"files": [
-					"VapourSynth-BezierCurve/msvc/x64/VapourSynth-BezierCurve.dll"
-				],
-				"hash": {
-					"VapourSynth-BezierCurve.dll": "15c339de40bb34e0c15666e034c3421635cf7cdccd33c19967a766b93b436af2"
+				"files": {
+					"VapourSynth-BezierCurve.dll": [
+						"VapourSynth-BezierCurve/msvc/x64/VapourSynth-BezierCurve.dll",
+						"15c339de40bb34e0c15666e034c3421635cf7cdccd33c19967a766b93b436af2"
+					]
 				}
 			}
 		}

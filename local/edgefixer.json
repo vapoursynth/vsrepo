@@ -1,31 +1,32 @@
 {
 	"name": "ContinuityFixer",
-	"type": "Plugin",
+	"type": "VSPlugin",
 	"description": "Can help repair damaged borders of frames. edgefixer port.",
 	"website": "https://github.com/MonoS/VS-ContinuityFixer",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171785",
 	"category": "Others",
 	"identifier": "com.monos.edgefixer",
 	"namespace": "edgefixer",
+	"github": "https://github.com/MonoS/VS-ContinuityFixer",
 	"releases": [
 		{
 			"version": "V6",
 			"win32": {
 				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V6/Continuity.Fixer.zip",
-				"files": [
-					"Continuity Fixer/32bit/continuity.dll"
-				],
-				"hash": {
-					"continuity.dll": "e06cc3917c69d2580c1b15011a5af01c8aaac4f098c31b91d7d76acae2039994"
+				"files": {
+					"continuity.dll": [
+						"Continuity Fixer/32bit/continuity.dll",
+						"e06cc3917c69d2580c1b15011a5af01c8aaac4f098c31b91d7d76acae2039994"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V6/Continuity.Fixer.zip",
-				"files": [
-					"Continuity Fixer/64bit/continuity.dll"
-				],
-				"hash": {
-					"continuity.dll": "6ed7d928cc9498ad14fab7c85819e729a059adced5b95d945ce48486f56b5dec"
+				"files": {
+					"continuity.dll": [
+						"Continuity Fixer/64bit/continuity.dll",
+						"6ed7d928cc9498ad14fab7c85819e729a059adced5b95d945ce48486f56b5dec"
+					]
 				}
 			}
 		},
@@ -33,20 +34,20 @@
 			"version": "V5.1",
 			"win32": {
 				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V5.1/Continuity.Fixer.zip",
-				"files": [
-					"Continuity Fixer/32bit/continuity.dll"
-				],
-				"hash": {
-					"continuity.dll": "159f819ec9f11f5efcd5c0a6251f7354b0084ebbfbc8c73678a69facf62e906e"
+				"files": {
+					"continuity.dll": [
+						"Continuity Fixer/32bit/continuity.dll",
+						"159f819ec9f11f5efcd5c0a6251f7354b0084ebbfbc8c73678a69facf62e906e"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V5.1/Continuity.Fixer.zip",
-				"files": [
-					"Continuity Fixer/64bit/continuity.dll"
-				],
-				"hash": {
-					"continuity.dll": "1df32ab22511a7e6259b4e990bf6e6ec8c9f06e6eb80fba7480500461caa162a"
+				"files": {
+					"continuity.dll": [
+						"Continuity Fixer/64bit/continuity.dll",
+						"1df32ab22511a7e6259b4e990bf6e6ec8c9f06e6eb80fba7480500461caa162a"
+					]
 				}
 			}
 		},
@@ -54,20 +55,20 @@
 			"version": "V5",
 			"win32": {
 				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V5/Continuity.Fixer.zip",
-				"files": [
-					"Continuity Fixer/32bit/continuity.dll"
-				],
-				"hash": {
-					"continuity.dll": "5dcf727e17a0baf11f0a92a119ee6f4ac698174f833369274cd34cf0c59c7fae"
+				"files": {
+					"continuity.dll": [
+						"Continuity Fixer/32bit/continuity.dll",
+						"5dcf727e17a0baf11f0a92a119ee6f4ac698174f833369274cd34cf0c59c7fae"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/V5/Continuity.Fixer.zip",
-				"files": [
-					"Continuity Fixer/64bit/continuity.dll"
-				],
-				"hash": {
-					"continuity.dll": "1120417d174c8f1bdcec08e00c17b3a52265a61bcdefdca3a0c8331c4913e195"
+				"files": {
+					"continuity.dll": [
+						"Continuity Fixer/64bit/continuity.dll",
+						"1120417d174c8f1bdcec08e00c17b3a52265a61bcdefdca3a0c8331c4913e195"
+					]
 				}
 			}
 		},
@@ -75,20 +76,20 @@
 			"version": "v4",
 			"win32": {
 				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/v4/Continuity.Fixer.zip",
-				"files": [
-					"Continuity Fixer/32bit/continuity.dll"
-				],
-				"hash": {
-					"continuity.dll": "2914f219ccc2e7aee132cc3f468a92af8ed07e4e109e3ec03c2f4aa406ef97a3"
+				"files": {
+					"continuity.dll": [
+						"Continuity Fixer/32bit/continuity.dll",
+						"2914f219ccc2e7aee132cc3f468a92af8ed07e4e109e3ec03c2f4aa406ef97a3"
+					]
 				}
 			},
 			"win64": {
 				"url": "https://github.com/MonoS/VS-ContinuityFixer/releases/download/v4/Continuity.Fixer.zip",
-				"files": [
-					"Continuity Fixer/64bit/continuity.dll"
-				],
-				"hash": {
-					"continuity.dll": "01aff1e78fbbef9fbf377b80fb842476dcce0559f05e0047b2dcdd8230f022c1"
+				"files": {
+					"continuity.dll": [
+						"Continuity Fixer/64bit/continuity.dll",
+						"01aff1e78fbbef9fbf377b80fb842476dcce0559f05e0047b2dcdd8230f022c1"
+					]
 				}
 			}
 		}

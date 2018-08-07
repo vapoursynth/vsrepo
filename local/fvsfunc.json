@@ -12,7 +12,7 @@
 		"mvsfunc",
 		"muvsfunc",
 		"nnedi3_rpow2",
-		"nnedi3",
+		"com.deinterlace.nnedi3",
 		"fmtconv",
 		"com.invalid.identifier.bilateral",
 		"com.wolframrhodium.bilateralGPU",

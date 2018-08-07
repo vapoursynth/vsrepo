@@ -24,7 +24,7 @@
 		"com.Khanattila.KNLMeansCL",
 		"com.holywu.ttempsmooth",
 		"com.holywu.ctmf",
-		"fft3dfilter",
+		"systems.innocent.fft3dfilter",
 		"com.holywu.addgrain",
 		"com.vapoursynth.hqdn3d"
 	],

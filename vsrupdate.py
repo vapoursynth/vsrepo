@@ -235,7 +235,7 @@ def update_package(name):
         else:
             print('Only github projects supported, ' + name + ' not scanned')
 
-def verify_package(name):
+def verify_package(name, existing_identifiers):
     with open('local/' + name + '.json', 'r', encoding='utf-8') as ml:
         pfile = json.load(ml)
         for key in pfile.keys():
@@ -251,6 +251,10 @@ def verify_package(name):
             raise Exception('Scripts must have modulename, not namespace: ' + name)
         if pfile['category'] not in ('Scripts', 'Plugin Dependency', 'Resizing and Format Conversion', 'Other', 'Dot Crawl and Rainbows', 'Denoising', 'Deinterlacing', 'Inverse Telecine', 'Source/Output', 'Subtitles'):
             raise Exception('Not allowed catogry in ' + name + ': ' + pfile['category'])
+        if 'dependencies' in pfile:
+            for dep in pfile['dependencies']:
+                if dep not in existing_identifiers:
+                    raise Exception('Referenced unknown identifier ' + dep + ' in ' + name)
 
 if args.operation == 'compile':
     combined = []
@@ -287,9 +291,18 @@ elif args.operation == 'update-local':
     else:
         update_package(args.package[0])
 elif args.operation == 'verify-local':
+    existing_identifiers = []
+    for f in os.scandir('local'):
+        if f.is_file() and f.path.endswith('.json'):
+            with open(f.path, 'r', encoding='utf-8') as ml:
+                pfile = json.load(ml)
+                if pfile['identifier'] in existing_identifiers:
+                    raise Exception('Duplicate identifier: ' + pfile['identifier'])
+                existing_identifiers.append(pfile['identifier'])
     if args.package is None:
         for f in os.scandir('local'):
             if f.is_file() and f.path.endswith('.json'):
-                verify_package(os.path.splitext(os.path.basename(f))[0])
+                verify_package(os.path.splitext(os.path.basename(f))[0], existing_identifiers)
     else:
-        verify_package(args.package[0])
+        verify_package(args.package[0], existing_identifiers)
+        

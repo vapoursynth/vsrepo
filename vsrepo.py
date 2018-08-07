@@ -299,12 +299,14 @@ def install_files(p):
         tf = open(tffd, mode='wb')
         tf.write(data)
         tf.close()
-        for install_fn, src_info in install_rel[bin_name]['files']:
-            result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, src_info[0]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        for install_fn in install_rel[bin_name]['files']:
+            fn_props =install_rel[bin_name]['files'][install_fn]
+            result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, fn_props[0]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             result.check_returncode()
-            hash_result = check_hash(result.stdout, src_info[1])
+            hash_result = check_hash(result.stdout, fn_props[1])
             if not hash_result[0]:
-                raise Exception('Hash mismatch got ' + hash_result[1] + ' but expected ' + hash_result[2])
+                raise Exception('Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+            os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
             with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
                 outfile.write(result.stdout)
         os.remove(tfpath)

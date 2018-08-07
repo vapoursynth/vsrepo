@@ -4,7 +4,7 @@
 	"description": "MVTools port",
 	"website": "https://github.com/dubhater/vapoursynth-mvtools",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171207",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.nodame.mvtools",
 	"namespace": "mv",
 	"github": "https://github.com/dubhater/vapoursynth-mvtools",

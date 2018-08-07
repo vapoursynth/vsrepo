@@ -4,7 +4,7 @@
 	"description": "Port of the Avisynth AddGrain filter",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171073",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.holywu.addgrain",
 	"namespace": "grain",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain",

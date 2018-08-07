@@ -3,7 +3,7 @@
 	"type": "PyScript",
 	"description": "Vapoursynth script for bi-directional, linear blending of a frame over a specified range with a target color.",
 	"website": "https://github.com/tormaid/colorfade",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "colorfade",
 	"modulename": "colorfade",
 	"github": "https://github.com/tormaid/colorfade",

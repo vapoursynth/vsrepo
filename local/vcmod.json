@@ -4,7 +4,7 @@
 	"description": "Various filters such as histogram equalization, blur, and watershed segmentation",
 	"website": "http://www.avisynth.nl/users/vcmohan/vcmod/vcmod.html",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171414",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "in.vcmohan.mod",
 	"namespace": "vcmod",
 	"releases": [

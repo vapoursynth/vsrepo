@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"description": "A simple filter that fills the borders of a clip, without changing the clip's dimensions",
 	"website": "https://github.com/dubhater/vapoursynth-fillborders",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.nodame.fillborders",
 	"namespace": "fb",
 	"github": "https://github.com/dubhater/vapoursynth-fillborders",

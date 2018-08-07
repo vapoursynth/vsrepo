@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"description": "Vapoursynth-BezierCurve is a plugin which allow you to adjust a clip by specifying a quadratic or a cubic bezier curve.",
 	"website": "https://github.com/kewenyu/VapourSynth-BezierCurve",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.kewenyu.bezier",
 	"namespace": "bezier",
 	"github": "https://github.com/kewenyu/VapourSynth-BezierCurve",

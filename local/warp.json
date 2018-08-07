@@ -4,7 +4,7 @@
 	"description": "AWarpSharp2 sharpens edges by warping them.",
 	"website": "https://github.com/dubhater/vapoursynth-awarpsharp2",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172721",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.nodame.awarpsharp2",
 	"namespace": "warp",
 	"github": "https://github.com/dubhater/vapoursynth-awarpsharp2",

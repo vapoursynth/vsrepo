@@ -4,7 +4,7 @@
 	"description": "Constant Time Median Filtering",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171213",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.holywu.ctmf",
 	"namespace": "ctfm",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF",

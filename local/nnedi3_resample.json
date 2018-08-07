@@ -3,7 +3,7 @@
 	"type": "PyScript",
 	"description": "",
 	"website": "https://github.com/mawen1250/VapourSynth-script",
-	"category": "Script",
+	"category": "Resizing and Format Conversion",
 	"identifier": "nnedi3_resample",
 	"modulename": "nnedi3_resample",
 	"github": "https://github.com/mawen1250/VapourSynth-script",

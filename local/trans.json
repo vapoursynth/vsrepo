@@ -4,7 +4,7 @@
 	"description": "Numerous functions for transitons",
 	"website": "http://www.avisynth.nl/users/vcmohan/vcmove/vcmove.html",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172594",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "in.trans.vcm",
 	"namespace": "trans",
 	"releases": [

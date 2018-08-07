@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"description": "AutoCrop for Vapoursynth",
 	"website": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-autocrop",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "autocrop.infiistgott.info",
 	"namespace": "acrop",
 	"github": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-autocrop",

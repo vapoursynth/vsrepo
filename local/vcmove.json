@@ -4,7 +4,7 @@
 	"description": "Rotate, debarrel and other distortion correction filters",
 	"website": "http://www.avisynth.nl/users/vcmohan/vcmove/vcmove.html",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171414",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "in.vcmohan.move",
 	"namespace": "vcmove",
 	"releases": [

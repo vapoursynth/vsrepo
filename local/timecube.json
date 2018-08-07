@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"description": "SIMULTANEOUS 4-DAY TIME CUBE",
 	"website": "https://github.com/sekrit-twc/timecube",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "day.simultaneous.4",
 	"namespace": "timecube",
 	"github": "https://github.com/sekrit-twc/timecube",

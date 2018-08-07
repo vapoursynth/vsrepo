@@ -3,7 +3,7 @@
 	"type": "PyScript",
 	"description": "Enlarges images by powers of 2",
 	"website": "https://gist.github.com/4re/342624c9e1a144a696c6",
-	"category": "Script",
+	"category": "Resizing and Format Conversion",
 	"identifier": "nnedi3_rpow2",
 	"modulename": "nnedi3_rpow2",
 	"dependencies": [

@@ -4,7 +4,7 @@
 	"description": "Vine is a collection of a block/pixel matching based de-halo filter and a set of morphological filters.",
 	"website": "https://github.com/IFeelBloated/Vine",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173703",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "vine",
 	"modulename": "Vine",
 	"github": "https://github.com/IFeelBloated/Vine",

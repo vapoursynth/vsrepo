@@ -4,7 +4,7 @@
 	"description": "Plum is a sharpening/blind deconvolution suite with certain advanced features like Non-Local error, Block Matching, etc..",
 	"website": "https://github.com/IFeelBloated/Plum",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173775",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "plum",
 	"modulename": "Plum",
 	"github": "https://github.com/IFeelBloated/Plum",

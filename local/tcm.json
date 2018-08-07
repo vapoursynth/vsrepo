@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"description": "VapourSynth port of tp7's Avisynth plugin. Great solution if you need to build some masks on color values. Only 8 bit clips are allowed at this time.",
 	"website": "https://github.com/DJATOM/VapourSynth-TColorMask",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.djatom.tcm",
 	"namespace": "tcm",
 	"github": "https://github.com/DJATOM/VapourSynth-TColorMask",

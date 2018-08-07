@@ -4,7 +4,7 @@
 	"description": "MotionMask creates a mask of moving pixels. Every output pixel will be set to the absolute difference between the current frame and the previous frame.",
 	"website": "https://github.com/dubhater/vapoursynth-motionmask",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175587",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.nodame.motionmask",
 	"namespace": "motionmask",
 	"github": "https://github.com/dubhater/vapoursynth-motionmask",

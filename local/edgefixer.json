@@ -4,7 +4,7 @@
 	"description": "Can help repair damaged borders of frames. edgefixer port.",
 	"website": "https://github.com/MonoS/VS-ContinuityFixer",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171785",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.monos.edgefixer",
 	"namespace": "edgefixer",
 	"github": "https://github.com/MonoS/VS-ContinuityFixer",

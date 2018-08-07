@@ -4,7 +4,7 @@
 	"description": "Dynamic range compression",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171307",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.invalid.identifier.retinex",
 	"namespace": "retinex",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex",

@@ -4,7 +4,7 @@
 	"description": "Oyster is an experimental implement of the Blocking Matching concept, designed specifically for compression artifacts removal.",
 	"website": "https://github.com/IFeelBloated/Oyster",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173470",
-	"category": "Others",
+	"category": "Scripts",
 	"identifier": "oyster",
 	"modulename": "Oyster",
 	"github": "https://github.com/IFeelBloated/Oyster",

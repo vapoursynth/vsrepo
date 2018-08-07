@@ -4,7 +4,7 @@
 	"description": "h.264 style deblocking",
 	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock",
 	"doom9": "https://forum.doom9.org/showthread.php?t=170975",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.holywu.deblock",
 	"namespace": "deblock",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock",

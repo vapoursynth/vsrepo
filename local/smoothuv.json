@@ -4,7 +4,7 @@
 	"description": "A spatial derainbow filter",
 	"website": "https://github.com/dubhater/vapoursynth-smoothuv",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175520",
-	"category": "Dot Crawl and Rainbow removal",
+	"category": "Dot Crawl and Rainbows",
 	"identifier": "com.nodame.smoothuv",
 	"namespace": "smoothuv",
 	"github": "https://github.com/dubhater/vapoursynth-smoothuv",

@@ -4,7 +4,7 @@
 	"description": "Avisynth 32-bit proxy",
 	"website": "https://github.com/sekrit-twc/avsproxy",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175141",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "xxx.abc.avsproxy",
 	"namespace": "avsw",
 	"github": "https://github.com/sekrit-twc/avsproxy",

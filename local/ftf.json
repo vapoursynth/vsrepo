@@ -4,7 +4,7 @@
 	"description": "Fix Telecined Fades",
 	"website": "https://github.com/IFeelBloated/Fix-Telecined-Fades",
 	"doom9": "https://forum.doom9.org/showthread.php?t=174151",
-	"category": "Others",
+	"category": "Other",
 	"identifier": "com.deinterlace.ftf",
 	"namespace": "ftf",
 	"github": "https://github.com/IFeelBloated/Fix-Telecined-Fades",

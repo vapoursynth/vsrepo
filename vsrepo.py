@@ -285,14 +285,18 @@ def install_files(p):
     url = install_rel[bin_name]['url']   
     data = fetch_url_cached(url, p['name'] + ' ' + install_rel['version'])
     uninstall_files(p)
-    
-    if (len(install_rel[bin_name]['files']) == 1) and (install_rel[bin_name]['files'][0] == url.rsplit('/', 2)[-1]):
-        filename = install_rel[bin_name]['files'][0]
-        stripped_fn = filename.rsplit('/', 2)[-1]
-        hash_result = check_hash(data, install_rel[bin_name]['hash'][stripped_fn])
+
+    single_file = None
+    if len(install_rel[bin_name]['files']) == 1:
+        for key in install_rel[bin_name]['files']:       
+            single_file = (key, install_rel[bin_name]['files'][key][0], install_rel[bin_name]['files'][key][1])
+    if (single_file is not None) and (single_file[1] == url.rsplit('/', 2)[-1]):
+        install_fn = single_file[0]
+        hash_result = check_hash(data, single_file[2])
         if not hash_result[0]:
-            raise Exception('Hash mismatch got ' + hash_result[1] + ' but expected ' + hash_result[2])
-        with open(os.path.join(dest_path, stripped_fn), 'wb') as outfile:
+            raise Exception('Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+        os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
+        with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
             outfile.write(data)
     else:
         tffd, tfpath = tempfile.mkstemp(prefix='vsm')

@@ -32,16 +32,22 @@ import winreg
 import difflib
 import tempfile
 import platform
+import ftplib
 import tqdm
 
 if platform.system() != 'Windows':
     raise Exception('Windows required')
 
 parser = argparse.ArgumentParser(description='Package list generator for VSRepo')
-parser.add_argument('operation', choices=['compile', 'update-local'])
+parser.add_argument('operation', choices=['compile', 'update-local', 'upload'])
 parser.add_argument('-g', dest='git_token', nargs=1, help='OAuth access token for github')
 parser.add_argument('-p', dest='package', nargs=1, help='Package to update')
 parser.add_argument('-o', action='store_true', dest='overwrite', help='Overwrite existing package file')
+parser.add_argument('-host', dest='host', nargs=1, help='FTP Host')
+parser.add_argument('-user', dest='user', nargs=1, help='FTP User')
+parser.add_argument('-passwd', dest='passwd', nargs=1, help='FTP Password')
+parser.add_argument('-dir', dest='dir', nargs=1, help='FTP dir')
+
 args = parser.parse_args()
 
 cmd7zip_path = '7z.exe'
@@ -292,4 +298,12 @@ elif args.operation == 'update-local':
                 update_package(os.path.splitext(os.path.basename(f))[0])
     else:
         update_package(args.package[0])
-
+elif args.operation == 'upload':
+    with open('vspackages.json', 'rb') as pl:
+        with ftplib.FTP_TLS(host=args.host[0], user=args.user[0], passwd=args.passwd[0]) as ftp:
+            ftp.cwd(args.dir[0])
+            try:
+                ftp.delete('vspackages.zip')
+            except:
+                pass
+            ftp.storbinary('STOR vspackages.zip', pl)

@@ -1,0 +1,120 @@
+{
+	"name": "Waifu2x models",
+	"type": "VSPlugin",
+	"description": "Temporal chroma noise reducer",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc",
+	"category": "Plugin Dependency",
+	"identifier": "com.holywu.waifu2x-w2xc.models",
+	"namespace": "w2xc_models",
+	"releases": [
+		{
+			"version": "r6",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r6/Waifu2x-w2xc-models.7z",
+				"files": {
+					"models/anime_style_art/noise1_model.json": [
+						"models/anime_style_art/noise1_model.json",
+						"24d6df3858fbe5f6fb5528642bd1eaef07c269c318b36065eb41243e1e5c5ed4"
+					],
+					"models/anime_style_art/noise2_model.json": [
+						"models/anime_style_art/noise2_model.json",
+						"2ab408b8a191f7562a53adcdfc5b23863613c7662b7bb929fb61f7d3c987fed5"
+					],
+					"models/anime_style_art/noise3_model.json": [
+						"models/anime_style_art/noise3_model.json",
+						"0760c23986ec2e6f049981b69c99f808e60a991463cc5b59c63eebc658445c5f"
+					],
+					"models/anime_style_art/scale2.0x_model.json": [
+						"models/anime_style_art/scale2.0x_model.json",
+						"fe6455dd384c6720a82273bed725e117788a72866c86b3a9d2e313005097bfa2"
+					],
+					"models/anime_style_art_rgb/noise1_model.json": [
+						"models/anime_style_art_rgb/noise1_model.json",
+						"a7c3883f223acd5f48260713c6be20f91cc5a1465600608fb12586ab167fcf35"
+					],
+					"models/anime_style_art_rgb/noise2_model.json": [
+						"models/anime_style_art_rgb/noise2_model.json",
+						"993d1b72df810dfc90bfecc7f3d52ec2c02d45a52a6d0720395990f4ed5b6d54"
+					],
+					"models/anime_style_art_rgb/noise3_model.json": [
+						"models/anime_style_art_rgb/noise3_model.json",
+						"67306af5b67bb2e187d96f4d2eb143410ee229d3aea98e9c9aa93956b34281de"
+					],
+					"models/anime_style_art_rgb/scale2.0x_model.json": [
+						"models/anime_style_art_rgb/scale2.0x_model.json",
+						"e1894139313f2be77c8254a60ed14a8245ffe17d2df8c3ea47a59d1041dc6b38"
+					],
+					"models/photo/noise1_model.json": [
+						"models/photo/noise1_model.json",
+						"d77658f289565530ef81d08f5db3f750fa2110cc48dc6fb4562084f8d7286517"
+					],
+					"models/photo/noise2_model.json": [
+						"models/photo/noise2_model.json",
+						"c1fe0f263476a4a7467770065a54893b614091c579c29c56cd0eed42ad99f2c3"
+					],
+					"models/photo/noise3_model.json": [
+						"models/photo/noise3_model.json",
+						"1d36286df14635bfb1af3917c81422af72eff29e86809b92df2506fd78913399"
+					],
+					"models/photo/scale2.0x_model.json": [
+						"models/photo/scale2.0x_model.json",
+						"6b85229f1171b38619aad8fd212c6be34dd12f17dd3c1bad7ccc61d8b6f2f4f9"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r6/Waifu2x-w2xc-models.7z",
+				"files": {
+					"models/anime_style_art/noise1_model.json": [
+						"models/anime_style_art/noise1_model.json",
+						"24d6df3858fbe5f6fb5528642bd1eaef07c269c318b36065eb41243e1e5c5ed4"
+					],
+					"models/anime_style_art/noise2_model.json": [
+						"models/anime_style_art/noise2_model.json",
+						"2ab408b8a191f7562a53adcdfc5b23863613c7662b7bb929fb61f7d3c987fed5"
+					],
+					"models/anime_style_art/noise3_model.json": [
+						"models/anime_style_art/noise3_model.json",
+						"0760c23986ec2e6f049981b69c99f808e60a991463cc5b59c63eebc658445c5f"
+					],
+					"models/anime_style_art/scale2.0x_model.json": [
+						"models/anime_style_art/scale2.0x_model.json",
+						"fe6455dd384c6720a82273bed725e117788a72866c86b3a9d2e313005097bfa2"
+					],
+					"models/anime_style_art_rgb/noise1_model.json": [
+						"models/anime_style_art_rgb/noise1_model.json",
+						"a7c3883f223acd5f48260713c6be20f91cc5a1465600608fb12586ab167fcf35"
+					],
+					"models/anime_style_art_rgb/noise2_model.json": [
+						"models/anime_style_art_rgb/noise2_model.json",
+						"993d1b72df810dfc90bfecc7f3d52ec2c02d45a52a6d0720395990f4ed5b6d54"
+					],
+					"models/anime_style_art_rgb/noise3_model.json": [
+						"models/anime_style_art_rgb/noise3_model.json",
+						"67306af5b67bb2e187d96f4d2eb143410ee229d3aea98e9c9aa93956b34281de"
+					],
+					"models/anime_style_art_rgb/scale2.0x_model.json": [
+						"models/anime_style_art_rgb/scale2.0x_model.json",
+						"e1894139313f2be77c8254a60ed14a8245ffe17d2df8c3ea47a59d1041dc6b38"
+					],
+					"models/photo/noise1_model.json": [
+						"models/photo/noise1_model.json",
+						"d77658f289565530ef81d08f5db3f750fa2110cc48dc6fb4562084f8d7286517"
+					],
+					"models/photo/noise2_model.json": [
+						"models/photo/noise2_model.json",
+						"c1fe0f263476a4a7467770065a54893b614091c579c29c56cd0eed42ad99f2c3"
+					],
+					"models/photo/noise3_model.json": [
+						"models/photo/noise3_model.json",
+						"1d36286df14635bfb1af3917c81422af72eff29e86809b92df2506fd78913399"
+					],
+					"models/photo/scale2.0x_model.json": [
+						"models/photo/scale2.0x_model.json",
+						"6b85229f1171b38619aad8fd212c6be34dd12f17dd3c1bad7ccc61d8b6f2f4f9"
+					]
+				}
+			}
+		}
+	]
+}

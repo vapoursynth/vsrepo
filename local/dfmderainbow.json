@@ -3,7 +3,7 @@
 	"type": "PyScript",
 	"description": "DFMDerainbow is a derainbow function. DFMDerainbowMC performs motion compensation before calling DFMDerainbow.",
 	"website": "https://github.com/dubhater/vapoursynth-dfmderainbow",
-	"category": "Dot Crawl and Rainbow removal",
+	"category": "Dot Crawl and Rainbows",
 	"identifier": "dfmderainbow",
 	"modulename": "dfmderainbow",
 	"github": "https://github.com/dubhater/vapoursynth-dfmderainbow",

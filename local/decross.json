@@ -4,7 +4,7 @@
 	"description": "DeCross is a spatio-temporal cross color (rainbow) reduction filter",
 	"website": "https://github.com/dubhater/vapoursynth-decross",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175527",
-	"category": "Dot Crawl and Rainbow removal",
+	"category": "Dot Crawl and Rainbows",
 	"identifier": "com.nodame.decross",
 	"namespace": "decross",
 	"github": "https://github.com/dubhater/vapoursynth-decross",

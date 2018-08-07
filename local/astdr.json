@@ -3,7 +3,7 @@
 	"type": "PyScript",
 	"description": "ASTDR is a derainbow function. ASTDRmc performs motion compensation before calling ASTDR",
 	"website": "https://github.com/dubhater/vapoursynth-astdr",
-	"category": "Dot Crawl and Rainbow removal",
+	"category": "Dot Crawl and Rainbows",
 	"identifier": "ASTDR",
 	"modulename": "ASTDR",
 	"github": "https://github.com/dubhater/vapoursynth-astdr",

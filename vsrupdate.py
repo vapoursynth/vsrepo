@@ -179,7 +179,7 @@ def update_package(name):
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win32')
                                 new_rel_entry['win32'] = { 'url': new_url, 'files': {}}
                                 for fn in latest_rel['win32']['files']:
-                                    new_fn, digest = decompress_and_hash(temp_fn, fn)
+                                    new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win32']['files'][fn][0])
                                     new_rel_entry['win32']['files'][new_fn.rsplit('/', 2)[-1]] = [new_fn, digest]
                         except:
                             new_rel_entry.pop('win32', None)
@@ -191,7 +191,7 @@ def update_package(name):
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win64')
                                 new_rel_entry['win64'] = { 'url': new_url, 'files': {} }
                                 for fn in latest_rel['win64']['files']:
-                                    new_fn, digest = decompress_and_hash(temp_fn, fn)
+                                    new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win64']['files'][fn][0])
                                     new_rel_entry['win64']['files'][new_fn.rsplit('/', 2)[-1]] = [new_fn, digest]
                         except:
                             new_rel_entry.pop('win64', None)
@@ -208,7 +208,7 @@ def update_package(name):
                             temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
                             new_rel_entry['script'] = { 'url': new_url, 'files': {} }
                             for fn in latest_rel['script']['files']:
-                                new_fn, digest = decompress_and_hash(temp_fn, fn)
+                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0])
                                 new_rel_entry['script']['files'][new_fn.rsplit('/', 2)[-1]] = [new_fn, digest]
                         except:
                             new_rel_entry.pop('script', None)

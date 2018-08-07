@@ -1,0 +1,58 @@
+{
+	"name": "Waifu2x",
+	"type": "VSPlugin",
+	"description": "Temporal chroma noise reducer",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc",
+	"category": "Resizing and Format Conversion",
+	"identifier": "com.holywu.waifu2x-w2xc",
+	"namespace": "w2xc",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc",
+    "dependencies": ["com.holywu.waifu2x-w2xc.models"],
+	"releases": [
+		{
+			"version": "r6",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r6/Waifu2x-w2xc-r6.7z",
+				"files": {
+					"w2xc.dll": [
+						"Win32/w2xc.dll",
+						"44808e66dd7a0ccad98d3f3cf84e3cded5a057639bd5ba3257618316cdf6a829"
+					],
+					"Waifu2x-w2xc.dll": [
+						"Win32/Waifu2x-w2xc.dll",
+						"b8c31294aef89dc13d9bb05386ae8cbe8e45aba7c2fff8453f2677c57237adb9"
+					],
+					"libiomp5md.dll": [
+						"Win32/libiomp5md.dll",
+						"1d6ea864bfc594fbf3cec231664395a80c0e69950a5918a60e1d6559ffec3d78"
+					],
+					"svml_dispmd.dll": [
+						"Win32/svml_dispmd.dll",
+						"f7e33a0cbed26634c9b049082b6d767da65934f9751367795f4c73dec55cd516"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r6/Waifu2x-w2xc-r6.7z",
+				"files": {
+					"w2xc.dll": [
+						"Win64/w2xc.dll",
+						"3d54cb1335886f73e4fb114f3f97a87c8141a784602189c79c9c249155099ab8"
+					],
+					"Waifu2x-w2xc.dll": [
+						"Win64/Waifu2x-w2xc.dll",
+						"f910ebd012b5b3ff5545ebb1020d659b5abbe0efac757a7e05441c5bcaf418ab"
+					],
+					"libiomp5md.dll": [
+						"Win64/libiomp5md.dll",
+						"5f14c93bffc32b50ee291402f56453f22469e798fa086d472a2d3d87b93b9d36"
+					],
+					"svml_dispmd.dll": [
+						"Win64/svml_dispmd.dll",
+						"f21390c7f98a31feb44759b386ed0309100dea8c1c829b45a9f88b37263e9fe4"
+					]
+				}
+			}
+		}
+	]
+}

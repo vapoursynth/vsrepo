@@ -299,11 +299,12 @@ elif args.operation == 'update-local':
     else:
         update_package(args.package[0])
 elif args.operation == 'upload':
-    with open('vspackages.json', 'rb') as pl:
+    with open('vspackages.zip', 'rb') as pl:
         with ftplib.FTP_TLS(host=args.host[0], user=args.user[0], passwd=args.passwd[0]) as ftp:
             ftp.cwd(args.dir[0])
             try:
                 ftp.delete('vspackages.zip')
             except:
-                pass
+                print('Failed to delete vspackages.zip')
             ftp.storbinary('STOR vspackages.zip', pl)
+    print('Done')

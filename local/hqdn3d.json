@@ -9,6 +9,18 @@
 	"github": "https://github.com/theChaosCoder/vapoursynth-hqdn3d",
 	"releases": [
 		{
+			"version": "r2.0.1",
+			"win64": {
+				"url": "https://github.com/theChaosCoder/vapoursynth-hqdn3d/releases/download/r2.0.1/vapoursynth-hqdn3d-r2-win64.zip",
+				"files": {
+					"libhqdn3d.dll": [
+						"libhqdn3d.dll",
+						"5ca3b982b13824488d7ee2ac606d6f0f013e94a974b1c3118dc92713d1efcc43"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"win64": {
 				"url": "https://github.com/theChaosCoder/vapoursynth-hqdn3d/releases/download/r2/vapoursynth-hqdn3d-r2-win64.zip",

@@ -9,6 +9,27 @@
 	"github": "https://github.com/ifb/vapoursynth-tonemap",
 	"releases": [
 		{
+			"version": "R2",
+			"win32": {
+				"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R2/tonemap-r2-win32.7z",
+				"files": {
+					"tonemap.dll": [
+						"tonemap.dll",
+						"3cb64772358d61ad726021701c9229a17409b47bc5f849379cf451946ecb33e2"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R2/tonemap-r2-win64.7z",
+				"files": {
+					"tonemap.dll": [
+						"tonemap.dll",
+						"f93d2f5e46d9b45eb813478a0ed1babfc2a900c9f3f1afe47a13638bd953bee8"
+					]
+				}
+			}
+		},
+		{
 			"version": "R1",
 			"win32": {
 				"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R1/tonemap-r1-win32.7z",

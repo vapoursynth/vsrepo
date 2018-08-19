@@ -157,17 +157,18 @@ def update_package(name):
     with open('local/' + name + '.json', 'r', encoding='utf-8') as ml:
         pfile = json.load(ml)
         existing_rel_list = []
-        rel_order = []
         for rel in pfile['releases']:
             existing_rel_list.append(rel['version'])
-
+        rel_order = list(existing_rel_list)
+        
         if 'github' in pfile:
             url = get_git_api_url(pfile['github'])
             new_rels = {}
             apifile = json.loads(fetch_url(get_git_api_url(pfile['website']), pfile['name']))
             is_plugin = (pfile['type'] == 'VSPlugin')
             for rel in apifile:
-                rel_order.append(rel['tag_name'])
+                if rel['tag_name'] not in rel_order:
+                    rel_order.insert(0, rel['tag_name'])
                 if rel['tag_name'] not in existing_rel_list:
                     print(rel['tag_name'] + ' (new)')
                     zipball = rel['zipball_url']

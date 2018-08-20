@@ -18,6 +18,18 @@
 	],
 	"releases": [
 		{
+			"version": "v0.94",
+			"script": {
+				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.94",
+				"files": {
+					"hnwvsfunc.py": [
+						"Helenerineium-hnwvsfunc-6deee74/hnwvsfunc.py",
+						"38e4a3db8421bf4e8a812b137dc000bf5c969354b0316eae645f1bf6685b56a9"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.87",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.87",

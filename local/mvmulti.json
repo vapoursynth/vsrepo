@@ -12,16 +12,184 @@
 	],
 	"releases": [
 		{
-			"version": "git:7d5ee29",
+			"version": "r9",
 			"script": {
-				"url": "https://raw.githubusercontent.com/IFeelBloated/vapoursynth-mvtools-sf/7d5ee292cdfcdbbc317cd7d8c1b026a7c7de27b6/src/mvmulti.py",
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/r9",
 				"files": {
 					"mvmulti.py": [
-						"mvmulti.py",
+						"IFeelBloated-vapoursynth-mvtools-sf-7d5ee29/src/mvmulti.py",
 						"97ead4d5dee3f9a8a3fca31cadc1978f5cacf442c78bf198c84ab5de1e277dc2"
 					]
 				}
 			}
+		},
+		{
+			"version": "r8",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/r8",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-f2ea6c8/src/mvmulti.py",
+						"67ba30589f4e8598216d869a7116587152349087a72bd16ea4f4e15923bdfe1c"
+					]
+				}
+			}
+		},
+		{
+			"version": "r7",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/r7",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-1ed1c2a/src/mvmulti.py",
+						"67ba30589f4e8598216d869a7116587152349087a72bd16ea4f4e15923bdfe1c"
+					]
+				}
+			}
+		},
+		{
+			"version": "r6",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/r6",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-3c70356/src/mvmulti.py",
+						"dde5b4d0a6b1721aaa5c4a5e5bd9a7f47cc9163f2cb2a8f62d608048e27347ad"
+					]
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/r5",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-e549759/src/mvmulti.py",
+						"dde5b4d0a6b1721aaa5c4a5e5bd9a7f47cc9163f2cb2a8f62d608048e27347ad"
+					]
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/r4",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-365a197/src/mvmulti.py",
+						"dde5b4d0a6b1721aaa5c4a5e5bd9a7f47cc9163f2cb2a8f62d608048e27347ad"
+					]
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/r3",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-6999a97/src/mvmulti.py",
+						"39f4da36efba8f637e7f7b6b37547d20ffefd35d39eaf1237f4b4ca010752365"
+					]
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/r2",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-9280062/src/mvmulti.py",
+						"e9398d12f2536aaf6226e33eb60dd2220e2eaeada527157091d6476d1681b04c"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/r1",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-cf05d04/src/mvmulti.py",
+						"e9398d12f2536aaf6226e33eb60dd2220e2eaeada527157091d6476d1681b04c"
+					]
+				}
+			}
+		},
+		{
+			"version": "test15",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/test15",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-2328ec8/src/mvmulti.py",
+						"e9398d12f2536aaf6226e33eb60dd2220e2eaeada527157091d6476d1681b04c"
+					]
+				}
+			}
+		},
+		{
+			"version": "test14",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/test14",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-d62a678/src/mvmulti.py",
+						"a649451aa5e479894d399be8dcb74c6664576168cd3acbb6e7afeafb1df98bc4"
+					]
+				}
+			}
+		},
+		{
+			"version": "test13",
+			"script": {
+				"url": "https://api.github.com/repos/IFeelBloated/vapoursynth-mvtools-sf/zipball/test13",
+				"files": {
+					"mvmulti.py": [
+						"IFeelBloated-vapoursynth-mvtools-sf-7814500/src/mvmulti.py",
+						"a649451aa5e479894d399be8dcb74c6664576168cd3acbb6e7afeafb1df98bc4"
+					]
+				}
+			}
+		},
+		{
+			"version": "test12"
+		},
+		{
+			"version": "test11"
+		},
+		{
+			"version": "test10"
+		},
+		{
+			"version": "test9"
+		},
+		{
+			"version": "test8"
+		},
+		{
+			"version": "test7"
+		},
+		{
+			"version": "test6"
+		},
+		{
+			"version": "test5"
+		},
+		{
+			"version": "test4"
+		},
+		{
+			"version": "test3"
+		},
+		{
+			"version": "test2"
+		},
+		{
+			"version": "test1"
 		}
 	]
 }

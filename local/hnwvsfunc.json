@@ -11,10 +11,14 @@
 		"havsfunc",
 		"muvsfunc",
 		"mvsfunc",
+		"adjust",
+		"mvmulti",
 		"com.nodame.mvtools",
+		"com.nodame.mvsf",
 		"org.fftw.fftw3",
-		"com.nodame.rgsf",
-		"com.vapoursynth.hqdn3d"
+		"com.vapoursynth.removegrainsf",
+		"com.vapoursynth.hqdn3d",
+		"in.vcmohan.mod"
 	],
 	"releases": [
 		{

@@ -1,11 +1,11 @@
 {
 	"name": "RGVS (float)",
 	"type": "VSPlugin",
-	"description": "RGVS Single Precision",
+	"description": "RemoveGrain Single Precision",
 	"website": "https://github.com/IFeelBloated/RGSF",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172270",
 	"category": "Denoising",
-	"identifier": "com.nodame.rgsf",
+	"identifier": "com.vapoursynth.removegrainsf",
 	"namespace": "rgsf",
 	"github": "https://github.com/IFeelBloated/RGSF",
 	"releases": [

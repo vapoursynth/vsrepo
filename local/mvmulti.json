@@ -1,0 +1,27 @@
+{
+	"name": "mvmulti",
+	"type": "PyScript",
+	"description": "Wrapper functions for mvsf",
+	"website": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/",
+	"category": "Scripts",
+	"identifier": "mvmulti",
+	"modulename": "mvmulti",
+	"github": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/",
+	"dependencies": [
+		"com.nodame.mvsf"
+	],
+	"releases": [
+		{
+			"version": "git:7d5ee29",
+			"script": {
+				"url": "https://raw.githubusercontent.com/IFeelBloated/vapoursynth-mvtools-sf/7d5ee292cdfcdbbc317cd7d8c1b026a7c7de27b6/src/mvmulti.py",
+				"files": {
+					"mvmulti.py": [
+						"mvmulti.py",
+						"97ead4d5dee3f9a8a3fca31cadc1978f5cacf442c78bf198c84ab5de1e277dc2"
+					]
+				}
+			}
+		}
+	]
+}

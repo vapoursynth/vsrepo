@@ -2,11 +2,11 @@
 	"name": "mvmulti",
 	"type": "PyScript",
 	"description": "Wrapper functions for mvsf",
-	"website": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/",
+	"website": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf",
 	"category": "Scripts",
 	"identifier": "mvmulti",
 	"modulename": "mvmulti",
-	"github": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/",
+	"github": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf",
 	"dependencies": [
 		"com.nodame.mvsf"
 	],

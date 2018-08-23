@@ -26,6 +26,7 @@
 		"com.holywu.ctmf",
 		"systems.innocent.fft3dfilter",
 		"com.holywu.addgrain",
+		"com.holywu.dctfilter",
 		"com.vapoursynth.hqdn3d"
 	],
 	"releases": [

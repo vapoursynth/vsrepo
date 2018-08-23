@@ -1,0 +1,36 @@
+{
+	"name": "DCTFilter",
+	"type": "VSPlugin",
+	"description": "DCT/IDCT Frequency Suppressor",
+	"website": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter",
+	"category": "Other",
+	"identifier": "com.holywu.dctfilter",
+	"namespace": "dctf",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter",
+	"dependencies": [
+		"org.fftw.fftw3"
+	],
+	"releases": [
+		{
+			"version": "r2",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter/releases/download/r2/DCTFilter-r2.7z",
+				"files": {
+					"DCTFilter.dll": [
+						"Win32/DCTFilter.dll",
+						"b2895a26efe1103f2944a46c06837f2831fac408d98de746d7cfc2e538b6f8e8"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter/releases/download/r2/DCTFilter-r2.7z",
+				"files": {
+					"DCTFilter.dll": [
+						"Win64/DCTFilter.dll",
+						"5f7af5eeb04f5d3e0755131f4a92db752473b43b64defb8d4dc68ed6886f906d"
+					]
+				}
+			}
+		}
+	]
+}

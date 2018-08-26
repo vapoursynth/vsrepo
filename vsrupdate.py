@@ -178,7 +178,7 @@ def update_package(name):
                     
                     #ugly copypaste here because I'm lazy
                     if is_plugin:
-                        new_rel_entry = { 'version': rel['tag_name'] }
+                        new_rel_entry = { 'version': rel['tag_name'], 'published': rel['published_at'] }
                         try:
                             latest_rel = get_latest_installable_release(pfile, 'win32')
                             if latest_rel is not None:
@@ -204,7 +204,7 @@ def update_package(name):
                             new_rel_entry.pop('win64', None)
                             print('No win64 binary found')
                     else:
-                        new_rel_entry = { 'version': rel['tag_name'] }
+                        new_rel_entry = { 'version': rel['tag_name'], 'published': rel['published_at'] }
                         try:
                             latest_rel = get_latest_installable_release(pfile, 'script')
                             new_url = None
@@ -228,6 +228,7 @@ def update_package(name):
             for rel_ver in rel_order:
                 rel_list.append(new_rels[rel_ver])
             pfile['releases'] = rel_list
+            pfile['releases'].sort(key=lambda r: r['published'], reverse=True)
             
             if has_new_releases:
                 if args.overwrite:

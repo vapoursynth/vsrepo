@@ -1,0 +1,27 @@
+{
+	"name": "resamplehq",
+	"type": "PyScript",
+	"description": "Gamma correct resizing in linear light (RGB)",
+	"website": "https://github.com/4re/resamplehq",
+	"category": "Scripts",
+	"identifier": "resamplehq",
+	"modulename": "resamplehq",
+	"github": "https://github.com/4re/resamplehq",
+	"dependencies": [
+		"tegaf.asi.xe"
+	],
+	"releases": [
+		{
+			"version": "v2.0.0",
+			"script": {
+				"url": "https://github.com/4re/resamplehq/archive/v2.0.0.zip",
+				"files": {
+					"resamplehq.py": [
+						"resamplehq-2.0.0/resamplehq.py",
+						"e8f84b6e8834152000c003b24fbbde9df4ea273aaae90c6cf0a0a1cb104e38f7"
+					]
+				}
+			}
+		}
+	]
+}

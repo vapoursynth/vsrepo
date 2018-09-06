@@ -19,6 +19,7 @@
 	"releases": [
 		{
 			"version": "git:a6e68cd",
+			"published": "2017-03-18T10:03:22Z",
 			"script": {
 				"url": "https://raw.githubusercontent.com/IFeelBloated/Vine/a6e68cd94a72db22c04cf7f2227511598975deaf/Vine.py",
 				"files": {

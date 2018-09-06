@@ -19,6 +19,7 @@
 	"releases": [
 		{
 			"version": "git:f5d40e2",
+			"published": "2017-07-15T10:03:22Z",
 			"script": {
 				"url": "https://raw.githubusercontent.com/IFeelBloated/Plum/f5d40e2fa94770c8a5c8ffc10ba37012f0f7ed86/Plum.py",
 				"files": {

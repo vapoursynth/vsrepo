@@ -9,7 +9,8 @@
 	"github": "https://github.com/VFR-maniac/VapourSynth-TNLMeans",
 	"releases": [
 		{
-			"version": "rev39",
+			"version": "git:22a40af",
+			"published": "2015-02-25T10:03:22Z",
 			"win32": {
 				"url": "https://vfrmaniac.fushizen.eu/works/vstnlmeans_r39-22a40af.7z",
 				"files": {

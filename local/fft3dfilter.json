@@ -13,6 +13,7 @@
 	"releases": [
 		{
 			"version": "R1",
+			"published": "2018-07-11T10:29:20Z",
 			"win32": {
 				"url": "https://github.com/myrsloik/VapourSynth-FFT3DFilter/releases/download/R1/FFT3DFilter-r1.7z",
 				"files": {

@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r4",
+			"published": "2017-06-02T15:27:31Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r4/CTMF-r4.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2017-05-30T16:10:01Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r3/CTMF-r3.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2014-11-30T06:56:28Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r2/CTMF-r2.7z",
 				"files": {
@@ -74,6 +77,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2014-09-22T14:57:48Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r1/CTMF-r1.7z",
 				"files": {

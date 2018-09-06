@@ -32,6 +32,7 @@
 	"releases": [
 		{
 			"version": "r30",
+			"published": "2018-04-04T09:35:51Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r30",
 				"files": {
@@ -44,6 +45,7 @@
 		},
 		{
 			"version": "r29",
+			"published": "2018-03-29T14:27:11Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r29",
 				"files": {
@@ -56,6 +58,7 @@
 		},
 		{
 			"version": "r28",
+			"published": "2018-03-10T15:36:47Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r28",
 				"files": {
@@ -68,6 +71,7 @@
 		},
 		{
 			"version": "r27",
+			"published": "2017-10-23T14:01:07Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r27",
 				"files": {
@@ -80,6 +84,7 @@
 		},
 		{
 			"version": "r26",
+			"published": "2017-06-06T13:01:58Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r26",
 				"files": {
@@ -92,6 +97,7 @@
 		},
 		{
 			"version": "r25",
+			"published": "2017-04-08T16:56:35Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r25",
 				"files": {
@@ -104,6 +110,7 @@
 		},
 		{
 			"version": "r24",
+			"published": "2016-09-10T16:22:13Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r24",
 				"files": {
@@ -116,6 +123,7 @@
 		},
 		{
 			"version": "r23",
+			"published": "2016-05-13T13:11:08Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r23",
 				"files": {
@@ -128,6 +136,7 @@
 		},
 		{
 			"version": "r22",
+			"published": "2016-02-26T16:13:53Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r22",
 				"files": {
@@ -140,6 +149,7 @@
 		},
 		{
 			"version": "r21",
+			"published": "2016-02-09T15:16:54Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r21",
 				"files": {
@@ -152,6 +162,7 @@
 		},
 		{
 			"version": "r20",
+			"published": "2016-02-09T15:14:14Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r20",
 				"files": {
@@ -164,6 +175,7 @@
 		},
 		{
 			"version": "r19",
+			"published": "2016-02-09T15:11:25Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r19",
 				"files": {
@@ -176,6 +188,7 @@
 		},
 		{
 			"version": "r18",
+			"published": "2016-02-09T15:08:58Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r18",
 				"files": {
@@ -188,6 +201,7 @@
 		},
 		{
 			"version": "r17",
+			"published": "2016-02-09T15:07:26Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r17",
 				"files": {
@@ -200,6 +214,7 @@
 		},
 		{
 			"version": "r16",
+			"published": "2016-02-09T15:06:07Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r16",
 				"files": {
@@ -212,6 +227,7 @@
 		},
 		{
 			"version": "r15",
+			"published": "2016-02-09T15:03:31Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r15",
 				"files": {
@@ -224,6 +240,7 @@
 		},
 		{
 			"version": "r14",
+			"published": "2016-02-09T14:52:13Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r14",
 				"files": {
@@ -236,6 +253,7 @@
 		},
 		{
 			"version": "r13",
+			"published": "2016-02-09T14:50:29Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r13",
 				"files": {
@@ -248,6 +266,7 @@
 		},
 		{
 			"version": "r12",
+			"published": "2016-02-09T14:48:50Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r12",
 				"files": {
@@ -260,6 +279,7 @@
 		},
 		{
 			"version": "r11",
+			"published": "2016-02-09T14:46:12Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r11",
 				"files": {
@@ -272,6 +292,7 @@
 		},
 		{
 			"version": "r10",
+			"published": "2016-02-09T14:44:58Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r10",
 				"files": {
@@ -284,6 +305,7 @@
 		},
 		{
 			"version": "r9",
+			"published": "2016-02-09T14:43:15Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/r9",
 				"files": {

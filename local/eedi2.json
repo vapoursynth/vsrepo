@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r7",
+			"published": "2017-03-04T14:55:13Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r7/EEDI2-r7.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "r6",
+			"published": "2015-05-16T19:36:22Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r6/EEDI2-r6.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "r5",
+			"published": "2015-02-14T15:09:19Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r5/EEDI2-r5.7z",
 				"files": {
@@ -74,6 +77,7 @@
 		},
 		{
 			"version": "r4",
+			"published": "2014-11-30T08:46:27Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r4/EEDI2-r4.7z",
 				"files": {
@@ -95,6 +99,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2014-10-09T06:32:44Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r3/EEDI2-r3.7z",
 				"files": {
@@ -116,6 +121,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2014-09-05T15:51:49Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r2/EEDI2-r2.7z",
 				"files": {
@@ -137,6 +143,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2014-09-04T12:51:26Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2/releases/download/r1/EEDI2-r1.7z",
 				"files": {

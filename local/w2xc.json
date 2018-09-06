@@ -13,6 +13,7 @@
 	"releases": [
 		{
 			"version": "r7",
+			"published": "2018-08-08T07:14:44Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r7/Waifu2x-w2xc-r7.7z",
 				"files": {
@@ -42,6 +43,7 @@
 		},
 		{
 			"version": "r6",
+			"published": "2016-04-27T09:54:40Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r6/Waifu2x-w2xc-r6.7z",
 				"files": {
@@ -87,6 +89,7 @@
 		},
 		{
 			"version": "r5",
+			"published": "2016-02-09T13:41:01Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r5/Waifu2x-w2xc-r5.7z",
 				"files": {
@@ -116,6 +119,7 @@
 		},
 		{
 			"version": "r4",
+			"published": "2016-01-04T09:21:19Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r4/Waifu2x-w2xc-r4.7z",
 				"files": {
@@ -145,6 +149,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2015-10-18T16:07:28Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r3/Waifu2x-w2xc-r3.7z",
 				"files": {
@@ -174,6 +179,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2015-07-29T04:26:31Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r2/Waifu2x-w2xc-r2.7z",
 				"files": {
@@ -203,6 +209,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2015-07-22T21:37:39Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r1/Waifu2x-w2xc-r1.7z",
 				"files": {

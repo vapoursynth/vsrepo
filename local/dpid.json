@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "r3",
+			"published": "2017-06-14T15:59:32Z",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-dpid/releases/download/r3/vapoursynth-dpid-r3.zip",
 				"files": {
@@ -26,6 +27,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2017-02-13T11:11:40Z",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-dpid/releases/download/r2/vapoursynth-dpid-r2.zip",
 				"files": {
@@ -42,6 +44,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2017-02-12T04:13:51Z",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-dpid/releases/download/r1/vapoursynth-dpid-r1.zip",
 				"files": {

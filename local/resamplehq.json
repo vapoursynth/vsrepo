@@ -13,6 +13,7 @@
 	"releases": [
 		{
 			"version": "v2.0.0",
+			"published": "2018-08-27T02:09:58Z",
 			"script": {
 				"url": "https://github.com/4re/resamplehq/archive/v2.0.0.zip",
 				"files": {

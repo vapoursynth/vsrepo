@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "v1",
+			"published": "2018-07-25T11:16:03Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-temporalmedian/releases/download/v1/vapoursynth-temporalmedian-v1-win32.7z",
 				"files": {

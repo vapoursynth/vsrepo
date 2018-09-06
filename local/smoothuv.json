@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "v2",
+			"published": "2018-07-08T19:38:32Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win32.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "v1",
+			"published": "2018-06-10T20:18:39Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v1/vapoursynth-smoothuv-v1-win32.7z",
 				"files": {

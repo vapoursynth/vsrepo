@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "r2",
+			"published": "2017-08-14T09:38:00Z",
 			"win32": {
 				"url": "https://github.com/kewenyu/VapourSynth-BezierCurve/releases/download/r2/VapourSynth-BezierCurve.zip",
 				"files": {

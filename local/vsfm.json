@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "r5.2",
+			"published": "2018-08-15T04:06:34Z",
 			"win32": {
 				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5.2/VSFilterMod_bin.7z",
 				"files": {
@@ -28,7 +29,7 @@
 					]
 				}
 			}
-        },
+		},
 		{
 			"version": "r5.1",
 			"win32": {
@@ -52,6 +53,7 @@
 		},
 		{
 			"version": "r5",
+			"published": "2018-04-09T16:50:39Z",
 			"win32": {
 				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5/VSFilterMod_x86.7z",
 				"files": {

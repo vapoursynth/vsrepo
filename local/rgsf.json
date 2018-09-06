@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r5",
+			"published": "2016-01-25T09:31:45Z",
 			"win32": {
 				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r5/RGSF.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "r4",
+			"published": "2016-01-18T15:48:52Z",
 			"win32": {
 				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r4/RGSF.7z",
 				"files": {
@@ -52,16 +54,20 @@
 			}
 		},
 		{
-			"version": "tmp"
+			"version": "tmp",
+			"published": "2015-06-28T14:09:16Z"
 		},
 		{
-			"version": "r3"
+			"version": "r3",
+			"published": "2015-06-26T13:12:07Z"
 		},
 		{
-			"version": "r2"
+			"version": "r2",
+			"published": "2015-06-21T15:35:04Z"
 		},
 		{
-			"version": "r1"
+			"version": "r1",
+			"published": "2015-06-21T11:37:33Z"
 		}
 	]
 }

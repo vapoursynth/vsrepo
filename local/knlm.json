@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "v1.1.1",
+			"published": "2018-01-29T15:31:04Z",
 			"win32": {
 				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.1/KNLMeansCL-v1.1.1.zip",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "v1.1.0",
+			"published": "2017-05-04T16:46:33Z",
 			"win32": {
 				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v1.1.0/KNLMeansCL-v1.1.0.zip",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "v0.6.11",
+			"published": "2015-09-23T15:46:38Z",
 			"win32": {
 				"url": "https://github.com/Khanattila/KNLMeansCL/releases/download/v0.6.11/KNLMeansCL-v0.6.11.zip",
 				"files": {

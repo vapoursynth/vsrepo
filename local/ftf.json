@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r5",
+			"published": "2017-01-28T17:09:11Z",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r5/libftf_em64t_avx_fma.7z",
 				"files": {
@@ -23,6 +24,7 @@
 		},
 		{
 			"version": "r4",
+			"published": "2017-01-27T14:57:10Z",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r4/libftf_em64t_avx_fma.7z",
 				"files": {
@@ -35,6 +37,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2017-01-15T09:46:42Z",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/Fix-Telecined-Fades/releases/download/r3/libftf_em64t_avx_fma.7z",
 				"files": {
@@ -46,10 +49,12 @@
 			}
 		},
 		{
-			"version": "r2"
+			"version": "r2",
+			"published": "2016-12-30T18:35:19Z"
 		},
 		{
-			"version": "r1"
+			"version": "r1",
+			"published": "2016-12-29T18:25:59Z"
 		}
 	]
 }

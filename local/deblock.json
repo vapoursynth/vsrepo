@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r6",
+			"published": "2017-06-13T16:31:36Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r6/Deblock-r6.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "r5",
+			"published": "2016-11-01T07:00:03Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r5/Deblock-r5.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "r4",
+			"published": "2015-06-09T16:42:44Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r4/Deblock-r4.7z",
 				"files": {
@@ -74,6 +77,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2014-11-30T07:53:32Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r3/Deblock-r3.7z",
 				"files": {
@@ -95,6 +99,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2014-08-04T14:03:14Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r2/Deblock-r2.7z",
 				"files": {
@@ -115,7 +120,8 @@
 			}
 		},
 		{
-			"version": "r1"
+			"version": "r1",
+			"published": "2014-08-03T15:20:36Z"
 		}
 	]
 }

@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r3",
+			"published": "2014-11-08T05:51:06Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r3/Bilateral-r3.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2014-10-19T01:07:07Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r2/Bilateral-r2.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2014-09-30T14:04:01Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral/releases/download/r1/Bilateral-r1.7z",
 				"files": {

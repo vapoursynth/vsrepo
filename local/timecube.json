@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "r1",
+			"published": "2018-01-12T03:49:01Z",
 			"win32": {
 				"url": "https://github.com/sekrit-twc/timecube/releases/download/r1/timecube_r1.7z",
 				"files": {

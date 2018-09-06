@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "r4",
+			"published": "2017-04-16T14:30:16Z",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r4/VapourSynth-BilateralGPU-r4.zip",
 				"files": {
@@ -22,6 +23,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2017-04-13T05:30:29Z",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r3/VapourSynth-BilateralGPU-r3.zip",
 				"files": {
@@ -34,6 +36,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2017-03-10T17:33:47Z",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r2/VapourSynth-BilateralGPU-r2.zip",
 				"files": {
@@ -46,6 +49,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2017-03-09T12:42:33Z",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r1/VapourSynth-BilateralGPU-r1.zip",
 				"files": {

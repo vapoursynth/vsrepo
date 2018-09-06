@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r10",
+			"published": "2018-03-10T04:18:51Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r10/TDeintMod-r10.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "r9",
+			"published": "2018-03-09T07:12:55Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r9/TDeintMod-r9.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "r8",
+			"published": "2017-05-01T08:09:55Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r8/TDeintMod-r8.7z",
 				"files": {
@@ -74,6 +77,7 @@
 		},
 		{
 			"version": "r7",
+			"published": "2016-03-08T17:32:33Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r7/TDeintMod-r7.7z",
 				"files": {
@@ -95,6 +99,7 @@
 		},
 		{
 			"version": "r6",
+			"published": "2015-05-14T10:25:13Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r6/TDeintMod-r6.7z",
 				"files": {
@@ -116,6 +121,7 @@
 		},
 		{
 			"version": "r5",
+			"published": "2014-12-30T12:36:18Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r5/TDeintMod-r5.7z",
 				"files": {
@@ -137,6 +143,7 @@
 		},
 		{
 			"version": "r4",
+			"published": "2014-12-01T15:19:35Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r4/TDeintMod-r4.7z",
 				"files": {
@@ -158,6 +165,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2014-10-24T18:11:05Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r3/TDeintMod-r3.7z",
 				"files": {
@@ -179,6 +187,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2014-10-15T16:21:50Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r2/TDeintMod-r2.7z",
 				"files": {
@@ -200,6 +209,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2014-10-14T16:51:16Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod/releases/download/r1/TDeintMod-r1.7z",
 				"files": {

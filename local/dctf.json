@@ -13,6 +13,7 @@
 	"releases": [
 		{
 			"version": "r2",
+			"published": "2017-12-23T15:50:56Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter/releases/download/r2/DCTFilter-r2.7z",
 				"files": {

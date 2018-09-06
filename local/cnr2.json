@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "v1",
+			"published": "2016-07-02T18:42:33Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-cnr2/releases/download/v1/vapoursynth-cnr2-v1-win32.7z",
 				"files": {

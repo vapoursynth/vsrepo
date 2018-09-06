@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "v1.0",
+			"published": "2013-12-15T14:58:20Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-fillborders/releases/download/v1.0/vapoursynth-fillborders-v1.0-win32.7z",
 				"files": {

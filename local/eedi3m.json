@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r3",
+			"published": "2017-12-23T13:12:23Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r3/EEDI3-r3.7z",
 				"files": {
@@ -31,10 +32,12 @@
 			}
 		},
 		{
-			"version": "r2"
+			"version": "r2",
+			"published": "2017-10-13T08:01:22Z"
 		},
 		{
-			"version": "r1"
+			"version": "r1",
+			"published": "2017-08-31T17:05:21Z"
 		}
 	]
 }

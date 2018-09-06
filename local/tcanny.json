@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r10",
+			"published": "2017-07-30T07:39:49Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r10/TCanny-r10.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "r9",
+			"published": "2017-02-26T14:46:18Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r9/TCanny-r9.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "r8",
+			"published": "2016-09-09T16:10:46Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r8/TCanny-r8.7z",
 				"files": {
@@ -74,6 +77,7 @@
 		},
 		{
 			"version": "r7",
+			"published": "2016-08-26T08:23:25Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r7/TCanny-r7.7z",
 				"files": {
@@ -94,10 +98,12 @@
 			}
 		},
 		{
-			"version": "r6"
+			"version": "r6",
+			"published": "2016-08-14T09:40:21Z"
 		},
 		{
 			"version": "r5",
+			"published": "2016-03-18T16:56:22Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r5/TCanny-r5.7z",
 				"files": {
@@ -119,6 +125,7 @@
 		},
 		{
 			"version": "r4",
+			"published": "2016-03-12T13:40:09Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r4/TCanny-r4.7z",
 				"files": {
@@ -140,6 +147,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2015-06-28T06:03:18Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r3/TCanny-r3.7z",
 				"files": {
@@ -161,6 +169,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2015-05-22T14:46:15Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r2/TCanny-r2.7z",
 				"files": {
@@ -182,6 +191,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2015-05-21T15:44:07Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r1/TCanny-r1.7z",
 				"files": {

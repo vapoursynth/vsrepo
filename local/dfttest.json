@@ -14,6 +14,7 @@
 	"releases": [
 		{
 			"version": "r4",
+			"published": "2017-12-21T16:28:39Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r4/DFTTest-r4.7z",
 				"files": {
@@ -35,6 +36,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2015-06-09T16:43:27Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r3/DFTTest-r3.7z",
 				"files": {
@@ -56,6 +58,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2015-03-05T13:20:54Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r2/DFTTest-r2.7z",
 				"files": {
@@ -77,6 +80,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2015-01-18T16:39:18Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r1/DFTTest-r1.7z",
 				"files": {

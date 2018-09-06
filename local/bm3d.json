@@ -14,6 +14,7 @@
 	"releases": [
 		{
 			"version": "r7",
+			"published": "2016-08-16T05:27:02Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r7/BM3D-r7.7z",
 				"files": {
@@ -35,6 +36,7 @@
 		},
 		{
 			"version": "r6",
+			"published": "2016-07-16T12:18:38Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r6/BM3D-r6.7z",
 				"files": {
@@ -56,6 +58,7 @@
 		},
 		{
 			"version": "r5",
+			"published": "2016-01-23T01:45:04Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r5/BM3D-r5.7z",
 				"files": {
@@ -77,6 +80,7 @@
 		},
 		{
 			"version": "r4",
+			"published": "2015-11-21T05:42:55Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r4/BM3D-r4.7z",
 				"files": {
@@ -98,6 +102,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2015-05-26T15:05:30Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r3/BM3D-r3.7z",
 				"files": {
@@ -119,6 +124,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2015-05-24T17:48:23Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r2/BM3D-r2.7z",
 				"files": {
@@ -140,6 +146,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2015-05-24T07:58:02Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D/releases/download/r1/BM3D-r1.7z",
 				"files": {

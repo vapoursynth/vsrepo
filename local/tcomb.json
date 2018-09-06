@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "v3",
+			"published": "2017-02-16T22:01:23Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v3/vapoursynth-tcomb-v3-win32.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "v2",
+			"published": "2016-02-20T12:38:01Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v2/vapoursynth-tcomb-v2-win32.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "v1.0",
+			"published": "2014-09-01T14:02:22Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v1.0/vapoursynth-tcomb-v1.0-win32.7z",
 				"files": {

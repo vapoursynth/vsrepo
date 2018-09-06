@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "v1",
+			"published": "2018-07-03T19:46:56Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-temporalsoften2/releases/download/v1/vapoursynth-temporalsoften2-v1-win32.7z",
 				"files": {

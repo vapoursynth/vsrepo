@@ -13,6 +13,7 @@
 	"releases": [
 		{
 			"version": "r1",
+			"published": "2018-01-12T03:41:40Z",
 			"win64": {
 				"url": "https://github.com/sekrit-twc/znedi3/releases/download/r1/znedi3_r1.7z",
 				"files": {

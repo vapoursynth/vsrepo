@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "v4",
+			"published": "2018-06-15T09:39:12Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win32.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "v3",
+			"published": "2016-08-28T19:43:08Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v3/vapoursynth-awarpsharp2-v3-win32.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "v2",
+			"published": "2016-06-10T18:03:37Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v2/vapoursynth-awarpsharp2-v2-win32.7z",
 				"files": {
@@ -74,6 +77,7 @@
 		},
 		{
 			"version": "v1",
+			"published": "2015-10-06T19:24:24Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v1/vapoursynth-awarpsharp2-v1-win32.7z",
 				"files": {

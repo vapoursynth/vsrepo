@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "v2.2",
+			"published": "2014-05-16T09:05:10Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.2/vapoursynth-bifrost-v2.2-win32.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "v2.1",
+			"published": "2013-12-02T14:01:44Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.1/vapoursynth-bifrost-v2.1-win32.7z",
 				"files": {
@@ -52,10 +54,12 @@
 			}
 		},
 		{
-			"version": "v2.0-avs"
+			"version": "v2.0-avs",
+			"published": "2013-11-09T14:45:49Z"
 		},
 		{
 			"version": "v2.0",
+			"published": "2013-11-09T14:45:17Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.0/vapoursynth-bifrost-v2.0-win32.7z",
 				"files": {

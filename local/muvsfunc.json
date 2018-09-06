@@ -24,6 +24,7 @@
 	"releases": [
 		{
 			"version": "v0.1.0",
+			"published": "2018-07-22T18:56:12Z",
 			"script": {
 				"url": "https://github.com/WolframRhodium/muvsfunc/archive/v0.1.0.zip",
 				"files": {

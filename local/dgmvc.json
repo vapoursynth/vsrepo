@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "v1.0.0",
+			"published": "2016-12-05T08:38:05Z",
 			"win32": {
 				"url": "https://github.com/kice/DGMVCSourceVS/releases/download/v1.0.0/DGMVCSourceVS_x86.rar",
 				"files": {

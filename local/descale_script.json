@@ -14,6 +14,7 @@
 	"releases": [
 		{
 			"version": "r2",
+			"published": "2017-05-09T09:18:57Z",
 			"script": {
 				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r2/vapoursynth-descale-r2-win64.zip",
 				"files": {
@@ -26,6 +27,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2017-05-02T21:31:09Z",
 			"script": {
 				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r1/vapoursynth-descale-r1-win64.zip",
 				"files": {

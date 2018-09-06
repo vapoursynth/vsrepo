@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "v2",
+			"published": "2016-08-20T09:53:52Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v2/vapoursynth-fluxsmooth-v2-win32.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "v1.0",
+			"published": "2014-04-06T15:37:35Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-fluxsmooth/releases/download/v1.0/vapoursynth-fluxsmooth-v1.0-win32.7z",
 				"files": {

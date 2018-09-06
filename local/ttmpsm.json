@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r3",
+			"published": "2018-05-08T15:24:33Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r3/TTempSmooth-r3.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2018-04-03T14:27:34Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r2/TTempSmooth-r2.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2018-03-28T07:58:57Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r1/TTempSmooth-r1.7z",
 				"files": {

@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "v0.4",
+			"published": "2015-12-23T15:21:55Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo/releases/download/v0.4/delogo_release_v0.4.zip",
 				"files": {
@@ -31,16 +32,20 @@
 			}
 		},
 		{
-			"version": "v0.3"
+			"version": "v0.3",
+			"published": "2015-03-11T22:31:20Z"
 		},
 		{
-			"version": "v0.2"
+			"version": "v0.2",
+			"published": "2014-10-14T12:28:41Z"
 		},
 		{
-			"version": "v0.11"
+			"version": "v0.11",
+			"published": "2014-10-04T01:18:54Z"
 		},
 		{
-			"version": "v0.1"
+			"version": "v0.1",
+			"published": "2014-10-03T10:41:16Z"
 		}
 	]
 }

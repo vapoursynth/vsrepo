@@ -19,6 +19,7 @@
 	"releases": [
 		{
 			"version": "v0.8.0",
+			"published": "2018-05-11T06:01:23Z",
 			"script": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/vsTAAmbk/releases/download/v0.8.0/vsTAAmbk.v0.8.0.zip",
 				"files": {
@@ -30,7 +31,8 @@
 			}
 		},
 		{
-			"version": "v0.7.6"
+			"version": "v0.7.6",
+			"published": "2018-05-11T05:43:00Z"
 		}
 	]
 }

@@ -14,6 +14,7 @@
 	"releases": [
 		{
 			"version": "r7",
+			"published": "2018-02-05T16:12:51Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r7/NNEDI3CL-r7.7z",
 				"files": {
@@ -35,6 +36,7 @@
 		},
 		{
 			"version": "r6",
+			"published": "2017-10-28T16:21:36Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r6/NNEDI3CL-r6.7z",
 				"files": {
@@ -56,6 +58,7 @@
 		},
 		{
 			"version": "r5",
+			"published": "2017-10-19T04:17:56Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r5/NNEDI3CL-r5.7z",
 				"files": {
@@ -77,6 +80,7 @@
 		},
 		{
 			"version": "r4",
+			"published": "2017-10-18T15:23:09Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r4/NNEDI3CL-r4.7z",
 				"files": {
@@ -98,6 +102,7 @@
 		},
 		{
 			"version": "r3",
+			"published": "2017-09-23T08:57:30Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r3/NNEDI3CL-r3.7z",
 				"files": {
@@ -119,6 +124,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2017-09-22T07:41:12Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r2/NNEDI3CL-r2.7z",
 				"files": {
@@ -140,6 +146,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2017-09-16T09:55:39Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r1/NNEDI3CL-r1.7z",
 				"files": {

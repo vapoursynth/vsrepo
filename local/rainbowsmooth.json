@@ -15,6 +15,7 @@
 	"releases": [
 		{
 			"version": "v2",
+			"published": "2018-07-08T19:38:32Z",
 			"script": {
 				"url": "https://api.github.com/repos/dubhater/vapoursynth-smoothuv/zipball/v2",
 				"files": {
@@ -27,6 +28,7 @@
 		},
 		{
 			"version": "v1",
+			"published": "2018-06-10T20:18:39Z",
 			"script": {
 				"url": "https://api.github.com/repos/dubhater/vapoursynth-smoothuv/zipball/v1",
 				"files": {

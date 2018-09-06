@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r9",
+			"published": "2017-06-20T13:57:38Z",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r9/libmvtools_sf_em64t.7z",
 				"files": {
@@ -23,6 +24,7 @@
 		},
 		{
 			"version": "r8",
+			"published": "2017-02-09T08:32:46Z",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r8/libmvtools_sf_em64t.7z",
 				"files": {
@@ -35,6 +37,7 @@
 		},
 		{
 			"version": "r7",
+			"published": "2016-12-19T10:22:23Z",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r7/libmvtools_sf_em64t.7z",
 				"files": {
@@ -47,6 +50,7 @@
 		},
 		{
 			"version": "r6",
+			"published": "2016-10-24T14:01:30Z",
 			"win64": {
 				"url": "https://github.com/IFeelBloated/vapoursynth-mvtools-sf/releases/download/r6/libmvtools_sf_em64t.7z",
 				"files": {
@@ -58,64 +62,84 @@
 			}
 		},
 		{
-			"version": "r5"
+			"version": "r5",
+			"published": "2016-08-03T15:05:16Z"
 		},
 		{
-			"version": "r4"
+			"version": "r4",
+			"published": "2016-07-05T08:16:31Z"
 		},
 		{
-			"version": "r3"
+			"version": "r3",
+			"published": "2016-06-24T12:45:42Z"
 		},
 		{
-			"version": "r2"
+			"version": "r2",
+			"published": "2016-06-06T12:45:44Z"
 		},
 		{
-			"version": "r1"
+			"version": "r1",
+			"published": "2016-04-16T12:13:19Z"
 		},
 		{
-			"version": "test15"
+			"version": "test15",
+			"published": "2016-04-08T16:08:57Z"
 		},
 		{
-			"version": "test14"
+			"version": "test14",
+			"published": "2016-02-05T14:43:27Z"
 		},
 		{
-			"version": "test13"
+			"version": "test13",
+			"published": "2016-01-25T09:55:22Z"
 		},
 		{
-			"version": "test12"
+			"version": "test12",
+			"published": "2015-09-24T13:42:01Z"
 		},
 		{
-			"version": "test11"
+			"version": "test11",
+			"published": "2015-09-15T07:20:02Z"
 		},
 		{
-			"version": "test10"
+			"version": "test10",
+			"published": "2015-09-13T13:46:28Z"
 		},
 		{
-			"version": "test9"
+			"version": "test9",
+			"published": "2015-09-07T09:16:24Z"
 		},
 		{
-			"version": "test8"
+			"version": "test8",
+			"published": "2015-09-06T15:20:39Z"
 		},
 		{
-			"version": "test7"
+			"version": "test7",
+			"published": "2015-09-05T13:56:35Z"
 		},
 		{
-			"version": "test6"
+			"version": "test6",
+			"published": "2015-09-04T08:28:40Z"
 		},
 		{
-			"version": "test5"
+			"version": "test5",
+			"published": "2015-09-04T07:07:20Z"
 		},
 		{
-			"version": "test4"
+			"version": "test4",
+			"published": "2015-09-03T15:18:50Z"
 		},
 		{
-			"version": "test3"
+			"version": "test3",
+			"published": "2015-08-29T08:13:25Z"
 		},
 		{
-			"version": "test2"
+			"version": "test2",
+			"published": "2015-08-28T15:52:43Z"
 		},
 		{
-			"version": "test1"
+			"version": "test1",
+			"published": "2015-08-27T08:10:13Z"
 		}
 	]
 }

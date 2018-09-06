@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r3",
+			"published": "2017-05-11T08:58:20Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r3/ReadMpls-r3.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "r2",
+			"published": "2017-05-10T04:57:28Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r2/ReadMpls-r2.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2017-05-09T03:32:40Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r1/ReadMpls-r1.7z",
 				"files": {

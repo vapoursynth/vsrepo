@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "v1.2",
+			"published": "2014-10-15T08:08:55Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.2/it_release_v1.2.zip",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "v1.1",
+			"published": "2014-10-08T12:15:53Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT/releases/download/v1.1/it_release_v1.1.zip",
 				"files": {
@@ -52,19 +54,24 @@
 			}
 		},
 		{
-			"version": "v1.0"
+			"version": "v1.0",
+			"published": "2014-10-06T09:07:57Z"
 		},
 		{
-			"version": "v0.4"
+			"version": "v0.4",
+			"published": "2014-10-05T03:01:26Z"
 		},
 		{
-			"version": "v0.3"
+			"version": "v0.3",
+			"published": "2014-10-04T02:20:34Z"
 		},
 		{
-			"version": "v0.2"
+			"version": "v0.2",
+			"published": "2014-10-02T00:39:43Z"
 		},
 		{
-			"version": "v0.1"
+			"version": "v0.1",
+			"published": "2014-10-01T06:26:54Z"
 		}
 	]
 }

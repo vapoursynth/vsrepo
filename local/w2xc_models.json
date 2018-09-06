@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "r7",
+			"published": "2018-08-08T07:14:44Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r7/Waifu2x-w2xc-models.7z",
 				"files": {
@@ -119,6 +120,7 @@
 		},
 		{
 			"version": "r6",
+			"published": "2016-04-27T09:54:40Z",
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r6/Waifu2x-w2xc-models.7z",
 				"files": {
@@ -227,19 +229,24 @@
 			}
 		},
 		{
-			"version": "r5"
+			"version": "r5",
+			"published": "2016-02-09T13:41:01Z"
 		},
 		{
-			"version": "r4"
+			"version": "r4",
+			"published": "2016-01-04T09:21:19Z"
 		},
 		{
-			"version": "r3"
+			"version": "r3",
+			"published": "2015-10-18T16:07:28Z"
 		},
 		{
-			"version": "r2"
+			"version": "r2",
+			"published": "2015-07-29T04:26:31Z"
 		},
 		{
-			"version": "r1"
+			"version": "r1",
+			"published": "2015-07-22T21:37:39Z"
 		}
 	]
 }

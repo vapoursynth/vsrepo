@@ -15,6 +15,7 @@
 	"releases": [
 		{
 			"version": "r8",
+			"published": "2016-07-31T13:26:32Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r8",
 				"files": {
@@ -27,6 +28,7 @@
 		},
 		{
 			"version": "r7",
+			"published": "2016-04-09T10:01:08Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r7",
 				"files": {
@@ -39,6 +41,7 @@
 		},
 		{
 			"version": "r6",
+			"published": "2016-01-26T11:31:35Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r6",
 				"files": {
@@ -51,6 +54,7 @@
 		},
 		{
 			"version": "r5",
+			"published": "2015-11-21T04:26:14Z",
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/r5",
 				"files": {

@@ -14,6 +14,7 @@
 	"releases": [
 		{
 			"version": "v20",
+			"published": "2018-07-09T15:00:51Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v20/vapoursynth-mvtools-v20-win32.7z",
 				"files": {
@@ -35,6 +36,7 @@
 		},
 		{
 			"version": "v19",
+			"published": "2017-06-07T18:37:37Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v19/vapoursynth-mvtools-v19-win32.7z",
 				"files": {
@@ -56,6 +58,7 @@
 		},
 		{
 			"version": "v18",
+			"published": "2017-04-14T13:39:08Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v18/vapoursynth-mvtools-v18-win32.7z",
 				"files": {
@@ -77,6 +80,7 @@
 		},
 		{
 			"version": "v17",
+			"published": "2016-10-23T13:25:46Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v17/vapoursynth-mvtools-v17-win32.7z",
 				"files": {
@@ -98,6 +102,7 @@
 		},
 		{
 			"version": "v16",
+			"published": "2016-07-09T17:16:26Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v16/vapoursynth-mvtools-v16-win32.7z",
 				"files": {
@@ -119,6 +124,7 @@
 		},
 		{
 			"version": "v15",
+			"published": "2016-07-01T18:19:01Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v15/vapoursynth-mvtools-v15-win32.7z",
 				"files": {
@@ -140,6 +146,7 @@
 		},
 		{
 			"version": "v14",
+			"published": "2016-06-22T10:42:29Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v14/vapoursynth-mvtools-v14-win32.7z",
 				"files": {
@@ -161,6 +168,7 @@
 		},
 		{
 			"version": "v13",
+			"published": "2016-04-08T19:22:38Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v13/vapoursynth-mvtools-v13-win32.7z",
 				"files": {
@@ -182,6 +190,7 @@
 		},
 		{
 			"version": "v12",
+			"published": "2016-03-18T21:04:43Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v12/vapoursynth-mvtools-v12-win32.7z",
 				"files": {
@@ -203,6 +212,7 @@
 		},
 		{
 			"version": "v11",
+			"published": "2016-02-01T13:24:08Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v11/vapoursynth-mvtools-v11-win32.7z",
 				"files": {
@@ -224,6 +234,7 @@
 		},
 		{
 			"version": "v10",
+			"published": "2016-01-18T12:03:21Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v10/vapoursynth-mvtools-v10-win32.7z",
 				"files": {
@@ -245,6 +256,7 @@
 		},
 		{
 			"version": "v9",
+			"published": "2015-05-24T14:30:16Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v9/vapoursynth-mvtools-v9-win32.7z",
 				"files": {
@@ -266,6 +278,7 @@
 		},
 		{
 			"version": "v8",
+			"published": "2015-03-09T22:37:45Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v8/vapoursynth-mvtools-v8-win32.7z",
 				"files": {
@@ -287,6 +300,7 @@
 		},
 		{
 			"version": "v7",
+			"published": "2015-02-15T10:08:45Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v7/vapoursynth-mvtools-v7-win32.7z",
 				"files": {
@@ -308,6 +322,7 @@
 		},
 		{
 			"version": "v6",
+			"published": "2015-01-30T20:13:33Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v6/vapoursynth-mvtools-v6-win32.7z",
 				"files": {
@@ -329,6 +344,7 @@
 		},
 		{
 			"version": "v5",
+			"published": "2015-01-02T12:40:26Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v5/vapoursynth-mvtools-v5-win32.7z",
 				"files": {
@@ -350,6 +366,7 @@
 		},
 		{
 			"version": "v4",
+			"published": "2014-10-09T10:58:55Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v4/vapoursynth-mvtools-v4-win32.7z",
 				"files": {
@@ -371,6 +388,7 @@
 		},
 		{
 			"version": "v3",
+			"published": "2014-10-03T14:02:41Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v3/vapoursynth-mvtools-v3-win32.7z",
 				"files": {
@@ -392,6 +410,7 @@
 		},
 		{
 			"version": "v2.0",
+			"published": "2014-09-28T10:45:36Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v2.0/vapoursynth-mvtools-v2.0-win32.7z",
 				"files": {
@@ -413,6 +432,7 @@
 		},
 		{
 			"version": "v1.1",
+			"published": "2014-09-22T18:38:47Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v1.1/vapoursynth-mvtools-v1.1-win32.7z",
 				"files": {
@@ -434,6 +454,7 @@
 		},
 		{
 			"version": "v1.0",
+			"published": "2014-09-21T20:35:27Z",
 			"win32": {
 				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v1.0/vapoursynth-mvtools-v1.0-win32.7z",
 				"files": {

@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "2.23",
+			"published": "2016-10-18T17:29:21Z",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.23/ffms2-2.23.1-msvc.7z",
 				"files": {
@@ -32,6 +33,7 @@
 		},
 		{
 			"version": "2.22",
+			"published": "2015-10-12T21:30:23Z",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.22/ffms2-2.22-msvc.7z",
 				"files": {
@@ -53,6 +55,7 @@
 		},
 		{
 			"version": "2.21",
+			"published": "2015-05-16T21:16:18Z",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.21/ffms2-2.21-msvc.7z",
 				"files": {
@@ -74,6 +77,7 @@
 		},
 		{
 			"version": "2.20",
+			"published": "2014-06-20T16:12:07Z",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.20/ffms2-2.20-msvc.7z",
 				"files": {
@@ -94,10 +98,12 @@
 			}
 		},
 		{
-			"version": "2.19.1"
+			"version": "2.19.1",
+			"published": "2014-04-05T23:02:00Z"
 		},
 		{
 			"version": "2.19",
+			"published": "2013-09-07T20:29:11Z",
 			"win64": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.19/ffms2-2.19.7z",
 				"files": {
@@ -109,13 +115,16 @@
 			}
 		},
 		{
-			"version": "2.18"
+			"version": "2.18",
+			"published": "2013-09-01T17:40:53Z"
 		},
 		{
-			"version": "ffms-2.17"
+			"version": "ffms-2.17",
+			"published": "2013-08-19T15:55:26Z"
 		},
 		{
 			"version": "2.18-rc1",
+			"published": "2013-08-19T15:55:06Z",
 			"win32": {
 				"url": "https://github.com/FFMS/ffms2/releases/download/2.18-rc1/ffms2-2.18-rc1.7z",
 				"files": {

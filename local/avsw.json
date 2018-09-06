@@ -11,6 +11,7 @@
 	"releases": [
 		{
 			"version": "r1a",
+			"published": "2018-01-13T17:47:49Z",
 			"win64": {
 				"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r1a/avsproxy_r1a.7z",
 				"files": {
@@ -27,6 +28,7 @@
 		},
 		{
 			"version": "r1",
+			"published": "2018-01-12T03:36:33Z",
 			"win64": {
 				"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r1/avsproxy_r1.7z",
 				"files": {

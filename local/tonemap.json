@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "R2",
+			"published": "2018-08-10T03:55:39Z",
 			"win32": {
 				"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R2/tonemap-r2-win32.7z",
 				"files": {
@@ -31,6 +32,7 @@
 		},
 		{
 			"version": "R1",
+			"published": "2018-01-04T04:08:31Z",
 			"win32": {
 				"url": "https://github.com/ifb/vapoursynth-tonemap/releases/download/R1/tonemap-r1-win32.7z",
 				"files": {

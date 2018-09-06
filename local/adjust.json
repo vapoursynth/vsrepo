@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "v1",
+            "published": "2018-07-11T10:03:22Z",
 			"script": {
 				"url": "https://github.com/dubhater/vapoursynth-adjust/archive/v1.zip",
 				"files": {

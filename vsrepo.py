@@ -424,6 +424,13 @@ def print_paths():
     print('Binaries: ' + plugin_path)
     print('Scripts: ' + py_script_path)    
 
+for name in args.package:
+    try:
+        get_package_from_name(name)
+    except Exception as e:
+        print(e)
+        exit(1)
+
 if args.operation == 'install':
     detect_installed_packages()
     inst = (0, 0)

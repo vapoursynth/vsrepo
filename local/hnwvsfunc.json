@@ -22,7 +22,21 @@
 	],
 	"releases": [
 		{
+			"version": "v1.00",
+			"published": "2018-09-02T11:11:27Z",
+			"script": {
+				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v1.00",
+				"files": {
+					"hnwvsfunc.py": [
+						"Helenerineium-hnwvsfunc-f106764/hnwvsfunc.py",
+						"cde24f700e7414c860dc10cd8fe7774cd99e328fe4769548cdd9f5a440bdf0dd"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.95",
+			"published": "2018-07-30T10:03:22Z",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.95",
 				"files": {
@@ -35,6 +49,7 @@
 		},
 		{
 			"version": "v0.94",
+			"published": "2018-07-29T10:03:22Z",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.94",
 				"files": {
@@ -47,6 +62,7 @@
 		},
 		{
 			"version": "v0.87",
+			"published": "2018-07-28T10:03:22Z",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.87",
 				"files": {
@@ -59,6 +75,7 @@
 		},
 		{
 			"version": "v0.79",
+			"published": "2018-07-27T10:03:22Z",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.79",
 				"files": {
@@ -71,6 +88,7 @@
 		},
 		{
 			"version": "v0.70",
+			"published": "2018-07-26T10:03:22Z",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.70",
 				"files": {
@@ -83,6 +101,7 @@
 		},
 		{
 			"version": "v0.69",
+			"published": "2018-07-25T10:03:22Z",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.69",
 				"files": {
@@ -95,6 +114,7 @@
 		},
 		{
 			"version": "v0.64",
+			"published": "2018-07-24T10:03:22Z",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.64",
 				"files": {
@@ -107,6 +127,7 @@
 		},
 		{
 			"version": "v0.57",
+			"published": "2018-07-23T10:03:22Z",
 			"script": {
 				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v0.57",
 				"files": {
@@ -119,6 +140,7 @@
 		},
 		{
 			"version": "v0.47",
+			"published": "2018-07-22T10:03:22Z",
 			"script": {
 				"url": "https://github.com/Helenerineium/hnwvsfunc/archive/v0.47.zip",
 				"files": {

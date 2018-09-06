@@ -12,7 +12,8 @@
 	],
 	"releases": [
 		{
-			"version": "git-1",
+			"version": "git:0983895",
+			"published": "2018-05-10T10:03:22Z",
 			"script": {
 				"url": "https://raw.githubusercontent.com/mawen1250/VapourSynth-script/master/nnedi3_resample.py",
 				"files": {

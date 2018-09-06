@@ -19,6 +19,7 @@
 	"releases": [
 		{
 			"version": "git:54fe6c3",
+			"published": "2017-02-10T10:03:22Z",
 			"script": {
 				"url": "https://raw.githubusercontent.com/IFeelBloated/Oyster/54fe6c36c0fb90be60a2d7939d9cd5f62d765176/Oyster.py",
 				"files": {

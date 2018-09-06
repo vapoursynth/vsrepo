@@ -10,7 +10,7 @@
 	"releases": [
 		{
 			"version": "git:bed42cc",
-            "published": "2018-07-25T10:03:22Z",
+			"published": "2018-07-25T10:03:22Z",
 			"script": {
 				"url": "https://raw.githubusercontent.com/tormaid/colorfade/bed42cc9755e0b4f7445ccadab0ae292589c3100/colorfade.py",
 				"files": {

@@ -162,9 +162,8 @@ def update_package(name):
         rel_order = list(existing_rel_list)
         
         if 'github' in pfile:
-            url = get_git_api_url(pfile['github'])
             new_rels = {}
-            apifile = json.loads(fetch_url(get_git_api_url(pfile['website']), pfile['name']))
+            apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name']))
             is_plugin = (pfile['type'] == 'VSPlugin')
             for rel in apifile:
                 if rel['tag_name'] not in rel_order:

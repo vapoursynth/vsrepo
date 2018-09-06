@@ -22,6 +22,7 @@
 	"releases": [
 		{
 			"version": "git:cd6a442",
+			"published": "2018-07-07T10:03:22Z",
 			"script": {
 				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/fvsfunc/cd6a442b1940fe85e3e3f10dbebda83f421bf08b/fvsfunc.py",
 				"files": {

@@ -32,6 +32,28 @@
 					]
 				}
 			}
+		},
+		{
+			"version": "r1",
+			"published": "2017-12-23T09:48:24Z",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter/releases/download/r1/DCTFilter-r1.7z",
+				"files": {
+					"DCTFilter.dll": [
+						"Win32/DCTFilter.dll",
+						"228beaa3d38a6627866469e695780e1032653f0ff8044406e9235554e57febad"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter/releases/download/r1/DCTFilter-r1.7z",
+				"files": {
+					"DCTFilter.dll": [
+						"Win64/DCTFilter.dll",
+						"6da7032e93c6e22ba7f5084c1261473982bc859c6848abf0ade8ab2b352346ff"
+					]
+				}
+			}
 		}
 	]
 }

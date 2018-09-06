@@ -1,0 +1,25 @@
+{
+	"name": "WarpSharpSupport",
+	"type": "PyScript",
+	"description": "Script versions of support functions from WarpSharp",
+	"website": "https://github.com/myrsloik/WarpSharpSupport",
+	"category": "Scripts",
+	"identifier": "wss",
+	"modulename": "wss",
+	"github": "https://github.com/myrsloik/WarpSharpSupport",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2018-09-06T18:40:51Z",
+			"script": {
+				"url": "https://github.com/myrsloik/WarpSharpSupport/archive/R1.zip",
+				"files": {
+					"wss.py": [
+						"WarpSharpSupport-R1/wss.py",
+						"beadf44474ea1faeaaa48a02cd322d6118a5ff5a11e387867e6fbb2ff06037b0"
+					]
+				}
+			}
+		}
+	]
+}

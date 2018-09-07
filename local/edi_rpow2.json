@@ -1,0 +1,32 @@
+{
+	"name": "edi_rpow2",
+	"type": "PyScript",
+	"description": "Enlarges images by powers of 2",
+	"website": "https://gist.github.com/YamashitaRen/020c497524e794779d9c",
+	"doom9": "https://forum.doom9.org/showthread.php?t=172652",
+	"category": "Resizing and Format Conversion",
+	"identifier": "edi_rpow2.py",
+	"modulename": "edi_rpow2.py",
+	"dependencies": [
+		"com.deinterlace.nnedi3",
+		"xxx.abc.znedi3",
+		"com.holywu.nnedi3cl",
+		"com.holywu.eedi2",
+		"com.holywu.eedi3",
+		"fmtconv"
+	],
+	"releases": [
+		{
+			"version": "rev29",
+			"script": {
+				"url": "https://gist.githubusercontent.com/YamashitaRen/020c497524e794779d9c/raw/2a20385e50804f8b24f2a2479e2c0f3c335d4853/edi_rpow2.py",
+				"files": {
+					"edi_rpow2.py": [
+						"edi_rpow2.py",
+						"ff9b7b195d0441fd2d673ccca0118d9777ddbd50a3e1b79d1046376fc4a15b3f"
+					]
+				}
+			}
+		}
+	]
+}

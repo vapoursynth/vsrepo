@@ -255,7 +255,7 @@ def verify_package(pfile, existing_identifiers):
         raise Exception('Plugins must have namespace, not modulename: ' + name)
     if (pfile['type'] == 'PyScript') and (('namespace' in pfile) or ('modulename' not in pfile)):
         raise Exception('Scripts must have modulename, not namespace: ' + name)
-    if pfile['category'] not in ('Scripts', 'Plugin Dependency', 'Resizing and Format Conversion', 'Other', 'Dot Crawl and Rainbows', 'Denoising', 'Deinterlacing', 'Inverse Telecine', 'Source/Output', 'Subtitles'):
+    if pfile['category'] not in ('Scripts', 'Plugin Dependency', 'Resizing and Format Conversion', 'Other', 'Dot Crawl and Rainbows', 'Denoising', 'Deinterlacing', 'Inverse Telecine', 'Source/Output', 'Subtitles', 'Color/Levels'):
         raise Exception('Not allowed catogry in ' + name + ': ' + pfile['category'])
     if 'dependencies' in pfile:
         for dep in pfile['dependencies']:

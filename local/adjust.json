@@ -3,7 +3,7 @@
 	"type": "PyScript",
 	"description": "A script equivalent of Avisynth's Tweak function",
 	"website": "https://github.com/dubhater/vapoursynth-adjust",
-	"category": "Scripts",
+	"category": "Color/Levels",
 	"identifier": "adjust",
 	"modulename": "adjust",
 	"github": "https://github.com/dubhater/vapoursynth-adjust",

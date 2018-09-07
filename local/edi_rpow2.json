@@ -5,8 +5,8 @@
 	"website": "https://gist.github.com/YamashitaRen/020c497524e794779d9c",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172652",
 	"category": "Resizing and Format Conversion",
-	"identifier": "edi_rpow2.py",
-	"modulename": "edi_rpow2.py",
+	"identifier": "edi_rpow2",
+	"modulename": "edi_rpow2",
 	"dependencies": [
 		"com.deinterlace.nnedi3",
 		"xxx.abc.znedi3",

@@ -3,7 +3,7 @@
 	"type": "PyScript",
 	"description": "Script versions of support functions from WarpSharp",
 	"website": "https://github.com/myrsloik/WarpSharpSupport",
-	"category": "Scripts",
+	"category": "Sharpening",
 	"identifier": "wss",
 	"modulename": "wss",
 	"github": "https://github.com/myrsloik/WarpSharpSupport",

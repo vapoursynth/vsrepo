@@ -6,7 +6,7 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=171413",
 	"category": "Denoising",
 	"identifier": "in.vcmohan.freq",
-	"namespace": "freq",
+	"namespace": "vcfreq",
 	"releases": [
 		{
 			"version": "2016-05-12",

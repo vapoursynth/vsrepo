@@ -71,6 +71,8 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is 
     print('Package argument only required for install, upgrade and uninstall operations')
     exit(1)
 
+package_json_path = os.path.join(os.path.dirname(__file__), 'vspackages.json') if args.portable else os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'vsrepo', 'vspackages.json')
+
 py_script_path = os.path.dirname(__file__) if args.portable else site.getusersitepackages()
 if args.script_path is not None:
     py_script_path = args.script_path
@@ -95,7 +97,7 @@ if args.binary_path is not None:
 	
 os.makedirs(py_script_path, exist_ok=True)
 os.makedirs(plugin_path, exist_ok=True)
-
+os.makedirs(os.path.dirname(package_json_path), exist_ok=True)
 
 cmd7zip_path = '7z.exe'
 try:
@@ -135,7 +137,7 @@ package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 
 package_list = None
 try:
-    with open('vspackages.json', 'r', encoding='utf-8') as pl:
+    with open(package_json_path, 'r', encoding='utf-8') as pl:
         package_list = json.load(pl)       
     if package_list['file-format'] != 2:
         print('Package definition format is {} but only version 1 is supported'.format(package_list['file_format']))
@@ -397,7 +399,7 @@ def uninstall_package(name):
 def update_package_definition(url):
     localmtimeval = 0
     try:
-        localmtimeval = os.path.getmtime('vspackages.json')
+        localmtimeval = os.path.getmtime(package_json_path)
     except:
         pass
     localmtime = email.utils.formatdate(localmtimeval + 10, usegmt=True)
@@ -408,9 +410,9 @@ def update_package_definition(url):
             data = urlreq.read()
             with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
                 with zf.open('vspackages.json') as pkgfile:
-                    with open('vspackages.json', 'wb') as dstfile:
+                    with open(package_json_path, 'wb') as dstfile:
                         dstfile.write(pkgfile.read())
-                    os.utime('vspackages.json', times=(remote_modtime, remote_modtime))
+                    os.utime(package_json_path, times=(remote_modtime, remote_modtime))
     except urllib.error.HTTPError as httperr:
         if httperr.code == 304:
             print('Local definitions already up to date: ' + email.utils.formatdate(localmtimeval, usegmt=True))
@@ -420,7 +422,8 @@ def update_package_definition(url):
         print('Local definitions updated to: ' + email.utils.formatdate(remote_modtime, usegmt=True))
 
 def print_paths():
-    print('Destination paths:')
+    print('Paths:')
+    print('Definitions: ' + package_json_path)
     print('Binaries: ' + plugin_path)
     print('Scripts: ' + py_script_path)    
 

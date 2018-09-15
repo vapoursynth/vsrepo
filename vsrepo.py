@@ -53,7 +53,6 @@ def is_sitepackage_install_portable():
         return False
     else:
         return os.path.exists(os.path.join(os.path.dirname(vapoursynth.__file__), 'portable.vs'))
-    
 
 is_64bits = sys.maxsize > 2**32
 
@@ -72,13 +71,14 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is 
     print('Package argument only required for install, upgrade and uninstall operations')
     exit(1)
 
-py_script_path = '.\\' if args.portable else site.getusersitepackages() + '\\'
+py_script_path = os.path.dirname(__file__) if args.portable else site.getusersitepackages()
 if args.script_path is not None:
     py_script_path = args.script_path
 
 if args.portable:
-    plugin32_path = 'vapoursynth32\\plugins\\'
-    plugin64_path = 'vapoursynth64\\plugins\\'
+    base_path = os.path.dirname(__file__)
+    plugin32_path = os.path.join(base_path, 'vapoursynth32', 'plugins')
+    plugin64_path = os.path.join(base_path, 'vapoursynth64', 'plugins')
 elif is_sitepackage_install_portable():
     import vapoursynth
     base_path = os.path.dirname(vapoursynth.__file__)

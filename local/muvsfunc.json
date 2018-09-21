@@ -23,6 +23,19 @@
 	],
 	"releases": [
 		{
+			"version": "v0.2.0",
+			"published": "2018-09-17T06:51:51Z",
+			"script": {
+				"url": "https://api.github.com/repos/WolframRhodium/muvsfunc/zipball/v0.2.0",
+				"files": {
+					"muvsfunc.py": [
+						"WolframRhodium-muvsfunc-5e94027/muvsfunc.py",
+						"4452dbcb4f9e90fd21d7b587e64b311e0ede8afb6783f29f9091ec3ad0b3975c"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.1.0",
 			"published": "2018-07-22T18:56:12Z",
 			"script": {

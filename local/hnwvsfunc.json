@@ -22,6 +22,32 @@
 	],
 	"releases": [
 		{
+			"version": "v1.24",
+			"published": "2018-09-28T09:45:07Z",
+			"script": {
+				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v1.24",
+				"files": {
+					"hnwvsfunc.py": [
+						"Helenerineium-hnwvsfunc-3fb0a89/hnwvsfunc.py",
+						"6fa9016cbe7f3eb7c11486bcc025d4f6f6133c2d50291e8ceebd4163de24f714"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.000",
+			"published": "2018-09-21T02:35:08Z",
+			"script": {
+				"url": "https://api.github.com/repos/Helenerineium/hnwvsfunc/zipball/v1.000",
+				"files": {
+					"hnwvsfunc.py": [
+						"Helenerineium-hnwvsfunc-fa5f3c6/hnwvsfunc.py",
+						"6fa9016cbe7f3eb7c11486bcc025d4f6f6133c2d50291e8ceebd4163de24f714"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.20",
 			"published": "2018-09-21T02:35:08Z",
 			"script": {
@@ -34,7 +60,7 @@
 				}
 			}
 		},
-        {
+		{
 			"version": "v1.19",
 			"published": "2018-09-21T02:35:08Z",
 			"script": {

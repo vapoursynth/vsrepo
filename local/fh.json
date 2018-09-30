@@ -1,0 +1,78 @@
+{
+	"name": "FieldHint",
+	"type": "VSPlugin",
+	"description": "FieldHint Plugin",
+	"website": "https://github.com/dubhater/vapoursynth-fieldhint",
+	"github": "https://github.com/dubhater/vapoursynth-fieldhint",
+	"category": "Other",
+	"identifier": "com.nodame.fieldhint",
+	"namespace": "fh",
+	"releases": [
+		{
+			"version": "v3",
+			"published": "2015-08-18T20:18:55Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-fieldhint/releases/download/v3/vapoursynth-fieldhint-v3-win32.7z",
+				"files": {
+					"libfieldhint.dll": [
+						"libfieldhint.dll",
+						"0198fd0658937f7e43d40da60477fbdb03d1475d952308f39fe8066dd5caf9d1"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-fieldhint/releases/download/v3/vapoursynth-fieldhint-v3-win64.7z",
+				"files": {
+					"libfieldhint.dll": [
+						"libfieldhint.dll",
+						"b372542f3a3dceb0406ac7fa56f3bdc986dbb448af102ba260463f15ba1a0024"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2",
+			"published": "2015-06-20T21:12:21Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-fieldhint/releases/download/v2/vapoursynth-fieldhint-v2-win32.7z",
+				"files": {
+					"libfieldhint.dll": [
+						"libfieldhint.dll",
+						"b14c96f0bcec5e24e5e85be0f81c58f2f4172a1cd7525c68bc40112beeeca534"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-fieldhint/releases/download/v2/vapoursynth-fieldhint-v2-win64.7z",
+				"files": {
+					"libfieldhint.dll": [
+						"libfieldhint.dll",
+						"f21de8d29c1420b10b765bcefc15b1cd6a6d407fc1967c9f4e9719d1e5c46345"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0",
+			"published": "2013-10-01T08:58:49Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-fieldhint/releases/download/v1.0/vapoursynth-fieldhint-v1.0-win32.7z",
+				"files": {
+					"libfieldhint.dll": [
+						"libfieldhint.dll",
+						"d3e8f0d09392e5e4632064b7760b17377428c692b84a82b38e17b6d365a7c720"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-fieldhint/releases/download/v1.0/vapoursynth-fieldhint-v1.0-win64.7z",
+				"files": {
+					"libfieldhint.dll": [
+						"libfieldhint.dll",
+						"f381c41313902164ead57ff2f1d0e0d6ab60fbddc91b1781bd431d9dfbdf238b"
+					]
+				}
+			}
+		}
+	]
+}

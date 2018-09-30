@@ -1,0 +1,101 @@
+{
+	"name": "damb",
+	"type": "VSPlugin",
+	"description": "Audio file reader and writer",
+	"website": "https://github.com/dubhater/vapoursynth-damb",
+	"github": "https://github.com/dubhater/vapoursynth-damb",
+	"doom9": " https://forum.doom9.org/showthread.php?t=171555",
+	"category": "Other",
+	"identifier": "com.nodame.damb",
+	"namespace": "damb",
+	"releases": [
+		{
+			"version": "v3",
+			"published": "2015-02-06T12:25:58Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v3/vapoursynth-damb-v3-win32.7z",
+				"files": {
+					"libdamb.dll": [
+						"libdamb.dll",
+						"72656aae0518c2b0f1c85849bbbc7a9c5565f1d3636a726ec06b1de455993ff4"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v3/vapoursynth-damb-v3-win64.7z",
+				"files": {
+					"libdamb.dll": [
+						"libdamb.dll",
+						"b38b203f6db01ab46ea543ef2cff10610b713c24e81416e8a30fdc78279817f9"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2",
+			"published": "2014-12-29T09:54:49Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v2/vapoursynth-damb-v2-win32.7z",
+				"files": {
+					"libdamb.dll": [
+						"libdamb.dll",
+						"fa3bb72b470f95b85be8ea8669f777dca74f5c88ad98c881b157d3a78c91236f"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v2/vapoursynth-damb-v2-win64.7z",
+				"files": {
+					"libdamb.dll": [
+						"libdamb.dll",
+						"c879520f6cfdd9ac1312c96bd4d842397aa36112f72861521b4f8cab0f0eef20"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1",
+			"published": "2014-12-16T19:17:23Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v1/vapoursynth-damb-v1-win32.7z",
+				"files": {
+					"libdamb.dll": [
+						"libdamb.dll",
+						"a7241afedbef0c931058929d2ad12c12c9ac1060535d7520133fa64705789fc8"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v1/vapoursynth-damb-v1-win64.7z",
+				"files": {
+					"libdamb.dll": [
+						"libdamb.dll",
+						"048a454124641d324141ed1a879a83e3aa12c7a064a8494fee768e4e38600b33"
+					]
+				}
+			}
+		},
+		{
+			"version": "",
+			"published": "",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v3/vapoursynth-damb-v3-win32.7z",
+				"files": {
+					"libdamb.dll": [
+						"libdamb.dll",
+						"HASH"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v3/vapoursynth-damb-v3-win64.7z",
+				"files": {
+					"libdamb.dll": [
+						"libdamb.dll",
+						"SHA256"
+					]
+				}
+			}
+		}
+	]
+}

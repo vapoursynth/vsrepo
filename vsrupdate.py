@@ -237,10 +237,13 @@ def update_package(name):
                     with open('local/' + name + '.new.json', 'w', encoding='utf-8') as pl:
                         json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent='\t')
                 print('Release file updated')
+                return 1
             else:
                 print('Release file already up to date')
+                return 0
         else:
             print('Only github projects supported, ' + name + ' not scanned')
+            return -1
 
 def verify_package(pfile, existing_identifiers):
     name = pfile['name']
@@ -294,9 +297,19 @@ if args.operation == 'compile':
     print('Done')
 elif args.operation == 'update-local':
     if args.package is None:
+        num_skipped = 0
+        num_nochange = 0
+        num_updated = 0
         for f in os.scandir('local'):
-            if f.is_file() and f.path.endswith('.json'):
-                update_package(os.path.splitext(os.path.basename(f))[0])
+            if f.is_file() and f.path.endswith('.json'):         
+                result = update_package(os.path.splitext(os.path.basename(f))[0])
+                if result == -1:
+                    num_skipped = num_skipped + 1
+                elif result == 1:
+                    num_updated = num_updated + 1
+                elif result == 0:
+                    num_nochange = num_nochange + 1
+        print('Summary:\nUpdated: {} \nNo change: {} \nSkipped: {}\n'.format(num_updated, num_nochange, num_skipped))
     else:
         update_package(args.package[0])
 elif args.operation == 'upload':

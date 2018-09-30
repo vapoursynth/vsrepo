@@ -1,0 +1,33 @@
+{
+    "name": "DGHDRtoSDR",
+    "type": "VSPlugin",
+    "description": "Convert HDR to SDR",
+    "website": "http://rationalqm.us/hdr",
+    "category": "Color/Levels",
+    "identifier": "com.vapoursynth.dghdrtosdr",
+    "namespace": "dghdrtosdr",
+    "releases": [
+        {
+            "version": "1.9",
+            "published": "2018-09-06T05:28Z",
+            "win32": {
+                "url": "http://rationalqm.us/hdr/DGHDRtoSDR_1.9.rar",
+                "files": {
+                    "DGHDRtoSDR.dll": [
+                        "DGHDRtoSDR.dll",
+                        "59b293e05e6d09cc886fa082d97e1c3326217532f681b7978dff874039cebef2"
+                    ]
+                }
+            },
+            "win64": {
+                "url": "http://rationalqm.us/hdr/DGHDRtoSDR_1.9.rar",
+                "files": {
+                    "DGHDRtoSDR.dll": [
+                        "x64/DGHDRtoSDR.dll",
+                        "05eda4d7e8a1b3a70151edb1f8b07ed51e633d29c8d05ecffda4679314b5e710"
+                    ]
+                }
+            }
+        }
+    ]
+}

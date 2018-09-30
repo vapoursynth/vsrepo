@@ -74,28 +74,6 @@
 					]
 				}
 			}
-		},
-		{
-			"version": "",
-			"published": "",
-			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v3/vapoursynth-damb-v3-win32.7z",
-				"files": {
-					"libdamb.dll": [
-						"libdamb.dll",
-						"HASH"
-					]
-				}
-			},
-			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-damb/releases/download/v3/vapoursynth-damb-v3-win64.7z",
-				"files": {
-					"libdamb.dll": [
-						"libdamb.dll",
-						"SHA256"
-					]
-				}
-			}
 		}
 	]
 }

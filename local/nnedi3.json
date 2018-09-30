@@ -13,6 +13,28 @@
 	],
 	"releases": [
 		{
+			"version": "v12",
+			"published": "2018-09-29T16:09:17Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v12/vapoursynth-nnedi3-v12-win32.7z",
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"6ebca8698c450e0c1147480533e85579fd2cd870cac72430c6df0048158ab11d"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v12/vapoursynth-nnedi3-v12-win64.7z",
+				"files": {
+					"libnnedi3.dll": [
+						"libnnedi3.dll",
+						"9e3fa8cb07759aa8463a608fe4211ef4d8e2c398f3c4d41e593bdbf5c5440d61"
+					]
+				}
+			}
+		},
+		{
 			"version": "v11",
 			"published": "2017-01-19T14:09:25Z",
 			"win32": {

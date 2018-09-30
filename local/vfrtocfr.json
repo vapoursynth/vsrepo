@@ -1,0 +1,34 @@
+{
+	"name": "VFRToCFR",
+	"type": "VSPlugin",
+	"description": "VFR to CFR Video Converter",
+	"website": "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-VFRToCFR",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-VFRToCFR",
+	"category": "Other",
+	"identifier": "blaze.plugin.vfrtocfr",
+	"namespace": "vfrtocfr",
+	"releases": [
+		{
+			"version": "v1.0",
+			"published": "2017-07-04T22:32:16Z",
+			"win32": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-VFRToCFR/releases/download/v1.0/Vapoursynth-VFRToCFR-v1.0-x86.zip",
+				"files": {
+					"VFRToCFRVapoursynth.dll": [
+						"VFRToCFRVapoursynth.dll",
+						"ab9866e7202c2afdbb0b0101ec51311ba67c6493bc1d83e9d50376b8558078fe"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-VFRToCFR/releases/download/v1.0/Vapoursynth-VFRToCFR-v1.0-x64.zip",
+				"files": {
+					"VFRToCFRVapoursynth.dll": [
+						"VFRToCFRVapoursynth.dll",
+						"2b15a93523378f7b452e7371d257b87d0210e7f5d1cfaf6f416efe7292a1dbc9"
+					]
+				}
+			}
+		}
+	]
+}

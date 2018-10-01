@@ -1,0 +1,41 @@
+{
+	"name": "xvs",
+	"type": "PyScript",
+	"description": "Script collection",
+	"github": "https://github.com/xyx98/my-vapoursynth-script",
+	"category": "Scripts",
+	"identifier": "xvs",
+	"modulename": "xvs",
+	"dependencies": [
+		"mvsfunc",
+		"havsfunc",
+		"muvsfunc",
+		"com.nodame.mvtools",
+		"com.nodame.fluxsmooth",
+		"com.holywu.vsfilter",
+		"com.holywu.vsfiltermod",
+		"fmtconv",
+		"com.nodame.awarpsharp2",
+		"com.holywu.tcanny",
+		"com.holywu.tdeintmod",
+		"com.holywu.nnedi3cl",
+		"com.wolframrhodium.dpid",
+		"com.ifb.tonemap",
+		"com.vapoursynth.ffms2"
+	],
+	"releases": [
+		{
+			"version": "git:1b20e65",
+			"published": "",
+			"script": {
+				"url": "https://raw.githubusercontent.com/xyx98/my-vapoursynth-script/1b20e655b52a53825198738d15496cc559ba5a35/xvs.py",
+				"files": {
+					"xvs.py": [
+						"xvs.py",
+						"0109b0e2ee7cc0fa804df990c02e961584afda18057dc97024175b1e010204ae"
+					]
+				}
+			}
+		}
+	]
+}

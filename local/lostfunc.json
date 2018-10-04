@@ -1,0 +1,34 @@
+{
+	"name": "lostfunc",
+	"type": "PyScript",
+	"description": "A collection of scripts mostly posted on doom9 forums.",
+	"website": "https://github.com/theChaosCoder/lostfunc",
+	"github": "https://github.com/theChaosCoder/lostfunc",
+	"category": "Scripts",
+	"identifier": "lostfunc",
+	"modulename": "lostfunc",
+	"dependencies": [
+		"adjust",
+		"havsfunc",
+		"oyster",
+		"com.nodame.mvtools",
+		"com.Khanattila.KNLMeansCL",
+		"com.nodame.awarpsharp2",
+		"com.vapoursynth.bm3d"
+	],
+	"releases": [
+		{
+			"version": "v1",
+			"published": "2018-10-04T12:41:06Z",
+			"script": {
+				"url": "https://api.github.com/repos/theChaosCoder/lostfunc/zipball/v1",
+				"files": {
+					"lostfunc.py": [
+						"theChaosCoder-lostfunc-0a68168/lostfunc.py",
+						"f65c498ba125b6f15a82d3132cf566e2c9f843f18dbbbad4736379ea39dfca3e"
+					]
+				}
+			}
+		}
+	]
+}

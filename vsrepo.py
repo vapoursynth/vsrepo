@@ -290,7 +290,7 @@ def install_files(p):
         data = fetch_url_cached(url, p['name'] + ' ' + install_rel['version'])
     except:
         print('Failed to download ' + p['name'] + ' ' + install_rel['version'] + ', skipping installation and moving on')
-        return 0
+        return (0, 1)
 
     single_file = None
     if len(install_rel[bin_name]['files']) == 1:
@@ -327,43 +327,46 @@ def install_files(p):
         os.remove(tfpath)
     installed_packages[p['identifier']] = install_rel['version']
     print('Successfully installed ' + p['name'] + ' ' + install_rel['version'])
-    return 1
+    return (1, 0)
 
 def install_package(name):    
     p = get_package_from_name(name)
     if can_install(p):
-        inst = 0
+        inst = (0, 0, 0)
         if 'dependencies' in p:
             for dep in p['dependencies']:
                 res = install_package(dep)
-                inst = inst + res[0] + res[1]
+                inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
         if not is_package_installed(p['identifier']):
-            return (install_files(p), inst)
-        return (0, inst)
+            res = install_files(p)
+            inst = (inst[0] + res[0], inst[1], inst[2] + res[1])
+        return inst
     else:
         print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
-        return (0, 0)
+        return (0, 0, 1)
 
 def upgrade_files(p):
     if can_install(p):
-        inst = 0
+        inst = (0, 0, 0)
         if 'dependencies' in p:
             for dep in p['dependencies']:
                 if not is_package_installed(dep):
                     res = install_package(dep)
-                    inst = inst + res[0] + res[1]
-        return(install_files(p), inst)
+                    inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
+        res = install_files(p)
+        return (inst[0] + res[0], inst[1], inst[2] + res[1])
     else:
         print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
-        return (0, 0)
+        return (0, 0, 1)
 
 def upgrade_package(name, force):
-    inst = (0, 0)
+    inst = (0, 0, 0)
     p = get_package_from_name(name)
     if not is_package_installed(p['identifier']):
         print('Package ' + p['name'] + ' not installed, can\'t upgrade')
-    elif is_package_upgradable(p['identifier'], force):
-        inst = upgrade_files(p)
+    elif is_package_upgradable(p['identifier'], force): 
+        res = upgrade_files(p)
+        return (res[0], 0, res[1])
     elif not is_package_upgradable(p['identifier'], True):
         print('Package ' + p['name'] + ' not upgraded, latest version installed')
     else:
@@ -371,12 +374,12 @@ def upgrade_package(name, force):
     return inst
 
 def upgrade_all_packages(force):
-    inst = (0, 0)
+    inst = (0, 0, 0)
     installed_ids = list(installed_packages.keys())
     for id in installed_ids:
         if is_package_upgradable(id, force): 
             res = upgrade_files(get_package_from_id(id, True))
-            inst = (inst[0] + res[0], inst[1] + res[1])
+            inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
     return inst
 
 def uninstall_files(p):
@@ -446,35 +449,39 @@ for name in args.package:
 
 if args.operation == 'install':
     detect_installed_packages()
-    inst = (0, 0)
+    inst = (0, 0, 0)
     for name in args.package:
         res = install_package(name)
-        inst = (inst[0] + res[0], inst[1] + res[1])
+        inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
     if (inst[0] == 0) and (inst[1] == 0):
-        print('Nothing to do')
+        print('Nothing done')
     elif (inst[0] > 0) and (inst[1] == 0):
         print('{} {} installed'.format(inst[0], 'package' if inst[0] == 1 else 'packages'))
     elif (inst[0] == 0) and (inst[1] > 0):
         print('{} missing {} installed'.format(inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
     else:
         print('{} {} and {} additional {} installed'.format(inst[0], 'package' if inst[0] == 1 else 'packages', inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
+    if (inst[2] > 0):
+        print('{} {} failed'.format(inst[2], 'package' if inst[0] == 1 else 'packages'))
 elif args.operation in ('upgrade', 'upgrade-all'):
     detect_installed_packages()
-    inst = (0, 0)
+    inst = (0, 0, 0)
     if args.operation == 'upgrade-all':
         inst = upgrade_all_packages(args.force)
     else:
         for name in args.package:
             res = upgrade_package(name, args.force)
-            inst = (inst[0] + res[0], inst[1] + res[1])
+            inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
     if (inst[0] == 0) and (inst[1] == 0):
-        print('Nothing to do')
+        print('Nothing done')
     elif (inst[0] > 0) and (inst[1] == 0):
         print('{} {} upgraded'.format(inst[0], 'package' if inst[0] == 1 else 'packages'))
     elif (inst[0] == 0) and (inst[1] > 0):
         print('{} missing {} installed'.format(inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
     else:
         print('{} {} upgraded and {} additional {} installed'.format(inst[0], 'package' if inst[0] == 1 else 'packages', inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
+    if (inst[2] > 0):
+        print('{} {} failed'.format(inst[2], 'package' if inst[0] == 1 else 'packages'))
 elif args.operation == 'uninstall':
     detect_installed_packages()
     uninst = (0, 0)

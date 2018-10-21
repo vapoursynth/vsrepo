@@ -286,7 +286,6 @@ def install_files(p):
     install_rel = get_latest_installable_release(p)
     url = install_rel[bin_name]['url']   
     data = fetch_url_cached(url, p['name'] + ' ' + install_rel['version'])
-    uninstall_files(p)
 
     single_file = None
     if len(install_rel[bin_name]['files']) == 1:
@@ -297,6 +296,7 @@ def install_files(p):
         hash_result = check_hash(data, single_file[2])
         if not hash_result[0]:
             raise Exception('Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+        uninstall_files(p)
         os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
         with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
             outfile.write(data)
@@ -305,16 +305,20 @@ def install_files(p):
         tf = open(tffd, mode='wb')
         tf.write(data)
         tf.close()
+        result_cache = {}
         for install_fn in install_rel[bin_name]['files']:
-            fn_props =install_rel[bin_name]['files'][install_fn]
+            fn_props = install_rel[bin_name]['files'][install_fn]
             result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, fn_props[0]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             result.check_returncode()
             hash_result = check_hash(result.stdout, fn_props[1])
             if not hash_result[0]:
                 raise Exception('Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+            result_cache[install_fn] = result.stdout
+        uninstall_files(p)
+        for install_fn in install_rel[bin_name]['files']:
             os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
             with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
-                outfile.write(result.stdout)
+                outfile.write(result_cache[install_fn])
         os.remove(tfpath)
     installed_packages[p['identifier']] = install_rel['version']
     print('Successfully installed ' + p['name'] + ' ' + install_rel['version'])

@@ -1,0 +1,25 @@
+{
+	"name": "NoiseGen",
+	"type": "VSPlugin",
+	"description": "NoiseGen - VapouSynth Noise Generator",
+	"website": "https://bitbucket.org/James1201/vapoursynth-noisegen",
+	"category": "Other",
+	"identifier": "com.mio.noisegen",
+	"namespace": "noisegen",
+	"github": "https://github.com/theChaosCoder/vapoursynth-noisegen",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2018-10-23T08:14:34Z",
+			"win64": {
+				"url": "https://github.com/theChaosCoder/vapoursynth-noisegen/releases/download/r1/NoiseGen_r1.7z",
+				"files": {
+					"libnoisegen.dll": [
+						"libnoisegen.dll",
+						"dcbf8c284b681b70793baa541329494fae29377a373f6feb2b9e120e97109846"
+					]
+				}
+			}
+		}
+	]
+}

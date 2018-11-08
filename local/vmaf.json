@@ -1,0 +1,28 @@
+{
+	"name": "VMAF",
+	"type": "VSPlugin",
+	"description": "VMAF (Video Multi-Method Assessment Fusion) is a perceptual video quality assessment algorithm developed by Netflix. Can also calculate PSNR, SSIM and MS-SSIM.",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VMAF",
+	"doom9": "https://forum.doom9.org/showthread.php?t=175862",
+	"category": "Other",
+	"identifier": "com.holywu.vmaf",
+	"namespace": "vmaf",
+	"dependencies": [
+		"com.holywu.vmaf.models"
+	],
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2018-11-07T10:09:23Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VMAF/releases/download/r1/VMAF-r1.7z",
+				"files": {
+					"VMAF.dll": [
+						"plugins64/VMAF.dll",
+						"dccc6ee32869d8c60a21345bef4c7e77e9dfb7d42e9f1cf0eea3dd4ed6703052"
+					]
+				}
+			}
+		}
+	]
+}

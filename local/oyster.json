@@ -14,7 +14,8 @@
 		"com.vapoursynth.bm3d",
 		"com.holywu.dfttest",
 		"fmtconv",
-		"com.nodame.mvsf"
+		"com.nodame.mvsf",
+        "mvmulti"
 	],
 	"releases": [
 		{

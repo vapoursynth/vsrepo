@@ -10,6 +10,28 @@
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain",
 	"releases": [
 		{
+			"version": "r7",
+			"published": "2018-11-29T07:10:54Z",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r7/AddGrain-r7.7z",
+				"files": {
+					"AddGrain.dll": [
+						"plugins64/AddGrain.dll",
+						"d28be27f6c003b9e1a465e96551a75a5f96bde34868912c7e97fb228303595b6"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r7/AddGrain-r7.7z",
+				"files": {
+					"AddGrain.dll": [
+						"plugins64/AddGrain.dll",
+						"d28be27f6c003b9e1a465e96551a75a5f96bde34868912c7e97fb228303595b6"
+					]
+				}
+			}
+		},
+		{
 			"version": "r6",
 			"published": "2018-05-31T10:28:08Z",
 			"win32": {

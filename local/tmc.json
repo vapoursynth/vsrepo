@@ -1,0 +1,34 @@
+{
+	"name": "TMaskCleaner",
+	"type": "VSPlugin",
+	"description": "A really simple mask cleaning plugin for VapourSynth based on mt_hysteresis.",
+	"website": "https://github.com/DJATOM/VapourSynth-TMaskCleaner",
+	"category": "Other",
+	"identifier": "com.djatom.tmc",
+	"namespace": "tmc",
+	"github": "https://github.com/DJATOM/VapourSynth-TMaskCleaner",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2017-11-05T22:16:31Z",
+			"win32": {
+				"url": "https://github.com/DJATOM/VapourSynth-TMaskCleaner/releases/download/r1/TMaskCleaner-r1.7z",
+				"files": {
+					"TMaskCleaner.dll": [
+						"x86/TMaskCleaner.dll",
+						"0ebb1994b401dff75e26aa6f668e3473aa168439dc3017e4864937ad408bc0b3"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/DJATOM/VapourSynth-TMaskCleaner/releases/download/r1/TMaskCleaner-r1.7z",
+				"files": {
+					"TMaskCleaner.dll": [
+						"x64/TMaskCleaner.dll",
+						"2bd333b3874be7d2eb087a84a03a26e9e8a0c65bf40af09b97bc8b0fc48d49c9"
+					]
+				}
+			}
+		}
+	]
+}

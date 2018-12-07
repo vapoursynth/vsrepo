@@ -10,6 +10,28 @@
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny",
 	"releases": [
 		{
+			"version": "r11",
+			"published": "2018-12-02T16:31:02Z",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r11/TCanny-r11.7z",
+				"files": {
+					"TCanny.dll": [
+						"plugins64/TCanny.dll",
+						"8f25f1e6fc7e70a71fae20169e5efe49232363efd3e6bafd7eca44be145adcc4"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r11/TCanny-r11.7z",
+				"files": {
+					"TCanny.dll": [
+						"plugins64/TCanny.dll",
+						"8f25f1e6fc7e70a71fae20169e5efe49232363efd3e6bafd7eca44be145adcc4"
+					]
+				}
+			}
+		},
+		{
 			"version": "r10",
 			"published": "2017-07-30T07:39:49Z",
 			"win32": {

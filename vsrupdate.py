@@ -250,7 +250,7 @@ def update_package(name):
 def verify_package(pfile, existing_identifiers):
     name = pfile['name']
     for key in pfile.keys():
-        if key not in ('name', 'type', 'description', 'website', 'category', 'identifier', 'modulename', 'namespace', 'github', 'doom9', 'dependencies', 'releases'):
+        if key not in ('name', 'type', 'description', 'website', 'category', 'identifier', 'modulename', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases'):
             raise Exception('Unkown key: ' + key + ' in ' + name)
     if pfile['type'] not in ('VSPlugin', 'PyScript'):
         raise Exception('Invalid type in ' + name)

@@ -8,6 +8,7 @@
 	"identifier": "com.holywu.ctmf",
 	"namespace": "ctfm",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF",
+	"ignore": ["r4.1"],
 	"releases": [
 		{
 			"version": "r4",

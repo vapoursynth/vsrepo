@@ -10,6 +10,7 @@
 	"dependencies": [
 		"org.fftw.fftw3"
 	],
+	"ignore": ["r2.1"],
 	"releases": [
 		{
 			"version": "r2",

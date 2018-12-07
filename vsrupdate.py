@@ -166,6 +166,8 @@ def update_package(name):
             apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name']))
             is_plugin = (pfile['type'] == 'VSPlugin')
             for rel in apifile:
+                if rel['tag_name'] in pfile.get('ignore', []):
+                    continue
                 if rel['tag_name'] not in rel_order:
                     rel_order.insert(0, rel['tag_name'])
                 if rel['tag_name'] not in existing_rel_list:

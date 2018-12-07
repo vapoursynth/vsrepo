@@ -7,6 +7,7 @@
 	"category": "Other",
 	"identifier": "com.holywu.pp7",
 	"namespace": "pp7",
+	"ignore": ["r4.1"],
 	"releases": [
 		{
 			"version": "r4",

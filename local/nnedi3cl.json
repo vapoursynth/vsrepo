@@ -11,6 +11,7 @@
 	"dependencies": [
 		"com.deinterlace.nnedi3.weights"
 	],
+	"ignore": ["r7.1", "r7.2"],
 	"releases": [
 		{
 			"version": "r7",

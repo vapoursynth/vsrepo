@@ -8,6 +8,7 @@
 	"identifier": "com.holywu.eedi2",
 	"namespace": "eedi2",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2",
+	"ignore": ["r7.1"],
 	"releases": [
 		{
 			"version": "r7",

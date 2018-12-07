@@ -8,6 +8,7 @@
 	"identifier": "com.holywu.eedi3",
 	"namespace": "eedi3m",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3",
+	"ignore": ["r3.1"],
 	"releases": [
 		{
 			"version": "r3",

@@ -8,6 +8,7 @@
 	"identifier": "com.holywu.yadifmod",
 	"namespace": "yadifmod",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod",
+	"ignore": ["r10.1"],
 	"releases": [
 		{
 			"version": "r10",

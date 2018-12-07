@@ -8,6 +8,7 @@
 	"identifier": "com.holywu.ttempsmooth",
 	"namespace": "ttmpsm",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth",
+	"ignore": ["r3.1"],
 	"releases": [
 		{
 			"version": "r3",

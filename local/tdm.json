@@ -8,6 +8,7 @@
 	"identifier": "com.holywu.tdeintmod",
 	"namespace": "tdm",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod",
+	"ignore": ["r10.1"],
 	"releases": [
 		{
 			"version": "r10",

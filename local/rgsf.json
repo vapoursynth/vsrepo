@@ -8,6 +8,7 @@
 	"identifier": "com.vapoursynth.removegrainsf",
 	"namespace": "rgsf",
 	"github": "https://github.com/IFeelBloated/RGSF",
+	"ignore": ["tmp"],
 	"releases": [
 		{
 			"version": "r5",
@@ -54,20 +55,43 @@
 			}
 		},
 		{
-			"version": "tmp",
-			"published": "2015-06-28T14:09:16Z"
-		},
-		{
 			"version": "r3",
-			"published": "2015-06-26T13:12:07Z"
+			"published": "2015-06-26T13:12:07Z",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r3/RGVS.dll",
+				"files": {
+					"RGVS.dll": [
+						"RGVS.dll",
+						"f6623495c53f4b4e6588aae873ed10936cf1a5aca49808e1189a122567394a64"
+					]
+				}
+			}
 		},
 		{
 			"version": "r2",
-			"published": "2015-06-21T15:35:04Z"
+			"published": "2015-06-21T15:35:04Z",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r2/RGVS.dll",
+				"files": {
+					"RGVS.dll": [
+						"RGVS.dll",
+						"9f09e8e663ee83d48855e526b255a6fbe06a7d438da1acb93e07051dafd5f517"
+					]
+				}
+			}
 		},
 		{
 			"version": "r1",
-			"published": "2015-06-21T11:37:33Z"
+			"published": "2015-06-21T11:37:33Z",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/RGSF/releases/download/r1/RGVS.dll",
+				"files": {
+					"RGVS.dll": [
+						"RGVS.dll",
+						"e52f2457d28ce4399e9aae644ff6a7d6b763de16be658f2ca20262bdcccc927b"
+					]
+				}
+			}
 		}
 	]
 }

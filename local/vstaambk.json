@@ -21,10 +21,10 @@
 			"version": "v0.8.0",
 			"published": "2018-05-11T06:01:23Z",
 			"script": {
-				"url": "https://github.com/HomeOfVapourSynthEvolution/vsTAAmbk/releases/download/v0.8.0/vsTAAmbk.v0.8.0.zip",
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/vsTAAmbk/zipball/v0.8.0",
 				"files": {
 					"vsTAAmbk.py": [
-						"vsTAAmbk/vsTAAmbk.py",
+						"HomeOfVapourSynthEvolution-vsTAAmbk-b1938f6/vsTAAmbk.py",
 						"d55ba729d7aef35482f2171c67db3e4ed68ade1f3542e51e2309c6d61e5ee256"
 					]
 				}
@@ -32,7 +32,16 @@
 		},
 		{
 			"version": "v0.7.6",
-			"published": "2018-05-11T05:43:00Z"
+			"published": "2018-05-11T05:43:00Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/vsTAAmbk/zipball/v0.7.6",
+				"files": {
+					"vsTAAmbk.py": [
+						"HomeOfVapourSynthEvolution-vsTAAmbk-18c3f0c/vsTAAmbk.py",
+						"8b2a776b1edec5e55cf3395e3f7ec87d45eac9037b1f0e87ea84fb09517ede2c"
+					]
+				}
+			}
 		}
 	]
 }

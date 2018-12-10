@@ -24,7 +24,6 @@ import sys
 import json
 import hashlib
 import urllib.request
-import platform
 import io
 import site
 import os
@@ -32,19 +31,21 @@ import os.path
 import subprocess
 import tempfile
 import argparse
-import winreg
 import email.utils
 import time
 import zipfile
+
+try:
+    import winreg
+except ImportError:
+    print('{} is only supported on Windows.'.format(__file__))
+    exit(1)
 
 try:
     import tqdm
 except ImportError:
     pass
 
-
-if platform.system() != 'Windows':
-    raise Exception('Windows required')
 
 def is_sitepackage_install_portable():
     try:

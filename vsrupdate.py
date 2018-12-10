@@ -28,15 +28,20 @@ import os.path
 import argparse
 import hashlib
 import subprocess
-import winreg
 import difflib
 import tempfile
-import platform
 import ftplib
-import tqdm
 
-if platform.system() != 'Windows':
-    raise Exception('Windows required')
+try:
+    import winreg
+except ImportError:
+    print('{} is only supported on Windows.'.format(__file__))
+    exit(1)
+
+try:
+    import tqdm
+except ImportError:
+    pass
 
 parser = argparse.ArgumentParser(description='Package list generator for VSRepo')
 parser.add_argument('operation', choices=['compile', 'update-local', 'upload'])

@@ -8,8 +8,32 @@
 	"identifier": "com.holywu.eedi3",
 	"namespace": "eedi3m",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3",
-	"ignore": ["r3.1"],
+	"ignore": [
+		"r3.1"
+	],
 	"releases": [
+		{
+			"version": "r4",
+			"published": "2018-12-11T13:15:23Z",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r4/EEDI3-r4.7z",
+				"files": {
+					"EEDI3m.dll": [
+						"plugins64/EEDI3m.dll",
+						"7c9366de72959f4c5c086d3994438108b14bb90444e82c7091054788e69ffdd0"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r4/EEDI3-r4.7z",
+				"files": {
+					"EEDI3m.dll": [
+						"plugins64/EEDI3m.dll",
+						"7c9366de72959f4c5c086d3994438108b14bb90444e82c7091054788e69ffdd0"
+					]
+				}
+			}
+		},
 		{
 			"version": "r3",
 			"published": "2017-12-23T13:12:23Z",

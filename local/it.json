@@ -8,6 +8,7 @@
 	"identifier": "in.7086.it",
 	"namespace": "it",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT",
+	"ignore": ["v0.1", "v0.2", "v0.3", "v0.4", "v1.0"],
 	"releases": [
 		{
 			"version": "v1.2",
@@ -52,26 +53,6 @@
 					]
 				}
 			}
-		},
-		{
-			"version": "v1.0",
-			"published": "2014-10-06T09:07:57Z"
-		},
-		{
-			"version": "v0.4",
-			"published": "2014-10-05T03:01:26Z"
-		},
-		{
-			"version": "v0.3",
-			"published": "2014-10-04T02:20:34Z"
-		},
-		{
-			"version": "v0.2",
-			"published": "2014-10-02T00:39:43Z"
-		},
-		{
-			"version": "v0.1",
-			"published": "2014-10-01T06:26:54Z"
 		}
 	]
 }

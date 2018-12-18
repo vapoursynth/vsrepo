@@ -7,6 +7,7 @@
 	"identifier": "com.holywu.waifu2x-w2xc.models",
 	"namespace": "w2xc_models",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc",
+	"ignore": ["r1", "r2", "r3", "r4", "r5"],
 	"releases": [
 		{
 			"version": "r7",
@@ -227,26 +228,6 @@
 					]
 				}
 			}
-		},
-		{
-			"version": "r5",
-			"published": "2016-02-09T13:41:01Z"
-		},
-		{
-			"version": "r4",
-			"published": "2016-01-04T09:21:19Z"
-		},
-		{
-			"version": "r3",
-			"published": "2015-10-18T16:07:28Z"
-		},
-		{
-			"version": "r2",
-			"published": "2015-07-29T04:26:31Z"
-		},
-		{
-			"version": "r1",
-			"published": "2015-07-22T21:37:39Z"
 		}
 	]
 }

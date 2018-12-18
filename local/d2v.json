@@ -8,6 +8,7 @@
 	"identifier": "com.sources.d2vsource",
 	"namespace": "d2v",
 	"github": "https://github.com/dwbuiten/d2vsource",
+	"ignore": ["beta1", "beta2", "beta3", "beta4", "beta5", "beta6", "beta7"],
 	"releases": [
 		{
 			"version": "v1.1",
@@ -52,34 +53,6 @@
 					]
 				}
 			}
-		},
-		{
-			"version": "beta7",
-			"published": "2013-12-05T17:11:25Z"
-		},
-		{
-			"version": "beta6",
-			"published": "2013-11-18T14:06:39Z"
-		},
-		{
-			"version": "beta4",
-			"published": "2013-11-18T13:58:39Z"
-		},
-		{
-			"version": "beta3",
-			"published": "2013-11-18T13:58:12Z"
-		},
-		{
-			"version": "beta2",
-			"published": "2013-11-18T13:57:27Z"
-		},
-		{
-			"version": "beta1",
-			"published": "2013-11-18T13:56:55Z"
-		},
-		{
-			"version": "beta5",
-			"published": "2013-11-18T13:56:14Z"
 		}
 	]
 }

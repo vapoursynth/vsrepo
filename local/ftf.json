@@ -8,6 +8,7 @@
 	"identifier": "com.deinterlace.ftf",
 	"namespace": "ftf",
 	"github": "https://github.com/IFeelBloated/Fix-Telecined-Fades",
+	"ignore": ["r1", "r2"],
 	"releases": [
 		{
 			"version": "r5",
@@ -47,14 +48,6 @@
 					]
 				}
 			}
-		},
-		{
-			"version": "r2",
-			"published": "2016-12-30T18:35:19Z"
-		},
-		{
-			"version": "r1",
-			"published": "2016-12-29T18:25:59Z"
 		}
 	]
 }

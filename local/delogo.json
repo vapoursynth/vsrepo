@@ -8,6 +8,7 @@
 	"identifier": "in.7086.delogo",
 	"namespace": "delogo",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo",
+	"ignore": ["v0.1", "v0.11", "v0.2", "v0.3"],
 	"releases": [
 		{
 			"version": "v0.4",
@@ -30,22 +31,6 @@
 					]
 				}
 			}
-		},
-		{
-			"version": "v0.3",
-			"published": "2015-03-11T22:31:20Z"
-		},
-		{
-			"version": "v0.2",
-			"published": "2014-10-14T12:28:41Z"
-		},
-		{
-			"version": "v0.11",
-			"published": "2014-10-04T01:18:54Z"
-		},
-		{
-			"version": "v0.1",
-			"published": "2014-10-03T10:41:16Z"
 		}
 	]
 }

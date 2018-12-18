@@ -290,6 +290,7 @@ if args.operation == 'compile':
                 print('Combining: ' + f.path)
                 pfile = json.load(ml)
                 verify_package(pfile, existing_identifiers)
+                pfile.pop('ignore', None)
                 combined.append(pfile)
 
     with open('vspackages.json', 'w', encoding='utf-8') as pl:

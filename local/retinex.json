@@ -10,6 +10,28 @@
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex",
 	"releases": [
 		{
+			"version": "r4",
+			"published": "2018-12-27T02:54:36Z",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r4/Retinex-r4.7z",
+				"files": {
+					"Retinex.dll": [
+						"Win32/Retinex.dll",
+						"238f23f41b24fe15806c17f45c31dfed3bc8ea23e54367db2e5a1d221dd34138"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex/releases/download/r4/Retinex-r4.7z",
+				"files": {
+					"Retinex.dll": [
+						"x64/Retinex.dll",
+						"df27bc89d43cbf28b5cae220c4849c3cf973c30944357b6d3e29e4dcaa2955c6"
+					]
+				}
+			}
+		},
+		{
 			"version": "r3",
 			"published": "2014-11-08T05:52:28Z",
 			"win32": {

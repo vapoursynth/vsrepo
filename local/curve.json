@@ -1,0 +1,25 @@
+{
+	"name": "Curve",
+	"type": "VSPlugin",
+	"description": "Apply color adjustments using curves similar to Adobe Photoshop and GIMP curves tools.",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Curve",
+	"doom9": "https://forum.doom9.org/showthread.php?t=175988",
+	"category": "Color/Levels",
+	"identifier": "com.holywu.curve",
+	"namespace": "curve",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2019-01-01T07:22:07Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Curve/releases/download/r1/Curve-r1.7z",
+				"files": {
+					"Curve.dll": [
+						"plugins64/Curve.dll",
+						"1065b120f4fce5e04f43ac2d0c82bdff07432c321156fa0698e9111230df7b82"
+					]
+				}
+			}
+		}
+	]
+}

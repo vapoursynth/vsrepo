@@ -2,11 +2,9 @@
 	"name": "hnwvsfunc",
 	"type": "PyScript",
 	"description": "Helenerineium (Wolfberry)'s Vapoursynth functions",
-	"website": "https://github.com/Helenerineium/hnwvsfunc",
 	"category": "Scripts",
 	"identifier": "hnwvsfunc",
 	"modulename": "hnwvsfunc",
-	"github": "https://github.com/Helenerineium/hnwvsfunc",
 	"dependencies": [
 		"havsfunc",
 		"muvsfunc",

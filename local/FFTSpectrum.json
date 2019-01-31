@@ -1,0 +1,24 @@
+{
+	"name": "FFTSpectrum",
+	"type": "VSPlugin",
+	"description": "A VapourSynth filter that displays the FFT frequency spectrum of a given clip. Supposedly useful for determining original resolution of upscaled anime content.",
+	"github": "https://github.com/Beatrice-Raws/FFTSpectrum",
+	"category": "Other",
+	"identifier": "org.beatrice-raws.fftspectrum",
+	"namespace": "fftspectrum",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2019-01-30T18:39:46Z",
+			"win64": {
+				"url": "https://github.com/Beatrice-Raws/FFTSpectrum/releases/download/r1/FFTSpectrum.x64.zip",
+				"files": {
+					"FFTSpectrum.dll": [
+						"FFTSpectrum.dll",
+						"5b23e7dfbb637bad9cba2bbdf53c3542b5e6b4b293b3f268000d3ba5481a41c8"
+					]
+				}
+			}
+		}
+	]
+}

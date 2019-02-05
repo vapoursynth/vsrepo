@@ -10,8 +10,23 @@
 	"dependencies": [
 		"com.holywu.vmaf.models"
 	],
-	"ignore": ["r2.1"],
+	"ignore": [
+		"r2.1"
+	],
 	"releases": [
+		{
+			"version": "r3",
+			"published": "2019-02-01T05:00:12Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VMAF/releases/download/r3/VMAF-r3.7z",
+				"files": {
+					"VMAF.dll": [
+						"plugins64/VMAF.dll",
+						"f622cc42001a899bf8ee679819fdc4f77cf7870bce7094b8238866c19bf16049"
+					]
+				}
+			}
+		},
 		{
 			"version": "r2",
 			"published": "2018-11-14T11:19:00Z",

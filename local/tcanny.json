@@ -12,15 +12,6 @@
 		{
 			"version": "r12",
 			"published": "2019-02-05T10:01:28Z",
-			"win32": {
-				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r12/TCanny-r12.7z",
-				"files": {
-					"TCanny.dll": [
-						"plugins64/TCanny.dll",
-						"ce9bb45071b326c6c8e626da2b94ea2b86fe2ee39a1be5bd14a065ac42547121"
-					]
-				}
-			},
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r12/TCanny-r12.7z",
 				"files": {

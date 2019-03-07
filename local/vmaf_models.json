@@ -12,6 +12,359 @@
 	],
 	"releases": [
 		{
+			"version": "r4",
+			"published": "2019-03-02T02:30:15Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VMAF/releases/download/r4/VMAF-r4.7z",
+				"files": {
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0001": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0001",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0001.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0001.model",
+						"61df806d6af0aa2d32a6b0d8c9d09bd146a8e46c851a49312438cdc1c53bab3c"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0002": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0002",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0002.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0002.model",
+						"3ede915cf8718a16cd85264fdd2f3bd8e6ff258c1d400eca95465a0af3602cba"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0003": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0003",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0003.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0003.model",
+						"425de7ab307171888f86cc3efc8bf1debbeb56753b115ff255d423792c98bc35"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0004": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0004",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0004.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0004.model",
+						"5d97c24a8979a67623187153cc7abb92d4410587b93eb8afe37a5734039c33c6"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0005": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0005",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0005.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0005.model",
+						"79ca5ed7608aa90391847783efb2a3243807cd48768f7d91d55fac91e8983fd3"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0006": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0006",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0006.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0006.model",
+						"acc0d4dbb974c29b953b549af8a4da3a1013db08110f1c7f6c7339d78c7dc5a2"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0007": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0007",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0007.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0007.model",
+						"284d7658921b0ae1818ed433620a7290d73533c3ed5c0dbc0f5160e324bb6095"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0008": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0008",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0008.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0008.model",
+						"09428a5c01837074fd5b435c9219a26d5df8222934d578684d48db3073eff46f"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0009": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0009",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0009.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0009.model",
+						"53cc8075c77b9554406455f21a470b3df6b80166508ed94da0e82ac8546f2706"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0010": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0010",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0010.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0010.model",
+						"2b9059e34ea9de310c7ae533e9dae93149b19283105fb356f3ab8fd369ce9bd9"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0011": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0011",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0011.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0011.model",
+						"353277329219e69efaccd8df1f6d6eab62a4c132e6c3c96b0af12779a0728652"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0012": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0012",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0012.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0012.model",
+						"41f9eaa826ea29cb9412402a1b8b321855712991f705fb59c9b3e199265638ac"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0013": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0013",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0013.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0013.model",
+						"c83418de22786c01b0f7a8e4ea615dccf9c91c948a990f760d69867ae4c5539b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0014": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0014",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0014.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0014.model",
+						"670a0630af329bd1fadf4d1b2d5065822ce6bb2c9638bdd7084c0bde25a905e6"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0015": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0015",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0015.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0015.model",
+						"ba7a92f4957a2759ade11829192b9d0ee0e5b5c5a227acd2636332b07c313b23"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0016": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0016",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0016.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0016.model",
+						"5e017025e76d9c688438b9dc66d9f31422b8c34e865e8d61c3f3ee76908a2dce"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0017": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0017",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0017.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0017.model",
+						"ac8e66a981f89003970ea44eec83dab8f35c08bebbe38b9e441f1f3ab8df51b7"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0018": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0018",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0018.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0018.model",
+						"f15688f50fff7a5febbab1399c381faef0a278bd20ba7132b9684447b96a14a5"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0019": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0019",
+						"b367c22ef4d3369e6d609d81c96187cb6a7c23cf2b1203d580a072955487705b"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0019.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.0019.model",
+						"5baa8ade425d291ef4722c31dd1355fdbbbb56c76aa194ddfc6df24d93c8c70f"
+					],
+					"model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.model": [
+						"plugins64/model/vmaf_4k_rb_v0.6.2/vmaf_4k_rb_v0.6.2.pkl.model",
+						"7f470e9404c0eb3a414b1ca3123380571d2ba9c2a4c3ac24dfccf19c02cacc1a"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0001": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0001",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0001.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0001.model",
+						"b8070f701ca489246d326dc6f37e9ff0a4825f9974bae6f6815052c70e7901d8"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0002": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0002",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0002.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0002.model",
+						"161ee56662faf277773ec4c6d72c5d19c17cda559ea6f8003a4ec1397665f801"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0003": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0003",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0003.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0003.model",
+						"1648b45a709971ab4f9a3776d6e99150d7eae1d4c8583e74699e97e865d495a7"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0004": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0004",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0004.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0004.model",
+						"d14d985dae77fba2b759d782d8856481aa574bfe33ea33e1454cba3a8c9d88a3"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0005": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0005",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0005.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0005.model",
+						"0458432435c36899fb5cc497f89ae8685fdb52557eeb0d94804ce0ae4f7899c8"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0006": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0006",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0006.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0006.model",
+						"4ec4da4fcc38871d64bdc82b4eee1d4611c1894577cfeef243615faa4606a914"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0007": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0007",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0007.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0007.model",
+						"1cad32b974bb4103d2132e31d3dac2c9d424112f01208b3643014f18a04951a2"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0008": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0008",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0008.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0008.model",
+						"66f33fb9ab125d1e3595afcd56b70bb5c434ee47b388df3f64f45ce2fb18926b"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0009": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0009",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0009.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0009.model",
+						"205738b02fd5d86ece756c65edfc2e15a63d33124dbfa3422e8feed7754a275b"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0010": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0010",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0010.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0010.model",
+						"2445e06507b4ba73854b65611b3149bad0f54d3e89fdc4241fa8ad93c14cc2c4"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0011": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0011",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0011.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0011.model",
+						"a7ac947823fd1d44c36d35bcc6551f42254eef2edf06ec73f4945f8d90fc0031"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0012": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0012",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0012.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0012.model",
+						"9ed5c983fd6d5e4e3f11e6c387c3d76370863743fa064a430807c8429056315b"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0013": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0013",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0013.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0013.model",
+						"5516ffb6b3aa62ded862c15db36942ef0cac45436c088866aaf1156303df1ce7"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0014": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0014",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0014.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0014.model",
+						"54024881747157c14de958b08bf2bf6fb1427486389d3d56452eb33896d8ca5a"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0015": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0015",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0015.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0015.model",
+						"8bde4894b7461532dd3dbc5aebe7caf48ceddb596aa4d6f6eeafa2fafec6b057"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0016": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0016",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0016.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0016.model",
+						"fcf2ca35762be31b00be5d0d6ff8e37a505c645b1b806e486f2c5e81aea84584"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0017": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0017",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0017.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0017.model",
+						"f7b406b7de9714633a02f550f8ab4cd251b8e9504f7cfd771e28b156f63f3dae"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0018": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0018",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0018.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0018.model",
+						"c50ef2754a8585f2b1ae535ea7bd47914ca2f0917b6086f87d71bd4d3a8a8ad7"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0019": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0019",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0019.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0019.model",
+						"aea9ad847eafaea2763563f2277915975d4d1dd1f584fbb702d350b52ee0c8b2"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0020": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0020",
+						"66dccca106155d70f3776f128a6b1a697d967b0738a5e85d9633b8d2ad1bdb04"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0020.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.0020.model",
+						"d0231c8a48bf9e61be46ad1ca3b72592e4f57b50c98ff8a847717f6d7b9471db"
+					],
+					"model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.model": [
+						"plugins64/model/vmaf_b_v0.6.3/vmaf_b_v0.6.3.pkl.model",
+						"0c82d6c3881936b9babddb0ecd6b1f6b012a1008a3023f4ffe6ea42e7792eab1"
+					],
+					"model/vmaf_v0.6.1.pkl": [
+						"plugins64/model/vmaf_v0.6.1.pkl",
+						"5bc3153113be986e919d6135c6c4e0506b0d260f6b28407642faf8c4708fba80"
+					],
+					"model/vmaf_v0.6.1.pkl.model": [
+						"plugins64/model/vmaf_v0.6.1.pkl.model",
+						"e5a590c483ebec388aa0c5ecc88aeda354a0e4fcd94b52db0cc4d4c1ba17c29d"
+					],
+					"model/vmaf_4k_v0.6.1.pkl": [
+						"plugins64/model/vmaf_4k_v0.6.1.pkl",
+						"2b59e693b72706fb760a924b441cc18e0695ceebf6b1d8b5255b773a4f47cbc4"
+					],
+					"model/vmaf_4k_v0.6.1.pkl.model": [
+						"plugins64/model/vmaf_4k_v0.6.1.pkl.model",
+						"7f470e9404c0eb3a414b1ca3123380571d2ba9c2a4c3ac24dfccf19c02cacc1a"
+					]
+				}
+			}
+		},
+		{
 			"version": "r3",
 			"published": "2019-02-01T05:00:12Z",
 			"win64": {

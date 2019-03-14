@@ -4,12 +4,36 @@
 	"description": "SangNom is a single field deinterlacer using edge-directed interpolation but nowadays it's mainly used in anti-aliasing scripts.",
 	"website": "https://bitbucket.org/James1201/vapoursynth-sangnom",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173752",
+	"github": "https://github.com/dubhater/vapoursynth-sangnom",
 	"category": "Deinterlacing",
 	"identifier": "com.mio.sangnom",
 	"namespace": "sangnom",
 	"releases": [
 		{
+			"version": "r41",
+			"published": "2019-03-14T17:37:21Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-sangnom/releases/download/r41/vapoursynth-sangnom-r41-win32.7z",
+				"files": {
+					"libsangnom.dll": [
+						"libsangnom.dll",
+						"157ad5a188ec1d4815c673daa2a39b1a59245be6fbdc1193a8fecfab9a6a6200"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-sangnom/releases/download/r41/vapoursynth-sangnom-r41-win64.7z",
+				"files": {
+					"libsangnom.dll": [
+						"libsangnom.dll",
+						"0d5c6cb54c69030e2b65df47ea7de0dafdf8f3621483f0fefbf961ed43d742c5"
+					]
+				}
+			}
+		},
+		{
 			"version": "r40",
+			"published": "",
 			"win64": {
 				"url": "https://bitbucket.org/James1201/vapoursynth-sangnom/downloads/libsangnom%20r40%20win64.7z",
 				"files": {

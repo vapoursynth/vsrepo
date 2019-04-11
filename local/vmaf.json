@@ -15,6 +15,19 @@
 	],
 	"releases": [
 		{
+			"version": "r5",
+			"published": "2019-04-03T14:39:07Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VMAF/releases/download/r5/VMAF-r5.7z",
+				"files": {
+					"VMAF.dll": [
+						"plugins64/VMAF.dll",
+						"e4b80acedbd385cc48fc49386f80e4e2bb32bb46eae5ef52b5ac0e7eaecf3b60"
+					]
+				}
+			}
+		},
+		{
 			"version": "r4",
 			"published": "2019-03-02T02:30:15Z",
 			"win64": {

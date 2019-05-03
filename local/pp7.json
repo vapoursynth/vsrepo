@@ -15,7 +15,7 @@
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeblockPP7/releases/download/r4/DeblockPP7-r4.7z",
 				"files": {
-					"changeme.dll": [
+					"DeblockPP7.dll": [
 						"Win32/DeblockPP7.dll",
 						"ca301e8ee011839f48d355ebff6a332e2edfa86833de4c4151cc2289053928aa"
 					]
@@ -24,7 +24,7 @@
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeblockPP7/releases/download/r4/DeblockPP7-r4.7z",
 				"files": {
-					"changeme.dll": [
+					"DeblockPP7.dll": [
 						"Win64/DeblockPP7.dll",
 						"7e013cbe175a9e802501eb51ec8974c4a971d84aa316dbece562af742e160f1a"
 					]
@@ -37,7 +37,7 @@
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeblockPP7/releases/download/r3/DeblockPP7-r3.7z",
 				"files": {
-					"changeme.dll": [
+					"DeblockPP7.dll": [
 						"Win32/DeblockPP7.dll",
 						"9645a13b3a98911e7883592347e5ce9adff0e4f04b6a7af3142a3a7a326ebe50"
 					]
@@ -46,7 +46,7 @@
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeblockPP7/releases/download/r3/DeblockPP7-r3.7z",
 				"files": {
-					"changeme.dll": [
+					"DeblockPP7.dll": [
 						"Win64/DeblockPP7.dll",
 						"110aaa819348ed0d55de4fb4bd0c01664977a24225b96ee2bb96f0dc05e1ca07"
 					]
@@ -59,7 +59,7 @@
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeblockPP7/releases/download/r2/DeblockPP7-r2.7z",
 				"files": {
-					"changeme.dll": [
+					"DeblockPP7.dll": [
 						"Win32/DeblockPP7.dll",
 						"4eea332e15c19e0ef4ede98856f4d5fb2d72cb2f585388e8b352e5f8c20dfbd9"
 					]
@@ -68,7 +68,7 @@
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeblockPP7/releases/download/r2/DeblockPP7-r2.7z",
 				"files": {
-					"changeme.dll": [
+					"DeblockPP7.dll": [
 						"Win64/DeblockPP7.dll",
 						"82dd2b084693d9d8f252f50b40b36f2de247de612a26d1d5e515773c29f726f9"
 					]
@@ -81,7 +81,7 @@
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeblockPP7/releases/download/r1/DeblockPP7-r1.7z",
 				"files": {
-					"changeme.dll": [
+					"DeblockPP7.dll": [
 						"Win32/DeblockPP7.dll",
 						"fa41cd83a95bd21a03dcf8d2321e3db14cc0c62c070ca46a97af8e005defb7c1"
 					]
@@ -90,7 +90,7 @@
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeblockPP7/releases/download/r1/DeblockPP7-r1.7z",
 				"files": {
-					"changeme.dll": [
+					"DeblockPP7.dll": [
 						"Win64/DeblockPP7.dll",
 						"4d198f600f989c53dc5220b9ff1fca207f869687fd152a3392f4dace162a75f6"
 					]

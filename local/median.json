@@ -1,0 +1,55 @@
+{
+	"name": "Median",
+	"type": "VSPlugin",
+	"description": "",
+	"github": "https://github.com/dubhater/vapoursynth-median",
+	"category": "Other",
+	"identifier": "com.nodame.median",
+	"namespace": "median",
+	"releases": [
+		{
+			"version": "v2",
+			"published": "2019-04-26T19:04:51Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-median/releases/download/v2/vapoursynth-median-v2-win32.7z",
+				"files": {
+					"libmedian.dll": [
+						"libmedian.dll",
+						"3833d02abd22a0e24c69146a522a09dd46046c21b6027e1a89d9d19f6ab817d8"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-median/releases/download/v2/vapoursynth-median-v2-win64.7z",
+				"files": {
+					"libmedian.dll": [
+						"libmedian.dll",
+						"2019c56c4b8e82a18a84ecbb9444b44529cc11e922df3f0d356a68c470793469"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1",
+			"published": "2019-04-25T17:10:52Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-median/releases/download/v1/vapoursynth-median-v1-win32.7z",
+				"files": {
+					"libmedian.dll": [
+						"libmedian.dll",
+						"23545007bb2ef3e0b060a69116ea992b3fecaafc7652a061d032ae3c9d866a9a"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-median/releases/download/v1/vapoursynth-median-v1-win64.7z",
+				"files": {
+					"libmedian.dll": [
+						"libmedian.dll",
+						"406ef23765875f4b8a452ffcdc4a8e2eabc4b0f432af6984eabbe0956ce8ad00"
+					]
+				}
+			}
+		}
+	]
+}

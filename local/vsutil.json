@@ -1,0 +1,38 @@
+{
+	"name": "VSUtil",
+	"type": "PyScript",
+	"description": "A collection of general-purpose Vapoursynth functions to be reused in modules and scripts.",
+	"website": "https://github.com/Irrational-Encoding-Wizardry/vsutil",
+	"category": "Other",
+	"identifier": "vsutil",
+	"modulename": "vsutil",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vsutil",
+	"releases": [
+		{
+			"version": "0.1.0",
+			"published": "2019-05-04T17:57:00Z",
+			"script": {
+				"url": "https://api.github.com/repos/Irrational-Encoding-Wizardry/vsutil/zipball/0.1.0",
+				"files": {
+					"vsutil.py": [
+						"Irrational-Encoding-Wizardry-vsutil-b7ef7a6/vsutil.py",
+						"a682e880ca96b12724a685843e20016d4252501ba9226b0fe6b3edc79a1f7f74"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.2.0",
+			"published": "2019-05-04T17:56:44Z",
+			"script": {
+				"url": "https://api.github.com/repos/Irrational-Encoding-Wizardry/vsutil/zipball/0.2.0",
+				"files": {
+					"vsutil.py": [
+						"Irrational-Encoding-Wizardry-vsutil-b19aea8/vsutil.py",
+						"76c7487b15144108d8a0ba43f97c4de1c6d6d6a0d95812d33302550c3e2668e4"
+					]
+				}
+			}
+		}
+	]
+}

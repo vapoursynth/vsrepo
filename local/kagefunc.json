@@ -16,9 +16,23 @@
 		"com.vapoursynth.bm3d",
 		"com.Khanattila.KNLMeansCL",
 		"com.holywu.tcanny",
-		"com.holywu.addgrain"
+		"com.holywu.addgrain",
+		"vsutil"
 	],
 	"releases": [
+		{
+			"version": "git:813f8f0",
+			"published": "2019-03-06T06:40:09Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/kagefunc/813f8f06fdcc9dc61f17e1c466074bade607b4c1/kagefunc.py",
+				"files": {
+					"kagefunc.py": [
+						"kagefunc.py",
+						"04c0c303a9d64ba027a33d5502d47ec7ab29f1ab5a1106e6ed133eeabba3c9b3"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:ba829b8",
 			"published": "2019-02-09T08:47:08Z",

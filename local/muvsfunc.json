@@ -23,6 +23,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:83322ba",
+			"published": "2019-05-22T06:07:07Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/WolframRhodium/muvsfunc/83322ba811ec0935cca25b0b3c5dad9a50959c1b/muvsfunc.py",
+				"files": {
+					"muvsfunc.py": [
+						"muvsfunc.py",
+						"4030c57e1b34d53577066d27ee15080d6646de2c2ee03aa0011c192714a36398"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.2.0",
 			"published": "2018-09-17T06:51:51Z",
 			"script": {

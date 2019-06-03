@@ -1,0 +1,33 @@
+{
+	"name": "lvsfunc",
+	"type": "PyScript",
+	"description": "Light's Vapoursynth Functions",
+	"website": "https://github.com/LightArrowsEXE/lvsfunc",
+	"category": "Scripts",
+	"identifier": "lvsfunc",
+	"modulename": "lvsfunc",
+	"github": "https://github.com/LightArrowsEXE/lvsfunc",
+	"dependencies": [
+		"vsTAAmbk",
+		"fvsfunc",
+		"muvsfunc",
+		"havsfunc",
+		"kagefunc",
+		"VSUtil"
+	],
+	"releases": [
+		{
+			"version": "git:b539082",
+			"published": "2019-05-18T16:23:51Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/LightArrowsEXE/lvsfunc/b5390828c6d5944fe1346857faf97422e95b9c81/lvsfunc.py",
+				"files": {
+					"lvsfunc.py": [
+						"lvsfunc.py",
+						"5d11436781effa07c8173a8119a82f6e6733e53684e496f497cda2d2c597f6f8"
+					]
+				}
+			}
+		}
+	]
+}

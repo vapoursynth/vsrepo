@@ -1,0 +1,28 @@
+{
+	"name": "faggotDb",
+	"type": "PyScript",
+	"description": "AlucardSama04's VapourSynth Function That Helps You With Debanding",
+	"website": "https://github.com/AlucardSama04/faggotDb",
+	"category": "Scripts",
+	"identifier": "faggotDb",
+	"modulename": "faggotDb",
+	"github": "https://github.com/AlucardSama04/faggotDb",
+	"dependencies": [
+		"kagefunc"
+	],
+	"releases": [
+		{
+			"version": "git:59686e6",
+			"published": "2019-06-03T18:24:19Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/AlucardSama04/faggotDb/59686e6ee3ec97db8ae25005d60cb4ceb4c4403d/faggotDb.py",
+				"files": {
+					"faggotDb.py": [
+						"faggotDb.py",
+						"bd8c11256e1f1e129e1f1a7851be908b4ba4127ea4e0bebb3d049189ea035759"
+					]
+				}
+			}
+		}
+	]
+}

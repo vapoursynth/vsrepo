@@ -14,6 +14,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:413e23f",
+			"published": "2016-10-03T22:36:51Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/HomeOfVapourSynthEvolution/mvsfunc/413e23f6cae7e4dfbd539e04d9ef79405d5bdec2/mvsfunc.py",
+				"files": {
+					"mvsfunc.py": [
+						"mvsfunc.py",
+						"60158ebf3dc609ccec500176e925a429ea8a81a1544f1cdf6aafed7a29249a0a"
+					]
+				}
+			}
+		},
+		{
 			"version": "r8",
 			"published": "2016-07-31T13:26:32Z",
 			"script": {

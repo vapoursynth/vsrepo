@@ -21,6 +21,7 @@
 ##    SOFTWARE.
 
 import urllib.request
+from urllib.request import ProxyHandler, build_opener
 import json
 import sys
 import os
@@ -52,6 +53,7 @@ parser.add_argument('-host', dest='host', nargs=1, help='FTP Host')
 parser.add_argument('-user', dest='user', nargs=1, help='FTP User')
 parser.add_argument('-passwd', dest='passwd', nargs=1, help='FTP Password')
 parser.add_argument('-dir', dest='dir', nargs=1, help='FTP dir')
+parser.add_argument('-proxy', dest='proxy', default='', help='custom http download proxy')
 
 args = parser.parse_args()
 
@@ -61,6 +63,11 @@ try:
         cmd7zip_path = winreg.QueryValueEx(regkey, 'Path')[0] + '7z.exe'
 except:
     pass
+
+if args.proxy is not '':
+    proxy_handler = urllib.request.ProxyHandler({'http': args.proxy, 'https': args.proxy})
+    opener = urllib.request.build_opener(proxy_handler)
+    urllib.request.install_opener(opener)
 
 def similarity(a, b):
     return difflib.SequenceMatcher(None, a, b).ratio()

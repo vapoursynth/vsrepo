@@ -24,6 +24,7 @@ import sys
 import json
 import hashlib
 import urllib.request
+from urllib.request import ProxyHandler, build_opener
 import io
 import site
 import os
@@ -65,6 +66,7 @@ parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bi
 parser.add_argument('-p', action='store_true', dest='portable', help='use paths suitable for portable installs')
 parser.add_argument('-b', dest='binary_path', help='custom binary install path')
 parser.add_argument('-s', dest='script_path', help='custom script install path')
+parser.add_argument('--proxy', dest='proxy', default='', help='custom http download proxy')
 args = parser.parse_args()
 is_64bits = (args.target == 'win64')
 
@@ -109,6 +111,11 @@ except:
 
 installed_packages = {}
 download_cache = {}
+
+if args.proxy is not '':
+    proxy_handler = urllib.request.ProxyHandler({'http': args.proxy, 'https': args.proxy})
+    opener = urllib.request.build_opener(proxy_handler)
+    urllib.request.install_opener(opener)
 
 def fetch_ur1(url, desc = None):
     with urllib.request.urlopen(url) as urlreq:

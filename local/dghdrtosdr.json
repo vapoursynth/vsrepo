@@ -7,6 +7,28 @@
     "identifier": "com.vapoursynth.dghdrtosdr",
     "namespace": "dghdrtosdr",
     "releases": [
+		{
+            "version": "1.12",
+            "published": "2019-06-18T14:25Z",
+            "win32": {
+                "url": "http://rationalqm.us/hdr/DGHDRtoSDR_1.12.rar",
+                "files": {
+                    "DGHDRtoSDR.dll": [
+                        "DGHDRtoSDR.dll",
+                        "53a1fda092d619cb132b07e2cb4d7a6435c48752da55301d219236b936949af9"
+                    ]
+                }
+            },
+            "win64": {
+                "url": "http://rationalqm.us/hdr/DGHDRtoSDR_1.12.rar",
+                "files": {
+                    "DGHDRtoSDR.dll": [
+                        "x64/DGHDRtoSDR.dll",
+                        "fa29df0b0585204d6ab70e465bc42f797d04fe17b1622897b47bb876c7ec4f7e"
+                    ]
+                }
+            }
+        },
         {
             "version": "1.11",
             "published": "2018-10-17T11:52Z",

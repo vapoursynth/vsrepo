@@ -14,19 +14,7 @@
 		{
 			"version": "r7",
 			"published": "2018-08-08T07:14:44Z",
-			"win32": {
-				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r7/Waifu2x-w2xc-r7.7z",
-				"files": {
-					"w2xc.dll": [
-						"Win64/w2xc.dll",
-						"ec966850683d21b19475b275cdd62b4b53d3b3153e8f32eeab6d20bdfe961939"
-					],
-					"Waifu2x-w2xc.dll": [
-						"Win64/Waifu2x-w2xc.dll",
-						"67919a2e96a6f97539c2457caa710731fa969f6efe751de1b26d2f49c73e5b16"
-					]
-				}
-			},
+
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r7/Waifu2x-w2xc-r7.7z",
 				"files": {

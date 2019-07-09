@@ -9,6 +9,19 @@
 	"namespace": "curve",
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2019-04-12T04:13:39Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Curve/releases/download/r2/Curve-r2.7z",
+				"files": {
+					"Curve.dll": [
+						"plugins64/Curve.dll",
+						"7addd537f208cdaa910bb7686d552eaf5938628ecc432f0beac72345daeccce5"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2019-01-01T07:22:07Z",
 			"win64": {

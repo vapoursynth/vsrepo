@@ -8,6 +8,50 @@
 	"namespace": "median",
 	"releases": [
 		{
+			"version": "v4",
+			"published": "2019-05-10T17:14:38Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-median/releases/download/v4/vapoursynth-median-v4-win32.7z",
+				"files": {
+					"libmedian.dll": [
+						"libmedian.dll",
+						"b89951384a9b6b7bfebdfd9ff9d386692a1d883ba3a56ea39faadf91cdf57f3e"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-median/releases/download/v4/vapoursynth-median-v4-win64.7z",
+				"files": {
+					"libmedian.dll": [
+						"libmedian.dll",
+						"878c0b559eaf48ae11f15ba9907687396e52c8f8e41c303ddec1ec0268802bb6"
+					]
+				}
+			}
+		},
+		{
+			"version": "v3",
+			"published": "2019-05-05T19:17:43Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-median/releases/download/v3/vapoursynth-median-v3-win32.7z",
+				"files": {
+					"libmedian.dll": [
+						"libmedian.dll",
+						"84aa41a1d0d2fb8c611950587f8525c140cd7f3d567d5fd26185b459a856e12e"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-median/releases/download/v3/vapoursynth-median-v3-win64.7z",
+				"files": {
+					"libmedian.dll": [
+						"libmedian.dll",
+						"b3d569d202c9c5af3b178d3a70a3acc920c3b051d82c4d529095fc9f6254fe40"
+					]
+				}
+			}
+		},
+		{
 			"version": "v2",
 			"published": "2019-04-26T19:04:51Z",
 			"win32": {

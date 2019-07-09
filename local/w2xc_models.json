@@ -7,8 +7,108 @@
 	"identifier": "com.holywu.waifu2x-w2xc.models",
 	"namespace": "w2xc_models",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc",
-	"ignore": ["r1", "r2", "r3", "r4", "r5"],
+	"ignore": [
+		"r1",
+		"r2",
+		"r3",
+		"r4",
+		"r5"
+	],
 	"releases": [
+		{
+			"version": "r8",
+			"published": "2019-06-17T10:14:13Z",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r8/Waifu2x-w2xc-r8.7z",
+				"files": {
+					"models/anime_style_art_rgb/noise0_model.json": [
+						"plugins64/models/anime_style_art_rgb/noise0_model.json",
+						"d64971e80af7ca97e4b97342143a6643b72b8acaeae4caeac85100063f64d228"
+					],
+					"models/anime_style_art_rgb/noise1_model.json": [
+						"plugins64/models/anime_style_art_rgb/noise1_model.json",
+						"2b41c5fbb22b334bf758fc6c68066d2fe7f422290ff1d9b9e381a9b227592f83"
+					],
+					"models/anime_style_art_rgb/noise2_model.json": [
+						"plugins64/models/anime_style_art_rgb/noise2_model.json",
+						"4c7b742c9bac6218a8825f4b886094efbe5aa3114c9085360ec2b600f332b27c"
+					],
+					"models/anime_style_art_rgb/noise3_model.json": [
+						"plugins64/models/anime_style_art_rgb/noise3_model.json",
+						"cafc3aec56786d569813516e1127565d897741c472e2935c449a3f2bfe095626"
+					],
+					"models/anime_style_art_rgb/scale2.0x_model.json": [
+						"plugins64/models/anime_style_art_rgb/scale2.0x_model.json",
+						"6b36d5673110d4bbe088bb43167f86a3e83c92549f22c7c4d1cff0acc90989ae"
+					],
+					"models/photo/noise0_model.json": [
+						"plugins64/models/photo/noise0_model.json",
+						"dbf8d71c4a3df5b7d6a51c264985b0729ef1dd9a6a58c5901f661f21e3c2b97a"
+					],
+					"models/photo/noise1_model.json": [
+						"plugins64/models/photo/noise1_model.json",
+						"3a056d1880a233ef7785d8b1fc928a57be5c29a02c0b5d20ea56e3446f6670f2"
+					],
+					"models/photo/noise2_model.json": [
+						"plugins64/models/photo/noise2_model.json",
+						"e9476299fc348b3570541925d14a431f0e39e103ad6e16c4421602fde0062f06"
+					],
+					"models/photo/noise3_model.json": [
+						"plugins64/models/photo/noise3_model.json",
+						"654d358766f2f1d44ce4ce390304583f05c84c5907ca7ffbb05c331ad1a96d61"
+					],
+					"models/photo/scale2.0x_model.json": [
+						"plugins64/models/photo/scale2.0x_model.json",
+						"27097c226c72e7ff0c5b838ad0936e4f89ba42c51ff452712dd61af9d4681d46"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Waifu2x-w2xc/releases/download/r8/Waifu2x-w2xc-r8.7z",
+				"files": {
+					"models/anime_style_art_rgb/noise0_model.json": [
+						"plugins64/models/anime_style_art_rgb/noise0_model.json",
+						"d64971e80af7ca97e4b97342143a6643b72b8acaeae4caeac85100063f64d228"
+					],
+					"models/anime_style_art_rgb/noise1_model.json": [
+						"plugins64/models/anime_style_art_rgb/noise1_model.json",
+						"2b41c5fbb22b334bf758fc6c68066d2fe7f422290ff1d9b9e381a9b227592f83"
+					],
+					"models/anime_style_art_rgb/noise2_model.json": [
+						"plugins64/models/anime_style_art_rgb/noise2_model.json",
+						"4c7b742c9bac6218a8825f4b886094efbe5aa3114c9085360ec2b600f332b27c"
+					],
+					"models/anime_style_art_rgb/noise3_model.json": [
+						"plugins64/models/anime_style_art_rgb/noise3_model.json",
+						"cafc3aec56786d569813516e1127565d897741c472e2935c449a3f2bfe095626"
+					],
+					"models/anime_style_art_rgb/scale2.0x_model.json": [
+						"plugins64/models/anime_style_art_rgb/scale2.0x_model.json",
+						"6b36d5673110d4bbe088bb43167f86a3e83c92549f22c7c4d1cff0acc90989ae"
+					],
+					"models/photo/noise0_model.json": [
+						"plugins64/models/photo/noise0_model.json",
+						"dbf8d71c4a3df5b7d6a51c264985b0729ef1dd9a6a58c5901f661f21e3c2b97a"
+					],
+					"models/photo/noise1_model.json": [
+						"plugins64/models/photo/noise1_model.json",
+						"3a056d1880a233ef7785d8b1fc928a57be5c29a02c0b5d20ea56e3446f6670f2"
+					],
+					"models/photo/noise2_model.json": [
+						"plugins64/models/photo/noise2_model.json",
+						"e9476299fc348b3570541925d14a431f0e39e103ad6e16c4421602fde0062f06"
+					],
+					"models/photo/noise3_model.json": [
+						"plugins64/models/photo/noise3_model.json",
+						"654d358766f2f1d44ce4ce390304583f05c84c5907ca7ffbb05c331ad1a96d61"
+					],
+					"models/photo/scale2.0x_model.json": [
+						"plugins64/models/photo/scale2.0x_model.json",
+						"27097c226c72e7ff0c5b838ad0936e4f89ba42c51ff452712dd61af9d4681d46"
+					]
+				}
+			}
+		},
 		{
 			"version": "r7",
 			"published": "2018-08-08T07:14:44Z",

@@ -21,6 +21,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:5c7cd67",
+			"published": "2019-07-07T08:14:08Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/kagefunc/5c7cd6725fec0688aab8d3272e653dea39ee946a/kagefunc.py",
+				"files": {
+					"kagefunc.py": [
+						"kagefunc.py",
+						"e083406bfe00a1753ee68b8fba18e47c3cd527ab45f44fcf7c0c012374e357cd"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:813f8f0",
 			"published": "2019-03-06T06:40:09Z",
 			"script": {

@@ -12,6 +12,7 @@
 		"mvsfunc",
 		"muvsfunc",
 		"nnedi3_rpow2",
+		"edi_rpow2",
 		"com.deinterlace.nnedi3",
 		"fmtconv",
 		"com.invalid.identifier.bilateral",
@@ -20,6 +21,19 @@
 		"tegaf.asi.xe"
 	],
 	"releases": [
+		{
+			"version": "git:83f5705",
+			"published": "2019-04-30T21:05:48Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/fvsfunc/83f57051a8c2f6fe66e3da97782602476f1bab6f/fvsfunc.py",
+				"files": {
+					"fvsfunc.py": [
+						"fvsfunc.py",
+						"554aed42c2bb6e00df978bcba68adeb574df4f9271241b613d0b2595f4d2061c"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:9536ae7",
 			"published": "2019-04-14T22:26:17Z",

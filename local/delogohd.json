@@ -1,0 +1,101 @@
+{
+	"name": "DeLogoHD",
+	"type": "VSPlugin",
+	"description": "DelogoHD is an overhaul of the original delogo filter",
+	"website": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD",
+	"doom9": "https://forum.doom9.org/showthread.php?t=171252",
+	"category": "Other",
+	"identifier": "in.7086.delogohd",
+	"namespace": "delogohd",
+	"github": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD",
+	"releases": [
+		{
+			"version": "r6",
+			"published": "2019-07-11T23:34:56Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r6/DelogoHD_r6-msvc.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"x86/DelogoHD.dll",
+						"61019f7f0131f132bb8cc7ae72c28a33b2b163cf38964b5beb773512585abf67"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r6/DelogoHD_r6-msvc.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"x64/DelogoHD.dll",
+						"c34fdc912f882d43d666f4728ec2d341acd56c7147c5c251872844500b6b962a"
+					]
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"published": "2019-07-08T02:07:02Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r5/DelogoHD_r5.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"x86/DelogoHD.dll",
+						"586120289835d0a97b569e94ab84d9f0bad29d0cb0280d7e5c8d1a2825b5c7a2"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r5/DelogoHD_r5.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"x64/DelogoHD.dll",
+						"234991a320c0ae2426ef3078d64b513e3f1fcc677a462c7f71bf6c5d3e5a9a31"
+					]
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"published": "2019-06-28T07:14:18Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r4/DelogoHD.r4.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"x86/DelogoHD.dll",
+						"f60eaf9e1a5543d385d53e0136591ec49e3b2928d94f6c621d7795b0de0efff9"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r4/DelogoHD.r4.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"x64/DelogoHD.dll",
+						"2645c20f18413c7ae0ccafcbe740fa54b7ee480e92134fc9944e2f1a31c88b98"
+					]
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"published": "2018-02-04T00:46:53Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r2/DelogoHD.r2.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"x86/DelogoHD.dll",
+						"0c94c0cf21eb3771f61e38f53b8776a5fccd609d69667106ed1c1848d073f800"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r2/DelogoHD.r2.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"x64/DelogoHD.dll",
+						"72dc7f2f344a0a74d71af4d49d65d88ed0582db27be60846db588d0553f4e73b"
+					]
+				}
+			}
+		}
+	]
+}

@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"description": "DelogoHD is an overhaul of the original delogo filter",
 	"website": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD",
-	"doom9": "https://forum.doom9.org/showthread.php?t=171252",
+	"doom9": "https://forum.doom9.org/showthread.php?t=176658",
 	"category": "Other",
 	"identifier": "in.7086.delogohd",
 	"namespace": "delogohd",

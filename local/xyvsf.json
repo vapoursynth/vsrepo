@@ -1,0 +1,25 @@
+{
+	"name": "xy-VSFilter",
+	"type": "VSPlugin",
+	"description": "xy-VSFilter with VapourSynth interface added, based on the source of pinterf's fork",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/xy-VSFilter",
+	"doom9": "https://forum.doom9.org/showthread.php?t=176674",
+	"category": "Subtitles",
+	"identifier": "com.xy.vsfilter",
+	"namespace": "xyvsf",
+	"releases": [
+		{
+			"version": "r2",
+			"published": "2019-07-17T07:14:52Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/xy-VSFilter/releases/download/r2/xy-VSFilter-r2.7z",
+				"files": {
+					"xy-VSFilter.dll": [
+						"plugins64/xy-VSFilter.dll",
+						"93e6d27b7842ec0cbf510ce6122b1a1558d9aea477f3f8b514d04add1dd5dccc"
+					]
+				}
+			}
+		}
+	]
+}

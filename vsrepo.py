@@ -1,6 +1,6 @@
 ##    MIT License
 ##
-##    Copyright (c) 2018 Fredrik Mellbin
+##    Copyright (c) 2018-2019 Fredrik Mellbin
 ##
 ##    Permission is hereby granted, free of charge, to any person obtaining a copy
 ##    of this software and associated documentation files (the "Software"), to deal
@@ -61,8 +61,9 @@ parser = argparse.ArgumentParser(description='A simple VapourSynth package manag
 parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'upgrade-all', 'uninstall', 'installed', 'available', 'paths'])
 parser.add_argument('package', nargs='*', help='identifier, namespace or module to install, upgrade or uninstall')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
-parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bits else 'win32', dest='target', help='binaries to install, defaults to python\'s architecture')
 parser.add_argument('-p', action='store_true', dest='portable', help='use paths suitable for portable installs')
+parser.add_argument('-d', action='store_true', dest='skip_deps', help='skip installing dependencies')
+parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bits else 'win32', dest='target', help='binaries to install, defaults to python\'s architecture')
 parser.add_argument('-b', dest='binary_path', help='custom binary install path')
 parser.add_argument('-s', dest='script_path', help='custom script install path')
 args = parser.parse_args()
@@ -334,10 +335,11 @@ def install_package(name):
     p = get_package_from_name(name)
     if can_install(p):
         inst = (0, 0, 0)
-        if 'dependencies' in p:
-            for dep in p['dependencies']:
-                res = install_package(dep)
-                inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
+        if not args.skip_deps:
+            if 'dependencies' in p:
+                for dep in p['dependencies']:
+                    res = install_package(dep)
+                    inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
         if not is_package_installed(p['identifier']):
             res = install_files(p)
             inst = (inst[0] + res[0], inst[1], inst[2] + res[1])

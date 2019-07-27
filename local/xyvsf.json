@@ -9,6 +9,19 @@
 	"namespace": "xyvsf",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2019-07-18T10:29:53Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/xy-VSFilter/releases/download/r3/xy-VSFilter-r3.7z",
+				"files": {
+					"xy-VSFilter.dll": [
+						"plugins64/xy-VSFilter.dll",
+						"c011c93c285f976f9446e52e66e4cd035be6956721c568b4a386a528f22380ce"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2019-07-17T07:14:52Z",
 			"win64": {

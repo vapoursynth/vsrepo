@@ -9,6 +9,19 @@
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VSFilter",
 	"releases": [
 		{
+			"version": "r4",
+			"published": "2019-07-18T10:30:30Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VSFilter/releases/download/r4/VSFilter-r4.7z",
+				"files": {
+					"VSFilter.dll": [
+						"plugins64/VSFilter.dll",
+						"48a0548f3af05b004d5b84920bc99b7c4acd7c5d402befb10b9a183d1be70be1"
+					]
+				}
+			}
+		},
+		{
 			"version": "r3",
 			"published": "2019-07-16T04:20:29Z",
 			"win64": {

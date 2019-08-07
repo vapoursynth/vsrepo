@@ -11,8 +11,36 @@
 	"dependencies": [
 		"org.fftw.fftw3"
 	],
-	"ignore": ["r4.1"],
+	"ignore": [
+		"r4.1"
+	],
 	"releases": [
+		{
+			"version": "r6",
+			"published": "2019-08-06T14:27:24Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r6/DFTTest-r6.7z",
+				"files": {
+					"DFTTest.dll": [
+						"plugins64/DFTTest.dll",
+						"5d149f7253feb0dc7248d61d0d627f8378549875b99f8d2c99d0ec2f6c11f2f6"
+					]
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"published": "2019-08-04T04:24:19Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r5/DFTTest-r5.7z",
+				"files": {
+					"DFTTest.dll": [
+						"plugins64/DFTTest.dll",
+						"db1daadce050572c898ec00018dd152550dafb0b2830b2c664fb6fce2799898a"
+					]
+				}
+			}
+		},
 		{
 			"version": "r4",
 			"published": "2017-12-21T16:28:39Z",

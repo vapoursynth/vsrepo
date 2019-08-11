@@ -104,7 +104,7 @@ os.makedirs(os.path.dirname(package_json_path), exist_ok=True)
 cmd7zip_path = '7z.exe'
 try:
     with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
-        cmd7zip_path = winreg.QueryValueEx(regkey, 'Path')[0] + '7z.exe'
+        cmd7zip_path = os.path.join(winreg.QueryValueEx(regkey, 'Path')[0], '7z.exe')
 except:
     pass
 

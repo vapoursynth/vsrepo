@@ -273,7 +273,7 @@ def verify_package(pfile, existing_identifiers):
             if dep not in existing_identifiers:
                 raise Exception('Referenced unknown identifier ' + dep + ' in ' + name)
 
-if args.operation == 'compile':
+def compile_packages():
     combined = []
     existing_identifiers = []
     for f in os.scandir('local'):
@@ -302,8 +302,10 @@ if args.operation == 'compile':
         pass
     result = subprocess.run([cmd7zip_path, 'a', '-tzip', 'vspackages.zip', 'vspackages.json'])
     result.check_returncode()
-    
-    print('Done')
+
+if args.operation == 'compile':
+    compile_packages()
+    print('Packages successfully compiled')
 elif args.operation == 'update-local':
     if args.package is None:
         num_skipped = 0
@@ -322,6 +324,8 @@ elif args.operation == 'update-local':
     else:
         update_package(args.package[0])
 elif args.operation == 'upload':
+    compile_packages()
+    print('Packages successfully compiled')
     with open('vspackages.zip', 'rb') as pl:
         with ftplib.FTP_TLS(host=args.host[0], user=args.user[0], passwd=args.passwd[0]) as ftp:
             ftp.cwd(args.dir[0])
@@ -330,4 +334,4 @@ elif args.operation == 'upload':
             except:
                 print('Failed to delete vspackages.zip')
             ftp.storbinary('STOR vspackages.zip', pl)
-    print('Done')
+    print('Upload done')

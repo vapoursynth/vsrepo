@@ -8,8 +8,38 @@
 	"identifier": "com.sources.d2vsource",
 	"namespace": "d2v",
 	"github": "https://github.com/dwbuiten/d2vsource",
-	"ignore": ["beta1", "beta2", "beta3", "beta4", "beta5", "beta6", "beta7"],
+	"ignore": [
+		"beta1",
+		"beta2",
+		"beta3",
+		"beta4",
+		"beta5",
+		"beta6",
+		"beta7"
+	],
 	"releases": [
+		{
+			"version": "v1.2",
+			"published": "2019-08-18T17:01:56Z",
+			"win32": {
+				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.2/d2vsource-1.2-windows.zip",
+				"files": {
+					"d2vsource.dll": [
+						"win32/d2vsource.dll",
+						"2fc9d866c40b6ec5b9cd41e44e8ee373ca8c1fdbf71b4d7907dc1f506bec8ceb"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.2/d2vsource-1.2-windows.zip",
+				"files": {
+					"d2vsource.dll": [
+						"win64/d2vsource.dll",
+						"7f38e9905297694c311e0e92e842aa343edf4e797988e9c2f67da428871dd99a"
+					]
+				}
+			}
+		},
 		{
 			"version": "v1.1",
 			"published": "2017-02-19T19:23:38Z",

@@ -158,6 +158,10 @@ def decompress_and_hash(archivefn, fn, insttype):
                     return (existing_files[fn_guess], hashlib.sha256(result.stdout).hexdigest())
     raise Exception('No file match found')
 
+def hash_file(fn):
+    with open(fn, 'rb') as file:
+        return hashlib.sha256(file.read()).hexdigest()
+
 def get_latest_installable_release(p, bin_name):
     for rel in p['releases']:
         if bin_name in rel:
@@ -198,7 +202,10 @@ def update_package(name):
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win32')
                                 new_rel_entry['win32'] = { 'url': new_url, 'files': {}}
                                 for fn in latest_rel['win32']['files']:
-                                    new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win32']['files'][fn][0], 'win32')
+                                    if os.path.splitext(temp_fn)[1].lower() in ['.dll']:
+                                        new_fn, digest = os.path.basename(temp_fn), hash_file(temp_fn)
+                                    else:
+                                        new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win32']['files'][fn][0], 'win32')
                                     new_rel_entry['win32']['files'][fn] = [new_fn, digest]
                         except:
                             new_rel_entry.pop('win32', None)
@@ -210,7 +217,10 @@ def update_package(name):
                                 temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win64')
                                 new_rel_entry['win64'] = { 'url': new_url, 'files': {} }
                                 for fn in latest_rel['win64']['files']:
-                                    new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win64']['files'][fn][0], 'win64')
+                                    if os.path.splitext(temp_fn)[1].lower() in ['.dll']:
+                                        new_fn, digest = os.path.basename(temp_fn), hash_file(temp_fn)
+                                    else:
+                                        new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win64']['files'][fn][0], 'win64')
                                     new_rel_entry['win64']['files'][fn] = [new_fn, digest]
                         except:
                             new_rel_entry.pop('win64', None)

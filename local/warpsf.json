@@ -1,0 +1,25 @@
+{
+	"name": "Warpsharp",
+	"type": "VSPlugin",
+	"description": "Warpsharp floating point version",
+	"github": "https://github.com/IFeelBloated/warpsharp",
+	"doom9": "https://forum.doom9.org/showthread.php?t=176796",
+	"category": "Other",
+	"identifier": "com.zonked.awarpsharp2",
+	"namespace": "warpsf",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2019-08-24T10:38:33Z",
+			"win64": {
+				"url": "https://github.com/IFeelBloated/warpsharp/releases/download/r1/warpsharpsf.7z",
+				"files": {
+					"warpsharpsf.dll": [
+						"warpsharpsf.dll",
+						"7a9fab2428d54f0c25dae4739b37e0cbdce7fe27c932a3c16878d75851701cc5"
+					]
+				}
+			}
+		}
+	]
+}

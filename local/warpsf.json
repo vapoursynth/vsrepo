@@ -14,7 +14,7 @@
 			"win64": {
 				"url": "https://github.com/IFeelBloated/warpsharp/releases/download/r1/warpsharpsf.7z",
 				"files": {
-					"WUARsharpsf.dll": [
+					"warpsharpsf.dll": [
 						"warpsharpsf.dll",
 						"7a9fab2428d54f0c25dae4739b37e0cbdce7fe27c932a3c16878d75851701cc5"
 					]

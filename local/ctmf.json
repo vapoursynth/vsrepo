@@ -6,7 +6,7 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=171213",
 	"category": "Other",
 	"identifier": "com.holywu.ctmf",
-	"namespace": "ctfm",
+	"namespace": "ctmf",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF",
 	"ignore": ["r4.1"],
 	"releases": [

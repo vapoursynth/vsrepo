@@ -19,7 +19,9 @@
 		"com.nodame.awarpsharp2",
 		"com.holywu.dfttest",
 		"com.holywu.vsfilter",
-		"com.holywu.vsfiltermod"
+		"com.holywu.vsfiltermod",
+		"com.invalid.identifier.bilateral",
+		"com.nodame.median"
 	],
 	"releases": [
 		{

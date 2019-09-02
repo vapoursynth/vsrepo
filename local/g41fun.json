@@ -19,7 +19,8 @@
 		"com.vapoursynth.removegrainsf",
 		"com.vapoursynth.hqdn3d",
 		"org.fftw.fftw3",
-		"in.vcmohan.mod"
+		"in.vcmohan.mod",
+		"com.holywu.tcanny"
 	],
 	"releases": [
 		{

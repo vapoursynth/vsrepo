@@ -27,7 +27,9 @@
 		"systems.innocent.fft3dfilter",
 		"com.holywu.addgrain",
 		"com.holywu.dctfilter",
-		"com.vapoursynth.hqdn3d"
+		"com.vapoursynth.hqdn3d",
+		"com.nodame.fluxsmooth",
+		"com.nodame.awarpsharp2"
 	],
 	"releases": [
 		{

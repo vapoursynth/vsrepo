@@ -1,0 +1,55 @@
+{
+	"name": "MatchHistogram",
+	"type": "VSPlugin",
+	"description": "MatchHistogram modifies one clip's histogram to match the histogram of another clip. Will produce weird results if frame contents are dissimilar.",
+	"github": "https://github.com/dubhater/vapoursynth-matchhistogram",
+	"category": "Color/Levels",
+	"identifier": "com.nodame.matchhistogram",
+	"namespace": "matchhist",
+	"releases": [
+		{
+			"version": "v2",
+			"published": "2019-09-07T19:01:41Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-matchhistogram/releases/download/v2/vapoursynth-matchhistogram-v2-win32.7z",
+				"files": {
+					"libmatchhistogram.dll": [
+						"libmatchhistogram.dll",
+						"59da68ffc410ba21e37e6d966855a11f1c6ed0b3ecc63d9a3f215b326f203272"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-matchhistogram/releases/download/v2/vapoursynth-matchhistogram-v2-win64.7z",
+				"files": {
+					"libmatchhistogram.dll": [
+						"libmatchhistogram.dll",
+						"77b1e9079500be5ccb4d567e10c602938d00284acbd48465a5838f0ddc1f3bec"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1",
+			"published": "2019-09-06T14:01:29Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-matchhistogram/releases/download/v1/vapoursynth-matchhistogram-v1-win32.7z",
+				"files": {
+					"libmatchhistogram.dll": [
+						"libmatchhistogram.dll",
+						"05b4dae0a1d8a8e42cec02398da72efd21c36754179138850d727a0f752fd696"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-matchhistogram/releases/download/v1/vapoursynth-matchhistogram-v1-win64.7z",
+				"files": {
+					"libmatchhistogram.dll": [
+						"libmatchhistogram.dll",
+						"d8914f94e55c0e0eab3e027d6a881736f64042ab26d49591b306ca19ae79c4a9"
+					]
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,100 @@
+{
+	"name": "LSMASHSource",
+	"type": "VSPlugin",
+	"description": "A general source plugin based on FFmpeg. Can open MP4, MOV, ISO base media without having to create an index file.",
+	"doom9": "https://forum.doom9.org/showthread.php?t=167435",
+	"category": "Source/Output",
+	"identifier": "systems.innocent.lsmas",
+	"namespace": "lsmas",
+	"github": "https://github.com/HolyWu/L-SMASH-Works",
+	"releases": [
+		{
+			"version": "20190910.1",
+			"published": "2019-09-10T15:13:25Z",
+			"win32": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20190910.1/L-SMASH-Works_20190910.1.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins/LSMASHSource.dll",
+						"e0fda3dbb5b0180e66e5b9531a649eb3dc1970e168525316a3aeadedf94d0206"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20190910.1/L-SMASH-Works_20190910.1.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins64/LSMASHSource.dll",
+						"4ec0ea125a7ae286b65c7f6eb2fccd9706d4740930d72e2ee6c1d4ecf6bb071b"
+					]
+				}
+			}
+		},
+		{
+			"version": "20190910",
+			"published": "2019-09-10T07:01:17Z",
+			"win32": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20190910/L-SMASH-Works_20190910.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins/LSMASHSource.dll",
+						"e3b26cc287f875ccadd507ce399470cd2bf55dca3920ee35c5d1a3b47b898148"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20190910/L-SMASH-Works_20190910.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins64/LSMASHSource.dll",
+						"11fbfe13f9ea54636335b67c230c4d797bbd0ff256664db0eb900800dbc265a4"
+					]
+				}
+			}
+		},
+		{
+			"version": "20190906",
+			"published": "2019-09-06T03:28:39Z",
+			"win32": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20190906/L-SMASH-Works-20190906.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins/LSMASHSource.dll",
+						"cf53ab0d555d337f79663ab1286c9afecfc1e0c2ae883ff96a1d32527462124d"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20190906/L-SMASH-Works-20190906.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins64/LSMASHSource.dll",
+						"eb80f9948a0ed884d9b6706bb0dca4c02e5ca774b3822e8d4461bbaae99a1d86"
+					]
+				}
+			}
+		},
+		{
+			"version": "20190903",
+			"published": "2019-09-03T13:18:52Z",
+			"win32": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20190903/L-SMASH-Works_20190903.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins/LSMASHSource.dll",
+						"8f807d9a6f3a1ecf9fbd6e6f1d8060ac68a89dadaa46bce214fefc446dadd265"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20190903/L-SMASH-Works_20190903.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins64/LSMASHSource.dll",
+						"d4e50bfa71c88fa7538026cc6571c6257c1179930cf74d76dca5dd246c44d6a0"
+					]
+				}
+			}
+		}
+	]
+}

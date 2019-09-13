@@ -2,8 +2,8 @@
 	"name": "lvsfunc",
 	"type": "PyScript",
 	"description": "Light's Vapoursynth Functions",
-	"website": "https://github.com/LightArrowsEXE/lvsfunc",
-	"github": "https://github.com/LightArrowsEXE/lvsfunc",
+	"website": "https://github.com/Irrational-Encoding-Wizardry/lvsfunc",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/lvsfunc",
 	"category": "Scripts",
 	"identifier": "lvsfunc",
 	"modulename": "lvsfunc",
@@ -16,6 +16,19 @@
 		"vsutil"
 	],
 	"releases": [
+		{
+			"version": "git:28f65bc",
+			"published": "2019-09-13T07:21:56Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/lvsfunc/28f65bc9dd988824c5c78e758a981ea32cfc5fda/lvsfunc.py",
+				"files": {
+					"lvsfunc.py": [
+						"lvsfunc.py",
+						"68fc54af7c21c96afac642e56567c7d86e0f8303709642d2c8b3421cd09d60d5"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:b378362",
 			"published": "2019-06-14T09:45:20Z",

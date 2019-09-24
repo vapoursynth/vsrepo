@@ -1,0 +1,56 @@
+{
+	"name": "Neo f3kdb",
+	"type": "VSPlugin",
+	"description": "Basically like f3kdb but with legacy format support removed (in Avisynth) and with new sample modes.",
+	"github": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb",
+	"doom9": "https://forum.doom9.org/showthread.php?t=176553",
+	"category": "Other",
+	"identifier": "in.7086.neo_f3kdb",
+	"namespace": "neo_f3kdb",
+	"releases": [
+		{
+			"version": "r2",
+			"published": "2019-09-21T01:54:32Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r2/neo-f3kdb_r2.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x86/neo-f3kdb.dll",
+						"e44dc770fb8948c6694235f6900e29b911dd9a2cfc4d1ed8e78314a87298e086"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r2/neo-f3kdb_r2.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x64/neo-f3kdb.dll",
+						"a82da1ccdc1fed38d9d991e8976e1a0f72d366269c68530d81141d5f5dc5b13a"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"published": "2019-09-04T02:25:33Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r1/neo-f3kdb_r1-fix.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x86/neo-f3kdb.dll",
+						"fbc8bdb185ffec2d38689be15eac1ef178f6dd678caf3d222075daf1a2d1baa3"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r1/neo-f3kdb_r1-fix.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x64/neo-f3kdb.dll",
+						"43d38606437cfa04d8cff4177f87a6057d745094a473666cb242f13910ee8479"
+					]
+				}
+			}
+		}
+	]
+}

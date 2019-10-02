@@ -142,7 +142,7 @@ try:
     with open(package_json_path, 'r', encoding='utf-8') as pl:
         package_list = json.load(pl)       
     if package_list['file-format'] != 2:
-        print('Package definition format is {} but only version 1 is supported'.format(package_list['file_format']))
+        print('Package definition format is {} but only version 2 is supported'.format(package_list['file-format']))
         package_list = None
     package_list = package_list['packages']
 except:
@@ -442,6 +442,10 @@ def print_paths():
     print('Definitions: ' + package_json_path)
     print('Binaries: ' + plugin_path)
     print('Scripts: ' + py_script_path)    
+
+if args.operation != 'update' and package_list is None:
+    print('Failed to open vspackages.json. Run update command.')
+    exit(1)
 
 for name in args.package:
     try:

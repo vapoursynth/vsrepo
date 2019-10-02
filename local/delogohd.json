@@ -10,6 +10,28 @@
 	"github": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD",
 	"releases": [
 		{
+			"version": "r8",
+			"published": "2019-09-21T05:24:26Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r8/DelogoHD_r8.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"clang-x86/DelogoHD.dll",
+						"ec1fbbee06fb0bdc4647f0b44205068d69059ff99be0d806c7e964662856ca57"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/DelogoHD/releases/download/r8/DelogoHD_r8.zip",
+				"files": {
+					"DelogoHD.dll": [
+						"clang-x64/DelogoHD.dll",
+						"04fa23948ecd1a0ca55a98ecdf310b87e11cc39571b60db7140b98c483c30d15"
+					]
+				}
+			}
+		},
+		{
 			"version": "r7",
 			"published": "2019-07-14T02:36:56Z",
 			"win32": {

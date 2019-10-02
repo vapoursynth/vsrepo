@@ -10,6 +10,19 @@
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls",
 	"releases": [
 		{
+			"version": "r4",
+			"published": "2019-10-02T11:26:02Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls/releases/download/r4/ReadMpls-r4.7z",
+				"files": {
+					"ReadMpls.dll": [
+						"plugins64/ReadMpls.dll",
+						"d284394e254349c0d480df805d7a71626d3262eaa5b950d55cc513e919ebfd92"
+					]
+				}
+			}
+		},
+		{
 			"version": "r3",
 			"published": "2017-05-11T08:58:20Z",
 			"win32": {

@@ -18,6 +18,19 @@
 	],
 	"releases": [
 		{
+			"version": "r8",
+			"published": "2019-10-01T10:03:29Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL/releases/download/r8/NNEDI3CL-r8.7z",
+				"files": {
+					"NNEDI3CL.dll": [
+						"plugins64/NNEDI3CL.dll",
+						"4dfb34d51d5b277973ccb2dfb922de702258cf6a1b9eb62de990dd1d72c04a2a"
+					]
+				}
+			}
+		},
+		{
 			"version": "r7",
 			"published": "2018-02-05T16:12:51Z",
 			"win32": {

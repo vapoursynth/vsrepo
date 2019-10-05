@@ -1,0 +1,33 @@
+{
+	"name": "TBilateral",
+	"type": "VSPlugin",
+	"description": "Bilateral spatial denoising filter",
+	"category": "Denoising",
+	"identifier": "com.nodame.tbilateral",
+	"namespace": "tbilateral",
+	"github": "https://github.com/dubhater/vapoursynth-tbilateral",
+	"releases": [
+		{
+			"version": "v1",
+			"published": "2019-10-04T20:49:03Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-tbilateral/releases/download/v1/vapoursynth-tbilateral-v1-win32.7z",
+				"files": {
+					"libtbilateral.dll": [
+						"libtbilateral.dll",
+						"e0b49d898f7c0f96f3793cf6c5c0fb7adc49815e7b1810d092e4d81b3665666c"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-tbilateral/releases/download/v1/vapoursynth-tbilateral-v1-win64.7z",
+				"files": {
+					"libtbilateral.dll": [
+						"libtbilateral.dll",
+						"ea719ba2fda7758329c32fcfd92ee95e70b03b63f8170b9373477a0f2644cc07"
+					]
+				}
+			}
+		}
+	]
+}

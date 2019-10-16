@@ -101,12 +101,15 @@ os.makedirs(py_script_path, exist_ok=True)
 os.makedirs(plugin_path, exist_ok=True)
 os.makedirs(os.path.dirname(package_json_path), exist_ok=True)
 
-cmd7zip_path = '7z.exe'
-try:
-    with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
-        cmd7zip_path = os.path.join(winreg.QueryValueEx(regkey, 'Path')[0], '7z.exe')
-except:
-    pass
+
+
+cmd7zip_path = os.path.join(os.path.dirname(__file__), '7z.exe')
+if not os.path.isfile(cmd7zip_path):
+    try:
+        with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
+            cmd7zip_path = os.path.join(winreg.QueryValueEx(regkey, 'Path')[0], '7z.exe')
+    except:
+        cmd7zip_path = '7z.exe'
 
 installed_packages = {}
 download_cache = {}

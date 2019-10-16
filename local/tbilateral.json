@@ -8,6 +8,28 @@
 	"github": "https://github.com/dubhater/vapoursynth-tbilateral",
 	"releases": [
 		{
+			"version": "v2",
+			"published": "2019-10-06T19:08:00Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-tbilateral/releases/download/v2/vapoursynth-tbilateral-v2-win32.7z",
+				"files": {
+					"libtbilateral.dll": [
+						"libtbilateral.dll",
+						"b26873b91b20cc98349cf9f0008ab8aa9265659ae9735ef6eabda4f29ab3993c"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-tbilateral/releases/download/v2/vapoursynth-tbilateral-v2-win64.7z",
+				"files": {
+					"libtbilateral.dll": [
+						"libtbilateral.dll",
+						"bd968e9b4af6437352a3f9b69eed7f855a107240a9edb35c00e73ef27bc4d442"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1",
 			"published": "2019-10-04T20:49:03Z",
 			"win32": {

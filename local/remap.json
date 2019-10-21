@@ -1,0 +1,55 @@
+{
+	"name": "RemapFrames",
+	"type": "VSPlugin",
+	"description": "Allows easy remapping of frames in a clip through the use of a text file or an input string.",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-RemapFrames",
+	"category": "Other",
+	"identifier": "blaze.plugin.remap",
+	"namespace": "remap",
+	"releases": [
+		{
+			"version": "v1.1",
+			"published": "2019-09-02T07:03:05Z",
+			"win32": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-RemapFrames/releases/download/v1.1/Vapoursynth-RemapFrames-v1.1-x86.zip",
+				"files": {
+					"RemapFramesVapoursynth.dll": [
+						"RemapFramesVapoursynth.dll",
+						"f052614117936297b6e9d2654aff02e73787482439dbcc53940f9e1a5971705d"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-RemapFrames/releases/download/v1.1/Vapoursynth-RemapFrames-v1.1-x64.zip",
+				"files": {
+					"RemapFramesVapoursynth.dll": [
+						"RemapFramesVapoursynth.dll",
+						"422fa49cf3c8050e5223bc900a92c6aed013f444c3cf2fd0aafe0567d2de3988"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0",
+			"published": "2017-07-12T06:01:03Z",
+			"win32": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-RemapFrames/releases/download/v1.0/Vapoursynth-RemapFrames-v1.0-x86.zip",
+				"files": {
+					"RemapFramesVapoursynth.dll": [
+						"RemapFramesVapoursynth.dll",
+						"0ccbd50d51d4a35db9eefc5aa13ceeba317eee3aaab4875624dec5fd70ed6350"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-RemapFrames/releases/download/v1.0/Vapoursynth-RemapFrames-v1.0-x64.zip",
+				"files": {
+					"RemapFramesVapoursynth.dll": [
+						"RemapFramesVapoursynth.dll",
+						"447cf1090a8c5371f0b25682727c7bb9af4f96f04f50980153bc666795f8b8d5"
+					]
+				}
+			}
+		}
+	]
+}

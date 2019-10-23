@@ -1,0 +1,34 @@
+{
+	"name": "xaa",
+	"type": "PyScript",
+	"description": "Many-in-one antialiasing script",
+	"category": "Scripts",
+	"identifier": "xaa",
+	"modulename": "xaa",
+	"github": "https://github.com/dubhater/vapoursynth-xaa",
+	"doom9": "https://forum.doom9.org/showthread.php?t=176203",
+	"dependencies": [
+		"com.holywu.eedi2",
+		"xxx.abc.znedi3",
+		"com.mio.sangnom",
+		"com.holywu.tcanny",
+		"com.nodame.tedgemask",
+		"com.holywu.nnedi3cl",
+		"com.holywu.eedi3"
+	],
+	"releases": [
+		{
+			"version": "v3",
+			"published": "2019-10-23T10:49:00Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-xaa/zipball/v3",
+				"files": {
+					"xaa.py": [
+						"dubhater-vapoursynth-xaa-104f39e/xaa.py",
+						"ad05590ff8876bcdb016e31043a96c58a0eb39d93b9cced43a3987b0e930c6cc"
+					]
+				}
+			}
+		}
+	]
+}

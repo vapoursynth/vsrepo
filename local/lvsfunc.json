@@ -17,6 +17,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:393a602",
+			"published": "2019-10-26T01:16:36Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/lvsfunc/393a6023a434fe7ad33d27d57a372c90dcdb2cd1/lvsfunc.py",
+				"files": {
+					"lvsfunc.py": [
+						"lvsfunc.py",
+						"f99d9a0adf7a7e6588076db7a9e6d13c5de30e01e8901aa8ada13d1885b7be0d"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:28f65bc",
 			"published": "2019-09-13T07:21:56Z",
 			"script": {

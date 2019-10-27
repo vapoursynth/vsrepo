@@ -13,6 +13,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:3f30a11",
+			"published": "2019-10-17T16:42:52Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/AlucardSama04/faggotDb/3f30a11b263267f5e15d73774a43522659a91b12/faggotDb.py",
+				"files": {
+					"faggotDb.py": [
+						"faggotDb.py",
+						"615f687c0d344a5ae8ab9b0928a06f483a1b2cef6e9979a22ad32dd392908f6d"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:f99c575",
 			"published": "2019-06-04T03:44:32Z",
 			"script": {

@@ -9,6 +9,50 @@
 	"github": "https://github.com/HolyWu/L-SMASH-Works",
 	"releases": [
 		{
+			"version": "20191116",
+			"published": "2019-11-16T09:19:28Z",
+			"win32": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20191116/L-SMASH-Works_20191116.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins/LSMASHSource.dll",
+						"269f7a41358ada5cf0073a7b559402cc00b366adf8641cdde8caf042f09f6c87"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20191116/L-SMASH-Works_20191116.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins64/LSMASHSource.dll",
+						"215096b7ec2cb659f2f2b4867efc8cd27ca6180d3e318c505b3c55f461b385b8"
+					]
+				}
+			}
+		},
+		{
+			"version": "20191115",
+			"published": "2019-11-15T08:23:30Z",
+			"win32": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20191115/L-SMASH-Works_20191115.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins/LSMASHSource.dll",
+						"2f7392ccc9da63674d3e8bf05849a006c517376a155d3bfeb3d8b3ecf029e987"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20191115/L-SMASH-Works_20191115.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins64/LSMASHSource.dll",
+						"93836688f8fc67be32087d86c2b44ad48f64631ac521eb27c72ec7ef31a59db0"
+					]
+				}
+			}
+		},
+		{
 			"version": "20190917",
 			"published": "2019-09-17T08:14:38Z",
 			"win32": {

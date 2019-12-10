@@ -6,6 +6,9 @@
 	"identifier": "net.nlzy.vsw2xnvk.models",
 	"namespace": "w2xnvk_models",
 	"github": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan",
+	"ignore": [
+		"r1"
+	],
 	"releases": [
 		{
 			"version": "r0.1",

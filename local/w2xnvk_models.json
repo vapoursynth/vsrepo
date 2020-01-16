@@ -7,7 +7,8 @@
 	"namespace": "w2xnvk_models",
 	"github": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan",
 	"ignore": [
-		"r1"
+		"r1",
+		"r2"
 	],
 	"releases": [
 		{

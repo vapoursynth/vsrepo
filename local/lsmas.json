@@ -9,6 +9,28 @@
 	"github": "https://github.com/HolyWu/L-SMASH-Works",
 	"releases": [
 		{
+			"version": "20200111",
+			"published": "2020-01-11T12:45:44Z",
+			"win32": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20200111/L-SMASH-Works_20200111.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins/LSMASHSource.dll",
+						"5b649848516fa2af53cf3c6e80e2122aabdc1a6a029099d00c7824879d9d4107"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/L-SMASH-Works/releases/download/20200111/L-SMASH-Works_20200111.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"plugins64/LSMASHSource.dll",
+						"68ea59b964701bbf0a44912fb25c48e4ab52012fd807b58236a8fb7efa443ec0"
+					]
+				}
+			}
+		},
+		{
 			"version": "20191127",
 			"published": "2019-11-27T16:48:40Z",
 			"win32": {

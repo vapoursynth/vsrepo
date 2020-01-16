@@ -1,0 +1,24 @@
+{
+	"name": "AreaResize",
+	"type": "VSPlugin",
+	"description": "AreaResize is an area average downscale resizer plugin. Downscaling in 8-16 bit RGB is also gamma corrected.",
+	"github": "https://github.com/Kiyamou/VapourSynth-AreaResize",
+	"category": "Resizing and Format Conversion",
+	"identifier": "com.vapoursynth.arearesize",
+	"namespace": "area",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2020-01-15T13:15:43Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-AreaResize/releases/download/r1/AreaResize-r1_R47-R48.7z",
+				"files": {
+					"AreaResizev.dll": [
+						"AreaResizev.dll",
+						"7506925cede7664846cdd47ba24a843df0e736187accb4ba4863a8be494ed589"
+					]
+				}
+			}
+		}
+	]
+}

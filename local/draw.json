@@ -1,0 +1,55 @@
+{
+	"name": "Draw",
+	"type": "VSPlugin",
+	"description": "A simple alternative to MaskTools2's mt_lutspa.",
+	"github": "https://github.com/kewenyu/VapourSynth-Draw",
+	"category": "Other",
+	"identifier": "com.kewenyu.draw",
+	"namespace": "draw",
+	"releases": [
+		{
+			"version": "r2",
+			"published": "2020-01-02T17:41:13Z",
+			"win32": {
+				"url": "https://github.com/kewenyu/VapourSynth-Draw/releases/download/r2/VapourSynth-Draw-r2.zip",
+				"files": {
+					"VapourSynth-Draw.dll": [
+						"VapourSynth-Draw/win32/VapourSynth-Draw.dll",
+						"45c2a15728edfb24a4cd3efbf1ee3fb0c9af6267da4602edd046e73c8710d7cd"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/kewenyu/VapourSynth-Draw/releases/download/r2/VapourSynth-Draw-r2.zip",
+				"files": {
+					"VapourSynth-Draw.dll": [
+						"VapourSynth-Draw/win64/VapourSynth-Draw.dll",
+						"d6a3c49af5c9a529dbe9e48fed0c8249417b8227b0cc2bb18c2f5669e282ab09"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"published": "2019-12-29T14:28:25Z",
+			"win32": {
+				"url": "https://github.com/kewenyu/VapourSynth-Draw/releases/download/r1/VapourSynth-Draw-r1.zip",
+				"files": {
+					"VapourSynth-Draw.dll": [
+						"VapourSynth-Draw/win32/VapourSynth-Draw.dll",
+						"8f508bb1c5d580a60800c90ad137a393426ee6711b5a1c41d12203a546517b60"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/kewenyu/VapourSynth-Draw/releases/download/r1/VapourSynth-Draw-r1.zip",
+				"files": {
+					"VapourSynth-Draw.dll": [
+						"VapourSynth-Draw/win64/VapourSynth-Draw.dll",
+						"5380ee45674886d2f42e9c7e54be26fc6bd2a93f77ba861b3ab79f0a2c281499"
+					]
+				}
+			}
+		}
+	]
+}

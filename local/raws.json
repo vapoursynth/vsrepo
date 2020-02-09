@@ -1,0 +1,37 @@
+{
+	"name": "vsrawsource",
+	"type": "VSPlugin",
+	"description": "Raw-format file Reader. Supports raw(uncompressed) video, YUV4MPEG2 and WindowsBitmap(24bit/32bit RGB)",
+	"github": "https://github.com/HolyWu/vsrawsource",
+	"doom9": "https://forum.doom9.org/showthread.php?t=166075",
+	"category": "Source/Output",
+	"identifier": "chikuzen.does.not.have.his.own.domain.raws",
+	"namespace": "raws",
+	"ignore": [
+		"20191105"
+	],
+	"releases": [
+		{
+			"version": "20191104",
+			"published": "2019-11-04T08:52:06Z",
+			"win32": {
+				"url": "https://github.com/HolyWu/vsrawsource/releases/download/20191104/vsrawsource-20191104.7z",
+				"files": {
+					"vsrawsource.dll": [
+						"plugins/vsrawsource.dll",
+						"09065ef4d5c5c80feadf68142e24f17bca51e1277fdf13d81dded5e71e0a6f06"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/vsrawsource/releases/download/20191104/vsrawsource-20191104.7z",
+				"files": {
+					"vsrawsource.dll": [
+						"plugins64/vsrawsource.dll",
+						"3dc8702004d262cc62c3721fb25c46e1bb6e0a0f5ccd3116e1e038d67dc80e8d"
+					]
+				}
+			}
+		}
+	]
+}

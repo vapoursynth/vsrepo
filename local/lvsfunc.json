@@ -12,11 +12,24 @@
 		"muvsfunc",
 		"havsfunc",
 		"kagefunc",
+		"nnedi3_rpow2",
 		"vstaambk",
 		"vsutil"
 	],
 	"releases": [
 		{
+			"version": "git:c2786dc",
+			"published": "2019-11-15T20:14:27Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/lvsfunc/c2786dc9c092b7694ea7d3fcad5494101c64c0cf/lvsfunc.py",
+				"files": {
+					"lvsfunc.py": [
+						"lvsfunc.py",
+						"bef29ecd2c2713ab4bfeeb7430732272f4837d7f669007a87379945cbbbeb1fd"
+					]
+				}
+			}
+		},{
 			"version": "git:393a602",
 			"published": "2019-10-26T01:16:36Z",
 			"script": {

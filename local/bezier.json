@@ -9,6 +9,28 @@
 	"github": "https://github.com/kewenyu/VapourSynth-BezierCurve",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2019-12-22T18:03:43Z",
+			"win32": {
+				"url": "https://github.com/kewenyu/VapourSynth-BezierCurve/releases/download/r3/VapourSynth-BezierCurve-r3.zip",
+				"files": {
+					"VapourSynth-BezierCurve.dll": [
+						"VapourSynth-BezierCurve/win32/VapourSynth-BezierCurve.dll",
+						"46bfdc59ed62685dc6d0846e5b3b22c16dfb93af165c56c56ec7076b8c0c164c"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/kewenyu/VapourSynth-BezierCurve/releases/download/r3/VapourSynth-BezierCurve-r3.zip",
+				"files": {
+					"VapourSynth-BezierCurve.dll": [
+						"VapourSynth-BezierCurve/win64/VapourSynth-BezierCurve.dll",
+						"9181e84950b15404d5408b2db392d1eab39ba2120fd69167001b656edbccc521"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2017-08-14T09:38:00Z",
 			"win32": {

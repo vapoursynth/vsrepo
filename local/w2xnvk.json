@@ -1,0 +1,65 @@
+{
+	"name": "Waifu2x NCNN Vulkan",
+	"type": "VSPlugin",
+	"description": "Waifu2x filter based on waifu2x-ncnn-vulkan",
+	"github": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan",
+	"category": "Resizing and Format Conversion",
+	"identifier": "net.nlzy.vsw2xnvk",
+	"namespace": "w2xnvk",
+	"dependencies": [
+		"net.nlzy.vsw2xnvk.models"
+	],
+	"releases": [
+		{
+			"version": "r2",
+			"published": "2020-01-09T03:59:50Z",
+			"win64": {
+				"url": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan/releases/download/r2/vsw2xnvk-r2-win64.7z",
+				"files": {
+					"vsw2xnvk.dll": [
+						"vsw2xnvk.dll",
+						"1349846c6704b59ec484edaf48e1d4ca40f0ff358fdc13a682fa31e030edae7d"
+					],
+					"vulkan-1.dll": [
+						"vulkan-1.dll",
+						"5c4d2743299ec5681661365278114d5f82e3c888d0d9e518977d14da8ec6ea85"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"published": "2019-12-09T16:59:35Z",
+			"win64": {
+				"url": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan/releases/download/r1/vsw2xnvk-r1-win64.7z",
+				"files": {
+					"vsw2xnvk.dll": [
+						"vsw2xnvk.dll",
+						"8030f7384713899087882769cd75272ce1226bd14f648c76c659ee2c8f4ecec9"
+					],
+					"vulkan-1.dll": [
+						"vulkan-1.dll",
+						"5c4d2743299ec5681661365278114d5f82e3c888d0d9e518977d14da8ec6ea85"
+					]
+				}
+			}
+		},
+		{
+			"version": "r0.1",
+			"published": "2019-11-28T04:54:53Z",
+			"win64": {
+				"url": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan/releases/download/r0.1/vsw2xnvk-r0.1-win64.7z",
+				"files": {
+					"vsw2xnvk.dll": [
+						"vsw2xnvk.dll",
+						"183a09da27b982d1f76ce7e91388437d4ff47cf764fac0b14ada874808705ae2"
+					],
+					"vulkan-1.dll": [
+						"vulkan-1.dll",
+						"5c4d2743299ec5681661365278114d5f82e3c888d0d9e518977d14da8ec6ea85"
+					]
+				}
+			}
+		}
+	]
+}

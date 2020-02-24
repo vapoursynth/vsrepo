@@ -1,0 +1,25 @@
+{
+	"name": "Bwdif",
+	"type": "VSPlugin",
+	"description": "Motion adaptive deinterlacing based on yadif with the use of w3fdif and cubic interpolation algorithms.",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bwdif",
+	"doom9": "https://forum.doom9.org/showthread.php?t=180419",
+	"category": "Deinterlacing",
+	"identifier": "com.holywu.bwdif",
+	"namespace": "bwdif",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2020-02-24T09:01:35Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bwdif/releases/download/r1/Bwdif-r1.7z",
+				"files": {
+					"Bwdif.dll": [
+						"plugins64/Bwdif.dll",
+						"690661d5ab73d99bebe586d20431e6042ff0d40e73b91d5784da27d278d825ca"
+					]
+				}
+			}
+		}
+	]
+}

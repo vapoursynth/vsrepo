@@ -8,6 +8,28 @@
 	"namespace": "draw",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2020-02-22T06:52:56Z",
+			"win32": {
+				"url": "https://github.com/kewenyu/VapourSynth-Draw/releases/download/r3/VapourSynth-Draw-r3.zip",
+				"files": {
+					"VapourSynth-Draw.dll": [
+						"VapourSynth-Draw/win32/VapourSynth-Draw.dll",
+						"f3bdeee671491b137e7ccd0f4a7630fd89a4e0cf56058f5f3c71be5518dc3be5"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/kewenyu/VapourSynth-Draw/releases/download/r3/VapourSynth-Draw-r3.zip",
+				"files": {
+					"VapourSynth-Draw.dll": [
+						"VapourSynth-Draw/win64/VapourSynth-Draw.dll",
+						"d815a1e9d66f8a7702e78c7a80147597fe85c36b87531024d039233170731259"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2020-01-02T17:41:13Z",
 			"win32": {

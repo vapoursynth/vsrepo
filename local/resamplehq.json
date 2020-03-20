@@ -12,6 +12,19 @@
 	],
 	"releases": [
 		{
+			"version": "v2.1.0",
+			"published": "2020-03-14T15:14:45Z",
+			"script": {
+				"url": "https://api.github.com/repos/4re/resamplehq/zipball/v2.1.0",
+				"files": {
+					"resamplehq.py": [
+						"4re-resamplehq-415f501/resamplehq.py",
+						"f9f9042da375cce308cb1b4642cbf466e4cedc79d977cb447470deb07bd3a93e"
+					]
+				}
+			}
+		},
+		{
 			"version": "v2.0.0",
 			"published": "2018-08-27T02:09:58Z",
 			"script": {

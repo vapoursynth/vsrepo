@@ -1,0 +1,59 @@
+{
+	"name": "Neo FFT3D",
+	"type": "VSPlugin",
+	"description": "3D frequency domain denoiser/sharpener. Forked from fft3dfilter.",
+	"category": "Denoising",
+	"identifier": "in.7086.neo_fft3d",
+	"namespace": "neo_fft3d",
+	"doom9": "https://forum.doom9.org/showthread.php?t=174347",
+	"github": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D",
+	"dependencies": [
+		"org.fftw.fftw3"
+	],
+	"releases": [
+		{
+			"version": "r3",
+			"published": "2020-04-08T08:02:33Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r3/NeoFFT3D_r3.zip",
+				"files": {
+					"fft3dfilter.dll": [
+						"msvc-x86/neo-fft3d.dll",
+						"ab6c7732f5c0f9a8ad2d9547057255876ffd02e34bcffa721f5a07a51ee93cd0"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r3/NeoFFT3D_r3.zip",
+				"files": {
+					"fft3dfilter.dll": [
+						"msvc-x64/neo-fft3d.dll",
+						"0a5a2e2658d290db5cebe81efc252dc1b339e717f21d6a0bc31b670dd3dedd8a"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"published": "2020-03-30T22:05:56Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r1/NeoFFT3D_r1v4.zip",
+				"files": {
+					"fft3dfilter.dll": [
+						"msvc-x86/neo-fft3d.dll",
+						"0cad16672993da9fbd0c42ce76e94320426bb7ac48e800eb586646a9e277b98f"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r1/NeoFFT3D_r1v4.zip",
+				"files": {
+					"fft3dfilter.dll": [
+						"msvc-x64/neo-fft3d.dll",
+						"d1dea0a8ecd47f37f9806587de995898d8535caa9029ba5c353e00c39f08b5eb"
+					]
+				}
+			}
+		}
+	]
+}

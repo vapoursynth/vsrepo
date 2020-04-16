@@ -1,0 +1,53 @@
+{
+	"name": "vs-placebo",
+	"type": "VSPlugin",
+	"description": "libplacebo-based debanding, scaling and color mapping plugin for VapourSynth",
+	"github": "https://github.com/Lypheo/vs-placebo",
+	"category": "Other",
+	"identifier": "com.vs.placebo",
+	"namespace": "placebo",
+	"releases": [
+		{
+			"version": "1.1",
+			"published": "2020-04-15T20:17:32Z",
+			"win64": {
+				"url": "https://github.com/Lypheo/vs-placebo/releases/download/1.1/vsplacebo.7z",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"e1b509599ef02c42d5b4f1c16fa5603ae84a8e5640744b53cc159c1333a0321e"
+					],
+					"libplacebo-31.dll": [
+						"libplacebo-31.dll",
+						"b20599f9dfc982cb524e52a4757d738f9b0e1b91fd5e3f4c8f8b3126d2426343"
+					],
+					"shaderc_shared.dll": [
+						"shaderc_shared.dll",
+						"fd10832964a42d693a5dc714adb8f3e7a7810b7c7c40979e40e75c14709cd05a"
+					]
+				}
+			}
+		},
+		{
+			"version": "1.0",
+			"published": "2020-04-13T21:13:56Z",
+			"win64": {
+				"url": "https://github.com/Lypheo/vs-placebo/releases/download/1.0/vs-placebo.7z",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"a1a9ce8ea462bbbd1b54f6f832ddf3bd25cc4c70ea0867a5a147f26db4c7cf8a"
+					],
+					"libplacebo-31.dll": [
+						"libplacebo-31.dll",
+						"59ff5635e18e082904a344e15975925df06d488c1cb448ba63174684ab81f060"
+					],
+					"shaderc_shared.dll": [
+						"shaderc_shared.dll",
+						"fd10832964a42d693a5dc714adb8f3e7a7810b7c7c40979e40e75c14709cd05a"
+					]
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"name": "Neo DFTTest",
+	"type": "VSPlugin",
+	"description": "A 2D/3D Frequency Domain denoiser",
+	"website": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest",
+	"doom9": "https://forum.doom9.org/showthread.php?t=181294",
+	"category": "Denoising",
+	"identifier": "in.7086.neo_dfttest",
+	"namespace": "neo_dfttest",
+	"github": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest",
+	"dependencies": [
+		"org.fftw.fftw3"
+	],
+	"releases": [
+		{
+			"version": "r7",
+			"published": "2020-04-16T04:37:38Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest/releases/download/r7/neo-dfttest_r7.zip",
+				"files": {
+					"neo-dfttest.dll": [
+						"clang-x86/neo-dfttest.dll",
+						"7807db04ce1f4c5ad910ff674461d44eb41967e44387fb475948807043220b16"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest/releases/download/r7/neo-dfttest_r7.zip",
+				"files": {
+					"neo-dfttest.dll": [
+						"clang-x64/neo-dfttest.dll",
+						"73897e0529ce100a2d33b5d5f157c3e384b04117e9f3bb62bffea79958fde518"
+					]
+				}
+			}
+		}
+	]
+}

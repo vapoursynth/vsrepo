@@ -1,0 +1,34 @@
+{
+	"name": "Neo Vague Denoiser",
+	"type": "VSPlugin",
+	"description": "A wavelet based denoiser.",
+	"github": "https://github.com/HomeOfAviSynthPlusEvolution/neo_Vague_Denoiser",
+	"doom9": "https://forum.doom9.org/showthread.php?p=1908297",
+	"category": "Denoising",
+	"identifier": "in.7086.neo_vd",
+	"namespace": "neo_vd",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2020-04-19T08:49:35Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_Vague_Denoiser/releases/download/r1/neo-vague-denoiser_r1v2.zip",
+				"files": {
+					"neo-vague-denoiser.dll": [
+						"clang-x86/neo-vague-denoiser.dll",
+						"a6ba6e00bd42ea10ebdaadfb229a7195dbe215ef1c12dd158e27fa65946b2cbf"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_Vague_Denoiser/releases/download/r1/neo-vague-denoiser_r1v2.zip",
+				"files": {
+					"neo-vague-denoiser.dll": [
+						"clang-x64/neo-vague-denoiser.dll",
+						"129b24235d3b2fd8bf0eb1a81b81e6225d1f33c386af9ebe8d64ec36d6aafd43"
+					]
+				}
+			}
+		}
+	]
+}

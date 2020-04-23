@@ -12,6 +12,72 @@
 	],
 	"releases": [
 		{
+			"version": "r6",
+			"published": "2020-04-22T11:55:46Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r6/NeoFFT3D_r6.zip",
+				"files": {
+					"neo-fft3d.dll": [
+						"msvc-x86/neo-fft3d.dll",
+						"88ff2016f175428e182479daba680b1f46d052b0cf37b4e594940df7601c7c83"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r6/NeoFFT3D_r6.zip",
+				"files": {
+					"neo-fft3d.dll": [
+						"msvc-x64/neo-fft3d.dll",
+						"83b7953331f02407f1ec900c9c3209354af2125ce19f84edecd007bc5150a2a5"
+					]
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"published": "2020-04-20T22:42:32Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r5/NeoFFT3D_r5.zip",
+				"files": {
+					"neo-fft3d.dll": [
+						"msvc-x86/neo-fft3d.dll",
+						"abc6170f3d2f5f5d8df6261184eccde7c991ac4ee1c888650fea98a2267a1ec3"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r5/NeoFFT3D_r5.zip",
+				"files": {
+					"neo-fft3d.dll": [
+						"msvc-x64/neo-fft3d.dll",
+						"f42d1857545372effa383a72e1ad1681f3fb12601875f5dccf8a926ecb06cc04"
+					]
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"published": "2020-04-20T02:36:15Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r4/NeoFFT3D_r4.zip",
+				"files": {
+					"neo-fft3d.dll": [
+						"msvc-x86/neo-fft3d.dll",
+						"404a8beae11afba51cf39426920ebbf282842fe9ffa40fe088890f115d906734"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r4/NeoFFT3D_r4.zip",
+				"files": {
+					"neo-fft3d.dll": [
+						"msvc-x64/neo-fft3d.dll",
+						"67e584058217b9032aff40399f57305544a00551be04656774b5ca7b7360facc"
+					]
+				}
+			}
+		},
+		{
 			"version": "r3",
 			"published": "2020-04-08T08:02:33Z",
 			"win32": {

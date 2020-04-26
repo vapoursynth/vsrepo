@@ -9,6 +9,50 @@
 	"namespace": "neo_f3kdb",
 	"releases": [
 		{
+			"version": "r5",
+			"published": "2020-04-13T05:46:10Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r5/neo-f3kdb_r5v2.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x86/neo-f3kdb.dll",
+						"b3f3b09d5ace8367a0e940a64882d9fff5bb78b7f77b0e7b23a1fe2887ab6f9a"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r5/neo-f3kdb_r5v2.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x64/neo-f3kdb.dll",
+						"8fe9e85d7b8148703598356549e23a5db2e25925b34e37151b4bad37373235e4"
+					]
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"published": "2020-04-12T22:43:47Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r4/neo-f3kdb_r4.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x86/neo-f3kdb.dll",
+						"6d57e48423de2bede461a11c4d2b32d94e0742dfd9e3de92f72538ea1d3e36eb"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r4/neo-f3kdb_r4.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x64/neo-f3kdb.dll",
+						"62a7f1df76e0e5df29a51c0a75c73a52f3bdc306cd3b587047c54c0aa07dbb0c"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2019-09-21T01:54:32Z",
 			"win32": {

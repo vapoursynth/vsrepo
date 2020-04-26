@@ -10,6 +10,19 @@
 	"github": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2020-04-16T21:12:46Z",
+			"win64": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r3/vapoursynth-descale-r3-win64.zip",
+				"files": {
+					"libdescale.dll": [
+						"libdescale.dll",
+						"fc811408acf7b337f17e8b0d54fe1c6b8eaafb753265d2f8b5569c1f2673f154"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2017-05-09T09:18:57Z",
 			"win64": {

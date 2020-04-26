@@ -13,6 +13,19 @@
 	],
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2020-04-16T21:12:46Z",
+			"script": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r3/vapoursynth-descale-r3-win64.zip",
+				"files": {
+					"descale.py": [
+						"descale.py",
+						"e9dac524a21bdc781250d027914adb83b38450314876eb4ec6b92676a127c3d4"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2017-05-09T09:18:57Z",
 			"script": {

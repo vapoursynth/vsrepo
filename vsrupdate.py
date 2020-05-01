@@ -36,7 +36,7 @@ try:
     import winreg
 except ImportError:
     print('{} is only supported on Windows.'.format(__file__))
-    exit(1)
+    sys.exit(1)
 
 try:
     import tqdm
@@ -334,7 +334,8 @@ elif args.operation == 'upload':
     print('Packages successfully compiled')
     with open('vspackages.zip', 'rb') as pl:
         with ftplib.FTP_TLS(host=args.host[0], user=args.user[0], passwd=args.passwd[0]) as ftp:
-            ftp.cwd(args.dir[0])
+            if args.dir is not None:
+                ftp.cwd(args.dir[0])
             try:
                 ftp.delete('vspackages.zip')
             except:

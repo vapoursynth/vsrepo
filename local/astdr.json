@@ -16,7 +16,8 @@
 		"com.nodame.fluxsmooth",
 		"chikuzen.does.not.have.his.own.domain.focus2",
 		"systems.innocent.fft3dfilter",
-		"com.nodame.mvtools"
+		"com.nodame.mvtools",
+		"com.holywu.ctmf"
 	],
 	"releases": [
 		{

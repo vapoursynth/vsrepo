@@ -8,7 +8,8 @@
 	"modulename": "nnedi3_resample",
 	"github": "https://github.com/mawen1250/VapourSynth-script",
 	"dependencies": [
-		"com.deinterlace.nnedi3"
+		"com.deinterlace.nnedi3",
+		"fmtconv"
 	],
 	"releases": [
 		{

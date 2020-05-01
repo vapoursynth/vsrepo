@@ -10,6 +10,7 @@
 	"github": "https://github.com/dubhater/vapoursynth-smoothuv",
 	"dependencies": [
 		"com.nodame.smoothuv",
+		"com.holywu.tcanny",
 		"kagefunc"
 	],
 	"releases": [

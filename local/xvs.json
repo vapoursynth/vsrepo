@@ -19,9 +19,15 @@
 		"com.holywu.tcanny",
 		"com.holywu.tdeintmod",
 		"com.holywu.nnedi3cl",
+		"com.deinterlace.nnedi3",
+		"xxx.abc.znedi3",
+		"com.holywu.eedi2",
 		"com.wolframrhodium.dpid",
 		"com.ifb.tonemap",
-		"com.vapoursynth.ffms2"
+		"com.vapoursynth.ffms2",
+		"systems.innocent.lsmas",
+		"com.Khanattila.KNLMeansCL",
+		"com.holywu.readmpls"
 	],
 	"releases": [
 		{

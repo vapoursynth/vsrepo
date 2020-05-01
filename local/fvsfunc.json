@@ -18,7 +18,12 @@
 		"com.invalid.identifier.bilateral",
 		"com.wolframrhodium.bilateralGPU",
 		"com.holywu.dfttest",
-		"tegaf.asi.xe"
+		"tegaf.asi.xe",
+		"com.vapoursynth.ffms2",
+		"systems.innocent.fft3dfilter",
+		"com.nodame.mvtools",
+		"com.mio.sangnom",
+		"com.holywu.yadifmod"
 	],
 	"releases": [
 		{

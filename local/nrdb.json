@@ -1,0 +1,27 @@
+{
+	"name": "NRDB",
+	"type": "PyScript",
+	"description": "NRDB is a debanding function. It removes the noise in the input clip, debands, and adds the noise back. This is a port of the Avisynth function of the same name.",
+	"github": "https://github.com/dubhater/vapoursynth-nrdb",
+	"category": "Other",
+	"identifier": "nrdb",
+	"modulename": "nrdb",
+	"dependencies": [
+		"com.holywu.dfttest"
+	],
+	"releases": [
+		{
+			"version": "v1",
+			"published": "2020-05-01T16:57:46Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-nrdb/zipball/v1",
+				"files": {
+					"NRDB.py": [
+						"dubhater-vapoursynth-nrdb-951f7cd/NRDB.py",
+						"f8dd213ebe0192f81485fad54d2da411d36da22879ef377fe6816d7947de3dfe"
+					]
+				}
+			}
+		}
+	]
+}

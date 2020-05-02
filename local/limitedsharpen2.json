@@ -1,0 +1,42 @@
+{
+	"name": "LimitedSharpen2",
+	"type": "PyScript",
+	"description": "LimitedSharpen2 is a multipurpose sharpening function",
+	"github": "https://github.com/dubhater/vapoursynth-limitedsharpen2",
+	"category": "Sharpening",
+	"identifier": "limitedsharpen2",
+	"modulename": "limitedsharpen2",
+	"dependencies": [
+		"muvsfunc",
+		"com.nodame.asharp",
+		"com.nodame.awarpsharp2"
+	],
+	"releases": [
+		{
+			"version": "v2",
+			"published": "2020-05-02T17:29:42Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-limitedsharpen2/zipball/v2",
+				"files": {
+					"LimitedSharpen2.py": [
+						"dubhater-vapoursynth-limitedsharpen2-7b64d53/LimitedSharpen2.py",
+						"6de3acb654f8cef69dee3e9ac2f1563c51312789fe3a325ee3ad9b3f7fab80c4"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1",
+			"published": "2020-05-02T17:15:58Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-limitedsharpen2/zipball/v1",
+				"files": {
+					"LimitedSharpen2.py": [
+						"dubhater-vapoursynth-limitedsharpen2-dd81555/LimitedSharpen2.py",
+						"67d6d39c2932b7ff59432ff74b724da6ab94afe87a016b09aa73b5c4c03a5cba"
+					]
+				}
+			}
+		}
+	]
+}

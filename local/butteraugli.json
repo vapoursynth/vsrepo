@@ -1,0 +1,37 @@
+{
+	"name": "Butteraugli",
+	"type": "VSPlugin",
+	"description": "Butteraugli estimates the psychovisual similarity of two images",
+	"github": "https://github.com/fdar0536/VapourSynth-butteraugli",
+	"category": "Other",
+	"identifier": "system.Butteraugli.butteraugli",
+	"namespace": "butteraugli",
+	"releases": [
+		{
+			"version": "r2",
+			"published": "2020-03-14T12:15:41Z",
+			"win64": {
+				"url": "https://github.com/fdar0536/VapourSynth-butteraugli/releases/download/r2/VapourSynth-butteraugli-r2-win64.7z",
+				"files": {
+					"vapoursynth-butteraugli.dll": [
+						"win64/vapoursynth-butteraugli.dll",
+						"16629c69532c14fd1a2baca723e529d8482bfd7f74bef71e00895c7a8de5eaef"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"published": "2019-01-30T19:05:09Z",
+			"win64": {
+				"url": "https://github.com/fdar0536/VapourSynth-butteraugli/releases/download/r1/VapourSynth-butteraugli-win64.7z",
+				"files": {
+					"vapoursynth-butteraugli.dll": [
+						"win64/vapoursynth-butteraugli.dll",
+						"f59d9eafeccf9002083c69ba94fd8bdd3325248284ad4cee4392caac46bb0adf"
+					]
+				}
+			}
+		}
+	]
+}

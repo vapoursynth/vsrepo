@@ -1,0 +1,27 @@
+{
+	"name": "Destripe",
+	"type": "PyScript",
+	"description": "A descale wrapper for anime destriping",
+	"category": "Resizing and Format Conversion",
+	"identifier": "destripe",
+	"modulename": "destripe",
+	"github": "https://github.com/YomikoR/VapourSynth-Destripe",
+	"dependencies": [
+		"tegaf.asi.xe"
+	],
+	"releases": [
+		{
+			"version": "git:b45a197",
+			"published": "2020-04-28T22:57:05Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/YomikoR/VapourSynth-Destripe/b45a19787f9a69c9cacbc1691506b2da3506af72/destripe.py",
+				"files": {
+					"destripe.py": [
+						"destripe.py",
+						"99d84875d7578fdcf2321db11d61a725d510d59c9a69efab1d9f47c86dd801c5"
+					]
+				}
+			}
+		}
+	]
+}

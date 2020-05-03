@@ -12,6 +12,28 @@
 	],
 	"releases": [
 		{
+			"version": "r7",
+			"published": "2020-05-03T05:07:09Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r7/NeoFFT3D_r7.zip",
+				"files": {
+					"neo-fft3d.dll": [
+						"msvc-x86/neo-fft3d.dll",
+						"4a81278e33733c9bb9a8f22c21beeb1b83ba571d60e98b2c52a5867a66b5d428"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_FFT3D/releases/download/r7/NeoFFT3D_r7.zip",
+				"files": {
+					"neo-fft3d.dll": [
+						"msvc-x64/neo-fft3d.dll",
+						"7400cb5e8015884a2f57198d270c5e9dfc76043f687c62badbfba69ed558b761"
+					]
+				}
+			}
+		},
+		{
 			"version": "r6",
 			"published": "2020-04-22T11:55:46Z",
 			"win32": {

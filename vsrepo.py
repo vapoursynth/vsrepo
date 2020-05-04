@@ -39,7 +39,7 @@ try:
     import winreg
 except ImportError:
     print('{} is only supported on Windows.'.format(__file__))
-    exit(1)
+    sys.exit(1)
 
 try:
     import tqdm
@@ -71,7 +71,7 @@ is_64bits = (args.target == 'win64')
 
 if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is None) or len(args.package) == 0):
     print('Package argument only required for install, upgrade and uninstall operations')
-    exit(1)
+    sys.exit(1)
 
 file_dirname = os.path.dirname(os.path.abspath(__file__))
 package_json_path = os.path.join(file_dirname, 'vspackages.json') if args.portable else os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'vsrepo', 'vspackages.json')
@@ -455,7 +455,7 @@ for name in args.package:
         get_package_from_name(name)
     except Exception as e:
         print(e)
-        exit(1)
+        sys.exit(1)
 
 if args.operation == 'install':
     detect_installed_packages()

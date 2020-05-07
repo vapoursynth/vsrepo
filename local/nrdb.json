@@ -11,6 +11,19 @@
 	],
 	"releases": [
 		{
+			"version": "v2",
+			"published": "2020-05-06T17:53:52Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-nrdb/zipball/v2",
+				"files": {
+					"NRDB.py": [
+						"dubhater-vapoursynth-nrdb-236b729/NRDB.py",
+						"6f74ebc5da4a157a51b8599c3d2be0040b2d4f50b7a26b8a4794948478c7dc3d"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1",
 			"published": "2020-05-01T16:57:46Z",
 			"script": {

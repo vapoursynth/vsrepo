@@ -14,8 +14,8 @@
                 "url": "http://rationalqm.us/hdr/DGHDRtoSDR_1.13.rar",
                 "files": {
                     "DGHDRtoSDR.dll": [
-                        "DGHDRtoSDR.dll",
-                        "71b9de2b245eab525c705fa7c4ee51c92c3b291f9944f6ccfe248e697cd755d9"
+                        "x32/DGHDRtoSDR.dll",
+                        "218f81369fd37f733568a499471ba7a9227c15a66cad1c296a3f340ab331f1a0"
                     ]
                 }
             },
@@ -23,8 +23,8 @@
                 "url": "http://rationalqm.us/hdr/DGHDRtoSDR_1.13.rar",
                 "files": {
                     "DGHDRtoSDR.dll": [
-                        "x64/DGHDRtoSDR.dll",
-                        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                        "DGHDRtoSDR.dll",
+                        "71b9de2b245eab525c705fa7c4ee51c92c3b291f9944f6ccfe248e697cd755d9"
                     ]
                 }
             }

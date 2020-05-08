@@ -1,0 +1,142 @@
+{
+	"name": "JincResize",
+	"type": "VSPlugin",
+	"description": "Jinc (EWA Lanczos) resampling plugin",
+	"github": "https://github.com/Kiyamou/VapourSynth-JincResize",
+	"doom9": "https://forum.doom9.org/showthread.php?t=181407",
+	"category": "Resizing and Format Conversion",
+	"identifier": "com.vapoursynth.jincresize",
+	"namespace": "jinc",
+	"releases": [
+		{
+			"version": "r7.1",
+			"published": "2020-05-08T11:12:23Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r7.1/JincResize-r7.1.7z",
+				"files": {
+					"JincResize.dll": [
+						"avx2/JincResize.dll",
+						"d230e65ec08f461228a4a33578c254c4084b58ecf0352f2b847372568f82eaa9"
+					]
+				}
+			}
+		},
+		{
+			"version": "r7",
+			"published": "2020-05-03T10:06:18Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r7/JincResize-r7.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize.dll",
+						"4c858e7e5ec95f6512a2795aa492f3dd79ba45d3e2fc2154c23934d6169e48df"
+					]
+				}
+			}
+		},
+		{
+			"version": "r7-RC1",
+			"published": "2020-03-22T17:15:57Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r7-RC1/JincResize-r7-RC1.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize.dll",
+						"c6dc41f0dc7fbcc12fb3146969ca36763283a6ef89098fd2638d55e25d5afa16"
+					]
+				}
+			}
+		},
+		{
+			"version": "r6.1",
+			"published": "2020-03-15T09:23:01Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r6.1/JincResize-r6.1.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize.dll",
+						"4dd0890c0855b68f8bc163e6bff2e66a32c5a1f264fa59d4bb51e0c77ce59740"
+					]
+				}
+			}
+		},
+		{
+			"version": "r6",
+			"published": "2020-03-02T06:34:11Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r6/JincResize-r6_R47-R48.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize.dll",
+						"98afd1d93a175d38d262814e4f24e41fab1ee9d7113f066c85d992053d8095a9"
+					]
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"published": "2020-01-16T04:31:12Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r5/JincResiz-r5_R47-R48.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize.dll",
+						"665e10af11caa7de816f8d3f270a680d568a333235ee120cc5ea4cff91803daa"
+					]
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"published": "2019-12-18T11:05:38Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r4/JincResize-r4.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize.dll",
+						"e42d134018902df64d42d957d48357c1d54250e558ee0d682b770f1907a8023d"
+					]
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"published": "2019-12-01T11:19:22Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r3/JincResize-r3.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize.dll",
+						"f47df1e0c906c1380121547d9d45f139211b65ea97ade7696da45e8f1a5799ac"
+					]
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"published": "2019-11-25T15:19:23Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r2/JincResize-r2.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize.dll",
+						"c9e4fd807a1bca46712c8e70d4a80b80bd6a7bcac3c3e00f1074ec496f314809"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"published": "2019-11-20T08:08:57Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r1/JincResize-r1.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize.dll",
+						"2320e83fb7d073d1192a5f99d78b4a200eb09fd032f96c3dbeffa161a5ab47cf"
+					]
+				}
+			}
+		}
+	]
+}

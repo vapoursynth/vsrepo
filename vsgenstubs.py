@@ -68,6 +68,7 @@ def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode], ns:
         signature = signature.replace("vapoursynth.", "")
         signature = signature.replace("VideoNode", '"VideoNode"').replace("VideoFrame", '"VideoFrame"')
         signature = signature.replace("NoneType", "None")
+        signature = signature.replace("typing.Union[Func, Callable]", "typing.Callable[..., typing.Any]")
 
         # Replace the keywords with valid values
         for kw in keyword.kwlist:

@@ -187,6 +187,7 @@ class AlphaOutputTuple(typing.NamedTuple):
     clip: 'VideoNode'
     alpha: 'VideoNode'
 
+Func = Callable[..., typing.Any]
 
 class Error(Exception): ...
 

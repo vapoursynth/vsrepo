@@ -268,6 +268,8 @@ class VideoNode:
     fps_num: typing.Optional[int]
     height: typing.Optional[int]
     width: typing.Optional[int]
+    
+    num_frames: int
 
     def get_frame(self, n: int) -> VideoFrame: ...
     def get_frame_async_raw(self, n: int, cb: _Future[vs.VideoFrame], future_wrapper: typing.Optional[typing.Callable[..., None]]=None): ...

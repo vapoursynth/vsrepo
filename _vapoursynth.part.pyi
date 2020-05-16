@@ -282,6 +282,7 @@ class Format:
     bytes_per_sample: int
     subsampling_h: int
     subsampling_w: int
+    num_planes: int
     
     def _as_dict(self) -> typing.Dict[str, typing.Any]: ...
     def replace(self, *,

@@ -225,6 +225,10 @@ class VideoPlane:
 
 class VideoFrame:
     props: VideoProps
+    height: int
+    width: int
+    format: Format
+    readonly: bool
 
     def copy(self) -> 'VideoFrame': ...
 
@@ -237,7 +241,7 @@ class VideoFrame:
     def planes(self): typing.Generator['VideoPlane']
 
 
-class _Future(Generic[T]):
+class _Future(typing.Generic[T]):
     def set_result(self, value: T) -> None: ...
     def set_exception(self, exception: BaseException) -> None: ...
     def result(self) -> T: ...
@@ -254,6 +258,12 @@ class Plugin:
 
 class VideoNode:
 #include <plugins/bound>
+
+    format: typing.Optional[Format]
+    fps_den: typing.Optional[int]
+    fps_num: typing.Optional[int]
+    height: typing.Optional[int]
+    width: typing.Optional[int]
 
     def get_frame(self, n: int) -> VideoFrame: ...
     def get_frame_async_raw(self, n: int, cb: _Future[vs.VideoFrame], future_wrapper: typing.Optional[typing.Callable[..., None]]=None): ...

@@ -207,15 +207,19 @@ class Format:
                 subsampling_h: typing.Optional[int] = None
                 ) -> 'Format': ...
 
-
-class VideoProps(typing.MutableMapping[str, typing.Union[
+        
+_VideoPropsValue = typing.Union[
     SingleAndSequence[int],
     SingleAndSequence[float],
     SingleAndSequence[str],
     SingleAndSequence['VideoNode'],
     SingleAndSequence['VideoFrame'],
     SingleAndSequence[typing.Callable[..., typing.Any]]
-]]): ...
+]
+
+class VideoProps(typing.MutableMapping[str, _VideoPropsValue]):
+    def __getattr__(self, name: str) -> _VideoPropsValue: ...
+    def __setattr__(self, name: str, value: _VideoPropsValue) -> None: ...
 
 
 class VideoPlane:

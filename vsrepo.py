@@ -361,7 +361,7 @@ def make_pyversion(version, index):
 
 
 def rmdir(path):
-    for path, dnames, fnames in os.walk(dist_dir, topdown=False):
+    for path, dnames, fnames in os.walk(path, topdown=False):
         for fname in fnames:
             os.remove(os.path.join(path, fname))
         os.rmdir(path)
@@ -383,9 +383,9 @@ def remove_package_meta(pkg):
     name = pkg["name"].replace(".", "_").replace(" ", "_")
 
     for dist_dir in find_dist_dirs(name):
+        rmdir(dist_dir)
 
-
-def install_package_meta(files, pkg, rel, index, *, clean_name=True):
+def install_package_meta(files, pkg, rel, index):
     if site_package_dir is None:
         return
     
@@ -394,7 +394,7 @@ def install_package_meta(files, pkg, rel, index, *, clean_name=True):
     version = make_pyversion(rel["version"], index)
     dist_dir = os.path.join(site_package_dir, f"{name}-{version}.dist-info")
 
-    remove_package_meta(pkg, clean_name=clean_name)
+    remove_package_meta(pkg)
 
     os.mkdir(dist_dir)
     with open(os.path.join(dist_dir, "INSTALLER"), "w") as f:
@@ -625,6 +625,18 @@ def update_genstubs():
         fp.write(contents)
 
     if site_package:
+        vs_stub_pkg = os.path.join(site_package_dir, "vapoursynth-stubs")
+        if os.path.exists(vs_stub_pkg):
+            rmdir(vs_stub_pkg)
+
+        os.makedirs(vs_stub_pkg)
+
+        with open(stubpath, "rb") as src:
+            with open(os.path.join(vs_stub_pkg, "__init__.pyi"), "wb") as dst:
+                dst.write(src.read())
+        os.remove(stubpath)
+        stubpath = os.path.join(vs_stub_pkg, "__init__.pyi")
+
         for dist_dir in find_dist_dirs("VapourSynth"):
             with open(os.path.join(dist_dir, "RECORD")) as f:
                 contents = f.read()
@@ -634,7 +646,7 @@ def update_genstubs():
             except ValueError:
                 filename = stubpath
 
-            if "vapoursynth.pyi" not in contents:
+            if "__init__.pyi" not in contents or "vapoursynth.pyi" not in contents:
                 with open(os.path.join(dist_dir, "RECORD"), "a") as f:
                     if not contents.endswith("\n"):
                         f.write("\n")
@@ -642,19 +654,25 @@ def update_genstubs():
             break
 
 def rebuild_distinfo():
+    print("Rebuilding dist-info dirs for other python package installers")
     for pkg_id, pkg_ver in installed_packages.items():
         pkg = get_package_from_id(pkg_id)
 
-        for crel in pkg["releases"]:
-            if crel["version"] == pkg_ver:
-                rel = crel
+        for idx, rel in enumerate(pkg["releases"]):
+            if rel["version"] == pkg_ver:
                 break
         else:
             remove_package_meta(pkg)
             continue
 
-        
-        install_package_meta(pkg, crel)
+        dest_path = get_install_path(pkg)
+        bin_name = get_bin_name(pkg)
+        files = [
+            (os.path.join(dest_path, fn), fd[1], os.stat(os.path.join(dest_path, fn)).st_size)
+            for fn, fd in rel[bin_name]["files"].items()
+        ]
+
+        install_package_meta(files, pkg, rel, idx)
             
 
 def print_paths():
@@ -676,6 +694,8 @@ for name in args.package:
 
 if args.operation == 'install':
     detect_installed_packages()
+    rebuild_distinfo()
+
     inst = (0, 0, 0)
     for name in args.package:
         res = install_package(name)
@@ -695,6 +715,8 @@ if args.operation == 'install':
         print('{} {} failed'.format(inst[2], 'package' if inst[0] == 1 else 'packages'))
 elif args.operation in ('upgrade', 'upgrade-all'):
     detect_installed_packages()
+    rebuild_distinfo()
+
     inst = (0, 0, 0)
     if args.operation == 'upgrade-all':
         inst = upgrade_all_packages(args.force)

@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- encoding: utf-8 -*-
+
 import os
 import sys
 import inspect
@@ -14,7 +17,7 @@ def indent(string: str, spaces: int) -> str:
 parser = argparse.ArgumentParser()
 parser.add_argument("--plugin", "-p", action="append", help="Also include manually added plugin")
 parser.add_argument("--avs-plugin", action="append", help="Also include manually added AviSynth plugin.")
-parser.add_argument("--output", "-o", default="vapoursynth.pyi", help="Where to output the file. The special value '-' means output to stdout.")
+parser.add_argument("--output", "-o", default="vapoursynth.pyi", help="Where to output the file. The special value '-' means output to stdout. The spcial value '@' will install it as a stub-package inside site-packages.")
 parser.add_argument("--pyi-template", default=os.path.join(os.path.dirname(__file__), "_vapoursynth.part.pyi"), help="Don't use unless you know what you are doing.")
 
 
@@ -68,6 +71,10 @@ def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode], ns:
         signature = signature.replace("vapoursynth.", "")
         signature = signature.replace("VideoNode", '"VideoNode"').replace("VideoFrame", '"VideoFrame"')
         signature = signature.replace("NoneType", "None")
+        
+        # Make Callable definitions sensible
+        signature = signature.replace("typing.Union[Func, Callable]", "typing.Callable[..., typing.Any]")
+        signature = signature.replace("typing.Union[Func, Callable, None]", "typing.Optional[typing.Callable[..., typing.Any]]")
 
         # Replace the keywords with valid values
         for kw in keyword.kwlist:
@@ -104,6 +111,30 @@ def make_instance_vars(suffix: str, sigs: Dict[str, PluginMeta]) -> str:
     return "\n".join(result)
 
 
+def inject_stub_package() -> str:
+    site_package_dir = os.path.dirname(vapoursynth.__file__)
+    stub_dir = os.path.join(site_package_dir, "vapoursynth-stubs")
+    if not os.path.exists(stub_dir):
+        os.makedirs(stub_dir)
+    output_path = os.path.join(stub_dir, "__init__.pyi")
+    
+    for iname in os.listdir(site_package_dir):
+        if iname.startswith("VapourSynth-") and iname.endswith(".dist-info"):
+            break
+    else:
+        return output_path
+
+    with open(os.path.join(site_package_dir, iname, "RECORD"), "a+", newline="") as f:
+        f.seek(0)
+        contents = f.read()
+        if "__init__.pyi" not in contents:
+            f.seek(0, os.SEEK_END)
+            if not contents.endswith("\n"):
+                f.write("\n")
+            f.write("vapoursynth-stubs/__init__.pyi,,\n")
+    
+    return output_path
+
 def main(argv):
     args = parser.parse_args(args=argv)
     core = prepare_cores(args)
@@ -125,6 +156,9 @@ def main(argv):
 
     if args.output == "-":
         f = sys.stdout
+    elif args.output == "@":
+        stub_path = inject_stub_package()
+        f = open(stub_path, "w")
     else:
         f = open(args.output, "w")
     

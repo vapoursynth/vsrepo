@@ -1,8 +1,85 @@
+# Stop pep8 from complaining (hopefully)
+# NOQA
+
+# Ignore Flake Warnings
+# flake8: noqa
+
+# Ignore coverage
+# (No coverage)
+
+# From https://gist.github.com/pylover/7870c235867cf22817ac5b096defb768
+# noinspection PyPep8
+# noinspection PyPep8Naming
+# noinspection PyTypeChecker
+# noinspection PyAbstractClass
+# noinspection PyArgumentEqualDefault
+# noinspection PyArgumentList
+# noinspection PyAssignmentToLoopOrWithParameter
+# noinspection PyAttributeOutsideInit
+# noinspection PyAugmentAssignment
+# noinspection PyBroadException
+# noinspection PyByteLiteral
+# noinspection PyCallByClass
+# noinspection PyChainedComparsons
+# noinspection PyClassHasNoInit
+# noinspection PyClassicStyleClass
+# noinspection PyComparisonWithNone
+# noinspection PyCompatibility
+# noinspection PyDecorator
+# noinspection PyDefaultArgument
+# noinspection PyDictCreation
+# noinspection PyDictDuplicateKeys
+# noinspection PyDocstringTypes
+# noinspection PyExceptClausesOrder
+# noinspection PyExceptionInheritance
+# noinspection PyFromFutureImport
+# noinspection PyGlobalUndefined
+# noinspection PyIncorrectDocstring
+# noinspection PyInitNewSignature
+# noinspection PyInterpreter
+# noinspection PyListCreation
+# noinspection PyMandatoryEncoding
+# noinspection PyMethodFirstArgAssignment
+# noinspection PyMethodMayBeStatic
+# noinspection PyMethodOverriding
+# noinspection PyMethodParameters
+# noinspection PyMissingConstructor
+# noinspection PyMissingOrEmptyDocstring
+# noinspection PyNestedDecorators
+# noinspection PynonAsciiChar
+# noinspection PyNoneFunctionAssignment
+# noinspection PyOldStyleClasses
+# noinspection PyPackageRequirements
+# noinspection PyPropertyAccess
+# noinspection PyPropertyDefinition
+# noinspection PyProtectedMember
+# noinspection PyRaisingNewStyleClass
+# noinspection PyRedeclaration
+# noinspection PyRedundantParentheses
+# noinspection PySetFunctionToLiteral
+# noinspection PySimplifyBooleanCheck
+# noinspection PySingleQuotedDocstring
+# noinspection PyStatementEffect
+# noinspection PyStringException
+# noinspection PyStringFormat
+# noinspection PySuperArguments
+# noinspection PyTrailingSemicolon
+# noinspection PyTupleAssignmentBalance
+# noinspection PyTupleItemAssignment
+# noinspection PyUnboundLocalVariable
+# noinspection PyUnnecessaryBackslash
+# noinspection PyUnreachableCode
+# noinspection PyUnresolvedReferences
+# noinspection PyUnusedLocal
+# noinspection ReturnValueFromInit
+
 import typing
 import ctypes
+import types
 
 
 T = typing.TypeVar("T")
+_NOT_GIVEN = []
 SingleAndSequence = typing.Union[T, typing.Sequence[T]]
 
 
@@ -158,7 +235,7 @@ class Environment:
     def use(self) -> typing.ContextManager[None]: ...
 
     def __enter__(self) -> Environment: ...
-    def __exit__(self, ty, tv, tb) -> None: ...
+    def __exit__(self, ty: typing.Type[BaseException], tv: BaseException, tb: types.TracebackType) -> None: ...
 
 class EnvironmentPolicyAPI:
     def wrap_environment(self, environment_data: EnvironmentData) -> Environment: ...
@@ -169,8 +246,8 @@ class EnvironmentPolicy:
     def on_policy_registered(self, special_api: EnvironmentPolicyAPI) -> None: ...
     def on_policy_cleared(self) -> None: ...
     def get_current_environment(self) -> typing.Optional[EnvironmentData]: ...
-    def set_environment(self, environment: typing.Optional[EnvironmentData]): ...
-    def is_active(self, environment: EnvironmentData): ...
+    def set_environment(self, environment: typing.Optional[EnvironmentData]) -> None: ...
+    def is_active(self, environment: EnvironmentData) -> bool: ...
 
 
 _using_vsscript: bool
@@ -187,6 +264,7 @@ class AlphaOutputTuple(typing.NamedTuple):
     clip: 'VideoNode'
     alpha: 'VideoNode'
 
+Func = typing.Callable[..., typing.Any]
 
 class Error(Exception): ...
 
@@ -198,6 +276,15 @@ def get_output(index: int = 0) -> typing.Union['VideoNode', AlphaOutputTuple]: .
 
 
 class Format:
+    id: int
+    color_family: ColorFamily
+    sample_type: SampleType
+    bits_per_sample: int
+    bytes_per_sample: int
+    subsampling_h: int
+    subsampling_w: int
+    num_planes: int
+    
     def _as_dict(self) -> typing.Dict[str, typing.Any]: ...
     def replace(self, *,
                 color_family: typing.Optional[ColorFamily] = None,
@@ -207,16 +294,39 @@ class Format:
                 subsampling_h: typing.Optional[int] = None
                 ) -> 'Format': ...
 
-
-class VideoProps(typing.MutableMapping[str, typing.Union[
+        
+_VideoPropsValue = typing.Union[
     SingleAndSequence[int],
     SingleAndSequence[float],
     SingleAndSequence[str],
     SingleAndSequence['VideoNode'],
     SingleAndSequence['VideoFrame'],
     SingleAndSequence[typing.Callable[..., typing.Any]]
-]]): ...
+]
 
+class VideoProps(typing.MutableMapping[str, _VideoPropsValue]):
+    def __getattr__(self, name: str) -> _VideoPropsValue: ...
+    def __setattr__(self, name: str, value: _VideoPropsValue) -> None: ...
+        
+    def __delitem__(self, name: str) -> None: ...
+    def __setitem__(self, name: str, value: _VideoPropsValue) -> None: ...
+    def __getitem__(self, name: str) -> _VideoPropsValue: ...
+    def __iter__(self) -> typing.Iterator[str]: ...
+    def __len__(self) -> int: ...
+    
+    def keys(self) -> typing.Iterator[str]: ...
+    def values(self) -> typing.Iterator[_VideoPropsValue]: ...
+    def items(self) -> typing.Iterator[typing.Tuple[str, _VideoPropsValue]]: ...
+    
+    def get(self, key: str, default: typing.Optional[T]=_NOT_GIVEN) -> typing.Union[T, None, _VideoPropsValue]: ...
+    def pop(self, key: str, default: typing.Union[T, typing.Literal[_NOT_GIVEN]]=_NOT_GIVEN) -> typing.Union[T, _VideoPropsValue]: ...
+    def popitem(self) -> typing.Tuple[str, _VideoPropsValue]: ...
+    def setdefault(self, key: str, default: _VideoPropsValue) -> _VideoPropsValue: ...
+
+    def update(self, *args, **kwargs) -> None: ...
+    def clear(self) -> None: ...
+    
+    def copy(self) -> typing.Dict[str, _VideoPropsValue]: ...
 
 class VideoPlane:
     width: int
@@ -225,6 +335,10 @@ class VideoPlane:
 
 class VideoFrame:
     props: VideoProps
+    height: int
+    width: int
+    format: Format
+    readonly: bool
 
     def copy(self) -> 'VideoFrame': ...
 
@@ -234,10 +348,10 @@ class VideoFrame:
     def get_write_array(self, plane: int) -> memoryview: ...
 
     def get_stride(self, plane: int) -> int: ...
-    def planes(self): typing.Generator['VideoPlane']
+    def planes(self) -> typing.Iterator['VideoPlane']: ...
 
 
-class _Future(Generic[T]):
+class _Future(typing.Generic[T]):
     def set_result(self, value: T) -> None: ...
     def set_exception(self, exception: BaseException) -> None: ...
     def result(self) -> T: ...
@@ -255,12 +369,20 @@ class Plugin:
 class VideoNode:
 #include <plugins/bound>
 
-    def get_frame(self, n: int) -> VideoFrame: ...
-    def get_frame_async_raw(self, n: int, cb: _Future[vs.VideoFrame], future_wrapper: typing.Optional[typing.Callable[..., None]]=None): ...
-    def get_frame_async(self, n: int) -> _Future[vs.VideoFrame]: ...
+    format: typing.Optional[Format]
+    fps_den: typing.Optional[int]
+    fps_num: typing.Optional[int]
+    height: typing.Optional[int]
+    width: typing.Optional[int]
+    
+    num_frames: int
 
-    def set_output(self, index: int, alpha: typing.Optional[VideoNode]=None) -> None: ...
-    def output(self, fileobj: typing.BinaryIO, y4m: bool = False, progress_update: typing.Optional[typing.Callable[int, int], None]=None, prefetch: int = 0) -> None: ...
+    def get_frame(self, n: int) -> VideoFrame: ...
+    def get_frame_async_raw(self, n: int, cb: _Future[VideoFrame], future_wrapper: typing.Optional[typing.Callable[..., None]]=None) -> _Future[VideoFrame]: ...
+    def get_frame_async(self, n: int) -> _Future[VideoFrame]: ...
+
+    def set_output(self, index: int, alpha: typing.Optional['VideoNode']=None) -> None: ...
+    def output(self, fileobj: typing.BinaryIO, y4m: bool = False, progress_update: typing.Optional[typing.Callable[[int], int]]=None, prefetch: int = 0) -> None: ...
 
     def frames(self) -> typing.Generator[VideoFrame]: ...
 

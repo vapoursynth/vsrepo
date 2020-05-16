@@ -2,6 +2,7 @@ import os
 import sys
 import inspect
 import argparse
+import keyword
 import vapoursynth
 from typing import Dict, Sequence, Union, NamedTuple
 
@@ -21,6 +22,7 @@ class PluginMeta(NamedTuple):
     name: str
     description: str
     functions: str
+
 
 
 def prepare_cores(ns) -> vapoursynth.Core:
@@ -60,9 +62,18 @@ def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode], ns:
             signature = str(inspect.signature(getattr(plugin, func)))
         except BaseException:
             signature = "(*args, **kwargs) -> Union[NoneType, VideoNode]"
+        
+        # Clean up the type annotations so that they are valid python syntax.
         signature = signature.replace("Union", "typing.Union").replace("Sequence", "typing.Sequence")
         signature = signature.replace("vapoursynth.", "")
         signature = signature.replace("VideoNode", '"VideoNode"').replace("VideoFrame", '"VideoFrame"')
+        signature = signature.replace("NoneType", "None")
+
+        # Replace the keywords with valid values
+        for kw in keyword.kwlist:
+            signature = signature.replace(f" {kw}:", f" {kw}_:")
+
+        # Add a self.
         signature = signature.replace("(", "(self, ").replace(", )", ")")
         result.append(f"    def {func}{signature}: ...")
     return result
@@ -71,7 +82,11 @@ def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode], ns:
 def make_plugin_classes(suffix: str, sigs: Dict[str, PluginMeta]) -> str:
     result = []
     for pname, pfuncs in sigs.items():
-        result.append(f"class Plugin_{pname}_{suffix}(Plugin):")
+        result.append(f"class _Plugin_{pname}_{suffix}(Plugin):")
+        result.append('    """')
+        result.append('    This class implements the module definitions for the corresponding VapourSynth plugin.')
+        result.append('    This class cannot be imported.')
+        result.append('    """')
         result.append(pfuncs.functions)
         result.append("")
         result.append("")
@@ -82,7 +97,7 @@ def make_instance_vars(suffix: str, sigs: Dict[str, PluginMeta]) -> str:
     result = []
     for pname, pfuncs in sigs.items():
         result.append("@property")
-        result.append(f"def {pname}(self) -> Plugin_{pname}_{suffix}:")
+        result.append(f"def {pname}(self) -> _Plugin_{pname}_{suffix}:")
         result.append('    """')
         result.append(f'    {pfuncs.description}')
         result.append('    """')

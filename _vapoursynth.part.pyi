@@ -16,11 +16,13 @@ class ColorFamily(int):
     YUV: typing.ClassVar['ColorFamily']
     YCOCG: typing.ClassVar['ColorFamily']
     GRAY: typing.ClassVar['ColorFamily']
+    COMPAT: typing.ClassVar['ColorFamily']
 
 RGB: ColorFamily
 YUV: ColorFamily
 YCOCG: ColorFamily
 GRAY: ColorFamily
+COMPAT: ColorFamily
 
 
 class SampleType(int):
@@ -191,7 +193,8 @@ class Error(Exception): ...
 def set_message_handler(handler_func: typing.Callable[[int, str], None]) -> None: ...
 def clear_output(index: int = 0) -> None: ...
 def clear_outputs() -> None: ...
-def get_outputs() -> typing.Mapping[int, 'VideoNode']: ...
+def get_outputs() -> typing.Mapping[int, typing.Union['VideoNode', AlphaOutputTuple]]: ...
+def get_output(index: int = 0) -> typing.Union['VideoNode', AlphaOutputTuple]: ...
 
 
 class Format:

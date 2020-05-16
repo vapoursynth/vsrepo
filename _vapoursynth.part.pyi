@@ -200,6 +200,14 @@ def get_output(index: int = 0) -> typing.Union['VideoNode', AlphaOutputTuple]: .
 
 
 class Format:
+    id: int
+    color_family: ColorFamily
+    sample_type: SampleType
+    bits_per_sample: int
+    bytes_per_sample: int
+    subsampling_h: int
+    subsampling_w: int
+    
     def _as_dict(self) -> typing.Dict[str, typing.Any]: ...
     def replace(self, *,
                 color_family: typing.Optional[ColorFamily] = None,

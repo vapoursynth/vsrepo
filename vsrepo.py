@@ -173,12 +173,8 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is 
 
 package_json_path = os.path.join(file_dirname, 'vspackages.json') if args.portable else os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'vsrepo', 'vspackages.json')
 
-py_script_path = file_dirname if args.portable else get_vs_installation_site()
-if args.script_path is not None:
-    py_script_path = args.script_path
-
 if args.force_dist_info or is_sitepackage_install():
-    if hasattr(sys, "real_prefix") or hasattr(sys, "base_prefix"):
+    if is_venv():
         try:
             import setuptools
             site_package_dir = os.path.dirname(os.path.dirname(setuptools.__file__))
@@ -187,9 +183,14 @@ if args.force_dist_info or is_sitepackage_install():
             site_package_dir = None
     else:
         import site
-        site_package_dir = site.getsitepackages()
+        site_package_dir = site.getusersitepackages()
 else:
     site_package_dir = None
+
+py_script_path = file_dirname if args.portable else (site_package_dir if site_package_dir is not None else get_vs_installation_site())
+if args.script_path is not None:
+    py_script_path = args.script_path
+
 
 plugin_path = plugin64_path if is_64bits else plugin32_path
 if args.binary_path is not None:

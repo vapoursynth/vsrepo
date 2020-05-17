@@ -135,7 +135,10 @@ def inject_stub_package() -> str:
     
     return output_path
 
-def main(argv):
+def main(argv=None):
+    if argv is None:
+        argv = sys.argv[1:]
+    
     args = parser.parse_args(args=argv)
     core = prepare_cores(args)
 

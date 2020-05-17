@@ -1,0 +1,2 @@
+include *.md
+include _vapoursynth.part.pyi

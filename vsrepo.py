@@ -763,3 +763,7 @@ elif args.operation == "genstubs":
 elif args.operation == "gendistinfo":
     detect_installed_packages()
     rebuild_distinfo()
+
+
+def noop():
+    pass

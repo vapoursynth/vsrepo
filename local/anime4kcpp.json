@@ -1,0 +1,55 @@
+{
+	"name": "Anime4KCPP",
+	"type": "VSPlugin",
+	"description": "Implementation of Anime4K upscaler in C++",
+	"github": "https://github.com/TianZerL/Anime4KCPP",
+	"category": "Resizing and Format Conversion",
+	"identifier": "github.tianzerl.anime4kcpp",
+	"namespace": "anime4kcpp",
+	"ignore": [
+		"v1.7.0",
+		"v1.6.0",
+		"v1.5.0",
+		"v1.3.1",
+		"v1.3",
+		"v1.2",
+		"v1.1",
+		"v1.0"
+	],
+	"releases": [
+		{
+			"version": "v1.8.1",
+			"published": "2020-05-17T10:43:08Z",
+			"win64": {
+				"url": "https://github.com/TianZerL/Anime4KCPP/releases/download/v1.8.1/Anime4KCPP_VapourSynth_plugin-1.8.1-Win64-msvc.7z",
+				"files": {
+					"Anime4KCPP_VapourSynth.dll": [
+						"VapourSynth/dll/Anime4KCPP_VapourSynth.dll",
+						"bff027025ec4fe466d8fe5aca368d71869c56892da66cad567d3497aef4794db"
+					],
+					"opencv_world420.dll": [
+						"VapourSynth/dll/opencv_world420.dll",
+						"98c5f06a7897282279e585643e23563417162d84bf7c54905fa288a943834d63"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.8.0",
+			"published": "2020-05-16T09:41:27Z",
+			"win64": {
+				"url": "https://github.com/TianZerL/Anime4KCPP/releases/download/v1.8.0/Anime4KCPP_VapourSynth_plugin-1.8.0-Win64-msvc.7z",
+				"files": {
+					"Anime4KCPP_VapourSynth.dll": [
+						"VapourSynth/dll/Anime4KCPP_VapourSynth.dll",
+						"444d88a61582341021ec769c760c8dd1dc267c593143bd1be35501512addff75"
+					],
+					"opencv_world420.dll": [
+						"VapourSynth/dll/opencv_world420.dll",
+						"98c5f06a7897282279e585643e23563417162d84bf7c54905fa288a943834d63"
+					]
+				}
+			}
+		}
+	]
+}

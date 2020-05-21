@@ -8,6 +8,27 @@
 	"namespace": "placebo",
 	"releases": [
 		{
+			"version": "1.3",
+			"published": "2020-05-19T22:40:15Z",
+			"win64": {
+				"url": "https://github.com/Lypheo/vs-placebo/releases/download/1.3/vs-placebo.7z",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"b2f6d48b72e1c0cfb961ebe6f58e1cc7404255cb7613c653af7e3978406ab5d6"
+					],
+					"libplacebo-63.dll": [
+						"libplacebo-63.dll",
+						"7a6f734afe5abecdb6643d4cd33b3c063234928e8d017827858dc64a08b0a69f"
+					],
+					"shaderc_shared.dll": [
+						"shaderc_shared.dll",
+						"fd10832964a42d693a5dc714adb8f3e7a7810b7c7c40979e40e75c14709cd05a"
+					]
+				}
+			}
+		},
+		{
 			"version": "1.2",
 			"published": "2020-05-12T10:16:35Z",
 			"win64": {

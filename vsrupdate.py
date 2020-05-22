@@ -1,6 +1,6 @@
 ##    MIT License
 ##
-##    Copyright (c) 2018-2019 Fredrik Mellbin
+##    Copyright (c) 2018-2020 Fredrik Mellbin
 ##
 ##    Permission is hereby granted, free of charge, to any person obtaining a copy
 ##    of this software and associated documentation files (the "Software"), to deal
@@ -177,6 +177,8 @@ def update_package(name):
             apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name']))
             is_plugin = (pfile['type'] == 'VSPlugin')
             for rel in apifile:
+                if rel['prerelease']:
+                    continue
                 if rel['tag_name'] in pfile.get('ignore', []):
                     continue
                 if rel['tag_name'] not in rel_order:

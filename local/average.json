@@ -1,0 +1,28 @@
+{
+	"name": "vs-average",
+	"type": "VSPlugin",
+	"description": "Averages multiple clips together. The general idea is to be able to take multiple sources of the same video, and average them together, to negate effects of lossy compression. Can also be effective for temporal blurring.",
+	"github": "https://github.com/End-of-Eternity/vs-average",
+	"category": "Other",
+	"identifier": "eoe-nephren.average",
+	"namespace": "average",
+	"ignore": [
+		"v0.2.0",
+		"v0.1.0"
+	],
+	"releases": [
+		{
+			"version": "v0.3.0",
+			"published": "2020-05-24T21:08:29Z",
+			"win64": {
+				"url": "https://github.com/End-of-Eternity/vs-average/releases/download/v0.3.0/vs_average.zip",
+				"files": {
+					"vs_average.dll": [
+						"vs_average.dll",
+						"d899a3b34b2b4da22541ad130db36c1546e3ecc972f392d581cbf781e39a4536"
+					]
+				}
+			}
+		}
+	]
+}

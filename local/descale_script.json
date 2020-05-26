@@ -5,7 +5,7 @@
 	"website": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale",
 	"doom9": "https://forum.doom9.org/showthread.php?t=174570",
 	"category": "Resizing and Format Conversion",
-	"identifier": "descale",
+	"identifier": "descale_script",
 	"modulename": "descale",
 	"github": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale",
 	"dependencies": [

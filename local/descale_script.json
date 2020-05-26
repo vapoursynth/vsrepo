@@ -11,51 +11,17 @@
 	"dependencies": [
 		"tegaf.asi.xe"
 	],
+    "ignore": [
+		"r3",
+		"r4",
+        "r5"
+	],
 	"releases": [
 		{
 			"version": "r6",
 			"published": "2020-05-14T18:59:11Z",
 			"script": {
 				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r6/vapoursynth-descale-r6-win64.zip",
-				"files": {
-					"descale.py": [
-						"descale.py",
-						"e9dac524a21bdc781250d027914adb83b38450314876eb4ec6b92676a127c3d4"
-					]
-				}
-			}
-		},
-		{
-			"version": "r5",
-			"published": "2020-05-12T00:20:45Z",
-			"script": {
-				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r5/vapoursynth-descale-r5-win64.zip",
-				"files": {
-					"descale.py": [
-						"descale.py",
-						"e9dac524a21bdc781250d027914adb83b38450314876eb4ec6b92676a127c3d4"
-					]
-				}
-			}
-		},
-		{
-			"version": "r4",
-			"published": "2020-05-10T22:47:17Z",
-			"script": {
-				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r4/vapoursynth-descale-r4-win64.zip",
-				"files": {
-					"descale.py": [
-						"descale.py",
-						"e9dac524a21bdc781250d027914adb83b38450314876eb4ec6b92676a127c3d4"
-					]
-				}
-			}
-		},
-		{
-			"version": "r3",
-			"published": "2020-04-16T21:12:46Z",
-			"script": {
-				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale/releases/download/r3/vapoursynth-descale-r3-win64.zip",
 				"files": {
 					"descale.py": [
 						"descale.py",

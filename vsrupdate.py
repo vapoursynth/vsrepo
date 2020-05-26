@@ -344,3 +344,6 @@ elif args.operation == 'upload':
                 print('Failed to delete vspackages.zip')
             ftp.storbinary('STOR vspackages.zip', pl)
     print('Upload done')
+
+def noop():
+    pass

@@ -331,7 +331,7 @@ def decompress_hash_simple(archive, file):
 
 def extract_git_repo(url):
     if url.startswith('https://github.com/'):
-        return url.rsplit('/', 4)[0]
+        return '/'.join(url.split('/', 5)[:-1])
     else:
         return None
 
@@ -427,7 +427,7 @@ elif args.operation == 'create-package':
 		new_rel_entry['script'] = { 'url': url, 'files': {} }
 		for f in files_to_hash:
 			fullpath, hash, arch = decompress_hash_simple(dlfile, f)
-			file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else os.path.basename(fullpath)
+			file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
 			new_rel_entry['script']['files'][file] = [fullpath, hash]
 	
 
@@ -436,13 +436,28 @@ elif args.operation == 'create-package':
 	else:
 		final_package = blank_package(name = args.packagename[0], is_script = True, url = url)
 	final_package['releases'] = [ new_rel_entry ]
+	final_package['releases'][0]['version'] = "create-package"
 	
 	
 	print(json.dumps(final_package, indent=4))
-	with open('local/' + args.packagename[0] + '.json', 'x', encoding='utf-8') as pl:
-		json.dump(fp=pl, obj=final_package, ensure_ascii=False, indent='\t')
+	if not os.path.exists('local/' + args.packagename[0] + '.json'):
+		with open('local/' + args.packagename[0] + '.json', 'x', encoding='utf-8') as pl:
+			json.dump(fp=pl, obj=final_package, ensure_ascii=False, indent='\t')
+		
+		print("package created")
+		
+		if extract_git_repo(url):
+			print("Is hosted on GitHub")
+			if args.git_token:
+				print("Auto updating package")
+				args.overwrite = True
+				update_package(args.packagename[0])
+			else:
+				print("No git token ( -g ) was set, skipping auto update")
+	else:
+		print("package file '{}'.json already exists. Skipping writing file.".format(args.packagename[0])) 
 	
-	print("package created")
+	
 elif args.operation == 'upload':
     compile_packages()
     print('Packages successfully compiled')

@@ -402,7 +402,7 @@ elif args.operation == 'create-package':
 				if pathlib.Path(f).suffix in filetypes:
 					files_to_hash.append(f)
 
-	new_rel_entry = { 'version': '', 'published': '' }
+	new_rel_entry = { 'version': 'create-package', 'published': '' }
 	if not args.packagescript: # is plugin
 		new_rel_entry['win32'] = { 'url': url, 'files': {} }
 		new_rel_entry['win64'] = { 'url': url, 'files': {} }
@@ -436,7 +436,6 @@ elif args.operation == 'create-package':
 	else:
 		final_package = blank_package(name = args.packagename[0], is_script = True, url = url)
 	final_package['releases'] = [ new_rel_entry ]
-	final_package['releases'][0]['version'] = "create-package"
 	
 	
 	print(json.dumps(final_package, indent=4))

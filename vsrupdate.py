@@ -44,7 +44,7 @@ except ImportError:
     pass
 
 parser = argparse.ArgumentParser(description='Package list generator for VSRepo')
-parser.add_argument('operation', choices=['compile', 'update-local', 'upload'])
+parser.add_argument('operation', choices=['compile', 'update-local', 'upload', 'create-package'])
 parser.add_argument('-g', dest='git_token', nargs=1, help='OAuth access token for github')
 parser.add_argument('-p', dest='package', nargs=1, help='Package to update')
 parser.add_argument('-o', action='store_true', dest='overwrite', help='Overwrite existing package file')
@@ -52,6 +52,11 @@ parser.add_argument('-host', dest='host', nargs=1, help='FTP Host')
 parser.add_argument('-user', dest='user', nargs=1, help='FTP User')
 parser.add_argument('-passwd', dest='passwd', nargs=1, help='FTP Password')
 parser.add_argument('-dir', dest='dir', nargs=1, help='FTP dir')
+parser.add_argument('-url', dest='packageurl', nargs=1, help='URL of the archive from which a package is to be created')
+parser.add_argument('-pname', dest='packagename', nargs=1, help='Filename or namespace of your package')
+parser.add_argument('-script', action='store_true', dest='packagescript', help='Type of the package is script. Otherwise a package of type plugin is created')
+parser.add_argument('-types', dest='packagefiletypes', nargs='+', help='Which file types should be included. default is .dll')
+parser.add_argument('-kf', dest='keepfolder', type=int, default=0, nargs='?', help='Keep the folder structure')
 
 args = parser.parse_args()
 
@@ -311,6 +316,42 @@ def compile_packages():
     result = subprocess.run([cmd7zip_path, 'a', '-tzip', 'vspackages.zip', 'vspackages.json'])
     result.check_returncode()
 
+
+def getBinaryArch(bin):
+	if b"PE\x00\x00d\x86" in bin: 	# hex: 50 45 00 00 64 86 | PE..d† 
+		return 64
+	if b"PE\x00\x00L" in bin: 		# hex: 50 45 00 00 4c	 | PE..L 
+		return 32
+	return None
+
+def decompress_hash_simple(archive, file):
+	result = subprocess.run([cmd7zip_path, "e", "-so", archive, file], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	result.check_returncode()
+	return (file, hashlib.sha256(result.stdout).hexdigest(), getBinaryArch(result.stdout))
+
+def extract_git_repo(url):
+    if url.startswith('https://github.com/'):
+        return '/'.join(url.split('/', 5)[:-1])
+    else:
+        return None
+
+def keep_folder_structure(path, level = 0):
+	folder = path.split('/', level)
+	return folder[-1]
+
+def blank_package(name = "", is_script = False, url = ""):
+	return { 	'name': '',
+				'type': 'PyScript' if is_script else 'VSPlugin',
+				'category': '',
+				'description': '',
+				'doom9': '',
+				'website': '',
+				'github': extract_git_repo(url) if extract_git_repo(url) else '',
+				'identifier': '',
+				'modulename' if is_script else 'namespace': name,
+				'releases': ''
+			}
+
 if args.operation == 'compile':
     compile_packages()
     print('Packages successfully compiled')
@@ -331,6 +372,91 @@ elif args.operation == 'update-local':
         print('Summary:\nUpdated: {} \nNo change: {} \nSkipped: {}\n'.format(num_updated, num_nochange, num_skipped))
     else:
         update_package(args.package[0])
+elif args.operation == 'create-package':
+	import pathlib
+
+	if not args.packageurl:
+		print('-url parameter is missing')
+		sys.exit(1)
+	if not args.packagename:
+		print('-pname parameter is missing')
+		sys.exit(1)
+		
+	url = args.packageurl[0]
+	filetypes = ['.dll', '.py']
+	
+	if args.packagefiletypes:
+		filetypes = args.packagefiletypes
+
+	print("fetching remote url")
+	dlfile = fetch_url_to_cache(url, "package", "creator", "")
+	
+	print("creating package")
+	listzip = list_archive_files(dlfile)
+	files_to_hash = []
+	for f in listzip.values():
+		if pathlib.Path(f).suffix: # simple folder filter
+			if "*" in filetypes:
+				files_to_hash.append(f)
+			else:
+				if pathlib.Path(f).suffix in filetypes:
+					files_to_hash.append(f)
+
+	new_rel_entry = { 'version': 'create-package', 'published': '' }
+	if not args.packagescript: # is plugin
+		new_rel_entry['win32'] = { 'url': url, 'files': {} }
+		new_rel_entry['win64'] = { 'url': url, 'files': {} }
+		for f in files_to_hash:
+			fullpath, hash, arch = decompress_hash_simple(dlfile, f)
+			file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
+			if arch == 32:
+				new_rel_entry['win32']['files'][file] = [fullpath, hash]
+			if arch == 64:
+				new_rel_entry['win64']['files'][file] = [fullpath, hash]
+			if arch == None:
+				new_rel_entry['win32']['files'][file] = [fullpath, hash]
+				new_rel_entry['win64']['files'][file] = [fullpath, hash]
+		
+		# remove 32/64 entry if no files are present
+		if not new_rel_entry['win32']['files']:
+			new_rel_entry.pop('win32', None)
+		if not new_rel_entry['win64']['files']:
+			new_rel_entry.pop('win64', None)
+			
+	else: # is script
+		new_rel_entry['script'] = { 'url': url, 'files': {} }
+		for f in files_to_hash:
+			fullpath, hash, arch = decompress_hash_simple(dlfile, f)
+			file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
+			new_rel_entry['script']['files'][file] = [fullpath, hash]
+	
+
+	if not args.packagescript:
+		final_package = blank_package(name = args.packagename[0], url = url)
+	else:
+		final_package = blank_package(name = args.packagename[0], is_script = True, url = url)
+	final_package['releases'] = [ new_rel_entry ]
+	
+	
+	print(json.dumps(final_package, indent=4))
+	if not os.path.exists('local/' + args.packagename[0] + '.json'):
+		with open('local/' + args.packagename[0] + '.json', 'x', encoding='utf-8') as pl:
+			json.dump(fp=pl, obj=final_package, ensure_ascii=False, indent='\t')
+		
+		print("package created")
+		
+		if extract_git_repo(url):
+			print("Is hosted on GitHub")
+			if args.git_token:
+				print("Auto updating package")
+				args.overwrite = True
+				update_package(args.packagename[0])
+			else:
+				print("No git token ( -g ) was set, skipping auto update")
+	else:
+		print("package file '{}'.json already exists. Skipping writing file.".format(args.packagename[0])) 
+	
+	
 elif args.operation == 'upload':
     compile_packages()
     print('Packages successfully compiled')

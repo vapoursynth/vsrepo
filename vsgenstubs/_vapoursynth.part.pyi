@@ -73,6 +73,7 @@
 # noinspection PyUnusedLocal
 # noinspection ReturnValueFromInit
 
+import fractions
 import typing
 import ctypes
 import types
@@ -376,10 +377,13 @@ class VideoNode:
 #include <plugins/bound>
 
     format: typing.Optional[Format]
-    fps_den: typing.Optional[int]
-    fps_num: typing.Optional[int]
-    height: typing.Optional[int]
-    width: typing.Optional[int]
+    
+    fps: fractions.Fractions
+    fps_den: int
+    fps_num: int
+        
+    height: int
+    width: int
     
     num_frames: int
 

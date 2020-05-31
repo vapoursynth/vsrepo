@@ -17,7 +17,7 @@ def indent(string: str, spaces: int) -> str:
 parser = argparse.ArgumentParser()
 parser.add_argument("--plugin", "-p", action="append", help="Also include manually added plugin")
 parser.add_argument("--avs-plugin", action="append", help="Also include manually added AviSynth plugin.")
-parser.add_argument("--output", "-o", default="vapoursynth.pyi", help="Where to output the file. The special value '-' means output to stdout. The spcial value '@' will install it as a stub-package inside site-packages.")
+parser.add_argument("--output", "-o", default="@", help="Where to output the file. The special value '-' means output to stdout. The spcial value '@' will install it as a stub-package inside site-packages.")
 parser.add_argument("--pyi-template", default=os.path.join(os.path.dirname(__file__), "_vapoursynth.part.pyi"), help="Don't use unless you know what you are doing.")
 
 

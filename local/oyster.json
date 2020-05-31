@@ -15,9 +15,21 @@
 		"com.holywu.dfttest",
 		"fmtconv",
 		"com.nodame.mvsf",
-		"mvmulti"
 	],
 	"releases": [
+		{
+			"version": "git:7d52c78",
+			"published": "2020-05-30T19:17:20Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/IFeelBloated/Oyster/7d52c78cb1eb27750d503ed6b36cc443d29140bf/Oyster.py",
+				"files": {
+					"Oyster.py": [
+						"Oyster.py",
+						"56c833c1900a4e62879f6d597ebcfabcf0e12f5fe08b5cba4d1b4020dac543c2"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:d6c1949",
 			"published": "2020-05-13T12:28:25Z",

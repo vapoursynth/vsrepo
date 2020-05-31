@@ -1,14 +1,36 @@
 {
-    "name": "Neo MiniDeen",
-    "type": "VSPlugin",
-    "description": "MiniDeen is a spatial denoising filter. It replaces every pixel with the average of its neighbourhood.",
-    "website": "https://github.com/dubhater/vapoursynth-minideen",
-    "github": "https://github.com/HomeOfAviSynthPlusEvolution/MiniDeen",
-    "doom9": "https://forum.doom9.org/showthread.php?t=176554",
-    "category": "Denoising",
-    "identifier": "in.7086.neo_minideen",
-    "namespace": "neo_minideen",
+	"name": "Neo MiniDeen",
+	"type": "VSPlugin",
+	"description": "MiniDeen is a spatial denoising filter. It replaces every pixel with the average of its neighbourhood.",
+	"website": "https://github.com/dubhater/vapoursynth-minideen",
+	"github": "https://github.com/HomeOfAviSynthPlusEvolution/MiniDeen",
+	"doom9": "https://forum.doom9.org/showthread.php?t=176554",
+	"category": "Denoising",
+	"identifier": "in.7086.neo_minideen",
+	"namespace": "neo_minideen",
 	"releases": [
+		{
+			"version": "r9",
+			"published": "2020-05-29T20:42:09Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/MiniDeen/releases/download/r9/neo-minideen_r9.zip",
+				"files": {
+					"neo-minideen.dll": [
+						"clang-x86/neo-minideen.dll",
+						"dbaac41a62a0b88116fe281c3d1929ed1ee693094d36152aaf978b7c6864d947"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/MiniDeen/releases/download/r9/neo-minideen_r9.zip",
+				"files": {
+					"neo-minideen.dll": [
+						"clang-x64/neo-minideen.dll",
+						"2a34bc021926b503f0b0bf4d4a335faff78aa9be3c25d66b69a3fedd35c3ebac"
+					]
+				}
+			}
+		},
 		{
 			"version": "r8",
 			"published": "2020-04-21T08:15:47Z",

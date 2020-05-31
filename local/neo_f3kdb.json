@@ -9,6 +9,28 @@
 	"namespace": "neo_f3kdb",
 	"releases": [
 		{
+			"version": "r6",
+			"published": "2020-05-29T22:20:17Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r6/neo-f3kdb_r6.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x86/neo-f3kdb.dll",
+						"79bf0cbddede25e4f7ac26e730ecc05c8c1b6737d435abcfbcfb50ce2c199d0e"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_f3kdb/releases/download/r6/neo-f3kdb_r6.zip",
+				"files": {
+					"neo-f3kdb.dll": [
+						"clang-x64/neo-f3kdb.dll",
+						"5a456cc814dbb25b591e5d104a92f02def417769d3506df896731eb1654bcd94"
+					]
+				}
+			}
+		},
+		{
 			"version": "r5",
 			"published": "2020-04-13T05:46:10Z",
 			"win32": {

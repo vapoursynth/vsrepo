@@ -7,6 +7,7 @@ modules = []
 packages = [
     "vsgenstubs"
 ]
+requirements = []
 entrypoints = ["vsgenstubs=vsgenstubs:main"]
 
 if platform.platform().startswith("Windows"):
@@ -15,6 +16,7 @@ if platform.platform().startswith("Windows"):
         "vsrepo=vsrepo:noop",
         "vsrupdate=vsrupdate:noop"
     ])
+    requirements.append("tqdm")
 
 here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
@@ -30,7 +32,7 @@ setup(
     author = "Myrsloik",
     packages=["vsgenstubs"],
     py_modules = modules,
-    install_requires=["tqdm"],
+    install_requires=requirements,
     include_package_data=True,
     package_data={
         "vsgenstubs": ["*.pyi"]

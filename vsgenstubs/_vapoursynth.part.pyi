@@ -378,7 +378,7 @@ class VideoNode:
 
     format: typing.Optional[Format]
     
-    fps: fractions.Fractions
+    fps: fractions.Fraction
     fps_den: int
     fps_num: int
         

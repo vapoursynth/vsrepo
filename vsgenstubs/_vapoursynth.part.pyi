@@ -76,12 +76,18 @@
 import typing
 import ctypes
 import types
+import enum
 
 
 T = typing.TypeVar("T")
-_NOT_GIVEN = []
 SingleAndSequence = typing.Union[T, typing.Sequence[T]]
 
+# PEP 484 suggests for concise typing of Singleton values
+# to use enums in typestubs.
+# https://www.python.org/dev/peps/pep-0484/#support-for-singleton-types-in-unions
+class _Internal_NOT_GIVEN_Enum(enum.Enum):
+    NOT_GIVEN=0
+_NOT_GIVEN: _Internal_NOT_GIVEN_Enum = _Internal_NOT_GIVEN_Enum.NOT_GIVEN
 
 ###
 # ENUMS AND CONSTANTS
@@ -318,8 +324,8 @@ class VideoProps(typing.MutableMapping[str, _VideoPropsValue]):
     def values(self) -> typing.Iterator[_VideoPropsValue]: ...
     def items(self) -> typing.Iterator[typing.Tuple[str, _VideoPropsValue]]: ...
     
-    def get(self, key: str, default: typing.Optional[T]=_NOT_GIVEN) -> typing.Union[T, None, _VideoPropsValue]: ...
-    def pop(self, key: str, default: typing.Union[T, typing.Literal[_NOT_GIVEN]]=_NOT_GIVEN) -> typing.Union[T, _VideoPropsValue]: ...
+    def get(self, key: str, default: typing.Optional[typing.Union[T, _Internal_NOT_GIVEN_Enum]]=_NOT_GIVEN) -> typing.Union[T, None, _VideoPropsValue]: ...
+    def pop(self, key: str, default: typing.Union[T, _Internal_NOT_GIVEN_Enum]]=_NOT_GIVEN) -> typing.Union[T, _VideoPropsValue]: ...
     def popitem(self) -> typing.Tuple[str, _VideoPropsValue]: ...
     def setdefault(self, key: str, default: _VideoPropsValue) -> _VideoPropsValue: ...
 

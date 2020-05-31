@@ -9,7 +9,7 @@
 	"github": "https://github.com/AlucardSama04/faggotDb",
 	"dependencies": [
 		"fvsfunc",
-		"vsutil",
+		"vsutil"
 	],
 	"releases": [
 		{

@@ -385,6 +385,13 @@ class VideoNode:
     def __len__(self) -> int: ...
 
 
+class PluginMeta(typing.TypedDict):
+    namespace: str
+    identifier: str
+    name: str
+    functions: typing.Dict[str, str]
+        
+
 class Core:
 #include <plugins/unbound>
 
@@ -393,7 +400,7 @@ class Core:
     add_cache: bool
 
     def set_max_cache_size(self, mb: int) -> int: ...
-    def get_plugins(self) -> dict: ...
+    def get_plugins(self) -> typing.Dict[str, PluginMeta]: ...
     def list_functions(self) -> str: ...
 
     def register_format(self, color_family: ColorFamily, sample_type: SampleType, bits_per_sample: int, subsampling_w: int, subsampling_h: int) -> Format: ...

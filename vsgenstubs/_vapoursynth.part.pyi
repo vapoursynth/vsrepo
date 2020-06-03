@@ -73,21 +73,17 @@
 # noinspection PyUnusedLocal
 # noinspection ReturnValueFromInit
 
+import fractions
 import typing
 import ctypes
 import types
 import enum
 
+from typing import overload
+
 
 T = typing.TypeVar("T")
 SingleAndSequence = typing.Union[T, typing.Sequence[T]]
-
-# PEP 484 suggests for concise typing of Singleton values
-# to use enums in typestubs.
-# https://www.python.org/dev/peps/pep-0484/#support-for-singleton-types-in-unions
-class _Internal_NOT_GIVEN_Enum(enum.Enum):
-    NOT_GIVEN=0
-_NOT_GIVEN: _Internal_NOT_GIVEN_Enum = _Internal_NOT_GIVEN_Enum.NOT_GIVEN
 
 ###
 # ENUMS AND CONSTANTS
@@ -295,7 +291,7 @@ class Format:
     def replace(self, *,
                 color_family: typing.Optional[ColorFamily] = None,
                 sample_type: typing.Optional[SampleType] = None,
-                bits_per_pixel: typing.Optional[int] = None,
+                bits_per_sample: typing.Optional[int] = None,
                 subsampling_w: typing.Optional[int] = None,
                 subsampling_h: typing.Optional[int] = None
                 ) -> 'Format': ...
@@ -313,26 +309,14 @@ _VideoPropsValue = typing.Union[
 class VideoProps(typing.MutableMapping[str, _VideoPropsValue]):
     def __getattr__(self, name: str) -> _VideoPropsValue: ...
     def __setattr__(self, name: str, value: _VideoPropsValue) -> None: ...
-        
+    
+    # mypy lo vult.
+    # In all seriousness, why do I need to manually define them in a typestub?
     def __delitem__(self, name: str) -> None: ...
     def __setitem__(self, name: str, value: _VideoPropsValue) -> None: ...
     def __getitem__(self, name: str) -> _VideoPropsValue: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __len__(self) -> int: ...
-    
-    def keys(self) -> typing.Iterator[str]: ...
-    def values(self) -> typing.Iterator[_VideoPropsValue]: ...
-    def items(self) -> typing.Iterator[typing.Tuple[str, _VideoPropsValue]]: ...
-    
-    def get(self, key: str, default: typing.Optional[typing.Union[T, _Internal_NOT_GIVEN_Enum]]=_NOT_GIVEN) -> typing.Union[T, None, _VideoPropsValue]: ...
-    def pop(self, key: str, default: typing.Union[T, _Internal_NOT_GIVEN_Enum]]=_NOT_GIVEN) -> typing.Union[T, _VideoPropsValue]: ...
-    def popitem(self) -> typing.Tuple[str, _VideoPropsValue]: ...
-    def setdefault(self, key: str, default: _VideoPropsValue) -> _VideoPropsValue: ...
-
-    def update(self, *args, **kwargs) -> None: ...
-    def clear(self) -> None: ...
-    
-    def copy(self) -> typing.Dict[str, _VideoPropsValue]: ...
 
 class VideoPlane:
     width: int
@@ -376,10 +360,13 @@ class VideoNode:
 #include <plugins/bound>
 
     format: typing.Optional[Format]
-    fps_den: typing.Optional[int]
-    fps_num: typing.Optional[int]
-    height: typing.Optional[int]
-    width: typing.Optional[int]
+    
+    fps: fractions.Fraction
+    fps_den: int
+    fps_num: int
+        
+    height: int
+    width: int
     
     num_frames: int
 
@@ -387,16 +374,23 @@ class VideoNode:
     def get_frame_async_raw(self, n: int, cb: _Future[VideoFrame], future_wrapper: typing.Optional[typing.Callable[..., None]]=None) -> _Future[VideoFrame]: ...
     def get_frame_async(self, n: int) -> _Future[VideoFrame]: ...
 
-    def set_output(self, index: int, alpha: typing.Optional['VideoNode']=None) -> None: ...
+    def set_output(self, index: int=0, alpha: typing.Optional['VideoNode']=None) -> None: ...
     def output(self, fileobj: typing.BinaryIO, y4m: bool = False, progress_update: typing.Optional[typing.Callable[[int], int]]=None, prefetch: int = 0) -> None: ...
 
-    def frames(self) -> typing.Generator[VideoFrame]: ...
+    def frames(self) -> typing.Iterator[VideoFrame]: ...
 
     def __add__(self, other: 'VideoNode') -> 'VideoNode': ...
     def __mul__(self, other: int) -> 'VideoNode': ...
     def __getitem__(self, other: typing.Union[int, slice]) -> 'VideoNode': ...
     def __len__(self) -> int: ...
 
+
+class _PluginMeta(typing.TypedDict):
+    namespace: str
+    identifier: str
+    name: str
+    functions: typing.Dict[str, str]
+        
 
 class Core:
 #include <plugins/unbound>
@@ -406,7 +400,7 @@ class Core:
     add_cache: bool
 
     def set_max_cache_size(self, mb: int) -> int: ...
-    def get_plugins(self) -> dict: ...
+    def get_plugins(self) -> typing.Dict[str, _PluginMeta]: ...
     def list_functions(self) -> str: ...
 
     def register_format(self, color_family: ColorFamily, sample_type: SampleType, bits_per_sample: int, subsampling_w: int, subsampling_h: int) -> Format: ...

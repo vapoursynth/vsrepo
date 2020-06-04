@@ -91,16 +91,16 @@ class ColorFamily(int):
     name: str
     value: int
 
+    GRAY: typing.ClassVar['ColorFamily']
     RGB: typing.ClassVar['ColorFamily']
     YUV: typing.ClassVar['ColorFamily']
     YCOCG: typing.ClassVar['ColorFamily']
-    GRAY: typing.ClassVar['ColorFamily']
     COMPAT: typing.ClassVar['ColorFamily']
 
+GRAY: ColorFamily
 RGB: ColorFamily
 YUV: ColorFamily
 YCOCG: ColorFamily
-GRAY: ColorFamily
 COMPAT: ColorFamily
 
 

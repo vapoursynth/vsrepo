@@ -167,6 +167,7 @@ class PresetFormat(int):
     RGBS: typing.ClassVar['PresetFormat']
 
     COMPATBGR32: typing.ClassVar['PresetFormat']
+    COMPATYUY2: typing.ClassVar['PresetFormat']
 
 
 NONE: PresetFormat
@@ -216,6 +217,7 @@ RGBH: PresetFormat
 RGBS: PresetFormat
 
 COMPATBGR32: PresetFormat
+COMPATYUY2: PresetFormat
 
 
 ###

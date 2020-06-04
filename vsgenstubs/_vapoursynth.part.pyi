@@ -283,8 +283,8 @@ class Format:
     sample_type: SampleType
     bits_per_sample: int
     bytes_per_sample: int
-    subsampling_h: int
     subsampling_w: int
+    subsampling_h: int
     num_planes: int
     
     def _as_dict(self) -> typing.Dict[str, typing.Any]: ...

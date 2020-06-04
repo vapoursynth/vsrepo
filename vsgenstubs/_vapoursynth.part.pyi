@@ -120,102 +120,102 @@ class PresetFormat(int):
     name: str
     value: int
 
-    NONE = typing.ClassVar['PresetFormat']
+    NONE: typing.ClassVar['PresetFormat']
 
-    GRAY8 = typing.ClassVar['PresetFormat']
-    GRAY16 = typing.ClassVar['PresetFormat']
+    GRAY8: typing.ClassVar['PresetFormat']
+    GRAY16: typing.ClassVar['PresetFormat']
 
-    GRAYH = typing.ClassVar['PresetFormat']
-    GRAYS = typing.ClassVar['PresetFormat']
+    GRAYH: typing.ClassVar['PresetFormat']
+    GRAYS: typing.ClassVar['PresetFormat']
 
-    YUV420P8 = typing.ClassVar['PresetFormat']
-    YUV422P8 = typing.ClassVar['PresetFormat']
-    YUV444P8 = typing.ClassVar['PresetFormat']
-    YUV410P8 = typing.ClassVar['PresetFormat']
-    YUV411P8 = typing.ClassVar['PresetFormat']
-    YUV440P8 = typing.ClassVar['PresetFormat']
+    YUV420P8: typing.ClassVar['PresetFormat']
+    YUV422P8: typing.ClassVar['PresetFormat']
+    YUV444P8: typing.ClassVar['PresetFormat']
+    YUV410P8: typing.ClassVar['PresetFormat']
+    YUV411P8: typing.ClassVar['PresetFormat']
+    YUV440P8: typing.ClassVar['PresetFormat']
 
-    YUV420P9 = typing.ClassVar['PresetFormat']
-    YUV422P9 = typing.ClassVar['PresetFormat']
-    YUV444P9 = typing.ClassVar['PresetFormat']
+    YUV420P9: typing.ClassVar['PresetFormat']
+    YUV422P9: typing.ClassVar['PresetFormat']
+    YUV444P9: typing.ClassVar['PresetFormat']
 
-    YUV420P10 = typing.ClassVar['PresetFormat']
-    YUV422P10 = typing.ClassVar['PresetFormat']
-    YUV444P10 = typing.ClassVar['PresetFormat']
-    
-    YUV420P12 = typing.ClassVar['PresetFormat']
-    YUV422P12 = typing.ClassVar['PresetFormat']
-    YUV444P12 = typing.ClassVar['PresetFormat']
-    
-    YUV420P14 = typing.ClassVar['PresetFormat']
-    YUV422P14 = typing.ClassVar['PresetFormat']
-    YUV444P14 = typing.ClassVar['PresetFormat']
-    
-    YUV420P16 = typing.ClassVar['PresetFormat']
-    YUV422P16 = typing.ClassVar['PresetFormat']
-    YUV444P16 = typing.ClassVar['PresetFormat']
+    YUV420P10: typing.ClassVar['PresetFormat']
+    YUV422P10: typing.ClassVar['PresetFormat']
+    YUV444P10: typing.ClassVar['PresetFormat']
 
-    YUV444PH = typing.ClassVar['PresetFormat']
-    YUV444PS = typing.ClassVar['PresetFormat']
+    YUV420P12: typing.ClassVar['PresetFormat']
+    YUV422P12: typing.ClassVar['PresetFormat']
+    YUV444P12: typing.ClassVar['PresetFormat']
 
-    RGB24 = typing.ClassVar['PresetFormat']
-    RGB27 = typing.ClassVar['PresetFormat']
-    RGB30 = typing.ClassVar['PresetFormat']
-    RGB48 = typing.ClassVar['PresetFormat']
+    YUV420P14: typing.ClassVar['PresetFormat']
+    YUV422P14: typing.ClassVar['PresetFormat']
+    YUV444P14: typing.ClassVar['PresetFormat']
 
-    RGBH = typing.ClassVar['PresetFormat']
-    RGBS = typing.ClassVar['PresetFormat']
+    YUV420P16: typing.ClassVar['PresetFormat']
+    YUV422P16: typing.ClassVar['PresetFormat']
+    YUV444P16: typing.ClassVar['PresetFormat']
 
-    COMPATBGR32 = typing.ClassVar['PresetFormat']
+    YUV444PH: typing.ClassVar['PresetFormat']
+    YUV444PS: typing.ClassVar['PresetFormat']
+
+    RGB24: typing.ClassVar['PresetFormat']
+    RGB27: typing.ClassVar['PresetFormat']
+    RGB30: typing.ClassVar['PresetFormat']
+    RGB48: typing.ClassVar['PresetFormat']
+
+    RGBH: typing.ClassVar['PresetFormat']
+    RGBS: typing.ClassVar['PresetFormat']
+
+    COMPATBGR32: typing.ClassVar['PresetFormat']
 
 
-NONE = PresetFormat
+NONE: PresetFormat
 
-GRAY8 = PresetFormat
-GRAY16 = PresetFormat
+GRAY8: PresetFormat
+GRAY16: PresetFormat
 
-GRAYH = PresetFormat
-GRAYS = PresetFormat
+GRAYH: PresetFormat
+GRAYS: PresetFormat
 
-YUV420P8 = PresetFormat
-YUV422P8 = PresetFormat
-YUV444P8 = PresetFormat
-YUV410P8 = PresetFormat
-YUV411P8 = PresetFormat
-YUV440P8 = PresetFormat
+YUV420P8: PresetFormat
+YUV422P8: PresetFormat
+YUV444P8: PresetFormat
+YUV410P8: PresetFormat
+YUV411P8: PresetFormat
+YUV440P8: PresetFormat
 
-YUV420P9 = PresetFormat
-YUV422P9 = PresetFormat
-YUV444P9 = PresetFormat
+YUV420P9: PresetFormat
+YUV422P9: PresetFormat
+YUV444P9: PresetFormat
 
-YUV420P10 = PresetFormat
-YUV422P10 = PresetFormat
-YUV444P10 = PresetFormat
+YUV420P10: PresetFormat
+YUV422P10: PresetFormat
+YUV444P10: PresetFormat
 
-YUV420P12 = PresetFormat
-YUV422P12 = PresetFormat
-YUV444P12 = PresetFormat
+YUV420P12: PresetFormat
+YUV422P12: PresetFormat
+YUV444P12: PresetFormat
 
-YUV420P14 = PresetFormat
-YUV422P14 = PresetFormat
-YUV444P14 = PresetFormat
+YUV420P14: PresetFormat
+YUV422P14: PresetFormat
+YUV444P14: PresetFormat
 
-YUV420P16 = PresetFormat
-YUV422P16 = PresetFormat
-YUV444P16 = PresetFormat
+YUV420P16: PresetFormat
+YUV422P16: PresetFormat
+YUV444P16: PresetFormat
 
-YUV444PH = PresetFormat
-YUV444PS = PresetFormat
+YUV444PH: PresetFormat
+YUV444PS: PresetFormat
 
-RGB24 = PresetFormat
-RGB27 = PresetFormat
-RGB30 = PresetFormat
-RGB48 = PresetFormat
+RGB24: PresetFormat
+RGB27: PresetFormat
+RGB30: PresetFormat
+RGB48: PresetFormat
 
-RGBH = PresetFormat
-RGBS = PresetFormat
+RGBH: PresetFormat
+RGBS: PresetFormat
 
-COMPATBGR32 = PresetFormat
+COMPATBGR32: PresetFormat
 
 
 ###

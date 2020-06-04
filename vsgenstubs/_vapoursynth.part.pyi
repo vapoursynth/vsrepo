@@ -279,6 +279,7 @@ def get_output(index: int = 0) -> typing.Union['VideoNode', AlphaOutputTuple]: .
 
 class Format:
     id: int
+    name: str
     color_family: ColorFamily
     sample_type: SampleType
     bits_per_sample: int
@@ -349,6 +350,8 @@ class _Future(typing.Generic[T]):
 
 
 class Plugin:
+    namespace: str
+
     def get_functions(self) -> typing.Dict[str, str]: ...
     def list_functions(self) -> str: ...
 
@@ -369,6 +372,7 @@ class VideoNode:
     width: int
     
     num_frames: int
+    flags: int
 
     def get_frame(self, n: int) -> VideoFrame: ...
     def get_frame_async_raw(self, n: int, cb: _Future[VideoFrame], future_wrapper: typing.Optional[typing.Callable[..., None]]=None) -> _Future[VideoFrame]: ...

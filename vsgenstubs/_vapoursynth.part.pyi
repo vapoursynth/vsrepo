@@ -285,7 +285,7 @@ class Format:
     subsampling_w: int
     subsampling_h: int
     num_planes: int
-    
+
     def _as_dict(self) -> typing.Dict[str, typing.Any]: ...
     def replace(self, *,
                 color_family: typing.Optional[ColorFamily] = None,
@@ -295,7 +295,7 @@ class Format:
                 subsampling_h: typing.Optional[int] = None
                 ) -> 'Format': ...
 
-        
+
 _VideoPropsValue = typing.Union[
     SingleAndSequence[int],
     SingleAndSequence[float],
@@ -308,7 +308,7 @@ _VideoPropsValue = typing.Union[
 class VideoProps(typing.MutableMapping[str, _VideoPropsValue]):
     def __getattr__(self, name: str) -> _VideoPropsValue: ...
     def __setattr__(self, name: str, value: _VideoPropsValue) -> None: ...
-    
+
     # mypy lo vult.
     # In all seriousness, why do I need to manually define them in a typestub?
     def __delitem__(self, name: str) -> None: ...
@@ -361,14 +361,14 @@ class VideoNode:
 #include <plugins/bound>
 
     format: typing.Optional[Format]
-    
+
     fps: fractions.Fraction
     fps_den: int
     fps_num: int
-        
+
     height: int
     width: int
-    
+
     num_frames: int
     flags: int
 
@@ -392,7 +392,7 @@ class _PluginMeta(typing.TypedDict):
     identifier: str
     name: str
     functions: typing.Dict[str, str]
-        
+
 
 class Core:
 #include <plugins/unbound>
@@ -417,4 +417,6 @@ def get_core(threads: typing.Optional[int]=None, add_cache: typing.Optional[bool
 
 class _CoreProxy(Core):
     core: Core
+
+
 core: _CoreProxy

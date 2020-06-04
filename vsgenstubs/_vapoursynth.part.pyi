@@ -73,14 +73,10 @@
 # noinspection PyUnusedLocal
 # noinspection ReturnValueFromInit
 
-import fractions
-import typing
 import ctypes
+import fractions
 import types
-import enum
-
-from typing import overload
-
+import typing
 
 T = typing.TypeVar("T")
 SingleAndSequence = typing.Union[T, typing.Sequence[T]]

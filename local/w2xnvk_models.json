@@ -8,7 +8,8 @@
 	"github": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan",
 	"ignore": [
 		"r1",
-		"r2"
+		"r2",
+		"r3"
 	],
 	"releases": [
 		{

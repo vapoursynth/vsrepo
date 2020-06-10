@@ -9,6 +9,19 @@
 	"github": "https://github.com/Irrational-Encoding-Wizardry/vsutil",
 	"releases": [
 		{
+			"version": "0.3.0",
+			"published": "2020-06-08T10:57:32Z",
+			"script": {
+				"url": "https://api.github.com/repos/Irrational-Encoding-Wizardry/vsutil/zipball/0.3.0",
+				"files": {
+					"vsutil.py": [
+						"Irrational-Encoding-Wizardry-vsutil-ee49d9d/vsutil.py",
+						"6651a02a4e6030433b9c01234f799cd5e6f52fb5eecbf72ffbde3bee0a0dea78"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.1.0",
 			"published": "2019-05-04T17:57:00Z",
 			"script": {

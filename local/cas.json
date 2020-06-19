@@ -1,0 +1,25 @@
+{
+	"name": "CAS - Contrast Adaptive Sharpening",
+	"type": "VSPlugin",
+	"category": "Sharpening",
+	"description": "Contrast Adaptive Sharpening (CAS) is a low overhead adaptive sharpening algorithm and was created to provide natural sharpness without artifacts.",
+	"doom9": "https://forum.doom9.org/showthread.php?t=181561",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CAS",
+	"identifier": "com.holywu.cas",
+	"namespace": "cas",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2020-06-19T13:44:16Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CAS/releases/download/r1/CAS-r1.7z",
+				"files": {
+					"CAS.dll": [
+						"plugins64/CAS.dll",
+						"45313eb0cefe3c983e396becb5fd4c266850462290c6900adf486406be472c6b"
+					]
+				}
+			}
+		}
+	]
+}

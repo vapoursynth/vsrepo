@@ -10,6 +10,19 @@
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain",
 	"releases": [
 		{
+			"version": "r8",
+			"published": "2020-06-19T13:43:20Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r8/AddGrain-r8.7z",
+				"files": {
+					"AddGrain.dll": [
+						"plugins64/AddGrain.dll",
+						"534daeb48278c6b509402c1283b34eb3b1ba01b0be98ff4ee6327ce04c5ffc71"
+					]
+				}
+			}
+		},
+		{
 			"version": "r7",
 			"published": "2018-11-29T07:10:54Z",
 			"win64": {

@@ -9,6 +9,19 @@
 	"namespace": "bwdif",
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2020-06-19T13:43:54Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bwdif/releases/download/r2/Bwdif-r2.7z",
+				"files": {
+					"Bwdif.dll": [
+						"plugins64/Bwdif.dll",
+						"3234a4f388e8ed013dc3098525af8a670075823cc6e8f4f0a6a3d05e382685f9"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2020-02-24T09:01:35Z",
 			"win64": {

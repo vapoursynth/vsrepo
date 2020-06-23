@@ -1,0 +1,68 @@
+{
+	"name": "SRMD models",
+	"type": "VSPlugin",
+	"category": "Resizing and Format Conversion",
+	"description": "SRMD super resolution for VapourSynth, based on srmd-ncnn-vulkan.",
+	"github": "https://github.com/Kiyamou/VapourSynth-SRMD-ncnn-Vulkan",
+	"identifier": "com.vapoursynth.srmdnv.models",
+	"namespace": "srmdnv_models",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2020-06-23T17:07:07Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-SRMD-ncnn-Vulkan/releases/download/r1/models.7z",
+				"files": {
+					"models-srmd/srmd_x2.bin": [
+						"models-srmd/srmd_x2.bin",
+						"4eea55fc0acd3fad68b46d2b3cdad6cd6b4f8b18f390397eb6074e024316b13a"
+					],
+					"models-srmd/srmd_x3.bin": [
+						"models-srmd/srmd_x3.bin",
+						"27dd6663a4f0757374c6769b1acdf04b6141547bc0c6b48b34334f5c6f561116"
+					],
+					"models-srmd/srmd_x4.bin": [
+						"models-srmd/srmd_x4.bin",
+						"c8a59cffd2ec9e7b7e0c29cb149808f766812db75a4bb0feee77f7081cb0af9a"
+					],
+					"models-srmd/srmdnf_x2.bin": [
+						"models-srmd/srmdnf_x2.bin",
+						"7ad5db8ca7e6ae04738ccf8f09d157ffb8e3e8fc1c5ed8be746d2a69d305ba27"
+					],
+					"models-srmd/srmdnf_x3.bin": [
+						"models-srmd/srmdnf_x3.bin",
+						"07520a171844c4df3e69a556e812a933d5cf976c4ebf44bddf518087ba50fd28"
+					],
+					"models-srmd/srmdnf_x4.bin": [
+						"models-srmd/srmdnf_x4.bin",
+						"da889e651e777ef51d18f1acb88e24046b387a2cc7398ac76fd2a68107fa81b3"
+					],
+					"models-srmd/srmd_x2.param": [
+						"models-srmd/srmd_x2.param",
+						"cac8b835da2fb78f4716f39902959309e2b166a0ac29b35c9a4fee124b2c3de5"
+					],
+					"models-srmd/srmd_x3.param": [
+						"models-srmd/srmd_x3.param",
+						"d6a5618898e2e01b6c8c2c443617e0a30729568ec30af1a1736eea92043e0c33"
+					],
+					"models-srmd/srmd_x4.param": [
+						"models-srmd/srmd_x4.param",
+						"5829c0c94b8e03ce75340686613214871c4bc2da6cb171b24a2c14444410c1e9"
+					],
+					"models-srmd/srmdnf_x2.param": [
+						"models-srmd/srmdnf_x2.param",
+						"d4bae18adda0e2a658e61c64b2492813bad94a7b9e40d01c5b03385088c3abf9"
+					],
+					"models-srmd/srmdnf_x3.param": [
+						"models-srmd/srmdnf_x3.param",
+						"e4ecd6182c5234e55fe1c1d1a75dbdb13c8fb1dae9f4f00272e8c2a3e6e8ecab"
+					],
+					"models-srmd/srmdnf_x4.param": [
+						"models-srmd/srmdnf_x4.param",
+						"57340ee865077c24024cdcc9de564a27d9c67ff122dc763ce99fb66b808272b3"
+					]
+				}
+			}
+		}
+	]
+}

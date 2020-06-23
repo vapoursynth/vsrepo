@@ -1,0 +1,27 @@
+{
+	"name": "SRMD",
+	"type": "VSPlugin",
+	"category": "Resizing and Format Conversion",
+	"description": "SRMD super resolution for VapourSynth, based on srmd-ncnn-vulkan.",
+	"github": "https://github.com/Kiyamou/VapourSynth-SRMD-ncnn-Vulkan",
+	"identifier": "com.vapoursynth.srmdnv",
+	"namespace": "srmdnv",
+	"dependencies": [
+		"com.vapoursynth.srmdnv.models"
+	],
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2020-06-23T17:07:07Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-SRMD-ncnn-Vulkan/releases/download/r1/srmdnv.7z",
+				"files": {
+					"srmdnv.dll": [
+						"srmdnv.dll",
+						"d418fdea4c6e7a738dc1ce817b646931879b69e32f129b6bdf3ed84c068dc538"
+					]
+				}
+			}
+		}
+	]
+}

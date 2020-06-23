@@ -9,6 +9,19 @@
 	"namespace": "jinc",
 	"releases": [
 		{
+			"version": "r7.2",
+			"published": "2020-06-20T11:30:56Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-JincResize/releases/download/r7.2/JincResize-r7.2.7z",
+				"files": {
+					"JincResize.dll": [
+						"JincResize-r7.2/c/JincResize.dll",
+						"c33762b6d55b1d3ca8056ed4e2ed2ca6c77ff4824391230df671e2c781c02a8a"
+					]
+				}
+			}
+		},
+		{
 			"version": "r7.1",
 			"published": "2020-05-08T11:12:23Z",
 			"win64": {

@@ -10,6 +10,28 @@
 	"github": "https://github.com/dubhater/vapoursynth-tcomb",
 	"releases": [
 		{
+			"version": "v4",
+			"published": "2020-06-23T16:52:33Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v4/vapoursynth-tcomb-v4-win32.7z",
+				"files": {
+					"libtcomb.dll": [
+						"libtcomb.dll",
+						"9e3beb0f6d965326015f77606cba91a4034277a1ccd0ef4c52221b4a53e721f0"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-tcomb/releases/download/v4/vapoursynth-tcomb-v4-win64.7z",
+				"files": {
+					"libtcomb.dll": [
+						"libtcomb.dll",
+						"f1ffbd5f247c5058c7a88779a10a4490a0bbf61fb78420a0df59efa952e44b06"
+					]
+				}
+			}
+		},
+		{
 			"version": "v3",
 			"published": "2017-02-16T22:01:23Z",
 			"win32": {

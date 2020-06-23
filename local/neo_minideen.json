@@ -10,6 +10,28 @@
 	"namespace": "neo_minideen",
 	"releases": [
 		{
+			"version": "r10",
+			"published": "2020-06-20T00:10:00Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/MiniDeen/releases/download/r10/neo-minideen_r10.zip",
+				"files": {
+					"neo-minideen.dll": [
+						"clang-x86/neo-minideen.dll",
+						"e88b1e5cdffc2e7b9bd3bc49f258599c2699b3fd832cce42e4fd2557a4a61233"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/MiniDeen/releases/download/r10/neo-minideen_r10.zip",
+				"files": {
+					"neo-minideen.dll": [
+						"clang-x64/neo-minideen.dll",
+						"077c989cc1bcc188047cb7e430bf4caeb4a31ad74e7f752403233aa03b42332a"
+					]
+				}
+			}
+		},
+		{
 			"version": "r9",
 			"published": "2020-05-29T20:42:09Z",
 			"win32": {

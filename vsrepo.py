@@ -168,7 +168,7 @@ else:
     plugin64_path = os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'plugins64')
 
 if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is None) or len(args.package) == 0):
-    print('Package argument only required for install, upgrade and uninstall operations')
+    print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
 package_json_path = os.path.join(file_dirname, 'vspackages.json') if args.portable else os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'vsrepo', 'vspackages.json')

@@ -14,7 +14,7 @@
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-LGhost/releases/download/r1/LGhost-r1.7z",
 				"files": {
-					"plugins64/LGhost.dll": [
+					"LGhost.dll": [
 						"plugins64/LGhost.dll",
 						"7a9745b4b411270e0e79f296ef067c8f2e44124deed4202c5e9ba189d817b65a"
 					]

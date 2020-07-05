@@ -16,6 +16,19 @@
 	],
 	"releases": [
 		{
+			"version": "r7",
+			"published": "2020-07-05T14:17:49Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest/releases/download/r7/DFTTest-r7.7z",
+				"files": {
+					"DFTTest.dll": [
+						"plugins64/DFTTest.dll",
+						"c4e84c8448c7ee5fb97b530c52aecd1591a1bca57ddf0c12bde07e255a979013"
+					]
+				}
+			}
+		},
+		{
 			"version": "r6",
 			"published": "2019-08-06T14:27:24Z",
 			"win64": {

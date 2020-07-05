@@ -9,6 +9,19 @@
 	"namespace": "cas",
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2020-07-05T14:12:12Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CAS/releases/download/r2/CAS-r2.7z",
+				"files": {
+					"CAS.dll": [
+						"plugins64/CAS.dll",
+						"e6128294afdb5f0884c8f063c0da17e05999d4a7e977b3ff7cf1261eb616b0bc"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2020-06-19T13:44:16Z",
 			"win64": {

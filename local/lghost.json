@@ -1,0 +1,25 @@
+{
+	"name": "LGhost",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Ghost reduction filter. Can be used for removing luminance ghost or edge ghost (ringing).",
+	"doom9": "https://forum.doom9.org/showthread.php?t=181605",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-LGhost",
+	"identifier": "com.holywu.lghost",
+	"namespace": "lghost",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2020-07-05T14:18:36Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-LGhost/releases/download/r1/LGhost-r1.7z",
+				"files": {
+					"plugins64/LGhost.dll": [
+						"plugins64/LGhost.dll",
+						"7a9745b4b411270e0e79f296ef067c8f2e44124deed4202c5e9ba189d817b65a"
+					]
+				}
+			}
+		}
+	]
+}

@@ -11,6 +11,19 @@
 	],
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2020-07-06T14:48:50Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-SRMD-ncnn-Vulkan/releases/download/r2/srmdnv.7z",
+				"files": {
+					"srmdnv.dll": [
+						"srmdnv.dll",
+						"776c203a29f12848511e21c987b36a5b75a041c4be1a7437910272d5baa1c5e2"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2020-06-23T17:07:07Z",
 			"win64": {

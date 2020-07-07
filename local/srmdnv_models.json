@@ -6,6 +6,9 @@
 	"github": "https://github.com/Kiyamou/VapourSynth-SRMD-ncnn-Vulkan",
 	"identifier": "com.vapoursynth.srmdnv.models",
 	"namespace": "srmdnv_models",
+	"ignore": [
+		"r2"
+	],
 	"releases": [
 		{
 			"version": "r1",

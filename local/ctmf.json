@@ -8,8 +8,23 @@
 	"identifier": "com.holywu.ctmf",
 	"namespace": "ctmf",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF",
-	"ignore": ["r4.1"],
+	"ignore": [
+		"r4.1"
+	],
 	"releases": [
+		{
+			"version": "r5",
+			"published": "2020-07-08T16:32:17Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF/releases/download/r5/CTMF-r5.7z",
+				"files": {
+					"CTMF.dll": [
+						"plugins64/CTMF.dll",
+						"c5f39058dbe041e67c12424bbbb85ba5866a9fc4143d08e5175ccd866a338a09"
+					]
+				}
+			}
+		},
 		{
 			"version": "r4",
 			"published": "2017-06-02T15:27:31Z",

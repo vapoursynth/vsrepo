@@ -172,6 +172,9 @@ def get_latest_installable_release(p, bin_name):
 def update_package(name):
     with open('local/' + name + '.json', 'r', encoding='utf-8') as ml:
         pfile = json.load(ml)
+        if pfile['type'] == 'PyWheel':
+            print('PyWheel type scanning not supported, ' + name + ' not scanned')
+            return -1
         existing_rel_list = []
         for rel in pfile['releases']:
             existing_rel_list.append(rel['version'])
@@ -270,13 +273,13 @@ def verify_package(pfile, existing_identifiers):
     for key in pfile.keys():
         if key not in ('name', 'type', 'description', 'website', 'category', 'identifier', 'modulename', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases'):
             raise Exception('Unkown key: ' + key + ' in ' + name)
-    if pfile['type'] not in ('VSPlugin', 'PyScript'):
+    if pfile['type'] not in ('VSPlugin', 'PyScript', 'PyWheel'):
         raise Exception('Invalid type in ' + name)
     if (pfile['type'] == 'VSPlugin') and ('modulename' in pfile):
         raise Exception('Plugins can\'t have modulenames: ' + name)
     if (pfile['type'] == 'VSPlugin') and (('modulename' in pfile) or ('namespace' not in pfile)):
         raise Exception('Plugins must have namespace, not modulename: ' + name)
-    if (pfile['type'] == 'PyScript') and (('namespace' in pfile) or ('modulename' not in pfile)):
+    if (pfile['type'] == 'PyScript' or pfile['type'] == 'PyWheel') and (('namespace' in pfile) or ('modulename' not in pfile)):
         raise Exception('Scripts must have modulename, not namespace: ' + name)
     allowed_categories = ('Scripts', 'Plugin Dependency', 'Resizing and Format Conversion', 'Other', 'Dot Crawl and Rainbows', 'Sharpening', 'Denoising', 'Deinterlacing', 'Inverse Telecine', 'Source/Output', 'Subtitles', 'Color/Levels')
     if pfile['category'] not in allowed_categories:
@@ -307,7 +310,7 @@ def compile_packages():
                 combined.append(pfile)
 
     with open('vspackages.json', 'w', encoding='utf-8') as pl:
-        json.dump(fp=pl, obj={ 'file-format': 2, 'packages': combined}, ensure_ascii=False, indent=2)
+        json.dump(fp=pl, obj={ 'file-format': 3, 'packages': combined}, ensure_ascii=False, indent=2)
 
     try:
         os.remove('vspackages.zip')
@@ -431,6 +434,7 @@ elif args.operation == 'create-package':
 			new_rel_entry['script']['files'][file] = [fullpath, hash]
 	
 
+    # fixme, no pywheel
 	if not args.packagescript:
 		final_package = blank_package(name = args.packagename[0], url = url)
 	else:

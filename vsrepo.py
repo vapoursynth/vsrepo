@@ -242,8 +242,8 @@ package_list = None
 try:
     with open(package_json_path, 'r', encoding='utf-8') as pl:
         package_list = json.load(pl)       
-    if package_list['file-format'] != 2:
-        print('Package definition format is {} but only version 2 is supported'.format(package_list['file-format']))
+    if package_list['file-format'] != 3:
+        print('Package definition format is {} but only version 3 is supported'.format(package_list['file-format']))
         package_list = None
     package_list = package_list['packages']
 except:
@@ -256,6 +256,8 @@ def check_hash(data, ref_hash):
 def get_bin_name(p):
     if p['type'] == 'PyScript':
         return 'script'
+    if p['type'] == 'PyWheel':
+        return 'wheel'
     elif p['type'] == 'VSPlugin':
         if is_64bits:
             return 'win64'
@@ -265,7 +267,7 @@ def get_bin_name(p):
         raise Exception('Unknown install type')
 
 def get_install_path(p):
-    if p['type'] == 'PyScript':
+    if p['type'] == 'PyScript' or p['type'] == 'PyWheel':
         return py_script_path
     elif p['type'] == 'VSPlugin':
         return plugin_path
@@ -328,6 +330,19 @@ def is_package_upgradable(id, force):
     else:
         return (is_package_installed(id) and (lastest_installable is not None) and (installed_packages[id] != 'Unknown') and (installed_packages[id] != lastest_installable['version']))
 
+def find_dist_version(pkg, path=site_package_dir):
+    if path is None:
+        return
+        
+    name = pkg["name"].replace(".", "_").replace(" ", "_")
+
+    for targetname in os.listdir(path):
+        if not (targetname.startswith(f"{name}-") and targetname.endswith(".dist-info")):
+            continue
+        return targetname[len(name)+1:-10]
+
+    return
+
 def detect_installed_packages():
     if package_list is not None:
         for p in package_list:
@@ -337,19 +352,26 @@ def detect_installed_packages():
                 exists = True
                 bin_name = get_bin_name(p)
                 if bin_name in v:
-                    for f in v[bin_name]['files']:
-                        try:
-                            with open(os.path.join(dest_path, f), 'rb') as fh:
-                                if not check_hash(fh.read(), v[bin_name]['files'][f][1])[0]:
-                                    matched = False
-                        except FileNotFoundError:
-                            exists = False
-                            matched = False
-                    if matched:
-                        installed_packages[p['identifier']] = v['version']
-                        break
-                    elif exists:
-                        installed_packages[p['identifier']] = 'Unknown'
+                    if p['type'] == 'PyWheel':
+                        version = find_dist_version(p)
+                        if version is None:
+                            installed_packages[p['identifier']] = 'Unknown'
+                        else:
+                            installed_packages[p['identifier']] = v['version']
+                    else:
+                        for f in v[bin_name]['files']:
+                            try:
+                                with open(os.path.join(dest_path, f), 'rb') as fh:
+                                    if not check_hash(fh.read(), v[bin_name]['files'][f][1])[0]:
+                                        matched = False
+                            except FileNotFoundError:
+                                exists = False
+                                matched = False
+                        if matched:
+                            installed_packages[p['identifier']] = v['version']
+                            break
+                        elif exists:
+                            installed_packages[p['identifier']] = 'Unknown'
     else:
         print('No valid package definitions found. Run update command first!')
         sys.exit(1)
@@ -439,6 +461,15 @@ def remove_package_meta(pkg):
 
     for dist_dir in find_dist_dirs(name):
         rmdir(dist_dir)
+                
+def remove_package_files(pkg):
+    if site_package_dir is None:
+        return
+
+    name = pkg["name"].replace(".", "_").replace(" ", "_")
+
+    for dist_dir in find_dist_dirs(name):
+        rmdir(dist_dir)
 
 def install_package_meta(files, pkg, rel, index):
     if site_package_dir is None:
@@ -489,44 +520,74 @@ def install_files(p):
         return (0, 1)
 
     files = []
-
-    single_file = None
-    if len(install_rel[bin_name]['files']) == 1:
-        for key in install_rel[bin_name]['files']:       
-            single_file = (key, install_rel[bin_name]['files'][key][0], install_rel[bin_name]['files'][key][1])
-    if (single_file is not None) and (single_file[1] == url.rsplit('/', 2)[-1]):
-        install_fn = single_file[0]
-        hash_result = check_hash(data, single_file[2])
-        if not hash_result[0]:
-            raise Exception('Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
-        uninstall_files(p)
-        os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
-        with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
-            files.append([os.path.join(dest_path, install_fn), single_file[2], str(len(data))])
-            outfile.write(data)
+    
+    if bin_name == 'wheel':
+        try:
+            hash_result = check_hash(data, install_rel[bin_name]['hash'])
+            if not hash_result[0]:
+                raise Exception('Hash mismatch for ' + url + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])               
+            with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
+                basename = None
+                for fn in zf.namelist():
+                    if fn.endswith('.dist-info/WHEEL'):
+                        basename = fn[:-len('.dist-info/WHEEL')]
+                        break
+                if basename is None:
+                    raise Exception('Wheel: failed to determine package base name')  
+                for fn in zf.namelist():
+                    if fn.startswith(basename + '.data'):
+                        raise Exception('Wheel: .data dir mapping not supported')
+                wheelfile = zf.read(basename + '.dist-info/WHEEL').decode().splitlines()
+                wheeldict = {}
+                for line in wheelfile:
+                    tmp = line.split(': ', 2)
+                    wheeldict[tmp[0]] = tmp[1]
+                if wheeldict['Wheel-Version'] != '1.0':
+                    raise Exception('Wheel: only version 1.0 supported')
+                if wheeldict['Root-Is-Purelib'] != 'true':
+                    raise Exception('Wheel: only purelib root supported')
+                zf.extractall(path=dest_path)
+        except BaseException as e:
+            print('Failed to decompress ' + p['name'] + ' ' + install_rel['version'] + ' with error: ' + str(e) + ', skipping installation and moving on')
+            return (0, 1)
     else:
-        tffd, tfpath = tempfile.mkstemp(prefix='vsm')
-        tf = open(tffd, mode='wb')
-        tf.write(data)
-        tf.close()
-        result_cache = {}
-        for install_fn in install_rel[bin_name]['files']:
-            fn_props = install_rel[bin_name]['files'][install_fn]
-            result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, fn_props[0]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            result.check_returncode()
-            hash_result = check_hash(result.stdout, fn_props[1])
+        single_file = None
+        if len(install_rel[bin_name]['files']) == 1:
+            for key in install_rel[bin_name]['files']:       
+                single_file = (key, install_rel[bin_name]['files'][key][0], install_rel[bin_name]['files'][key][1])
+        if (single_file is not None) and (single_file[1] == url.rsplit('/', 2)[-1]):
+            install_fn = single_file[0]
+            hash_result = check_hash(data, single_file[2])
             if not hash_result[0]:
                 raise Exception('Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
-            result_cache[install_fn] = (result.stdout, fn_props[1])
-        uninstall_files(p)
-        for install_fn in install_rel[bin_name]['files']:
+            uninstall_files(p)
             os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
             with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
-                files.append([os.path.join(dest_path, install_fn), result_cache[install_fn][1], str(len(result_cache[install_fn][0]))])
-                outfile.write(result_cache[install_fn][0])
-        os.remove(tfpath)
+                files.append([os.path.join(dest_path, install_fn), single_file[2], str(len(data))])
+                outfile.write(data)
+        else:
+            tffd, tfpath = tempfile.mkstemp(prefix='vsm')
+            tf = open(tffd, mode='wb')
+            tf.write(data)
+            tf.close()
+            result_cache = {}
+            for install_fn in install_rel[bin_name]['files']:
+                fn_props = install_rel[bin_name]['files'][install_fn]
+                result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, fn_props[0]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                result.check_returncode()
+                hash_result = check_hash(result.stdout, fn_props[1])
+                if not hash_result[0]:
+                    raise Exception('Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+                result_cache[install_fn] = (result.stdout, fn_props[1])
+            uninstall_files(p)
+            for install_fn in install_rel[bin_name]['files']:
+                os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
+                with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
+                    files.append([os.path.join(dest_path, install_fn), result_cache[install_fn][1], str(len(result_cache[install_fn][0]))])
+                    outfile.write(result_cache[install_fn][0])
+            os.remove(tfpath)
 
-    install_package_meta(files, p, install_rel, idx)
+        install_package_meta(files, p, install_rel, idx)
 
     installed_packages[p['identifier']] = install_rel['version']
     print('Successfully installed ' + p['name'] + ' ' + install_rel['version'])
@@ -595,7 +656,10 @@ def uninstall_files(p):
             if rel['version'] == installed_packages[p['identifier']]:
                 installed_rel = rel
                 break
-    if installed_rel is not None:
+                
+    if p['type'] == 'PyWheel':
+        remove_package_files(p, installed_packages[p['identifier']])
+    elif installed_rel is not None:
         for f in installed_rel[bin_name]['files']:
             os.remove(os.path.join(dest_path, f))
 
@@ -715,6 +779,8 @@ def rebuild_distinfo():
     print("Rebuilding dist-info dirs for other python package installers")
     for pkg_id, pkg_ver in installed_packages.items():
         pkg = get_package_from_id(pkg_id)
+        if pkg['type'] == 'PyWheel':
+            continue
 
         for idx, rel in enumerate(pkg["releases"]):
             if rel["version"] == pkg_ver:

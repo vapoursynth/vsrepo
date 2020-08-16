@@ -271,16 +271,18 @@ def update_package(name):
 def verify_package(pfile, existing_identifiers):
     name = pfile['name']
     for key in pfile.keys():
-        if key not in ('name', 'type', 'description', 'website', 'category', 'identifier', 'modulename', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases'):
+        if key not in ('name', 'type', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases'):
             raise Exception('Unkown key: ' + key + ' in ' + name)
     if pfile['type'] not in ('VSPlugin', 'PyScript', 'PyWheel'):
         raise Exception('Invalid type in ' + name)
     if (pfile['type'] == 'VSPlugin') and ('modulename' in pfile):
-        raise Exception('Plugins can\'t have modulenames: ' + name)
+        raise Exception('VSPlugin can\'t have modulenames: ' + name)
     if (pfile['type'] == 'VSPlugin') and (('modulename' in pfile) or ('namespace' not in pfile)):
-        raise Exception('Plugins must have namespace, not modulename: ' + name)
+        raise Exception('VSPlugin must have namespace, not modulename: ' + name)
     if (pfile['type'] == 'PyScript' or pfile['type'] == 'PyWheel') and (('namespace' in pfile) or ('modulename' not in pfile)):
-        raise Exception('Scripts must have modulename, not namespace: ' + name)
+        raise Exception('PyScript must have modulename, not namespace: ' + name)
+    if ((pfile['type'] == 'PyScript' or pfile['type'] == 'VSPlugin') and 'wheelname' in pfile):
+        raise Exception('Only PyWheel type can have wheelname: ' + name)
     allowed_categories = ('Scripts', 'Plugin Dependency', 'Resizing and Format Conversion', 'Other', 'Dot Crawl and Rainbows', 'Sharpening', 'Denoising', 'Deinterlacing', 'Inverse Telecine', 'Source/Output', 'Subtitles', 'Color/Levels')
     if pfile['category'] not in allowed_categories:
         raise Exception('Not allowed catogry in ' + name + ': ' + pfile['category'] + ' not in ' + repr(allowed_categories))

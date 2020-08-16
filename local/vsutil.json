@@ -6,7 +6,9 @@
 	"category": "Other",
 	"identifier": "vsutil",
 	"modulename": "vsutil",
+	"wheelname": "vsutil",
 	"github": "https://github.com/Irrational-Encoding-Wizardry/vsutil",
+	"pypi": "https://pypi.org/project/vsutil/",
 	"releases": [
 		{
 			"version": "0.5.0",

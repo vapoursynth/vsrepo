@@ -330,11 +330,17 @@ def is_package_upgradable(id, force):
     else:
         return (is_package_installed(id) and (lastest_installable is not None) and (installed_packages[id] != 'Unknown') and (installed_packages[id] != lastest_installable['version']))
 
+def get_python_package_name(pkg):
+    if "wheelname" in pkg:
+        return pkg["wheelname"].replace(".", "_").replace(" ", "_")
+    else:
+        return pkg["name"].replace(".", "_").replace(" ", "_")
+
 def find_dist_version(pkg, path=site_package_dir):
     if path is None:
         return
         
-    name = pkg["name"].replace(".", "_").replace(" ", "_")
+    name = get_python_package_name(pkg)
 
     for targetname in os.listdir(path):
         if not (targetname.startswith(f"{name}-") and targetname.endswith(".dist-info")):
@@ -354,9 +360,7 @@ def detect_installed_packages():
                 if bin_name in v:
                     if p['type'] == 'PyWheel':
                         version = find_dist_version(p)
-                        if version is None:
-                            installed_packages[p['identifier']] = 'Unknown'
-                        else:
+                        if version is not None:
                             installed_packages[p['identifier']] = v['version']
                     else:
                         for f in v[bin_name]['files']:
@@ -457,25 +461,17 @@ def remove_package_meta(pkg):
     if site_package_dir is None:
         return
 
-    name = pkg["name"].replace(".", "_").replace(" ", "_")
+    name = get_python_package_name(pkg)
 
     for dist_dir in find_dist_dirs(name):
         rmdir(dist_dir)
                 
-def remove_package_files(pkg):
-    if site_package_dir is None:
-        return
-
-    name = pkg["name"].replace(".", "_").replace(" ", "_")
-
-    for dist_dir in find_dist_dirs(name):
-        rmdir(dist_dir)
 
 def install_package_meta(files, pkg, rel, index):
     if site_package_dir is None:
         return
     
-    name = pkg["name"].replace(".", "_").replace(" ", "_")
+    name = get_python_package_name(pkg)
 
     version = make_pyversion(rel["version"], index)
     dist_dir = os.path.join(site_package_dir, f"{name}-{version}.dist-info")
@@ -541,13 +537,16 @@ def install_files(p):
                 wheeldict = {}
                 for line in wheelfile:
                     tmp = line.split(': ', 2)
-                    wheeldict[tmp[0]] = tmp[1]
+                    if len(tmp) == 2:
+                        wheeldict[tmp[0]] = tmp[1]
                 if wheeldict['Wheel-Version'] != '1.0':
                     raise Exception('Wheel: only version 1.0 supported')
                 if wheeldict['Root-Is-Purelib'] != 'true':
                     raise Exception('Wheel: only purelib root supported')
                 zf.extractall(path=dest_path)
+                # fixme, doesn't write INSTALLER file in dist-info dir
         except BaseException as e:
+            raise
             print('Failed to decompress ' + p['name'] + ' ' + install_rel['version'] + ' with error: ' + str(e) + ', skipping installation and moving on')
             return (0, 1)
     else:
@@ -658,7 +657,18 @@ def uninstall_files(p):
                 break
                 
     if p['type'] == 'PyWheel':
-        remove_package_files(p, installed_packages[p['identifier']])
+        files = []
+        pyname = get_python_package_name(p)
+        for dist_dir in find_dist_dirs(pyname):
+            with open(os.path.join(dest_path, dist_dir, 'RECORD'), mode='rb') as rec:
+                lines = rec.read().decode().splitlines()
+                for line in lines:
+                    tmp = line.split(',')
+                    if len(tmp) > 0 and len(tmp[0]) > 0:
+                        files.append(tmp[0])
+        
+        for f in files:
+            os.remove(os.path.join(dest_path, f))
     elif installed_rel is not None:
         for f in installed_rel[bin_name]['files']:
             os.remove(os.path.join(dest_path, f))

@@ -171,7 +171,7 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is 
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
-package_json_path = os.path.join(file_dirname, 'vspackages.json') if args.portable else os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'vsrepo', 'vspackages.json')
+package_json_path = os.path.join(file_dirname, 'vspackages3.json') if args.portable else os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'vsrepo', 'vspackages3.json')
 
 if args.force_dist_info or is_sitepackage_install():
     if is_venv():
@@ -702,7 +702,7 @@ def update_package_definition(url):
             remote_modtime = email.utils.mktime_tz(email.utils.parsedate_tz(urlreq.info()['Last-Modified']))
             data = urlreq.read()
             with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
-                with zf.open('vspackages.json') as pkgfile:
+                with zf.open('vspackages3.json') as pkgfile:
                     with open(package_json_path, 'wb') as dstfile:
                         dstfile.write(pkgfile.read())
                     os.utime(package_json_path, times=(remote_modtime, remote_modtime))
@@ -821,7 +821,7 @@ def print_paths():
         print("Dist-Infos: <Will not be installed>")
 
 if args.operation != 'update' and package_list is None:
-    print('Failed to open vspackages.json. Run update command.')
+    print('Failed to open vspackages3.json. Run update command.')
     sys.exit(1)
 
 for name in args.package:

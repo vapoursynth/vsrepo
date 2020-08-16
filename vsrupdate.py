@@ -311,14 +311,16 @@ def compile_packages():
                 pfile.pop('ignore', None)
                 combined.append(pfile)
 
-    with open('vspackages.json', 'w', encoding='utf-8') as pl:
+    with open('vspackages3.json', 'w', encoding='utf-8') as pl:
         json.dump(fp=pl, obj={ 'file-format': 3, 'packages': combined}, ensure_ascii=False, indent=2)
 
     try:
         os.remove('vspackages3.zip')
     except:
         pass
-    result = subprocess.run([cmd7zip_path, 'a', '-tzip', 'vspackages3.zip', 'vspackages.json'])
+        
+    # fixme, use zipfile here instead
+    result = subprocess.run([cmd7zip_path, 'a', '-tzip', 'vspackages3.zip', 'vspackages3.json'])
     result.check_returncode()
 
 

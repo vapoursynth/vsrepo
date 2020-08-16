@@ -18,6 +18,23 @@
 	],
 	"releases": [
 		{
+			"version": "v2.3.0",
+			"published": "2020-08-07T15:32:24Z",
+			"win64": {
+				"url": "https://github.com/TianZerL/Anime4KCPP/releases/download/v2.3.0/Anime4KCPP_VapourSynth_plugin-2.3.0-Win64-msvc.7z",
+				"files": {
+					"Anime4KCPP_VapourSynth.dll": [
+						"VapourSynth/dll/Anime4KCPP_VapourSynth.dll",
+						"68d737e27e67fd4edd79e98c7bf4d6abeded1180339b0fef856b730e1d1fc53d"
+					],
+					"opencv_world430.dll": [
+						"VapourSynth/dll/opencv_world430.dll",
+						"db70a0e572acea07b9a3385a2b177afb4e27b30520440217c63aa886bf38897e"
+					]
+				}
+			}
+		},
+		{
 			"version": "v2.2.1",
 			"published": "2020-06-30T07:52:24Z",
 			"win64": {

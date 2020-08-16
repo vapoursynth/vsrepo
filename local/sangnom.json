@@ -10,6 +10,28 @@
 	"namespace": "sangnom",
 	"releases": [
 		{
+			"version": "r42",
+			"published": "2020-08-03T09:06:54Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-sangnom/releases/download/r42/vapoursynth-sangnom-r42-win32.7z",
+				"files": {
+					"libsangnom.dll": [
+						"libsangnom.dll",
+						"46bfae0ba5e6adae1b38b3b0bc332f1613f81a0169dc6d8e17533c619115459e"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-sangnom/releases/download/r42/vapoursynth-sangnom-r42-win64.7z",
+				"files": {
+					"libsangnom.dll": [
+						"libsangnom.dll",
+						"eb656eb0c7c7b54f62138bda2342d3a4a77fd21df0eb29c991e157a8ae4d82aa"
+					]
+				}
+			}
+		},
+		{
 			"version": "r41",
 			"published": "2019-03-14T17:37:21Z",
 			"win32": {

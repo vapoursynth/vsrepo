@@ -84,6 +84,9 @@ def get_git_api_url(url):
         return 'https://api.github.com/repos/' + s[-2] + '/' + s[-1] + '/releases?access_token=' + args.git_token[0]
     else:
         return None
+        
+def get_pypi_api_url(name):
+    return 'https://pypi.org/pypi/' + name + '/json'
 
 def fetch_url(url, desc = None):
     with urllib.request.urlopen(url) as urlreq:
@@ -169,104 +172,125 @@ def get_latest_installable_release(p, bin_name):
             return rel
     return None
 
+def get_python_package_name(pkg):
+    if "wheelname" in pkg:
+        return pkg["wheelname"].replace(".", "_").replace(" ", "_")
+    else:
+        return pkg["name"].replace(".", "_").replace(" ", "_")
+     
 def update_package(name):
+    pfile = None
     with open('local/' + name + '.json', 'r', encoding='utf-8') as ml:
         pfile = json.load(ml)
-        if pfile['type'] == 'PyWheel':
-            print('PyWheel type scanning not supported, ' + name + ' not scanned')
-            return -1
-        existing_rel_list = []
-        for rel in pfile['releases']:
-            existing_rel_list.append(rel['version'])
-        rel_order = list(existing_rel_list)
-        
-        if 'github' in pfile:
-            new_rels = {}
-            apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name']))
-            is_plugin = (pfile['type'] == 'VSPlugin')
-            for rel in apifile:
-                if rel['prerelease']:
+
+    existing_rel_list = []
+    for rel in pfile['releases']:
+        existing_rel_list.append(rel['version'])
+    rel_order = list(existing_rel_list)
+    
+    use_pypi = (pfile['type'] == 'PyWheel')
+    if ('source' in pfile) and (pfile['source'] != 'pypi'):
+        use_pypi = False
+    
+    if pfile['type'] == 'PyWheel' and use_pypi:
+        pfile['releases'] = []
+        apifile = json.loads(fetch_url(get_pypi_api_url(get_python_package_name(pfile)), pfile['name']))
+        for version in apifile['releases']:
+            for rel in apifile['releases'][version]:
+                if rel['yanked'] or rel['packagetype'] != 'bdist_wheel':
                     continue
-                if rel['tag_name'] in pfile.get('ignore', []):
-                    continue
-                if rel['tag_name'] not in rel_order:
-                    rel_order.insert(0, rel['tag_name'])
-                if rel['tag_name'] not in existing_rel_list:
-                    print(rel['tag_name'] + ' (new)')
-                    zipball = rel['zipball_url']
-                    dl_files = []
-                    for asset in rel['assets']:
-                        dl_files.append(asset['browser_download_url'])
-                    
-                    #ugly copypaste here because I'm lazy
-                    if is_plugin:
-                        new_rel_entry = { 'version': rel['tag_name'], 'published': rel['published_at'] }
-                        try:
-                            latest_rel = get_latest_installable_release(pfile, 'win32')
-                            if latest_rel is not None:
-                                new_url = get_most_similar(latest_rel['win32']['url'], dl_files)
-                                temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win32')
-                                new_rel_entry['win32'] = { 'url': new_url, 'files': {}}
-                                for fn in latest_rel['win32']['files']:
-                                    new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win32']['files'][fn][0], 'win32')
-                                    new_rel_entry['win32']['files'][fn] = [new_fn, digest]
-                        except:
-                            new_rel_entry.pop('win32', None)
-                            print('No win32 binary found')
-                        try:
-                            latest_rel = get_latest_installable_release(pfile, 'win64')
-                            if latest_rel is not None:
-                                new_url = get_most_similar(latest_rel['win64']['url'], dl_files)
-                                temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win64')
-                                new_rel_entry['win64'] = { 'url': new_url, 'files': {} }
-                                for fn in latest_rel['win64']['files']:
-                                    new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win64']['files'][fn][0], 'win64')
-                                    new_rel_entry['win64']['files'][fn] = [new_fn, digest]
-                        except:
-                            new_rel_entry.pop('win64', None)
-                            print('No win64 binary found')
-                    else:
-                        new_rel_entry = { 'version': rel['tag_name'], 'published': rel['published_at'] }
-                        try:
-                            latest_rel = get_latest_installable_release(pfile, 'script')
-                            new_url = None
-                            if ('/archive/' in latest_rel['script']['url']) or ('/zipball/' in latest_rel['script']['url']):
-                                new_url = zipball
-                            else:
-                                new_url = get_most_similar(latest_rel['script']['url'], dl_files)
-                            temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
-                            new_rel_entry['script'] = { 'url': new_url, 'files': {} }
-                            for fn in latest_rel['script']['files']:
-                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')
-                                new_rel_entry['script']['files'][fn] = [new_fn, digest]
-                        except:
-                            new_rel_entry.pop('script', None)
-                            print('No script found')
-                    new_rels[new_rel_entry['version']] = new_rel_entry
-            has_new_releases = bool(new_rels)
-            for rel in pfile['releases']:
-                new_rels[rel['version']] = rel
-            rel_list = []
-            for rel_ver in rel_order:
-                rel_list.append(new_rels[rel_ver])
-            pfile['releases'] = rel_list
-            pfile['releases'].sort(key=lambda r: r['published'], reverse=True)
-            
-            if has_new_releases:
-                if args.overwrite:
-                    with open('local/' + name + '.json', 'w', encoding='utf-8') as pl:
-                        json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent='\t')
+                new_rel_entry = { 'version': version, 'published': rel['upload_time_iso_8601'], 'wheel': { 'url': rel['url'], 'hash': rel['digests']['sha256'] } }
+                pfile['releases'].append(new_rel_entry)
+                print(new_rel_entry)
+    elif 'github' in pfile:
+        new_rels = {}
+        apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name']))
+        is_plugin = (pfile['type'] == 'VSPlugin')
+        is_pyscript = (pfile['type'] == 'PyScript')
+        is_pywheel = (pfile['type'] == 'PyWheel')
+        for rel in apifile:
+            if rel['prerelease']:
+                continue
+            if rel['tag_name'] in pfile.get('ignore', []):
+                continue
+            if rel['tag_name'] not in rel_order:
+                rel_order.insert(0, rel['tag_name'])
+            if rel['tag_name'] not in existing_rel_list:
+                print(rel['tag_name'] + ' (new)')
+                zipball = rel['zipball_url']
+                dl_files = []
+                for asset in rel['assets']:
+                    dl_files.append(asset['browser_download_url'])
+                
+                #ugly copypaste here because I'm lazy
+                if is_plugin:
+                    new_rel_entry = { 'version': rel['tag_name'], 'published': rel['published_at'] }
+                    try:
+                        latest_rel = get_latest_installable_release(pfile, 'win32')
+                        if latest_rel is not None:
+                            new_url = get_most_similar(latest_rel['win32']['url'], dl_files)
+                            temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win32')
+                            new_rel_entry['win32'] = { 'url': new_url, 'files': {}}
+                            for fn in latest_rel['win32']['files']:
+                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win32']['files'][fn][0], 'win32')
+                                new_rel_entry['win32']['files'][fn] = [new_fn, digest]
+                    except:
+                        new_rel_entry.pop('win32', None)
+                        print('No win32 binary found')
+                    try:
+                        latest_rel = get_latest_installable_release(pfile, 'win64')
+                        if latest_rel is not None:
+                            new_url = get_most_similar(latest_rel['win64']['url'], dl_files)
+                            temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win64')
+                            new_rel_entry['win64'] = { 'url': new_url, 'files': {} }
+                            for fn in latest_rel['win64']['files']:
+                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win64']['files'][fn][0], 'win64')
+                                new_rel_entry['win64']['files'][fn] = [new_fn, digest]
+                    except:
+                        new_rel_entry.pop('win64', None)
+                        print('No win64 binary found')
                 else:
-                    with open('local/' + name + '.new.json', 'w', encoding='utf-8') as pl:
-                        json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent='\t')
-                print('Release file updated')
-                return 1
+                    new_rel_entry = { 'version': rel['tag_name'], 'published': rel['published_at'] }
+                    try:
+                        latest_rel = get_latest_installable_release(pfile, 'script')
+                        new_url = None
+                        if ('/archive/' in latest_rel['script']['url']) or ('/zipball/' in latest_rel['script']['url']):
+                            new_url = zipball
+                        else:
+                            new_url = get_most_similar(latest_rel['script']['url'], dl_files)
+                        temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
+                        new_rel_entry['script'] = { 'url': new_url, 'files': {} }
+                        for fn in latest_rel['script']['files']:
+                            new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')
+                            new_rel_entry['script']['files'][fn] = [new_fn, digest]
+                    except:
+                        new_rel_entry.pop('script', None)
+                        print('No script found')
+                new_rels[new_rel_entry['version']] = new_rel_entry
+        has_new_releases = bool(new_rels)
+        for rel in pfile['releases']:
+            new_rels[rel['version']] = rel
+        rel_list = []
+        for rel_ver in rel_order:
+            rel_list.append(new_rels[rel_ver])
+        pfile['releases'] = rel_list
+        pfile['releases'].sort(key=lambda r: r['published'], reverse=True)
+        
+        if has_new_releases:
+            if args.overwrite:
+                with open('local/' + name + '.json', 'w', encoding='utf-8') as pl:
+                    json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent='\t')
             else:
-                print('Release file already up to date')
-                return 0
+                with open('local/' + name + '.new.json', 'w', encoding='utf-8') as pl:
+                    json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent='\t')
+            print('Release file updated')
+            return 1
         else:
-            print('Only github projects supported, ' + name + ' not scanned')
-            return -1
+            print('Release file already up to date')
+            return 0
+    else:
+        print('Only github projects supported, ' + name + ' not scanned')
+        return -1
 
 def verify_package(pfile, existing_identifiers):
     name = pfile['name']
@@ -380,6 +404,8 @@ elif args.operation == 'update-local':
     else:
         update_package(args.package[0])
 elif args.operation == 'create-package':
+    # fixme, no pywheel support
+    
 	import pathlib
 
 	if not args.packageurl:
@@ -437,8 +463,6 @@ elif args.operation == 'create-package':
 			file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
 			new_rel_entry['script']['files'][file] = [fullpath, hash]
 	
-
-    # fixme, no pywheel
 	if not args.packagescript:
 		final_package = blank_package(name = args.packagename[0], url = url)
 	else:

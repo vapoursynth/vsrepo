@@ -315,10 +315,10 @@ def compile_packages():
         json.dump(fp=pl, obj={ 'file-format': 3, 'packages': combined}, ensure_ascii=False, indent=2)
 
     try:
-        os.remove('vspackages.zip')
+        os.remove('vspackages3.zip')
     except:
         pass
-    result = subprocess.run([cmd7zip_path, 'a', '-tzip', 'vspackages.zip', 'vspackages.json'])
+    result = subprocess.run([cmd7zip_path, 'a', '-tzip', 'vspackages3.zip', 'vspackages.json'])
     result.check_returncode()
 
 
@@ -466,15 +466,15 @@ elif args.operation == 'create-package':
 elif args.operation == 'upload':
     compile_packages()
     print('Packages successfully compiled')
-    with open('vspackages.zip', 'rb') as pl:
+    with open('vspackages3.zip', 'rb') as pl:
         with ftplib.FTP_TLS(host=args.host[0], user=args.user[0], passwd=args.passwd[0]) as ftp:
             if args.dir is not None:
                 ftp.cwd(args.dir[0])
             try:
-                ftp.delete('vspackages.zip')
+                ftp.delete('vspackages3.zip')
             except:
-                print('Failed to delete vspackages.zip')
-            ftp.storbinary('STOR vspackages.zip', pl)
+                print('Failed to delete vspackages3.zip')
+            ftp.storbinary('STOR vspackages3.zip', pl)
     print('Upload done')
 
 def noop():

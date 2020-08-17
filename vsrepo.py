@@ -544,7 +544,8 @@ def install_files(p):
                 if wheeldict['Root-Is-Purelib'] != 'true':
                     raise Exception('Wheel: only purelib root supported')
                 zf.extractall(path=dest_path)
-                # fixme, doesn't write INSTALLER file in dist-info dir
+                with open(os.path.join(basename + '.dist-info', 'INSTALLER'), mode='w') as f:
+                    f.write("vsrepo")
         except BaseException as e:
             raise
             print('Failed to decompress ' + p['name'] + ' ' + install_rel['version'] + ' with error: ' + str(e) + ', skipping installation and moving on')

@@ -355,7 +355,7 @@ def detect_installed_packages():
             if p['type'] == 'PyWheel':
                 version = find_dist_version(p, dest_path)
                 if version is not None:
-                    installed_packages[p['identifier']] = v['version']
+                    installed_packages[p['identifier']] = version
             else:
                 for v in p['releases']:
                     matched = True

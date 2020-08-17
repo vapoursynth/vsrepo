@@ -544,8 +544,14 @@ def install_files(p):
                 if wheeldict['Root-Is-Purelib'] != 'true':
                     raise Exception('Wheel: only purelib root supported')
                 zf.extractall(path=dest_path)
-                with open(os.path.join(basename + '.dist-info', 'INSTALLER'), mode='w') as f:
+                with open(os.path.join(dest_path, basename + '.dist-info', 'INSTALLER'), mode='w') as f:
                     f.write("vsrepo")
+                with open(os.path.join(dist_dir, "RECORD")) as f:
+                    contents = f.read()
+                with open(os.path.join(dest_path, basename + '.dist-info', 'RECORD'), mode='a') as f:
+                    if not contents.endswith("\n"):
+                        f.write("\n")
+                    f.write(os.path.join(basename + '.dist-info', 'INSTALLER') + ",,\n")
         except BaseException as e:
             raise
             print('Failed to decompress ' + p['name'] + ' ' + install_rel['version'] + ' with error: ' + str(e) + ', skipping installation and moving on')

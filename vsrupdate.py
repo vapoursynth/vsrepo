@@ -177,7 +177,28 @@ def get_python_package_name(pkg):
         return pkg["wheelname"].replace(".", "_").replace(" ", "_")
     else:
         return pkg["name"].replace(".", "_").replace(" ", "_")
-     
+
+def write_new_releses(name, pfile, new_rels, rel_order):
+    has_new_releases = bool(new_rels)
+    if has_new_releases:
+        for rel in pfile['releases']:
+            new_rels[rel['version']] = rel
+        rel_list = []
+        for rel_ver in rel_order:
+            rel_list.append(new_rels[rel_ver])
+        print(rel_list)
+        pfile['releases'] = rel_list
+        pfile['releases'].sort(key=lambda r: r['published'], reverse=True)
+
+        fnext = '.json' if args.overwrite else '.new.json'          
+        with open('local/' + name + fnext, 'w', encoding='utf-8') as pl:
+            json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent='\t')
+        print('Release file updated')
+        return 1
+    else:
+        print('Release file already up to date')
+        return 0
+        
 def update_package(name):
     pfile = None
     with open('local/' + name + '.json', 'r', encoding='utf-8') as ml:
@@ -192,16 +213,22 @@ def update_package(name):
     if ('source' in pfile) and (pfile['source'] != 'pypi'):
         use_pypi = False
     
-    if pfile['type'] == 'PyWheel' and use_pypi:
-        pfile['releases'] = []
-        apifile = json.loads(fetch_url(get_pypi_api_url(get_python_package_name(pfile)), pfile['name']))
-        for version in apifile['releases']:
-            for rel in apifile['releases'][version]:
-                if rel['yanked'] or rel['packagetype'] != 'bdist_wheel':
-                    continue
-                new_rel_entry = { 'version': version, 'published': rel['upload_time_iso_8601'], 'wheel': { 'url': rel['url'], 'hash': rel['digests']['sha256'] } }
-                pfile['releases'].append(new_rel_entry)
-                print(new_rel_entry)
+    if pfile['type'] == 'PyWheel':
+        if use_pypi:
+            new_rels = {}
+            apifile = json.loads(fetch_url(get_pypi_api_url(get_python_package_name(pfile)), pfile['name']))
+            for version in apifile['releases']:
+                for rel in apifile['releases'][version]:
+                    if rel['yanked'] or rel['packagetype'] != 'bdist_wheel':
+                        continue
+                    new_rel_entry = { 'version': version, 'published': rel['upload_time_iso_8601'], 'wheel': { 'url': rel['url'], 'hash': rel['digests']['sha256'] } }
+                    new_rels[version] = new_rel_entry
+                    if version not in rel_order:
+                        rel_order.insert(0, version)
+            write_new_releses(name, pfile, new_rels, rel_order)
+        else:
+            print('PyWheel can only be scanned from pypi')
+            return -1
     elif 'github' in pfile:
         new_rels = {}
         apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name']))
@@ -267,29 +294,9 @@ def update_package(name):
                         new_rel_entry.pop('script', None)
                         print('No script found')
                 new_rels[new_rel_entry['version']] = new_rel_entry
-        has_new_releases = bool(new_rels)
-        for rel in pfile['releases']:
-            new_rels[rel['version']] = rel
-        rel_list = []
-        for rel_ver in rel_order:
-            rel_list.append(new_rels[rel_ver])
-        pfile['releases'] = rel_list
-        pfile['releases'].sort(key=lambda r: r['published'], reverse=True)
-        
-        if has_new_releases:
-            if args.overwrite:
-                with open('local/' + name + '.json', 'w', encoding='utf-8') as pl:
-                    json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent='\t')
-            else:
-                with open('local/' + name + '.new.json', 'w', encoding='utf-8') as pl:
-                    json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent='\t')
-            print('Release file updated')
-            return 1
-        else:
-            print('Release file already up to date')
-            return 0
+        return write_new_releses(name, pfile, new_rels, rel_order)
     else:
-        print('Only github projects supported, ' + name + ' not scanned')
+        print('Only github and pypi projects supported, ' + name + ' not scanned')
         return -1
 
 def verify_package(pfile, existing_identifiers):

@@ -81,15 +81,16 @@ def get_most_similar(a, b):
 def get_git_api_url(url):
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
-        return 'https://api.github.com/repos/' + s[-2] + '/' + s[-1] + '/releases?access_token=' + args.git_token[0]
+        return 'https://api.github.com/repos/' + s[-2] + '/' + s[-1] + '/releases'
     else:
         return None
         
 def get_pypi_api_url(name):
     return 'https://pypi.org/pypi/' + name + '/json'
 
-def fetch_url(url, desc = None):
-    with urllib.request.urlopen(url) as urlreq:
+def fetch_url(url, desc = None, token = None):
+    req = urllib.request.Request(url, headers={'Authorization': 'token ' + token}) if token is not None else urllib.request.Request(url)
+    with urllib.request.urlopen(req) as urlreq:
         if ('tqdm' in sys.modules) and (urlreq.headers['content-length'] is not None):
             size = int(urlreq.headers['content-length'])
             remaining = size
@@ -186,7 +187,6 @@ def write_new_releses(name, pfile, new_rels, rel_order):
         rel_list = []
         for rel_ver in rel_order:
             rel_list.append(new_rels[rel_ver])
-        print(rel_list)
         pfile['releases'] = rel_list
         pfile['releases'].sort(key=lambda r: r['published'], reverse=True)
 
@@ -231,7 +231,7 @@ def update_package(name):
             return -1
     elif 'github' in pfile:
         new_rels = {}
-        apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name']))
+        apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name'], token=args.git_token[0]))
         is_plugin = (pfile['type'] == 'VSPlugin')
         is_pyscript = (pfile['type'] == 'PyScript')
         is_pywheel = (pfile['type'] == 'PyWheel')

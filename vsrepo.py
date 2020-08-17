@@ -546,12 +546,12 @@ def install_files(p):
                 zf.extractall(path=dest_path)
                 with open(os.path.join(dest_path, basename + '.dist-info', 'INSTALLER'), mode='w') as f:
                     f.write("vsrepo")
-                with open(os.path.join(dist_dir, "RECORD")) as f:
+                with open(os.path.join(dest_path, basename + '.dist-info', 'RECORD')) as f:
                     contents = f.read()
                 with open(os.path.join(dest_path, basename + '.dist-info', 'RECORD'), mode='a') as f:
                     if not contents.endswith("\n"):
                         f.write("\n")
-                    f.write(os.path.join(basename + '.dist-info', 'INSTALLER') + ",,\n")
+                    f.write(basename + '.dist-info/INSTALLER,,\n')
         except BaseException as e:
             raise
             print('Failed to decompress ' + p['name'] + ' ' + install_rel['version'] + ' with error: ' + str(e) + ', skipping installation and moving on')
@@ -667,15 +667,17 @@ def uninstall_files(p):
         files = []
         pyname = get_python_package_name(p)
         for dist_dir in find_dist_dirs(pyname):
-            with open(os.path.join(dest_path, dist_dir, 'RECORD'), mode='rb') as rec:
-                lines = rec.read().decode().splitlines()
+            with open(os.path.join(dest_path, dist_dir, 'RECORD'), mode='r') as rec:
+                lines = rec.read().splitlines()
                 for line in lines:
                     tmp = line.split(',')
                     if len(tmp) > 0 and len(tmp[0]) > 0:
                         files.append(tmp[0])
-        
         for f in files:
-            os.remove(os.path.join(dest_path, f))
+            try:
+                os.remove(os.path.join(dest_path, f))
+            except BaseException as e:
+                print('File removal error: ' + str(e))
     elif installed_rel is not None:
         for f in installed_rel[bin_name]['files']:
             os.remove(os.path.join(dest_path, f))

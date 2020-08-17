@@ -336,16 +336,15 @@ def get_python_package_name(pkg):
     else:
         return pkg["name"].replace(".", "_").replace(" ", "_")
 
-def find_dist_version(pkg, path=site_package_dir):
+def find_dist_version(pkg, path):
     if path is None:
         return
         
     name = get_python_package_name(pkg)
-
+    
     for targetname in os.listdir(path):
-        if not (targetname.startswith(f"{name}-") and targetname.endswith(".dist-info")):
-            continue
-        return targetname[len(name)+1:-10]
+        if (targetname.startswith(f"{name}-") and targetname.endswith(".dist-info")):
+            return targetname[len(name)+1:-10]
 
     return
 
@@ -353,16 +352,16 @@ def detect_installed_packages():
     if package_list is not None:
         for p in package_list:
             dest_path = get_install_path(p)
-            for v in p['releases']:
-                matched = True
-                exists = True
-                bin_name = get_bin_name(p)
-                if bin_name in v:
-                    if p['type'] == 'PyWheel':
-                        version = find_dist_version(p)
-                        if version is not None:
-                            installed_packages[p['identifier']] = v['version']
-                    else:
+            if p['type'] == 'PyWheel':
+                version = find_dist_version(p, dest_path)
+                if version is not None:
+                    installed_packages[p['identifier']] = v['version']
+            else:
+                for v in p['releases']:
+                    matched = True
+                    exists = True
+                    bin_name = get_bin_name(p)
+                    if bin_name in v:
                         for f in v[bin_name]['files']:
                             try:
                                 with open(os.path.join(dest_path, f), 'rb') as fh:
@@ -656,33 +655,37 @@ def upgrade_all_packages(force):
 def uninstall_files(p):
     dest_path = get_install_path(p)
     bin_name = get_bin_name(p)
-    installed_rel = None
-    if p['identifier'] in installed_packages:
-        for rel in p['releases']:
-            if rel['version'] == installed_packages[p['identifier']]:
-                installed_rel = rel
-                break
                 
     if p['type'] == 'PyWheel':
         files = []
         pyname = get_python_package_name(p)
-        for dist_dir in find_dist_dirs(pyname):
+        for dist_dir in find_dist_dirs(pyname, dest_path):
             with open(os.path.join(dest_path, dist_dir, 'RECORD'), mode='r') as rec:
                 lines = rec.read().splitlines()
                 for line in lines:
                     tmp = line.split(',')
                     if len(tmp) > 0 and len(tmp[0]) > 0:
                         files.append(tmp[0])
+        print(files)
         for f in files:
             try:
                 os.remove(os.path.join(dest_path, f))
             except BaseException as e:
                 print('File removal error: ' + str(e))
-    elif installed_rel is not None:
-        for f in installed_rel[bin_name]['files']:
-            os.remove(os.path.join(dest_path, f))
+        for dist_dir in find_dist_dirs(pyname, dest_path):
+            rmdir(dist_dir)
+    else:
+        installed_rel = None
+        if p['identifier'] in installed_packages:
+            for rel in p['releases']:
+                if rel['version'] == installed_packages[p['identifier']]:
+                    installed_rel = rel
+                    break
+        if installed_rel is not None:
+            for f in installed_rel[bin_name]['files']:
+                os.remove(os.path.join(dest_path, f))
 
-    remove_package_meta(p)
+        remove_package_meta(p)
 
 def uninstall_package(name):
     p = get_package_from_name(name)

@@ -376,18 +376,22 @@ def keep_folder_structure(path, level = 0):
 	folder = path.split('/', level)
 	return folder[-1]
 
-def blank_package(name = "", is_script = False, url = ""):
-	return { 	'name': '',
-				'type': 'PyScript' if is_script else 'VSPlugin',
-				'category': '',
-				'description': '',
-				'doom9': '',
-				'website': '',
-				'github': extract_git_repo(url) if extract_git_repo(url) else '',
-				'identifier': '',
-				'modulename' if is_script else 'namespace': name,
-				'releases': ''
-			}
+def blank_package(name = "", is_script = False, is_wheel = False, url = ""):
+	p = { 	'name': '',
+			'type': 'PyScript' if is_script else ('PyWheel' if is_wheel else 'VSPlugin'),
+			'category': '',
+			'description': '',
+			'doom9': '',
+			'website': '',
+			'github': extract_git_repo(url) if extract_git_repo(url) else '',
+			'identifier': name if is_script or is_wheel else '',
+			'modulename' if is_script or is_wheel else 'namespace': name,
+			'wheelname': name,
+			'releases': ''
+		}
+	if not is_wheel:
+		del p['wheelname']
+	return p
 
 if args.operation == 'compile':
     compile_packages()
@@ -426,53 +430,66 @@ elif args.operation == 'create-package':
 	
 	if args.packagefiletypes:
 		filetypes = args.packagefiletypes
+	
+	is_wheel = True if (pathlib.Path(url).suffix.lower() == '.whl') else False
 
 	print("fetching remote url")
 	dlfile = fetch_url_to_cache(url, "package", "creator", "")
 	
 	print("creating package")
-	listzip = list_archive_files(dlfile)
-	files_to_hash = []
-	for f in listzip.values():
-		if pathlib.Path(f).suffix: # simple folder filter
-			if "*" in filetypes:
-				files_to_hash.append(f)
-			else:
-				if pathlib.Path(f).suffix in filetypes:
-					files_to_hash.append(f)
-
 	new_rel_entry = { 'version': 'create-package', 'published': '' }
-	if not args.packagescript: # is plugin
-		new_rel_entry['win32'] = { 'url': url, 'files': {} }
-		new_rel_entry['win64'] = { 'url': url, 'files': {} }
-		for f in files_to_hash:
-			fullpath, hash, arch = decompress_hash_simple(dlfile, f)
-			file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
-			if arch == 32:
-				new_rel_entry['win32']['files'][file] = [fullpath, hash]
-			if arch == 64:
-				new_rel_entry['win64']['files'][file] = [fullpath, hash]
-			if arch == None:
-				new_rel_entry['win32']['files'][file] = [fullpath, hash]
-				new_rel_entry['win64']['files'][file] = [fullpath, hash]
-		
-		# remove 32/64 entry if no files are present
-		if not new_rel_entry['win32']['files']:
-			new_rel_entry.pop('win32', None)
-		if not new_rel_entry['win64']['files']:
-			new_rel_entry.pop('win64', None)
-			
-	else: # is script
-		new_rel_entry['script'] = { 'url': url, 'files': {} }
-		for f in files_to_hash:
-			fullpath, hash, arch = decompress_hash_simple(dlfile, f)
-			file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
-			new_rel_entry['script']['files'][file] = [fullpath, hash]
 	
+	
+	if is_wheel:
+		new_rel_entry['wheel'] = { 'url': url }
+		new_rel_entry['wheel']['hash'] = hashlib.sha256(open(dlfile,'rb').read()).hexdigest()
+		
+	else: # is plugin or script
+		listzip = list_archive_files(dlfile)
+		files_to_hash = []
+		for f in listzip.values():
+			if pathlib.Path(f).suffix: # simple folder filter
+				if "*" in filetypes:
+					files_to_hash.append(f)
+				else:
+					if pathlib.Path(f).suffix in filetypes:
+						files_to_hash.append(f)
+
+		
+		if not args.packagescript: # is plugin
+			new_rel_entry['win32'] = { 'url': url, 'files': {} }
+			new_rel_entry['win64'] = { 'url': url, 'files': {} }
+			for f in files_to_hash:
+				fullpath, hash, arch = decompress_hash_simple(dlfile, f)
+				file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
+				if arch == 32:
+					new_rel_entry['win32']['files'][file] = [fullpath, hash]
+				if arch == 64:
+					new_rel_entry['win64']['files'][file] = [fullpath, hash]
+				if arch == None:
+					new_rel_entry['win32']['files'][file] = [fullpath, hash]
+					new_rel_entry['win64']['files'][file] = [fullpath, hash]
+			
+			# remove 32/64 entry if no files are present
+			if not new_rel_entry['win32']['files']:
+				new_rel_entry.pop('win32', None)
+			if not new_rel_entry['win64']['files']:
+				new_rel_entry.pop('win64', None)
+				
+		else: # is script
+			new_rel_entry['script'] = { 'url': url, 'files': {} }
+			for f in files_to_hash:
+				fullpath, hash, arch = decompress_hash_simple(dlfile, f)
+				file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
+				new_rel_entry['script']['files'][file] = [fullpath, hash]
+		
 	if not args.packagescript:
-		final_package = blank_package(name = args.packagename[0], url = url)
+		if is_wheel:
+			final_package = blank_package(name = args.packagename[0], url = url, is_wheel = True)
+		else:
+			final_package = blank_package(name = args.packagename[0], url = url)
 	else:
-		final_package = blank_package(name = args.packagename[0], is_script = True, url = url)
+		final_package = blank_package(name = args.packagename[0], url = url, is_script = True)
 	final_package['releases'] = [ new_rel_entry ]
 	
 	
@@ -483,7 +500,7 @@ elif args.operation == 'create-package':
 		
 		print("package created")
 		
-		if extract_git_repo(url):
+		if extract_git_repo(url) and not is_wheel:
 			print("Is hosted on GitHub")
 			if args.git_token:
 				print("Auto updating package")
@@ -491,6 +508,11 @@ elif args.operation == 'create-package':
 				update_package(args.packagename[0])
 			else:
 				print("No git token ( -g ) was set, skipping auto update")
+
+		if is_wheel and url.startswith('https://files.pythonhosted.org'):
+			print("Auto updating wheel package")
+			args.overwrite = True
+			update_package(args.packagename[0])
 	else:
 		print("package file '{}'.json already exists. Skipping writing file.".format(args.packagename[0])) 
 	

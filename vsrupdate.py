@@ -107,11 +107,10 @@ def fetch_url(url, desc = None, token = None):
             return urlreq.read()
 
 def fetch_url_to_cache(url, name, tag_name, desc = None):
-    cache_path = 'dlcache/' + name + '_' + tag_name + '/' + url.rsplit('/')[-1]
+    cache_path = os.path.join('dlcache', name + '_' + tag_name, os.path.basename(url))
     if not os.path.isfile(cache_path):
         os.makedirs(os.path.split(cache_path)[0], exist_ok=True)
         with urllib.request.urlopen(urllib.request.Request(url, method='HEAD')) as urlreq:
-            cache_path = 'dlcache/' + name + '_' + tag_name + '/' + urlreq.info().get_filename()
             if not os.path.isfile(cache_path):
                 data = fetch_url(url, desc)
                 with open(cache_path, 'wb') as pl:

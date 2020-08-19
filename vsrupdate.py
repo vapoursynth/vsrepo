@@ -413,7 +413,6 @@ elif args.operation == 'update-local':
     else:
         update_package(args.package[0])
 elif args.operation == 'create-package':
-    # fixme, no pywheel support
     
 	import pathlib
 

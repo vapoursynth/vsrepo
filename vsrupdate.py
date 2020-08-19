@@ -31,6 +31,7 @@ import subprocess
 import difflib
 import tempfile
 import ftplib
+import zipfile
 
 try:
     import winreg
@@ -333,7 +334,7 @@ def compile_packages():
                 existing_identifiers.append(pfile['identifier'])
 
     for f in os.scandir('local'):
-        if f.is_file() and f.path.endswith('.json'):
+        if f.is_file() and f.path.endswith('.json') and not f.path.endswith('.new.json'):
             with open(f.path, 'r', encoding='utf-8') as ml:
                 print('Combining: ' + f.path)
                 pfile = json.load(ml)
@@ -341,17 +342,15 @@ def compile_packages():
                 pfile.pop('ignore', None)
                 combined.append(pfile)
 
-    with open('vspackages3.json', 'w', encoding='utf-8') as pl:
-        json.dump(fp=pl, obj={ 'file-format': 3, 'packages': combined}, ensure_ascii=False, indent=2)
+    data = json.dumps(obj={ 'file-format': 3, 'packages': combined}, ensure_ascii=False, indent=2)
 
     try:
         os.remove('vspackages3.zip')
     except:
         pass
         
-    # fixme, use zipfile here instead
-    result = subprocess.run([cmd7zip_path, 'a', '-tzip', 'vspackages3.zip', 'vspackages3.json'])
-    result.check_returncode()
+    with zipfile.ZipFile('vspackages3.zip', mode='w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+        zf.writestr('vspackages3.json', data)
 
 
 def getBinaryArch(bin):

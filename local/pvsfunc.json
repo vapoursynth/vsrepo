@@ -398,14 +398,6 @@
 				"url": "https://files.pythonhosted.org/packages/ec/8f/ccfe14966752e61d07354dafcb762dcf826de714361e3c79319a2ef0a18b/pvsfunc-1.0.0-py3-none-any.whl",
 				"hash": "cd143c1a569857e825559341ec28bce1cbe751887187251ce9593c090bea19fb"
 			}
-		},
-		{
-			"version": "create-package",
-			"published": "",
-			"wheel": {
-				"url": "https://files.pythonhosted.org/packages/bd/69/96fb6572d63d113f1d9bd1210c98e9ff3c14259fbce3086ec9c124440cb8/pvsfunc-3.5.1-py3-none-any.whl",
-				"hash": "27a7b8dd6f2e34485c6e79a81018ef1773b885542fbfda69dc8b14ec0696224f"
-			}
 		}
 	]
 }

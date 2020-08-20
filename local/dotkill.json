@@ -1,0 +1,47 @@
+{
+	"name": "DotKill",
+	"type": "VSPlugin",
+	"category": "Dot Crawl and Rainbows",
+	"description": "Spatio-temporal dotcrawl and rainbow remover for VapourSynth",
+	"doom9": "https://forum.doom9.org/showthread.php?t=173029",
+	"github": "https://github.com/myrsloik/DotKill",
+	"identifier": "com.vapoursynth.dotkill",
+	"namespace": "dotkill",
+	"releases": [
+		{
+			"version": "R2",
+			"published": "2020-08-18T13:53:09Z",
+			"win64": {
+				"url": "https://github.com/myrsloik/DotKill/releases/download/R2/DotKill-x64-R2.7z",
+				"files": {
+					"DotKill.dll": [
+						"DotKill.dll",
+						"345721d13241afe86666f8442c264e3db1a126e61b26d1cd0058e5ada5741567"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1",
+			"published": "2018-04-23T08:41:55Z",
+			"win32": {
+				"url": "https://github.com/myrsloik/DotKill/releases/download/R1/dotkill-r1.7z",
+				"files": {
+					"DotKill.dll": [
+						"Win32/DotKill.dll",
+						"80f9f2b6556f2c4f5652c165aec45fd8112daeef8f409a4f7a0bf0f76ca82720"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/myrsloik/DotKill/releases/download/R1/dotkill-r1.7z",
+				"files": {
+					"DotKill.dll": [
+						"x64/DotKill.dll",
+						"c63398e572863fd67f3af2279de13c3c10dc4d7dc3f888666f1c02d2c7ff037c"
+					]
+				}
+			}
+		}
+	]
+}

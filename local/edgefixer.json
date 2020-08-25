@@ -9,6 +9,28 @@
 	"github": "https://github.com/sekrit-twc/EdgeFixer",
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2020-08-22T19:03:08Z",
+			"win32": {
+				"url": "https://github.com/sekrit-twc/EdgeFixer/releases/download/r2/EdgeFixer_r2.7z",
+				"files": {
+					"EdgeFixer.dll": [
+						"EdgeFixer_r2/x86/EdgeFixer.dll",
+						"7176bc7e542f8ddca7100b770d6078b4e52910065d5bec47392dd5c71b749a38"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/sekrit-twc/EdgeFixer/releases/download/r2/EdgeFixer_r2.7z",
+				"files": {
+					"EdgeFixer.dll": [
+						"EdgeFixer_r2/x64/EdgeFixer.dll",
+						"06d97985c15ab731edbac11dabda973a66b1cba2375d55b644476a85bc10927b"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2018-01-14T03:06:10Z",
 			"win32": {

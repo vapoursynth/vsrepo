@@ -6,6 +6,13 @@
 	"github": "https://github.com/Beatrice-Raws/VapourSynth-insaneAA",
 	"identifier": "insaneaa",
 	"modulename": "insaneaa",
+	"dependencies": [
+		"descale_script",
+		"com.holywu.nnedi3cl",
+		"com.deinterlace.nnedi3",
+		"xxx.abc.znedi3",
+		"com.holywu.eedi3"
+	],
 	"releases": [
 		{
 			"version": "0.9c",

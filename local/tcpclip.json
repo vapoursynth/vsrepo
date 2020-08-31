@@ -1,0 +1,37 @@
+{
+	"name": "TCPClip",
+	"type": "PyScript",
+	"category": "Other",
+	"description": "Python class for distributed video processing and encoding",
+	"github": "https://github.com/Beatrice-Raws/VapourSynth-TCPClip",
+	"identifier": "tcpclip",
+	"modulename": "tcpclip",
+	"releases": [
+		{
+			"version": "2.4.0",
+			"published": "2020-08-30T15:21:49Z",
+			"script": {
+				"url": "https://api.github.com/repos/Beatrice-Raws/VapourSynth-TCPClip/zipball/2.4.0",
+				"files": {
+					"TCPClip.py": [
+						"Beatrice-Raws-VapourSynth-TCPClip-32ae97b/TCPClip.py",
+						"04cae9a810df0ca21bd437a20f87d4a0c0591de0d5d7c0aecabb5725deaa5176"
+					]
+				}
+			}
+		},
+		{
+			"version": "2.3.2",
+			"published": "2020-05-01T19:31:30Z",
+			"script": {
+				"url": "https://api.github.com/repos/Beatrice-Raws/VapourSynth-TCPClip/zipball/2.3.2",
+				"files": {
+					"TCPClip.py": [
+						"Beatrice-Raws-VapourSynth-TCPClip-cc23c49/TCPClip.py",
+						"3cec8d97e7a7002d25e7ab539d3cfa48297ec8cc6d980ad282280a2b8c46953d"
+					]
+				}
+			}
+		}
+	]
+}

@@ -9,6 +9,28 @@
 	"github": "https://github.com/sekrit-twc/timecube",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2020-09-01T21:33:35Z",
+			"win32": {
+				"url": "https://github.com/sekrit-twc/timecube/releases/download/r3/timecube_r3.7z",
+				"files": {
+					"vscube.dll": [
+						"timecube_r3/x86/vscube.dll",
+						"82922bd26e6639cdf364f21ef848498ab7d43f4131a8b879ea39e5374958fe99"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/sekrit-twc/timecube/releases/download/r3/timecube_r3.7z",
+				"files": {
+					"vscube.dll": [
+						"timecube_r3/x64/vscube.dll",
+						"4a28442fb06b23e13ed7e83d79042aa26c89d0ed344ffc71920dc8fd6dc3e0ac"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2a",
 			"published": "2018-09-08T02:59:26Z",
 			"win32": {

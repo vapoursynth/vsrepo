@@ -1,0 +1,33 @@
+{
+	"name": "vcm",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "This is a consolidation of vcmod, vcfreq, vcmove and addition of a few other functions. Some frequency domain functions.",
+	"website": "http://www.avisynth.nl/users/vcmohan",
+	"identifier": "in.vcmohan.cm",
+	"namespace": "vcm",
+	"releases": [
+		{
+			"version": "create-package",
+			"published": "",
+			"win32": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"78370408d3bf46529ea9f35f6ea316de487ae223f44786795c07df67c22f6ed7"
+					]
+				}
+			},
+			"win64": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"db409065554757b0b021a82ed0c046cebb75682f01bacaea5556d8e5ba35741c"
+					]
+				}
+			}
+		}
+	]
+}

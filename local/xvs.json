@@ -31,6 +31,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:4813e7b",
+			"published": "2020-04-26T14:34:07Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/xyx98/my-vapoursynth-script/4813e7b9d7bedf08d3d584c929c41c12a2aeb431/xvs.py",
+				"files": {
+					"xvs.py": [
+						"xvs.py",
+						"6aa6127a063000cec869d996bc825b53f9dcd4be2b64ee5d42dd52bdc91e04c2"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:1b20e65",
 			"published": "2018-09-14T13:18:33Z",
 			"script": {

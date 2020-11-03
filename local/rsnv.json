@@ -1,0 +1,27 @@
+{
+	"name": "RealSR",
+	"type": "VSPlugin",
+	"category": "Resizing and Format Conversion",
+	"description": "RealSR super resolution for VapourSynth, based on realsr-ncnn-vulkan. Only supports 4x scale.",
+	"github": "https://github.com/Kiyamou/VapourSynth-RealSR-ncnn-Vulkan",
+	"identifier": "com.vapoursynth.realsrnv",
+	"namespace": "rsnv",
+	"dependencies": [
+		"com.vapoursynth.realsrnv.models"
+	],
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2020-10-08T18:42:51Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-RealSR-ncnn-Vulkan/releases/download/r1/rsnv.7z",
+				"files": {
+					"rsnv.dll": [
+						"rsnv.dll",
+						"41ad7f5be7a513dbe6d56e168e411ca1a8185d279f2897f4fc4df0730569f4b2"
+					]
+				}
+			}
+		}
+	]
+}

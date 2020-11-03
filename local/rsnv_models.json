@@ -1,0 +1,28 @@
+{
+	"name": "RealSR models",
+	"type": "VSPlugin",
+	"category": "Plugin Dependency",
+	"description": "Model files for RealSR",
+	"github": "https://github.com/Kiyamou/VapourSynth-RealSR-ncnn-Vulkan",
+	"identifier": "com.vapoursynth.realsrnv.models",
+	"namespace": "rsnv_models",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2020-10-08T18:42:51Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-RealSR-ncnn-Vulkan/releases/download/r1/models.7z",
+				"files": {
+					"models/models-DF2K/x4.bin": [
+						"models-DF2K/x4.bin",
+						"a3f5eb53906ef54d5c5d125b2c9dd5f570d9dbb779e3d934df14b5375fd923c1"
+					],
+					"models/models-DF2K_JPEG/x4.param": [
+						"models-DF2K_JPEG/x4.param",
+						"e67d72f615ab8018ac62aca42755fbe247ebb62d34f51431172e305c1ef8c2dd"
+					]
+				}
+			}
+		}
+	]
+}

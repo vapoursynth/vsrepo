@@ -16,6 +16,46 @@
 	],
 	"releases": [
 		{
+			"version": "3.6.3",
+			"published": "2020-11-02T01:27:22.989403Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/27/1b/819d80b9a7e6e762a1296c84f4a5c550b523ff2b585d647107a2fb5db6ca/pvsfunc-3.6.3-py3-none-any.whl",
+				"hash": "fff502c440c361591f4a50b6002223c1826e0314683bf8d138bf5fd014b7b687"
+			}
+		},
+		{
+			"version": "3.6.2",
+			"published": "2020-11-02T00:21:52.171013Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/b1/9f/499ab5eeb293ac48a9e1c00544222a6f751b71aa1537000bbd861b3f4002/pvsfunc-3.6.2-py3-none-any.whl",
+				"hash": "a592c9f8785a585a9b1af506b56484da6d9ef3657f7ff07dd5c60244ce80b285"
+			}
+		},
+		{
+			"version": "3.6.1",
+			"published": "2020-10-07T22:19:09.878115Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/72/40/82d713d72af60d28c1184ce0427a1b5d09952330593f4bbc24890a1f4b6a/pvsfunc-3.6.1-py3-none-any.whl",
+				"hash": "2bf08009dba102c53b39066afed2020657c372772a96e7d72bef6b041115e138"
+			}
+		},
+		{
+			"version": "3.6.0",
+			"published": "2020-10-07T21:34:08.786809Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d4/24/82ee910de8543d361797e0e018c1b63ef3d67377f186b8924f29ee0b1b10/pvsfunc-3.6.0-py3-none-any.whl",
+				"hash": "5a1670756e4426c05b29301142705bef4635f6e6f43c1c06c679284ca2ecfeec"
+			}
+		},
+		{
+			"version": "3.5.2",
+			"published": "2020-10-07T18:34:50.362800Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/2a/4d/4721b7e53ed9d2234ee077d3d10d23988e7aa0c1e8e4b72f99a49754b7e0/pvsfunc-3.5.2-py3-none-any.whl",
+				"hash": "291abd29a60f3d7a1549a8087a902a28be74b833cff810c7c7d045fb6dfc871d"
+			}
+		},
+		{
 			"version": "3.5.1",
 			"published": "2020-07-10T18:44:46.969978Z",
 			"wheel": {

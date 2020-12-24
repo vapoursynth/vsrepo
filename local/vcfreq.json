@@ -10,6 +10,7 @@
 	"releases": [
 		{
 			"version": "2016-05-12",
+			"published": "2016-05-12T12:00:00Z",
 			"win32": {
 				"url": "http://www.avisynth.nl/users/vcmohan/vcfreq/vcfreq.7z",
 				"files": {

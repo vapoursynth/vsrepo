@@ -9,13 +9,13 @@
 	"releases": [
 		{
             "version": "22 Dec 2020",
-            "published": "2020-12-22T12:00:00Z",
+            "published": "2020-12-26T12:00:00Z",
             "win32": {
                 "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
                 "files": {
                     "vcm.dll": [
                         "x86/vcm.dll",
-                        "a0b8013b533c8991bbb37a686c1b20ec4b38af79af42058e4a7f94aadc7695d0"
+                        "1c2d6b8edf4176ac5fbd2cfb98753be5c9f580b8dffcb1e138e542053650da6a"
                     ]
                 }
             },
@@ -24,7 +24,7 @@
                 "files": {
                     "vcm.dll": [
                         "x64/vcm.dll",
-                        "0b9afca769471fe986e755f9ab4b0b2547badff64e165384c96228bc20877746"
+                        "a285da4a7b04afcdaa8bc3c4ebddf23f74ada991736bd99162869fb46ed4366a"
                     ]
                 }
             }

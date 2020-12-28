@@ -8,10 +8,22 @@
 	"modulename": "faggotdb",
 	"github": "https://github.com/AlucardSama04/faggotDb",
 	"dependencies": [
-		"fvsfunc",
 		"vsutil"
 	],
 	"releases": [
+		{
+			"version": "git:45845cf",
+			"published": "2020-12-11T16:20:48Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/AlucardSama04/faggotDb/45845cf4985feec8892d3f81a5370dcb7e0ef775/faggotdb.py",
+				"files": {
+					"faggotdb.py": [
+						"faggotdb.py",
+						"f21956f4a766b0f98f4af6a2c9fcdddc8a0c3e2cdca03b410cecee991e73fa1f"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:ca338d2",
 			"published": "2020-05-19T18:57:20Z",

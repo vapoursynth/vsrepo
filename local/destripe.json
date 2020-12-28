@@ -11,6 +11,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:a364a27",
+			"published": "2020-11-19T06:55:10Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/YomikoR/VapourSynth-Destripe/a364a279cd7dd57044fd5376a9a2c2a62c123e08/destripe.py",
+				"files": {
+					"destripe.py": [
+						"destripe.py",
+						"2c1e4e033ccd464ccef33767f344af22ad854feaeecf6cabeefacc031eb49bb7"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:5922681",
 			"published": "2020-08-10T20:31:59Z",
 			"script": {

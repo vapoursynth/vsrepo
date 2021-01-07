@@ -16,6 +16,54 @@
 	],
 	"releases": [
 		{
+			"version": "3.15.4",
+			"published": "2021-01-06T23:00:44.818384Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ef/63/feef6cc0043cbea3b1615a5718bcec4abe0c4fb94149c5d3791c39873296/pvsfunc-3.15.4-py3-none-any.whl",
+				"hash": "a060951992068e71b687b9f78cccbf57135833432df770c87fa8f50e912fd61e"
+			}
+		},
+		{
+			"version": "3.15.3",
+			"published": "2021-01-06T22:53:52.305579Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/7f/b3/42ae0981f2083bfcb354bd6306bc093ef20f14a90bc15c865c5de8aae29f/pvsfunc-3.15.3-py3-none-any.whl",
+				"hash": "b220b65bdb63d4c65d89ab938e6baf09d9071f947e6ea1d3da996b57ddec6ef4"
+			}
+		},
+		{
+			"version": "3.15.2",
+			"published": "2021-01-06T22:50:13.734463Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/9b/65/42c31fc292f5dbece1844907361658cc42f24bda48689b9578bfd0a47a9d/pvsfunc-3.15.2-py3-none-any.whl",
+				"hash": "b1a7d0266a3d1a3abcc59dc6040b04241547e9c1e00a197ff548e1632411cf46"
+			}
+		},
+		{
+			"version": "3.15.1",
+			"published": "2021-01-06T08:04:53.002990Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d0/6c/89602e908c53b9c1849d8f3cbf40176c7165fdf61b62752be1e075a080de/pvsfunc-3.15.1-py3-none-any.whl",
+				"hash": "7985802290f6a910e84a87182c18d933d0117b76cdd4f470f8c248494881ef3b"
+			}
+		},
+		{
+			"version": "3.15.0",
+			"published": "2021-01-06T08:02:25.914927Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/e8/50/a1d25b8a34236dc1b7ddaff28f12262474efed110a991b0f8c1b9cb68d90/pvsfunc-3.15.0-py3-none-any.whl",
+				"hash": "3016af2a709c0b84bebce4a1147a7abb5511e4b48f15c6ed5c5f406c832744a1"
+			}
+		},
+		{
+			"version": "3.14.0",
+			"published": "2021-01-06T04:33:02.074100Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/69/8d/996f7c42526f38504db03a78edfeb137fd1dd6bc2a93dafca31cff10266c/pvsfunc-3.14.0-py3-none-any.whl",
+				"hash": "cbd693d7bc3baca8fcf3d8c850f9443657cb94993158dc87d977916a3683be9e"
+			}
+		},
+		{
 			"version": "3.13.0",
 			"published": "2020-12-27T22:21:24.356169Z",
 			"wheel": {

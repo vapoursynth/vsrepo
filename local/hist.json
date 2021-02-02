@@ -1,0 +1,55 @@
+{
+	"name": "Histogram",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Port of the Histogram() function from Avisynth.",
+	"github": "https://github.com/dubhater/vapoursynth-histogram",
+	"identifier": "com.nodame.histogram",
+	"namespace": "hist",
+	"releases": [
+		{
+			"version": "v2",
+			"published": "2018-06-07T17:49:53Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-histogram/releases/download/v2/vapoursynth-histogram-v2-win32.7z",
+				"files": {
+					"libhistogram.dll": [
+						"libhistogram.dll",
+						"ab99dc780959699b34e5273d5bbafe59d29ce943a19c46d14b189cf7be63d204"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-histogram/releases/download/v2/vapoursynth-histogram-v2-win64.7z",
+				"files": {
+					"libhistogram.dll": [
+						"libhistogram.dll",
+						"cedbae0e692727799c3b523a46bb4774c6aacbfb62c2c325aafaa4d048c5b8b0"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0",
+			"published": "2013-10-01T09:08:06Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-histogram/releases/download/v1.0/vapoursynth-histogram-v1.0-win32.7z",
+				"files": {
+					"libhistogram.dll": [
+						"libhistogram.dll",
+						"b7ecbb03bd13df9893ce1bc7c4112cf4b85ed645d37e1a57d3b93488ab807e20"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-histogram/releases/download/v1.0/vapoursynth-histogram-v1.0-win64.7z",
+				"files": {
+					"libhistogram.dll": [
+						"libhistogram.dll",
+						"1a2cea7beda5eeebac5c3b5c0becb514157ef686db9b1d25cf1d677a3f2bc2a1"
+					]
+				}
+			}
+		}
+	]
+}

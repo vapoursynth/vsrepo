@@ -9,6 +9,28 @@
 	"namespace": "vcmod",
 	"releases": [
 		{
+            "version": "23 Aug 2020",
+            "published": "2020-08-23T12:00:00Z",
+            "win32": {
+                "url": "http://www.avisynth.nl/users/vcmohan/vcmod/vcmod.7z",
+                "files": {
+                    "vcmod.dll": [
+                        "x86/vcmod.dll",
+                        "7c314f976ee0845bf49333b3727cd357400da8068b3d288111c07924dff440f7"
+                    ]
+                }
+            },
+            "win64": {
+                "url": "http://www.avisynth.nl/users/vcmohan/vcmod/vcmod.7z",
+                "files": {
+                    "vcmod.dll": [
+                        "x64/vcmod.dll",
+                        "5993b9ae85e066fe851c2860037fc469b371be58173e947a9a407f0aa2686a55"
+                    ]
+                }
+            }
+        },
+		{
 			"version": "2017-10-17",
 			"published": "2017-10-17T12:00:00Z",
 			"win32": {

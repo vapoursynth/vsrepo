@@ -9,6 +9,28 @@
 	"github": "https://github.com/dubhater/vapoursynth-fillborders",
 	"releases": [
 		{
+			"version": "v2",
+			"published": "2021-01-26T15:05:53Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-fillborders/releases/download/v2/vapoursynth-fillborders-v2-win32.7z",
+				"files": {
+					"libfillborders.dll": [
+						"libfillborders.dll",
+						"82861859f23d20fcfe6263fe59dab111eea0eeeae0f7ec6273649da5121e5e94"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-fillborders/releases/download/v2/vapoursynth-fillborders-v2-win64.7z",
+				"files": {
+					"libfillborders.dll": [
+						"libfillborders.dll",
+						"f89706c65bc9c42b3585e80f474518ffefea15508a53d39010bdb41a655f344f"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.0",
 			"published": "2013-12-15T14:58:20Z",
 			"win32": {

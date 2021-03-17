@@ -1,0 +1,24 @@
+{
+	"name": "Atomch Tools",
+	"type": "PyScript",
+	"category": "Other",
+	"description": "Collection of different functions like masking, range or ivtc",
+	"github": "https://github.com/DJATOM/VapourSynth-atomchtools",
+	"identifier": "atomchtools",
+	"modulename": "atomchtools",
+	"releases": [
+		{
+			"version": "0.88",
+			"published": "2021-03-16T17:01:34Z",
+			"script": {
+				"url": "https://api.github.com/repos/DJATOM/VapourSynth-atomchtools/zipball/0.88",
+				"files": {
+					"atomchtools.py": [
+						"DJATOM-VapourSynth-atomchtools-1bef854/atomchtools.py",
+						"4abb68ea643df20cc5433089e5cfd467f5c896cd91aa98af55fc3c5ffde59542"
+					]
+				}
+			}
+		}
+	]
+}

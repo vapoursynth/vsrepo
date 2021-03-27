@@ -341,12 +341,19 @@ def find_dist_version(pkg, path):
         return
         
     name = get_python_package_name(pkg)
+    versions = []
     
     for targetname in os.listdir(path):
         if (targetname.startswith(f"{name}-") and targetname.endswith(".dist-info")):
-            return targetname[len(name)+1:-10]
+            # only bother with dist-info dirs that actually have a usable record in case a package uninstall failed to delete the dir
+            if os.path.isfile(os.path.join(path, targetname, 'RECORD')):
+                versions.append(targetname[len(name)+1:-10])
 
-    return
+    versions.sort(reverse=True)
+    if len(versions) > 0:
+        return versions[0]
+    else:
+        return
 
 def detect_installed_packages():
     if package_list is not None:

@@ -9,6 +9,19 @@
 	"github": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU",
 	"releases": [
 		{
+			"version": "r5",
+			"published": "2021-03-23T10:33:32Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r5/VapourSynth-BilateralGPU-r5.rar",
+				"files": {
+					"bilateralGPU.dll": [
+						"VapourSynth-BilateralGPU-r5/x64/BilateralGPU.dll",
+						"eba8c9b95664f05ca07417c06a2f1e5a51f968b7bb343a90a7b57260b4b874c4"
+					]
+				}
+			}
+		},
+		{
 			"version": "r4",
 			"published": "2017-04-16T14:30:16Z",
 			"win64": {

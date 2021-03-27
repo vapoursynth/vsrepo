@@ -33,58 +33,6 @@
 				"url": "https://files.pythonhosted.org/packages/77/4f/54a3309ea6e21225c1c8df979127174002e31256767823fea085f256c24e/lvsfunc-0.1.0-py3-none-any.whl",
 				"hash": "6a799aba2b3e34f92f92c48fa6349d23800db9dac3d11c3fc3db23a188f540d7"
 			}
-		},
-		{
-			"version": "git:c2786dc",
-			"published": "2019-11-15T20:14:27Z",
-			"script": {
-				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/lvsfunc/c2786dc9c092b7694ea7d3fcad5494101c64c0cf/lvsfunc.py",
-				"files": {
-					"lvsfunc.py": [
-						"lvsfunc.py",
-						"bef29ecd2c2713ab4bfeeb7430732272f4837d7f669007a87379945cbbbeb1fd"
-					]
-				}
-			}
-		},
-		{
-			"version": "git:393a602",
-			"published": "2019-10-26T01:16:36Z",
-			"script": {
-				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/lvsfunc/393a6023a434fe7ad33d27d57a372c90dcdb2cd1/lvsfunc.py",
-				"files": {
-					"lvsfunc.py": [
-						"lvsfunc.py",
-						"f99d9a0adf7a7e6588076db7a9e6d13c5de30e01e8901aa8ada13d1885b7be0d"
-					]
-				}
-			}
-		},
-		{
-			"version": "git:28f65bc",
-			"published": "2019-09-13T07:21:56Z",
-			"script": {
-				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/lvsfunc/28f65bc9dd988824c5c78e758a981ea32cfc5fda/lvsfunc.py",
-				"files": {
-					"lvsfunc.py": [
-						"lvsfunc.py",
-						"68fc54af7c21c96afac642e56567c7d86e0f8303709642d2c8b3421cd09d60d5"
-					]
-				}
-			}
-		},
-		{
-			"version": "git:b378362",
-			"published": "2019-06-14T09:45:20Z",
-			"script": {
-				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/lvsfunc/b37836250a4b616c64dae932e3ac1f70ae3bcf56/lvsfunc.py",
-				"files": {
-					"lvsfunc.py": [
-						"lvsfunc.py",
-						"f4034e68867046e07ecaa750c4ae0cb106a6b228118601e062be97342f805a7f"
-					]
-				}
-			}
 		}
 	]
 }

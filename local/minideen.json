@@ -10,6 +10,28 @@
 	"github": "https://github.com/dubhater/vapoursynth-minideen",
 	"releases": [
 		{
+			"version": "v2",
+			"published": "2021-03-27T19:47:53Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-minideen/releases/download/v2/vapoursynth-minideen-v2-win32.7z",
+				"files": {
+					"libminideen.dll": [
+						"libminideen.dll",
+						"f9c9c0985fc74a2c01b23339e016e02ddafaaa008fb70056620fd506eb9f0241"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-minideen/releases/download/v2/vapoursynth-minideen-v2-win64.7z",
+				"files": {
+					"libminideen.dll": [
+						"libminideen.dll",
+						"53f6081adec040902461592538de7abb562afa5b86619f69c95b8e1829a44662"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1",
 			"published": "2018-07-10T13:43:12Z",
 			"win32": {

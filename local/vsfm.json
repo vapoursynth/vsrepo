@@ -9,6 +9,28 @@
 	"github": "https://github.com/sorayuki/VSFilterMod",
 	"releases": [
 		{
+			"version": "r5.2.4",
+			"published": "2021-03-28T16:14:09Z",
+			"win32": {
+				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5.2.4/VSFilterMod_bin.zip",
+				"files": {
+					"VSFilterMod.dll": [
+						"x86/VSFilterMod.dll",
+						"0c8de0e99f62999d11f9db0dc384f4b546946f5c29af8eb5069c60c20a254bff"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/sorayuki/VSFilterMod/releases/download/r5.2.4/VSFilterMod_bin.zip",
+				"files": {
+					"VSFilterMod.dll": [
+						"x64/VSFilterMod.dll",
+						"7f469ac03af4ecc93076c777e548ac23ae1b66ec95d2f9264b92bdaefa97e588"
+					]
+				}
+			}
+		},
+		{
 			"version": "R5.2.3",
 			"published": "2020-08-09T04:21:31Z",
 			"win32": {

@@ -1,0 +1,34 @@
+{
+	"name": "vfx - Special Effects",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Special effects plugin. This is equivalent to effectsPlus plugin for avisynth+",
+	"doom9": "https://forum.doom9.org/showthread.php?t=182722",
+	"website": "http://www.avisynth.nl/users/vcmohan/vfx/vfx.html",
+	"identifier": "com.mohanvc.vfx",
+	"namespace": "vfx",
+	"releases": [
+		{
+			"version": "Apr 2021",
+            "published": "2021-04-11T12:00:00Z",
+			"win32": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vfx/vfx.7z",
+				"files": {
+					"vfx.dll": [
+						"x86/vfx.dll",
+						"11046a69eba57bf4a96ac35832f6626d70b5b1c8594799fb7f2c50845298f7cf"
+					]
+				}
+			},
+			"win64": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vfx/vfx.7z",
+				"files": {
+					"vfx.dll": [
+						"x64/vfx.dll",
+						"7c8d830b0a06d05ab1d5527d593bee9bd5a537d9b2072dec7f134e51cea5a352"
+					]
+				}
+			}
+		}
+	]
+}

@@ -11,6 +11,19 @@
 	],
 	"releases": [
 		{
+			"version": "r3.1",
+			"published": "2021-04-15T12:51:27Z",
+			"win64": {
+				"url": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan/releases/download/r3.1/vsw2xnvk-r3.1-win64.7z",
+				"files": {
+					"vsw2xnvk.dll": [
+						"vsw2xnvk.dll",
+						"ff3d2e25813df8d34cc6cf82eaa14fc38f4c18c19914a17a962f3859529c712f"
+					]
+				}
+			}
+		},
+		{
 			"version": "r3",
 			"published": "2020-06-07T07:37:29Z",
 			"win64": {

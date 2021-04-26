@@ -266,6 +266,8 @@ class AlphaOutputTuple(typing.NamedTuple):
 
 Func = typing.Callable[..., typing.Any]
 
+Function = typing.Callable[..., typing.Any]
+
 class Error(Exception): ...
 
 def set_message_handler(handler_func: typing.Callable[[int, str], None]) -> None: ...

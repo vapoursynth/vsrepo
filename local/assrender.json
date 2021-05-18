@@ -1,0 +1,38 @@
+{
+	"name": "assrender",
+	"type": "VSPlugin",
+	"description": "assrender with VapourSynth interface added, based on the source of pinterf's fork",
+	"website": "https://github.com/Masaiki/assrender",
+	"category": "Subtitles",
+	"identifier": "com.masaiki.assrender",
+	"namespace": "assrender",
+	"github": "https://github.com/Masaiki/assrender",
+	"releases": [
+		{
+			"version": "0.35.3",
+			"published": "2021-05-02T03:25:49Z",
+			"win64": {
+				"url": "https://github.com/Masaiki/assrender/releases/download/0.35.3/assrender_v0353_0.15.1.zip",
+				"files": {
+					"assrender.dll": [
+						"assrender.dll",
+						"c47d5a1fd3572a04eb2f87f02e34422a01237822496e95b6dc1f0e2a156d32ff"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.35.2",
+			"published": "2021-04-15T09:48:34Z",
+			"win64": {
+				"url": "https://github.com/Masaiki/assrender/releases/download/0.35.2/assrender_v0352_0.15.0.zip",
+				"files": {
+					"assrender.dll": [
+						"assrender.dll",
+						"f25c3d7b1f7e5f54427b268ed7be91a39b07d0417eb1a2c5adc0187cb7352c62"
+					]
+				}
+			}
+		}
+	]
+}

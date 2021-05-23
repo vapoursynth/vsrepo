@@ -33,6 +33,32 @@
 					]
 				}
 			}
+		},
+		{
+			"version": "0.35.1",
+			"published": "2021-04-11T23:56:07Z",
+			"win64": {
+				"url": "https://github.com/Masaiki/assrender/releases/download/0.35.1/assrender_v0351_0.15.0.zip",
+				"files": {
+					"assrender.dll": [
+						"assrender.dll",
+						"7f876dc239f4ea0fa0ed2f63574b05908e9bcaead12eb5ddcd1b26f52be4b66b"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.35.0",
+			"published": "2021-04-11T14:14:52Z",
+			"win64": {
+				"url": "https://github.com/Masaiki/assrender/releases/download/0.35.0/assrender_v0350_0.15.0.zip",
+				"files": {
+					"assrender.dll": [
+						"assrender.dll",
+						"d97516c48f41a7b6b357ae665463725483aaa4f4f3448a633836b96d43b3b5a2"
+					]
+				}
+			}
 		}
 	]
 }

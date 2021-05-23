@@ -8,6 +8,19 @@
 	"namespace": "area",
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2021-05-06T16:10:24Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-AreaResize/releases/download/r2/AreaResize-r2.7z",
+				"files": {
+					"AreaResize.dll": [
+						"AreaResize.dll",
+						"1ca36a6aee079c6f22f2b8960aa937508aa58f80fa5c89563bee5bef7ebd06d3"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2020-01-15T13:15:43Z",
 			"win64": {

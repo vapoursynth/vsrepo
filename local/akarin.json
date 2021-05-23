@@ -1,0 +1,55 @@
+{
+	"name": "Expr",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Works just like std.Expr with additional operators like sin, N (current frame number) or X, Y (aka mt_lutspa)",
+	"github": "https://github.com/AkarinVS/vapoursynth-plugin",
+	"identifier": "info.akarin.vsplugin",
+	"namespace": "akarin",
+	"releases": [
+		{
+			"version": "v0.2",
+			"published": "2021-05-23T11:46:31Z",
+			"win32": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.2/akarin-release-x86.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"fdcc81f99631f36c9868d354a363535079553be5fb05df12e43b33a7bf310a35"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.2/akarin-release-amd64.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"f5e5b83848c2ae5d6f1ceb3c182e9218af1a421502926039f83c961fa4eea429"
+					]
+				}
+			}
+		},
+		{
+			"version": "v0.1",
+			"published": "2021-05-20T10:24:03Z",
+			"win32": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.2/akarin-release-x86.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"fdcc81f99631f36c9868d354a363535079553be5fb05df12e43b33a7bf310a35"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.1/akarin-release-amd64.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"14d4d18b27f46ad116527c582d2e70ff0873b25b1288cdad195e29dc36ecb3b3"
+					]
+				}
+			}
+		}
+	]
+}

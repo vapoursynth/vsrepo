@@ -8,6 +8,19 @@
 	"modulename": "atomchtools",
 	"releases": [
 		{
+			"version": "0.9",
+			"published": "2021-05-26T21:44:36Z",
+			"script": {
+				"url": "https://api.github.com/repos/DJATOM/VapourSynth-atomchtools/zipball/0.9",
+				"files": {
+					"atomchtools.py": [
+						"DJATOM-VapourSynth-atomchtools-34e1623/atomchtools.py",
+						"6f86e1e3d88eceb77ca4a1d8604f72ad9a28700f0c3906f1bc60fa1eac8c5176"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.89",
 			"published": "2021-04-27T14:16:40Z",
 			"script": {

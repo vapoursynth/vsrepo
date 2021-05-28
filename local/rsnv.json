@@ -11,6 +11,19 @@
 	],
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2021-05-24T11:37:49Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-RealSR-ncnn-Vulkan/releases/download/r2/rsnv.7z",
+				"files": {
+					"rsnv.dll": [
+						"rsnv.dll",
+						"ea05024669eb40702da24dd62cad2398c4f36932ddf12500fffcfff5084517cd"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2020-10-08T18:42:51Z",
 			"win64": {

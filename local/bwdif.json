@@ -9,6 +9,19 @@
 	"namespace": "bwdif",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2021-05-28T07:34:55Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bwdif/releases/download/r3/Bwdif-r3.7z",
+				"files": {
+					"Bwdif.dll": [
+						"plugins64/Bwdif.dll",
+						"250771b29d04226ac81fb0f81bd02d60d6cc251023d569e35971fb8e96b6736c"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2020-06-19T13:43:54Z",
 			"win64": {

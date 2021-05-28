@@ -8,6 +8,72 @@
 	"namespace": "akarin",
 	"releases": [
 		{
+			"version": "v0.35",
+			"published": "2021-05-26T16:10:46Z",
+			"win32": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.35/akarin-release-x86.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"677dcc1a731ed874ae9da2015838e409fbacdfa5111dfbf82966f9b63ae2b528"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.35/akarin-release-amd64.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"29d7757a1e733364a3481a2e9bf9579db764a4304a397d5f3e9dfde01d635bb1"
+					]
+				}
+			}
+		},
+		{
+			"version": "v0.3",
+			"published": "2021-05-26T15:24:22Z",
+			"win32": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.3/akarin-release-x86.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"42734db6615c09e7e837d05b6f2559038ae52be66bfe87629c09d6c8aa4c5473"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.3/akarin-release-amd64.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"60ca10caa70684b9bb489f857c065b750ee7ae2d70c90cea3d3c1469ce9b08ea"
+					]
+				}
+			}
+		},
+		{
+			"version": "v0.25",
+			"published": "2021-05-26T13:06:59Z",
+			"win32": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.25/akarin-release-x86.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"4556bea87b957a3fffdf2b24850399c7e21201ebf3e667162183b9bf1c06980f"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.25/akarin-release-amd64.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"69dd316838d8a58d5d004e057322d73a74f02c0dc4961b68c254cec9f8f66632"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.2",
 			"published": "2021-05-23T11:46:31Z",
 			"win32": {

@@ -7,13 +7,23 @@
 	"category": "Other",
 	"identifier": "com.holywu.vmaf",
 	"namespace": "vmaf",
-	"dependencies": [
-		"com.holywu.vmaf.models"
-	],
 	"ignore": [
 		"r2.1"
 	],
 	"releases": [
+		{
+			"version": "r7",
+			"published": "2021-05-28T07:55:36Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VMAF/releases/download/r7/VMAF-r7.7z",
+				"files": {
+					"VMAF.dll": [
+						"plugins64/VMAF.dll",
+						"4ed35ef6ed0b4941c4b63c44bc2c749c32002bd281a3f90601b994e1403050d4"
+					]
+				}
+			}
+		},
 		{
 			"version": "r6",
 			"published": "2019-10-12T10:30:34Z",

@@ -57,7 +57,7 @@ parser.add_argument('-url', dest='packageurl', nargs=1, help='URL of the archive
 parser.add_argument('-pname', dest='packagename', nargs=1, help='Filename or namespace of your package')
 parser.add_argument('-script', action='store_true', dest='packagescript', help='Type of the package is script. Otherwise a package of type plugin is created')
 parser.add_argument('-types', dest='packagefiletypes', nargs='+', help='Which file types should be included. default is .dll')
-parser.add_argument('-kf', dest='keepfolder', type=int, default=0, nargs='?', help='Keep the folder structure')
+parser.add_argument('-kf', dest='keepfolder', type=int, default=-1, nargs='?', help='Keep the folder structure')
 
 args = parser.parse_args()
 
@@ -459,7 +459,7 @@ elif args.operation == 'create-package':
 			new_rel_entry['win64'] = { 'url': url, 'files': {} }
 			for f in files_to_hash:
 				fullpath, hash, arch = decompress_hash_simple(dlfile, f)
-				file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
+				file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else os.path.basename(fullpath)
 				if arch == 32:
 					new_rel_entry['win32']['files'][file] = [fullpath, hash]
 				if arch == 64:
@@ -478,7 +478,7 @@ elif args.operation == 'create-package':
 			new_rel_entry['script'] = { 'url': url, 'files': {} }
 			for f in files_to_hash:
 				fullpath, hash, arch = decompress_hash_simple(dlfile, f)
-				file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder > 0 else os.path.basename(fullpath)
+				file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else os.path.basename(fullpath)
 				new_rel_entry['script']['files'][file] = [fullpath, hash]
 		
 	if not args.packagescript:

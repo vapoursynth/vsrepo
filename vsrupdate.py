@@ -453,7 +453,8 @@ elif args.operation == 'create-package':
 					if pathlib.Path(f).suffix in filetypes:
 						files_to_hash.append(f)
 
-		
+		files_to_hash = sorted(files_to_hash)
+
 		if not args.packagescript: # is plugin
 			new_rel_entry['win32'] = { 'url': url, 'files': {} }
 			new_rel_entry['win64'] = { 'url': url, 'files': {} }

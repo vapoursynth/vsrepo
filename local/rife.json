@@ -1,0 +1,27 @@
+{
+	"name": "RIFE",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "RIFE (Real-Time Intermediate Flow Estimation for Video Frame Interpolation)",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan",
+	"identifier": "com.holywu.rife",
+	"namespace": "rife",
+	"dependencies": [
+		"com.holywu.rife.models"
+	],
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2021-06-01T15:14:00Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan/releases/download/r1/RIFE-r1.7z",
+				"files": {
+					"RIFE.dll": [
+						"plugins64/RIFE.dll",
+						"cfd684e094593fb17e2a93ae543b4b6c37569ab4e253b38d3d80634f96be3641"
+					]
+				}
+			}
+		}
+	]
+}

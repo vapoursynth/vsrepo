@@ -1,0 +1,32 @@
+{
+	"name": "BM3DCUDA RTC",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "BM3D denoising filter for VapourSynth, implemented in CUDA. The RTC version compiles GPU code at runtime, which might run faster at the cost of a slight overhead.",
+	"github": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA",
+	"identifier": "com.wolframrhodium.bm3dcuda_rtc",
+	"namespace": "bm3dcuda_rtc",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2021-06-01T12:36:38Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R1/VapourSynth-BM3DCUDA-r1.rar",
+				"files": {
+                    "BM3DCUDA_RTC.dll": [
+                        "VapourSynth-BM3DCUDA_RTC-r1/BM3DCUDA_RTC.dll",
+                        "bd11fbb72ec393b1ed555b18f31eddf8d76ef70ca630463ff1ef5eac0af0ab06"
+                    ],
+                    "nvrtc-builtins64_113.dll": [
+                        "VapourSynth-BM3DCUDA_RTC-r1/nvrtc-builtins64_113.dll",
+                        "a0c62643f330a1a8b320e711c3042c3942eb83302e6f8824e3aaf3b66a088955"
+                    ],
+                    "nvrtc64_112_0.dll": [
+                        "VapourSynth-BM3DCUDA_RTC-r1/nvrtc64_112_0.dll",
+                        "d0289c110cc59b792ada75d6b89f0f83df8c78292e763b0a6c4c51ea3f3b98cb"
+                    ]
+                }
+			}
+		}
+	]
+}

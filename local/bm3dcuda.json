@@ -1,0 +1,24 @@
+{
+	"name": "BM3DCUDA",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "BM3D denoising filter for VapourSynth, implemented in CUDA",
+	"github": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA",
+	"identifier": "com.wolframrhodium.bm3dcuda",
+	"namespace": "bm3dcuda",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2021-06-01T12:36:38Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R1/VapourSynth-BM3DCUDA-r1.rar",
+				"files": {
+					"BM3DCUDA.dll": [
+						"VapourSynth-BM3DCUDA-r1/BM3DCUDA.dll",
+						"eeb18f34bb080f6bb23dd5ecb8e69d462d7b4f91b0730ceb8fb772c1c9dbbd7a"
+					]
+				}
+			}
+		}
+	]
+}

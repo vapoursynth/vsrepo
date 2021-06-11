@@ -11,6 +11,32 @@
 	],
 	"releases": [
 		{
+			"version": "r4",
+			"published": "2021-06-11T04:12:17Z",
+			"win64": {
+				"url": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan/releases/download/r4/vsw2xnvk-r4-win64.7z",
+				"files": {
+					"vsw2xnvk.dll": [
+						"vsw2xnvk.dll",
+						"9555705df8227c23f732fc7552fa051a29af525f661d7181bfa4fcc4174fcc2e"
+					]
+				}
+			}
+		},
+		{
+			"version": "r3.2",
+			"published": "2021-06-03T12:17:15Z",
+			"win64": {
+				"url": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan/releases/download/r3.2/vsw2xnvk-r3.2-win64.7z",
+				"files": {
+					"vsw2xnvk.dll": [
+						"vsw2xnvk.dll",
+						"a9bb9e616a2d53230a6af266f89151c425ae8941272724aaa8b2ef61e35a69c7"
+					]
+				}
+			}
+		},
+		{
 			"version": "r3.1",
 			"published": "2021-04-15T12:51:27Z",
 			"win64": {

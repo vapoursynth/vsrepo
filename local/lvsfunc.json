@@ -19,6 +19,26 @@
 	],
 	"releases": [
 		{
+			"version": "3.4",
+			"published": "2021-06-04T19:32:08Z"
+		},
+		{
+			"version": "0.3.4",
+			"published": "2021-06-04T19:31:40.451480Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/12/2d/1b282af3cd73e56085710b45761bd8444a3a3e5e2dd3bac61ca94f8a61c9/lvsfunc-0.3.4-py3-none-any.whl",
+				"hash": "20387f2086268806f30411fc1556b8bfeacadf1e2afcfafeeebb28b6d0e5b5ff"
+			}
+		},
+		{
+			"version": "0.3.3",
+			"published": "2021-06-04T19:29:05.983269Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/b7/2c/bed0432a4bb27da0b5c67973e746d0c24de8988f63e1623f9b351de32710/lvsfunc-0.3.3-py3-none-any.whl",
+				"hash": "a1a8dfec76a9f32d23545beb452d89a5d00633f83362197ea4d68f0866f8da13"
+			}
+		},
+		{
 			"version": "0.3.2",
 			"published": "2021-05-31T02:46:46.586762Z",
 			"wheel": {

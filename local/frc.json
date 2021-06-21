@@ -1,0 +1,50 @@
+{
+	"name": "FrameRateConverter",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Increases the frame rate with interpolation and fine artifact removal.",
+	"doom9": "https://forum.doom9.org/showthread.php?t=174793",
+	"github": "https://github.com/mysteryx93/FrameRateConverter",
+	"identifier": "com.vapoursynth.frc",
+	"namespace": "frc",
+	"ignore": [
+		"v1.3",
+		"v1.2.1",
+		"v1.2",
+		"v1.1",
+		"v1.0",
+		"v0.8-beta",
+		"v0.7-alpha",
+		"v0.6-alpha",
+		"v0.5.1-alpha",
+		"v0.5-alpha",
+		"v0.4-alpha",
+		"v0.3-alpha",
+		"v0.2-alpha",
+		"v0.1-alpha"
+	],
+	"releases": [
+		{
+			"version": "v2.0-beta",
+			"published": "2021-06-21T02:13:38Z",
+			"win32": {
+				"url": "https://github.com/mysteryx93/FrameRateConverter/releases/download/v2.0-beta/FrameRateConverter-v2.0-beta.zip",
+				"files": {
+					"FrameRateConverter-x86.dll": [
+						"FrameRateConverter-x86.dll",
+						"180bdde698d761a21d8f165ee9b1ee74dfb0cd2580de40877b7dc4c0db59b378"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/mysteryx93/FrameRateConverter/releases/download/v2.0-beta/FrameRateConverter-v2.0-beta.zip",
+				"files": {
+					"FrameRateConverter-x64.dll": [
+						"FrameRateConverter-x64.dll",
+						"5d4c9a16f45b8beef2de7946dd815bec319536503c05ce2bf7bff9f5266d30aa"
+					]
+				}
+			}
+		}
+	]
+}

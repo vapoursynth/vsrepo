@@ -27,6 +27,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:29ced90",
+			"published": "2021-06-16T00:27:54Z",
+			"script": {
+				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/fvsfunc/29ced90a3f620844dea0efa8666542298f68f421/fvsfunc.py",
+				"files": {
+					"fvsfunc.py": [
+						"fvsfunc.py",
+						"f133e3dba013a3958a11caf9d8d2531d6e558adfbf48045acc2ea50b0ceabcd7"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:96211df",
 			"published": "2020-10-12T08:29:30Z",
 			"script": {

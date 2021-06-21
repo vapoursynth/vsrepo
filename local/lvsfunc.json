@@ -19,6 +19,14 @@
 	],
 	"releases": [
 		{
+			"version": "0.3.5",
+			"published": "2021-06-18T03:00:30.288029Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/bd/74/eb701c02418d94ee517c0fe2059b98c61469c8ca1a5688129c00d0f29442/lvsfunc-0.3.5-py3-none-any.whl",
+				"hash": "dff901f5f65fa2b8dd4a84dcbfd5b5521629e02afc3cd44cee4ec4120912b306"
+			}
+		},
+		{
 			"version": "3.4",
 			"published": "2021-06-04T19:32:08Z"
 		},

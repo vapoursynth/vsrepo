@@ -28,23 +28,31 @@
 			"version": "v2.0-beta",
 			"published": "2021-06-21T02:13:38Z",
 			"win32": {
-				"url": "https://github.com/mysteryx93/FrameRateConverter/releases/download/v2.0-beta/FrameRateConverter-v2.0-beta.zip",
+				"url": "https://github.com/mysteryx93/FrameRateConverter/releases/download/v2.0-beta/FrameRateConverter-v2.0-beta3.zip",
 				"files": {
 					"FrameRateConverter-x86.dll": [
 						"FrameRateConverter-x86.dll",
-						"180bdde698d761a21d8f165ee9b1ee74dfb0cd2580de40877b7dc4c0db59b378"
+						"1931ef7880f7168204de52f289369eb7efd9b3e731731244b645d33267ff973b"
+					],
+					"FrameRateConverter.py": [
+						"FrameRateConverter.py",
+						"ad91ca9934a6e66493c52657fa0c77ca01abba6a7a52fdb645dc32b857a09dca"
 					]
 				}
 			},
 			"win64": {
-				"url": "https://github.com/mysteryx93/FrameRateConverter/releases/download/v2.0-beta/FrameRateConverter-v2.0-beta.zip",
+				"url": "https://github.com/mysteryx93/FrameRateConverter/releases/download/v2.0-beta/FrameRateConverter-v2.0-beta3.zip",
 				"files": {
 					"FrameRateConverter-x64.dll": [
 						"FrameRateConverter-x64.dll",
-						"5d4c9a16f45b8beef2de7946dd815bec319536503c05ce2bf7bff9f5266d30aa"
+						"1807ff459e23588536384738dc93f4797a2032c4b71994b61867c49d39147e54"
+					],
+					"FrameRateConverter.py": [
+						"FrameRateConverter.py",
+						"ad91ca9934a6e66493c52657fa0c77ca01abba6a7a52fdb645dc32b857a09dca"
 					]
 				}
 			}
-		}
+		},
 	]
 }

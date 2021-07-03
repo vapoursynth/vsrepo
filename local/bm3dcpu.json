@@ -12,20 +12,20 @@
 	],
 	"releases": [
 		{
-			"version": "R2.1",
-			"published": "2021-07-01T10:36:23Z",
+			"version": "R2.2",
+			"published": "2021-07-03T12:02:49Z",
 			"win64": {
-				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.1/VapourSynth-BM3DCPU-r2.1.rar",
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.2/VapourSynth-BM3DCPU-r2.2.rar",
 				"files": {
 					"BM3DCPU.dll": [
-						"VapourSynth-BM3DCPU-r2.1/BM3DCPU.dll",
-						"7e5c47dcf587c7a1c3c4cad2147a5a07fae3ff694adb47e5b522549e4507dd92"
+						"VapourSynth-BM3DCPU-r2.2/BM3DCPU.dll",
+						"2a3a244d49ebf22ec6d00747a4be4faec4b16fc73dc318336949ca06516a7f69"
 					]
 				}
 			}
 		},
 		{
-			"version": "R2.XXXXXXXX1",
+			"version": "R2.1",
 			"published": "2021-07-01T10:36:23Z",
 			"win64": {
 				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.1/VapourSynth-BM3DCPU-r2.1.rar",

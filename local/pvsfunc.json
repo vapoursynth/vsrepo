@@ -16,6 +16,38 @@
 	],
 	"releases": [
 		{
+			"version": "4.0.3",
+			"published": "2021-06-23T02:24:44.228603Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/2b/8e/4413a3c0bb4a4a2eacec1c921b683cb41bd7492375d45450b90c661ef05d/pvsfunc-4.0.3-py3-none-any.whl",
+				"hash": "44f56101a456b66cbb5f769af0f7831913d19b63ba1b705913853c624f9a9378"
+			}
+		},
+		{
+			"version": "4.0.2",
+			"published": "2021-06-23T02:10:13.760017Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/62/5d/573295a4045a9f7bd4b8f977cd7b5ade7a7ddfdf106dd094888e6d29aa52/pvsfunc-4.0.2-py3-none-any.whl",
+				"hash": "db35ca910ea615bca90b01fcafca656f464fffbf1d9d4e0b896601c1d1541280"
+			}
+		},
+		{
+			"version": "4.0.1",
+			"published": "2021-06-23T01:53:27.827591Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/49/b7/9243edf45aa9bbbe2e498d326a064c29c90d19527642b7afcaa87052ec64/pvsfunc-4.0.1-py3-none-any.whl",
+				"hash": "f32ead582de5cdc61e95c8995bca01d43b3f0fa569cfc2408ef519bcd78e3b54"
+			}
+		},
+		{
+			"version": "4.0.0",
+			"published": "2021-06-23T00:09:29.816909Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ed/4d/25272cac2ff817eea10a0869a65d28e1678225b71269a5dedda2777a54ed/pvsfunc-4.0.0-py3-none-any.whl",
+				"hash": "57f3004824ca5d3c667b94c07b2f72ffd2dcc9003dfc0f30fa7ca461afcf67c9"
+			}
+		},
+		{
 			"version": "3.16.2",
 			"published": "2021-06-08T02:08:27.900010Z",
 			"wheel": {

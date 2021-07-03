@@ -8,6 +8,27 @@
 	"namespace": "bm3dcuda_rtc",
 	"releases": [
 		{
+			"version": "R2.1",
+			"published": "2021-07-01T10:36:23Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.1/VapourSynth-BM3DCUDA_RTC-r2.1.rar",
+				"files": {
+					"BM3DCUDA_RTC.dll": [
+						"VapourSynth-BM3DCUDA_RTC-r2.1/BM3DCUDA_RTC.dll",
+						"d1b8b402e2b3a1b55737de77e887f22c1c4b3a652dca039bd8340feb72e2b477"
+					],
+					"nvrtc-builtins64_114.dll": [
+						"VapourSynth-BM3DCUDA_RTC-r2.1/nvrtc-builtins64_114.dll",
+						"a6ea9924faaabbdd8013192813aa11881e897dd227ed38baf97d10761bbc2388"
+					],
+					"nvrtc64_112_0.dll": [
+						"VapourSynth-BM3DCUDA_RTC-r2.1/nvrtc64_112_0.dll",
+						"bcfd27cfa26ba3b7a6cd134be6743214b60f4a68f6b0fca0c6850dfb55679d6d"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2",
 			"published": "2021-06-11T16:16:49Z",
 			"win64": {
@@ -45,6 +66,27 @@
 					"nvrtc64_112_0.dll": [
 						"VapourSynth-BM3DCUDA_RTC-r1/nvrtc64_112_0.dll",
 						"d0289c110cc59b792ada75d6b89f0f83df8c78292e763b0a6c4c51ea3f3b98cb"
+					]
+				}
+			}
+		},
+		{
+			"version": "R2.01",
+			"published": "--------2021-07-01T10:36:23Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.1/VapourSynth-BM3DCUDA_RTC-r2.1.rar",
+				"files": {
+					"BM3DCUDA_RTC.dll": [
+						"VapourSynth-BM3DCUDA_RTC-r2.1/BM3DCUDA_RTC.dll",
+						"d1b8b402e2b3a1b55737de77e887f22c1c4b3a652dca039bd8340feb72e2b477"
+					],
+					"nvrtc-builtins64_114.dll": [
+						"VapourSynth-BM3DCUDA_RTC-r2.1/nvrtc-builtins64_114.dll",
+						"a6ea9924faaabbdd8013192813aa11881e897dd227ed38baf97d10761bbc2388"
+					],
+					"nvrtc64_112_0.dll": [
+						"VapourSynth-BM3DCUDA_RTC-r2.1/nvrtc64_112_0.dll",
+						"bcfd27cfa26ba3b7a6cd134be6743214b60f4a68f6b0fca0c6850dfb55679d6d"
 					]
 				}
 			}

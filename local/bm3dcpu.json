@@ -1,0 +1,41 @@
+{
+	"name": "BM3DCPU",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "CPU version of BM3DCUDA. Requires AVX2 support",
+	"github": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA",
+	"identifier": "com.wolframrhodium.bm3dcpu",
+	"namespace": "bm3dcpu",
+	"ignore": [
+		"R1",
+		"R2"
+	],
+	"releases": [
+		{
+			"version": "R2.1",
+			"published": "2021-07-01T10:36:23Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.1/VapourSynth-BM3DCPU-r2.1.rar",
+				"files": {
+					"BM3DCPU.dll": [
+						"VapourSynth-BM3DCPU-r2.1/BM3DCPU.dll",
+						"7e5c47dcf587c7a1c3c4cad2147a5a07fae3ff694adb47e5b522549e4507dd92"
+					]
+				}
+			}
+		},
+		{
+			"version": "R2.XXXXXXXX1",
+			"published": "2021-07-01T10:36:23Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.1/VapourSynth-BM3DCPU-r2.1.rar",
+				"files": {
+					"BM3DCPU.dll": [
+						"VapourSynth-BM3DCPU-r2.1/BM3DCPU.dll",
+						"7e5c47dcf587c7a1c3c4cad2147a5a07fae3ff694adb47e5b522549e4507dd92"
+					]
+				}
+			}
+		}
+	]
+}

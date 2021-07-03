@@ -7,7 +7,7 @@
 	"identifier": "com.wolframrhodium.bm3dcuda",
 	"namespace": "bm3dcuda",
 	"ignore": [
-		"R2.2",
+		"R2.2"
 	],
 	"releases": [
 		{

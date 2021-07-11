@@ -7,7 +7,8 @@
 	"identifier": "com.wolframrhodium.bm3dcuda_rtc",
 	"namespace": "bm3dcuda_rtc",
 	"ignore": [
-		"R2.2"
+		"R2.2",
+		"R2.3"
 	],
 	"releases": [
 		{
@@ -72,6 +73,18 @@
 					]
 				}
 			}
+		},
+		{
+			"version": "R1-RC3",
+			"published": "2021-05-24T12:13:49Z"
+		},
+		{
+			"version": "R1-RC2",
+			"published": "2021-05-09T02:32:29Z"
+		},
+		{
+			"version": "R1-RC",
+			"published": "2021-05-08T11:55:26Z"
 		},
 		{
 			"version": "R2.01",

@@ -21,6 +21,19 @@
 			}
 		},
 		{
+			"version": "v0.51",
+			"published": "2021-06-30T01:31:37Z",
+			"win32": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.51/akarin-legacy-x86.zip",
+				"files": {
+					"libakarin.dll": [
+						"libakarin.dll",
+						"112828f9ed6d4a274e2c049052208e2bc68f2deb1071cdcf966fb97adce49be8"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.35",
 			"published": "2021-05-26T16:10:46Z",
 			"win32": {

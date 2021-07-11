@@ -7,7 +7,8 @@
 	"identifier": "com.wolframrhodium.bm3dcuda",
 	"namespace": "bm3dcuda",
 	"ignore": [
-		"R2.2"
+		"R2.2",
+		"R2.3"
 	],
 	"releases": [
 		{
@@ -45,6 +46,45 @@
 					"BM3DCUDA.dll": [
 						"VapourSynth-BM3DCUDA-r1/BM3DCUDA.dll",
 						"eeb18f34bb080f6bb23dd5ecb8e69d462d7b4f91b0730ceb8fb772c1c9dbbd7a"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1-RC3",
+			"published": "2021-05-24T12:13:49Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R1-RC3/VapourSynth-BM3DCUDA-r1-rc3.rar",
+				"files": {
+					"BM3DCUDA.dll": [
+						"VapourSynth-BM3DCUDA-r1-rc3/BM3DCUDA.dll",
+						"301579f497d7bb0e6a365da14e6fae7654f6b2928c963fe4aceeb81ac4d5cd1a"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1-RC2",
+			"published": "2021-05-09T02:32:29Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R1-RC2/VapourSynth-BM3DCUDA-r1-rc2.rar",
+				"files": {
+					"BM3DCUDA.dll": [
+						"VapourSynth-BM3DCUDA-r1-rc2/BM3DCUDA.dll",
+						"b1b8688ec9caa4b7885656824da17553903197138a5cbd6f662828674d8a6654"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1-RC",
+			"published": "2021-05-08T11:55:26Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R1-RC/VapourSynth-BM3DCUDA-r1-rc.rar",
+				"files": {
+					"BM3DCUDA.dll": [
+						"VapourSynth-BM3DCUDA-r1-rc/BM3DCUDA.dll",
+						"61f4d2b0698f57601687f9a2a1a73b233db517d275d89d4a48feda49ba01c2cb"
 					]
 				}
 			}

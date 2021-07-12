@@ -1,0 +1,40 @@
+{
+	"name": "vardefunc",
+	"type": "PyWheel",
+	"description": "Vardë's VapourSynth functions",
+	"website": "https://github.com/Ichunjo/vardefunc",
+	"github": "https://github.com/Ichunjo/vardefunc",
+	"category": "Scripts",
+	"identifier": "vardefunc",
+	"modulename": "vardefunc",
+	"wheelname": "vardefunc",
+	"dependencies": [
+		"com.holywu.nnedi3cl",
+		"com.vs.placebo",
+		"com.nodame.scxvid",
+		"com.vapoursynth.removegrainsf",
+		"com.nodame.tedgemask",
+		"mvsfunc",
+		"in.7086.neo_f3kdb",
+		"lvsfunc",
+		"vsutil"
+	],
+	"releases": [
+		{
+			"version": "0.2.7",
+			"published": "2021-06-18T12:12:24.253085Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/60/b9/c332b7a6699130ede0152c90b7db2c4f6d5b8b6e1296bc4efc6ade547e9a/vardefunc-0.2.7-py3-none-any.whl",
+				"hash": "d5bd9dba5307ef2bc7461d1ed4fd9b0a7fcf20d8444a9d7f73dab1d11fa06115"
+			}
+		},
+		{
+			"version": "0.2.6",
+			"published": "2021-06-09T13:39:35.215102Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ad/42/683b5b9d408cd329e5640d1d3e24c8da5cd21af3fb188adb01fb0134d59b/vardefunc-0.2.6-py3-none-any.whl",
+				"hash": "9f87411ce36e1c7b95ac5f85c848fd191d1b4da586d75b297b25e5bba3b7e595"
+			}
+		}
+	]
+}

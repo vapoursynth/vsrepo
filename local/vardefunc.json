@@ -21,6 +21,22 @@
 	],
 	"releases": [
 		{
+			"version": "0.2.9",
+			"published": "2021-07-16T15:44:52.652134Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/77/08/69a4e0ea639fe1ebbfea15f194fdea781ea97c5ffe19b50da0d56aa00975/vardefunc-0.2.9-py3-none-any.whl",
+				"hash": "77df6256ee44b60893736d8bcfcd9f963c8f04c31870654de856e096815a87af"
+			}
+		},
+		{
+			"version": "0.2.8",
+			"published": "2021-07-14T15:01:45.552499Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d8/2c/09a3384076d6737e4a2dc9bba553b42b89c023b01bd5e6a94f9042123c24/vardefunc-0.2.8-py3-none-any.whl",
+				"hash": "fe87896dde1bcdecbcf14aaa47e1b781cbd8744b1649ddc7a53f9819138ff4a1"
+			}
+		},
+		{
 			"version": "0.2.7",
 			"published": "2021-06-18T12:12:24.253085Z",
 			"wheel": {

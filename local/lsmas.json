@@ -6,8 +6,73 @@
 	"category": "Source/Output",
 	"identifier": "systems.innocent.lsmas",
 	"namespace": "lsmas",
-	"github": "https://github.com/HolyWu/L-SMASH-Works",
+	"github": "https://github.com/AkarinVS/L-SMASH-Works",
 	"releases": [
+		{
+			"version": "vA.3b",
+			"published": "2021-07-13T08:26:24Z",
+			"win64": {
+				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.3b/release-cachedir-cwd.zip",
+				"files": {
+					"libvslsmashsource.dll": [
+						"libvslsmashsource.dll",
+						"0bcb82e3de7bf21011b712b14a332fe767155545569ed43d08a7b9a00ffb655b"
+					]
+				}
+			}
+		},
+		{
+			"version": "vA.3",
+			"published": "2021-06-22T23:15:39Z",
+			"win64": {
+				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.3/release-cachedir-cwd.zip",
+				"files": {
+					"libvslsmashsource.dll": [
+						"libvslsmashsource.dll",
+						"99192a6d6c5b34e0f7d941b51fbf9d0a9df5d77cdb65e33a7f8887c62a59c805"
+					]
+				}
+			}
+		},
+		{
+			"version": "vA.2b",
+			"published": "2021-06-04T12:31:20Z",
+			"win64": {
+				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.2b/lsmas-x64-vA.2b.zip",
+				"files": {
+					"libvslsmashsource.dll": [
+						"libvslsmashsource.dll",
+						"31b3a3d7032050cbc6223bec3eb8a2970224ed6c943ece1c40cab81d1150496e"
+					]
+				}
+			}
+		},
+		{
+			"version": "vA.2",
+			"published": "2021-06-03T19:00:35Z",
+			"win64": {
+				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.2/lsmas-x64.zip",
+				"files": {
+					"libvslsmashsource.dll": [
+						"libvslsmashsource.dll",
+						"5d15609690865280171b2ee7a0644a4dc506d460fb872eb3f68e1d6dc7125142"
+					]
+				}
+			}
+		},
+		{
+			"version": "vA.1",
+			"published": "2021-05-28T17:06:43Z",
+			"win64": {
+				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.1/lsmas-x64.zip",
+				"files": {
+					"LSMASHSource.dll": [
+						"LSMASHSource.dll",
+						"ebe4ef3e9de348fce8d498824ad394a14ada97f69f2cca0571ae19a3deda55d9"
+					]
+				}
+			}
+		},
 		{
 			"version": "20210423",
 			"published": "2021-04-23T04:13:12Z",

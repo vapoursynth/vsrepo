@@ -8,6 +8,32 @@
 	"namespace": "akarin",
 	"releases": [
 		{
+			"version": "v0.70",
+			"published": "2021-08-01T07:18:03Z",
+			"win64": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.70/akarin-release-lexpr-amd64-v0.70.7z",
+				"files": {
+					"akarin.dll": [
+						"akarin.dll",
+						"e1f89da98d58f3ed9c0460479eb77827168b7f1023bc4d2768110e939236d78c"
+					]
+				}
+			}
+		},
+		{
+			"version": "v0.61b",
+			"published": "2021-07-24T01:05:16Z",
+			"win64": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.61b/akarin-release-lexpr-amd64-v0.61b.zip",
+				"files": {
+					"akarin.dll": [
+						"akarin.dll",
+						"b5f16406004d3a0990c01e860a9ab0728403f95261c07a705708277656802348"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.60",
 			"published": "2021-06-30T09:26:24Z",
 			"win64": {

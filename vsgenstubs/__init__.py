@@ -65,13 +65,14 @@ def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode], ns:
             signature = str(inspect.signature(getattr(plugin, func)))
         except BaseException:
             signature = "(*args, **kwargs) -> Union[NoneType, VideoNode]"
-        
+
         # Clean up the type annotations so that they are valid python syntax.
         signature = signature.replace("Union", "typing.Union").replace("Sequence", "typing.Sequence")
         signature = signature.replace("vapoursynth.", "")
         signature = signature.replace("VideoNode", '"VideoNode"').replace("VideoFrame", '"VideoFrame"')
         signature = signature.replace("NoneType", "None")
-        
+        signature = signature.replace("Optional", "typing.Optional")
+
         # Make Callable definitions sensible
         signature = signature.replace("typing.Union[Func, Callable]", "typing.Callable[..., typing.Any]")
         signature = signature.replace("typing.Union[Func, Callable, None]", "typing.Optional[typing.Callable[..., typing.Any]]")

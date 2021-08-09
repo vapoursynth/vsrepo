@@ -21,6 +21,14 @@
 	],
 	"releases": [
 		{
+			"version": "0.2.11",
+			"published": "2021-08-08T15:10:01.573603Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/17/50/40143b51ed1d847a3403b525e2c9f543bae96f838efae51fe220578afb8e/vardefunc-0.2.11-py3-none-any.whl",
+				"hash": "9162422f3f34e0d2ba02e7fbb31c52c521fcb9c740dcddfe2bd38bb4dc6a8460"
+			}
+		},
+		{
 			"version": "0.2.9",
 			"published": "2021-07-16T15:44:52.652134Z",
 			"wheel": {

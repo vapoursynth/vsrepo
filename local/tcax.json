@@ -1,0 +1,33 @@
+{
+	"name": "tcasFilter",
+	"type": "VSPlugin",
+	"category": "Subtitles",
+	"description": "Renders TCAS files, a subtitle fx format mostly used for karaoke.",
+	"github": "https://github.com/emako/tcasFilter-vapoursynth",
+	"identifier": "github.com.emako",
+	"namespace": "tcax",
+	"releases": [
+		{
+			"version": "20181220",
+			"published": "2021-08-12T12:00:51Z",
+			"win32": {
+				"url": "https://github.com/emako/tcasFilter-vapoursynth/releases/download/20181220/tcasFilter-avisynth%2Bvapoursynth-20181220.7z",
+				"files": {
+					"tcasFilter.dll": [
+						"tcasFilter/x86/tcasFilter.dll",
+						"14bda25e58ec1d1213f9add42776c21ff373eac99869135f3c4c7423ed358c13"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/emako/tcasFilter-vapoursynth/releases/download/20181220/tcasFilter-avisynth%2Bvapoursynth-20181220.7z",
+				"files": {
+					"tcasFilter.dll": [
+						"tcasFilter/x64/tcasFilter.dll",
+						"618153b89d88837028838ad604b0469c572ecea6b4fafd1ceee8aed52eb57109"
+					]
+				}
+			}
+		}
+	]
+}

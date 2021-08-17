@@ -454,6 +454,16 @@ elif args.operation == 'create-package':
 						files_to_hash.append(f)
 
 		files_to_hash = sorted(files_to_hash)
+		
+		
+		print("\n\nFound the following dlls:")
+		for f in files_to_hash:
+			fullpath, hash, arch = decompress_hash_simple(dlfile, f)
+			if arch == 32:
+				print('win32:', fullpath, hash)
+			if arch == 64:
+				print('win64:', fullpath, hash)
+		print("\n\n")
 
 		if not args.packagescript: # is plugin
 			new_rel_entry['win32'] = { 'url': url, 'files': {} }

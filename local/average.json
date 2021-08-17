@@ -12,6 +12,32 @@
 	],
 	"releases": [
 		{
+			"version": "v0.5.0-beta",
+			"published": "2021-08-10T00:44:04Z",
+			"win64": {
+				"url": "https://github.com/End-of-Eternity/vs-average/releases/download/v0.5.0-beta/vs_average.zip",
+				"files": {
+					"vs_average.dll": [
+						"vs_average.dll",
+						"7ee0f78b3c7793afc5bd5dfa650d74d0bde595a66426fa0c7c38647ba2399541"
+					]
+				}
+			}
+		},
+		{
+			"version": "v0.4.0-beta",
+			"published": "2020-05-31T01:13:29Z",
+			"win64": {
+				"url": "https://github.com/End-of-Eternity/vs-average/releases/download/v0.4.0-beta/vs_average.zip",
+				"files": {
+					"vs_average.dll": [
+						"vs_average.dll",
+						"b199fd8a6b1dfc0f6d6987419e589476969c0245c2c97e4b55f9574fe38a4822"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.3.0",
 			"published": "2020-05-24T21:08:29Z",
 			"win64": {

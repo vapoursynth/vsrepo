@@ -1,0 +1,24 @@
+{
+	"name": "LibP2P",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Vapoursynth plugin for packing/unpacking of RGB clips.",
+	"github": "https://github.com/DJATOM/LibP2P-Vapoursynth",
+	"identifier": "com.djatom.libp2p",
+	"namespace": "libp2p",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2021-08-23T22:26:54Z",
+			"win64": {
+				"url": "https://github.com/DJATOM/LibP2P-Vapoursynth/releases/download/r1/LibP2P-x64.7z",
+				"files": {
+					"LibP2P.dll": [
+						"LibP2P.dll",
+						"d1bc1291d75a2435d008b5f501e336f1e3daef4962a0f3a5ce2b05ed418081c1"
+					]
+				}
+			}
+		}
+	]
+}

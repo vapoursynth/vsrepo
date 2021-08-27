@@ -8,6 +8,19 @@
 	"namespace": "libp2p",
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2021-08-26T14:42:12Z",
+			"win64": {
+				"url": "https://github.com/DJATOM/LibP2P-Vapoursynth/releases/download/r2/LibP2P-x64.7z",
+				"files": {
+					"LibP2P.dll": [
+						"LibP2P.dll",
+						"7e76db73085c51f43949954d2ab5d9abf49257bf559f038ee92961b611934750"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2021-08-23T22:26:54Z",
 			"win64": {

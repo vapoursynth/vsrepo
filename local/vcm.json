@@ -8,6 +8,28 @@
 	"namespace": "vcm",
 	"releases": [
 		{
+            "version": "28 Aug 2021",
+            "published": "2021-08-28T12:00:00Z",
+            "win32": {
+                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+                "files": {
+                    "vcm.dll": [
+                        "x86/vcm.dll",
+                        "4236799d7c822e03bb17bfd3a040856fb4e00eaf9df9d29fd78dd6b42c981615"
+                    ]
+                }
+            },
+            "win64": {
+                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+                "files": {
+                    "vcm.dll": [
+                        "x64/vcm.dll",
+                        "e5473eafcca4c954901f5fcb2983181aee2b8f1bf42db8384221ec251f7544e6"
+                    ]
+                }
+            }
+        },
+		{
             "version": "31 May 2021",
             "published": "2021-05-31T08:00:00Z",
             "win32": {

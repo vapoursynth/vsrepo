@@ -9,40 +9,23 @@
 	"github": "https://github.com/AkarinVS/L-SMASH-Works",
 	"releases": [
 		{
-			"version": "vA.4",
-			"published": "2021-08-07T01:17:51Z",
-			"win64": {
-				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.4/release-i686-v4-cachedir-cwd.zip",
-				"files": {
-					"libvslsmashsource.dll": [
-						"libvslsmashsource.dll",
-						"8663b0b809553fbd17890d11858728001dbcbceacdd1c83df5b0fcb70196dcde"
-					]
-				}
-			}
-		},
-		{
 			"version": "vA.3e",
 			"published": "2021-07-27T19:24:55Z",
-			"win64": {
+			"win32": {
 				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.3e/release-i686-cachedir-cwd.zip",
 				"files": {
 					"libvslsmashsource.dll": [
 						"libvslsmashsource.dll",
-						"aac466d9453a48bbff93949308264b432da8cf228c41344fe813f3a412efeff5"
+						"a5b3bf9e2c87f6e99163a5e57d22176dd3a8e1781032d63699f14e5c14f084ff"
 					]
 				}
-			}
-		},
-		{
-			"version": "vA.3c",
-			"published": "2021-07-27T19:24:55Z",
+			},
 			"win64": {
-				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.3c/release-i686-cachedir-cwd.zip",
+				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.3e/release-x86_64-cachedir-cwd.zip",
 				"files": {
 					"libvslsmashsource.dll": [
 						"libvslsmashsource.dll",
-						"1762934425ba005b010b48242b6307d0ebbefd265fd962c01b09e52ce5984ee0"
+						"c686d0a17a5131f6f5601836ef104049f5154dac2dc65c02de54dfdfe8bedece"
 					]
 				}
 			}

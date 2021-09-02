@@ -2,20 +2,20 @@
 	"name": "Expr",
 	"type": "VSPlugin",
 	"category": "Other",
-	"description": "Works just like std.Expr with additional operators like sin, N (current frame number) or X, Y (aka mt_lutspa)",
+	"description": "Akarin's experimental VapourSynth plugin that provides an LLVM-based enhanced Expr (aka lexpr), and NVidia Deep Learning based super-resolution (DLISR) and video effect (DLVFX) filters",
 	"github": "https://github.com/AkarinVS/vapoursynth-plugin",
 	"identifier": "info.akarin.vsplugin",
 	"namespace": "akarin",
 	"releases": [
 		{
-			"version": "v0.75",
-			"published": "2021-08-27T02:58:07Z",
+			"version": "v0.75b",
+			"published": "2021-09-01T08:02:50Z",
 			"win64": {
-				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.75/akarin-release-lexpr-amd64-v0.75.7z",
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.75b/akarin-release-lexpr-amd64-v0.75b.7z",
 				"files": {
 					"akarin.dll": [
 						"akarin.dll",
-						"23b5d20ef2f4e44d90569834bcb8ab57927e07a71fc870daa91f8f9e29633ee8"
+						"c53851563a6314e4dd3d787b2249573761cda0a33db615e6e12bf3e31bacb8ac"
 					]
 				}
 			}

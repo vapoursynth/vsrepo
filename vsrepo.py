@@ -715,7 +715,7 @@ def update_package_definition(url):
     except:
         pass
     localmtime = email.utils.formatdate(localmtimeval + 10, usegmt=True)
-    req_obj = urllib.request.Request(url, headers={ 'If-Modified-Since': localmtime })
+    req_obj = urllib.request.Request(url, headers={ 'If-Modified-Since': localmtime, 'User-Agent': 'VSRepo' })
     try:
         with urllib.request.urlopen(req_obj) as urlreq:
             remote_modtime = email.utils.mktime_tz(email.utils.parsedate_tz(urlreq.info()['Last-Modified']))

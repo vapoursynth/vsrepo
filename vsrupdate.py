@@ -510,13 +510,9 @@ elif args.operation == 'create-package':
 		print("package created")
 		
 		if extract_git_repo(url) and not is_wheel:
-			print("Is hosted on GitHub")
-			if args.git_token:
-				print("Auto updating package")
-				args.overwrite = True
-				update_package(args.packagename[0])
-			else:
-				print("No git token ( -g ) was set, skipping auto update")
+			print("Is hosted on GitHub - auto updating package")
+			args.overwrite = True
+			update_package(args.packagename[0])
 
 		if is_wheel and url.startswith('https://files.pythonhosted.org'):
 			print("Auto updating wheel package")

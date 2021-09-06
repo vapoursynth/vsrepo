@@ -231,7 +231,7 @@ def update_package(name):
             return -1
     elif 'github' in pfile:
         new_rels = {}
-        apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name'], token=args.git_token[0]))
+        apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name'], token=args.git_token[0] if args.git_token else None))
         is_plugin = (pfile['type'] == 'VSPlugin')
         is_pyscript = (pfile['type'] == 'PyScript')
         is_pywheel = (pfile['type'] == 'PyWheel')

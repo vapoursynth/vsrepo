@@ -22,7 +22,8 @@
 		"com.holywu.vsfiltermod",
 		"com.invalid.identifier.bilateral",
 		"com.nodame.median",
-		"com.holywu.ctmf"
+		"com.holywu.ctmf",
+		"com.nodame.histogram"
 	],
 	"releases": [
 		{

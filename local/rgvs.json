@@ -1,0 +1,34 @@
+{
+	"name": "RemoveGrain",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "RemoveGrain is a spatial denoising filter with various filtering modes.",
+	"website": "http://www.vapoursynth.com/doc/plugins/rgvs.html",
+	"github": "https://github.com/vapoursynth/vs-removegrain",
+	"identifier": "com.vapoursynth.removegrainvs",
+	"namespace": "rgvs",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2021-09-09T18:21:31Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/vs-removegrain/releases/download/R1/removegrain-r1.7z",
+				"files": {
+					"RemoveGrainVS.dll": [
+						"win32/RemoveGrainVS.dll",
+						"38f32d460e72d91812a27e33018eaf03abc4d054c5ef54599daacd80a34d9f2c"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/vs-removegrain/releases/download/R1/removegrain-r1.7z",
+				"files": {
+					"RemoveGrainVS.dll": [
+						"win64/RemoveGrainVS.dll",
+						"eed537d5f0de88fc4d5acac1d3dde16b3c81524565fd1fe5e4322bd91117c3fe"
+					]
+				}
+			}
+		}
+	]
+}

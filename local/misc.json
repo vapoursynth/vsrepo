@@ -1,0 +1,34 @@
+{
+	"name": "Miscfilters (obsolete)",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Miscellaneous Filters is a random collection of filters that mostly are useful for Avisynth compatibility.",
+	"website": "http://www.vapoursynth.com/doc/plugins/misc.html",
+	"github": "https://github.com/vapoursynth/vs-miscfilters-obsolete",
+	"identifier": "com.vapoursynth.misc",
+	"namespace": "misc",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2021-09-09T18:13:40Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/vs-miscfilters-obsolete/releases/download/R1/miscfilters-r1.7z",
+				"files": {
+					"MiscFilters.dll": [
+						"win32/MiscFilters.dll",
+						"7e6f4ae626a0467245c824b4881b08d975da60c6ad0db219f33f681440f4b6ed"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/vs-miscfilters-obsolete/releases/download/R1/miscfilters-r1.7z",
+				"files": {
+					"MiscFilters.dll": [
+						"win64/MiscFilters.dll",
+						"07f66a1677468b519f552be7f8ffae52d1ab6c0c0dee999459abf2b0f1787601"
+					]
+				}
+			}
+		}
+	]
+}

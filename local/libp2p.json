@@ -6,6 +6,7 @@
 	"github": "https://github.com/DJATOM/LibP2P-Vapoursynth",
 	"identifier": "com.djatom.libp2p",
 	"namespace": "libp2p",
+	"api": 4,
 	"releases": [
 		{
 			"version": "r2",

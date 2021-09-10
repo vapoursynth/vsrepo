@@ -406,10 +406,18 @@ def list_available_packages():
         print_package_status(p)
 
 def get_latest_installable_release_with_index(p):
+    max_api = get_vapoursynth_api_version()
+    package_api = 3
+    if 'api' in p:
+        package_api = p['api']
     bin_name = get_bin_name(p)
     for idx, rel in enumerate(p['releases']):
         if bin_name in rel:
-            return idx, rel
+            bin_api = package_api
+            if 'api' in rel:
+                bin_api = rel['api']
+            if bin_api <= max_api and bin_api >= 3:
+                return idx, rel
     return (-1, None)
 
 def get_latest_installable_release(p):
@@ -743,6 +751,17 @@ def get_vapoursynth_version() -> int:
     if hasattr(vapoursynth, "__version__"):
         return vapoursynth.__version__[0]
     return vapoursynth.core.version_number()
+
+def get_vapoursynth_api_version() -> int:
+    try:
+        import vapoursynth
+    except ImportError:
+        return 1
+
+    if hasattr(vapoursynth, "__api_version__"):
+        return vapoursynth.__api_version__[0]
+    # assume lowest widespread api version, will probably error out somewhere else
+    return 3
 
 
 def update_genstubs():

@@ -7,6 +7,7 @@
 	"github": "https://github.com/vapoursynth/vivtc",
 	"identifier": "org.ivtc.v",
 	"namespace": "vivtc",
+	"api": 4,
 	"releases": [
 		{
 			"version": "R1",

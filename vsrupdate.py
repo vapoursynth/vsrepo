@@ -302,8 +302,8 @@ def update_package(name):
 def verify_package(pfile, existing_identifiers):
     name = pfile['name']
     for key in pfile.keys():
-        if key not in ('name', 'type', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases'):
-            raise Exception('Unkown key: ' + key + ' in ' + name)
+        if key not in ('name', 'type', 'api', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases'):
+            raise Exception('Unknown key: ' + key + ' in ' + name)
     if pfile['type'] not in ('VSPlugin', 'PyScript', 'PyWheel'):
         raise Exception('Invalid type in ' + name)
     if (pfile['type'] == 'VSPlugin') and ('modulename' in pfile):
@@ -317,6 +317,9 @@ def verify_package(pfile, existing_identifiers):
     allowed_categories = ('Scripts', 'Plugin Dependency', 'Resizing and Format Conversion', 'Other', 'Dot Crawl and Rainbows', 'Sharpening', 'Denoising', 'Deinterlacing', 'Inverse Telecine', 'Source/Output', 'Subtitles', 'Color/Levels')
     if pfile['category'] not in allowed_categories:
         raise Exception('Not allowed catogry in ' + name + ': ' + pfile['category'] + ' not in ' + repr(allowed_categories))
+    if 'api' in pfile:
+        if pfile['api'] not in (3, 4):
+            raise Exception('Invalid api version in ' + name)
     if 'dependencies' in pfile:
         for dep in pfile['dependencies']:
             if dep not in existing_identifiers:

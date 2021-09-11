@@ -4,163 +4,186 @@
 	"category": "Other",
 	"description": "This is a consolidation of vcmod, vcfreq, vcmove and addition of a few other functions. Some frequency domain functions.",
 	"website": "http://www.avisynth.nl/users/vcmohan",
+	"github": "https://github.com/Vapoursynth-Plugins-Gitify/vcm",
 	"identifier": "in.vcmohan.cm",
 	"namespace": "vcm",
 	"releases": [
 		{
-            "version": "28 Aug 2021",
-            "published": "2021-08-28T12:00:00Z",
-            "win32": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x86/vcm.dll",
-                        "4236799d7c822e03bb17bfd3a040856fb4e00eaf9df9d29fd78dd6b42c981615"
-                    ]
-                }
-            },
-            "win64": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x64/vcm.dll",
-                        "e5473eafcca4c954901f5fcb2983181aee2b8f1bf42db8384221ec251f7544e6"
-                    ]
-                }
-            }
-        },
+			"version": "2021-09-11",
+			"published": "2021-09-11T08:31:07Z",
+			"win32": {
+				"url": "https://github.com/Vapoursynth-Plugins-Gitify/vcm/releases/download/2021-09-11/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"645ed4aee736ec76055dab48d0b0f29ec59b8533c8ff9e3bf91c1e5e21cafecd"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Vapoursynth-Plugins-Gitify/vcm/releases/download/2021-09-11/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"c72705304fb55611b4a1a5f335a04192c3e587456a52d90501d69fcc58b85c1d"
+					]
+				}
+			}
+		},
 		{
-            "version": "31 May 2021",
-            "published": "2021-05-31T08:00:00Z",
-            "win32": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x86/vcm.dll",
-                        "9c625bd57c2e2f6e438888122d900599d26df699246da12238d96485ea71c5e5"
-                    ]
-                }
-            },
-            "win64": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x64/vcm.dll",
-                        "6de3a3d7b4fdca90c312596fa5019e9b5033cded313dac698a5d99f1bb8a04d6"
-                    ]
-                }
-            }
-        },
+			"version": "28 Aug 2021",
+			"published": "2021-08-28T12:00:00Z",
+			"win32": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"4236799d7c822e03bb17bfd3a040856fb4e00eaf9df9d29fd78dd6b42c981615"
+					]
+				}
+			},
+			"win64": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"e5473eafcca4c954901f5fcb2983181aee2b8f1bf42db8384221ec251f7544e6"
+					]
+				}
+			}
+		},
 		{
-            "version": "22 April 2021",
-            "published": "2021-04-22T12:00:00Z",
-            "win32": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x86/vcm.dll",
-                        "a82c29a55e6a91a147561d1a0dc126405e7b91f3fa4d8503c8940c7414821869"
-                    ]
-                }
-            },
-            "win64": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x64/vcm.dll",
-                        "869c166132db0f9825f3e7458051f3388585a02d4413098b9ed2f52ba456f41b"
-                    ]
-                }
-            }
-        },
+			"version": "31 May 2021",
+			"published": "2021-05-31T08:00:00Z",
+			"win32": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"9c625bd57c2e2f6e438888122d900599d26df699246da12238d96485ea71c5e5"
+					]
+				}
+			},
+			"win64": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"6de3a3d7b4fdca90c312596fa5019e9b5033cded313dac698a5d99f1bb8a04d6"
+					]
+				}
+			}
+		},
 		{
-            "version": "31 Jan 2021-VS2019",
-            "published": "2021-03-04T12:00:00Z",
-            "win32": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x86/vcm.dll",
-                        "d0b632d098fe2bce5282b28789fbf50345be61b920bfb32d0d9456d3dbd4a836"
-                    ]
-                }
-            },
-            "win64": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x64/vcm.dll",
-                        "37891bed0e24adbda8525b5cba1ad9c1dd1228e1407403989b707046821dc11a"
-                    ]
-                }
-            }
-        },
+			"version": "22 April 2021",
+			"published": "2021-04-22T12:00:00Z",
+			"win32": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"a82c29a55e6a91a147561d1a0dc126405e7b91f3fa4d8503c8940c7414821869"
+					]
+				}
+			},
+			"win64": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"869c166132db0f9825f3e7458051f3388585a02d4413098b9ed2f52ba456f41b"
+					]
+				}
+			}
+		},
 		{
-            "version": "31 Jan 2021",
-            "published": "2021-01-31T12:00:00Z",
-            "win32": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x86/vcm.dll",
-                        "6cffe6a5ab36ca96a1c44a2547ad72a1854104d29625464927e7398a10e5d347"
-                    ]
-                }
-            },
-            "win64": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x64/vcm.dll",
-                        "f3e802e00df358cbbf135c54dfa3c7d0f43785e82a34c44be718007f63ca34d4"
-                    ]
-                }
-            }
-        },
+			"version": "31 Jan 2021-VS2019",
+			"published": "2021-03-04T12:00:00Z",
+			"win32": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"d0b632d098fe2bce5282b28789fbf50345be61b920bfb32d0d9456d3dbd4a836"
+					]
+				}
+			},
+			"win64": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"37891bed0e24adbda8525b5cba1ad9c1dd1228e1407403989b707046821dc11a"
+					]
+				}
+			}
+		},
 		{
-            "version": "12 Jan 2021",
-            "published": "2021-01-12T12:00:00Z",
-            "win32": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x86/vcm.dll",
-                        "132eab890d7cedd15104f63a49bf2f0a54d97f502aec8dfab0ee0da8a1f5325a"
-                    ]
-                }
-            },
-            "win64": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x64/vcm.dll",
-                        "427fd08d728ac4b578dc40a5344b8a9cdbad19c4b12a1c79dcb9795fee44c288"
-                    ]
-                }
-            }
-        },
+			"version": "31 Jan 2021",
+			"published": "2021-01-31T12:00:00Z",
+			"win32": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"6cffe6a5ab36ca96a1c44a2547ad72a1854104d29625464927e7398a10e5d347"
+					]
+				}
+			},
+			"win64": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"f3e802e00df358cbbf135c54dfa3c7d0f43785e82a34c44be718007f63ca34d4"
+					]
+				}
+			}
+		},
 		{
-            "version": "22 Dec 2020",
-            "published": "2020-12-26T12:00:00Z",
-            "win32": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x86/vcm.dll",
-                        "1c2d6b8edf4176ac5fbd2cfb98753be5c9f580b8dffcb1e138e542053650da6a"
-                    ]
-                }
-            },
-            "win64": {
-                "url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
-                "files": {
-                    "vcm.dll": [
-                        "x64/vcm.dll",
-                        "a285da4a7b04afcdaa8bc3c4ebddf23f74ada991736bd99162869fb46ed4366a"
-                    ]
-                }
-            }
-        },
+			"version": "12 Jan 2021",
+			"published": "2021-01-12T12:00:00Z",
+			"win32": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"132eab890d7cedd15104f63a49bf2f0a54d97f502aec8dfab0ee0da8a1f5325a"
+					]
+				}
+			},
+			"win64": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"427fd08d728ac4b578dc40a5344b8a9cdbad19c4b12a1c79dcb9795fee44c288"
+					]
+				}
+			}
+		},
+		{
+			"version": "22 Dec 2020",
+			"published": "2020-12-26T12:00:00Z",
+			"win32": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"1c2d6b8edf4176ac5fbd2cfb98753be5c9f580b8dffcb1e138e542053650da6a"
+					]
+				}
+			},
+			"win64": {
+				"url": "http://www.avisynth.nl/users/vcmohan/vcm/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"a285da4a7b04afcdaa8bc3c4ebddf23f74ada991736bd99162869fb46ed4366a"
+					]
+				}
+			}
+		},
 		{
 			"version": "10 Oct 2020",
 			"published": "2020-10-10T12:00:00Z",

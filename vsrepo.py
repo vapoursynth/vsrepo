@@ -52,6 +52,8 @@ try:
 except ImportError:
     pass
 
+bundled_api3_plugins = ['com.vapoursynth.avisource', 'com.vapoursynth.eedi3', 'com.vapoursynth.imwri', 'com.vapoursynth.misc', 'com.vapoursynth.morpho', 'com.vapoursynth.removegrainvs', 'com.vapoursynth.subtext', 'com.vapoursynth.vinverse', 'com.vapoursynth.vivtc', 'com.nodame.histogram']
+
 
 def is_venv():
     return hasattr(sys, "real_prefix") or (hasattr(sys, "base_prefix") and sys.base_prefix != sys.prefix)
@@ -613,8 +615,11 @@ def install_files(p):
     print('Successfully installed ' + p['name'] + ' ' + install_rel['version'])
     return (1, 0)
 
-def install_package(name):    
+def install_package(name):
     p = get_package_from_name(name)
+    if p['identifier'] in bundled_api3_plugins:
+        print('Binaries are already bundled for ' + p['name'] + ', skipping installation')
+        return (0, 0, 0)
     if can_install(p):
         inst = (0, 0, 0)
         if not args.skip_deps:

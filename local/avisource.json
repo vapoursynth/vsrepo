@@ -1,0 +1,35 @@
+{
+	"name": "AVISource (obsolete)",
+	"type": "VSPlugin",
+	"category": "Source/Output",
+	"description": "VapourSynth AVISource",
+	"website": "http://www.vapoursynth.com/doc/plugins/avisource.html",
+	"github": "https://github.com/vapoursynth/vs-avisource-obsolete",
+	"identifier": "com.vapoursynth.avisource",
+	"namespace": "avisource",
+	"api": 4,
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2021-09-11T18:06:11Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/vs-avisource-obsolete/releases/download/R1/avisource-r1.7z",
+				"files": {
+					"avisource.dll": [
+						"win32/avisource.dll",
+						"92d9fd4987ce01c2d08cbbe77850ee57b9f7325f300cfeecd32485cb94cdeb52"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/vs-avisource-obsolete/releases/download/R1/avisource-r1.7z",
+				"files": {
+					"avisource.dll": [
+						"win64/avisource.dll",
+						"6bb32a379c93a2c6e3a34dbcb83bc32c677cd37f16fcc462f0ef9a03a094f24c"
+					]
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,35 @@
+{
+	"name": "OCR",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Performs optical character recognition on video frames. Tesseract language data files are required.",
+	"website": "http://www.vapoursynth.com/doc/plugins/ocr.html",
+	"github": "https://github.com/vapoursynth/vs-ocr",
+	"identifier": "biz.srsfckn.ocr",
+	"namespace": "ocr",
+	"api": 4,
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2021-09-11T13:53:52Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/vs-ocr/releases/download/R1/vs-ocr-r1.7z",
+				"files": {
+					"TesseractOCR.dll": [
+						"win32/TesseractOCR.dll",
+						"815503c92699b74304cc05aaad24e5e6f6e2dc2f2913cd77cd24e15fe75b6c1c"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/vs-ocr/releases/download/R1/vs-ocr-r1.7z",
+				"files": {
+					"TesseractOCR.dll": [
+						"win64/TesseractOCR.dll",
+						"2f014e61ffba3cf38d8ddd073ffd4f34adaeda051afa0c41ef00cc8edd4ea8bf"
+					]
+				}
+			}
+		}
+	]
+}

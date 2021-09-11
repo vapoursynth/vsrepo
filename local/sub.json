@@ -1,0 +1,35 @@
+{
+	"name": "Subtext",
+	"type": "VSPlugin",
+	"category": "Subtitles",
+	"description": "Subtitle plugin for VapourSynth based on libass.",
+	"website": "http://www.vapoursynth.com/doc/plugins/subtext.html",
+	"github": "https://github.com/vapoursynth/subtext",
+	"identifier": "biz.srsfckn.subtext",
+	"namespace": "sub",
+	"api": 4,
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2021-09-11T13:48:00Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/subtext/releases/download/R1/subtext-r1.7z",
+				"files": {
+					"SubText.dll": [
+						"win32/SubText.dll",
+						"03a6e87b40dbcfd0b8cf9195cd02222dcf9f49924c8e2ae45275b6f995b4f7f5"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/subtext/releases/download/R1/subtext-r1.7z",
+				"files": {
+					"SubText.dll": [
+						"win64/SubText.dll",
+						"9b130157207bcafebe2a0ec1183bf6f99c54975e551a2a3bfc0b226d3c3987cd"
+					]
+				}
+			}
+		}
+	]
+}

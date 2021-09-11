@@ -1,0 +1,35 @@
+{
+	"name": "BestAudioSource",
+	"type": "VSPlugin",
+	"category": "Source/Output",
+	"description": "A super great audio source and FFmpeg wrapper",
+	"doom9": "https://forum.doom9.org/showthread.php?t=177337",
+	"github": "https://github.com/vapoursynth/bestaudiosource",
+	"identifier": "com.vapoursynth.bestaudiosource",
+	"namespace": "bas",
+	"api": 4,
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2021-09-11T14:00:27Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/bestaudiosource/releases/download/R1/bas-r1.7z",
+				"files": {
+					"BestAudioSource.dll": [
+						"win32/BestAudioSource.dll",
+						"cdc01a04a7d8774af7f2d4ff0c85c811e6bc3f5f2c7cd3ed552cbd973adecc1f"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestaudiosource/releases/download/R1/bas-r1.7z",
+				"files": {
+					"BestAudioSource.dll": [
+						"win64/BestAudioSource.dll",
+						"af017c4165ee83171fd8b1c493bef920581b51900a4c684aa383a69542ca4612"
+					]
+				}
+			}
+		}
+	]
+}

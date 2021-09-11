@@ -46,17 +46,17 @@ except ImportError:
 
 parser = argparse.ArgumentParser(description='Package list generator for VSRepo')
 parser.add_argument('operation', choices=['compile', 'update-local', 'upload', 'create-package'])
-parser.add_argument('-g', dest='git_token', nargs=1, help='OAuth access token for github')
-parser.add_argument('-p', dest='package', nargs=1, help='Package to update')
+parser.add_argument('-g', dest='git_token', help='OAuth access token for github')
+parser.add_argument('-p', dest='package', help='Package to update')
 parser.add_argument('-o', action='store_true', dest='overwrite', help='Overwrite existing package file')
 parser.add_argument('-host', dest='host', nargs=1, help='FTP Host')
 parser.add_argument('-user', dest='user', nargs=1, help='FTP User')
 parser.add_argument('-passwd', dest='passwd', nargs=1, help='FTP Password')
 parser.add_argument('-dir', dest='dir', nargs=1, help='FTP dir')
-parser.add_argument('-url', dest='packageurl', nargs=1, help='URL of the archive from which a package is to be created')
-parser.add_argument('-pname', dest='packagename', nargs=1, help='Filename or namespace of your package')
+parser.add_argument('-url', dest='packageurl', help='URL of the archive from which a package is to be created')
+parser.add_argument('-pname', dest='packagename', help='Filename or namespace of your package')
 parser.add_argument('-script', action='store_true', dest='packagescript', help='Type of the package is script. Otherwise a package of type plugin is created')
-parser.add_argument('-types', dest='packagefiletypes', nargs='+', help='Which file types should be included. default is .dll')
+parser.add_argument('-types', dest='packagefiletypes', nargs='+', default=['.dll', '.py'], help='Which file types should be included. default is .dll')
 parser.add_argument('-kf', dest='keepfolder', type=int, default=-1, nargs='?', help='Keep the folder structure')
 
 args = parser.parse_args()
@@ -231,7 +231,7 @@ def update_package(name):
             return -1
     elif 'github' in pfile:
         new_rels = {}
-        apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name'], token=args.git_token[0] if args.git_token else None))
+        apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name'], token=args.git_token))
         is_plugin = (pfile['type'] == 'VSPlugin')
         is_pyscript = (pfile['type'] == 'PyScript')
         is_pywheel = (pfile['type'] == 'PyWheel')
@@ -414,7 +414,7 @@ elif args.operation == 'update-local':
                     num_nochange = num_nochange + 1
         print('Summary:\nUpdated: {} \nNo change: {} \nSkipped: {}\n'.format(num_updated, num_nochange, num_skipped))
     else:
-        update_package(args.package[0])
+        update_package(args.package)
 elif args.operation == 'create-package':
     
 	import pathlib
@@ -426,12 +426,7 @@ elif args.operation == 'create-package':
 		print('-pname parameter is missing')
 		sys.exit(1)
 		
-	url = args.packageurl[0]
-	filetypes = ['.dll', '.py']
-	
-	if args.packagefiletypes:
-		filetypes = args.packagefiletypes
-	
+	url = args.packageurl	
 	is_wheel = True if (pathlib.Path(url).suffix.lower() == '.whl') else False
 
 	print("fetching remote url")
@@ -450,10 +445,10 @@ elif args.operation == 'create-package':
 		files_to_hash = []
 		for f in listzip.values():
 			if pathlib.Path(f).suffix: # simple folder filter
-				if "*" in filetypes:
+				if "*" in args.packagefiletypes:
 					files_to_hash.append(f)
 				else:
-					if pathlib.Path(f).suffix in filetypes:
+					if pathlib.Path(f).suffix in args.packagefiletypes:
 						files_to_hash.append(f)
 
 		files_to_hash = sorted(files_to_hash)
@@ -497,17 +492,17 @@ elif args.operation == 'create-package':
 		
 	if not args.packagescript:
 		if is_wheel:
-			final_package = blank_package(name = args.packagename[0], url = url, is_wheel = True)
+			final_package = blank_package(name = args.packagename, url = url, is_wheel = True)
 		else:
-			final_package = blank_package(name = args.packagename[0], url = url)
+			final_package = blank_package(name = args.packagename, url = url)
 	else:
-		final_package = blank_package(name = args.packagename[0], url = url, is_script = True)
+		final_package = blank_package(name = args.packagename, url = url, is_script = True)
 	final_package['releases'] = [ new_rel_entry ]
 	
 	
 	print(json.dumps(final_package, indent=4))
-	if not os.path.exists('local/' + args.packagename[0] + '.json'):
-		with open('local/' + args.packagename[0] + '.json', 'x', encoding='utf-8') as pl:
+	if not os.path.exists('local/' + args.packagename + '.json'):
+		with open('local/' + args.packagename + '.json', 'x', encoding='utf-8') as pl:
 			json.dump(fp=pl, obj=final_package, ensure_ascii=False, indent='\t')
 		
 		print("package created")
@@ -515,14 +510,14 @@ elif args.operation == 'create-package':
 		if extract_git_repo(url) and not is_wheel:
 			print("Is hosted on GitHub - auto updating package")
 			args.overwrite = True
-			update_package(args.packagename[0])
+			update_package(args.packagename)
 
 		if is_wheel and url.startswith('https://files.pythonhosted.org'):
 			print("Auto updating wheel package")
 			args.overwrite = True
-			update_package(args.packagename[0])
+			update_package(args.packagename)
 	else:
-		print("package file '{}'.json already exists. Skipping writing file.".format(args.packagename[0])) 
+		print("package file '{}'.json already exists. Skipping writing file.".format(args.packagename)) 
 	
 	
 elif args.operation == 'upload':

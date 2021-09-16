@@ -25,6 +25,7 @@ import json
 import sys
 import os
 import os.path
+import datetime as dt
 import argparse
 import hashlib
 import subprocess
@@ -62,6 +63,8 @@ parser.add_argument('-kf', dest='keepfolder', type=int, default=-1, nargs='?', h
 args = parser.parse_args()
 
 cmd7zip_path = '7z.exe'
+time_limit = 14 # time limit after a commit is treated as new in days | (updatemode: git_commits)
+
 try:
     with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
         cmd7zip_path = winreg.QueryValueEx(regkey, 'Path')[0] + '7z.exe'
@@ -83,6 +86,23 @@ def get_git_api_url(url):
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
         return 'https://api.github.com/repos/' + s[-2] + '/' + s[-1] + '/releases'
+    else:
+        return None
+
+def get_git_api_commits_url(url, path = None, branch = None):
+    sha = ""
+    if branch:
+        sha = f"sha={branch}&" 
+    if url.startswith('https://github.com/'):
+        s = url.rsplit('/', 3)
+        return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/commits?{sha}' + f'path={path}' if path else ''
+    else:
+        return None
+
+def get_git_api_zipball_url(url, ref = None):
+    if url.startswith('https://github.com/'):
+        s = url.rsplit('/', 3)
+        return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/zipball' + f'/{ref}' if ref else ''
     else:
         return None
         
@@ -231,10 +251,50 @@ def update_package(name):
             return -1
     elif 'github' in pfile:
         new_rels = {}
-        apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name'], token=args.git_token))
         is_plugin = (pfile['type'] == 'VSPlugin')
         is_pyscript = (pfile['type'] == 'PyScript')
         is_pywheel = (pfile['type'] == 'PyWheel')
+
+        if (is_pyscript and ('updatemode' in pfile) and pfile['updatemode'] == 'git-commits'):
+            apifile = [] # no releases dummy
+            new_rel_entry = { 'version': "", 'published': "" }
+            try:
+                latest_rel = get_latest_installable_release(pfile, 'script')
+                fpath = os.path.basename(list(latest_rel['script']['files'].values())[0][0])
+
+                git_commits = json.loads(fetch_url(  get_git_api_commits_url(url = pfile['github'], path = fpath, branch = pfile['gitbranch'] if 'gitbranch' in pfile else None), pfile['name']))
+
+                git_hash = git_commits[0]['sha']
+                git_hash_short = git_hash[:7]
+
+                try:
+                    #diff_date_commit = (dt.datetime.now() - dt.datetime.strptime(git_commits[0]['commit']['committer']['date'], "%Y-%m-%dT%H:%M:%SZ")).days
+                    diff_date_package = (dt.datetime.now() - dt.datetime.strptime(latest_rel['published'], "%Y-%m-%dT%H:%M:%SZ")).days
+                except:
+                    print("Parsing published date failed")
+
+                if(diff_date_package > time_limit):
+                    if not any(('git:' + git_hash_short) in ver for ver in rel_order):
+                        rel_order.insert(0, 'git:' + git_hash_short)
+                        print('git:' + git_hash_short + ' (new)')
+                    new_rel_entry = { 'version': 'git:' + git_hash_short, 'published': git_commits[0]['commit']['committer']['date'] }       
+
+                    new_url = get_git_api_zipball_url(pfile['github'], git_hash)
+                    temp_fn = fetch_url_to_cache(new_url, name,  git_hash_short, pfile['name'] + ' ' + git_hash_short + ' script')
+                    new_rel_entry['script'] = { 'url': new_url, 'files': {} }
+                    for fn in latest_rel['script']['files']:
+                        new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')
+                        new_rel_entry['script']['files'][fn] = [new_fn, digest]
+                    
+
+                    new_rels[new_rel_entry['version']] = new_rel_entry
+
+            except:
+                new_rel_entry.pop('script', None)
+                print('No script found') 
+        else:
+            apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name'], token=args.git_token))
+        
         for rel in apifile:
             if rel['prerelease']:
                 continue
@@ -302,7 +362,7 @@ def update_package(name):
 def verify_package(pfile, existing_identifiers):
     name = pfile['name']
     for key in pfile.keys():
-        if key not in ('name', 'type', 'api', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases'):
+        if key not in ('name', 'type', 'api', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases', 'updatemode', 'gitbranch'):
             raise Exception('Unknown key: ' + key + ' in ' + name)
     if pfile['type'] not in ('VSPlugin', 'PyScript', 'PyWheel'):
         raise Exception('Invalid type in ' + name)

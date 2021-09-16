@@ -7,6 +7,7 @@
 	"identifier": "muvsfunc",
 	"modulename": "muvsfunc",
 	"github": "https://github.com/WolframRhodium/muvsfunc",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"havsfunc",
 		"mvsfunc",

@@ -63,7 +63,7 @@ parser.add_argument('-kf', dest='keepfolder', type=int, default=-1, nargs='?', h
 args = parser.parse_args()
 
 cmd7zip_path = '7z.exe'
-time_limit = 14 # time limit after a commit is treated as new in days | (updatemode: git_commits)
+time_limit = 14 # time limit after a commit is treated as new in days | (updatemode: git-commits)
 
 try:
     with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
@@ -377,6 +377,9 @@ def verify_package(pfile, existing_identifiers):
     allowed_categories = ('Scripts', 'Plugin Dependency', 'Resizing and Format Conversion', 'Other', 'Dot Crawl and Rainbows', 'Sharpening', 'Denoising', 'Deinterlacing', 'Inverse Telecine', 'Source/Output', 'Subtitles', 'Color/Levels')
     if pfile['category'] not in allowed_categories:
         raise Exception('Not allowed catogry in ' + name + ': ' + pfile['category'] + ' not in ' + repr(allowed_categories))
+    if 'updatemode' in pfile:
+        if pfile['updatemode'] not in ('git-commits'):
+            raise Exception('Invalid updatemode in ' + name)
     if 'api' in pfile:
         if pfile['api'] not in (3, 4):
             raise Exception('Invalid api version in ' + name)

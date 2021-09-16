@@ -6,12 +6,29 @@
 	"category": "Resizing and Format Conversion",
 	"identifier": "nnedi3_resample",
 	"modulename": "nnedi3_resample",
-	"github": "https://github.com/mawen1250/VapourSynth-script",
+	"github": "https://github.com/AmusementClub/nnedi3_resample",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"com.deinterlace.nnedi3",
-		"fmtconv"
+		"com.holywu.nnedi3cl",
+		"xxx.abc.znedi3",		
+		"fmtconv",
+		"muvsfunc",
 	],
 	"releases": [
+		{
+			"version": "git:a637c40",
+			"published": "2021-08-05T11:54:01Z",
+			"script": {
+				"url": "https://api.github.com/repos/AmusementClub/nnedi3_resample/zipball/a637c40ee0e4eeec86e372c527214e6a43ce0604",
+				"files": {
+					"nnedi3_resample.py": [
+						"AmusementClub-nnedi3_resample-a637c40/nnedi3_resample.py",
+						"5db85b0baa84acc57ed801da001e1d5634a48aff742e8dfea929a5e01622edfa"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:0983895",
 			"published": "2018-05-10T10:03:22Z",

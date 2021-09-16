@@ -617,9 +617,10 @@ def install_files(p):
 
 def install_package(name):
     p = get_package_from_name(name)
-    if p['identifier'] in bundled_api3_plugins:
-        print('Binaries are already bundled for ' + p['name'] + ', skipping installation')
-        return (0, 0, 0)
+    if get_vapoursynth_api_version() <= 3:
+        if p['identifier'] in bundled_api3_plugins:
+            print('Binaries are already bundled for ' + p['name'] + ', skipping installation')
+            return (0, 0, 0)
     if can_install(p):
         inst = (0, 0, 0)
         if not args.skip_deps:

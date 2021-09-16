@@ -8,6 +8,7 @@
 	"identifier": "oyster",
 	"modulename": "Oyster",
 	"github": "https://github.com/IFeelBloated/Oyster",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"com.deinterlace.nnedi3",
 		"com.Khanattila.KNLMeansCL",
@@ -21,10 +22,10 @@
 			"version": "git:7d52c78",
 			"published": "2020-05-30T19:17:20Z",
 			"script": {
-				"url": "https://raw.githubusercontent.com/IFeelBloated/Oyster/7d52c78cb1eb27750d503ed6b36cc443d29140bf/Oyster.py",
+				"url": "https://api.github.com/repos/IFeelBloated/Oyster/zipball/7d52c78cb1eb27750d503ed6b36cc443d29140bf",
 				"files": {
 					"Oyster.py": [
-						"Oyster.py",
+						"IFeelBloated-Oyster-7d52c78/Oyster.py",
 						"56c833c1900a4e62879f6d597ebcfabcf0e12f5fe08b5cba4d1b4020dac543c2"
 					]
 				}

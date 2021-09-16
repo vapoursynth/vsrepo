@@ -7,6 +7,7 @@
 	"identifier": "faggotdb",
 	"modulename": "faggotdb",
 	"github": "https://github.com/AlucardSama04/faggotDb",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"vsutil"
 	],
@@ -15,10 +16,10 @@
 			"version": "git:45845cf",
 			"published": "2020-12-11T16:20:48Z",
 			"script": {
-				"url": "https://raw.githubusercontent.com/AlucardSama04/faggotDb/45845cf4985feec8892d3f81a5370dcb7e0ef775/faggotdb.py",
+				"url": "https://api.github.com/repos/AlucardSama04/faggotDb/zipball/45845cf4985feec8892d3f81a5370dcb7e0ef775",
 				"files": {
 					"faggotdb.py": [
-						"faggotdb.py",
+						"AlucardSama04-faggotDb-45845cf/faggotdb.py",
 						"f21956f4a766b0f98f4af6a2c9fcdddc8a0c3e2cdca03b410cecee991e73fa1f"
 					]
 				}

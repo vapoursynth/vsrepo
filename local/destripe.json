@@ -6,6 +6,7 @@
 	"identifier": "destripe",
 	"modulename": "destripe",
 	"github": "https://github.com/YomikoR/VapourSynth-Destripe",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"tegaf.asi.xe"
 	],
@@ -14,10 +15,10 @@
 			"version": "git:6ecb06f",
 			"published": "2021-08-04T08:26:30Z",
 			"script": {
-				"url": "https://raw.githubusercontent.com/YomikoR/VapourSynth-Destripe/6ecb06f3fb2bd06f25a3e583b49e454d433727bf/destripe.py",
+				"url": "https://api.github.com/repos/YomikoR/VapourSynth-Destripe/zipball/6ecb06f3fb2bd06f25a3e583b49e454d433727bf",
 				"files": {
 					"destripe.py": [
-						"destripe.py",
+						"YomikoR-VapourSynth-Destripe-6ecb06f/destripe.py",
 						"b1ad9740ed8f5d73fd4ea963165ee46613b89fbe05ff07b6ce90ced540a9795f"
 					]
 				}

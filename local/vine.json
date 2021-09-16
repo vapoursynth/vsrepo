@@ -8,6 +8,7 @@
 	"identifier": "vine",
 	"modulename": "Vine",
 	"github": "https://github.com/IFeelBloated/Vine",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"com.deinterlace.nnedi3",
 		"com.Khanattila.KNLMeansCL",
@@ -21,10 +22,10 @@
 			"version": "git:b8285e8",
 			"published": "2020-07-12T16:39:32Z",
 			"script": {
-				"url": "https://raw.githubusercontent.com/IFeelBloated/Vine/b8285e8d17f020bdae8ab722dbf33a0e91763dca/Vine.py",
+				"url": "https://api.github.com/repos/IFeelBloated/Vine/zipball/b8285e8d17f020bdae8ab722dbf33a0e91763dca",
 				"files": {
 					"Vine.py": [
-						"Vine.py",
+						"IFeelBloated-Vine-b8285e8/Vine.py",
 						"7a3db85042ff0f6e004e147b1dae2904d6ab84353a8b6ad75d603189fbfd4d7f"
 					]
 				}

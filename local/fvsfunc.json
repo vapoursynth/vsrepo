@@ -7,6 +7,7 @@
 	"identifier": "fvsfunc",
 	"modulename": "fvsfunc",
 	"github": "https://github.com/Irrational-Encoding-Wizardry/fvsfunc",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"havsfunc",
 		"mvsfunc",
@@ -30,10 +31,10 @@
 			"version": "git:2f5b28d",
 			"published": "2021-08-03T12:00:05Z",
 			"script": {
-				"url": "https://raw.githubusercontent.com/Irrational-Encoding-Wizardry/fvsfunc/2f5b28d5ee5c61e37249bca9b3e10a07f337e785/fvsfunc.py",
+				"url": "https://api.github.com/repos/Irrational-Encoding-Wizardry/fvsfunc/zipball/2f5b28d5ee5c61e37249bca9b3e10a07f337e785",
 				"files": {
 					"fvsfunc.py": [
-						"fvsfunc.py",
+						"Irrational-Encoding-Wizardry-fvsfunc-2f5b28d/fvsfunc.py",
 						"67eef3e58436d75f94942ab6d3ff86bef827b820bff06a8ead426348dd30511a"
 					]
 				}

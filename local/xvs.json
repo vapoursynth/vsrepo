@@ -6,6 +6,7 @@
 	"category": "Scripts",
 	"identifier": "xvs",
 	"modulename": "xvs",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"mvsfunc",
 		"havsfunc",
@@ -30,6 +31,19 @@
 		"com.holywu.readmpls"
 	],
 	"releases": [
+		{
+			"version": "git:53020de",
+			"published": "2021-09-13T09:09:50Z",
+			"script": {
+				"url": "https://api.github.com/repos/xyx98/my-vapoursynth-script/zipball/53020de75cecb7f6ca6060a6d477a3eb1a7025a9",
+				"files": {
+					"xvs.py": [
+						"xyx98-my-vapoursynth-script-53020de/xvs.py",
+						"7d2af5d90b6ca6b4fd2a1005e59f2d4bd7381d5505ba82824631b1c2e726b723"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:49eee27",
 			"published": "2021-08-02T01:05:49Z",

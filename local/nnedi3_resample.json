@@ -12,8 +12,7 @@
 		"com.deinterlace.nnedi3",
 		"com.holywu.nnedi3cl",
 		"xxx.abc.znedi3",		
-		"fmtconv",
-		"muvsfunc"
+		"fmtconv"
 	],
 	"releases": [
 		{

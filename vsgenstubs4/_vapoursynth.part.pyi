@@ -76,6 +76,7 @@
 import ctypes
 import enum
 import fractions
+import inspect
 import types
 import typing
 
@@ -274,6 +275,8 @@ def has_policy() -> bool: ...
 # vpy_current_environment is deprecated
 def vpy_current_environment() -> Environment: ...
 def get_current_environment() -> Environment: ...
+
+def construct_signature(signature: str, return_signature: str, injected: typing.Optional[str] = None) -> inspect.Signature: ...
 
 
 class VideoOutputTuple(typing.NamedTuple):

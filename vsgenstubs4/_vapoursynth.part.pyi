@@ -311,6 +311,8 @@ class VideoFormat:
     subsampling_h: int
     num_planes: int
 
+    def __int__(self) -> int: ...
+
     def _as_dict(self) -> typing.Dict[str, typing.Any]: ...
     def replace(self, *,
                 color_family: typing.Optional[ColorFamily] = None,

@@ -774,6 +774,8 @@ def update_genstubs():
     print("Updating VapourSynth stubs")
 
     genstubs = os.path.join(os.path.dirname(__file__), "vsgenstubs/__init__.py")
+    if get_vapoursynth_api_version() > 3:
+        genstubs = os.path.join(os.path.dirname(__file__), "vsgenstubs4/__init__.py")
     contents = subprocess.getoutput([sys.executable, genstubs, "-o", "-"])
 
     site_package = False

@@ -210,6 +210,22 @@ RGBH: PresetFormat
 RGBS: PresetFormat
 
 
+class VapourSynthVersion(typing.NamedTuple):
+    release_major: int
+    release_minor: int
+
+
+__version__: VapourSynthVersion
+
+
+class VapourSynthAPIVersion(typing.NamedTuple):
+    api_major: int
+    api_minor: int
+
+
+__api_version__: VapourSynthAPIVersion
+
+
 class MessageType(enum.Enum):
     MESSAGE_TYPE_DEBUG = 0
     MESSAGE_TYPE_INFORMATION = 1

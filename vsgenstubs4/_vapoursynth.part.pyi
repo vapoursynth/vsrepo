@@ -374,9 +374,15 @@ class _Future(typing.Generic[T]):
 
 
 class Plugin:
+    identifier: str
     namespace: str
+    name: str
 
+    def functions(self) -> typing.Iterator[Function]: ...
+
+    # get_functions is deprecated
     def get_functions(self) -> typing.Dict[str, str]: ...
+    # list_functions is deprecated
     def list_functions(self) -> str: ...
 
 

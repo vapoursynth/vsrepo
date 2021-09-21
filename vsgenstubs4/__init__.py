@@ -84,7 +84,7 @@ def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode, vapo
 
         # Add a self.
         signature = signature.replace("(", "(self, ").replace(", )", ")")
-        result.append(f"    def {func}{signature}: ...")
+        result.append(f"    def {func.name}{signature}: ...")
     return result
 
 

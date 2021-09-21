@@ -245,11 +245,14 @@ class EnvironmentData:
 
 
 class Environment:
-    alive: bool
-    single: bool
-    env_id: int
-    active: bool
-
+    @property
+    def alive(self) -> bool: ...
+    @property
+    def single(self) -> bool: ...
+    @property
+    def env_id(self) -> int: ...
+    @property
+    def active(self) -> bool: ...
     def copy(self) -> Environment: ...
     def use(self) -> typing.ContextManager[None]: ...
 
@@ -451,8 +454,14 @@ class _PluginMeta(typing.TypedDict):
 class Core:
 #include <plugins/unbound>
 
-    num_threads: int
-    max_cache_size: int
+    @property
+    def num_threads(self) -> int: ...
+    @num_threads.setter
+    def num_threads(self) -> None: ...
+    @property
+    def max_cache_size(self) -> int: ...
+    @max_cache_size.setter
+    def max_cache_size(self) -> None: ...
 
     def plugins(self) -> typing.Iterator[Plugin]: ...
     # get_plugins is deprecated
@@ -474,7 +483,8 @@ class Core:
 
 
 class _CoreProxy(Core):
-    core: Core
+    @property
+    def core(self) -> Core: ...
 
 
 core: _CoreProxy

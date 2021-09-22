@@ -15,6 +15,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:715b41b",
+			"published": "2021-09-21T18:01:56Z",
+			"script": {
+				"url": "https://api.github.com/repos/AmusementClub/mvsfunc/zipball/715b41b8d9d4d4adb2af9cbb7d83a0c45fc55bb9",
+				"files": {
+					"mvsfunc.py": [
+						"AmusementClub-mvsfunc-715b41b/mvsfunc.py",
+						"933f15e82dd88591e6f569d688b5998d0db2d203e6f46215d26aab850b09dbdf"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:0b2c6a8",
 			"published": "2021-08-03T22:07:14Z",
 			"script": {

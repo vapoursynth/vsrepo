@@ -12,6 +12,19 @@
 	],
 	"releases": [
 		{
+			"version": "r2.1",
+			"published": "2021-09-22T01:45:11Z",
+			"win64": {
+				"url": "https://github.com/sekrit-twc/znedi3/releases/download/r2.1/znedi3_r2.1.7z",
+				"files": {
+					"vsznedi3.dll": [
+						"vsznedi3.dll",
+						"48c5ca3c086f3e3582b2a19b6b61c8a53c0a9b104be2131d9f4b2b06c9d9dfec"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2020-07-07T19:04:04Z",
 			"win64": {

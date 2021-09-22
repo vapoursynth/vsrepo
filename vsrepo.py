@@ -416,8 +416,8 @@ def get_latest_installable_release_with_index(p):
     for idx, rel in enumerate(p['releases']):
         if bin_name in rel:
             bin_api = package_api
-            if 'api' in rel:
-                bin_api = rel['api']
+            if 'api' in rel[bin_name]:
+                bin_api = rel[bin_name]['api']
             if bin_api <= max_api and bin_api >= 3:
                 return idx, rel
     return (-1, None)

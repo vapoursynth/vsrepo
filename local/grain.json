@@ -8,10 +8,25 @@
 	"identifier": "com.holywu.addgrain",
 	"namespace": "grain",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain",
+	"api": 4,
 	"releases": [
+		{
+			"version": "r9",
+			"published": "2021-09-22T09:58:32Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r9/AddGrain-r9-win64.7z",
+				"files": {
+					"AddGrain.dll": [
+						"AddGrain.dll",
+						"7e2f16c2fca0a5260f432548c62ec111a84cddeea0f5d622e648cf8ab8b762a0"
+					]
+				}
+			}
+		},
 		{
 			"version": "r8",
 			"published": "2020-06-19T13:43:20Z",
+			"api": 3,
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r8/AddGrain-r8.7z",
 				"files": {
@@ -25,6 +40,7 @@
 		{
 			"version": "r7",
 			"published": "2018-11-29T07:10:54Z",
+			"api": 3,
 			"win64": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r7/AddGrain-r7.7z",
 				"files": {
@@ -38,6 +54,7 @@
 		{
 			"version": "r6",
 			"published": "2018-05-31T10:28:08Z",
+			"api": 3,
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r6/AddGrain-r6.7z",
 				"files": {
@@ -60,6 +77,7 @@
 		{
 			"version": "r5",
 			"published": "2015-06-09T16:41:12Z",
+			"api": 3,
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r5/AddGrain-r5.7z",
 				"files": {
@@ -82,6 +100,7 @@
 		{
 			"version": "r4",
 			"published": "2014-12-24T15:05:07Z",
+			"api": 3,
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r4/AddGrain-r4.7z",
 				"files": {
@@ -104,6 +123,7 @@
 		{
 			"version": "r3",
 			"published": "2014-11-28T16:31:55Z",
+			"api": 3,
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r3/AddGrain-r3.7z",
 				"files": {
@@ -126,6 +146,7 @@
 		{
 			"version": "r2",
 			"published": "2014-08-22T11:21:48Z",
+			"api": 3,
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r2/AddGrain-r2.7z",
 				"files": {
@@ -148,6 +169,7 @@
 		{
 			"version": "r1",
 			"published": "2014-08-21T16:14:36Z",
+			"api": 3,
 			"win32": {
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r1/AddGrain-r1.7z",
 				"files": {

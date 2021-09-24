@@ -1,0 +1,34 @@
+{
+	"name": "EEDI3 (obsolete)",
+	"type": "VSPlugin",
+	"category": "Deinterlacing",
+	"description": "Edge directed interpolation filter",
+	"github": "https://github.com/vapoursynth/vs-eedi3-obsolete",
+	"identifier": "com.vapoursynth.eedi3",
+	"namespace": "eedi3",
+	"api": 4,
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2021-09-23T12:46:41Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/vs-eedi3-obsolete/releases/download/R1/eedi3-r1.7z",
+				"files": {
+					"EEDI3.dll": [
+						"win32/EEDI3.dll",
+						"afbb4f577a186fb5675952c8614432fd90e28bdadde0c8b77b9b791db529e3ad"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/vs-eedi3-obsolete/releases/download/R1/eedi3-r1.7z",
+				"files": {
+					"EEDI3.dll": [
+						"win64/EEDI3.dll",
+						"f101bf621ff582b5e269783be6b02329f84306f414f87a305c4d23878764fd88"
+					]
+				}
+			}
+		}
+	]
+}

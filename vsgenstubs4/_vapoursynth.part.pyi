@@ -349,10 +349,6 @@ class FrameProps(typing.MutableMapping[str, _FramePropsValue]):
     def __iter__(self) -> typing.Iterator[str]: ...
     def __len__(self) -> int: ...
 
-class VideoPlane:
-    width: int
-    height: int
-
 
 class VideoFrame:
     props: FrameProps

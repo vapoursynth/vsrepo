@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
 
+import argparse
+import inspect
+import keyword
 import os
 import sys
-import inspect
-import argparse
-import keyword
+from typing import List, NamedTuple, Union
+
 import vapoursynth
-from typing import Dict, Sequence, Union, NamedTuple
 
 
 def indent(string: str, spaces: int) -> str:
@@ -25,7 +26,7 @@ class PluginMeta(NamedTuple):
     name: str
     description: str
     functions: str
-
+    bound_to: str
 
 
 def prepare_cores(ns) -> vapoursynth.Core:
@@ -41,74 +42,90 @@ def prepare_cores(ns) -> vapoursynth.Core:
     return core
 
 
-def retrieve_ns_and_funcs(core: vapoursynth.Core, *, bound: bool=False) -> Dict[str, PluginMeta]:
-    result = {}
+def retrieve_ns_and_funcs_unbound(core: vapoursynth.Core) -> List[PluginMeta]:
+    return [
+        PluginMeta(
+            v.namespace, v.name,
+            "\n".join(retrieve_func_sigs(core, v.namespace)),
+            'Core'
+        ) for v in core.plugins()
+    ]
 
-    base = core
-    if bound:
+
+def retrieve_ns_and_funcs_bound(core: vapoursynth.Core, *, audio: bool = False) -> List[PluginMeta]:
+
+    if audio:
+        base = core.std.BlankAudio()
+    else:
         base = core.std.BlankClip()
 
-    for v in core.plugins():
-        result[v.namespace] = PluginMeta(
-            v.namespace,
-            v.name,
-            "\n".join(retrieve_func_sigs(base, v.namespace))
-        )
-    return result
+    plugins: List[PluginMeta] = []
+
+    for p in core.plugins():
+        funcs = "\n".join(retrieve_func_sigs(base, p.namespace))
+        if funcs:
+            plugins.append(
+                PluginMeta(
+                    p.namespace, p.name, funcs, base.__class__.__name__
+                )
+            )
+
+    return plugins
 
 
-def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode, vapoursynth.AudioNode], ns: str) -> str:
+def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode, vapoursynth.AudioNode], ns: str) -> List[str]:
     result = []
     plugin = getattr(core, ns)
     for func in plugin.functions():
-        try:
-            signature = str(inspect.signature(getattr(plugin, func.name)))
-        except BaseException:
-            signature = "(*args, **kwargs) -> Union[NoneType, VideoNode]"
+        if func.name in dir(plugin):
+            try:
+                signature = str(inspect.signature(getattr(plugin, func.name)))
+            except BaseException:
+                signature = "(*args: typing.Any, **kwargs: typing.Any) -> Union[NoneType, VideoNode]"
 
-        # Clean up the type annotations so that they are valid python syntax.
-        signature = signature.replace("Union", "typing.Union").replace("Sequence", "typing.Sequence")
-        signature = signature.replace("vapoursynth.", "")
-        signature = signature.replace("VideoNode", '"VideoNode"').replace("VideoFrame", '"VideoFrame"')
-        signature = signature.replace("AudioNode", '"AudioNode"').replace("AudioFrame", '"AudioFrame"')
-        signature = signature.replace("NoneType", "None")
-        signature = signature.replace("Optional", "typing.Optional")
+            # Clean up the type annotations so that they are valid python syntax.
+            signature = signature.replace("Union", "typing.Union").replace("Sequence", "typing.Sequence")
+            signature = signature.replace("vapoursynth.", "")
+            signature = signature.replace("VideoNode", '"VideoNode"').replace("VideoFrame", '"VideoFrame"')
+            signature = signature.replace("AudioNode", '"AudioNode"').replace("AudioFrame", '"AudioFrame"')
+            signature = signature.replace("NoneType", "None")
+            signature = signature.replace("Optional", "typing.Optional")
 
-        # Make Callable definitions sensible
-        signature = signature.replace("typing.Union[Func, Callable]", "typing.Callable[..., typing.Any]")
-        signature = signature.replace("typing.Union[Func, Callable, None]", "typing.Optional[typing.Callable[..., typing.Any]]")
+            # Make Callable definitions sensible
+            signature = signature.replace("typing.Union[Func, Callable]", "typing.Callable[..., typing.Any]")
+            signature = signature.replace("typing.Union[Func, Callable, None]", "typing.Optional[typing.Callable[..., typing.Any]]")
 
-        # Replace the keywords with valid values
-        for kw in keyword.kwlist:
-            signature = signature.replace(f" {kw}:", f" {kw}_:")
+            # Replace the keywords with valid values
+            for kw in keyword.kwlist:
+                signature = signature.replace(f" {kw}:", f" {kw}_:")
 
-        # Add a self.
-        signature = signature.replace("(", "(self, ").replace(", )", ")")
-        result.append(f"    def {func.name}{signature}: ...")
+            # Add a self.
+            signature = signature.replace("(", "(self, ").replace(", )", ")")
+            result.append(f"    def {func.name}{signature}: ...")
     return result
 
 
-def make_plugin_classes(suffix: str, sigs: Dict[str, PluginMeta]) -> str:
+def make_plugin_classes(suffix: str, sigs: List[PluginMeta]) -> str:
     result = []
-    for pname, pfuncs in sigs.items():
-        result.append(f"class _Plugin_{pname}_{suffix}(Plugin):")
+    for p in sigs:
+        result.append(f"class _Plugin_{p.name}_{p.bound_to}_{suffix}(Plugin):")
         result.append('    """')
         result.append('    This class implements the module definitions for the corresponding VapourSynth plugin.')
         result.append('    This class cannot be imported.')
         result.append('    """')
-        result.append(pfuncs.functions)
+        result.append(p.functions)
         result.append("")
         result.append("")
     return "\n".join(result)
 
 
-def make_instance_vars(suffix: str, sigs: Dict[str, PluginMeta]) -> str:
+def make_instance_vars(suffix: str, sigs: List[PluginMeta]) -> str:
     result = []
-    for pname, pfuncs in sigs.items():
+    for p in sigs:
         result.append("@property")
-        result.append(f"def {pname}(self) -> _Plugin_{pname}_{suffix}:")
+        result.append(f"def {p.name}(self) -> _Plugin_{p.name}_{p.bound_to}_{suffix}:")
         result.append('    """')
-        result.append(f'    {pfuncs.description}')
+        result.append(f'    {p.description}')
         result.append('    """')
     return "\n".join(result)
 
@@ -119,7 +136,7 @@ def inject_stub_package() -> str:
     if not os.path.exists(stub_dir):
         os.makedirs(stub_dir)
     output_path = os.path.join(stub_dir, "__init__.pyi")
-    
+
     for iname in os.listdir(site_package_dir):
         if iname.startswith("VapourSynth-") and iname.endswith(".dist-info"):
             break
@@ -134,30 +151,41 @@ def inject_stub_package() -> str:
             if not contents.endswith("\n"):
                 f.write("\n")
             f.write("vapoursynth-stubs/__init__.pyi,,\n")
-    
+
     return output_path
+
 
 def main(argv=None):
     if argv is None:
         argv = sys.argv[1:]
-    
+
     args = parser.parse_args(args=argv)
     core = prepare_cores(args)
 
-    bound = retrieve_ns_and_funcs(core, bound=True)
-    unbound = retrieve_ns_and_funcs(core, bound=False)
+    # bound = retrieve_ns_and_funcs(core, bound=True)
+    boundv = retrieve_ns_and_funcs_bound(core, audio=False)
+    bounda = retrieve_ns_and_funcs_bound(core, audio=True)
 
-    implementations = make_plugin_classes("Unbound", unbound) + "\n" + make_plugin_classes("Bound", bound)
+    unbound = retrieve_ns_and_funcs_unbound(core)
 
-    inject_bound = indent(make_instance_vars("Bound", bound), 4)
+    implementations = (
+        make_plugin_classes("Unbound", unbound)
+        + "\n" + make_plugin_classes("Bound", boundv)
+        + "\n" + make_plugin_classes("Bound", bounda)
+    )
+
+    inject_boundv = indent(make_instance_vars("Bound", boundv), 4)
+    inject_bounda = indent(make_instance_vars("Bound", bounda), 4)
     inject_unbound = indent(make_instance_vars("Unbound", unbound), 4)
+
 
     with open(args.pyi_template) as f:
         template = f.read()
 
     template = template.replace("#include <plugins/implementations>", implementations)
     template = template.replace("#include <plugins/unbound>", inject_unbound)
-    template = template.replace("#include <plugins/bound>", inject_bound)
+    template = template.replace("#include <plugins_vnode/bound>", inject_boundv)
+    template = template.replace("#include <plugins_anode/bound>", inject_bounda)
 
     if args.output == "-":
         f = sys.stdout
@@ -166,10 +194,11 @@ def main(argv=None):
         f = open(stub_path, "w")
     else:
         f = open(args.output, "w")
-    
+
     with f:
         f.write(template)
         f.flush()
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])

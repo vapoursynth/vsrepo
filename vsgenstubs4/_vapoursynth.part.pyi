@@ -388,7 +388,7 @@ class Plugin:
 
 
 class VideoNode:
-#include <plugins/bound>
+#include <plugins_vnode/bound>
 
     format: typing.Optional[VideoFormat]
 
@@ -431,6 +431,8 @@ class AudioFrame:
 
 
 class AudioNode:
+#include <plugins_anode/bound>
+
     sample_type: SampleType
     bits_per_sample: int
     bytes_per_sample: int

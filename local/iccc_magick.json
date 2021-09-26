@@ -1,0 +1,33 @@
+{
+	"name": "ICCConvert Magick",
+	"type": "VSPlugin",
+	"category": "Plugin Dependency",
+	"description": "Needed for the Extract function to work for ICCConvert",
+	"doom9": "https://forum.doom9.org/showthread.php?t=183115",
+	"github": "https://github.com/YomikoR/VapourSynth-ICCConvert",
+	"identifier": "yomiko.collection.iccconvert.magick",
+	"namespace": "iccc_magick",
+	"ignore": [
+		"3.1",
+		"2.5.1",
+		"2.3",
+		"2.1",
+		"2.0",
+		"1.0"
+	],
+	"releases": [
+		{
+			"version": "3.2",
+			"published": "2021-09-19T15:24:40Z",
+			"win64": {
+				"url": "https://github.com/YomikoR/VapourSynth-ICCConvert/releases/download/3.2/libiccc_x64_magick.zip",
+				"files": {
+					"libiccc_x64_magick.dll": [
+						"libiccc_x64_magick.dll",
+						"db48da2ce2f8d5ff29a6433a3f78de5e0eb7292593613ad130045427a35baa78"
+					]
+				}
+			}
+		}
+	]
+}

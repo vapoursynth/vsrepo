@@ -1,0 +1,37 @@
+{
+	"name": "ICCConvert",
+	"type": "VSPlugin",
+	"category": "Color/Levels",
+	"description": "Little CMS based ICC profile simulation for VapourSynth.",
+	"doom9": "https://forum.doom9.org/showthread.php?t=183115",
+	"github": "https://github.com/YomikoR/VapourSynth-ICCConvert",
+	"identifier": "yomiko.collection.iccconvert",
+	"namespace": "iccc",
+	"api": 4,
+	"dependencies": [
+		"yomiko.collection.iccconvert.magick"
+	],
+	"ignore": [
+		"3.1",
+		"2.5.1",
+		"2.3",
+		"2.1",
+		"2.0",
+		"1.0"
+	],
+	"releases": [
+		{
+			"version": "3.2",
+			"published": "2021-09-19T15:24:40Z",
+			"win64": {
+				"url": "https://github.com/YomikoR/VapourSynth-ICCConvert/releases/download/3.2/libiccc_x64_3.2.zip",
+				"files": {
+					"libiccc_x64.dll": [
+						"API4/libiccc_x64.dll",
+						"fcb380c766ed4321803881a2b61443a27df07377d5b69eee5dd74932d230658f"
+					]
+				}
+			}
+		}
+	]
+}

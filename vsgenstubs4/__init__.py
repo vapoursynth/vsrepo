@@ -6,7 +6,7 @@ import inspect
 import keyword
 import os
 import sys
-from typing import List, NamedTuple, Union
+from typing import Any, List, NamedTuple, Optional, Union
 
 import vapoursynth
 
@@ -79,15 +79,25 @@ def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode, vapo
     for func in plugin.functions():
         if func.name in dir(plugin):
             try:
-                signature = str(inspect.signature(getattr(plugin, func.name)))
+                signature = inspect.signature(getattr(plugin, func.name))
             except BaseException:
-                signature = "(*args: typing.Any, **kwargs: typing.Any) -> Union[NoneType, VideoNode]"
+                signature = inspect.Signature(
+                    [inspect.Parameter('args', inspect.Parameter.VAR_POSITIONAL, annotation=Any),
+                     inspect.Parameter('kwargs', inspect.Parameter.VAR_KEYWORD, annotation=Any)],
+                    return_annotation=Optional[vapoursynth.VideoNode]
+                )
+
+            if signature.return_annotation in {Any, Optional[Any]}:
+                signature = signature.replace(return_annotation=vapoursynth.VideoNode)
+
+            signature = str(signature)
 
             # Clean up the type annotations so that they are valid python syntax.
             signature = signature.replace("Union", "typing.Union").replace("Sequence", "typing.Sequence")
             signature = signature.replace("vapoursynth.", "")
             signature = signature.replace("VideoNode", '"VideoNode"').replace("VideoFrame", '"VideoFrame"')
             signature = signature.replace("AudioNode", '"AudioNode"').replace("AudioFrame", '"AudioFrame"')
+            signature = signature.replace("Any", "typing.Any")
             signature = signature.replace("NoneType", "None")
             signature = signature.replace("Optional", "typing.Optional")
 

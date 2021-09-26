@@ -83,91 +83,102 @@ import typing
 T = typing.TypeVar("T")
 SingleAndSequence = typing.Union[T, typing.Sequence[T]]
 
+
 ###
 # ENUMS AND CONSTANTS
-class ColorFamily(int):
-    name: str
-    value: int
+class MediaType(enum.IntEnum):
+    VIDEO
+    AUDIO
 
-    GRAY: typing.ClassVar['ColorFamily']
-    RGB: typing.ClassVar['ColorFamily']
-    YUV: typing.ClassVar['ColorFamily']
+
+VIDEO: MediaType
+AUDIO: MediaType
+
+
+class ColorFamily(enum.IntEnum):
+    GRAY
+    RGB
+    YUV
+
 
 GRAY: ColorFamily
 RGB: ColorFamily
 YUV: ColorFamily
 
 
-class SampleType(int):
-    name: str
-    value: int
-
-    INTEGER: typing.ClassVar['SampleType']
-    FLOAT: typing.ClassVar['SampleType']
+class SampleType(enum.IntEnum):
+    INTEGER
+    FLOAT
 
 
 INTEGER: SampleType
 FLOAT: SampleType
 
 
-class PresetFormat(int):
-    name: str
-    value: int
+class PresetFormat(enum.IntEnum):
+    NONE
 
-    NONE: typing.ClassVar['PresetFormat']
+    GRAY8
+    GRAY9
+    GRAY10
+    GRAY12
+    GRAY14
+    GRAY16
+    GRAY32
 
-    GRAY8: typing.ClassVar['PresetFormat']
-    GRAY16: typing.ClassVar['PresetFormat']
+    GRAYH
+    GRAYS
 
-    GRAYH: typing.ClassVar['PresetFormat']
-    GRAYS: typing.ClassVar['PresetFormat']
+    YUV420P8
+    YUV422P8
+    YUV444P8
+    YUV410P8
+    YUV411P8
+    YUV440P8
 
-    YUV420P8: typing.ClassVar['PresetFormat']
-    YUV422P8: typing.ClassVar['PresetFormat']
-    YUV444P8: typing.ClassVar['PresetFormat']
-    YUV410P8: typing.ClassVar['PresetFormat']
-    YUV411P8: typing.ClassVar['PresetFormat']
-    YUV440P8: typing.ClassVar['PresetFormat']
+    YUV420P9
+    YUV422P9
+    YUV444P9
 
-    YUV420P9: typing.ClassVar['PresetFormat']
-    YUV422P9: typing.ClassVar['PresetFormat']
-    YUV444P9: typing.ClassVar['PresetFormat']
+    YUV420P10
+    YUV422P10
+    YUV444P10
 
-    YUV420P10: typing.ClassVar['PresetFormat']
-    YUV422P10: typing.ClassVar['PresetFormat']
-    YUV444P10: typing.ClassVar['PresetFormat']
+    YUV420P12
+    YUV422P12
+    YUV444P12
 
-    YUV420P12: typing.ClassVar['PresetFormat']
-    YUV422P12: typing.ClassVar['PresetFormat']
-    YUV444P12: typing.ClassVar['PresetFormat']
+    YUV420P14
+    YUV422P14
+    YUV444P14
 
-    YUV420P14: typing.ClassVar['PresetFormat']
-    YUV422P14: typing.ClassVar['PresetFormat']
-    YUV444P14: typing.ClassVar['PresetFormat']
+    YUV420P16
+    YUV422P16
+    YUV444P16
 
-    YUV420P16: typing.ClassVar['PresetFormat']
-    YUV422P16: typing.ClassVar['PresetFormat']
-    YUV444P16: typing.ClassVar['PresetFormat']
+    YUV444PH
+    YUV444PS
 
-    YUV444PH: typing.ClassVar['PresetFormat']
-    YUV444PS: typing.ClassVar['PresetFormat']
+    RGB24
+    RGB27
+    RGB30
+    RGB36
+    RGB42
+    RGB48
 
-    RGB24: typing.ClassVar['PresetFormat']
-    RGB27: typing.ClassVar['PresetFormat']
-    RGB30: typing.ClassVar['PresetFormat']
-    RGB48: typing.ClassVar['PresetFormat']
-
-    RGBH: typing.ClassVar['PresetFormat']
-    RGBS: typing.ClassVar['PresetFormat']
-
-    COMPATBGR32: typing.ClassVar['PresetFormat']
-    COMPATYUY2: typing.ClassVar['PresetFormat']
+    RGBH
+    RGBS
 
 
 NONE: PresetFormat
 
 GRAY8: PresetFormat
+GRAY9: PresetFormat
+GRAY10: PresetFormat
+GRAY12: PresetFormat
+GRAY14: PresetFormat
 GRAY16: PresetFormat
+GRAY32: PresetFormat
 
 GRAYH: PresetFormat
 GRAYS: PresetFormat
@@ -205,10 +216,82 @@ YUV444PS: PresetFormat
 RGB24: PresetFormat
 RGB27: PresetFormat
 RGB30: PresetFormat
+RGB36: PresetFormat
+RGB42: PresetFormat
 RGB48: PresetFormat
 
 RGBH: PresetFormat
 RGBS: PresetFormat
+
+
+class AudioChannels(enum.IntEnum):
+    FRONT_LEFT
+    FRONT_RIGHT
+    FRONT_CENTER
+    LOW_FREQUENCY
+    BACK_LEFT
+    BACK_RIGHT
+    FRONT_LEFT_OF_CENTER
+    FRONT_RIGHT_OF_CENTER
+    BACK_CENTER
+    SIDE_LEFT
+    SIDE_RIGHT
+    TOP_CENTER
+    TOP_FRONT_LEFT
+    TOP_FRONT_CENTER
+    TOP_FRONT_RIGHT
+    TOP_BACK_LEFT
+    TOP_BACK_CENTER
+    TOP_BACK_RIGHT
+    STEREO_LEFT
+    STEREO_RIGHT
+    WIDE_LEFT
+    WIDE_RIGHT
+    SURROUND_DIRECT_LEFT
+    SURROUND_DIRECT_RIGHT
+    LOW_FREQUENCY2
+
+
+FRONT_LEFT: AudioChannels
+FRONT_RIGHT: AudioChannels
+FRONT_CENTER: AudioChannels
+LOW_FREQUENCY: AudioChannels
+BACK_LEFT: AudioChannels
+BACK_RIGHT: AudioChannels
+FRONT_LEFT_OF_CENTER: AudioChannels
+FRONT_RIGHT_OF_CENTER: AudioChannels
+BACK_CENTER: AudioChannels
+SIDE_LEFT: AudioChannels
+SIDE_RIGHT: AudioChannels
+TOP_CENTER: AudioChannels
+TOP_FRONT_LEFT: AudioChannels
+TOP_FRONT_CENTER: AudioChannels
+TOP_FRONT_RIGHT: AudioChannels
+TOP_BACK_LEFT: AudioChannels
+TOP_BACK_CENTER: AudioChannels
+TOP_BACK_RIGHT: AudioChannels
+STEREO_LEFT: AudioChannels
+STEREO_RIGHT: AudioChannels
+WIDE_LEFT: AudioChannels
+WIDE_RIGHT: AudioChannels
+SURROUND_DIRECT_LEFT: AudioChannels
+SURROUND_DIRECT_RIGHT: AudioChannels
+LOW_FREQUENCY2: AudioChannels
+
+
+class MessageType(enum.IntEnum):
+    MESSAGE_TYPE_DEBUG
+    MESSAGE_TYPE_INFORMATION
+    MESSAGE_TYPE_WARNING
+    MESSAGE_TYPE_CRITICAL
+    MESSAGE_TYPE_FATAL
+
+
+MESSAGE_TYPE_DEBUG: MessageType
+MESSAGE_TYPE_INFORMATION: MessageType
+MESSAGE_TYPE_WARNING: MessageType
+MESSAGE_TYPE_CRITICAL: MessageType
+MESSAGE_TYPE_FATAL: MessageType
 
 
 class VapourSynthVersion(typing.NamedTuple):
@@ -225,14 +308,6 @@ class VapourSynthAPIVersion(typing.NamedTuple):
 
 
 __api_version__: VapourSynthAPIVersion
-
-
-class MessageType(enum.Enum):
-    MESSAGE_TYPE_DEBUG = 0
-    MESSAGE_TYPE_INFORMATION = 1
-    MESSAGE_TYPE_WARNING = 2
-    MESSAGE_TYPE_CRITICAL = 3
-    MESSAGE_TYPE_FATAL = 4
 
 
 ###

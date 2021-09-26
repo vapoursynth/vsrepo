@@ -224,6 +224,61 @@ RGBH: PresetFormat
 RGBS: PresetFormat
 
 
+class AudioChannels(enum.IntEnum):
+    FRONT_LEFT
+    FRONT_RIGHT
+    FRONT_CENTER
+    LOW_FREQUENCY
+    BACK_LEFT
+    BACK_RIGHT
+    FRONT_LEFT_OF_CENTER
+    FRONT_RIGHT_OF_CENTER
+    BACK_CENTER
+    SIDE_LEFT
+    SIDE_RIGHT
+    TOP_CENTER
+    TOP_FRONT_LEFT
+    TOP_FRONT_CENTER
+    TOP_FRONT_RIGHT
+    TOP_BACK_LEFT
+    TOP_BACK_CENTER
+    TOP_BACK_RIGHT
+    STEREO_LEFT
+    STEREO_RIGHT
+    WIDE_LEFT
+    WIDE_RIGHT
+    SURROUND_DIRECT_LEFT
+    SURROUND_DIRECT_RIGHT
+    LOW_FREQUENCY2
+
+
+FRONT_LEFT: AudioChannels
+FRONT_RIGHT: AudioChannels
+FRONT_CENTER: AudioChannels
+LOW_FREQUENCY: AudioChannels
+BACK_LEFT: AudioChannels
+BACK_RIGHT: AudioChannels
+FRONT_LEFT_OF_CENTER: AudioChannels
+FRONT_RIGHT_OF_CENTER: AudioChannels
+BACK_CENTER: AudioChannels
+SIDE_LEFT: AudioChannels
+SIDE_RIGHT: AudioChannels
+TOP_CENTER: AudioChannels
+TOP_FRONT_LEFT: AudioChannels
+TOP_FRONT_CENTER: AudioChannels
+TOP_FRONT_RIGHT: AudioChannels
+TOP_BACK_LEFT: AudioChannels
+TOP_BACK_CENTER: AudioChannels
+TOP_BACK_RIGHT: AudioChannels
+STEREO_LEFT: AudioChannels
+STEREO_RIGHT: AudioChannels
+WIDE_LEFT: AudioChannels
+WIDE_RIGHT: AudioChannels
+SURROUND_DIRECT_LEFT: AudioChannels
+SURROUND_DIRECT_RIGHT: AudioChannels
+LOW_FREQUENCY2: AudioChannels
+
+
 class MessageType(enum.IntEnum):
     MESSAGE_TYPE_DEBUG
     MESSAGE_TYPE_INFORMATION

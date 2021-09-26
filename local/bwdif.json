@@ -7,11 +7,39 @@
 	"category": "Deinterlacing",
 	"identifier": "com.holywu.bwdif",
 	"namespace": "bwdif",
+	"api": 4,
 	"releases": [
+		{
+			"version": "r4.1",
+			"published": "2021-09-26T07:17:25Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bwdif/releases/download/r4.1/Bwdif-r4.1-win64.7z",
+				"files": {
+					"Bwdif.dll": [
+						"Bwdif.dll",
+						"8b6f11af10bae0896b35a8dbed08fbcc8995bb8cfcc7c820f5d3f4f9b0b556f0"
+					]
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"published": "2021-09-26T04:23:09Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bwdif/releases/download/r4/Bwdif-r4-win64.7z",
+				"files": {
+					"Bwdif.dll": [
+						"Bwdif.dll",
+						"22d6840be67bf2e25f255db21ccaf1fd1d7802a887614cc761a582071c3971b0"
+					]
+				}
+			}
+		},
 		{
 			"version": "r3",
 			"published": "2021-05-28T07:34:55Z",
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bwdif/releases/download/r3/Bwdif-r3.7z",
 				"files": {
 					"Bwdif.dll": [
@@ -25,6 +53,7 @@
 			"version": "r2",
 			"published": "2020-06-19T13:43:54Z",
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bwdif/releases/download/r2/Bwdif-r2.7z",
 				"files": {
 					"Bwdif.dll": [
@@ -38,6 +67,7 @@
 			"version": "r1",
 			"published": "2020-02-24T09:01:35Z",
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bwdif/releases/download/r1/Bwdif-r1.7z",
 				"files": {
 					"Bwdif.dll": [

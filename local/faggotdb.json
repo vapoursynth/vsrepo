@@ -9,9 +9,23 @@
 	"github": "https://github.com/AlucardSama04/faggotDb",
 	"updatemode": "git-commits",
 	"dependencies": [
-		"vsutil"
+		"vsutil",
+		"kagefunc"
 	],
 	"releases": [
+		{
+			"version": "git:11cce2d",
+			"published": "2021-09-24T05:10:17Z",
+			"script": {
+				"url": "https://api.github.com/repos/AlucardSama04/faggotDb/zipball/11cce2da287bde91209685e93b3e8eb6f05a4142",
+				"files": {
+					"faggotdb.py": [
+						"AlucardSama04-faggotDb-11cce2d/faggotdb.py",
+						"8b3fee30b236a34922ae09d109d249705b11aab417efda276e935ae78a0c0fa9"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:45845cf",
 			"published": "2020-12-11T16:20:48Z",

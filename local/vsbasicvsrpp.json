@@ -1,0 +1,29 @@
+{
+	"name": "BasicVSR++",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "BasicVSR++: Improving Video Super-Resolution with Enhanced Propagation and Alignment",
+	"doom9": "https://forum.doom9.org/showthread.php?t=183156",
+	"github": "https://github.com/HolyWu/vs-basicvsrpp",
+	"identifier": "vsbasicvsrpp",
+	"modulename": "vsbasicvsrpp",
+	"wheelname": "vsbasicvsrpp",
+	"releases": [
+		{
+			"version": "1.1.0",
+			"published": "2021-09-08T11:59:43.785342Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/06/e0/7ae07ec8a4a4f1aa43944f27fc928e6b18eff37cf67df2f155e67f2913a2/vsbasicvsrpp-1.1.0-py3-none-any.whl",
+				"hash": "ea28055fc12719b1cfa52152ee6eccd57db77e89bb9ce66834288f489ba4535b"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2021-09-04T16:03:20.871290Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/f9/9e/fafafd6f19f5d14bed93494e582314dbe3a12bdef4eecb666da755ef247c/vsbasicvsrpp-1.0.0-py3-none-any.whl",
+				"hash": "fb8697987d01b872afb82c1d1db74b024b4f55d7600b3c8d2b580f6661b9c0be"
+			}
+		}
+	]
+}

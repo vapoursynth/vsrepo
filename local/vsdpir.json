@@ -1,0 +1,68 @@
+{
+	"name": "Depir",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "DPIR function for VapourSynth, based on https://github.com/cszn/DPIR.",
+	"github": "https://github.com/HolyWu/vs-dpir",
+	"identifier": "vsdpir",
+	"modulename": "vsdpir",
+	"wheelname": "vsdpir",
+	"releases": [
+		{
+			"version": "1.5.0",
+			"published": "2021-09-25T04:43:29.273574Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/4a/0c/88bab343abc657c2360aad79bffacf6bb467f3556e49d0691af4cbdd22b9/vsdpir-1.5.0-py3-none-any.whl",
+				"hash": "be5cce9a1c7ae695e8c950db3c8b1c7bc2df3e68306f6074f6a7f3887f12fccc"
+			}
+		},
+		{
+			"version": "1.4.1",
+			"published": "2021-09-11T10:26:21.512030Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/c6/f9/2b4be86b62dcb947bca6f64020113c9f9610a9be9e1d5d3cd4559006e7ab/vsdpir-1.4.1-py3-none-any.whl",
+				"hash": "e8abd010392ffe334d50c06ddb776794150e9be862bd9e63d64c397047df3750"
+			}
+		},
+		{
+			"version": "1.4.0",
+			"published": "2021-09-11T09:30:48.513195Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/43/7f/a03dc27879627797cc6a2cad98e234ce121d205a5ae663e1f137fdefc634/vsdpir-1.4.0-py3-none-any.whl",
+				"hash": "367a7f3018088b9949de601cf3cc0a282c33e53184a67e88230090833f66ce30"
+			}
+		},
+		{
+			"version": "1.3.0",
+			"published": "2021-09-08T12:14:37.987836Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/54/22/16d4089711d43253aff8902c6c7a93e0bcfa2153f92738ad48e62e849aa0/vsdpir-1.3.0-py3-none-any.whl",
+				"hash": "47027156c3c23bdbba6ac96c6548ad3e48001e00f5fda111b999a27308e17780"
+			}
+		},
+		{
+			"version": "1.2.0",
+			"published": "2021-09-02T01:25:38.713020Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/b3/ff/51ec36adfe6461608343e3b390836fa3f518df6b87738f198730d0ed9c47/vsdpir-1.2.0-py3-none-any.whl",
+				"hash": "889ba5abae2e4b41c5ea6911a32b923edf4dd44a13ba608ebe70b9a47c1a8dc1"
+			}
+		},
+		{
+			"version": "1.1.0",
+			"published": "2021-07-26T10:33:25.866673Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/4c/92/93cf0d2225fdf6d60b5a85888d1cfec3fbaa5aa49a156ee3c0367441f5f5/vsdpir-1.1.0-py3-none-any.whl",
+				"hash": "9b5faa5eb34529a7e6cf5922971226ae12db3d120e923a15c0de78420845a4c5"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2021-07-25T08:22:02.926597Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/76/c9/05330ab947676b5a8d14dcf70a33e5a6c7a09ceaaba446d84eb6967dec7b/vsdpir-1.0.0-py3-none-any.whl",
+				"hash": "febbe7ae455bfde7aedac5d725b25e820b3a0547720250366e5f5f737220a396"
+			}
+		}
+	]
+}

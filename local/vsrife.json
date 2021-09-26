@@ -1,0 +1,44 @@
+{
+	"name": "vs-rife",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "RIFE: Real-Time Intermediate Flow Estimation for Video Frame Interpolation. Ported from https://github.com/hzwer/arXiv2020-RIFE",
+	"github": "https://github.com/HolyWu/vs-rife",
+	"identifier": "vsrife",
+	"modulename": "vsrife",
+	"wheelname": "vsrife",
+	"releases": [
+		{
+			"version": "1.3.0",
+			"published": "2021-09-21T07:37:03.402784Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/8a/88/47b414e65ae4ab3fc07084a5504b8985da92fac05bf8a325adbade7c816c/vsrife-1.3.0-py3-none-any.whl",
+				"hash": "852d8f7e0659425dbf1aa1759a646a64f5deb0550180511e51023203d0adb6b0"
+			}
+		},
+		{
+			"version": "1.2.0",
+			"published": "2021-09-08T14:10:23.822795Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/52/81/52f1ed781ff5a074cee952227597f736e7fddce3010f1cf82749ee001013/vsrife-1.2.0-py3-none-any.whl",
+				"hash": "88760d5fa6661124df27a08d40557558239c0b00519ed05e46269b9ff4261904"
+			}
+		},
+		{
+			"version": "1.1.0",
+			"published": "2021-08-31T11:29:35.538328Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/28/e6/01dde38527e90d0124f29ec3b42753eb955a50da2295dbefed4c2ed31253/vsrife-1.1.0-py3-none-any.whl",
+				"hash": "ef3ec4557bec0d8707fa3ceac05280c5e771ee920af94f9b1fa9fa72c8dc73f2"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2021-07-28T03:41:15.438785Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/bf/dd/9b18f7eee638aa5cca00071f0cbe8c47c25146ad7588a79df1e4596b1af8/vsrife-1.0.0-py3-none-any.whl",
+				"hash": "c2d3f92b00a1ccc33df04872ab9d4c96c9a0fa2530f824981a427f61bbdda6f0"
+			}
+		}
+	]
+}

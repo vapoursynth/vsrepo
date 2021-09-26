@@ -119,6 +119,10 @@ class PresetFormat(enum.IntEnum):
     NONE
 
     GRAY8
+    GRAY9
+    GRAY10
+    GRAY12
+    GRAY14
     GRAY16
     GRAY32
 
@@ -158,6 +162,9 @@ class PresetFormat(enum.IntEnum):
     RGB24
     RGB27
     RGB30
+    RGB36
+    RGB42
+    RGB48
 
     RGBH
     RGBS
@@ -166,7 +173,12 @@ class PresetFormat(enum.IntEnum):
 NONE: PresetFormat
 
 GRAY8: PresetFormat
+GRAY9: PresetFormat
+GRAY10: PresetFormat
+GRAY12: PresetFormat
+GRAY14: PresetFormat
 GRAY16: PresetFormat
+GRAY32: PresetFormat
 
 GRAYH: PresetFormat
 GRAYS: PresetFormat
@@ -204,6 +216,8 @@ YUV444PS: PresetFormat
 RGB24: PresetFormat
 RGB27: PresetFormat
 RGB30: PresetFormat
+RGB36: PresetFormat
+RGB42: PresetFormat
 RGB48: PresetFormat
 
 RGBH: PresetFormat

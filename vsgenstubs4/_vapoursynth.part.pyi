@@ -83,11 +83,16 @@ import typing
 T = typing.TypeVar("T")
 SingleAndSequence = typing.Union[T, typing.Sequence[T]]
 
+
 ###
 # ENUMS AND CONSTANTS
-class ColorFamily(int):
-    name: str
-    value: int
+class MediaType(enum.IntEnum):
+    VIDEO
+    AUDIO
+
+
+VIDEO: MediaType
+AUDIO: MediaType
 
 
 class ColorFamily(enum.IntEnum):

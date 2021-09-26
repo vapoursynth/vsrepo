@@ -89,79 +89,73 @@ class ColorFamily(int):
     name: str
     value: int
 
-    GRAY: typing.ClassVar['ColorFamily']
-    RGB: typing.ClassVar['ColorFamily']
-    YUV: typing.ClassVar['ColorFamily']
+
+class ColorFamily(enum.IntEnum):
+    GRAY
+    RGB
+    YUV
+
 
 GRAY: ColorFamily
 RGB: ColorFamily
 YUV: ColorFamily
 
 
-class SampleType(int):
-    name: str
-    value: int
-
-    INTEGER: typing.ClassVar['SampleType']
-    FLOAT: typing.ClassVar['SampleType']
+class SampleType(enum.IntEnum):
+    INTEGER
+    FLOAT
 
 
 INTEGER: SampleType
 FLOAT: SampleType
 
 
-class PresetFormat(int):
-    name: str
-    value: int
+class PresetFormat(enum.IntEnum):
+    NONE
 
-    NONE: typing.ClassVar['PresetFormat']
+    GRAY8
+    GRAY16
+    GRAY32
 
-    GRAY8: typing.ClassVar['PresetFormat']
-    GRAY16: typing.ClassVar['PresetFormat']
+    GRAYH
+    GRAYS
 
-    GRAYH: typing.ClassVar['PresetFormat']
-    GRAYS: typing.ClassVar['PresetFormat']
+    YUV420P8
+    YUV422P8
+    YUV444P8
+    YUV410P8
+    YUV411P8
+    YUV440P8
 
-    YUV420P8: typing.ClassVar['PresetFormat']
-    YUV422P8: typing.ClassVar['PresetFormat']
-    YUV444P8: typing.ClassVar['PresetFormat']
-    YUV410P8: typing.ClassVar['PresetFormat']
-    YUV411P8: typing.ClassVar['PresetFormat']
-    YUV440P8: typing.ClassVar['PresetFormat']
+    YUV420P9
+    YUV422P9
+    YUV444P9
 
-    YUV420P9: typing.ClassVar['PresetFormat']
-    YUV422P9: typing.ClassVar['PresetFormat']
-    YUV444P9: typing.ClassVar['PresetFormat']
+    YUV420P10
+    YUV422P10
+    YUV444P10
 
-    YUV420P10: typing.ClassVar['PresetFormat']
-    YUV422P10: typing.ClassVar['PresetFormat']
-    YUV444P10: typing.ClassVar['PresetFormat']
+    YUV420P12
+    YUV422P12
+    YUV444P12
 
-    YUV420P12: typing.ClassVar['PresetFormat']
-    YUV422P12: typing.ClassVar['PresetFormat']
-    YUV444P12: typing.ClassVar['PresetFormat']
+    YUV420P14
+    YUV422P14
+    YUV444P14
 
-    YUV420P14: typing.ClassVar['PresetFormat']
-    YUV422P14: typing.ClassVar['PresetFormat']
-    YUV444P14: typing.ClassVar['PresetFormat']
+    YUV420P16
+    YUV422P16
+    YUV444P16
 
-    YUV420P16: typing.ClassVar['PresetFormat']
-    YUV422P16: typing.ClassVar['PresetFormat']
-    YUV444P16: typing.ClassVar['PresetFormat']
+    YUV444PH
+    YUV444PS
 
-    YUV444PH: typing.ClassVar['PresetFormat']
-    YUV444PS: typing.ClassVar['PresetFormat']
+    RGB24
+    RGB27
+    RGB30
 
-    RGB24: typing.ClassVar['PresetFormat']
-    RGB27: typing.ClassVar['PresetFormat']
-    RGB30: typing.ClassVar['PresetFormat']
-    RGB48: typing.ClassVar['PresetFormat']
-
-    RGBH: typing.ClassVar['PresetFormat']
-    RGBS: typing.ClassVar['PresetFormat']
-
-    COMPATBGR32: typing.ClassVar['PresetFormat']
-    COMPATYUY2: typing.ClassVar['PresetFormat']
+    RGBH
+    RGBS
 
 
 NONE: PresetFormat
@@ -211,6 +205,21 @@ RGBH: PresetFormat
 RGBS: PresetFormat
 
 
+class MessageType(enum.IntEnum):
+    MESSAGE_TYPE_DEBUG
+    MESSAGE_TYPE_INFORMATION
+    MESSAGE_TYPE_WARNING
+    MESSAGE_TYPE_CRITICAL
+    MESSAGE_TYPE_FATAL
+
+
+MESSAGE_TYPE_DEBUG: MessageType
+MESSAGE_TYPE_INFORMATION: MessageType
+MESSAGE_TYPE_WARNING: MessageType
+MESSAGE_TYPE_CRITICAL: MessageType
+MESSAGE_TYPE_FATAL: MessageType
+
+
 class VapourSynthVersion(typing.NamedTuple):
     release_major: int
     release_minor: int
@@ -225,14 +234,6 @@ class VapourSynthAPIVersion(typing.NamedTuple):
 
 
 __api_version__: VapourSynthAPIVersion
-
-
-class MessageType(enum.Enum):
-    MESSAGE_TYPE_DEBUG = 0
-    MESSAGE_TYPE_INFORMATION = 1
-    MESSAGE_TYPE_WARNING = 2
-    MESSAGE_TYPE_CRITICAL = 3
-    MESSAGE_TYPE_FATAL = 4
 
 
 ###

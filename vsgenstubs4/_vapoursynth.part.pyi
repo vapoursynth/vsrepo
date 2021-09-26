@@ -442,7 +442,6 @@ PRIMARIES_EBU3213_E: ColorPrimaries
 
 ###
 # VapourSynth Environment SubSystem
-
 class EnvironmentData:
     """
     Contains the data VapourSynth stores for a specific environment.
@@ -492,9 +491,6 @@ class VideoOutputTuple(typing.NamedTuple):
     alpha: typing.Optional['VideoNode']
     alt_output: int
 
-Func = typing.Callable[..., typing.Any]
-
-Function = typing.Callable[..., typing.Any]
 
 class Error(Exception): ...
 
@@ -576,6 +572,9 @@ class _Future(typing.Generic[T]):
     def exception(self) -> typing.Optional[typing.NoReturn]: ...
 
 
+Func = typing.Callable[..., typing.Any]
+
+
 class Plugin:
     identifier: str
     namespace: str
@@ -587,6 +586,17 @@ class Plugin:
     def get_functions(self) -> typing.Dict[str, str]: ...
     # list_functions is deprecated
     def list_functions(self) -> str: ...
+
+
+class Function:
+    plugin: Plugin
+    name: str
+    signature: str
+    return_signature: str
+
+    @property
+    def __signature__(self) -> inspect.Signature: ...
+    def __call__(self, *args: typing.Any, **kwargs: typing.Any) -> typing.Any: ...
 
 
 #include <plugins/implementations>

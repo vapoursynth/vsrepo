@@ -87,8 +87,8 @@ SingleAndSequence = typing.Union[T, typing.Sequence[T]]
 ###
 # ENUMS AND CONSTANTS
 class MediaType(enum.IntEnum):
-    VIDEO
-    AUDIO
+    VIDEO: 'MediaType'
+    AUDIO: 'MediaType'
 
 
 VIDEO: MediaType
@@ -96,9 +96,9 @@ AUDIO: MediaType
 
 
 class ColorFamily(enum.IntEnum):
-    GRAY
-    RGB
-    YUV
+    GRAY: 'ColorFamily'
+    RGB: 'ColorFamily'
+    YUV: 'ColorFamily'
 
 
 GRAY: ColorFamily
@@ -107,8 +107,8 @@ YUV: ColorFamily
 
 
 class SampleType(enum.IntEnum):
-    INTEGER
-    FLOAT
+    INTEGER: 'SampleType'
+    FLOAT: 'SampleType'
 
 
 INTEGER: SampleType
@@ -116,58 +116,58 @@ FLOAT: SampleType
 
 
 class PresetFormat(enum.IntEnum):
-    NONE
+    NONE: 'PresetFormat'
 
-    GRAY8
-    GRAY9
-    GRAY10
-    GRAY12
-    GRAY14
-    GRAY16
-    GRAY32
+    GRAY8: 'PresetFormat'
+    GRAY9: 'PresetFormat'
+    GRAY10: 'PresetFormat'
+    GRAY12: 'PresetFormat'
+    GRAY14: 'PresetFormat'
+    GRAY16: 'PresetFormat'
+    GRAY32: 'PresetFormat'
 
-    GRAYH
-    GRAYS
+    GRAYH: 'PresetFormat'
+    GRAYS: 'PresetFormat'
 
-    YUV420P8
-    YUV422P8
-    YUV444P8
-    YUV410P8
-    YUV411P8
-    YUV440P8
+    YUV420P8: 'PresetFormat'
+    YUV422P8: 'PresetFormat'
+    YUV444P8: 'PresetFormat'
+    YUV410P8: 'PresetFormat'
+    YUV411P8: 'PresetFormat'
+    YUV440P8: 'PresetFormat'
 
-    YUV420P9
-    YUV422P9
-    YUV444P9
+    YUV420P9: 'PresetFormat'
+    YUV422P9: 'PresetFormat'
+    YUV444P9: 'PresetFormat'
 
-    YUV420P10
-    YUV422P10
-    YUV444P10
+    YUV420P10: 'PresetFormat'
+    YUV422P10: 'PresetFormat'
+    YUV444P10: 'PresetFormat'
 
-    YUV420P12
-    YUV422P12
-    YUV444P12
+    YUV420P12: 'PresetFormat'
+    YUV422P12: 'PresetFormat'
+    YUV444P12: 'PresetFormat'
 
-    YUV420P14
-    YUV422P14
-    YUV444P14
+    YUV420P14: 'PresetFormat'
+    YUV422P14: 'PresetFormat'
+    YUV444P14: 'PresetFormat'
 
-    YUV420P16
-    YUV422P16
-    YUV444P16
+    YUV420P16: 'PresetFormat'
+    YUV422P16: 'PresetFormat'
+    YUV444P16: 'PresetFormat'
 
-    YUV444PH
-    YUV444PS
+    YUV444PH: 'PresetFormat'
+    YUV444PS: 'PresetFormat'
 
-    RGB24
-    RGB27
-    RGB30
-    RGB36
-    RGB42
-    RGB48
+    RGB24: 'PresetFormat'
+    RGB27: 'PresetFormat'
+    RGB30: 'PresetFormat'
+    RGB36: 'PresetFormat'
+    RGB42: 'PresetFormat'
+    RGB48: 'PresetFormat'
 
-    RGBH
-    RGBS
+    RGBH: 'PresetFormat'
+    RGBS: 'PresetFormat'
 
 
 NONE: PresetFormat
@@ -225,31 +225,31 @@ RGBS: PresetFormat
 
 
 class AudioChannels(enum.IntEnum):
-    FRONT_LEFT
-    FRONT_RIGHT
-    FRONT_CENTER
-    LOW_FREQUENCY
-    BACK_LEFT
-    BACK_RIGHT
-    FRONT_LEFT_OF_CENTER
-    FRONT_RIGHT_OF_CENTER
-    BACK_CENTER
-    SIDE_LEFT
-    SIDE_RIGHT
-    TOP_CENTER
-    TOP_FRONT_LEFT
-    TOP_FRONT_CENTER
-    TOP_FRONT_RIGHT
-    TOP_BACK_LEFT
-    TOP_BACK_CENTER
-    TOP_BACK_RIGHT
-    STEREO_LEFT
-    STEREO_RIGHT
-    WIDE_LEFT
-    WIDE_RIGHT
-    SURROUND_DIRECT_LEFT
-    SURROUND_DIRECT_RIGHT
-    LOW_FREQUENCY2
+    FRONT_LEFT: 'AudioChannels'
+    FRONT_RIGHT: 'AudioChannels'
+    FRONT_CENTER: 'AudioChannels'
+    LOW_FREQUENCY: 'AudioChannels'
+    BACK_LEFT: 'AudioChannels'
+    BACK_RIGHT: 'AudioChannels'
+    FRONT_LEFT_OF_CENTER: 'AudioChannels'
+    FRONT_RIGHT_OF_CENTER: 'AudioChannels'
+    BACK_CENTER: 'AudioChannels'
+    SIDE_LEFT: 'AudioChannels'
+    SIDE_RIGHT: 'AudioChannels'
+    TOP_CENTER: 'AudioChannels'
+    TOP_FRONT_LEFT: 'AudioChannels'
+    TOP_FRONT_CENTER: 'AudioChannels'
+    TOP_FRONT_RIGHT: 'AudioChannels'
+    TOP_BACK_LEFT: 'AudioChannels'
+    TOP_BACK_CENTER: 'AudioChannels'
+    TOP_BACK_RIGHT: 'AudioChannels'
+    STEREO_LEFT: 'AudioChannels'
+    STEREO_RIGHT: 'AudioChannels'
+    WIDE_LEFT: 'AudioChannels'
+    WIDE_RIGHT: 'AudioChannels'
+    SURROUND_DIRECT_LEFT: 'AudioChannels'
+    SURROUND_DIRECT_RIGHT: 'AudioChannels'
+    LOW_FREQUENCY2: 'AudioChannels'
 
 
 FRONT_LEFT: AudioChannels
@@ -280,11 +280,11 @@ LOW_FREQUENCY2: AudioChannels
 
 
 class MessageType(enum.IntEnum):
-    MESSAGE_TYPE_DEBUG
-    MESSAGE_TYPE_INFORMATION
-    MESSAGE_TYPE_WARNING
-    MESSAGE_TYPE_CRITICAL
-    MESSAGE_TYPE_FATAL
+    MESSAGE_TYPE_DEBUG: 'MessageType'
+    MESSAGE_TYPE_INFORMATION: 'MessageType'
+    MESSAGE_TYPE_WARNING: 'MessageType'
+    MESSAGE_TYPE_CRITICAL: 'MessageType'
+    MESSAGE_TYPE_FATAL: 'MessageType'
 
 
 MESSAGE_TYPE_DEBUG: MessageType
@@ -311,8 +311,8 @@ __api_version__: VapourSynthAPIVersion
 
 
 class ColorRange(enum.IntEnum):
-    RANGE_FULL
-    RANGE_LIMITED
+    RANGE_FULL: 'ColorRange'
+    RANGE_LIMITED: 'ColorRange'
 
 
 RANGE_FULL: ColorRange
@@ -320,12 +320,12 @@ RANGE_LIMITED: ColorRange
 
 
 class ChromaLocation(enum.IntEnum):
-    CHROMA_LEFT
-    CHROMA_CENTER
-    CHROMA_TOP_LEFT
-    CHROMA_TOP
-    CHROMA_BOTTOM_LEFT
-    CHROMA_BOTTOM
+    CHROMA_LEFT: 'ChromaLocation'
+    CHROMA_CENTER: 'ChromaLocation'
+    CHROMA_TOP_LEFT: 'ChromaLocation'
+    CHROMA_TOP: 'ChromaLocation'
+    CHROMA_BOTTOM_LEFT: 'ChromaLocation'
+    CHROMA_BOTTOM: 'ChromaLocation'
 
 
 CHROMA_LEFT: ChromaLocation
@@ -337,9 +337,9 @@ CHROMA_BOTTOM: ChromaLocation
 
 
 class FieldBased(enum.IntEnum):
-    FIELD_PROGRESSIVE
-    FIELD_TOP
-    FIELD_BOTTOM
+    FIELD_PROGRESSIVE: 'FieldBased'
+    FIELD_TOP: 'FieldBased'
+    FIELD_BOTTOM: 'FieldBased'
 
 
 FIELD_PROGRESSIVE: FieldBased
@@ -348,18 +348,18 @@ FIELD_BOTTOM: FieldBased
 
 
 class MatrixCoefficients(enum.IntEnum):
-    MATRIX_RGB
-    MATRIX_BT709
-    MATRIX_UNSPECIFIED
-    MATRIX_FCC
-    MATRIX_BT470_BG
-    MATRIX_ST170_M
-    MATRIX_YCGCO
-    MATRIX_BT2020_NCL
-    MATRIX_BT2020_CL
-    MATRIX_CHROMATICITY_DERIVED_NCL
-    MATRIX_CHROMATICITY_DERIVED_CL
-    MATRIX_ICTCP
+    MATRIX_RGB: 'MatrixCoefficients'
+    MATRIX_BT709: 'MatrixCoefficients'
+    MATRIX_UNSPECIFIED: 'MatrixCoefficients'
+    MATRIX_FCC: 'MatrixCoefficients'
+    MATRIX_BT470_BG: 'MatrixCoefficients'
+    MATRIX_ST170_M: 'MatrixCoefficients'
+    MATRIX_YCGCO: 'MatrixCoefficients'
+    MATRIX_BT2020_NCL: 'MatrixCoefficients'
+    MATRIX_BT2020_CL: 'MatrixCoefficients'
+    MATRIX_CHROMATICITY_DERIVED_NCL: 'MatrixCoefficients'
+    MATRIX_CHROMATICITY_DERIVED_CL: 'MatrixCoefficients'
+    MATRIX_ICTCP: 'MatrixCoefficients'
 
 
 MATRIX_RGB: MatrixCoefficients
@@ -377,21 +377,21 @@ MATRIX_ICTCP: MatrixCoefficients
 
 
 class TransferCharacteristics(enum.IntEnum):
-    TRANSFER_BT709
-    TRANSFER_UNSPECIFIED
-    TRANSFER_BT470_M
-    TRANSFER_BT470_BG
-    TRANSFER_BT601
-    TRANSFER_ST240_M
-    TRANSFER_LINEAR
-    TRANSFER_LOG_100
-    TRANSFER_LOG_316
-    TRANSFER_IEC_61966_2_4
-    TRANSFER_IEC_61966_2_1
-    TRANSFER_BT2020_10
-    TRANSFER_BT2020_12
-    TRANSFER_ST2084
-    TRANSFER_ARIB_B67
+    TRANSFER_BT709: 'TransferCharacteristics'
+    TRANSFER_UNSPECIFIED: 'TransferCharacteristics'
+    TRANSFER_BT470_M: 'TransferCharacteristics'
+    TRANSFER_BT470_BG: 'TransferCharacteristics'
+    TRANSFER_BT601: 'TransferCharacteristics'
+    TRANSFER_ST240_M: 'TransferCharacteristics'
+    TRANSFER_LINEAR: 'TransferCharacteristics'
+    TRANSFER_LOG_100: 'TransferCharacteristics'
+    TRANSFER_LOG_316: 'TransferCharacteristics'
+    TRANSFER_IEC_61966_2_4: 'TransferCharacteristics'
+    TRANSFER_IEC_61966_2_1: 'TransferCharacteristics'
+    TRANSFER_BT2020_10: 'TransferCharacteristics'
+    TRANSFER_BT2020_12: 'TransferCharacteristics'
+    TRANSFER_ST2084: 'TransferCharacteristics'
+    TRANSFER_ARIB_B67: 'TransferCharacteristics'
 
 
 TRANSFER_BT709: TransferCharacteristics
@@ -412,18 +412,18 @@ TRANSFER_ARIB_B67: TransferCharacteristics
 
 
 class ColorPrimaries(enum.IntEnum):
-    PRIMARIES_BT709
-    PRIMARIES_UNSPECIFIED
-    PRIMARIES_BT470_M
-    PRIMARIES_BT470_BG
-    PRIMARIES_ST170_M
-    PRIMARIES_ST240_M
-    PRIMARIES_FILM
-    PRIMARIES_BT2020
-    PRIMARIES_ST428
-    PRIMARIES_ST431_2
-    PRIMARIES_ST432_1
-    PRIMARIES_EBU3213_E
+    PRIMARIES_BT709: 'ColorPrimaries'
+    PRIMARIES_UNSPECIFIED: 'ColorPrimaries'
+    PRIMARIES_BT470_M: 'ColorPrimaries'
+    PRIMARIES_BT470_BG: 'ColorPrimaries'
+    PRIMARIES_ST170_M: 'ColorPrimaries'
+    PRIMARIES_ST240_M: 'ColorPrimaries'
+    PRIMARIES_FILM: 'ColorPrimaries'
+    PRIMARIES_BT2020: 'ColorPrimaries'
+    PRIMARIES_ST428: 'ColorPrimaries'
+    PRIMARIES_ST431_2: 'ColorPrimaries'
+    PRIMARIES_ST432_1: 'ColorPrimaries'
+    PRIMARIES_EBU3213_E: 'ColorPrimaries'
 
 
 PRIMARIES_BT709: ColorPrimaries
@@ -439,9 +439,9 @@ PRIMARIES_ST431_2: ColorPrimaries
 PRIMARIES_ST432_1: ColorPrimaries
 PRIMARIES_EBU3213_E: ColorPrimaries
 
+
 ###
 # VapourSynth Environment SubSystem
-
 class EnvironmentData:
     """
     Contains the data VapourSynth stores for a specific environment.
@@ -491,9 +491,6 @@ class VideoOutputTuple(typing.NamedTuple):
     alpha: typing.Optional['VideoNode']
     alt_output: int
 
-Func = typing.Callable[..., typing.Any]
-
-Function = typing.Callable[..., typing.Any]
 
 class Error(Exception): ...
 
@@ -575,6 +572,9 @@ class _Future(typing.Generic[T]):
     def exception(self) -> typing.Optional[typing.NoReturn]: ...
 
 
+Func = typing.Callable[..., typing.Any]
+
+
 class Plugin:
     identifier: str
     namespace: str
@@ -586,6 +586,17 @@ class Plugin:
     def get_functions(self) -> typing.Dict[str, str]: ...
     # list_functions is deprecated
     def list_functions(self) -> str: ...
+
+
+class Function:
+    plugin: Plugin
+    name: str
+    signature: str
+    return_signature: str
+
+    @property
+    def __signature__(self) -> inspect.Signature: ...
+    def __call__(self, *args: typing.Any, **kwargs: typing.Any) -> typing.Any: ...
 
 
 #include <plugins/implementations>

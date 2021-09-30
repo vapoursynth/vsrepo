@@ -22,6 +22,7 @@
 		"fmtconv",
 		"com.holywu.eedi3",
 		"com.mio.sangnom",
+        "com.vapoursynth.misc",
 		"com.holywu.deblock",
 		"com.Khanattila.KNLMeansCL",
 		"com.holywu.ttempsmooth",

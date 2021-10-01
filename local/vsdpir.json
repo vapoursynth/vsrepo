@@ -9,6 +9,14 @@
 	"wheelname": "vsdpir",
 	"releases": [
 		{
+			"version": "1.6.0",
+			"published": "2021-09-26T10:02:46.301792Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/a7/8d/bcdaaf4e77a1fe72ba571c67e2be6c9b7430fddcac424d9f2a9484053638/vsdpir-1.6.0-py3-none-any.whl",
+				"hash": "240cce818a8ca3d2cf6edc75fa11aef2ab5cc4d2627b1034ee1a685d021c434d"
+			}
+		},
+		{
 			"version": "1.5.0",
 			"published": "2021-09-25T04:43:29.273574Z",
 			"wheel": {

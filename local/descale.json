@@ -2,13 +2,26 @@
 	"name": "Descale",
 	"type": "VSPlugin",
 	"description": "Undoes resizing",
-	"website": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale",
+	"website": "https://github.com/Irrational-Encoding-Wizardry/descale",
 	"doom9": "https://forum.doom9.org/showthread.php?t=174570",
 	"category": "Resizing and Format Conversion",
 	"identifier": "tegaf.asi.xe",
 	"namespace": "descale",
-	"github": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/descale",
 	"releases": [
+		{
+			"version": "r7",
+			"published": "2021-09-30T15:35:51Z",
+			"win64": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/descale/releases/download/r7/vapoursynth-descale-r7-win64.zip",
+				"files": {
+					"libdescale.dll": [
+						"libdescale.dll",
+						"1bfec2f7c037b8e8385e17ee2cca243994c38f51553feb0bac47fa9198f0c16b"
+					]
+				}
+			}
+		},
 		{
 			"version": "r6",
 			"published": "2020-05-14T18:59:11Z",

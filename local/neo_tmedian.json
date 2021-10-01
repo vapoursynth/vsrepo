@@ -8,6 +8,28 @@
 	"namespace": "neo_tmedian",
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2021-09-27T14:08:23Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_TMedian/releases/download/r2/neo_TMedian_r2.7z",
+				"files": {
+					"neo-tmedian.dll": [
+						"x86/neo-tmedian.dll",
+						"25bfb846651cacd5f49de124c43c0f72ece4bca4fb0029996509ffde64c1f694"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_TMedian/releases/download/r2/neo_TMedian_r2.7z",
+				"files": {
+					"neo-tmedian.dll": [
+						"x64/neo-tmedian.dll",
+						"6758214e561d92ac554a7d43279b01a2f5aed23853f19b5c60b9cc0e45bc0c1c"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2020-04-11T06:26:01Z",
 			"win32": {

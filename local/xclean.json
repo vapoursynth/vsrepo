@@ -1,0 +1,26 @@
+{
+	"name": "xClean",
+	"type": "PyScript",
+	"category": "Denoising",
+	"description": "3-pass denoiser",
+	"doom9": "https://forum.doom9.org/showthread.php?t=183245",
+	"github": "https://github.com/mysteryx93/xClean",
+	"identifier": "xClean",
+	"modulename": "xclean",
+	"updatemode": "git-commits",
+	"releases": [
+		{
+			"version": "git:b1d4835",
+			"published": "2021-10-05T04:46:58Z",
+			"script": {
+				"url": "https://api.github.com/repos/mysteryx93/xClean/zipball/b1d4835c60826c305e5bc98751686864039e6c85",
+				"files": {
+					"xClean.py": [
+						"mysteryx93-xClean-b1d4835/xClean.py",
+						"3e043bf60b11fcba982c17b09f6699239b6df753ee818262e28af53878643f97"
+					]
+				}
+			}
+		}
+	]
+}

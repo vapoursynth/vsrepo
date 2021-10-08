@@ -1,0 +1,33 @@
+{
+	"name": "ReduceFlicker",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "ReduceFlicker performs controlled averaging of a frame with its two adjacent temporal neighbors. Controlled means that averaging only takes place in the presence of oscillations.",
+	"github": "https://github.com/AmusementClub/ReduceFlicker",
+	"identifier": "chikuzen.does.not.have.his.own.domain.reduceflicker",
+	"namespace": "rdfl",
+	"releases": [
+		{
+			"version": "0.0.0-VS",
+			"published": "2021-10-06T07:05:48Z",
+			"win32": {
+				"url": "https://github.com/AmusementClub/ReduceFlicker/releases/download/0.0.0-VS/ReduceFlicker_0.0.0-VS.7z",
+				"files": {
+					"ReduceFlicker.dll": [
+						"x86/ReduceFlicker.dll",
+						"7ecc0b6460e35f7c23b0ed49b9a68fcf8db623c9383c56d85c8f0744ebb5dd23"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/AmusementClub/ReduceFlicker/releases/download/0.0.0-VS/ReduceFlicker_0.0.0-VS.7z",
+				"files": {
+					"ReduceFlicker.dll": [
+						"x64/ReduceFlicker.dll",
+						"9166ee22696fcef7bc818a11c3e2bcfe412e061eed9e3ef59267758f7f214e5f"
+					]
+				}
+			}
+		}
+	]
+}

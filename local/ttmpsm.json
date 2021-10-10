@@ -8,12 +8,42 @@
 	"identifier": "com.holywu.ttempsmooth",
 	"namespace": "ttmpsm",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth",
-	"ignore": ["r3.1"],
+	"api": 4,
+	"ignore": [
+		"r3.1"
+	],
 	"releases": [
+		{
+			"version": "r4.1",
+			"published": "2021-10-10T06:07:42Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r4.1/TTempSmooth-r4.1-win64.7z",
+				"files": {
+					"TTempSmooth.dll": [
+						"TTempSmooth.dll",
+						"0e3b2b94528544de50f6eeb44f5e68461145240dd99c698400daf151a97b7923"
+					]
+				}
+			}
+		},
+		{
+			"version": "r4",
+			"published": "2021-10-10T05:40:55Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r4/TTempSmooth-r4-win64.7z",
+				"files": {
+					"TTempSmooth.dll": [
+						"TTempSmooth.dll",
+						"18759ff663b0e2a1a13b854a6b0daa8b6ec19a13135149139022e981929dfccf"
+					]
+				}
+			}
+		},
 		{
 			"version": "r3",
 			"published": "2018-05-08T15:24:33Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r3/TTempSmooth-r3.7z",
 				"files": {
 					"TTempSmooth.dll": [
@@ -23,6 +53,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r3/TTempSmooth-r3.7z",
 				"files": {
 					"TTempSmooth.dll": [
@@ -36,6 +67,7 @@
 			"version": "r2",
 			"published": "2018-04-03T14:27:34Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r2/TTempSmooth-r2.7z",
 				"files": {
 					"TTempSmooth.dll": [
@@ -45,6 +77,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r2/TTempSmooth-r2.7z",
 				"files": {
 					"TTempSmooth.dll": [
@@ -58,6 +91,7 @@
 			"version": "r1",
 			"published": "2018-03-28T07:58:57Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r1/TTempSmooth-r1.7z",
 				"files": {
 					"TTempSmooth.dll": [
@@ -67,6 +101,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TTempSmooth/releases/download/r1/TTempSmooth-r1.7z",
 				"files": {
 					"TTempSmooth.dll": [

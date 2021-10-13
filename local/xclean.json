@@ -8,7 +8,31 @@
 	"identifier": "xClean",
 	"modulename": "xclean",
 	"updatemode": "git-commits",
+	"dependencies": [
+		"com.Khanattila.KNLMeansCL",
+		"com.nodame.mvsf",
+		"com.nodame.mvtools",
+		"com.nodame.temporalmedian",
+		"com.vapoursynth.removegrainsf",
+		"com.vapoursynth.removegrainvs",
+		"com.wolframrhodium.bm3dcpu",
+		"com.wolframrhodium.bm3dcuda",
+		"fmtconv"
+	],
 	"releases": [
+		{
+			"version": "git:c28f516",
+			"published": "2021-10-13T06:36:26Z",
+			"script": {
+				"url": "https://api.github.com/repos/mysteryx93/xClean/zipball/c28f5160427190524bb2ca81575ba9bb83bd0fa1",
+				"files": {
+					"xClean.py": [
+						"mysteryx93-xClean-c28f516/xClean.py",
+						"032758b24d975b8660cc07fdf16cba57791e961baf6fc6b423e6bdd049da0e48"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:b1d4835",
 			"published": "2021-10-05T04:46:58Z",

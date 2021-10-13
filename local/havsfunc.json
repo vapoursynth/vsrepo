@@ -22,7 +22,7 @@
 		"fmtconv",
 		"com.holywu.eedi3",
 		"com.mio.sangnom",
-        "com.vapoursynth.misc",
+		"com.vapoursynth.misc",
 		"com.holywu.deblock",
 		"com.Khanattila.KNLMeansCL",
 		"com.holywu.ttempsmooth",
@@ -35,6 +35,19 @@
 		"com.nodame.awarpsharp2"
 	],
 	"releases": [
+		{
+			"version": "git:b36f5e7",
+			"published": "2021-10-13T12:12:17Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/b36f5e76fc0958a862ef6946faf64232d03aba77",
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-b36f5e7/havsfunc.py",
+						"0b8d4d5c692865469a32c24fa64371928c07648bcf9487d7cda85ae6ce30b779"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:64706f7",
 			"published": "2021-07-28T00:32:50Z",

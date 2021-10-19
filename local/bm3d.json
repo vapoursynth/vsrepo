@@ -11,6 +11,9 @@
 	"dependencies": [
 		"org.fftw.fftw3"
 	],
+	"ignore": [
+		"r9"
+	],
 	"releases": [
 		{
 			"version": "r8",

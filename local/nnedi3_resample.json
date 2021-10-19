@@ -16,6 +16,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:e79c702",
+			"published": "2021-10-17T13:17:50Z",
+			"script": {
+				"url": "https://api.github.com/repos/AmusementClub/nnedi3_resample/zipball/e79c7028eb8f1bfb471a53edfdd354d9bac17681",
+				"files": {
+					"nnedi3_resample.py": [
+						"AmusementClub-nnedi3_resample-e79c702/nnedi3_resample.py",
+						"946238abbd698a0e5d9023a76f3fad17772dfdec198330d95e1f3566fb7fa94f"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:a637c40",
 			"published": "2021-08-05T11:54:01Z",
 			"script": {

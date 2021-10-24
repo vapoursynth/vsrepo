@@ -22,6 +22,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:6a65726",
+			"published": "2021-10-21T21:05:46Z",
+			"script": {
+				"url": "https://api.github.com/repos/Irrational-Encoding-Wizardry/kagefunc/zipball/6a65726a0a81dd9043bf22161be084bdaa9fae24",
+				"files": {
+					"kagefunc.py": [
+						"Irrational-Encoding-Wizardry-kagefunc-6a65726/kagefunc.py",
+						"06ef115a18f758769e2610ffbf569898c66ae6059c6010680e1beff5c01874b3"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:7f7c1bc",
 			"published": "2021-09-06T15:15:23Z",
 			"script": {

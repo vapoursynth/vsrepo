@@ -15,6 +15,19 @@
 	],
 	"releases": [
 		{
+			"version": "0.91",
+			"published": "2021-10-21T16:24:40Z",
+			"script": {
+				"url": "https://api.github.com/repos/Beatrice-Raws/VapourSynth-insaneAA/zipball/0.91",
+				"files": {
+					"insaneAA.py": [
+						"Beatrice-Raws-VapourSynth-insaneAA-166c862/insaneAA.py",
+						"2f2756310d542041888319c34d5689c95a3c166be81ec48588157732e258651e"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.9c",
 			"published": "2020-05-01T19:41:59Z",
 			"script": {

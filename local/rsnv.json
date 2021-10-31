@@ -6,6 +6,7 @@
 	"github": "https://github.com/Kiyamou/VapourSynth-RealSR-ncnn-Vulkan",
 	"identifier": "com.vapoursynth.realsrnv",
 	"namespace": "rsnv",
+	"device": ["vulkan"],
 	"dependencies": [
 		"com.vapoursynth.realsrnv.models"
 	],

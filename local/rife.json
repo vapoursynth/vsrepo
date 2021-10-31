@@ -6,6 +6,7 @@
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan",
 	"identifier": "com.holywu.rife",
 	"namespace": "rife",
+	"device": ["vulkan"],
 	"dependencies": [
 		"com.holywu.rife.models"
 	],

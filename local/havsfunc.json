@@ -9,6 +9,7 @@
 	"modulename": "havsfunc",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/havsfunc",
 	"updatemode": "git-commits",
+	"device": ["cpu", "opencl"],
 	"dependencies": [
 		"mvsfunc",
 		"adjust",

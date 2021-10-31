@@ -8,6 +8,7 @@
 	"identifier": "com.Khanattila.KNLMeansCL",
 	"namespace": "knlm",
 	"github": "https://github.com/Khanattila/KNLMeansCL",
+	"device": ["opencl"],
 	"releases": [
 		{
 			"version": "v1.1.1",

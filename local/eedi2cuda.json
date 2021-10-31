@@ -6,6 +6,7 @@
 	"github": "https://github.com/AmusementClub/VapourSynth-EEDI2CUDA",
 	"identifier": "club.amusement.eedi2cuda",
 	"namespace": "eedi2cuda",
+	"device": ["cuda"],
 	"releases": [
 		{
 			"version": "M2p2",

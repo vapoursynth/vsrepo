@@ -6,6 +6,7 @@
 	"github": "https://github.com/AkarinVS/vapoursynth-plugin",
 	"identifier": "info.akarin.vsplugin",
 	"namespace": "akarin",
+	"device": ["cpu", "cuda"],
 	"releases": [
 		{
 			"version": "v0.90",

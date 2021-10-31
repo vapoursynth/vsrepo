@@ -362,7 +362,7 @@ def update_package(name):
 def verify_package(pfile, existing_identifiers):
     name = pfile['name']
     for key in pfile.keys():
-        if key not in ('name', 'type', 'api', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases', 'updatemode', 'gitbranch'):
+        if key not in ('name', 'type', 'device', 'api', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases', 'updatemode', 'gitbranch'):
             raise Exception('Unknown key: ' + key + ' in ' + name)
     if pfile['type'] not in ('VSPlugin', 'PyScript', 'PyWheel'):
         raise Exception('Invalid type in ' + name)
@@ -387,6 +387,10 @@ def verify_package(pfile, existing_identifiers):
         for dep in pfile['dependencies']:
             if dep not in existing_identifiers:
                 raise Exception('Referenced unknown identifier ' + dep + ' in ' + name)
+    if 'device' in pfile:
+        for dev in pfile['device']:
+            if dev not in ("cpu", "cuda", "opencl", "vulkan"):
+                raise Exception('Invalid device in ' + name)
 
 def compile_packages():
     combined = []

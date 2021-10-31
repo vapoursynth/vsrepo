@@ -7,6 +7,7 @@
 	"identifier": "com.wolframrhodium.bilateralGPU",
 	"namespace": "bilateralgpu",
 	"github": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU",
+	"device": ["cuda"],
 	"releases": [
 		{
 			"version": "r6",

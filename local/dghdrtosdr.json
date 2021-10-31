@@ -6,6 +6,7 @@
     "category": "Color/Levels",
     "identifier": "com.vapoursynth.dghdrtosdr",
     "namespace": "dghdrtosdr",
+	"device": ["cpu", "cuda"],
     "releases": [
 		{
             "version": "1.15",

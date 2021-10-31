@@ -10,6 +10,28 @@
 	"github": "https://github.com/EleonoreMizo/fmtconv",
 	"releases": [
 		{
+			"version": "r27",
+			"published": "2021-10-30T10:55:22Z",
+			"win32": {
+				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r27/fmtconv-r27.zip",
+				"files": {
+					"fmtconv.dll": [
+						"vapoursynth/win32/fmtconv.dll",
+						"0ca4914a565f46b8407df07f178d5c582b85fe68ffa02ae0d6ae110ddea987f8"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r27/fmtconv-r27.zip",
+				"files": {
+					"fmtconv.dll": [
+						"vapoursynth/win64/fmtconv.dll",
+						"9ae63d83a6826433cfdc34a1a2ffa36730bd150a7248faa015ffa7358f9fc5e7"
+					]
+				}
+			}
+		},
+		{
 			"version": "r26",
 			"published": "2021-10-19T14:45:02Z",
 			"win32": {

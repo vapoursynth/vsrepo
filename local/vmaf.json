@@ -13,6 +13,19 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "r9",
+			"published": "2021-10-30T08:35:55Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-VMAF/releases/download/r9/VMAF-r9-win64.7z",
+				"files": {
+					"VMAF.dll": [
+						"VMAF.dll",
+						"614c81aea065ef444bad19013c0473a4874d259e2d8c66aec0fdd12768de0f27"
+					]
+				}
+			}
+		},
+		{
 			"version": "r8",
 			"published": "2021-09-25T14:02:07Z",
 			"win64": {

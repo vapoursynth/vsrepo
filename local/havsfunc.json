@@ -15,7 +15,6 @@
 		"nnedi3_resample",
 		"xxx.abc.znedi3",
 		"com.holywu.nnedi3cl",
-		"com.deinterlace.nnedi3",
 		"com.nodame.mvtools",
 		"com.holywu.dfttest",
 		"com.holywu.eedi2",
@@ -35,6 +34,19 @@
 		"com.nodame.awarpsharp2"
 	],
 	"releases": [
+		{
+			"version": "git:a35174d",
+			"published": "2021-10-24T03:08:01Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/a35174db8208a0642eeff6482bc19032552e55c6",
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-a35174d/havsfunc.py",
+						"4a542af841d5b52ef28fed6f544156329e3c3ba8869cf145e3884c2e684c7cbd"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:b36f5e7",
 			"published": "2021-10-13T12:12:17Z",

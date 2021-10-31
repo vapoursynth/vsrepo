@@ -8,6 +8,27 @@
     "namespace": "dghdrtosdr",
     "releases": [
 		{
+            "version": "1.15",
+            "published": "2021-08-23T09:56Z",
+            "win32": {
+                "url": "http://rationalqm.us/hdr/DGHDRtoSDR_1.15.rar",
+                "files": {
+                    "DGHDRtoSDR.dll": [
+                        "x32/DGHDRtoSDR.dll",
+                        "0e8b5ea1a32c3184c1e7202dc5ab350afee33705f8b637c792f5d4f8531b673a"
+                    ]
+                }
+            },
+            "win64": {
+                "url": "http://rationalqm.us/hdr/DGHDRtoSDR_1.15.rar",
+                "files": {
+                    "DGHDRtoSDR.dll": [
+                        "DGHDRtoSDR.dll",
+                        "e5179ec14086daa6c7dcdf4e6cf2983124f80d88f99ae047351a15171e991be6"
+                    ]
+                }
+            }
+        },		{
             "version": "1.14",
             "published": "2020-08-10T06:20Z",
             "win32": {

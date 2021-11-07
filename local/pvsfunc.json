@@ -16,6 +16,14 @@
 	],
 	"releases": [
 		{
+			"version": "4.3.0",
+			"published": "2021-11-03T16:28:04.239962Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/5e/90/7cc50eec95a248aa7d114235ef4bdf347010d06a14f7f5cbb048724dd600/pvsfunc-4.3.0-py3-none-any.whl",
+				"hash": "908babefb8a0379d490a82c8b3fc64e8914995178d7d8bd22efaf5afe08d9f31"
+			}
+		},
+		{
 			"version": "4.2.1",
 			"published": "2021-10-13T08:44:26.912881Z",
 			"wheel": {

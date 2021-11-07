@@ -1,0 +1,23 @@
+{
+	"name": "SwinIR",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "SwinIR function for VapourSynth, based on https://github.com/JingyunLiang/SwinIR",
+	"github": "https://github.com/HolyWu/vs-swinir",
+	"device": [
+		"cuda"
+	],
+	"identifier": "vsswinir",
+	"modulename": "vsswinir",
+	"wheelname": "vsswinir",
+	"releases": [
+		{
+			"version": "1.0.0",
+			"published": "2021-11-05T14:57:48.453564Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/7b/b2/7df7dee65a3ded1dce01291884e0e3fd744b0c032f9654ecedf043413b00/vsswinir-1.0.0-py3-none-any.whl",
+				"hash": "abc5b02940fe5e32f7e88bc80a64b505f9d8dd60ff592c9ac50e500fb5b47ded"
+			}
+		}
+	]
+}

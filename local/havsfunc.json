@@ -9,7 +9,10 @@
 	"modulename": "havsfunc",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/havsfunc",
 	"updatemode": "git-commits",
-	"device": ["cpu", "opencl"],
+	"device": [
+		"cpu",
+		"opencl"
+	],
 	"dependencies": [
 		"mvsfunc",
 		"adjust",
@@ -35,6 +38,19 @@
 		"com.nodame.awarpsharp2"
 	],
 	"releases": [
+		{
+			"version": "git:98997de",
+			"published": "2021-11-12T03:15:47Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/98997ded9f11ce7df59cb968eab184ee075413e9",
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-98997de/havsfunc.py",
+						"60056699d67fb570dca7f3e58ba0c33cda565dda5a223ada09f6374dd4edff00"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:a35174d",
 			"published": "2021-10-24T03:08:01Z",

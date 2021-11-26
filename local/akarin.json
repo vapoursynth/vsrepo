@@ -6,8 +6,24 @@
 	"github": "https://github.com/AkarinVS/vapoursynth-plugin",
 	"identifier": "info.akarin.vsplugin",
 	"namespace": "akarin",
-	"device": ["cpu", "cuda"],
+	"device": [
+		"cpu",
+		"cuda"
+	],
 	"releases": [
+		{
+			"version": "v0.92",
+			"published": "2021-11-15T11:10:13Z",
+			"win64": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92b.7z",
+				"files": {
+					"akarin.dll": [
+						"akarin.dll",
+						"c932d70789852779ca2e3fcadc2bde4a213c6045de154623f8fd0948d89a627e"
+					]
+				}
+			}
+		},
 		{
 			"version": "v0.90",
 			"published": "2021-10-14T04:37:56Z",

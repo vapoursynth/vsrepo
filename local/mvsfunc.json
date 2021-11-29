@@ -7,13 +7,26 @@
 	"category": "Scripts",
 	"identifier": "mvsfunc",
 	"modulename": "mvsfunc",
-	"github": "https://github.com/AmusementClub/mvsfunc",
+	"github": "https://github.com/HomeOfVapourSynthEvolution/mvsfunc",
 	"updatemode": "git-commits",
 	"dependencies": [
 		"fmtconv",
 		"com.vapoursynth.bm3d"
 	],
 	"releases": [
+		{
+			"version": "git:8b8f43a",
+			"published": "2021-11-04T10:21:41Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/8b8f43a0bc35ee7a8361276b1d7e6542b489342a",
+				"files": {
+					"mvsfunc.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-8b8f43a/mvsfunc.py",
+						"522b266d70c84ccd4c284db0856cb9a75beef54d09a52ac3ea2c97b458c99daa"
+					]
+				}
+			}
+		},
 		{
 			"version": "git:b9218ff",
 			"published": "2021-11-03T07:13:45Z",

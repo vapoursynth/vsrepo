@@ -5,9 +5,32 @@
 	"description": "Special effects plugin. This is equivalent to effectsPlus plugin for avisynth+",
 	"doom9": "https://forum.doom9.org/showthread.php?t=182722",
 	"website": "http://www.avisynth.nl/users/vcmohan/vfx/vfx.html",
+	"github": "https://github.com/Vapoursynth-Plugins-Gitify/vfx",
 	"identifier": "com.mohanvc.vfx",
 	"namespace": "vfx",
 	"releases": [
+		{
+			"version": "2021-10-31",
+			"published": "2021-12-13T11:27:46Z",
+			"win32": {
+				"url": "https://github.com/Vapoursynth-Plugins-Gitify/vfx/releases/download/2021-10-31/vfx.7z",
+				"files": {
+					"vfx.dll": [
+						"x86/vfx.dll",
+						"7e3591cb9a0d3c8b52761769024a3b9e2de6ed58d8cc6812cffa26025ab20dac"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Vapoursynth-Plugins-Gitify/vfx/releases/download/2021-10-31/vfx.7z",
+				"files": {
+					"vfx.dll": [
+						"x64/vfx.dll",
+						"e313cbccb1570a78f6a50ee8dc4bfbeab05ebf474cbd05a5712cae1e74240723"
+					]
+				}
+			}
+		},
 		{
 			"version": "Apr 2021",
             "published": "2021-04-11T12:00:00Z",

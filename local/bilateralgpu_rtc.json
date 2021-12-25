@@ -1,0 +1,69 @@
+{
+	"name": "BilateralGPU RTC",
+	"type": "VSPlugin",
+	"description": "Bilateral filter for VapourSynth based on the CUDA (nvrtc) library",
+	"website": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU",
+	"category": "Denoising",
+	"identifier": "com.wolframrhodium.bilateralgpu_rtc",
+	"namespace": "bilateralgpu_rtc",
+	"github": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU",
+	"device": [
+		"cuda"
+	],
+	"ignore": [
+		"r1",
+		"r2",
+		"r3",
+		"r4",
+		"r5"
+	],
+	"releases": [
+		{
+			"version": "r8",
+			"published": "2021-12-25T02:05:26Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r8/VapourSynth-BilateralGPU_RTC-r8.zip",
+				"files": {
+					"BilateralGPU_RTC.dll": [
+						"VapourSynth-BilateralGPU_RTC-r8/x64/BilateralGPU_RTC.dll",
+						"cc8a262c4644cc79fa7d3fc2ddf64b019020b927cfe0e045bab46d217468ae79"
+					]
+				}
+			}
+		},
+		{
+			"version": "r7",
+			"published": "2021-12-24T02:03:36Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r7/VapourSynth-BilateralGPU_RTC-r7.zip",
+				"files": {
+					"BilateralGPU_RTC.dll": [
+						"VapourSynth-BilateralGPU_RTC-r7/x64/BilateralGPU_RTC.dll",
+						"71cca23af0fcf6661883697d420f3889c78b76fc592605a528a87955080ef2cd"
+					]
+				}
+			}
+		},
+		{
+			"version": "r6",
+			"published": "2021-07-29T05:32:14Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r6/VapourSynth-BilateralGPU_RTC-r6.zip",
+				"files": {
+					"BilateralGPU_RTC.dll": [
+						"VapourSynth-BilateralGPU_RTC-r6/x64/BilateralGPU_RTC.dll",
+						"2acd361660c43af33416aa8c407a3587eb328dace863313b302a1fc289374a81"
+					],
+					"nvrtc-builtins64_114.dll": [
+						"VapourSynth-BilateralGPU_RTC-r6/x64/nvrtc-builtins64_114.dll",
+						"a6ea9924faaabbdd8013192813aa11881e897dd227ed38baf97d10761bbc2388"
+					],
+					"nvrtc64_112_0.dll": [
+						"VapourSynth-BilateralGPU_RTC-r6/x64/nvrtc64_112_0.dll",
+						"bcfd27cfa26ba3b7a6cd134be6743214b60f4a68f6b0fca0c6850dfb55679d6d"
+					]
+				}
+			}
+		}
+	]
+}

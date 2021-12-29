@@ -7,8 +7,37 @@
 	"identifier": "com.wolframrhodium.bilateralGPU",
 	"namespace": "bilateralgpu",
 	"github": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU",
-	"device": ["cuda"],
+	"device": [
+		"cpu",
+		"cuda"
+	],
 	"releases": [
+		{
+			"version": "r8",
+			"published": "2021-12-25T02:05:26Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r8/VapourSynth-BilateralGPU-r8.zip",
+				"files": {
+					"bilateralGPU.dll": [
+						"VapourSynth-BilateralGPU-r8/x64/BilateralGPU.dll",
+						"fca15406dbe72ad885234742085f0ed9b38868bf254d3af141c2f8b55efdf3c7"
+					]
+				}
+			}
+		},
+		{
+			"version": "r7",
+			"published": "2021-12-24T02:03:36Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r7/VapourSynth-BilateralGPU-r7.zip",
+				"files": {
+					"bilateralGPU.dll": [
+						"VapourSynth-BilateralGPU-r7/x64/BilateralGPU.dll",
+						"7f5007eb4af22b213bae9b52d0771789e9e5c0276b43d4ee7351a865c2674abc"
+					]
+				}
+			}
+		},
 		{
 			"version": "r6",
 			"published": "2021-07-29T05:32:14Z",

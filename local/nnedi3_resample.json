@@ -29,6 +29,19 @@
 			}
 		},
 		{
+			"version": "git:3558097",
+			"published": "2021-11-01T09:26:45Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/nnedi3_resample/zipball/35580975d83bf89dabee4c620439d5d833bc212a",
+				"files": {
+					"nnedi3_resample.py": [
+						"HomeOfVapourSynthEvolution-nnedi3_resample-3558097/nnedi3_resample.py",
+						"5db85b0baa84acc57ed801da001e1d5634a48aff742e8dfea929a5e01622edfa"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:8fff075",
 			"published": "2021-10-27T09:26:59Z",
 			"script": {

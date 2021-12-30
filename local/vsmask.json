@@ -1,0 +1,20 @@
+{
+	"name": "vsmask",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "VSMask aims to provide tools and functions to manage, create, and manipulate masks in VapourSynth",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vsmask",
+	"identifier": "vsmask",
+	"modulename": "vsmask",
+	"wheelname": "vsmask",
+	"releases": [
+		{
+			"version": "0.1.0",
+			"published": "2021-12-29T23:46:58.984370Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/2e/ea/44f7a637bf1212795f82740863f022b692dca63bd0471d4a378649ed0a85/vsmask-0.1.0-py3-none-any.whl",
+				"hash": "4dd52bc54b881748f8a5ffe8172a26c02e4a4845490b58f95f54991a4d860a74"
+			}
+		}
+	]
+}

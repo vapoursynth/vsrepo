@@ -6,12 +6,18 @@
 	"github": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA",
 	"identifier": "com.wolframrhodium.bm3dcuda_rtc",
 	"namespace": "bm3dcuda_rtc",
-	"device": ["cuda"],
+	"device": [
+		"cuda"
+	],
 	"ignore": [
 		"R2.2",
 		"R2.3"
 	],
 	"releases": [
+		{
+			"version": "R2.6",
+			"published": "2022-01-16T05:46:44Z"
+		},
 		{
 			"version": "R2.5",
 			"published": "2021-10-17T03:37:31Z",

@@ -6,12 +6,27 @@
 	"github": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA",
 	"identifier": "com.wolframrhodium.bm3dcuda",
 	"namespace": "bm3dcuda",
-	"device": ["cuda"],
+	"device": [
+		"cuda"
+	],
 	"ignore": [
 		"R2.2",
 		"R2.3"
 	],
 	"releases": [
+		{
+			"version": "R2.6",
+			"published": "2022-01-16T05:46:44Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.6/VapourSynth-BM3DCUDA-r2.6.7z",
+				"files": {
+					"BM3DCUDA.dll": [
+						"VapourSynth-BM3DCUDA-r2.6/bm3dcuda.dll",
+						"b6d32122e4cf8178031bda4fb7767caad943c89c08c84b66fa4f7b5b8ee4ee42"
+					]
+				}
+			}
+		},
 		{
 			"version": "R2.5",
 			"published": "2021-10-17T03:37:31Z",

@@ -11,6 +11,19 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "r14",
+			"published": "2022-01-15T04:00:06Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases/download/r14/TCanny-r14-win64.7z",
+				"files": {
+					"TCanny.dll": [
+						"TCanny.dll",
+						"372d0399d9806026e5e3631a957525364c5bf06fd43766f111505769ca0c1aca"
+					]
+				}
+			}
+		},
+		{
 			"version": "r13",
 			"published": "2021-11-04T11:21:41Z",
 			"win64": {

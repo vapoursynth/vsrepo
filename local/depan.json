@@ -1,0 +1,24 @@
+{
+	"name": "DePan",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Tools for estimation and compensation of global motion (pan)",
+	"github": "https://github.com/Vapoursynth-Plugins-Gitify/DePan",
+	"identifier": "com.holywu.depan",
+	"namespace": "depan",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2022-01-26T10:38:07Z",
+			"win64": {
+				"url": "https://github.com/Vapoursynth-Plugins-Gitify/DePan/releases/download/r1/DePan-r1.zip",
+				"files": {
+					"DePan.dll": [
+						"DePan.dll",
+						"77321664a73e0bcadf43186dda677189dd87c648934b97381fc1195941f57b1a"
+					]
+				}
+			}
+		}
+	]
+}

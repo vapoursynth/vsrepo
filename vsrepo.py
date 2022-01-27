@@ -60,19 +60,19 @@ def is_venv():
 
 
 def detect_vapoursynth_installation():
-    for loader in sys.meta_path:
-        if loader.find_module("vapoursynth") is not None:
-            break
-    else:
-        print("Could not detect vapoursynth")
+    try:
+        spec = imputil.find_spec("vapoursynth")
+    except (ValueError, ModuleNotFoundError):
+        spec = None
+    if spec is None:
+        print("Could not detect vapoursynth.")
         sys.exit(1)
 
-    spec = loader.find_spec("vapoursynth")
     if not spec.has_location:
         try:
             import vapoursynth
         except ImportError:
-            print("Could not detect vapoursynth-module path and the module could not be imported.")
+            print("The vapoursynth-module could not be found or imported.")
         else:
             return vapoursynth.__file__
     return spec.origin
@@ -104,7 +104,7 @@ def is_sitepackage_install():
 
         # Assume this is not a global install.
         return False
-        
+
     # We do not reside in a venv.
     else:
         # pip install vapoursynth-portable
@@ -126,7 +126,7 @@ def get_vs_installation_site():
         except ImportError:
             import setuptools
             return os.path.dirname(os.path.dirname(setuptools.__file__))
-    
+
     import site
     return site.getusersitepackages()
 
@@ -197,7 +197,7 @@ if args.script_path is not None:
 plugin_path = plugin64_path if is_64bits else plugin32_path
 if args.binary_path is not None:
     plugin_path = args.binary_path
-	
+
 os.makedirs(py_script_path, exist_ok=True)
 os.makedirs(plugin_path, exist_ok=True)
 os.makedirs(os.path.dirname(package_json_path), exist_ok=True)
@@ -243,7 +243,7 @@ package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 package_list = None
 try:
     with open(package_json_path, 'r', encoding='utf-8') as pl:
-        package_list = json.load(pl)       
+        package_list = json.load(pl)
     if package_list['file-format'] != 3:
         print('Package definition format is {} but only version 3 is supported'.format(package_list['file-format']))
         package_list = None
@@ -253,7 +253,7 @@ except:
 
 def check_hash(data, ref_hash):
     data_hash = hashlib.sha256(data).hexdigest()
-    return (data_hash == ref_hash, data_hash, ref_hash)        
+    return (data_hash == ref_hash, data_hash, ref_hash)
 
 def get_bin_name(p):
     if p['type'] == 'PyScript':
@@ -283,7 +283,7 @@ def get_package_from_id(id, required = False):
     if required:
         raise Exception('No package with the identifier ' + id + ' found')
     return None
-	
+
 def get_package_from_plugin_name(name, required = False):
     for p in package_list:
         if p['name'].casefold() == name.casefold():
@@ -341,10 +341,10 @@ def get_python_package_name(pkg):
 def find_dist_version(pkg, path):
     if path is None:
         return
-        
+
     name = get_python_package_name(pkg)
     versions = []
-    
+
     for targetname in os.listdir(path):
         if (targetname.startswith(f"{name}-") and targetname.endswith(".dist-info")):
             # only bother with dist-info dirs that actually have a usable record in case a package uninstall failed to delete the dir
@@ -481,12 +481,12 @@ def remove_package_meta(pkg):
 
     for dist_dir in find_dist_dirs(name):
         rmdir(dist_dir)
-                
+
 
 def install_package_meta(files, pkg, rel, index):
     if site_package_dir is None:
         return
-    
+
     name = get_python_package_name(pkg)
 
     version = make_pyversion(rel["version"], index)
@@ -505,7 +505,7 @@ Name: {name}
 Version: {version}
 Summary: {pkg.get('description', pkg['name'])}
 Platform: All""")
-    
+
     with open(os.path.join(dist_dir, "RECORD"), "w", newline="") as f:
         files.append([os.path.join(dist_dir, "RECORD"), "", ""])
         w = csv.writer(f)
@@ -517,8 +517,8 @@ Platform: All""")
             except ValueError:
                 pass
             w.writerow([filename, sha256hex, length])
-            
-    
+
+
 def install_files(p):
     dest_path = get_install_path(p)
     bin_name = get_bin_name(p)
@@ -532,12 +532,12 @@ def install_files(p):
         return (0, 1)
 
     files = []
-    
+
     if bin_name == 'wheel':
         try:
             hash_result = check_hash(data, install_rel[bin_name]['hash'])
             if not hash_result[0]:
-                raise Exception('Hash mismatch for ' + url + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])               
+                raise Exception('Hash mismatch for ' + url + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
             with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
                 basename = None
                 for fn in zf.namelist():
@@ -545,7 +545,7 @@ def install_files(p):
                         basename = fn[:-len('.dist-info/WHEEL')]
                         break
                 if basename is None:
-                    raise Exception('Wheel: failed to determine package base name')  
+                    raise Exception('Wheel: failed to determine package base name')
                 for fn in zf.namelist():
                     if fn.startswith(basename + '.data'):
                         raise Exception('Wheel: .data dir mapping not supported')
@@ -575,7 +575,7 @@ def install_files(p):
     else:
         single_file = None
         if len(install_rel[bin_name]['files']) == 1:
-            for key in install_rel[bin_name]['files']:       
+            for key in install_rel[bin_name]['files']:
                 single_file = (key, install_rel[bin_name]['files'][key][0], install_rel[bin_name]['files'][key][1])
         if (single_file is not None) and (single_file[1] == url.rsplit('/', 2)[-1]):
             install_fn = single_file[0]
@@ -655,7 +655,7 @@ def upgrade_package(name, force):
     p = get_package_from_name(name)
     if not is_package_installed(p['identifier']):
         print('Package ' + p['name'] + ' not installed, can\'t upgrade')
-    elif is_package_upgradable(p['identifier'], force): 
+    elif is_package_upgradable(p['identifier'], force):
         res = upgrade_files(p)
         return (res[0], 0, res[1])
     elif not is_package_upgradable(p['identifier'], True):
@@ -668,7 +668,7 @@ def upgrade_all_packages(force):
     inst = (0, 0, 0)
     installed_ids = list(installed_packages.keys())
     for id in installed_ids:
-        if is_package_upgradable(id, force): 
+        if is_package_upgradable(id, force):
             res = upgrade_files(get_package_from_id(id, True))
             inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
     return inst
@@ -676,7 +676,7 @@ def upgrade_all_packages(force):
 def uninstall_files(p):
     dest_path = get_install_path(p)
     bin_name = get_bin_name(p)
-                
+
     if p['type'] == 'PyWheel':
         files = []
         pyname = get_python_package_name(p)
@@ -718,10 +718,10 @@ def uninstall_package(name):
             uninstall_files(p)
             print('Uninstalled package: ' + p['name'] + ' ' + installed_packages[p['identifier']])
             return (1, 0)
-    else:   
+    else:
         print('No files installed for ' + p['name'] + ', skipping uninstall')
         return (0, 0)
-    
+
 def update_package_definition(url):
     localmtimeval = 0
     try:
@@ -853,13 +853,13 @@ def rebuild_distinfo():
         ]
 
         install_package_meta(files, pkg, rel, idx)
-            
+
 
 def print_paths():
     print('Paths:')
     print('Definitions: ' + package_json_path)
     print('Binaries: ' + plugin_path)
-    print('Scripts: ' + py_script_path)    
+    print('Scripts: ' + py_script_path)
 
     if site_package_dir is not None:
         print("Dist-Infos: " + site_package_dir)

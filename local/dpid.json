@@ -9,6 +9,19 @@
 	"github": "https://github.com/WolframRhodium/VapourSynth-dpid",
 	"releases": [
 		{
+			"version": "r5",
+			"published": "2022-01-21T03:04:59Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-dpid/releases/download/r5/VapourSynth-dpid.zip",
+				"files": {
+					"dpid.dll": [
+						"VapourSynth-dpid/dpid.dll",
+						"45997a1782f089ad43a7e143f5853c402198de528d3ea093206bd6dbd75cc6cb"
+					]
+				}
+			}
+		},
+		{
 			"version": "r4",
 			"published": "2019-10-04T14:29:24Z",
 			"win64": {

@@ -6,15 +6,32 @@
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan",
 	"identifier": "com.holywu.rife",
 	"namespace": "rife",
-	"device": ["vulkan"],
+	"device": [
+		"vulkan"
+	],
+	"api": 4,
 	"dependencies": [
 		"com.holywu.rife.models"
 	],
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2022-01-30T16:47:54Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan/releases/download/r2/RIFE-r2-win64.7z",
+				"files": {
+					"RIFE.dll": [
+						"RIFE.dll",
+						"6be7a4c64b15fa82976faf1dc5befa56e354c3c183df2f6f287c1bb9ad05478a"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2021-06-01T15:14:00Z",
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan/releases/download/r1/RIFE-r1.7z",
 				"files": {
 					"RIFE.dll": [

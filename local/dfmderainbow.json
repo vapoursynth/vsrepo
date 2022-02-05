@@ -7,6 +7,7 @@
 	"identifier": "dfmderainbow",
 	"modulename": "dfmderainbow",
 	"github": "https://github.com/dubhater/vapoursynth-dfmderainbow",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"com.nodame.temporalmedian",
 		"chikuzen.does.not.have.his.own.domain.focus2",
@@ -17,6 +18,19 @@
 		"systems.innocent.fft3dfilter"
 	],
 	"releases": [
+		{
+			"version": "git:61bafd9",
+			"published": "2022-02-05T14:17:35Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-dfmderainbow/zipball/61bafd9b3f4fa7839038c1a160382ab18fdb152b",
+				"files": {
+					"dfmderainbow.py": [
+						"dubhater-vapoursynth-dfmderainbow-61bafd9/dfmderainbow.py",
+						"06992dd0c4d31e53825b1a2bad05a5c62c882bc801387fb0ad482f83019f5a0d"
+					]
+				}
+			}
+		},
 		{
 			"version": "v2",
 			"published": "2019-02-15T15:46:04Z",

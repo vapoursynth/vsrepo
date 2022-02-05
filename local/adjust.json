@@ -7,7 +7,21 @@
 	"identifier": "adjust",
 	"modulename": "adjust",
 	"github": "https://github.com/dubhater/vapoursynth-adjust",
+	"updatemode": "git-commits",
 	"releases": [
+		{
+			"version": "git:a3af7cb",
+			"published": "2021-10-06T12:20:30Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-adjust/zipball/a3af7cb57cb37747b0667346375536e65b1fed17",
+				"files": {
+					"adjust.py": [
+						"dubhater-vapoursynth-adjust-a3af7cb/adjust.py",
+						"22b25995ef37e6d003c2999e51e80d1570376413db9067f703fe4fcef4600bfa"
+					]
+				}
+			}
+		},
 		{
 			"version": "v1",
 			"published": "2018-09-06T18:40:51Z",

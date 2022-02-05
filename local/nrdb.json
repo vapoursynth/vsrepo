@@ -6,10 +6,24 @@
 	"category": "Other",
 	"identifier": "nrdb",
 	"modulename": "nrdb",
+	"updatemode": "git-commits",
 	"dependencies": [
 		"com.holywu.dfttest"
 	],
 	"releases": [
+		{
+			"version": "git:dd2f56a",
+			"published": "2022-02-05T14:16:48Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-nrdb/zipball/dd2f56a2e34cf73b74f34543479a68a6bc591c81",
+				"files": {
+					"NRDB.py": [
+						"dubhater-vapoursynth-nrdb-dd2f56a/NRDB.py",
+						"f54696461da6f20aed47dde50d8318f0a738c07dc7bc2d01032f7d85548957d0"
+					]
+				}
+			}
+		},
 		{
 			"version": "v2",
 			"published": "2020-05-06T17:53:52Z",

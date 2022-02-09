@@ -6,6 +6,9 @@
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan",
 	"identifier": "com.holywu.rife.models",
 	"namespace": "rife_models",
+	"ignore": [
+		"r2"
+	],
 	"releases": [
 		{
 			"version": "r1",

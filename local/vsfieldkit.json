@@ -1,0 +1,21 @@
+{
+	"name": "vsfieldkit",
+	"type": "PyWheel",
+	"category": "Deinterlacing",
+	"description": "Collection of functions for working with interlaced content in VapourSynth.",
+	"website": "https://vsfieldkit.readthedocs.io",
+	"github": "https://github.com/JustinTArthur/vsfieldkit",
+	"identifier": "vsfieldkit",
+	"modulename": "vsfieldkit",
+	"wheelname": "vsfieldkit",
+	"releases": [
+		{
+			"version": "0.1.0",
+			"published": "2022-02-14T06:36:07.293577Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/75/6b/ff8ca356301dc860e5fc8383395e968336f5f7473d52ed76576edc6721eb/vsfieldkit-0.1.0-py3-none-any.whl",
+				"hash": "815a40087eda9141fdc4a122111e3ed8b2b50713b34be28e2b41b0fb77f3687a"
+			}
+		}
+	]
+}

@@ -9,6 +9,28 @@
 	"namespace": "vcm",
 	"releases": [
 		{
+			"version": "2022-02-10",
+			"published": "2022-02-12T10:37:34Z",
+			"win32": {
+				"url": "https://github.com/Vapoursynth-Plugins-Gitify/vcm/releases/download/2022-02-10/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x86/vcm.dll",
+						"8349086ef046b3d0b25e25600576e61ccd446cf198c63477a1bc385fe323dc45"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Vapoursynth-Plugins-Gitify/vcm/releases/download/2022-02-10/vcm.7z",
+				"files": {
+					"vcm.dll": [
+						"x64/vcm.dll",
+						"f5ade96f7fee929cd2650bef18e531bf5613d1010c0d2530b89892449eabbc89"
+					]
+				}
+			}
+		},
+		{
 			"version": "2021-11-10",
 			"published": "2021-11-13T17:03:59Z",
 			"win32": {

@@ -4,6 +4,7 @@
 import argparse
 import inspect
 import keyword
+from msilib.schema import Signature
 import os
 import sys
 from typing import Any, List, NamedTuple, Optional, Union
@@ -54,6 +55,7 @@ def retrieve_ns_and_funcs_unbound(core: vapoursynth.Core) -> List[PluginMeta]:
 
 def retrieve_ns_and_funcs_bound(core: vapoursynth.Core, *, audio: bool = False) -> List[PluginMeta]:
 
+    base: Union[vapoursynth.AudioNode, vapoursynth.VideoNode]
     if audio:
         base = core.std.BlankAudio()
     else:
@@ -78,6 +80,7 @@ def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode, vapo
     plugin = getattr(core, ns)
     for func in plugin.functions():
         if func.name in dir(plugin):
+            signature: Union[str, inspect.Signature]
             try:
                 signature = inspect.signature(getattr(plugin, func.name))
             except BaseException:

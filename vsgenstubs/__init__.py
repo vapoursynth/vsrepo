@@ -44,7 +44,7 @@ def prepare_cores(ns) -> vapoursynth.Core:
 def retrieve_ns_and_funcs(core: vapoursynth.Core, *, bound: bool=False) -> Dict[str, PluginMeta]:
     result = {}
 
-    base = core
+    base: Union[vapoursynth.Core, vapoursynth.VideoNode] = core
     if bound:
         base = core.std.BlankClip()
 
@@ -52,12 +52,12 @@ def retrieve_ns_and_funcs(core: vapoursynth.Core, *, bound: bool=False) -> Dict[
         result[v["namespace"]] = PluginMeta(
             v["namespace"],
             v["name"],
-            "\n".join(retrieve_func_sigs(base, v["namespace"], v["functions"].keys()))
+            "\n".join(retrieve_func_sigs(base, v["namespace"], list(v["functions"].keys())))
         )
     return result
 
 
-def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode], ns: str, funcs: Sequence[str]) -> str:
+def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode], ns: str, funcs: Sequence[str]) -> Sequence[str]:
     result = []
     plugin = getattr(core, ns)
     for func in funcs:
@@ -118,7 +118,7 @@ def inject_stub_package() -> str:
     if not os.path.exists(stub_dir):
         os.makedirs(stub_dir)
     output_path = os.path.join(stub_dir, "__init__.pyi")
-    
+
     for iname in os.listdir(site_package_dir):
         if iname.startswith("VapourSynth-") and iname.endswith(".dist-info"):
             break
@@ -133,13 +133,13 @@ def inject_stub_package() -> str:
             if not contents.endswith("\n"):
                 f.write("\n")
             f.write("vapoursynth-stubs/__init__.pyi,,\n")
-    
+
     return output_path
 
 def main(argv=None):
     if argv is None:
         argv = sys.argv[1:]
-    
+
     args = parser.parse_args(args=argv)
     core = prepare_cores(args)
 
@@ -165,7 +165,7 @@ def main(argv=None):
         f = open(stub_path, "w")
     else:
         f = open(args.output, "w")
-    
+
     with f:
         f.write(template)
         f.flush()

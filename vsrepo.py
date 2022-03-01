@@ -1,24 +1,24 @@
-##    MIT License
-##
-##    Copyright (c) 2018-2020 Fredrik Mellbin
-##
-##    Permission is hereby granted, free of charge, to any person obtaining a copy
-##    of this software and associated documentation files (the "Software"), to deal
-##    in the Software without restriction, including without limitation the rights
-##    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-##    copies of the Software, and to permit persons to whom the Software is
-##    furnished to do so, subject to the following conditions:
-##
-##    The above copyright notice and this permission notice shall be included in all
-##    copies or substantial portions of the Software.
-##
-##    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-##    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-##    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-##    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-##    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-##    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-##    SOFTWARE.
+#    MIT License
+#
+#    Copyright (c) 2018-2020 Fredrik Mellbin
+#
+#    Permission is hereby granted, free of charge, to any person obtaining a copy
+#    of this software and associated documentation files (the "Software"), to deal
+#    in the Software without restriction, including without limitation the rights
+#    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#    copies of the Software, and to permit persons to whom the Software is
+#    furnished to do so, subject to the following conditions:
+#
+#    The above copyright notice and this permission notice shall be included in all
+#    copies or substantial portions of the Software.
+#
+#    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#    SOFTWARE.
 
 import argparse
 import base64
@@ -43,7 +43,7 @@ from typing import MutableMapping, Optional
 try:
     import winreg
 except ImportError:
-    print('{} is only supported on Windows.'.format(__file__))
+    print(f'{__file__} is only supported on Windows.')
     sys.exit(1)
 
 try:
@@ -84,6 +84,7 @@ def is_sitepackage_install_portable():
     vapoursynth_path = detect_vapoursynth_installation()
     return os.path.exists(os.path.join(os.path.dirname(vapoursynth_path), 'portable.vs'))
 
+
 def is_sitepackage_install():
     if args.portable:
         return False
@@ -117,6 +118,7 @@ def is_sitepackage_install():
 
         # This is a global install. Install dist-info files.
         return True
+
 
 def get_vs_installation_site():
     if is_venv():
@@ -173,7 +175,7 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is 
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
-package_json_path = os.path.join(file_dirname, 'vspackages3.json') if args.portable else os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
+package_json_path = os.path.join(file_dirname, 'vspackages3.json') if args.portable else os.path.join(str(os.getenv("APPDATA")), 'VapourSynth', 'vsrepo', 'vspackages3.json')
 
 if args.force_dist_info or is_sitepackage_install():
     if is_venv():
@@ -211,8 +213,10 @@ if not os.path.isfile(cmd7zip_path):
     except:
         cmd7zip_path = '7z.exe'
 
+
 installed_packages: MutableMapping = {}
 download_cache: MutableMapping = {}
+
 
 def fetch_ur1(url, desc = None):
     with urllib.request.urlopen(url) as urlreq:
@@ -231,12 +235,14 @@ def fetch_ur1(url, desc = None):
             print('Fetching: ' + url)
             return urlreq.read()
 
+
 def fetch_url_cached(url, desc):
     data = download_cache.get(url, None)
     if data is None:
         data = fetch_ur1(url, desc)
         download_cache[url] = data
     return data
+
 
 package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 
@@ -251,9 +257,11 @@ try:
 except:
     pass
 
+
 def check_hash(data, ref_hash):
     data_hash = hashlib.sha256(data).hexdigest()
     return (data_hash == ref_hash, data_hash, ref_hash)
+
 
 def get_bin_name(p):
     if p['type'] == 'PyScript':
@@ -268,29 +276,33 @@ def get_bin_name(p):
     else:
         raise Exception('Unknown install type')
 
+
 def get_install_path(p):
-    if p['type'] == 'PyScript' or p['type'] == 'PyWheel':
+    if p['type'] in ('PyScript', 'PyWheel'):
         return py_script_path
     elif p['type'] == 'VSPlugin':
         return plugin_path
     else:
         raise Exception('Unknown install type')
 
+
 def get_package_from_id(id, required = False):
     for p in package_list:
         if p['identifier'] == id:
             return p
     if required:
-        raise Exception('No package with the identifier ' + id + ' found')
+        raise Exception(f'No package with the identifier {id} found')
     return None
+
 
 def get_package_from_plugin_name(name, required = False):
     for p in package_list:
         if p['name'].casefold() == name.casefold():
             return p
     if required:
-        raise Exception('No package with the name ' + name + ' found')
+        raise Exception(f'No package with the name {name} found')
     return None
+
 
 def get_package_from_namespace(namespace, required = False):
     for p in package_list:
@@ -298,8 +310,9 @@ def get_package_from_namespace(namespace, required = False):
             if p['namespace'] == namespace:
                 return p
     if required:
-        raise Exception('No package with the namespace ' + namespace + ' found')
+        raise Exception(f'No package with the namespace {namespace} found')
     return None
+
 
 def get_package_from_modulename(modulename, required = False):
     for p in package_list:
@@ -307,8 +320,9 @@ def get_package_from_modulename(modulename, required = False):
             if p['modulename'] == modulename:
                 return p
     if required:
-        raise Exception('No package with the modulename ' + modulename + ' found')
+        raise Exception(f'No package with the modulename {modulename} found')
     return None
+
 
 def get_package_from_name(name):
     p = get_package_from_id(name)
@@ -319,24 +333,24 @@ def get_package_from_name(name):
     if p is None:
         p = get_package_from_plugin_name(name)
     if p is None:
-        raise Exception('Package ' + name + ' not found')
+        raise Exception(f'Package {name} not found')
     return p
+
 
 def is_package_installed(id):
     return id in installed_packages
 
+
 def is_package_upgradable(id, force):
     lastest_installable = get_latest_installable_release(get_package_from_id(id, True))
-    if force:
-        return (is_package_installed(id) and (lastest_installable is not None) and (installed_packages[id] != lastest_installable['version']))
-    else:
-        return (is_package_installed(id) and (lastest_installable is not None) and (installed_packages[id] != 'Unknown') and (installed_packages[id] != lastest_installable['version']))
+    _check = lastest_installable and is_package_installed(id) and installed_packages[id] != lastest_installable['version']
+
+    return _check if force else _check and installed_packages[id] != 'Unknown'
+
 
 def get_python_package_name(pkg):
-    if "wheelname" in pkg:
-        return pkg["wheelname"].replace(".", "_").replace(" ", "_")
-    else:
-        return pkg["name"].replace(".", "_").replace(" ", "_")
+    return pkg.get('wheelname', pkg.get('name')).replace(".", "_").replace(" ", "_")
+
 
 def find_dist_version(pkg, path):
     if path is None:
@@ -351,11 +365,12 @@ def find_dist_version(pkg, path):
             if os.path.isfile(os.path.join(path, targetname, 'RECORD')):
                 versions.append(targetname[len(name)+1:-10])
 
-    versions.sort(reverse=True)
     if len(versions) > 0:
+        versions.sort(reverse=True)
         return versions[0]
     else:
         return
+
 
 def detect_installed_packages():
     if package_list is not None:
@@ -388,6 +403,7 @@ def detect_installed_packages():
         print('No valid package definitions found. Run update command first!')
         sys.exit(1)
 
+
 def print_package_status(p):
     lastest_installable = get_latest_installable_release(p)
     name = p['name']
@@ -397,15 +413,18 @@ def print_package_status(p):
         name = '+' + name
     print(package_print_string.format(name, p['namespace'] if p['type'] == 'VSPlugin' else p['modulename'], installed_packages[p['identifier']] if p['identifier'] in installed_packages else '', lastest_installable['version'] if lastest_installable is not None else '', p['identifier']))
 
+
 def list_installed_packages():
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
     for id in installed_packages:
         print_package_status(get_package_from_id(id, True))
 
+
 def list_available_packages():
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
     for p in package_list:
         print_package_status(p)
+
 
 def get_latest_installable_release_with_index(p):
     max_api = get_vapoursynth_api_version()
@@ -422,8 +441,10 @@ def get_latest_installable_release_with_index(p):
                 return idx, rel
     return (-1, None)
 
+
 def get_latest_installable_release(p):
     return get_latest_installable_release_with_index(p)[1]
+
 
 def can_install(p):
     return get_latest_installable_release(p) is not None
@@ -462,6 +483,7 @@ def rmdir(path):
         for fname in fnames:
             os.remove(os.path.join(path, fname))
         os.rmdir(path)
+
 
 def find_dist_dirs(name, path=site_package_dir):
     if path is None:
@@ -560,18 +582,18 @@ def install_files(p):
                 if wheeldict['Root-Is-Purelib'] != 'true':
                     raise Exception('Wheel: only purelib root supported')
                 zf.extractall(path=dest_path)
-                with open(os.path.join(dest_path, basename + '.dist-info', 'INSTALLER'), mode='w') as f:
+                dest_base = [dest_path, basename + '.dist-info']
+                with open(os.path.join(*dest_base, 'INSTALLER'), mode='w') as f:
                     f.write("vsrepo")
-                with open(os.path.join(dest_path, basename + '.dist-info', 'RECORD')) as f:
+                with open(os.path.join(*dest_base, 'RECORD')) as f:
                     contents = f.read()
-                with open(os.path.join(dest_path, basename + '.dist-info', 'RECORD'), mode='a') as f:
+                with open(os.path.join(*dest_base, 'RECORD'), mode='a') as f:
                     if not contents.endswith("\n"):
                         f.write("\n")
                     f.write(basename + '.dist-info/INSTALLER,,\n')
         except BaseException as e:
+            print(f'Failed to decompress {p["name"]} {install_rel["version"]} with error: {e}')
             raise
-            print('Failed to decompress ' + p['name'] + ' ' + install_rel['version'] + ' with error: ' + str(e) + ', skipping installation and moving on')
-            return (0, 1)
     else:
         single_file = None
         if len(install_rel[bin_name]['files']) == 1:
@@ -612,14 +634,15 @@ def install_files(p):
         install_package_meta(files, p, install_rel, idx)
 
     installed_packages[p['identifier']] = install_rel['version']
-    print('Successfully installed ' + p['name'] + ' ' + install_rel['version'])
+    print(f'Successfully installed {p["name"]} {install_rel["version"]}')
     return (1, 0)
+
 
 def install_package(name):
     p = get_package_from_name(name)
     if get_vapoursynth_api_version() <= 3:
         if p['identifier'] in bundled_api3_plugins:
-            print('Binaries are already bundled for ' + p['name'] + ', skipping installation')
+            print(f'Binaries are already bundled for {p["name"]}, skipping installation')
             return (0, 0, 0)
     if can_install(p):
         inst = (0, 0, 0)
@@ -633,8 +656,9 @@ def install_package(name):
             inst = (inst[0] + res[0], inst[1], inst[2] + res[1])
         return inst
     else:
-        print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
+        print(f'No binaries available for {args.target} in package {p["name"]}, skipping installation')
         return (0, 0, 1)
+
 
 def upgrade_files(p):
     if can_install(p):
@@ -647,22 +671,23 @@ def upgrade_files(p):
         res = install_files(p)
         return (inst[0] + res[0], inst[1], inst[2] + res[1])
     else:
-        print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
+        print(f'No binaries available for {args.target} in package {p["name"]}, skipping installation')
         return (0, 0, 1)
 
+
 def upgrade_package(name, force):
-    inst = (0, 0, 0)
     p = get_package_from_name(name)
     if not is_package_installed(p['identifier']):
-        print('Package ' + p['name'] + ' not installed, can\'t upgrade')
+        print(f"Package {p['name']} not installed, can't upgrade")
     elif is_package_upgradable(p['identifier'], force):
         res = upgrade_files(p)
         return (res[0], 0, res[1])
     elif not is_package_upgradable(p['identifier'], True):
-        print('Package ' + p['name'] + ' not upgraded, latest version installed')
+        print(f'Package {p["name"]} not upgraded, latest version already installed')
     else:
-        print('Package ' + p['name'] + ' not upgraded, unknown version must use -f to force replacement')
-    return inst
+        print(f'Package {p["name"]} not upgraded, unknown version must use -f to force replacement')
+    return (0, 0, 0)
+
 
 def upgrade_all_packages(force):
     inst = (0, 0, 0)
@@ -672,6 +697,7 @@ def upgrade_all_packages(force):
             res = upgrade_files(get_package_from_id(id, True))
             inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
     return inst
+
 
 def uninstall_files(p):
     dest_path = get_install_path(p)
@@ -692,7 +718,7 @@ def uninstall_files(p):
             try:
                 os.remove(os.path.join(dest_path, f))
             except BaseException as e:
-                print('File removal error: ' + str(e))
+                print(f'File removal error: {e}')
         for dist_dir in find_dist_dirs(pyname, dest_path):
             rmdir(dist_dir)
     else:
@@ -708,19 +734,21 @@ def uninstall_files(p):
 
         remove_package_meta(p)
 
+
 def uninstall_package(name):
     p = get_package_from_name(name)
     if is_package_installed(p['identifier']):
         if installed_packages[p['identifier']] == 'Unknown':
-            print('Can\'t uninstall unknown version package: ' + p['name'])
+            print(f"Can't uninstall unknown version package: {p['name']}")
             return (0, 0)
         else:
             uninstall_files(p)
-            print('Uninstalled package: ' + p['name'] + ' ' + installed_packages[p['identifier']])
+            print(f'Uninstalled package: {p["name"]} {installed_packages[p["identifier"]]}')
             return (1, 0)
     else:
-        print('No files installed for ' + p['name'] + ', skipping uninstall')
+        print(f'No files installed for {p["name"]}, skipping uninstall')
         return (0, 0)
+
 
 def update_package_definition(url):
     localmtimeval = 0
@@ -741,11 +769,11 @@ def update_package_definition(url):
                     os.utime(package_json_path, times=(remote_modtime, remote_modtime))
     except urllib.error.HTTPError as httperr:
         if httperr.code == 304:
-            print('Local definitions already up to date: ' + email.utils.formatdate(localmtimeval, usegmt=True))
+            print(f'Local definitions already up to date: {email.utils.formatdate(localmtimeval, usegmt=True)}')
         else:
             raise
     else:
-        print('Local definitions updated to: ' + email.utils.formatdate(remote_modtime, usegmt=True))
+        print(f'Local definitions updated to: {email.utils.formatdate(remote_modtime, usegmt=True)}')
 
 
 def get_vapoursynth_version() -> int:
@@ -757,6 +785,7 @@ def get_vapoursynth_version() -> int:
     if hasattr(vapoursynth, "__version__"):
         return vapoursynth.__version__[0]
     return vapoursynth.core.version_number()
+
 
 def get_vapoursynth_api_version() -> int:
     try:
@@ -830,6 +859,7 @@ def update_genstubs():
                         f.write("\n")
                     f.write(f"{filename},,\n")
             break
+
 
 def rebuild_distinfo():
     print("Rebuilding dist-info dirs for other python package installers")

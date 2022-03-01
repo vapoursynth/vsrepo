@@ -26,7 +26,6 @@ import hashlib
 import urllib.request
 import io
 import re
-import datetime
 import glob
 import csv
 import os
@@ -37,7 +36,6 @@ import subprocess
 import tempfile
 import argparse
 import email.utils
-import time
 import zipfile
 import importlib.util as imputil
 

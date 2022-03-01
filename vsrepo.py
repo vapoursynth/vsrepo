@@ -20,25 +20,25 @@
 ##    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ##    SOFTWARE.
 
-import sys
-import json
-import hashlib
-import urllib.request
-import io
-import re
-import glob
-import csv
-import os
-import binascii
-import base64
-import os.path
-import subprocess
-import tempfile
 import argparse
+import base64
+import binascii
+import csv
 import email.utils
+import glob
+import hashlib
+import importlib.util as imputil
+import io
+import json
+import os
+import os.path
+import re
+import subprocess
+import sys
+import tempfile
+import urllib.request
 import zipfile
 from typing import MutableMapping, Optional
-import importlib.util as imputil
 
 try:
     import winreg

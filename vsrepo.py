@@ -37,6 +37,7 @@ import tempfile
 import argparse
 import email.utils
 import zipfile
+from typing import MutableMapping, Optional
 import importlib.util as imputil
 
 try:
@@ -46,7 +47,7 @@ except ImportError:
     sys.exit(1)
 
 try:
-    import tqdm
+    import tqdm  # type: ignore
 except ImportError:
     pass
 
@@ -164,20 +165,21 @@ elif is_sitepackage_install_portable():
     del vapoursynth_path
 
 else:
-    plugin32_path = os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'plugins32')
-    plugin64_path = os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'plugins64')
+    pluginparent = [str(os.getenv("APPDATA")), 'VapourSynth']
+    plugin32_path = os.path.join(*pluginparent, 'plugins32')
+    plugin64_path = os.path.join(*pluginparent, 'plugins64')
 
 if (args.operation in ['install', 'upgrade', 'uninstall']) == ((args.package is None) or len(args.package) == 0):
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
-package_json_path = os.path.join(file_dirname, 'vspackages3.json') if args.portable else os.path.join(os.getenv('APPDATA'), 'VapourSynth', 'vsrepo', 'vspackages3.json')
+package_json_path = os.path.join(file_dirname, 'vspackages3.json') if args.portable else os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
 
 if args.force_dist_info or is_sitepackage_install():
     if is_venv():
         try:
             import setuptools
-            site_package_dir = os.path.dirname(os.path.dirname(setuptools.__file__))
+            site_package_dir: Optional[str] = os.path.dirname(os.path.dirname(setuptools.__file__))
             del setuptools
         except ImportError:
             site_package_dir = None
@@ -209,8 +211,8 @@ if not os.path.isfile(cmd7zip_path):
     except:
         cmd7zip_path = '7z.exe'
 
-installed_packages = {}
-download_cache = {}
+installed_packages: MutableMapping = {}
+download_cache: MutableMapping = {}
 
 def fetch_ur1(url, desc = None):
     with urllib.request.urlopen(url) as urlreq:

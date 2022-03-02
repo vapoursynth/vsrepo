@@ -32,7 +32,7 @@ import subprocess
 import difflib
 import ftplib
 import zipfile
-from typing import Any, List, MutableMapping
+from typing import Any, List, MutableMapping, Optional, Dict, Sequence, Tuple, TypeVar, Union
 
 try:
     import winreg
@@ -62,8 +62,8 @@ parser.add_argument('-kf', dest='keepfolder', type=int, default=-1, nargs='?', h
 
 args = parser.parse_args()
 
-cmd7zip_path = '7z.exe'
-time_limit = 14  # time limit after a commit is treated as new in days | (updatemode: git-commits)
+cmd7zip_path: str = '7z.exe'
+time_limit: int = 14  # time limit after a commit is treated as new in days | (updatemode: git-commits)
 
 try:
     with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
@@ -71,45 +71,43 @@ try:
 except OSError:
     pass
 
-def similarity(a, b):
+def similarity(a: str, b: str) -> float:
     return difflib.SequenceMatcher(None, a, b).ratio()
 
-def get_most_similar(a, b):
-    res = (0, '')
+def get_most_similar(a: str, b: Sequence[str]) -> str:
+    res: Tuple[float, str] = (0.0, '')
     for s in b:
         v = similarity(a, s)
         if v >= res[0]:
             res = (v, s)
     return res[1]
 
-def get_git_api_url(url):
+def get_git_api_url(url: str) -> Optional[str]:
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
-        return 'https://api.github.com/repos/' + s[-2] + '/' + s[-1] + '/releases'
+        return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/releases'
     else:
         return None
 
-def get_git_api_commits_url(url, path = None, branch = None):
-    sha = ""
-    if branch:
-        sha = f"sha={branch}&"
+def get_git_api_commits_url(url: str, path: Optional[str] = None, branch: Optional[str] = None) -> Optional[str]:
+    sha = f"sha={branch}&" if branch else ""
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
         return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/commits?{sha}' + f'path={path}' if path else ''
     else:
         return None
 
-def get_git_api_zipball_url(url, ref = None):
+def get_git_api_zipball_url(url: str, ref: Optional[str] = None):
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
         return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/zipball' + f'/{ref}' if ref else ''
     else:
         return None
 
-def get_pypi_api_url(name):
+def get_pypi_api_url(name: str):
     return 'https://pypi.org/pypi/' + name + '/json'
 
-def fetch_url(url, desc = None, token = None):
+def fetch_url(url: str, desc: Optional[str] = None, token: Optional[str] = None) -> bytearray:
     req = urllib.request.Request(url, headers={'Authorization': 'token ' + token}) if token is not None else urllib.request.Request(url)
     with urllib.request.urlopen(req) as urlreq:
         if ('tqdm' in sys.modules) and (urlreq.headers['content-length'] is not None):
@@ -127,7 +125,7 @@ def fetch_url(url, desc = None, token = None):
             print('Fetching: ' + url)
             return urlreq.read()
 
-def fetch_url_to_cache(url, name, tag_name, desc = None):
+def fetch_url_to_cache(url: str, name: str, tag_name: str, desc: Optional[str] = None) -> str:
     cache_path = os.path.join('dlcache', name + '_' + tag_name, os.path.basename(url))
     if not os.path.isfile(cache_path):
         os.makedirs(os.path.split(cache_path)[0], exist_ok=True)
@@ -138,7 +136,7 @@ def fetch_url_to_cache(url, name, tag_name, desc = None):
                     pl.write(data)
     return cache_path
 
-def list_archive_files(fn):
+def list_archive_files(fn: str) -> MutableMapping:
     result = subprocess.run([cmd7zip_path, "l", "-ba", fn], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     result.check_returncode()
     l = {}
@@ -148,7 +146,7 @@ def list_archive_files(fn):
         l[t.lower()] = t
     return l
 
-def generate_fn_candidates(fn, insttype):
+def generate_fn_candidates(fn: str, insttype: str):
     tmp_fn = fn.lower()
     fn_guesses = [
         tmp_fn,
@@ -161,9 +159,9 @@ def generate_fn_candidates(fn, insttype):
     elif insttype == 'win64':
         return list(filter(lambda x: (x.find('32') == -1) and (x.find('x86') == -1) , fn_guesses))
     else:
-        return fn_guesses;
+        return fn_guesses
 
-def decompress_and_hash(archivefn, fn, insttype):
+def decompress_and_hash(archivefn: str, fn: str, insttype: str) -> Tuple[Dict, str]:
     existing_files = list_archive_files(archivefn)
     for fn_guess in generate_fn_candidates(fn, insttype):
         if fn_guess in existing_files:
@@ -187,21 +185,17 @@ def decompress_and_hash(archivefn, fn, insttype):
                     return (existing_files[fn_guess], hashlib.sha256(result.stdout).hexdigest())
     raise Exception('No file match found')
 
-def get_latest_installable_release(p, bin_name):
+def get_latest_installable_release(p: MutableMapping, bin_name: str) -> Optional[MutableMapping]:
     for rel in p['releases']:
         if bin_name in rel:
             return rel
     return None
 
-def get_python_package_name(pkg):
-    if "wheelname" in pkg:
-        return pkg["wheelname"].replace(".", "_").replace(" ", "_")
-    else:
-        return pkg["name"].replace(".", "_").replace(" ", "_")
+def get_python_package_name(pkg: MutableMapping) -> str:
+    return pkg.get("wheelname", pkg.get("name")).replace(".", "_").replace(" ", "_")
 
-def write_new_releses(name, pfile, new_rels, rel_order):
-    has_new_releases = bool(new_rels)
-    if has_new_releases:
+def write_new_releses(name: str, pfile: MutableMapping, new_rels: MutableMapping, rel_order: List) -> int:
+    if bool(new_rels):
         for rel in pfile['releases']:
             new_rels[rel['version']] = rel
         rel_list = []
@@ -219,10 +213,9 @@ def write_new_releses(name, pfile, new_rels, rel_order):
         print('Release file already up to date')
         return 0
 
-def update_package(name):
-    pfile = None
+def update_package(name: str) -> int:
     with open('local/' + name + '.json', 'r', encoding='utf-8') as ml:
-        pfile = json.load(ml)
+        pfile: Dict = json.load(ml)
 
     existing_rel_list = []
     for rel in pfile['releases']:
@@ -236,7 +229,7 @@ def update_package(name):
     if pfile['type'] == 'PyWheel':
         if use_pypi:
             new_rels = {}
-            apifile = json.loads(fetch_url(get_pypi_api_url(get_python_package_name(pfile)), pfile['name']))
+            apifile: Dict = json.loads(fetch_url(get_pypi_api_url(get_python_package_name(pfile)), pfile['name']))
             for version in apifile['releases']:
                 for rel in apifile['releases'][version]:
                     if rel['yanked'] or rel['packagetype'] != 'bdist_wheel':
@@ -245,7 +238,7 @@ def update_package(name):
                     new_rels[version] = new_rel_entry
                     if version not in rel_order:
                         rel_order.insert(0, version)
-            write_new_releses(name, pfile, new_rels, rel_order)
+            return write_new_releses(name, pfile, new_rels, rel_order)
         else:
             print('PyWheel can only be scanned from pypi')
             return -1
@@ -256,20 +249,20 @@ def update_package(name):
         is_pywheel = (pfile['type'] == 'PyWheel')
 
         if (is_pyscript and ('updatemode' in pfile) and pfile['updatemode'] == 'git-commits'):
-            apifile = [] # no releases dummy
+            apifile = {} # no releases dummy
             new_rel_entry = { 'version': "", 'published': "" }
             try:
                 latest_rel = get_latest_installable_release(pfile, 'script')
-                fpath = os.path.basename(list(latest_rel['script']['files'].values())[0][0])
+                fpath: str = os.path.basename(list(latest_rel['script']['files'].values())[0][0])  # type: ignore
 
-                git_commits = json.loads(fetch_url(  get_git_api_commits_url(url = pfile['github'], path = fpath, branch = pfile['gitbranch'] if 'gitbranch' in pfile else None), pfile['name']))
+                git_commits = json.loads(fetch_url(get_git_api_commits_url(url = pfile['github'], path = fpath, branch = pfile['gitbranch'] if 'gitbranch' in pfile else None) or "", pfile['name']))
 
                 git_hash = git_commits[0]['sha']
                 git_hash_short = git_hash[:7]
 
                 try:
                     #diff_date_commit = (dt.datetime.now() - dt.datetime.strptime(git_commits[0]['commit']['committer']['date'], "%Y-%m-%dT%H:%M:%SZ")).days
-                    diff_date_package = (dt.datetime.now() - dt.datetime.strptime(latest_rel['published'], "%Y-%m-%dT%H:%M:%SZ")).days
+                    diff_date_package = (dt.datetime.now() - dt.datetime.strptime(latest_rel['published'], "%Y-%m-%dT%H:%M:%SZ")).days  # type: ignore
                 except:
                     print("Parsing published date failed")
 
@@ -282,8 +275,8 @@ def update_package(name):
                     new_url = get_git_api_zipball_url(pfile['github'], git_hash)
                     temp_fn = fetch_url_to_cache(new_url, name,  git_hash_short, pfile['name'] + ' ' + git_hash_short + ' script')
                     new_rel_entry['script'] = { 'url': new_url, 'files': {} }
-                    for fn in latest_rel['script']['files']:
-                        new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')
+                    for fn in latest_rel['script']['files']:  # type: ignore
+                        new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')  # type: ignore
                         new_rel_entry['script']['files'][fn] = [new_fn, digest]
 
 
@@ -293,7 +286,7 @@ def update_package(name):
                 new_rel_entry.pop('script', None)
                 print('No script found')
         else:
-            apifile = json.loads(fetch_url(get_git_api_url(pfile['github']), pfile['name'], token=args.git_token))
+            apifile = json.loads(fetch_url(get_git_api_url(pfile['github']) or "", pfile['name'], token=args.git_token))
 
         for rel in apifile:
             if rel['prerelease']:
@@ -341,14 +334,14 @@ def update_package(name):
                     try:
                         latest_rel = get_latest_installable_release(pfile, 'script')
                         new_url = None
-                        if ('/archive/' in latest_rel['script']['url']) or ('/zipball/' in latest_rel['script']['url']):
+                        if ('/archive/' in latest_rel['script']['url']) or ('/zipball/' in latest_rel['script']['url']):  # type: ignore
                             new_url = zipball
                         else:
-                            new_url = get_most_similar(latest_rel['script']['url'], dl_files)
+                            new_url = get_most_similar(latest_rel['script']['url'], dl_files)  # type: ignore
                         temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
                         new_rel_entry['script'] = { 'url': new_url, 'files': {} }
-                        for fn in latest_rel['script']['files']:
-                            new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')
+                        for fn in latest_rel['script']['files']:  # type: ignore
+                            new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')  # type: ignore
                             new_rel_entry['script']['files'][fn] = [new_fn, digest]
                     except:
                         new_rel_entry.pop('script', None)
@@ -356,14 +349,14 @@ def update_package(name):
                 new_rels[new_rel_entry['version']] = new_rel_entry
         return write_new_releses(name, pfile, new_rels, rel_order)
     else:
-        print('Only github and pypi projects supported, ' + name + ' not scanned')
+        print(f'Only github and pypi projects supported, {name} not scanned')
         return -1
 
-def verify_package(pfile, existing_identifiers):
-    name = pfile['name']
+def verify_package(pfile: MutableMapping, existing_identifiers: Sequence[str]) -> None:
+    name: str = pfile['name']
     for key in pfile.keys():
         if key not in ('name', 'type', 'device', 'api', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases', 'updatemode', 'gitbranch'):
-            raise Exception('Unknown key: ' + key + ' in ' + name)
+            raise Exception(f'Unknown key: {key} in {name}')
     if pfile['type'] not in ('VSPlugin', 'PyScript', 'PyWheel'):
         raise Exception('Invalid type in ' + name)
     if (pfile['type'] == 'VSPlugin') and ('modulename' in pfile):
@@ -392,13 +385,13 @@ def verify_package(pfile, existing_identifiers):
             if dev not in ("cpu", "cuda", "opencl", "vulkan"):
                 raise Exception('Invalid device in ' + name)
 
-def compile_packages():
+def compile_packages() -> None:
     combined = []
     existing_identifiers = []
     for f in os.scandir('local'):
         if f.is_file() and f.path.endswith('.json'):
             with open(f.path, 'r', encoding='utf-8') as ml:
-                pfile = json.load(ml)
+                pfile: Dict = json.load(ml)
                 if pfile['identifier'] in existing_identifiers:
                     raise Exception('Duplicate identifier: ' + pfile['identifier'])
                 existing_identifiers.append(pfile['identifier'])
@@ -423,29 +416,29 @@ def compile_packages():
         zf.writestr('vspackages3.json', data)
 
 
-def getBinaryArch(bin):
+def getBinaryArch(bin: bytes) -> Optional[int]:
     if b"PE\x00\x00d\x86" in bin:     # hex: 50 45 00 00 64 86 | PE..d†
         return 64
     if b"PE\x00\x00L" in bin:         # hex: 50 45 00 00 4c     | PE..L
         return 32
     return None
 
-def decompress_hash_simple(archive, file):
+def decompress_hash_simple(archive: str, file: str) -> Tuple[str, str, Optional[int]]:
     result = subprocess.run([cmd7zip_path, "e", "-so", archive, file], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     result.check_returncode()
     return (file, hashlib.sha256(result.stdout).hexdigest(), getBinaryArch(result.stdout))
 
-def extract_git_repo(url):
+def extract_git_repo(url: str) -> Optional[str]:
     if url.startswith('https://github.com/'):
         return '/'.join(url.split('/', 5)[:-1])
     else:
         return None
 
-def keep_folder_structure(path, level = 0):
+def keep_folder_structure(path: str, level: int = 0) -> str:
     folder = path.split('/', level)
     return folder[-1]
 
-def blank_package(name = "", is_script = False, is_wheel = False, url = ""):
+def blank_package(name: str = "", is_script: bool = False, is_wheel: bool = False, url: str = "") -> MutableMapping:
     giturl = extract_git_repo(url)
     p = {
             'name': '',
@@ -481,7 +474,7 @@ elif args.operation == 'update-local':
                     num_updated = num_updated + 1
                 elif result == 0:
                     num_nochange = num_nochange + 1
-        print('Summary:\nUpdated: {} \nNo change: {} \nSkipped: {}\n'.format(num_updated, num_nochange, num_skipped))
+        print(f'Summary:\nUpdated:   {num_updated}\nNo change: {num_nochange} \nSkipped:   {num_skipped}\n')
     else:
         update_package(args.package)
 elif args.operation == 'create-package':
@@ -496,7 +489,7 @@ elif args.operation == 'create-package':
         sys.exit(1)
 
     url = args.packageurl
-    is_wheel = True if (pathlib.Path(url).suffix.lower() == '.whl') else False
+    is_wheel = pathlib.Path(url).suffix.lower() == '.whl'
 
     print("fetching remote url")
     dlfile = fetch_url_to_cache(url, "package", "creator", "")

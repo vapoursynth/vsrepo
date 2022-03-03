@@ -803,7 +803,7 @@ def update_genstubs() -> None:
         genstubs = os.path.join(os.path.dirname(__file__), "vsgenstubs4/__init__.py")
     else:
         genstubs = os.path.join(os.path.dirname(__file__), "vsgenstubs/__init__.py")
-    contents = subprocess.getoutput(" ".join([sys.executable, genstubs, "-o", "-"]))
+    contents = subprocess.getoutput([sys.executable, genstubs, '-o', '-'])  # type: ignore
 
     site_package = False
     stubpath: Optional[str] = args.stub_output_file

@@ -2,7 +2,7 @@
 	"name": "VIVTC",
 	"type": "VSPlugin",
 	"category": "Inverse Telecine",
-	"description": "VIVTC is a set of filters that can be used for inverse telecine. It is a rewrite of some of tritical’s TIVTC filters.",
+	"description": "VIVTC is a set of filters that can be used for inverse telecine. It is a rewrite of some of tritical's TIVTC filters.",
 	"website": "http://www.vapoursynth.com/doc/plugins/vivtc.html",
 	"github": "https://github.com/vapoursynth/vivtc",
 	"identifier": "org.ivtc.v",

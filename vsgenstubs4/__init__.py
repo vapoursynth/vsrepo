@@ -103,6 +103,7 @@ def retrieve_func_sigs(core: Union[vapoursynth.Core, vapoursynth.VideoNode, vapo
             signature = signature.replace("Any", "typing.Any")
             signature = signature.replace("NoneType", "None")
             signature = signature.replace("Optional", "typing.Optional")
+            signature = signature.replace("Tuple", "typing.Tuple")
 
             # Make Callable definitions sensible
             signature = signature.replace("typing.Union[Func, Callable]", "typing.Callable[..., typing.Any]")

@@ -38,7 +38,7 @@ import sys
 import tempfile
 import urllib.request
 import zipfile
-from typing import Collection, Iterable, Iterator, List, MutableMapping, Optional, Sequence, Tuple
+from typing import Iterator, List, MutableMapping, Optional, Tuple
 
 try:
     import winreg

@@ -10,6 +10,14 @@
 	"wheelname": "vsfieldkit",
 	"releases": [
 		{
+			"version": "0.2.0",
+			"published": "2022-02-24T11:24:45.552955Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/cc/df/6baeb0829e712a16667429c3dc9e7413198316787eccda2941aee45bc347/vsfieldkit-0.2.0-py3-none-any.whl",
+				"hash": "b33efb1947608a37c3a6c2ab391a821ee5b0f4901095efe2f646b1de48c4c045"
+			}
+		},
+		{
 			"version": "0.1.0",
 			"published": "2022-02-14T06:36:07.293577Z",
 			"wheel": {

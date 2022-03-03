@@ -11,6 +11,19 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "r10",
+			"published": "2022-02-26T17:30:05Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain/releases/download/r10/AddGrain-r10-win64.7z",
+				"files": {
+					"AddGrain.dll": [
+						"AddGrain.dll",
+						"74f1fcb53e7a91efc015730a03a92cbed70485b68422805f441f43dd8a343a92"
+					]
+				}
+			}
+		},
+		{
 			"version": "r9",
 			"published": "2021-09-22T09:58:32Z",
 			"win64": {

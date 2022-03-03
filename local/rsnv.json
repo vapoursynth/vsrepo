@@ -6,11 +6,26 @@
 	"github": "https://github.com/Kiyamou/VapourSynth-RealSR-ncnn-Vulkan",
 	"identifier": "com.vapoursynth.realsrnv",
 	"namespace": "rsnv",
-	"device": ["vulkan"],
+	"device": [
+		"vulkan"
+	],
 	"dependencies": [
 		"com.vapoursynth.realsrnv.models"
 	],
 	"releases": [
+		{
+			"version": "r2.1",
+			"published": "2022-02-25T13:31:17Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-RealSR-ncnn-Vulkan/releases/download/r2.1/rsnv.7z",
+				"files": {
+					"rsnv.dll": [
+						"rsnv.dll",
+						"fe3e5222ba622f2523a843f0f402bf1821181088a12e72c1d53860926d953ace"
+					]
+				}
+			}
+		},
 		{
 			"version": "r2",
 			"published": "2021-05-24T11:37:49Z",

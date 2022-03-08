@@ -53,9 +53,9 @@ except ImportError:
 
 package_print_string = '{:25s} {:15s} {:11s} {:11s} {:s}'
 # This is faster for iteration and `in` checks than a List
-bundled_api3_plugins = ('com.vapoursynth.avisource', 'com.vapoursynth.eedi3', 'com.vapoursynth.imwri',
+bundled_api3_plugins = {'com.vapoursynth.avisource', 'com.vapoursynth.eedi3', 'com.vapoursynth.imwri',
                         'com.vapoursynth.misc', 'com.vapoursynth.morpho', 'com.vapoursynth.removegrainvs',
-                        'com.vapoursynth.subtext', 'com.vapoursynth.vinverse', 'org.ivtc.v', 'com.nodame.histogram')
+                        'com.vapoursynth.subtext', 'com.vapoursynth.vinverse', 'org.ivtc.v', 'com.nodame.histogram'}
 
 
 def is_venv() -> bool:
@@ -336,6 +336,26 @@ def is_package_installed(id: str) -> bool:
     return id in installed_packages
 
 
+def compare_version(ver_a: str, ver_b: str) -> bool:
+    if ver_a == 'devel':
+        return False
+    if ver_a.startswith('git:'):
+        return ver_a != ver_b
+    elif 'beta' in ver_a and 'beta' not in ver_b:
+        return True
+    # strip off "ver", "rev", "v", etc
+    ver_a_clean = re.sub(r'[^\d\.]', '', ver_a)
+    ver_b_clean = re.sub(r'[^\d\.]', '', ver_b)
+    a = [int(x) for x in ver_a_clean.split('.') if x != '']
+    b = [int(x) for x in ver_b_clean.split('.') if x != '']
+    if len(a) != len(b):
+        return True
+    for index, ver in enumerate(a):
+        if ver < b[index]:
+            return True
+    return False
+
+
 def is_package_upgradable(id: str, force: bool) -> bool:
     pkg = get_package_from_id(id, True)
     if pkg is None:
@@ -343,7 +363,7 @@ def is_package_upgradable(id: str, force: bool) -> bool:
     lastest_installable = get_latest_installable_release_with_index(pkg)[1]
     if lastest_installable is None:
         return False
-    _check = is_package_installed(id) and installed_packages[id] != lastest_installable['version']
+    _check = is_package_installed(id) and compare_version(installed_packages[id], lastest_installable['version'])
 
     return _check if force else _check and installed_packages[id] != 'Unknown'
 
@@ -358,11 +378,14 @@ def find_dist_version(pkg: MutableMapping, path: Path) -> Optional[str]:
     versions: List[str] = []
 
     for target in path.iterdir():
-        if (target.name.startswith(f'{name}-') and target.name.endswith('.dist-info')):
+        if target.name.startswith(f'{name}-') and target.name.endswith('.dist-info'):
             # only bother with dist-info dirs that actually have a usable record
             # in case a package uninstall failed to delete the dir
             if path.joinpath(target, 'RECORD').exists():
                 versions.append(target.name[len(name)+1:-10])
+        # List editable installs as being installed too
+        elif target.name == f'{name}.egg-link':
+            versions.append('devel')
 
     versions.sort(reverse=True)
     return versions[0] if len(versions) > 0 else None
@@ -715,7 +738,6 @@ def uninstall_files(p: MutableMapping) -> None:
                 tmp = line.split(',')
                 if len(tmp) > 0 and len(tmp[0]) > 0:
                     files.append(tmp[0])
-        print(files)
         for f in files:
             try:
                 dest_path.joinpath(f).unlink()
@@ -960,8 +982,10 @@ elif args.operation == 'uninstall':
     else:
         print('{} package{} uninstalled'.format(uninst[0], '' if uninst[0] == 1 else 's'))
     update_genstubs()
-elif args.operation in ('installed', 'available'):
+elif args.operation == 'installed':
     list_installed_packages()
+elif args.operation == 'available':
+    list_available_packages()
 elif args.operation == 'update':
     update_package_definition('http://www.vapoursynth.com/vsrepo/vspackages3.zip')
 elif args.operation == 'paths':

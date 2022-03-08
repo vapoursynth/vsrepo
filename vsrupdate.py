@@ -231,9 +231,38 @@ def write_new_releses(name: str, pfile: MutableMapping, new_rels: MutableMapping
         return False
 
 
+def get_new_rel(name: str, reltype: str, rel: MutableMapping,
+                pfile: MutableMapping, dl_files: MutableSequence,
+                zipball: Optional[str] = None) -> Optional[MutableMapping[str, Any]]:
+    ret_rel_entry = {'version': rel['tag_name'], 'published': rel['published_at']}
+    latest_rel = get_latest_installable_release(pfile, reltype)
+    if latest_rel is None or latest_rel.get(reltype) is None:
+        return None
+    new_url = None
+    if reltype == 'script' and ('/archive/' in latest_rel['script']['url'] or
+                                '/zipball/' in latest_rel['script']['url']):
+        new_url = zipball
+    if new_url is None:
+        new_url = get_most_similar(latest_rel[reltype]['url'], dl_files)
+    try:
+        temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'],
+                                     f"{pfile['name']} {rel['tag_name']} {reltype}")
+        ret_rel_entry[reltype] = {'url': new_url, 'files': {}}
+        for fn in latest_rel[reltype]['files']:
+            new_fn, digest = decompress_and_hash(temp_fn, fn[0], reltype)
+    except (URLError, subprocess.CalledProcessError):
+        print(f'No {reltype} release found.')
+        return None
+    ret_rel_entry[reltype]['files'][fn] = [new_fn, digest]
+    return ret_rel_entry
+
+
 def update_package(name: str) -> int:
     with open(f'local/{name}.json', 'r', encoding='utf-8') as ml:
         pfile: Dict = json.load(ml)
+
+    new_rel_entry: Optional[MutableMapping[str, Any]] = {'version': '', 'published': ''}
+    assert isinstance(new_rel_entry, MutableMapping)
 
     existing_rel_list = []
     for rel in pfile['releases']:
@@ -250,8 +279,9 @@ def update_package(name: str) -> int:
                 for rel in apifile['releases'][version]:
                     if rel['yanked'] or rel['packagetype'] != 'bdist_wheel':
                         continue
-                    new_rel_entry = {'version': version, 'published': rel['upload_time_iso_8601'],
-                                     'wheel': {'url': rel['url'], 'hash': rel['digests']['sha256']}}
+                    new_rel_entry.update({'version': version, 'published': rel['upload_time_iso_8601'],
+                                          'wheel': {'url': rel['url'], 'hash': rel['digests']['sha256']}
+                                          })
                     new_rels[version] = new_rel_entry
                     if version not in rel_order:
                         rel_order.insert(0, version)
@@ -265,11 +295,10 @@ def update_package(name: str) -> int:
 
         if is_pyscript and pfile.get('updatemode', '') == 'git-commits':
             apifile = {}  # no releases dummy
-            new_rel_entry = {'version': '', 'published': ''}
             try:
                 latest_rel = get_latest_installable_release(pfile, 'script')
                 if latest_rel is None:
-                    return False
+                    return 0
                 fpath = Path(list(latest_rel['script']['files'].values())[0][0]).name  # type: ignore
 
                 git_commits = json.loads(
@@ -297,11 +326,12 @@ def update_package(name: str) -> int:
                     if not any(git_txt in ver for ver in rel_order):
                         rel_order.insert(0, git_txt)
                         print(f'{git_txt} (new)')
-                    new_rel_entry = {'version': git_txt, 'published': git_commits[0]['commit']['committer']['date']}
+                    new_rel_entry.update({'version': git_txt,
+                                          'published': git_commits[0]['commit']['committer']['date']})
 
                     new_url = get_git_api_zipball_url(pfile['github'], git_hash)
                     if new_url is None:
-                        return False
+                        return 0
                     temp_fn = fetch_url_to_cache(new_url, name, git_hash_short,
                                                  f"{pfile['name']} {git_hash_short} script")
                     new_rel_entry['script'] = {'url': new_url, 'files': {}}
@@ -332,34 +362,11 @@ def update_package(name: str) -> int:
                 for asset in rel['assets']:
                     dl_files.append(asset['browser_download_url'])
 
-                # Too many references to scope-bound variables to move this out
-                # but at least it's not repeated thrice anymore
-                def _new_rel_entry(reltype: str) -> Optional[Dict[str, Any]]:
-                    ret_rel_entry = {'version': rel['tag_name'], 'published': rel['published_at']}
-                    latest_rel = get_latest_installable_release(pfile, reltype)
-                    if latest_rel is None or latest_rel.get(reltype) is None:
-                        return None
-                    new_url = None
-                    if reltype == 'script' and ('/archive/' in latest_rel['script']['url'] or
-                                                '/zipball/' in latest_rel['script']['url']):
-                        new_url = str(zipball) if zipball else None
-                    if new_url is None:
-                        new_url = get_most_similar(latest_rel[reltype]['url'], dl_files)
-                    try:
-                        temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'],
-                                                     f"{pfile['name']} {rel['tag_name']} {reltype}")
-                        ret_rel_entry[reltype] = {'url': new_url, 'files': {}}
-                        for fn in latest_rel[reltype]['files']:
-                            new_fn, digest = decompress_and_hash(temp_fn, fn[0], reltype)
-                    except (URLError, subprocess.CalledProcessError):
-                        print(f'No {reltype} release found.')
-                        return None
-                    ret_rel_entry[reltype]['files'][fn] = [new_fn, digest]
-                    return ret_rel_entry
-
-                new_rel_entry = _new_rel_entry('win32') or _new_rel_entry('win64') or _new_rel_entry('script') or {}
-                if new_rel_entry in [None, {}]:
-                    return False
+                new_rel_entry = (get_new_rel(name, 'win32', rel, pfile, dl_files) or
+                                 get_new_rel(name, 'win64', rel, pfile, dl_files) or
+                                 get_new_rel(name, 'script', rel, pfile, dl_files, zipball))
+                if new_rel_entry is None:
+                    return 0
 
                 new_rels[new_rel_entry['version']] = new_rel_entry
         return int(write_new_releses(name, pfile, new_rels, rel_order))

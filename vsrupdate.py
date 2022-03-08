@@ -33,7 +33,7 @@ import zipfile
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, MutableMapping, MutableSequence, Optional, Sequence, Set, Tuple
-from urllib.error import URLError
+from urllib.error import URLError, HTTPError
 
 try:
     import winreg
@@ -57,6 +57,9 @@ parser.add_argument('-passwd', dest='passwd', nargs=1, help='FTP Password')
 parser.add_argument('-dir', dest='dir', nargs=1, help='FTP dir')
 parser.add_argument('-url', dest='packageurl', help='URL of the archive from which a package is to be created')
 parser.add_argument('-pname', dest='packagename', help='Filename or namespace of your package')
+parser.add_argument('-outpath', dest='outpath', required=False, default=None,
+                    help='Directory for package definitions, default is the `local` folder in the vsrepo directory.'
+                    'Appends `local` to the given path if the last component is not `local`.')
 parser.add_argument('-script', action='store_true', dest='packagescript',
                     help='Type of the package is script. Otherwise a package of type plugin is created')
 parser.add_argument('-types', dest='packagefiletypes', nargs='+', default=['.dll', '.py'],
@@ -65,8 +68,15 @@ parser.add_argument('-kf', dest='keepfolder', type=int, default=-1, nargs='?', h
 
 args = parser.parse_args()
 
-cmd7zip_path: str = '7z.exe'
+localpath = Path(args.outpath) if args.outpath is not None else Path(__file__).parent
+if not localpath.name == 'local':
+    localpath = localpath.joinpath('local')
+if not localpath.exists():
+    localpath.mkdir()
+    print(f'outputting all packages to {localpath}')
+
 time_limit: int = 14  # time limit after a commit is treated as new in days | (updatemode: git-commits)
+cmd7zip_path: str = '7z.exe'
 
 try:
     with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
@@ -197,7 +207,7 @@ def decompress_and_hash(archivefn: Path, fn: str, insttype: str) -> Tuple[Mutabl
                                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     result.check_returncode()
                     return (existing_files[fn_guess], hashlib.sha256(result.stdout).hexdigest())
-    raise Exception('No file match found')
+    raise ValueError('No file match found')
 
 
 def get_latest_installable_release(p: MutableMapping, bin_name: str) -> Optional[MutableMapping]:
@@ -217,12 +227,15 @@ def write_new_releses(name: str, pfile: MutableMapping, new_rels: MutableMapping
             new_rels[rel['version']] = rel
         rel_list = []
         for rel_ver in rel_order:
+            # This is a placeholder default for creating packages. Yeet it.
+            if rel_ver == 'create-package':
+                continue
             rel_list.append(new_rels[rel_ver])
         pfile['releases'] = rel_list
         pfile['releases'].sort(key=lambda r: r['published'], reverse=True)
 
         fnext = '.json' if args.overwrite else '.new.json'
-        with open(f'local/{name}{fnext}', 'w', encoding='utf-8') as pl:
+        with open(localpath.joinpath(name + fnext), 'w', encoding='utf-8') as pl:
             json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent=4)
         print('Release file updated')
         return True
@@ -250,7 +263,7 @@ def get_new_rel(name: str, reltype: str, rel: MutableMapping,
         ret_rel_entry[reltype] = {'url': new_url, 'files': {}}
         for fn in latest_rel[reltype]['files']:
             new_fn, digest = decompress_and_hash(temp_fn, fn[0], reltype)
-    except (URLError, subprocess.CalledProcessError):
+    except (URLError, subprocess.CalledProcessError, ValueError):
         print(f'No {reltype} release found.')
         return None
     ret_rel_entry[reltype]['files'][fn] = [new_fn, digest]
@@ -258,7 +271,7 @@ def get_new_rel(name: str, reltype: str, rel: MutableMapping,
 
 
 def update_package(name: str) -> int:
-    with open(f'local/{name}.json', 'r', encoding='utf-8') as ml:
+    with open(localpath.joinpath(name + '.json'), 'r', encoding='utf-8') as ml:
         pfile: Dict = json.load(ml)
 
     new_rel_entry: Optional[MutableMapping[str, Any]] = {'version': '', 'published': ''}
@@ -269,19 +282,20 @@ def update_package(name: str) -> int:
         existing_rel_list.append(rel['version'])
     rel_order = existing_rel_list.copy()
 
-    use_pypi = pfile['type'] == 'PyWheel' and pfile.get('source') == 'pypi'
+    use_pypi = pfile['type'] == 'PyWheel' and (pfile.get('source', 'pypi') == 'pypi')
 
     if pfile['type'] == 'PyWheel':
         if use_pypi:
             new_rels = {}
             apifile: Dict = json.loads(fetch_url(get_pypi_api_url(get_python_package_name(pfile)), pfile['name']))
             for version in apifile['releases']:
+                version = str(version)
                 for rel in apifile['releases'][version]:
                     if rel['yanked'] or rel['packagetype'] != 'bdist_wheel':
-                        continue
-                    new_rel_entry.update({'version': version, 'published': rel['upload_time_iso_8601'],
-                                          'wheel': {'url': rel['url'], 'hash': rel['digests']['sha256']}
-                                          })
+                        break
+                    new_rel_entry = {'version': version, 'published': rel['upload_time_iso_8601'],
+                                     'wheel': {'url': rel['url'], 'hash': rel['digests']['sha256']}
+                                     }
                     new_rels[version] = new_rel_entry
                     if version not in rel_order:
                         rel_order.insert(0, version)
@@ -339,6 +353,7 @@ def update_package(name: str) -> int:
                         new_fn, digest = decompress_and_hash(temp_fn, fn[0], 'script')
                         new_rel_entry['script']['files'][fn] = [new_fn, digest]
 
+                    assert isinstance(new_rel_entry, dict)
                     new_rels[new_rel_entry['version']] = new_rel_entry
 
             except Exception:
@@ -368,6 +383,7 @@ def update_package(name: str) -> int:
                 if new_rel_entry is None:
                     return 0
 
+                assert isinstance(new_rel_entry, dict)
                 new_rels[new_rel_entry['version']] = new_rel_entry
         return int(write_new_releses(name, pfile, new_rels, rel_order))
     else:
@@ -414,7 +430,6 @@ def verify_package(pfile: MutableMapping, existing_identifiers: Sequence[str]) -
 
 
 def compile_packages() -> None:
-    localpath = Path('local').resolve()
     combined = []
     existing_identifiers = []
     for f in localpath.iterdir():
@@ -471,7 +486,7 @@ def keep_folder_structure(path: str, level: int = 0) -> str:
 def blank_package(name: str, url: str, is_script: bool = False, is_wheel: bool = False) -> MutableMapping:
     giturl = extract_git_repo(url)
     p = {
-            'name': '',
+            'name': name,
             'type': 'PyScript' if is_script else ('PyWheel' if is_wheel else 'VSPlugin'),
             'category': '',
             'description': '',
@@ -496,9 +511,16 @@ elif args.operation == 'update-local':
         num_skipped = 0
         num_nochange = 0
         num_updated = 0
-        for f in Path('local').iterdir():
+        ratelimited = False
+        for f in localpath.iterdir():
             if f.is_file() and f.name.endswith('.json'):
-                result = update_package(f.stem)
+                try:
+                    result = update_package(f.stem)
+                except HTTPError as e:
+                    if e.code == 403:
+                        print(f'Ratelimit exceeded for {e.geturl()} Aborting!')
+                        ratelimited = True
+                        result = -1
                 if result == -1:
                     num_skipped = num_skipped + 1
                 elif result == 1:
@@ -509,6 +531,7 @@ elif args.operation == 'update-local':
     else:
         update_package(args.package)
 elif args.operation == 'create-package':
+    print(f'outputting the new package definition to {localpath}')
 
     if not args.packageurl:
         print('-url parameter is missing')
@@ -592,8 +615,8 @@ elif args.operation == 'create-package':
     final_package['releases'] = [new_rel_entry]
 
     print(json.dumps(final_package, indent=4))
-    pkgfile = Path('local').joinpath(args.packagename + '.json')
-    if pkgfile.exists():
+    pkgfile = localpath.joinpath(args.packagename + '.json')
+    if not pkgfile.exists():
         with open(pkgfile, 'x', encoding='utf-8') as pl:
             json.dump(fp=pl, obj=final_package, ensure_ascii=False, indent=4)
 
@@ -609,7 +632,7 @@ elif args.operation == 'create-package':
             args.overwrite = True
             update_package(args.packagename)
     else:
-        print(f"package file '{args.packagename}'.json already exists. Skipping writing file.")
+        print(f"package file '{args.packagename}.json' already exists. Skipping writing file.")
 elif args.operation == 'upload':
     compile_packages()
     print('Packages successfully compiled')

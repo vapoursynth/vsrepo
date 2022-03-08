@@ -640,7 +640,7 @@ def install_package(name: str) -> Tuple[int, int, int]:
         if p['identifier'] in bundled_api3_plugins:
             print(f'Binaries are already bundled for {p["name"]}, skipping installation')
             return (0, 0, 0)
-    if get_latest_installable_release_with_index(p)[0]:
+    if get_latest_installable_release_with_index(p)[0] >= 0:
         inst = (0, 0, 0)
         if not args.skip_deps:
             if 'dependencies' in p:
@@ -659,7 +659,7 @@ def install_package(name: str) -> Tuple[int, int, int]:
 
 
 def upgrade_files(p: MutableMapping) -> Tuple[int, int, int]:
-    if get_latest_installable_release_with_index(p)[0]:
+    if get_latest_installable_release_with_index(p)[0] >= 0:
         inst = (0, 0, 0)
         if 'dependencies' in p:
             for dep in p['dependencies']:
@@ -669,7 +669,7 @@ def upgrade_files(p: MutableMapping) -> Tuple[int, int, int]:
         fres = install_files(p)
         return (inst[0] + fres[0], inst[1], inst[2] + fres[1])
     else:
-        print(f'No binaries available for {args.target} in package {p["name"]}, skipping installation')
+        print(f'No updates available for {args.target} in package {p["name"]}, skipping installation')
         return (0, 0, 1)
 
 

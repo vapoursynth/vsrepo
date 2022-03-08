@@ -967,7 +967,11 @@ elif args.operation in ('upgrade', 'upgrade-all'):
         inst = upgrade_all_packages(args.force)
     else:
         for name in args.package:
-            res = upgrade_package(name, args.force)
+            if installed_packages[name] == 'devel':
+                print(f'{name} is installed as development package, which vsrepo does not manage.')
+                res = (0, 0, 0)
+            else:
+                res = upgrade_package(name, args.force)
             inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
 
     update_genstubs()
@@ -975,7 +979,11 @@ elif args.operation in ('upgrade', 'upgrade-all'):
 elif args.operation == 'uninstall':
     uninst = (0, 0)
     for name in args.package:
-        uninst_res = uninstall_package(name)
+        if installed_packages[name] == 'devel':
+            print(f'{name} is installed as development package, which vsrepo does not manage.')
+            continue
+        else:
+            uninst_res = uninstall_package(name)
         uninst = (uninst[0] + uninst_res[0], uninst[1] + uninst_res[1])
     if uninst[0] == 0:
         print('No packages uninstalled')

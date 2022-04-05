@@ -18,6 +18,19 @@
 	],
 	"releases": [
 		{
+			"version": "r8",
+			"published": "2022-04-02T10:00:54Z",
+			"script": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/descale/releases/download/r8/vapoursynth-descale-r8-win64.zip",
+				"files": {
+					"descale.py": [
+						"descale.py",
+						"df856535b29d7141acf744c7b92fcbe2406ca3a5c629285eb71f2a69d3b63099"
+					]
+				}
+			}
+		},
+		{
 			"version": "r7",
 			"published": "2021-09-30T15:35:51Z",
 			"script": {

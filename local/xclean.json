@@ -21,6 +21,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:404e8b9",
+			"published": "2022-03-29T08:45:06Z",
+			"script": {
+				"url": "https://api.github.com/repos/mysteryx93/xClean/zipball/404e8b99a6f29903c2742aa255b7b832918120c5",
+				"files": {
+					"xClean.py": [
+						"mysteryx93-xClean-404e8b9/xClean.py",
+						"1b0d4f62f1dfc65c30aaddca8d556b0d349bcf7bddf60e09832194cebaae2411"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:9e8bdb5",
 			"published": "2021-11-11T02:01:50Z",
 			"script": {

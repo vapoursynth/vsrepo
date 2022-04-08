@@ -162,6 +162,7 @@ if args.portable:
 elif is_sitepackage_install_portable():
     vapoursynth_path = detect_vapoursynth_installation()
     base_path = os.path.dirname(vapoursynth_path)
+    pluginparent  = os.path.join(base_path, 'vapoursynth64' if is_64bits else 'vapoursynth32')
     plugin32_path = os.path.join(base_path, 'vapoursynth32', 'plugins')
     plugin64_path = os.path.join(base_path, 'vapoursynth64', 'plugins')
     del vapoursynth_path

@@ -8,11 +8,35 @@
 	"identifier": "fmtconv",
 	"namespace": "fmtc",
 	"github": "https://github.com/EleonoreMizo/fmtconv",
+	"api": 4,
 	"releases": [
+		{
+			"version": "r29",
+			"published": "2022-04-11T16:01:24Z",
+			"win32": {
+				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r29/fmtconv-r29.zip",
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"060446778787e55d8293d8488e304115bc9dfb92f6ed991eb70660e70fdc1522"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r29/fmtconv-r29.zip",
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"66f7b2ea35a6e3c4e57c8729eddaf01ec0bc293c064190bd0a02675709460994"
+					]
+				}
+			}
+		},
 		{
 			"version": "r28",
 			"published": "2021-11-20T09:40:53Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r28/fmtconv-r28.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -22,6 +46,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r28/fmtconv-r28.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -35,6 +60,7 @@
 			"version": "r27",
 			"published": "2021-10-30T10:55:22Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r27/fmtconv-r27.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -44,6 +70,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r27/fmtconv-r27.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -57,6 +84,7 @@
 			"version": "r26",
 			"published": "2021-10-19T14:45:02Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r26/fmtconv-r26.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -66,6 +94,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r26/fmtconv-r26.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -79,6 +108,7 @@
 			"version": "r25",
 			"published": "2021-09-22T07:30:09Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r25/fmtconv-r25.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -88,6 +118,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r25/fmtconv-r25.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -101,6 +132,7 @@
 			"version": "r24",
 			"published": "2021-08-16T17:15:49Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r24/fmtconv-r24.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -110,6 +142,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r24/fmtconv-r24.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -123,6 +156,7 @@
 			"version": "r23",
 			"published": "2021-07-14T13:01:36Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r23/fmtconv-r23.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -132,6 +166,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r23/fmtconv-r23.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -145,6 +180,7 @@
 			"version": "r22",
 			"published": "2019-12-11T14:33:39Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r22/fmtconv-r22.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -154,6 +190,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r22/fmtconv-r22.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -167,6 +204,7 @@
 			"version": "r21",
 			"published": "2019-12-08T15:57:25Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r21/fmtconv-r21.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -176,6 +214,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r21/fmtconv-r21.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -189,6 +228,7 @@
 			"version": "r20",
 			"published": "2016-03-25T15:11:30Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r20/fmtconv-r20.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -198,6 +238,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r20/fmtconv-r20.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -211,6 +252,7 @@
 			"version": "r19",
 			"published": "2016-03-19T11:03:46Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r19/fmtconv-r19.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -220,6 +262,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r19/fmtconv-r19.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -233,6 +276,7 @@
 			"version": "r18",
 			"published": "2016-03-08T20:49:39Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r18/fmtconv-r18.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -242,6 +286,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r18/fmtconv-r18.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -255,6 +300,7 @@
 			"version": "r17",
 			"published": "2015-07-08T17:09:28Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r17/fmtconv-r17.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -264,6 +310,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r17/fmtconv-r17.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -277,6 +324,7 @@
 			"version": "r16",
 			"published": "2015-07-01T13:51:45Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r16/fmtconv-r16.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -286,6 +334,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r16/fmtconv-r16.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -299,6 +348,7 @@
 			"version": "r15",
 			"published": "2015-05-22T19:00:13Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r15/fmtconv-r15.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -308,6 +358,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r15/fmtconv-r15.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -321,6 +372,7 @@
 			"version": "r14",
 			"published": "2015-05-20T20:34:20Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r14/fmtconv-r14.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -330,6 +382,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r14/fmtconv-r14.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -343,6 +396,7 @@
 			"version": "r13",
 			"published": "2015-05-18T17:12:37Z",
 			"win32": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r13/fmtconv-r13.zip",
 				"files": {
 					"fmtconv.dll": [
@@ -352,6 +406,7 @@
 				}
 			},
 			"win64": {
+				"api": 3,
 				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r13/fmtconv-r13.zip",
 				"files": {
 					"fmtconv.dll": [

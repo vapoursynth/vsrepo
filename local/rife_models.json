@@ -11,6 +11,500 @@
 	],
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2022-04-05T12:06:59Z",
+			"win32": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan/releases/download/r3/RIFE-models.7z",
+				"files": {
+					"models/rife-HD/contextnet.bin": [
+						"models/rife-HD/contextnet.bin",
+						"dd1fe09c75cd93060200b88154db4c6f871185d49ba028a52f07d5e404701931"
+					],
+					"models/rife-HD/contextnet.param": [
+						"models/rife-HD/contextnet.param",
+						"27949d32886fb08732be00e5e4a3935dafddf622074aa6d30c6885cd2983f2cf"
+					],
+					"models/rife-HD/flownet.bin": [
+						"models/rife-HD/flownet.bin",
+						"bcad0fdd5dcc3ba07c60359d1460b0fef6856f888eabd57dc721cc466c59ae30"
+					],
+					"models/rife-HD/flownet.param": [
+						"models/rife-HD/flownet.param",
+						"4156e10152cc51c50f9f41dec0eeb394492f89e70bf6f5a831667703004a78a3"
+					],
+					"models/rife-HD/fusionnet.bin": [
+						"models/rife-HD/fusionnet.bin",
+						"f58e6f05440b735349a59973d14abd5e51662404aee070536e52c2f7cfdba440"
+					],
+					"models/rife-HD/fusionnet.param": [
+						"models/rife-HD/fusionnet.param",
+						"18e4914ba7194158be6acb4c9b89c6d5a326e6293387cc046b974e76ad698d2e"
+					],
+					"models/rife-UHD/contextnet.bin": [
+						"models/rife-UHD/contextnet.bin",
+						"1f78c6ddf0e423deb90adb26d7fdfb7452277acc3bf809190eeee2b04c64d79b"
+					],
+					"models/rife-UHD/contextnet.param": [
+						"models/rife-UHD/contextnet.param",
+						"27949d32886fb08732be00e5e4a3935dafddf622074aa6d30c6885cd2983f2cf"
+					],
+					"models/rife-UHD/flownet.bin": [
+						"models/rife-UHD/flownet.bin",
+						"7faa0572aebab154817e9c5a0beb584dedae87b93603782f4bda23d999f1dd09"
+					],
+					"models/rife-UHD/flownet.param": [
+						"models/rife-UHD/flownet.param",
+						"4156e10152cc51c50f9f41dec0eeb394492f89e70bf6f5a831667703004a78a3"
+					],
+					"models/rife-UHD/fusionnet.bin": [
+						"models/rife-UHD/fusionnet.bin",
+						"5c9428bb8b270b4da69ce213ca98e23d5cef8eda78ab8bae1599d559497176b8"
+					],
+					"models/rife-UHD/fusionnet.param": [
+						"models/rife-UHD/fusionnet.param",
+						"18e4914ba7194158be6acb4c9b89c6d5a326e6293387cc046b974e76ad698d2e"
+					],
+					"models/rife-anime/contextnet.bin": [
+						"models/rife-anime/contextnet.bin",
+						"abc4bdcc425726268d55fe380b7615e8dc6b3feba69986ce861321b1b8cc5dc6"
+					],
+					"models/rife-anime/contextnet.param": [
+						"models/rife-anime/contextnet.param",
+						"27949d32886fb08732be00e5e4a3935dafddf622074aa6d30c6885cd2983f2cf"
+					],
+					"models/rife-anime/flownet.bin": [
+						"models/rife-anime/flownet.bin",
+						"ab459482f6c20294c40e94c802d09be34f5dc246576499acfd2d49c03b6cea9a"
+					],
+					"models/rife-anime/flownet.param": [
+						"models/rife-anime/flownet.param",
+						"4156e10152cc51c50f9f41dec0eeb394492f89e70bf6f5a831667703004a78a3"
+					],
+					"models/rife-anime/fusionnet.bin": [
+						"models/rife-anime/fusionnet.bin",
+						"006cdedc84c20f30825ab65a44655ee6baf181573118ca039a344dc6adff7cd9"
+					],
+					"models/rife-anime/fusionnet.param": [
+						"models/rife-anime/fusionnet.param",
+						"18e4914ba7194158be6acb4c9b89c6d5a326e6293387cc046b974e76ad698d2e"
+					],
+					"models/rife-v2.3": [
+						"models/rife-v2.3",
+						"79ff2fac182203007ebabe782d5a1727f92516909e923b3e1ca2d61c8322765c"
+					],
+					"models/rife-v2.3/contextnet.bin": [
+						"models/rife-v2.3/contextnet.bin",
+						"48cd291e3755112a3276aa216120445803601d2dbf6f66ab7dd86326a4a0e446"
+					],
+					"models/rife-v2.3/contextnet.param": [
+						"models/rife-v2.3/contextnet.param",
+						"82c04da2d9a894986a78073803546ec75eeaf2e8e5a7d3bef312094aa49db4b1"
+					],
+					"models/rife-v2.3/flownet.bin": [
+						"models/rife-v2.3/flownet.bin",
+						"0cd8d87cb86882d4ebb587d78ca276c1eeb3e7f3d093bed1b77c7d6ef7db6887"
+					],
+					"models/rife-v2.3/flownet.param": [
+						"models/rife-v2.3/flownet.param",
+						"d6217636d4f71871c721bfea379e99c0df4e4d1446d282427a3939b38aa7fb92"
+					],
+					"models/rife-v2.3/fusionnet.bin": [
+						"models/rife-v2.3/fusionnet.bin",
+						"30fdc1ffdcace52688871645b20b93a5104054e8ece7f7187ed3573e9fa54f5b"
+					],
+					"models/rife-v2.3/fusionnet.param": [
+						"models/rife-v2.3/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v2.4": [
+						"models/rife-v2.4",
+						"12fbd185bfdef3d0b25d0fa7650da6f86df771dce860ef748a70b81fc0ea50ce"
+					],
+					"models/rife-v2.4/contextnet.bin": [
+						"models/rife-v2.4/contextnet.bin",
+						"2b48d1c8f29d67f0ec839fa96e478caa0b8db200f82a6dad454514c20a5d9644"
+					],
+					"models/rife-v2.4/contextnet.param": [
+						"models/rife-v2.4/contextnet.param",
+						"82c04da2d9a894986a78073803546ec75eeaf2e8e5a7d3bef312094aa49db4b1"
+					],
+					"models/rife-v2.4/flownet.bin": [
+						"models/rife-v2.4/flownet.bin",
+						"924c5d5461099cde803f85953868bf8407f8a6b342861c75122f2876d96e55b1"
+					],
+					"models/rife-v2.4/flownet.param": [
+						"models/rife-v2.4/flownet.param",
+						"d6217636d4f71871c721bfea379e99c0df4e4d1446d282427a3939b38aa7fb92"
+					],
+					"models/rife-v2.4/fusionnet.bin": [
+						"models/rife-v2.4/fusionnet.bin",
+						"26a8188b8b6fc087d03d7729ccfc92fb1ba8f40d2b237aee13436a40477d1840"
+					],
+					"models/rife-v2.4/fusionnet.param": [
+						"models/rife-v2.4/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v2/contextnet.bin": [
+						"models/rife-v2/contextnet.bin",
+						"d1c8845a5e53a49816f8d9c1b9920e6c279f82f2b220b9a6e56814ab77972ea0"
+					],
+					"models/rife-v2/contextnet.param": [
+						"models/rife-v2/contextnet.param",
+						"82c04da2d9a894986a78073803546ec75eeaf2e8e5a7d3bef312094aa49db4b1"
+					],
+					"models/rife-v2/flownet.bin": [
+						"models/rife-v2/flownet.bin",
+						"432c53b8d519f1a7c65813f38fc0e4cb66adc62b166bc6339040cd113c4f30fa"
+					],
+					"models/rife-v2/flownet.param": [
+						"models/rife-v2/flownet.param",
+						"d6217636d4f71871c721bfea379e99c0df4e4d1446d282427a3939b38aa7fb92"
+					],
+					"models/rife-v2/fusionnet.bin": [
+						"models/rife-v2/fusionnet.bin",
+						"10e7a372cef1285fe08421857c0ad3b70e39de98c0573adb2185f0877fdd9cdb"
+					],
+					"models/rife-v2/fusionnet.param": [
+						"models/rife-v2/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v3.0": [
+						"models/rife-v3.0",
+						"185608d957687fa860dcfb55a9a741587a6dab84510449759f740af9848ec0c6"
+					],
+					"models/rife-v3.0/contextnet.bin": [
+						"models/rife-v3.0/contextnet.bin",
+						"4d235182146dbf7afdc13565719479c09d09431d3e63d9929321b4a87ba9c663"
+					],
+					"models/rife-v3.0/contextnet.param": [
+						"models/rife-v3.0/contextnet.param",
+						"7826edf4fba7aebcb51c4c6ccb8a10b45f6b8e60e5975ba887220eebffdaa131"
+					],
+					"models/rife-v3.0/flownet.bin": [
+						"models/rife-v3.0/flownet.bin",
+						"1df40d94d731f6c53e3cb8a8c818118202788d05a1b21ca921d840459f87b2a2"
+					],
+					"models/rife-v3.0/flownet.param": [
+						"models/rife-v3.0/flownet.param",
+						"c115e7a89f7b243da0142e9c77df445c6629cc3883347da23bb8fa74c665ebcb"
+					],
+					"models/rife-v3.0/fusionnet.bin": [
+						"models/rife-v3.0/fusionnet.bin",
+						"bd48e83dfed5b923d299addc483ce90a6a5c2d408012d6408c65a89a71f3bfae"
+					],
+					"models/rife-v3.0/fusionnet.param": [
+						"models/rife-v3.0/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v3.1": [
+						"models/rife-v3.1",
+						"bb0d7fd9fc60ac086831ee7280a5540a329281da93ea9062d6fe65cd8786f280"
+					],
+					"models/rife-v3.1/contextnet.bin": [
+						"models/rife-v3.1/contextnet.bin",
+						"e7f406ef6b18fd785933ef44ed62f79d9971846ede790bf1bce7023bb7d33d48"
+					],
+					"models/rife-v3.1/contextnet.param": [
+						"models/rife-v3.1/contextnet.param",
+						"7826edf4fba7aebcb51c4c6ccb8a10b45f6b8e60e5975ba887220eebffdaa131"
+					],
+					"models/rife-v3.1/flownet.bin": [
+						"models/rife-v3.1/flownet.bin",
+						"91de19761bddabe3ee5b114db0df265e24b6fcf74e15c88ce18086b7a4bda950"
+					],
+					"models/rife-v3.1/flownet.param": [
+						"models/rife-v3.1/flownet.param",
+						"c115e7a89f7b243da0142e9c77df445c6629cc3883347da23bb8fa74c665ebcb"
+					],
+					"models/rife-v3.1/fusionnet.bin": [
+						"models/rife-v3.1/fusionnet.bin",
+						"e8e78171d1a8dc7a406d37098c7d3130dbc1e1ca0801d84ad1cc23d8ca781271"
+					],
+					"models/rife-v3.1/fusionnet.param": [
+						"models/rife-v3.1/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v4/flownet.bin": [
+						"models/rife-v4/flownet.bin",
+						"f307230e32bffeaef5d27a1ea48ec4a67371f99e363ffde1f0f62016a1f725b4"
+					],
+					"models/rife-v4/flownet.param": [
+						"models/rife-v4/flownet.param",
+						"d9ade382d01282a642e0faf5dc997c564922c126fbabf3f1623e3d566f6cac4d"
+					],
+					"models/rife/contextnet.bin": [
+						"models/rife/contextnet.bin",
+						"1d03cf22f74a99d4dc72bdfc8f45d48824f08fb0dd9803238bc3f3430f1b7ce6"
+					],
+					"models/rife/contextnet.param": [
+						"models/rife/contextnet.param",
+						"04d8a0478721feb6aca74cc5126fdba03ad0d21089cc3f681dc9f137952cd852"
+					],
+					"models/rife/flownet.bin": [
+						"models/rife/flownet.bin",
+						"b0c901adbbe5851a1e033a25b02ea81c3be5129ce7436c59d3b3f236abc45119"
+					],
+					"models/rife/flownet.param": [
+						"models/rife/flownet.param",
+						"c4b3de01d78698839a51a957a9079ea74d1d11229b45f777219f477fcd44c4d7"
+					],
+					"models/rife/fusionnet.bin": [
+						"models/rife/fusionnet.bin",
+						"f8c2541f9b6a0dcfd060b2d17de60c005056c6677beed0ba05aaf209275cac5b"
+					],
+					"models/rife/fusionnet.param": [
+						"models/rife/fusionnet.param",
+						"491c992879625e74af4704c4227ead7572a4b60c0a01ed0451a905edbeb8575b"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan/releases/download/r3/RIFE-models.7z",
+				"files": {
+					"models/rife-HD/contextnet.bin": [
+						"models/rife-HD/contextnet.bin",
+						"dd1fe09c75cd93060200b88154db4c6f871185d49ba028a52f07d5e404701931"
+					],
+					"models/rife-HD/contextnet.param": [
+						"models/rife-HD/contextnet.param",
+						"27949d32886fb08732be00e5e4a3935dafddf622074aa6d30c6885cd2983f2cf"
+					],
+					"models/rife-HD/flownet.bin": [
+						"models/rife-HD/flownet.bin",
+						"bcad0fdd5dcc3ba07c60359d1460b0fef6856f888eabd57dc721cc466c59ae30"
+					],
+					"models/rife-HD/flownet.param": [
+						"models/rife-HD/flownet.param",
+						"4156e10152cc51c50f9f41dec0eeb394492f89e70bf6f5a831667703004a78a3"
+					],
+					"models/rife-HD/fusionnet.bin": [
+						"models/rife-HD/fusionnet.bin",
+						"f58e6f05440b735349a59973d14abd5e51662404aee070536e52c2f7cfdba440"
+					],
+					"models/rife-HD/fusionnet.param": [
+						"models/rife-HD/fusionnet.param",
+						"18e4914ba7194158be6acb4c9b89c6d5a326e6293387cc046b974e76ad698d2e"
+					],
+					"models/rife-UHD/contextnet.bin": [
+						"models/rife-UHD/contextnet.bin",
+						"1f78c6ddf0e423deb90adb26d7fdfb7452277acc3bf809190eeee2b04c64d79b"
+					],
+					"models/rife-UHD/contextnet.param": [
+						"models/rife-UHD/contextnet.param",
+						"27949d32886fb08732be00e5e4a3935dafddf622074aa6d30c6885cd2983f2cf"
+					],
+					"models/rife-UHD/flownet.bin": [
+						"models/rife-UHD/flownet.bin",
+						"7faa0572aebab154817e9c5a0beb584dedae87b93603782f4bda23d999f1dd09"
+					],
+					"models/rife-UHD/flownet.param": [
+						"models/rife-UHD/flownet.param",
+						"4156e10152cc51c50f9f41dec0eeb394492f89e70bf6f5a831667703004a78a3"
+					],
+					"models/rife-UHD/fusionnet.bin": [
+						"models/rife-UHD/fusionnet.bin",
+						"5c9428bb8b270b4da69ce213ca98e23d5cef8eda78ab8bae1599d559497176b8"
+					],
+					"models/rife-UHD/fusionnet.param": [
+						"models/rife-UHD/fusionnet.param",
+						"18e4914ba7194158be6acb4c9b89c6d5a326e6293387cc046b974e76ad698d2e"
+					],
+					"models/rife-anime/contextnet.bin": [
+						"models/rife-anime/contextnet.bin",
+						"abc4bdcc425726268d55fe380b7615e8dc6b3feba69986ce861321b1b8cc5dc6"
+					],
+					"models/rife-anime/contextnet.param": [
+						"models/rife-anime/contextnet.param",
+						"27949d32886fb08732be00e5e4a3935dafddf622074aa6d30c6885cd2983f2cf"
+					],
+					"models/rife-anime/flownet.bin": [
+						"models/rife-anime/flownet.bin",
+						"ab459482f6c20294c40e94c802d09be34f5dc246576499acfd2d49c03b6cea9a"
+					],
+					"models/rife-anime/flownet.param": [
+						"models/rife-anime/flownet.param",
+						"4156e10152cc51c50f9f41dec0eeb394492f89e70bf6f5a831667703004a78a3"
+					],
+					"models/rife-anime/fusionnet.bin": [
+						"models/rife-anime/fusionnet.bin",
+						"006cdedc84c20f30825ab65a44655ee6baf181573118ca039a344dc6adff7cd9"
+					],
+					"models/rife-anime/fusionnet.param": [
+						"models/rife-anime/fusionnet.param",
+						"18e4914ba7194158be6acb4c9b89c6d5a326e6293387cc046b974e76ad698d2e"
+					],
+					"models/rife-v2.3": [
+						"models/rife-v2.3",
+						"79ff2fac182203007ebabe782d5a1727f92516909e923b3e1ca2d61c8322765c"
+					],
+					"models/rife-v2.3/contextnet.bin": [
+						"models/rife-v2.3/contextnet.bin",
+						"48cd291e3755112a3276aa216120445803601d2dbf6f66ab7dd86326a4a0e446"
+					],
+					"models/rife-v2.3/contextnet.param": [
+						"models/rife-v2.3/contextnet.param",
+						"82c04da2d9a894986a78073803546ec75eeaf2e8e5a7d3bef312094aa49db4b1"
+					],
+					"models/rife-v2.3/flownet.bin": [
+						"models/rife-v2.3/flownet.bin",
+						"0cd8d87cb86882d4ebb587d78ca276c1eeb3e7f3d093bed1b77c7d6ef7db6887"
+					],
+					"models/rife-v2.3/flownet.param": [
+						"models/rife-v2.3/flownet.param",
+						"d6217636d4f71871c721bfea379e99c0df4e4d1446d282427a3939b38aa7fb92"
+					],
+					"models/rife-v2.3/fusionnet.bin": [
+						"models/rife-v2.3/fusionnet.bin",
+						"30fdc1ffdcace52688871645b20b93a5104054e8ece7f7187ed3573e9fa54f5b"
+					],
+					"models/rife-v2.3/fusionnet.param": [
+						"models/rife-v2.3/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v2.4": [
+						"models/rife-v2.4",
+						"12fbd185bfdef3d0b25d0fa7650da6f86df771dce860ef748a70b81fc0ea50ce"
+					],
+					"models/rife-v2.4/contextnet.bin": [
+						"models/rife-v2.4/contextnet.bin",
+						"2b48d1c8f29d67f0ec839fa96e478caa0b8db200f82a6dad454514c20a5d9644"
+					],
+					"models/rife-v2.4/contextnet.param": [
+						"models/rife-v2.4/contextnet.param",
+						"82c04da2d9a894986a78073803546ec75eeaf2e8e5a7d3bef312094aa49db4b1"
+					],
+					"models/rife-v2.4/flownet.bin": [
+						"models/rife-v2.4/flownet.bin",
+						"924c5d5461099cde803f85953868bf8407f8a6b342861c75122f2876d96e55b1"
+					],
+					"models/rife-v2.4/flownet.param": [
+						"models/rife-v2.4/flownet.param",
+						"d6217636d4f71871c721bfea379e99c0df4e4d1446d282427a3939b38aa7fb92"
+					],
+					"models/rife-v2.4/fusionnet.bin": [
+						"models/rife-v2.4/fusionnet.bin",
+						"26a8188b8b6fc087d03d7729ccfc92fb1ba8f40d2b237aee13436a40477d1840"
+					],
+					"models/rife-v2.4/fusionnet.param": [
+						"models/rife-v2.4/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v2/contextnet.bin": [
+						"models/rife-v2/contextnet.bin",
+						"d1c8845a5e53a49816f8d9c1b9920e6c279f82f2b220b9a6e56814ab77972ea0"
+					],
+					"models/rife-v2/contextnet.param": [
+						"models/rife-v2/contextnet.param",
+						"82c04da2d9a894986a78073803546ec75eeaf2e8e5a7d3bef312094aa49db4b1"
+					],
+					"models/rife-v2/flownet.bin": [
+						"models/rife-v2/flownet.bin",
+						"432c53b8d519f1a7c65813f38fc0e4cb66adc62b166bc6339040cd113c4f30fa"
+					],
+					"models/rife-v2/flownet.param": [
+						"models/rife-v2/flownet.param",
+						"d6217636d4f71871c721bfea379e99c0df4e4d1446d282427a3939b38aa7fb92"
+					],
+					"models/rife-v2/fusionnet.bin": [
+						"models/rife-v2/fusionnet.bin",
+						"10e7a372cef1285fe08421857c0ad3b70e39de98c0573adb2185f0877fdd9cdb"
+					],
+					"models/rife-v2/fusionnet.param": [
+						"models/rife-v2/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v3.0": [
+						"models/rife-v3.0",
+						"185608d957687fa860dcfb55a9a741587a6dab84510449759f740af9848ec0c6"
+					],
+					"models/rife-v3.0/contextnet.bin": [
+						"models/rife-v3.0/contextnet.bin",
+						"4d235182146dbf7afdc13565719479c09d09431d3e63d9929321b4a87ba9c663"
+					],
+					"models/rife-v3.0/contextnet.param": [
+						"models/rife-v3.0/contextnet.param",
+						"7826edf4fba7aebcb51c4c6ccb8a10b45f6b8e60e5975ba887220eebffdaa131"
+					],
+					"models/rife-v3.0/flownet.bin": [
+						"models/rife-v3.0/flownet.bin",
+						"1df40d94d731f6c53e3cb8a8c818118202788d05a1b21ca921d840459f87b2a2"
+					],
+					"models/rife-v3.0/flownet.param": [
+						"models/rife-v3.0/flownet.param",
+						"c115e7a89f7b243da0142e9c77df445c6629cc3883347da23bb8fa74c665ebcb"
+					],
+					"models/rife-v3.0/fusionnet.bin": [
+						"models/rife-v3.0/fusionnet.bin",
+						"bd48e83dfed5b923d299addc483ce90a6a5c2d408012d6408c65a89a71f3bfae"
+					],
+					"models/rife-v3.0/fusionnet.param": [
+						"models/rife-v3.0/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v3.1": [
+						"models/rife-v3.1",
+						"bb0d7fd9fc60ac086831ee7280a5540a329281da93ea9062d6fe65cd8786f280"
+					],
+					"models/rife-v3.1/contextnet.bin": [
+						"models/rife-v3.1/contextnet.bin",
+						"e7f406ef6b18fd785933ef44ed62f79d9971846ede790bf1bce7023bb7d33d48"
+					],
+					"models/rife-v3.1/contextnet.param": [
+						"models/rife-v3.1/contextnet.param",
+						"7826edf4fba7aebcb51c4c6ccb8a10b45f6b8e60e5975ba887220eebffdaa131"
+					],
+					"models/rife-v3.1/flownet.bin": [
+						"models/rife-v3.1/flownet.bin",
+						"91de19761bddabe3ee5b114db0df265e24b6fcf74e15c88ce18086b7a4bda950"
+					],
+					"models/rife-v3.1/flownet.param": [
+						"models/rife-v3.1/flownet.param",
+						"c115e7a89f7b243da0142e9c77df445c6629cc3883347da23bb8fa74c665ebcb"
+					],
+					"models/rife-v3.1/fusionnet.bin": [
+						"models/rife-v3.1/fusionnet.bin",
+						"e8e78171d1a8dc7a406d37098c7d3130dbc1e1ca0801d84ad1cc23d8ca781271"
+					],
+					"models/rife-v3.1/fusionnet.param": [
+						"models/rife-v3.1/fusionnet.param",
+						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
+					],
+					"models/rife-v4/flownet.bin": [
+						"models/rife-v4/flownet.bin",
+						"f307230e32bffeaef5d27a1ea48ec4a67371f99e363ffde1f0f62016a1f725b4"
+					],
+					"models/rife-v4/flownet.param": [
+						"models/rife-v4/flownet.param",
+						"d9ade382d01282a642e0faf5dc997c564922c126fbabf3f1623e3d566f6cac4d"
+					],
+					"models/rife/contextnet.bin": [
+						"models/rife/contextnet.bin",
+						"1d03cf22f74a99d4dc72bdfc8f45d48824f08fb0dd9803238bc3f3430f1b7ce6"
+					],
+					"models/rife/contextnet.param": [
+						"models/rife/contextnet.param",
+						"04d8a0478721feb6aca74cc5126fdba03ad0d21089cc3f681dc9f137952cd852"
+					],
+					"models/rife/flownet.bin": [
+						"models/rife/flownet.bin",
+						"b0c901adbbe5851a1e033a25b02ea81c3be5129ce7436c59d3b3f236abc45119"
+					],
+					"models/rife/flownet.param": [
+						"models/rife/flownet.param",
+						"c4b3de01d78698839a51a957a9079ea74d1d11229b45f777219f477fcd44c4d7"
+					],
+					"models/rife/fusionnet.bin": [
+						"models/rife/fusionnet.bin",
+						"f8c2541f9b6a0dcfd060b2d17de60c005056c6677beed0ba05aaf209275cac5b"
+					],
+					"models/rife/fusionnet.param": [
+						"models/rife/fusionnet.param",
+						"491c992879625e74af4704c4227ead7572a4b60c0a01ed0451a905edbeb8575b"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2021-06-01T15:14:00Z",
 			"win32": {

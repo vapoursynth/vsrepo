@@ -88,10 +88,6 @@
 						"models/rife-anime/fusionnet.param",
 						"18e4914ba7194158be6acb4c9b89c6d5a326e6293387cc046b974e76ad698d2e"
 					],
-					"models/rife-v2.3": [
-						"models/rife-v2.3",
-						"79ff2fac182203007ebabe782d5a1727f92516909e923b3e1ca2d61c8322765c"
-					],
 					"models/rife-v2.3/contextnet.bin": [
 						"models/rife-v2.3/contextnet.bin",
 						"48cd291e3755112a3276aa216120445803601d2dbf6f66ab7dd86326a4a0e446"
@@ -115,10 +111,6 @@
 					"models/rife-v2.3/fusionnet.param": [
 						"models/rife-v2.3/fusionnet.param",
 						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
-					],
-					"models/rife-v2.4": [
-						"models/rife-v2.4",
-						"12fbd185bfdef3d0b25d0fa7650da6f86df771dce860ef748a70b81fc0ea50ce"
 					],
 					"models/rife-v2.4/contextnet.bin": [
 						"models/rife-v2.4/contextnet.bin",
@@ -168,10 +160,6 @@
 						"models/rife-v2/fusionnet.param",
 						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
 					],
-					"models/rife-v3.0": [
-						"models/rife-v3.0",
-						"185608d957687fa860dcfb55a9a741587a6dab84510449759f740af9848ec0c6"
-					],
 					"models/rife-v3.0/contextnet.bin": [
 						"models/rife-v3.0/contextnet.bin",
 						"4d235182146dbf7afdc13565719479c09d09431d3e63d9929321b4a87ba9c663"
@@ -195,10 +183,6 @@
 					"models/rife-v3.0/fusionnet.param": [
 						"models/rife-v3.0/fusionnet.param",
 						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
-					],
-					"models/rife-v3.1": [
-						"models/rife-v3.1",
-						"bb0d7fd9fc60ac086831ee7280a5540a329281da93ea9062d6fe65cd8786f280"
 					],
 					"models/rife-v3.1/contextnet.bin": [
 						"models/rife-v3.1/contextnet.bin",
@@ -333,10 +317,6 @@
 						"models/rife-anime/fusionnet.param",
 						"18e4914ba7194158be6acb4c9b89c6d5a326e6293387cc046b974e76ad698d2e"
 					],
-					"models/rife-v2.3": [
-						"models/rife-v2.3",
-						"79ff2fac182203007ebabe782d5a1727f92516909e923b3e1ca2d61c8322765c"
-					],
 					"models/rife-v2.3/contextnet.bin": [
 						"models/rife-v2.3/contextnet.bin",
 						"48cd291e3755112a3276aa216120445803601d2dbf6f66ab7dd86326a4a0e446"
@@ -360,10 +340,6 @@
 					"models/rife-v2.3/fusionnet.param": [
 						"models/rife-v2.3/fusionnet.param",
 						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
-					],
-					"models/rife-v2.4": [
-						"models/rife-v2.4",
-						"12fbd185bfdef3d0b25d0fa7650da6f86df771dce860ef748a70b81fc0ea50ce"
 					],
 					"models/rife-v2.4/contextnet.bin": [
 						"models/rife-v2.4/contextnet.bin",
@@ -413,10 +389,6 @@
 						"models/rife-v2/fusionnet.param",
 						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
 					],
-					"models/rife-v3.0": [
-						"models/rife-v3.0",
-						"185608d957687fa860dcfb55a9a741587a6dab84510449759f740af9848ec0c6"
-					],
 					"models/rife-v3.0/contextnet.bin": [
 						"models/rife-v3.0/contextnet.bin",
 						"4d235182146dbf7afdc13565719479c09d09431d3e63d9929321b4a87ba9c663"
@@ -440,10 +412,6 @@
 					"models/rife-v3.0/fusionnet.param": [
 						"models/rife-v3.0/fusionnet.param",
 						"6a33fa5befe657061af4c12390917c51028e609ea3c0e7c1d390fea6a8c4f870"
-					],
-					"models/rife-v3.1": [
-						"models/rife-v3.1",
-						"bb0d7fd9fc60ac086831ee7280a5540a329281da93ea9062d6fe65cd8786f280"
 					],
 					"models/rife-v3.1/contextnet.bin": [
 						"models/rife-v3.1/contextnet.bin",

@@ -4,11 +4,20 @@
 	"category": "Deinterlacing",
 	"description": "Collection of functions for working with interlaced content in VapourSynth.",
 	"website": "https://vsfieldkit.readthedocs.io",
+	"doom9": "https://forum.doom9.org/showthread.php?t=184063",
 	"github": "https://github.com/JustinTArthur/vsfieldkit",
 	"identifier": "vsfieldkit",
 	"modulename": "vsfieldkit",
 	"wheelname": "vsfieldkit",
 	"releases": [
+		{
+			"version": "0.3.0",
+			"published": "2022-04-17T07:56:02.509405Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/4f/3b/945389db8c50028eea3fc1d73fa1b4eef9891a648486b75266c5790d2c4e/vsfieldkit-0.3.0-py3-none-any.whl",
+				"hash": "249abf55e52f44115fc556800e1462a1fec54ffca3b6d5dbc96de241040532bf"
+			}
+		},
 		{
 			"version": "0.2.0",
 			"published": "2022-02-24T11:24:45.552955Z",

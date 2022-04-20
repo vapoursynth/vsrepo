@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"category": "Source/Output",
 	"description": "VapourSynth AVISource",
-	"website": "http://www.vapoursynth.com/doc/plugins/avisource.html",
+	"website": "https://github.com/vapoursynth/vs-avisource-obsolete/blob/master/docs/avisource.rst",
 	"github": "https://github.com/vapoursynth/vs-avisource-obsolete",
 	"identifier": "com.vapoursynth.avisource",
 	"namespace": "avisource",

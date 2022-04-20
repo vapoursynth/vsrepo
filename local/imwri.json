@@ -3,6 +3,7 @@
 	"type": "VSPlugin",
 	"category": "Source/Output",
 	"description": "ImageMagick Writer-Reader (IMWRI) is a plugin that can read and write many image formats.",
+	"website": "https://github.com/vapoursynth/vs-imwri/blob/master/docs/imwri.rst",
 	"github": "https://github.com/vapoursynth/vs-imwri",
 	"identifier": "com.vapoursynth.imwri",
 	"namespace": "imwri",

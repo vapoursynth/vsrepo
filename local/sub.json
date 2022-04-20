@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"category": "Subtitles",
 	"description": "Subtitle plugin for VapourSynth based on libass.",
-	"website": "http://www.vapoursynth.com/doc/plugins/subtext.html",
+	"website": "https://github.com/vapoursynth/subtext/blob/master/docs/subtext.rst",
 	"github": "https://github.com/vapoursynth/subtext",
 	"identifier": "biz.srsfckn.subtext",
 	"namespace": "sub",

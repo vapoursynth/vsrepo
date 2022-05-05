@@ -1,0 +1,650 @@
+{
+	"name": "Waifu2x ncnn Vulkan models",
+	"type": "VSPlugin",
+	"category": "Plugin Dependency",
+	"description": "ncnn implementation of waifu2x converter, based on https://github.com/nihui/waifu2x-ncnn-vulkan",
+	"github": "https://github.com/HolyWu/vs-waifu2x-ncnn-vulkan",
+	"identifier": "com.holywu.waifu2x-ncnn-Vulkan.models",
+	"namespace": "w2xncnnvk_models",
+	"ignore": [
+		"r2"
+	],
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2022-04-30T18:01:11Z",
+			"win32": {
+				"url": "https://github.com/HolyWu/vs-waifu2x-ncnn-vulkan/releases/download/r1/waifu2x-ncnn-Vulkan-models.7z",
+				"files": {
+					"models/models-cunet/noise0_model.bin": [
+						"models/models-cunet/noise0_model.bin",
+						"b15c356a36bcbf6fb8c2f1404ca016fd917d4e45426bcf41f7a3867022fdd7b0"
+					],
+					"models/models-cunet/noise0_model.param": [
+						"models/models-cunet/noise0_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise0_scale2.0x_model.bin": [
+						"models/models-cunet/noise0_scale2.0x_model.bin",
+						"5329a9375c9cfb64a60a2903fd8ae6e2851d9b069556bf025dbab9d0216fb27c"
+					],
+					"models/models-cunet/noise0_scale2.0x_model.param": [
+						"models/models-cunet/noise0_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise1_model.bin": [
+						"models/models-cunet/noise1_model.bin",
+						"3407cb87c2503cbd69f8a6703b31bc4949a72080a3e1b1e536dba8bdbfad934f"
+					],
+					"models/models-cunet/noise1_model.param": [
+						"models/models-cunet/noise1_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise1_scale2.0x_model.bin": [
+						"models/models-cunet/noise1_scale2.0x_model.bin",
+						"862c0e40f3df956ff57bd4d168c85dea5d375b614077fdddd3ac8cfdb9a686da"
+					],
+					"models/models-cunet/noise1_scale2.0x_model.param": [
+						"models/models-cunet/noise1_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise2_model.bin": [
+						"models/models-cunet/noise2_model.bin",
+						"b45d5febeb56166b7aff055cb0fbb87647dae528968f97d838dfd7ce0b7117f4"
+					],
+					"models/models-cunet/noise2_model.param": [
+						"models/models-cunet/noise2_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise2_scale2.0x_model.bin": [
+						"models/models-cunet/noise2_scale2.0x_model.bin",
+						"5c836e6ae022636cdd5590fbb66dbca2a5fc20bbf8e628884c3612ef72d51858"
+					],
+					"models/models-cunet/noise2_scale2.0x_model.param": [
+						"models/models-cunet/noise2_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise3_model.bin": [
+						"models/models-cunet/noise3_model.bin",
+						"cd3d2440673d28d7a20aa6428a2a79e1c5e733f21de0a66785958f98d6994926"
+					],
+					"models/models-cunet/noise3_model.param": [
+						"models/models-cunet/noise3_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise3_scale2.0x_model.bin": [
+						"models/models-cunet/noise3_scale2.0x_model.bin",
+						"f42c18610fecb14a40f75cca9b9276a6889689d5937a4f75f0c2b21bde7e49ed"
+					],
+					"models/models-cunet/noise3_scale2.0x_model.param": [
+						"models/models-cunet/noise3_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/scale2.0x_model.bin": [
+						"models/models-cunet/scale2.0x_model.bin",
+						"d82ed30207fd07e1c16726a9ca838ce44e6e25a105b0278c7ca681516ee0e18e"
+					],
+					"models/models-cunet/scale2.0x_model.param": [
+						"models/models-cunet/scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.bin",
+						"e1d2c4d91be98e72c0d48d08626cbe7d879aa2b80f740133dcc0d860eabb4189"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.bin",
+						"536fd7070b023463d30bd105f675acf301760dce539f2fb974bd06906045514f"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.bin",
+						"435f9082425c4520d3586757411ac409b1d67e428ed37ec571feb06f823e245e"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.bin",
+						"3e783a9117d4564fbd0cc376375b29d7eb05bd2e457f748898e82eefb1ace2f1"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.bin",
+						"27d880903ff81390a3b4a900b67af3381c465279e34297546c9a58781855f7ef"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise0_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise0_scale2.0x_model.bin",
+						"fbfc8d57e4333748c9c6db2ec4d5454c98cd1c6aa53289f2989c3bdb4e84b673"
+					],
+					"models/models-upconv_7_photo/noise0_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise0_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise1_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise1_scale2.0x_model.bin",
+						"9f8ce2c4df1ed862a7441e3b49ad965b8e34aaa6d87c1cad52a1768210fdfee6"
+					],
+					"models/models-upconv_7_photo/noise1_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise1_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise2_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise2_scale2.0x_model.bin",
+						"432ca8f62ffc4873794a399ded70b17af23aa870b25e5ddba76f029b7ce14c2b"
+					],
+					"models/models-upconv_7_photo/noise2_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise2_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise3_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise3_scale2.0x_model.bin",
+						"a24379eb4e954005da1804223f428e67340e3f0037e4f7b9f568f0d0f20e9f20"
+					],
+					"models/models-upconv_7_photo/noise3_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise3_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/scale2.0x_model.bin",
+						"25a2bb25b29e43e63179aac216cd87690791243a436328506d4ef9fca88ee962"
+					],
+					"models/models-upconv_7_photo/scale2.0x_model.param": [
+						"models/models-upconv_7_photo/scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/vs-waifu2x-ncnn-vulkan/releases/download/r1/waifu2x-ncnn-Vulkan-models.7z",
+				"files": {
+					"models/models-cunet/noise0_model.bin": [
+						"models/models-cunet/noise0_model.bin",
+						"b15c356a36bcbf6fb8c2f1404ca016fd917d4e45426bcf41f7a3867022fdd7b0"
+					],
+					"models/models-cunet/noise0_model.param": [
+						"models/models-cunet/noise0_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise0_scale2.0x_model.bin": [
+						"models/models-cunet/noise0_scale2.0x_model.bin",
+						"5329a9375c9cfb64a60a2903fd8ae6e2851d9b069556bf025dbab9d0216fb27c"
+					],
+					"models/models-cunet/noise0_scale2.0x_model.param": [
+						"models/models-cunet/noise0_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise1_model.bin": [
+						"models/models-cunet/noise1_model.bin",
+						"3407cb87c2503cbd69f8a6703b31bc4949a72080a3e1b1e536dba8bdbfad934f"
+					],
+					"models/models-cunet/noise1_model.param": [
+						"models/models-cunet/noise1_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise1_scale2.0x_model.bin": [
+						"models/models-cunet/noise1_scale2.0x_model.bin",
+						"862c0e40f3df956ff57bd4d168c85dea5d375b614077fdddd3ac8cfdb9a686da"
+					],
+					"models/models-cunet/noise1_scale2.0x_model.param": [
+						"models/models-cunet/noise1_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise2_model.bin": [
+						"models/models-cunet/noise2_model.bin",
+						"b45d5febeb56166b7aff055cb0fbb87647dae528968f97d838dfd7ce0b7117f4"
+					],
+					"models/models-cunet/noise2_model.param": [
+						"models/models-cunet/noise2_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise2_scale2.0x_model.bin": [
+						"models/models-cunet/noise2_scale2.0x_model.bin",
+						"5c836e6ae022636cdd5590fbb66dbca2a5fc20bbf8e628884c3612ef72d51858"
+					],
+					"models/models-cunet/noise2_scale2.0x_model.param": [
+						"models/models-cunet/noise2_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise3_model.bin": [
+						"models/models-cunet/noise3_model.bin",
+						"cd3d2440673d28d7a20aa6428a2a79e1c5e733f21de0a66785958f98d6994926"
+					],
+					"models/models-cunet/noise3_model.param": [
+						"models/models-cunet/noise3_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise3_scale2.0x_model.bin": [
+						"models/models-cunet/noise3_scale2.0x_model.bin",
+						"f42c18610fecb14a40f75cca9b9276a6889689d5937a4f75f0c2b21bde7e49ed"
+					],
+					"models/models-cunet/noise3_scale2.0x_model.param": [
+						"models/models-cunet/noise3_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/scale2.0x_model.bin": [
+						"models/models-cunet/scale2.0x_model.bin",
+						"d82ed30207fd07e1c16726a9ca838ce44e6e25a105b0278c7ca681516ee0e18e"
+					],
+					"models/models-cunet/scale2.0x_model.param": [
+						"models/models-cunet/scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.bin",
+						"e1d2c4d91be98e72c0d48d08626cbe7d879aa2b80f740133dcc0d860eabb4189"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.bin",
+						"536fd7070b023463d30bd105f675acf301760dce539f2fb974bd06906045514f"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.bin",
+						"435f9082425c4520d3586757411ac409b1d67e428ed37ec571feb06f823e245e"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.bin",
+						"3e783a9117d4564fbd0cc376375b29d7eb05bd2e457f748898e82eefb1ace2f1"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.bin",
+						"27d880903ff81390a3b4a900b67af3381c465279e34297546c9a58781855f7ef"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise0_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise0_scale2.0x_model.bin",
+						"fbfc8d57e4333748c9c6db2ec4d5454c98cd1c6aa53289f2989c3bdb4e84b673"
+					],
+					"models/models-upconv_7_photo/noise0_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise0_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise1_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise1_scale2.0x_model.bin",
+						"9f8ce2c4df1ed862a7441e3b49ad965b8e34aaa6d87c1cad52a1768210fdfee6"
+					],
+					"models/models-upconv_7_photo/noise1_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise1_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise2_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise2_scale2.0x_model.bin",
+						"432ca8f62ffc4873794a399ded70b17af23aa870b25e5ddba76f029b7ce14c2b"
+					],
+					"models/models-upconv_7_photo/noise2_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise2_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise3_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise3_scale2.0x_model.bin",
+						"a24379eb4e954005da1804223f428e67340e3f0037e4f7b9f568f0d0f20e9f20"
+					],
+					"models/models-upconv_7_photo/noise3_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise3_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/scale2.0x_model.bin",
+						"25a2bb25b29e43e63179aac216cd87690791243a436328506d4ef9fca88ee962"
+					],
+					"models/models-upconv_7_photo/scale2.0x_model.param": [
+						"models/models-upconv_7_photo/scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					]
+				}
+			}
+		},
+		{
+			"version": "create-package",
+			"published": "",
+			"win32": {
+				"url": "https://github.com/HolyWu/vs-waifu2x-ncnn-vulkan/releases/download/r1/waifu2x-ncnn-Vulkan-models.7z",
+				"files": {
+					"models/models-cunet/noise0_model.bin": [
+						"models/models-cunet/noise0_model.bin",
+						"b15c356a36bcbf6fb8c2f1404ca016fd917d4e45426bcf41f7a3867022fdd7b0"
+					],
+					"models/models-cunet/noise0_model.param": [
+						"models/models-cunet/noise0_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise0_scale2.0x_model.bin": [
+						"models/models-cunet/noise0_scale2.0x_model.bin",
+						"5329a9375c9cfb64a60a2903fd8ae6e2851d9b069556bf025dbab9d0216fb27c"
+					],
+					"models/models-cunet/noise0_scale2.0x_model.param": [
+						"models/models-cunet/noise0_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise1_model.bin": [
+						"models/models-cunet/noise1_model.bin",
+						"3407cb87c2503cbd69f8a6703b31bc4949a72080a3e1b1e536dba8bdbfad934f"
+					],
+					"models/models-cunet/noise1_model.param": [
+						"models/models-cunet/noise1_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise1_scale2.0x_model.bin": [
+						"models/models-cunet/noise1_scale2.0x_model.bin",
+						"862c0e40f3df956ff57bd4d168c85dea5d375b614077fdddd3ac8cfdb9a686da"
+					],
+					"models/models-cunet/noise1_scale2.0x_model.param": [
+						"models/models-cunet/noise1_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise2_model.bin": [
+						"models/models-cunet/noise2_model.bin",
+						"b45d5febeb56166b7aff055cb0fbb87647dae528968f97d838dfd7ce0b7117f4"
+					],
+					"models/models-cunet/noise2_model.param": [
+						"models/models-cunet/noise2_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise2_scale2.0x_model.bin": [
+						"models/models-cunet/noise2_scale2.0x_model.bin",
+						"5c836e6ae022636cdd5590fbb66dbca2a5fc20bbf8e628884c3612ef72d51858"
+					],
+					"models/models-cunet/noise2_scale2.0x_model.param": [
+						"models/models-cunet/noise2_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise3_model.bin": [
+						"models/models-cunet/noise3_model.bin",
+						"cd3d2440673d28d7a20aa6428a2a79e1c5e733f21de0a66785958f98d6994926"
+					],
+					"models/models-cunet/noise3_model.param": [
+						"models/models-cunet/noise3_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise3_scale2.0x_model.bin": [
+						"models/models-cunet/noise3_scale2.0x_model.bin",
+						"f42c18610fecb14a40f75cca9b9276a6889689d5937a4f75f0c2b21bde7e49ed"
+					],
+					"models/models-cunet/noise3_scale2.0x_model.param": [
+						"models/models-cunet/noise3_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/scale2.0x_model.bin": [
+						"models/models-cunet/scale2.0x_model.bin",
+						"d82ed30207fd07e1c16726a9ca838ce44e6e25a105b0278c7ca681516ee0e18e"
+					],
+					"models/models-cunet/scale2.0x_model.param": [
+						"models/models-cunet/scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.bin",
+						"e1d2c4d91be98e72c0d48d08626cbe7d879aa2b80f740133dcc0d860eabb4189"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.bin",
+						"536fd7070b023463d30bd105f675acf301760dce539f2fb974bd06906045514f"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.bin",
+						"435f9082425c4520d3586757411ac409b1d67e428ed37ec571feb06f823e245e"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.bin",
+						"3e783a9117d4564fbd0cc376375b29d7eb05bd2e457f748898e82eefb1ace2f1"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.bin",
+						"27d880903ff81390a3b4a900b67af3381c465279e34297546c9a58781855f7ef"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise0_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise0_scale2.0x_model.bin",
+						"fbfc8d57e4333748c9c6db2ec4d5454c98cd1c6aa53289f2989c3bdb4e84b673"
+					],
+					"models/models-upconv_7_photo/noise0_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise0_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise1_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise1_scale2.0x_model.bin",
+						"9f8ce2c4df1ed862a7441e3b49ad965b8e34aaa6d87c1cad52a1768210fdfee6"
+					],
+					"models/models-upconv_7_photo/noise1_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise1_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise2_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise2_scale2.0x_model.bin",
+						"432ca8f62ffc4873794a399ded70b17af23aa870b25e5ddba76f029b7ce14c2b"
+					],
+					"models/models-upconv_7_photo/noise2_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise2_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise3_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise3_scale2.0x_model.bin",
+						"a24379eb4e954005da1804223f428e67340e3f0037e4f7b9f568f0d0f20e9f20"
+					],
+					"models/models-upconv_7_photo/noise3_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise3_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/scale2.0x_model.bin",
+						"25a2bb25b29e43e63179aac216cd87690791243a436328506d4ef9fca88ee962"
+					],
+					"models/models-upconv_7_photo/scale2.0x_model.param": [
+						"models/models-upconv_7_photo/scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HolyWu/vs-waifu2x-ncnn-vulkan/releases/download/r1/waifu2x-ncnn-Vulkan-models.7z",
+				"files": {
+					"models/models-cunet/noise0_model.bin": [
+						"models/models-cunet/noise0_model.bin",
+						"b15c356a36bcbf6fb8c2f1404ca016fd917d4e45426bcf41f7a3867022fdd7b0"
+					],
+					"models/models-cunet/noise0_model.param": [
+						"models/models-cunet/noise0_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise0_scale2.0x_model.bin": [
+						"models/models-cunet/noise0_scale2.0x_model.bin",
+						"5329a9375c9cfb64a60a2903fd8ae6e2851d9b069556bf025dbab9d0216fb27c"
+					],
+					"models/models-cunet/noise0_scale2.0x_model.param": [
+						"models/models-cunet/noise0_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise1_model.bin": [
+						"models/models-cunet/noise1_model.bin",
+						"3407cb87c2503cbd69f8a6703b31bc4949a72080a3e1b1e536dba8bdbfad934f"
+					],
+					"models/models-cunet/noise1_model.param": [
+						"models/models-cunet/noise1_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise1_scale2.0x_model.bin": [
+						"models/models-cunet/noise1_scale2.0x_model.bin",
+						"862c0e40f3df956ff57bd4d168c85dea5d375b614077fdddd3ac8cfdb9a686da"
+					],
+					"models/models-cunet/noise1_scale2.0x_model.param": [
+						"models/models-cunet/noise1_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise2_model.bin": [
+						"models/models-cunet/noise2_model.bin",
+						"b45d5febeb56166b7aff055cb0fbb87647dae528968f97d838dfd7ce0b7117f4"
+					],
+					"models/models-cunet/noise2_model.param": [
+						"models/models-cunet/noise2_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise2_scale2.0x_model.bin": [
+						"models/models-cunet/noise2_scale2.0x_model.bin",
+						"5c836e6ae022636cdd5590fbb66dbca2a5fc20bbf8e628884c3612ef72d51858"
+					],
+					"models/models-cunet/noise2_scale2.0x_model.param": [
+						"models/models-cunet/noise2_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/noise3_model.bin": [
+						"models/models-cunet/noise3_model.bin",
+						"cd3d2440673d28d7a20aa6428a2a79e1c5e733f21de0a66785958f98d6994926"
+					],
+					"models/models-cunet/noise3_model.param": [
+						"models/models-cunet/noise3_model.param",
+						"8fda717f004e75f02e4eaf9901bd37301fa51b1f5cd80d53a466a274406595d3"
+					],
+					"models/models-cunet/noise3_scale2.0x_model.bin": [
+						"models/models-cunet/noise3_scale2.0x_model.bin",
+						"f42c18610fecb14a40f75cca9b9276a6889689d5937a4f75f0c2b21bde7e49ed"
+					],
+					"models/models-cunet/noise3_scale2.0x_model.param": [
+						"models/models-cunet/noise3_scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-cunet/scale2.0x_model.bin": [
+						"models/models-cunet/scale2.0x_model.bin",
+						"d82ed30207fd07e1c16726a9ca838ce44e6e25a105b0278c7ca681516ee0e18e"
+					],
+					"models/models-cunet/scale2.0x_model.param": [
+						"models/models-cunet/scale2.0x_model.param",
+						"9b06073e039ca93d5bd79f6bb42016cd98d5bdefa0e9761df6b22b844c39965f"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.bin",
+						"e1d2c4d91be98e72c0d48d08626cbe7d879aa2b80f740133dcc0d860eabb4189"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.bin",
+						"536fd7070b023463d30bd105f675acf301760dce539f2fb974bd06906045514f"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.bin",
+						"435f9082425c4520d3586757411ac409b1d67e428ed37ec571feb06f823e245e"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.bin",
+						"3e783a9117d4564fbd0cc376375b29d7eb05bd2e457f748898e82eefb1ace2f1"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.bin": [
+						"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.bin",
+						"27d880903ff81390a3b4a900b67af3381c465279e34297546c9a58781855f7ef"
+					],
+					"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.param": [
+						"models/models-upconv_7_anime_style_art_rgb/scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise0_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise0_scale2.0x_model.bin",
+						"fbfc8d57e4333748c9c6db2ec4d5454c98cd1c6aa53289f2989c3bdb4e84b673"
+					],
+					"models/models-upconv_7_photo/noise0_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise0_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise1_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise1_scale2.0x_model.bin",
+						"9f8ce2c4df1ed862a7441e3b49ad965b8e34aaa6d87c1cad52a1768210fdfee6"
+					],
+					"models/models-upconv_7_photo/noise1_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise1_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise2_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise2_scale2.0x_model.bin",
+						"432ca8f62ffc4873794a399ded70b17af23aa870b25e5ddba76f029b7ce14c2b"
+					],
+					"models/models-upconv_7_photo/noise2_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise2_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/noise3_scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/noise3_scale2.0x_model.bin",
+						"a24379eb4e954005da1804223f428e67340e3f0037e4f7b9f568f0d0f20e9f20"
+					],
+					"models/models-upconv_7_photo/noise3_scale2.0x_model.param": [
+						"models/models-upconv_7_photo/noise3_scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					],
+					"models/models-upconv_7_photo/scale2.0x_model.bin": [
+						"models/models-upconv_7_photo/scale2.0x_model.bin",
+						"25a2bb25b29e43e63179aac216cd87690791243a436328506d4ef9fca88ee962"
+					],
+					"models/models-upconv_7_photo/scale2.0x_model.param": [
+						"models/models-upconv_7_photo/scale2.0x_model.param",
+						"66da0db6342450b9c9c5dd1a05d20245bec4dca7878b8b57ca7bcfc5be1807c9"
+					]
+				}
+			}
+		}
+	]
+}

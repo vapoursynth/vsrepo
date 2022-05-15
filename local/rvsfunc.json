@@ -10,9 +10,9 @@
     "modulename": "rvsfunc",
     "wheelname": "rvsfunc",
     "dependencies": [
-        "descale",
+        "tegaf.asi.xe",
         "vsutil",
-        "znedi3"
+        "xxx.abc.znedi3"
     ],
     "releases": [
         {

@@ -967,7 +967,7 @@ elif args.operation in ('upgrade', 'upgrade-all'):
         inst = upgrade_all_packages(args.force)
     else:
         for name in args.package:
-            if installed_packages.get(name, "") == 'devel':
+            if installed_packages.get(name, '') == 'devel':
                 print(f'{name} is installed as development package, which vsrepo does not manage.')
                 res = (0, 0, 0)
             else:
@@ -979,7 +979,7 @@ elif args.operation in ('upgrade', 'upgrade-all'):
 elif args.operation == 'uninstall':
     uninst = (0, 0)
     for name in args.package:
-        if installed_packages.get(name, "") == 'devel':
+        if installed_packages.get(name, '') == 'devel':
             print(f'{name} is installed as development package, which vsrepo does not manage.')
             continue
         else:

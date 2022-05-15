@@ -1,0 +1,25 @@
+{
+	"name": "fpng",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "A fast PNG writer. Faster than imwri",
+	"doom9": "https://forum.doom9.org/showthread.php?t=184097",
+	"github": "https://github.com/Mikewando/vsfpng",
+	"identifier": "tools.mike.fpng",
+	"namespace": "fpng",
+	"releases": [
+		{
+			"version": "1.0",
+			"published": "2022-05-01T02:40:31Z",
+			"win64": {
+				"url": "https://github.com/Mikewando/vsfpng/releases/download/1.0/libfpng.dll",
+				"files": {
+					"libfpng.dll": [
+						"libfpng.dll",
+						"fb37f68e5599155a8d18368b7900f9cf29772b32957fed371e9f42cb076dafd3"
+					]
+				}
+			}
+		}
+	]
+}

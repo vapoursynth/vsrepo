@@ -8,6 +8,19 @@
 	"namespace": "placebo",
 	"releases": [
 		{
+			"version": "1.4.2",
+			"published": "2022-04-25T18:43:38Z",
+			"win64": {
+				"url": "https://github.com/Lypheo/vs-placebo/releases/download/1.4.2/libvs_placebo-1.4.2.zip",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"ca6882f9f960c53a9082adc39cfdf3e45f109748286c10063e7cf24591b4b8fe"
+					]
+				}
+			}
+		},
+		{
 			"version": "1.4.1",
 			"published": "2022-02-08T15:21:33Z",
 			"win64": {

@@ -3,6 +3,7 @@
 	"type": "VSPlugin",
 	"category": "Deinterlacing",
 	"description": "Edge directed interpolation filter",
+	"website": "https://github.com/vapoursynth/vs-eedi3-obsolete/blob/master/docs/eedi3.rst",
 	"github": "https://github.com/vapoursynth/vs-eedi3-obsolete",
 	"identifier": "com.vapoursynth.eedi3",
 	"namespace": "eedi3",

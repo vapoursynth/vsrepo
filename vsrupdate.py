@@ -352,9 +352,12 @@ def update_package(name: str) -> int:
                     for fn in latest_rel['script']['files']:
                         new_fn, digest = decompress_and_hash(temp_fn, fn[0], 'script')
                         new_rel_entry['script']['files'][fn] = [new_fn, digest]
-
                     assert isinstance(new_rel_entry, dict)
                     new_rels[new_rel_entry['version']] = new_rel_entry
+						
+                        new_rels[new_rel_entry['version']] = new_rel_entry
+                else:
+                    print(f'skipping git commit(s) - this and the last commit must be at least {time_limit} days apart')
 
             except Exception:
                 new_rel_entry.pop('script', None)

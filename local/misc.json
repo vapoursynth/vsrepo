@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"category": "Other",
 	"description": "Miscellaneous Filters is a random collection of filters that mostly are useful for Avisynth compatibility.",
-	"website": "http://www.vapoursynth.com/doc/plugins/misc.html",
+	"website": "https://github.com/vapoursynth/vs-miscfilters-obsolete/blob/master/docs/misc.rst",
 	"github": "https://github.com/vapoursynth/vs-miscfilters-obsolete",
 	"identifier": "com.vapoursynth.misc",
 	"namespace": "misc",

@@ -1,0 +1,37 @@
+{
+	"name": "nlm-ispc",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "Non-local means denoise filter implemented in ISPC. Drop-in replacement of the venerable KNLMeansCL, but without the OpenCL dependency (CPU only).",
+	"github": "https://github.com/AmusementClub/vs-nlm-ispc",
+	"identifier": "io.github.amusementclub.vs-nlm-ispc",
+	"namespace": "nlm_ispc",
+	"releases": [
+		{
+			"version": "v2",
+			"published": "2022-04-18T02:34:54Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-nlm-ispc/releases/download/v2/vs-nlm-ispc-windows-x64.v2.7z",
+				"files": {
+					"vsnlm_ispc.dll": [
+						"vsnlm_ispc.dll",
+						"2983cb86531cd157fbfc59bd265946063eb9bcaa7fd6eb36df56337c7fbcd6a4"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1",
+			"published": "2022-04-09T02:41:55Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-nlm-ispc/releases/download/v1/vs-nlm-ispc-windows-x64.v1.7z",
+				"files": {
+					"vsnlm_ispc.dll": [
+						"vsnlm_ispc.dll",
+						"96cdad04cbf4d7312d5d0ee36cd22b6af2a77b755987af8a905135c6c2a6f0da"
+					]
+				}
+			}
+		}
+	]
+}

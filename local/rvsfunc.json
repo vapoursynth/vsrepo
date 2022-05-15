@@ -1,7 +1,7 @@
 {
     "name": "rvsfunc",
     "type": "PyWheel",
-    "category": "",
+    "category": "Script",
     "description": "Riven Skaye's minimaliastic VapourSynth functions.",
     "doom9": "",
     "website": "https://rvsfunc.tae.moe",

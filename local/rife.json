@@ -15,6 +15,19 @@
 	],
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2022-04-05T12:06:59Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan/releases/download/r3/RIFE-r3-win64.7z",
+				"files": {
+					"RIFE.dll": [
+						"RIFE.dll",
+						"46c676e08e06ea7095c56df5d3a6dfdd80bac68065fb51e7d7e2b154c2fe976f"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2022-01-30T16:47:54Z",
 			"win64": {

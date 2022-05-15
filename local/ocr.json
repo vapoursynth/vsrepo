@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"category": "Other",
 	"description": "Performs optical character recognition on video frames. Tesseract language data files are required.",
-	"website": "http://www.vapoursynth.com/doc/plugins/ocr.html",
+	"website": "https://github.com/vapoursynth/vs-ocr/blob/master/docs/ocr.rst",
 	"github": "https://github.com/vapoursynth/vs-ocr",
 	"identifier": "biz.srsfckn.ocr",
 	"namespace": "ocr",

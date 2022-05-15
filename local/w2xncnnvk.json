@@ -1,0 +1,41 @@
+{
+	"name": "Waifu2x ncnn Vulkan",
+	"type": "VSPlugin",
+	"category": "Resizing and Format Conversion",
+	"description": "ncnn implementation of waifu2x converter, based on https://github.com/nihui/waifu2x-ncnn-vulkan",
+	"github": "https://github.com/HolyWu/vs-waifu2x-ncnn-vulkan",
+	"identifier": "com.holywu.waifu2x-ncnn-Vulkan",
+	"namespace": "w2xncnnvk",
+	"device": ["vulkan"],
+	"dependencies": [
+		"com.holywu.waifu2x-ncnn-Vulkan.models"
+	],
+	"releases": [
+		{
+			"version": "r2",
+			"published": "2022-05-01T14:17:49Z",
+			"win64": {
+				"url": "https://github.com/HolyWu/vs-waifu2x-ncnn-vulkan/releases/download/r2/waifu2x-ncnn-Vulkan-r2-win64.7z",
+				"files": {
+					"waifu2x-ncnn-Vulkan.dll": [
+						"waifu2x-ncnn-Vulkan.dll",
+						"935bbf0d23f370ba8189281ee7f162a795204df884844b4cea65f94e9d8bf38d"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"published": "2022-04-30T18:01:11Z",
+			"win64": {
+				"url": "https://github.com/HolyWu/vs-waifu2x-ncnn-vulkan/releases/download/r1/waifu2x-ncnn-Vulkan-r1-win64.7z",
+				"files": {
+					"waifu2x-ncnn-Vulkan.dll": [
+						"waifu2x-ncnn-Vulkan.dll",
+						"8600b573f001358ade81b5a95a4a557eb3ae6a49b7016ccff7721afd12ecabe8"
+					]
+				}
+			}
+		}
+	]
+}

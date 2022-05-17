@@ -1,0 +1,34 @@
+{
+	"name": "AvsReader",
+	"type": "VSPlugin",
+	"category": "Source/Output",
+	"description": "AviSynth Script Reader plugin for VapourSynth",
+	"doom9": "https://forum.doom9.org/showthread.php?t=165957",
+	"github": "https://github.com/chikuzen/VS_AvsReader",
+	"identifier": "chikuzen.does.not.have.his.own.domain.avsr",
+	"namespace": "avsr",
+	"releases": [
+		{
+			"version": "1.0.0",
+			"published": "2016-05-10T11:46:55Z",
+			"win32": {
+				"url": "https://github.com/chikuzen/VS_AvsReader/releases/download/1.0.0/vsavsreader-1.0.0.zip",
+				"files": {
+					"vsavsreader.dll": [
+						"vsavsreader.dll",
+						"8e45158316385c9e0aa3d404e9bb0bc80a4d99a5dce2c4a04d2211efdeb3ff41"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/chikuzen/VS_AvsReader/releases/download/1.0.0/vsavsreader-1.0.0.zip",
+				"files": {
+					"vsavsreader.dll": [
+						"x64/vsavsreader.dll",
+						"46456fdda88179d7c4e0039e9178caa171eff505214863079956764bebab344c"
+					]
+				}
+			}
+		}
+	]
+}

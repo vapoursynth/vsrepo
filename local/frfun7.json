@@ -1,0 +1,33 @@
+{
+	"name": "Frfun7",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "Frfun7 is a spatial fractal denoising filter",
+	"github": "https://github.com/dubhater/vapoursynth-frfun7",
+	"identifier": "com.nodame.frfun7",
+	"namespace": "frfun7",
+	"releases": [
+		{
+			"version": "v1",
+			"published": "2022-05-17T20:21:40Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-frfun7/releases/download/v1/vapoursynth-frfun7-v1-win32.7z",
+				"files": {
+					"libfrfun7.dll": [
+						"libfrfun7.dll",
+						"d665ae8d8a592ac0824e890a9639c1daf18fbcfe410ec2b7908305e63c01a47a"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-frfun7/releases/download/v1/vapoursynth-frfun7-v1-win64.7z",
+				"files": {
+					"libfrfun7.dll": [
+						"libfrfun7.dll",
+						"0f1b810cd3889af29cf31f1e73ec971a0f63ffbb681be2a57764cb60c4c7eaf9"
+					]
+				}
+			}
+		}
+	]
+}

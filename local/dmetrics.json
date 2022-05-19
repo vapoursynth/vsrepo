@@ -6,6 +6,7 @@
 	"github": "https://github.com/vapoursynth/dmetrics",
 	"identifier": "com.vapoursynth.dmetrics",
 	"namespace": "dmetrics",
+	"api": 4,
 	"releases": [
 		{
 			"version": "R1",

@@ -1,0 +1,24 @@
+{
+	"name": "dmetrics",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Attaches the match metrics calculated by Telecide (decomb package) to frames as properties",
+	"github": "https://github.com/vapoursynth/dmetrics",
+	"identifier": "com.vapoursynth.dmetrics",
+	"namespace": "dmetrics",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2022-05-18T19:35:13Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/dmetrics/releases/download/R1/DMetrics-R1.7z",
+				"files": {
+					"DMetrics.dll": [
+						"DMetrics.dll",
+						"e05f729ac66274b74c394f98eb4a4bfcece1245d9bd336c90b5005afe9b3a6b5"
+					]
+				}
+			}
+		}
+	]
+}

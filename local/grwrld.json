@@ -1,0 +1,77 @@
+{
+	"name": "Grayworld",
+	"type": "VSPlugin",
+	"category": "Color/Levels",
+	"description": "A color constancy filter that applies color correction based on the grayworld assumption. This is a port of the FFmpeg filter grayworld.",
+	"github": "https://github.com/Asd-g/AviSynthPlus-grayworld",
+	"identifier": "com.vapoursynth.grayworld",
+	"namespace": "grwrld",
+	"releases": [
+		{
+			"version": "1.0.2",
+			"published": "2022-04-10T21:40:46Z",
+			"win32": {
+				"url": "https://github.com/Asd-g/AviSynthPlus-grayworld/releases/download/1.0.2/grayworld-1.0.2.7z",
+				"files": {
+					"grayworld.dll": [
+						"Release/grayworld.dll",
+						"02a545841777ad3450cf86846083c111ba40c0be8fded4d26bcdb4991f901999"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Asd-g/AviSynthPlus-grayworld/releases/download/1.0.2/grayworld-1.0.2.7z",
+				"files": {
+					"grayworld.dll": [
+						"x64/Release/grayworld.dll",
+						"432228c0cd974be9386a72bb79cf08c38b758c88dd48320148514d89e955125e"
+					]
+				}
+			}
+		},
+		{
+			"version": "1.0.1",
+			"published": "2022-03-30T05:58:26Z",
+			"win32": {
+				"url": "https://github.com/Asd-g/AviSynthPlus-grayworld/releases/download/1.0.1/grayworld-1.0.1.7z",
+				"files": {
+					"grayworld.dll": [
+						"Release/grayworld.dll",
+						"00ce47bcf909e70d9d87753593818e9273b13cbbca1fc5ad3cba82337b93a6c8"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Asd-g/AviSynthPlus-grayworld/releases/download/1.0.1/grayworld-1.0.1.7z",
+				"files": {
+					"grayworld.dll": [
+						"x64/Release/grayworld.dll",
+						"938363827525d016ad823cfdd3e1e744e46861ae432b83aaf8eaabe83cbee519"
+					]
+				}
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2022-03-29T07:19:04Z",
+			"win32": {
+				"url": "https://github.com/Asd-g/AviSynthPlus-grayworld/releases/download/1.0.0/grayworld-1.0.0.7z",
+				"files": {
+					"grayworld.dll": [
+						"Release/grayworld.dll",
+						"280737c9faeccb7b503ddb4bdaa1dd4d62ef88583427545109a982364bb5454c"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Asd-g/AviSynthPlus-grayworld/releases/download/1.0.0/grayworld-1.0.0.7z",
+				"files": {
+					"grayworld.dll": [
+						"x64/Release/grayworld.dll",
+						"b2248d96dccf33a3584c8d6806ce6e28ed782812c6c1e20a2d02478824b0afb7"
+					]
+				}
+			}
+		}
+	]
+}

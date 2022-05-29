@@ -9,6 +9,28 @@
 	"github": "https://github.com/AkarinVS/L-SMASH-Works",
 	"releases": [
 		{
+			"version": "vA.3i",
+			"published": "2022-01-28T01:12:13Z",
+			"win32": {
+				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.3i/release-i686-cachedir-cwd.zip",
+				"files": {
+					"libvslsmashsource.dll": [
+						"libvslsmashsource.dll",
+						"10c98b320931f780ad548a12bfb5ac72ce3a3245dd115fcf49adf5cc0be3df9f"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/AkarinVS/L-SMASH-Works/releases/download/vA.3i/release-x86_64-cachedir-cwd.zip",
+				"files": {
+					"libvslsmashsource.dll": [
+						"libvslsmashsource.dll",
+						"88fc52983f82a35890aab3395791cade8f876df2108289c91ef4c1cbbb12b27b"
+					]
+				}
+			}
+		},
+		{
 			"version": "vA.3h",
 			"published": "2021-11-29T10:17:17Z",
 			"win32": {

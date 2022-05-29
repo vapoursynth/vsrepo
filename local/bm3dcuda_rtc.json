@@ -15,6 +15,19 @@
 	],
 	"releases": [
 		{
+			"version": "R2.7",
+			"published": "2022-04-10T09:20:57Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.7/VapourSynth-BM3DCUDA_RTC-r2.7.7z",
+				"files": {
+					"bm3dcuda_rtc.dll": [
+						"VapourSynth-BM3DCUDA_RTC-r2.7/bm3dcuda_rtc.dll",
+						"3d708e167f022903da4d64c183424cda3ebbeb54b7374964d6fca4c74f8a76a1"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2.6",
 			"published": "2022-01-16T05:46:44Z",
 			"win64": {

@@ -7,7 +7,8 @@
 	"identifier": "com.holywu.rife.models",
 	"namespace": "rife_models",
 	"ignore": [
-		"r2"
+		"r2",
+		"r4"
 	],
 	"releases": [
 		{

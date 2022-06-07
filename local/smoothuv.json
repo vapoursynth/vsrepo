@@ -10,6 +10,28 @@
 	"github": "https://github.com/dubhater/vapoursynth-smoothuv",
 	"releases": [
 		{
+			"version": "v3",
+			"published": "2022-06-01T16:40:59Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v3/vapoursynth-smoothuv-v3-win32.7z",
+				"files": {
+					"libsmoothuv.dll": [
+						"libsmoothuv.dll",
+						"5442e557a9322313860c0e307c686669617968535085147a16cd102ff8a1a48d"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v3/vapoursynth-smoothuv-v3-win64.7z",
+				"files": {
+					"libsmoothuv.dll": [
+						"libsmoothuv.dll",
+						"865f07c2a114f1e8083fdad05d87b98bbe75f26a941886795f1299f77a3b4302"
+					]
+				}
+			}
+		},
+		{
 			"version": "v2",
 			"published": "2018-07-08T19:38:32Z",
 			"win32": {

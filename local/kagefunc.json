@@ -17,8 +17,7 @@
 		"com.vapoursynth.bm3d",
 		"com.Khanattila.KNLMeansCL",
 		"com.holywu.tcanny",
-		"com.holywu.addgrain",
-		"vsutil"
+		"com.holywu.addgrain"
 	],
 	"releases": [
 		{

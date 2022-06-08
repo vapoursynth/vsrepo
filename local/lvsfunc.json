@@ -14,8 +14,7 @@
 		"havsfunc",
 		"kagefunc",
 		"nnedi3_rpow2",
-		"vstaambk",
-		"vsutil"
+		"vstaambk"
 	],
 	"releases": [
 		{

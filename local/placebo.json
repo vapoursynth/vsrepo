@@ -6,6 +6,9 @@
 	"category": "Other",
 	"identifier": "com.vs.placebo",
 	"namespace": "placebo",
+	"dependencies": [
+		"org.dovi.dovi"
+	],
 	"releases": [
 		{
 			"version": "1.4.2",

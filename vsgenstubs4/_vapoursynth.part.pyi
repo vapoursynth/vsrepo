@@ -82,7 +82,7 @@ import inspect
 import types
 import typing
 
-T = typing.TypeVar("T")
+T = typing.TypeVar('T')
 SingleAndSequence = typing.Union[T, typing.Sequence[T]]
 
 

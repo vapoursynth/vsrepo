@@ -448,6 +448,7 @@ class FilterMode(enum.IntEnum):
     fmUnordered: FilterMode
     fmFrameState: FilterMode
 
+
 fmParallel: FilterMode
 fmParallelRequests: FilterMode
 fmUnordered: FilterMode
@@ -481,7 +482,14 @@ class Environment:
     def use(self) -> typing.ContextManager[None]: ...
 
     def __enter__(self) -> Environment: ...
-    def __exit__(self, ty: typing.Optional[typing.Type[BaseException]], tv: typing.Optional[BaseException], tb: typing.Optional[types.TracebackType]) -> None: ...
+
+    def __exit__(
+        self,
+        ty: typing.Optional[typing.Type[BaseException]],
+        tv: typing.Optional[BaseException],
+        tb: typing.Optional[types.TracebackType]
+    ) -> None: ...
+
 
 class EnvironmentPolicyAPI:
     def wrap_environment(self, environment_data: EnvironmentData) -> Environment: ...
@@ -489,6 +497,7 @@ class EnvironmentPolicyAPI:
     def set_logger(self, env: Environment, logger: typing.Callable[[int, str], None]) -> None: ...
     def destroy_environment(self, env: EnvironmentData) -> None: ...
     def unregister_policy(self) -> None: ...
+
 
 class EnvironmentPolicy:
     def on_policy_registered(self, special_api: EnvironmentPolicyAPI) -> None: ...
@@ -501,9 +510,13 @@ class EnvironmentPolicy:
 def register_policy(policy: EnvironmentPolicy) -> None: ...
 def has_policy() -> bool: ...
 
+
 def get_current_environment() -> Environment: ...
 
-def construct_signature(signature: str, return_signature: str, injected: typing.Optional[str] = None) -> inspect.Signature: ...
+
+def construct_signature(
+    signature: str, return_signature: str, injected: typing.Optional[str] = None
+) -> inspect.Signature: ...
 
 
 class VideoOutputTuple(typing.NamedTuple):
@@ -512,7 +525,9 @@ class VideoOutputTuple(typing.NamedTuple):
     alt_output: int
 
 
-class Error(Exception): ...
+class Error(Exception):
+    ...
+
 
 def set_message_handler(handler_func: typing.Callable[[int, str], None]) -> None: ...
 def clear_output(index: int = 0) -> None: ...
@@ -535,13 +550,15 @@ class VideoFormat:
     def __int__(self) -> int: ...
 
     def _as_dict(self) -> typing.Dict[str, typing.Any]: ...
-    def replace(self, *,
-                color_family: typing.Optional[ColorFamily] = None,
-                sample_type: typing.Optional[SampleType] = None,
-                bits_per_sample: typing.Optional[int] = None,
-                subsampling_w: typing.Optional[int] = None,
-                subsampling_h: typing.Optional[int] = None
-                ) -> VideoFormat: ...
+
+    def replace(
+        self, *,
+        color_family: typing.Optional[ColorFamily] = None,
+        sample_type: typing.Optional[SampleType] = None,
+        bits_per_sample: typing.Optional[int] = None,
+        subsampling_w: typing.Optional[int] = None,
+        subsampling_h: typing.Optional[int] = None
+    ) -> VideoFormat: ...
 
 
 _FramePropsValue = typing.Union[
@@ -554,6 +571,7 @@ _FramePropsValue = typing.Union[
     SingleAndSequence[AudioFrame],
     SingleAndSequence[typing.Callable[..., typing.Any]]
 ]
+
 
 class FrameProps(typing.MutableMapping[str, _FramePropsValue]):
 
@@ -593,10 +611,17 @@ class _RawFrame(typing.Generic[RawFrameType]):
     def copy(self) -> RawFrameType: ...
 
     def __enter__(self) -> RawFrameType: ...
-    def __exit__(self, ty: typing.Optional[typing.Type[BaseException]], tv: typing.Optional[BaseException], tb: typing.Optional[types.TracebackType]) -> None: ...
+
+    def __exit__(
+        self,
+        ty: typing.Optional[typing.Type[BaseException]],
+        tv: typing.Optional[BaseException],
+        tb: typing.Optional[types.TracebackType]
+    ) -> None: ...
 
     def __getitem__(self, index: int) -> memoryview: ...
     def __len__(self) -> int: ...
+
 
 class VideoFrame(_RawFrame[VideoFrame]):
     height: int
@@ -647,11 +672,14 @@ class Function:
 
 RawNodeType = typing.TypeVar('RawNodeType', VideoNode, AudioNode)
 
+
 class _RawNode(typing.Generic[RawNodeType], typing.Generic[RawFrameType]):
     num_frames: int
 
     def get_frame_async(self, n: int) -> _Future[RawFrameType]: ...
-    def frames(self, prefetch: typing.Optional[int] = None, backlog: typing.Optional[int] = None, close: bool = False) -> typing.Iterator[RawFrameType]: ...
+    def frames(
+        self, prefetch: typing.Optional[int] = None, backlog: typing.Optional[int] = None, close: bool = False
+    ) -> typing.Iterator[RawFrameType]: ...
 
     def get_frame(self, n: int) -> RawFrameType: ...
 
@@ -673,6 +701,7 @@ class _RawNode(typing.Generic[RawNodeType], typing.Generic[RawFrameType]):
     def __getitem__(self, other: typing.Union[int, slice]) -> RawNodeType: ...
     def __len__(self) -> int: ...
 
+
 class VideoNode(_RawNode[VideoNode, VideoFrame]):
 #include <plugins_vnode/bound>
 
@@ -686,7 +715,12 @@ class VideoNode(_RawNode[VideoNode, VideoFrame]):
     width: int
 
     def set_output(self, index: int = 0, alpha: typing.Optional[VideoNode] = None, alt_output: int = 0) -> None: ...
-    def output(self, fileobj: typing.BinaryIO, y4m: bool = False, progress_update: typing.Optional[typing.Callable[[int, int], None]] = None, prefetch: int = 0, backlog: int = -1) -> None: ...
+    def output(
+        self,
+        fileobj: typing.BinaryIO, y4m: bool = False,
+        progress_update: typing.Optional[typing.Callable[[int, int], None]] = None,
+        prefetch: int = 0, backlog: int = -1
+    ) -> None: ...
 
 
 class AudioNode(_RawNode[AudioNode, AudioFrame]):
@@ -730,10 +764,21 @@ class Core:
 
     def plugins(self) -> typing.Iterator[Plugin]: ...
 
-    def query_video_format(self, color_family: ColorFamily, sample_type: SampleType, bits_per_sample: int, subsampling_w: int = 0, subsampling_h: int = 0) -> VideoFormat: ...
+    def query_video_format(
+        self,
+        color_family: ColorFamily,
+        sample_type: SampleType,
+        bits_per_sample: int,
+        subsampling_w: int = 0,
+        subsampling_h: int = 0
+    ) -> VideoFormat: ...
+
     def get_video_format(self, id: typing.Union[VideoFormat, int, PresetFormat]) -> VideoFormat: ...
     def log_message(self, message_type: MessageType, message: str) -> None: ...
-    def add_log_handler(self, handler_func: typing.Optional[typing.Callable[[MessageType, str], None]]) -> LogHandle: ...
+    def add_log_handler(
+        self, handler_func: typing.Optional[typing.Callable[[MessageType, str], None]]
+    ) -> LogHandle: ...
+
     def remove_log_handler(self, handle: LogHandle) -> None: ...
 
     def version(self) -> str: ...

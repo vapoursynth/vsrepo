@@ -440,6 +440,18 @@ PRIMARIES_ST432_1: ColorPrimaries
 PRIMARIES_EBU3213_E: ColorPrimaries
 
 
+class FilterMode(enum.IntEnum):
+    fmParallel: 'FilterMode'
+    fmParallelRequests: 'FilterMode'
+    fmUnordered: 'FilterMode'
+    fmFrameState: 'FilterMode'
+
+fmParallel: FilterMode
+fmParallelRequests: FilterMode
+fmUnordered: FilterMode
+fmFrameState: FilterMode
+
+
 ###
 # VapourSynth Environment SubSystem
 class EnvironmentData:

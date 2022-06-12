@@ -562,10 +562,10 @@ _FramePropsValue = typing.Union[
     SingleAndSequence[int],
     SingleAndSequence[float],
     SingleAndSequence[str],
-    SingleAndSequence[VideoNode],
-    SingleAndSequence[VideoFrame],
-    SingleAndSequence[AudioNode],
-    SingleAndSequence[AudioFrame],
+    SingleAndSequence['VideoNode'],
+    SingleAndSequence['VideoFrame'],
+    SingleAndSequence['AudioNode'],
+    SingleAndSequence['AudioFrame'],
     SingleAndSequence[typing.Callable[..., typing.Any]]
 ]
 
@@ -586,7 +586,7 @@ class FrameProps(typing.MutableMapping[str, _FramePropsValue]):
     def __len__(self) -> int: ...
 
 
-RawFrameType = typing.TypeVar('RawFrameType', VideoFrame, AudioFrame)
+RawFrameType = typing.TypeVar('RawFrameType', 'VideoFrame', 'AudioFrame')
 
 
 class _RawFrame(typing.Generic[RawFrameType]):
@@ -617,7 +617,7 @@ class _RawFrame(typing.Generic[RawFrameType]):
     def __len__(self) -> int: ...
 
 
-class VideoFrame(_RawFrame[VideoFrame]):
+class VideoFrame(_RawFrame['VideoFrame']):
     height: int
     width: int
     format: VideoFormat
@@ -625,7 +625,7 @@ class VideoFrame(_RawFrame[VideoFrame]):
     def _writelines(self, write: typing.Callable[[memoryview], None]) -> None: ...
 
 
-class AudioFrame(_RawFrame[AudioFrame]):
+class AudioFrame(_RawFrame['AudioFrame']):
     sample_type: SampleType
     bits_per_sample: int
     bytes_per_sample: int
@@ -664,7 +664,7 @@ class Function:
 
 #include <plugins/implementations>
 
-RawNodeType = typing.TypeVar('RawNodeType', VideoNode, AudioNode)
+RawNodeType = typing.TypeVar('RawNodeType', 'VideoNode', 'AudioNode')
 
 
 class _RawNode(typing.Generic[RawNodeType], typing.Generic[RawFrameType]):
@@ -696,7 +696,7 @@ class _RawNode(typing.Generic[RawNodeType], typing.Generic[RawFrameType]):
     def __len__(self) -> int: ...
 
 
-class VideoNode(_RawNode[VideoNode, VideoFrame]):
+class VideoNode(_RawNode['VideoNode', VideoFrame]):
 #include <plugins_vnode/bound>
 
     format: VideoFormat | None
@@ -717,7 +717,7 @@ class VideoNode(_RawNode[VideoNode, VideoFrame]):
     ) -> None: ...
 
 
-class AudioNode(_RawNode[AudioNode, AudioFrame]):
+class AudioNode(_RawNode['AudioNode', AudioFrame]):
 #include <plugins_anode/bound>
 
     sample_type: SampleType

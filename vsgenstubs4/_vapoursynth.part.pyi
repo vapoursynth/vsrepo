@@ -603,6 +603,7 @@ class VideoFrame(_RawFrame[VideoFrame]):
     width: int
     format: VideoFormat
 
+    def _writelines(self, write: typing.Callable[[memoryview], None]) -> None: ...
 
 
 class AudioFrame(_RawFrame[AudioFrame]):

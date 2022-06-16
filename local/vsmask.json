@@ -9,6 +9,14 @@
 	"wheelname": "vsmask",
 	"releases": [
 		{
+			"version": "0.4.0",
+			"published": "2022-06-08T17:47:25.294390Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/72/72/d080c6754fb62b230505536d74d245281f8cfbc24d410f9f82f62c877838/vsmask-0.4.0-py3-none-any.whl",
+				"hash": "612bb9e3959075c1e7ef34426fb330107c315c5d5f71c6dafc83437ddea40122"
+			}
+		},
+		{
 			"version": "0.3.0",
 			"published": "2022-01-03T20:03:50.359900Z",
 			"wheel": {

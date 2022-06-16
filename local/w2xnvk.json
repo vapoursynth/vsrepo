@@ -6,11 +6,39 @@
 	"category": "Resizing and Format Conversion",
 	"identifier": "net.nlzy.vsw2xnvk",
 	"namespace": "w2xnvk",
-	"device": ["vulkan"],
+	"device": [
+		"vulkan"
+	],
 	"dependencies": [
 		"net.nlzy.vsw2xnvk.models"
 	],
 	"releases": [
+		{
+			"version": "r5",
+			"published": "2022-06-13T06:00:24Z",
+			"win64": {
+				"url": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan/releases/download/r5/vsw2xnvk-r5-win64.7z",
+				"files": {
+					"vsw2xnvk.dll": [
+						"vsw2xnvk.dll",
+						"eb6aa1717aed59e92a413294a3cf8f606b064bf2f728ed4394b130ad15caea5e"
+					]
+				}
+			}
+		},
+		{
+			"version": "r4.1",
+			"published": "2022-06-10T23:41:25Z",
+			"win64": {
+				"url": "https://github.com/Nlzy/vapoursynth-waifu2x-ncnn-vulkan/releases/download/r4.1/vsw2xnvk-r4.1-win64.7z",
+				"files": {
+					"vsw2xnvk.dll": [
+						"vsw2xnvk.dll",
+						"1949e8dc24696bf88ef247ece86aa8219eb74af09f3f2d4a879a600b1f82aca3"
+					]
+				}
+			}
+		},
 		{
 			"version": "r4",
 			"published": "2021-06-11T04:12:17Z",

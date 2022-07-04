@@ -1,0 +1,24 @@
+{
+	"name": "Checkmate",
+	"type": "VSPlugin",
+	"category": "Dot Crawl and Rainbows",
+	"description": "Spatial and temporal dot crawl reducer. Checkmate is most effective in static or low motion scenes.",
+	"github": "https://github.com/dnjulek/vapoursynth-checkmate",
+	"identifier": "com.julek.checkmate",
+	"namespace": "checkmate",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2022-06-29T05:30:19Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-checkmate/releases/download/r1/Checkmate-r1-win64.7z",
+				"files": {
+					"checkmate.dll": [
+						"checkmate.dll",
+						"b3bad85c1f5a72f272128500059f56759d7558f240922079f66beb8247e3e609"
+					]
+				}
+			}
+		}
+	]
+}

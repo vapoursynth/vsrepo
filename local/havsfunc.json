@@ -39,6 +39,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:ee55cfa",
+			"published": "2022-06-19T04:15:16Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/havsfunc/zipball/ee55cfaea1a704c33fdfc33f2a19f76cc7af6716",
+				"files": {
+					"havsfunc.py": [
+						"HomeOfVapourSynthEvolution-havsfunc-ee55cfa/havsfunc.py",
+						"47628a0835b5ad53871cae297a3ed5070f056a098e40fffed7e741c7a1f4a66a"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:6dfefd8",
 			"published": "2022-05-14T09:17:50Z",
 			"script": {

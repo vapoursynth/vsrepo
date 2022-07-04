@@ -8,6 +8,28 @@
 	"namespace": "frfun7",
 	"releases": [
 		{
+			"version": "v2",
+			"published": "2022-07-01T21:05:24Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-frfun7/releases/download/v2/vapoursynth-frfun7-v2-win32.7z",
+				"files": {
+					"libfrfun7.dll": [
+						"libfrfun7.dll",
+						"2dca68d2a513abb28951a4a41699aae276eb2db40f66780b557a67d04e2ba432"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-frfun7/releases/download/v2/vapoursynth-frfun7-v2-win64.7z",
+				"files": {
+					"libfrfun7.dll": [
+						"libfrfun7.dll",
+						"3076d933f44067608880a3bc3561584944e51893fed8b5073a2019933609ae22"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1",
 			"published": "2022-05-17T20:21:40Z",
 			"win32": {

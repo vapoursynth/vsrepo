@@ -1,0 +1,24 @@
+{
+	"name": "MTCombMask",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Produces a mask showing areas that are combed",
+	"github": "https://github.com/dnjulek/vapoursynth-mtcombmask",
+	"identifier": "com.julek.mtcombmask",
+	"namespace": "mtcm",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2022-07-04T02:41:33Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-mtcombmask/releases/download/r1/MTCombMask-r1-win64.7z",
+				"files": {
+					"MTCombMask.dll": [
+						"MTCombMask.dll",
+						"28b192fec7380f360ef689c84ca84b81550d139dbc45c08777308071b0543324"
+					]
+				}
+			}
+		}
+	]
+}

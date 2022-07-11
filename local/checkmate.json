@@ -8,6 +8,19 @@
 	"namespace": "checkmate",
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2022-07-10T23:16:31Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-checkmate/releases/download/r2/Checkmate-r2-win64.7z",
+				"files": {
+					"checkmate.dll": [
+						"checkmate.dll",
+						"aadf17d7556acbace0f75a069e42dd1ef88274de0111298fa9986e0830bc14e7"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2022-06-29T05:30:19Z",
 			"win64": {

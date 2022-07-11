@@ -8,7 +8,8 @@
 	"namespace": "rsnv_models",
 	"ignore": [
 		"r2",
-		"r2.1"
+		"r2.1",
+		"r3"
 	],
 	"releases": [
 		{

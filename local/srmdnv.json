@@ -6,11 +6,26 @@
 	"github": "https://github.com/Kiyamou/VapourSynth-SRMD-ncnn-Vulkan",
 	"identifier": "com.vapoursynth.srmdnv",
 	"namespace": "srmdnv",
-	"device": ["vulkan"],
+	"device": [
+		"vulkan"
+	],
 	"dependencies": [
 		"com.vapoursynth.srmdnv.models"
 	],
 	"releases": [
+		{
+			"version": "r3",
+			"published": "2022-07-10T15:49:41Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-SRMD-ncnn-Vulkan/releases/download/r3/srmdnv-r3.7z",
+				"files": {
+					"srmdnv.dll": [
+						"srmdnv.dll",
+						"ca37163993d8f71aa1baecd03937dc51e2b4f78d2fbc85df12ce69c10c196b3a"
+					]
+				}
+			}
+		},
 		{
 			"version": "r2",
 			"published": "2020-07-06T14:48:50Z",

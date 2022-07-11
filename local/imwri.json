@@ -10,6 +10,28 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "R2",
+			"published": "2022-06-27T09:42:10Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/vs-imwri/releases/download/R2/imwri-r2.7z",
+				"files": {
+					"libimwri.dll": [
+						"win32/libimwri.dll",
+						"d30f150fcb5cff6396aa3a70724f61ec66b51601ec54c19fb2c5bbb3d9f94aac"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/vs-imwri/releases/download/R2/imwri-r2.7z",
+				"files": {
+					"libimwri.dll": [
+						"win64/libimwri.dll",
+						"8970a12f7497c04d99c053f9bd2b7c1e28143fa407ccfd180ac6a1c728ea7c40"
+					]
+				}
+			}
+		},
+		{
 			"version": "R1",
 			"published": "2021-09-25T15:17:22Z",
 			"win32": {

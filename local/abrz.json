@@ -1,0 +1,24 @@
+{
+	"name": "AdaptiveBinarize",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Adaptive Binarize based on OpenCV's Adaptive Thresholding",
+	"github": "https://github.com/dnjulek/vapoursynth-adaptivebinarize",
+	"identifier": "com.julek.abrz",
+	"namespace": "abrz",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2022-07-14T03:06:51Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-adaptivebinarize/releases/download/r1/AdaptiveBinarize-r1-win64.7z",
+				"files": {
+					"AdaptiveBinarize.dll": [
+						"AdaptiveBinarize.dll",
+						"05bcd9ed596f07ba5239541fde93a9acacc57439af9477a8f73f86898fa069aa"
+					]
+				}
+			}
+		}
+	]
+}

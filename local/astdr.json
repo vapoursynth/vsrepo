@@ -21,6 +21,19 @@
 	],
 	"releases": [
 		{
+			"version": "v4",
+			"published": "2022-07-14T16:32:41Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-astdr/zipball/v4",
+				"files": {
+					"ASTDR.py": [
+						"dubhater-vapoursynth-astdr-fde2c98/ASTDR.py",
+						"2c22c71b21c25557f6aba2739c584388d8c1d6a004a3c367a71212db14418694"
+					]
+				}
+			}
+		},
+		{
 			"version": "v3",
 			"published": "2020-07-30T11:49:39Z",
 			"script": {

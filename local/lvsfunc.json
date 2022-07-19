@@ -18,6 +18,14 @@
 	],
 	"releases": [
 		{
+			"version": "0.4.3",
+			"published": "2022-07-11T07:45:01.581534Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/a6/f6/e64fc1abdcf366e520d916ec5dd59f43afc5890c555cd37c0856259183aa/lvsfunc-0.4.3-py3-none-any.whl",
+				"hash": "0f30e35598a255c2d5c43f11a8175cafc1e24708dfb1bf11043dccaa6d1fea63"
+			}
+		},
+		{
 			"version": "0.4.2",
 			"published": "2022-05-07T06:41:16.432187Z",
 			"wheel": {

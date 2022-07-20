@@ -1,0 +1,24 @@
+{
+	"name": "EqualizeHist",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Histogram Equalization",
+	"github": "https://github.com/dnjulek/vapoursynth-equalizehist",
+	"identifier": "com.julek.ehist",
+	"namespace": "ehist",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2022-07-19T16:36:24Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-equalizehist/releases/download/r1/EqualizeHist-r1.zip",
+				"files": {
+					"EqualizeHist.dll": [
+						"EqualizeHist.dll",
+						"f1b888305f20ae9a6a86ff940be4262ff3783a268587af496acbfb1515c4c3ce"
+					]
+				}
+			}
+		}
+	]
+}

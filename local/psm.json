@@ -1,0 +1,24 @@
+{
+	"name": "PlaneStatsMod",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "PlaneStats with threshold",
+	"github": "https://github.com/dnjulek/vapoursynth-planestatsmod",
+	"identifier": "com.julek.psm",
+	"namespace": "psm",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2022-07-21T01:31:37Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-planestatsmod/releases/download/r1/PlaneStatsMod-r1.7z",
+				"files": {
+					"PlaneStatsMod.dll": [
+						"PlaneStatsMod.dll",
+						"b7defa42f905f28a05d4885af9cd7098d133b91d23d2886b5b184614953998bc"
+					]
+				}
+			}
+		}
+	]
+}

@@ -8,6 +8,19 @@
 	"namespace": "ehist",
 	"releases": [
 		{
+			"version": "r2",
+			"published": "2022-07-24T17:29:25Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-equalizehist/releases/download/r2/EqualizeHist-r2.7z",
+				"files": {
+					"EqualizeHist.dll": [
+						"EqualizeHist.dll",
+						"5dccc516016dc31814dc73ed3ad94363d8c4cb65af277c68cf6477b2286dfdca"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2022-07-19T16:36:24Z",
 			"win64": {

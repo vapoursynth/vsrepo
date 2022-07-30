@@ -1,0 +1,43 @@
+{
+	"name": "RealCUGAN-ncnn-Vulkan",
+	"type": "VSPlugin",
+	"category": "Resizing and Format Conversion",
+	"description": "Real-CUGAN (Real Cascade U-Nets) super resolution for VapourSynth, based on realcugan-ncnn-vulkan. Designed for anime",
+	"github": "https://github.com/Kiyamou/VapourSynth-RealCUGAN-ncnn-Vulkan",
+	"identifier": "com.vapoursynth.realcugannv",
+	"namespace": "rcnv",
+	"device": [
+		"vulkan"
+	],
+	"dependencies": [
+		"com.vapoursynth.realcugannv.models"
+	],
+	"releases": [
+		{
+			"version": "r2",
+			"published": "2022-07-30T16:08:38Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-RealCUGAN-ncnn-Vulkan/releases/download/r2/realcugannv-r2.7z",
+				"files": {
+					"realcugannv.dll": [
+						"realcugannv.dll",
+						"9ac46a6dbab33cb4c678df56db6b00799caf34892c3e5e89d07e6a1bf75512d0"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"published": "2022-06-18T11:59:00Z",
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-RealCUGAN-ncnn-Vulkan/releases/download/r1/realcugannv-r1.7z",
+				"files": {
+					"realcugannv.dll": [
+						"realcugannv.dll",
+						"a05ff9df306467705b2e4b71ffaa884c60f8ae6aead020a0b08e5d9ecf77183a"
+					]
+				}
+			}
+		}
+	]
+}

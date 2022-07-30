@@ -1,0 +1,316 @@
+{
+	"name": "RealCUGAN-ncnn-Vulkan models",
+	"type": "VSPlugin",
+	"category": "Plugin Dependency",
+	"description": "Models for RealCUGAN-ncnn-Vulkan",
+	"github": "https://github.com/Kiyamou/VapourSynth-RealCUGAN-ncnn-Vulkan",
+	"identifier": "com.vapoursynth.realcugannv.models",
+	"namespace": "rcnv",
+	"ignore": [
+		"r1"
+	],
+	"releases": [
+		{
+			"version": "r2",
+			"published": "2022-07-30T16:08:38Z",
+			"win32": {
+				"url": "https://github.com/Kiyamou/VapourSynth-RealCUGAN-ncnn-Vulkan/releases/download/r2/models.zip",
+				"files": {
+					"models/models-nose/up2x-no-denoise.bin": [
+						"models-nose/up2x-no-denoise.bin",
+						"2b6f4db8fdc04336ac68ba954b4cd3b280beb5e7b6b0bcd97f769accc512cf4a"
+					],
+					"models/models-nose/up2x-no-denoise.param": [
+						"models-nose/up2x-no-denoise.param",
+						"698dc5d61e78998db9cc8620e4509e8a1f2694eeb7ecffe9d41d14bd5ec59fa6"
+					],
+					"models/models-pro/up2x-conservative.bin": [
+						"models-pro/up2x-conservative.bin",
+						"087b4f1836a084f432752503c9e12246a4f8446cfa2c5c919fcf490961b5b4f1"
+					],
+					"models/models-pro/up2x-conservative.param": [
+						"models-pro/up2x-conservative.param",
+						"98bc044434b31a388627f66fcb816ba8213923a4c69eb346ba67e62ec21f6f4d"
+					],
+					"models/models-pro/up2x-denoise3x.bin": [
+						"models-pro/up2x-denoise3x.bin",
+						"815fe3bf3f14f010f4f7a26ab6d2c47330d80c789720639088ccfaf013cec651"
+					],
+					"models/models-pro/up2x-denoise3x.param": [
+						"models-pro/up2x-denoise3x.param",
+						"98bc044434b31a388627f66fcb816ba8213923a4c69eb346ba67e62ec21f6f4d"
+					],
+					"models/models-pro/up2x-no-denoise.bin": [
+						"models-pro/up2x-no-denoise.bin",
+						"d99abb3266d08b04aadd6008b8855eee06b78055f202c7b93fbf34ab8365cbc9"
+					],
+					"models/models-pro/up2x-no-denoise.param": [
+						"models-pro/up2x-no-denoise.param",
+						"98bc044434b31a388627f66fcb816ba8213923a4c69eb346ba67e62ec21f6f4d"
+					],
+					"models/models-pro/up3x-conservative.bin": [
+						"models-pro/up3x-conservative.bin",
+						"bda924012738fd82b13e5ef23feb051976be2803a0aba5651b7c4f99b5713436"
+					],
+					"models/models-pro/up3x-conservative.param": [
+						"models-pro/up3x-conservative.param",
+						"6cea6ddc870dd6d16773ee78bdf32bc1bfc55eec2f8fa57d1d33a33ab3ffb6f6"
+					],
+					"models/models-pro/up3x-denoise3x.bin": [
+						"models-pro/up3x-denoise3x.bin",
+						"01a32b0fbba96a60e7e83fbe351a1231f40a43fa9247f9695d7e0633d2f3a938"
+					],
+					"models/models-pro/up3x-denoise3x.param": [
+						"models-pro/up3x-denoise3x.param",
+						"6cea6ddc870dd6d16773ee78bdf32bc1bfc55eec2f8fa57d1d33a33ab3ffb6f6"
+					],
+					"models/models-pro/up3x-no-denoise.bin": [
+						"models-pro/up3x-no-denoise.bin",
+						"2f767e54d25fe4a9a8927783ecff36151504299c833cde85445b1986bbb44800"
+					],
+					"models/models-pro/up3x-no-denoise.param": [
+						"models-pro/up3x-no-denoise.param",
+						"6cea6ddc870dd6d16773ee78bdf32bc1bfc55eec2f8fa57d1d33a33ab3ffb6f6"
+					],
+					"models/models-se/up2x-conservative.bin": [
+						"models-se/up2x-conservative.bin",
+						"91c72c136e7ff8556323d4449c5ceeff22d9829bf8463a01137cadb8d59b84a0"
+					],
+					"models/models-se/up2x-conservative.param": [
+						"models-se/up2x-conservative.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up2x-denoise1x.bin": [
+						"models-se/up2x-denoise1x.bin",
+						"09373c4fddfd2a57fb4af5e516eba1b4c9caa132fd52ffd01bcaefee543bf7f6"
+					],
+					"models/models-se/up2x-denoise1x.param": [
+						"models-se/up2x-denoise1x.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up2x-denoise2x.bin": [
+						"models-se/up2x-denoise2x.bin",
+						"47427a52badebfbd7bb6db97196a2844c553f7f2bb93c9527b26347bea0430e7"
+					],
+					"models/models-se/up2x-denoise2x.param": [
+						"models-se/up2x-denoise2x.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up2x-denoise3x.bin": [
+						"models-se/up2x-denoise3x.bin",
+						"610ebae63f388fe6f39615cc5f4eaeb038d5aa6ba8b299ba3b989f7f7a1a280a"
+					],
+					"models/models-se/up2x-denoise3x.param": [
+						"models-se/up2x-denoise3x.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up2x-no-denoise.bin": [
+						"models-se/up2x-no-denoise.bin",
+						"7f135a712830b16678cb8247b9517308c5f3858fca9b10e1c3ad5ef6e261de0c"
+					],
+					"models/models-se/up2x-no-denoise.param": [
+						"models-se/up2x-no-denoise.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up3x-conservative.bin": [
+						"models-se/up3x-conservative.bin",
+						"8321c450efedcd94192196b03ddec19c2a023a5637df7208d49e9e0461560dff"
+					],
+					"models/models-se/up3x-conservative.param": [
+						"models-se/up3x-conservative.param",
+						"9e71ba0bce194f6a95422140c8caa25accbbfd9ec84a0cc08f7f4ec1e615a5a8"
+					],
+					"models/models-se/up3x-denoise3x.bin": [
+						"models-se/up3x-denoise3x.bin",
+						"fdb269034f7d6bf59be8fe1c03c43a75671af464e045a13870b24b649d64f1f6"
+					],
+					"models/models-se/up3x-denoise3x.param": [
+						"models-se/up3x-denoise3x.param",
+						"9e71ba0bce194f6a95422140c8caa25accbbfd9ec84a0cc08f7f4ec1e615a5a8"
+					],
+					"models/models-se/up3x-no-denoise.bin": [
+						"models-se/up3x-no-denoise.bin",
+						"e22e8e647b20eb0067cc46b9cf83bcb0893b2e77e83beaee0bedecf4c735f716"
+					],
+					"models/models-se/up3x-no-denoise.param": [
+						"models-se/up3x-no-denoise.param",
+						"9e71ba0bce194f6a95422140c8caa25accbbfd9ec84a0cc08f7f4ec1e615a5a8"
+					],
+					"models/models-se/up4x-conservative.bin": [
+						"models-se/up4x-conservative.bin",
+						"1ffde324bf3444adade3e70ff4ff4eac7a4bfbf4c01b5aab4563a89e5cec16da"
+					],
+					"models/models-se/up4x-conservative.param": [
+						"models-se/up4x-conservative.param",
+						"63e8f6a5a57acb4b7678fd928612538ae7208c836223becdb66ffb82bd2aab9b"
+					],
+					"models/models-se/up4x-denoise3x.bin": [
+						"models-se/up4x-denoise3x.bin",
+						"1fe05d6066901d354bbbc0cb53fba6588ef7637e1ec9c3bce7546900484d0b35"
+					],
+					"models/models-se/up4x-denoise3x.param": [
+						"models-se/up4x-denoise3x.param",
+						"63e8f6a5a57acb4b7678fd928612538ae7208c836223becdb66ffb82bd2aab9b"
+					],
+					"models/models-se/up4x-no-denoise.bin": [
+						"models-se/up4x-no-denoise.bin",
+						"aa3d9bda3f46bb48f709d874ccaf67877e94a2fd6cedca7dac5ccb3bf714e066"
+					],
+					"models/models-se/up4x-no-denoise.param": [
+						"models-se/up4x-no-denoise.param",
+						"63e8f6a5a57acb4b7678fd928612538ae7208c836223becdb66ffb82bd2aab9b"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Kiyamou/VapourSynth-RealCUGAN-ncnn-Vulkan/releases/download/r2/models.zip",
+				"files": {
+					"models/models-nose/up2x-no-denoise.bin": [
+						"models-nose/up2x-no-denoise.bin",
+						"2b6f4db8fdc04336ac68ba954b4cd3b280beb5e7b6b0bcd97f769accc512cf4a"
+					],
+					"models/models-nose/up2x-no-denoise.param": [
+						"models-nose/up2x-no-denoise.param",
+						"698dc5d61e78998db9cc8620e4509e8a1f2694eeb7ecffe9d41d14bd5ec59fa6"
+					],
+					"models/models-pro/up2x-conservative.bin": [
+						"models-pro/up2x-conservative.bin",
+						"087b4f1836a084f432752503c9e12246a4f8446cfa2c5c919fcf490961b5b4f1"
+					],
+					"models/models-pro/up2x-conservative.param": [
+						"models-pro/up2x-conservative.param",
+						"98bc044434b31a388627f66fcb816ba8213923a4c69eb346ba67e62ec21f6f4d"
+					],
+					"models/models-pro/up2x-denoise3x.bin": [
+						"models-pro/up2x-denoise3x.bin",
+						"815fe3bf3f14f010f4f7a26ab6d2c47330d80c789720639088ccfaf013cec651"
+					],
+					"models/models-pro/up2x-denoise3x.param": [
+						"models-pro/up2x-denoise3x.param",
+						"98bc044434b31a388627f66fcb816ba8213923a4c69eb346ba67e62ec21f6f4d"
+					],
+					"models/models-pro/up2x-no-denoise.bin": [
+						"models-pro/up2x-no-denoise.bin",
+						"d99abb3266d08b04aadd6008b8855eee06b78055f202c7b93fbf34ab8365cbc9"
+					],
+					"models/models-pro/up2x-no-denoise.param": [
+						"models-pro/up2x-no-denoise.param",
+						"98bc044434b31a388627f66fcb816ba8213923a4c69eb346ba67e62ec21f6f4d"
+					],
+					"models/models-pro/up3x-conservative.bin": [
+						"models-pro/up3x-conservative.bin",
+						"bda924012738fd82b13e5ef23feb051976be2803a0aba5651b7c4f99b5713436"
+					],
+					"models/models-pro/up3x-conservative.param": [
+						"models-pro/up3x-conservative.param",
+						"6cea6ddc870dd6d16773ee78bdf32bc1bfc55eec2f8fa57d1d33a33ab3ffb6f6"
+					],
+					"models/models-pro/up3x-denoise3x.bin": [
+						"models-pro/up3x-denoise3x.bin",
+						"01a32b0fbba96a60e7e83fbe351a1231f40a43fa9247f9695d7e0633d2f3a938"
+					],
+					"models/models-pro/up3x-denoise3x.param": [
+						"models-pro/up3x-denoise3x.param",
+						"6cea6ddc870dd6d16773ee78bdf32bc1bfc55eec2f8fa57d1d33a33ab3ffb6f6"
+					],
+					"models/models-pro/up3x-no-denoise.bin": [
+						"models-pro/up3x-no-denoise.bin",
+						"2f767e54d25fe4a9a8927783ecff36151504299c833cde85445b1986bbb44800"
+					],
+					"models/models-pro/up3x-no-denoise.param": [
+						"models-pro/up3x-no-denoise.param",
+						"6cea6ddc870dd6d16773ee78bdf32bc1bfc55eec2f8fa57d1d33a33ab3ffb6f6"
+					],
+					"models/models-se/up2x-conservative.bin": [
+						"models-se/up2x-conservative.bin",
+						"91c72c136e7ff8556323d4449c5ceeff22d9829bf8463a01137cadb8d59b84a0"
+					],
+					"models/models-se/up2x-conservative.param": [
+						"models-se/up2x-conservative.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up2x-denoise1x.bin": [
+						"models-se/up2x-denoise1x.bin",
+						"09373c4fddfd2a57fb4af5e516eba1b4c9caa132fd52ffd01bcaefee543bf7f6"
+					],
+					"models/models-se/up2x-denoise1x.param": [
+						"models-se/up2x-denoise1x.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up2x-denoise2x.bin": [
+						"models-se/up2x-denoise2x.bin",
+						"47427a52badebfbd7bb6db97196a2844c553f7f2bb93c9527b26347bea0430e7"
+					],
+					"models/models-se/up2x-denoise2x.param": [
+						"models-se/up2x-denoise2x.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up2x-denoise3x.bin": [
+						"models-se/up2x-denoise3x.bin",
+						"610ebae63f388fe6f39615cc5f4eaeb038d5aa6ba8b299ba3b989f7f7a1a280a"
+					],
+					"models/models-se/up2x-denoise3x.param": [
+						"models-se/up2x-denoise3x.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up2x-no-denoise.bin": [
+						"models-se/up2x-no-denoise.bin",
+						"7f135a712830b16678cb8247b9517308c5f3858fca9b10e1c3ad5ef6e261de0c"
+					],
+					"models/models-se/up2x-no-denoise.param": [
+						"models-se/up2x-no-denoise.param",
+						"91efac7489bf249f092faa3764e3a3d1d31ef290051e39f2afd2138c98ccce30"
+					],
+					"models/models-se/up3x-conservative.bin": [
+						"models-se/up3x-conservative.bin",
+						"8321c450efedcd94192196b03ddec19c2a023a5637df7208d49e9e0461560dff"
+					],
+					"models/models-se/up3x-conservative.param": [
+						"models-se/up3x-conservative.param",
+						"9e71ba0bce194f6a95422140c8caa25accbbfd9ec84a0cc08f7f4ec1e615a5a8"
+					],
+					"models/models-se/up3x-denoise3x.bin": [
+						"models-se/up3x-denoise3x.bin",
+						"fdb269034f7d6bf59be8fe1c03c43a75671af464e045a13870b24b649d64f1f6"
+					],
+					"models/models-se/up3x-denoise3x.param": [
+						"models-se/up3x-denoise3x.param",
+						"9e71ba0bce194f6a95422140c8caa25accbbfd9ec84a0cc08f7f4ec1e615a5a8"
+					],
+					"models/models-se/up3x-no-denoise.bin": [
+						"models-se/up3x-no-denoise.bin",
+						"e22e8e647b20eb0067cc46b9cf83bcb0893b2e77e83beaee0bedecf4c735f716"
+					],
+					"models/models-se/up3x-no-denoise.param": [
+						"models-se/up3x-no-denoise.param",
+						"9e71ba0bce194f6a95422140c8caa25accbbfd9ec84a0cc08f7f4ec1e615a5a8"
+					],
+					"models/models-se/up4x-conservative.bin": [
+						"models-se/up4x-conservative.bin",
+						"1ffde324bf3444adade3e70ff4ff4eac7a4bfbf4c01b5aab4563a89e5cec16da"
+					],
+					"models/models-se/up4x-conservative.param": [
+						"models-se/up4x-conservative.param",
+						"63e8f6a5a57acb4b7678fd928612538ae7208c836223becdb66ffb82bd2aab9b"
+					],
+					"models/models-se/up4x-denoise3x.bin": [
+						"models-se/up4x-denoise3x.bin",
+						"1fe05d6066901d354bbbc0cb53fba6588ef7637e1ec9c3bce7546900484d0b35"
+					],
+					"models/models-se/up4x-denoise3x.param": [
+						"models-se/up4x-denoise3x.param",
+						"63e8f6a5a57acb4b7678fd928612538ae7208c836223becdb66ffb82bd2aab9b"
+					],
+					"models/models-se/up4x-no-denoise.bin": [
+						"models-se/up4x-no-denoise.bin",
+						"aa3d9bda3f46bb48f709d874ccaf67877e94a2fd6cedca7dac5ccb3bf714e066"
+					],
+					"models/models-se/up4x-no-denoise.param": [
+						"models-se/up4x-no-denoise.param",
+						"63e8f6a5a57acb4b7678fd928612538ae7208c836223becdb66ffb82bd2aab9b"
+					]
+				}
+			}
+		}
+	]
+}

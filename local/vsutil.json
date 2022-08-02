@@ -1,0 +1,45 @@
+{
+	"name": "VSUtil",
+	"type": "PyWheel",
+	"description": "A collection of general-purpose Vapoursynth functions to be reused in modules and scripts.",
+	"website": "https://github.com/Irrational-Encoding-Wizardry/vsutil",
+	"category": "Other",
+	"identifier": "vsutil",
+	"modulename": "vsutil",
+	"wheelname": "vsutil",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vsutil",
+	"releases": [
+		{
+			"version": "0.5.0",
+			"published": "2020-07-15T10:57:32Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/73/c8/6dd6f80356131fe2f8b0da4499dcc2ee26d2207e95389d409c5c61b5bd32/vsutil-0.5.0-py3-none-any.whl",
+				"hash": "04c777d5568706aedb79fe5f14bc3ac0d990ca5ac71a27a1790eeb71f84d99be"
+			}
+		},
+		{
+			"version": "0.4.0",
+			"published": "2020-06-27T11:10:31.576332Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/a7/bc/3022df836837f134ba1a376b0c497a2b58b412d4f8bfbe9e57cfbdad39b7/vsutil-0.4.0-py3-none-any.whl",
+				"hash": "a1ce34cbb3bcf19a52776d01b867d7c0afbead1e972f62d33c57a8798957c748"
+			}
+		},
+		{
+			"version": "0.3.0",
+			"published": "2020-06-12T07:37:18.634765Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/0b/82/724f05bb20668dfeb044354241135538846c82621a666ab76ff65d336c37/vsutil-0.3.0-py3-none-any.whl",
+				"hash": "34c329d28d7c310614faa4d92e33b67c2679cedc5f6108c46c7590ac39527e58"
+			}
+		},
+		{
+			"version": "0.2.0",
+			"published": "2019-05-05T04:55:01.770668Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ed/ca/3bf231eaf9c0242a660662f2e1e7682da72453346c5bd09a43a4552cb6c0/vsutil-0.2.0-py3-none-any.whl",
+				"hash": "be1d06bc43b5a0e426a3b0b340099afb5b0bbff79f9265f925de76ad5989bae6"
+			}
+		}
+	]
+}

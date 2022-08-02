@@ -9,6 +9,7 @@
 	"github": "https://github.com/AlucardSama04/faggotDb",
 	"updatemode": "git-commits",
 	"dependencies": [
+		"vsutil",
 		"kagefunc"
 	],
 	"releases": [

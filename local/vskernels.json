@@ -1,0 +1,68 @@
+{
+	"name": "vs-kernels",
+	"type": "PyWheel",
+	"category": "Resizing and Format Conversion",
+	"description": "Kernels are a collection of wrappers pertaining to (de)scaling, format conversion, and other related operations, all while providing a consistent and clean interface.",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-kernels",
+	"identifier": "vskernels",
+	"modulename": "vskernels",
+	"wheelname": "vskernels",
+	"releases": [
+		{
+			"version": "1.1.3",
+			"published": "2022-07-29T23:05:36.282227Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/bc/c4/cb7abb33e9298b3ae5519e553538592ed6999bc8cd2d98b18454063890c0/vskernels-1.1.3-py3-none-any.whl",
+				"hash": "628fb29ace72c24e4a088b49f1845e8484c4b01f4459cccd751e319b103fd15b"
+			}
+		},
+		{
+			"version": "1.1.2",
+			"published": "2022-07-28T16:45:33.699068Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/e6/4d/be3672a0af3d3f4a067b22b909705f8bb41e103a0ff569c1f0aa61661780/vskernels-1.1.2b-py3-none-any.whl",
+				"hash": "dc9ff7ed83ee8fbefc0c0e791f2f4f59ffbdf071a50a84bc40a46779b2983e8e"
+			}
+		},
+		{
+			"version": "1.1.1",
+			"published": "2022-07-27T21:34:03.490341Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d6/ef/6b0cb0de6f957b65e4146c0cfadc451d6405d55cf2f89cf24626d28d62a8/vskernels-1.1.1c-py3-none-any.whl",
+				"hash": "7b53d0221a4ddd3c6a987d0cdf28894044d4bf3445c93f4372db2c941ff823a1"
+			}
+		},
+		{
+			"version": "1.1.0",
+			"published": "2022-07-26T16:28:55.295490Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/8b/0f/e136d1e1299a83af9a0c42d744337d7b4d54df9efff075438c38e71a9d32/vskernels-1.1.0-py3-none-any.whl",
+				"hash": "ed509402da6eb252978f2e5d94231b7bf30389abc139bd4d8a01af7ff100762e"
+			}
+		},
+		{
+			"version": "1.0.5",
+			"published": "2022-07-05T22:26:55.341326Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/26/ce/b6147f6938592754dcd6ff320e61742e085717fe547ba6754ed68cc81ac9/vskernels-1.0.5-py3-none-any.whl",
+				"hash": "f601c6fe72d2ea73b140e6c90e41383b097026016532236d32a56977a6ae1b8c"
+			}
+		},
+		{
+			"version": "1.0.3",
+			"published": "2022-07-05T21:54:27.587243Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/be/ca/8ae766a7c5d1bf0b4aa47a90f03bdd90356dd16e34d5102c0d5a0c8e1326/vskernels-1.0.3c-py3-none-any.whl",
+				"hash": "84122bc481554f666e2cf437a4e95c263b610c900d4f22d1be4c65cf18b1a462"
+			}
+		},
+		{
+			"version": "1.0.2",
+			"published": "2022-07-05T20:40:53.444835Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ca/0c/afdf6763021582ac6aec59ac9ae8bd17372da49125cdf0544680eeb35d22/vskernels-1.0.2-py3-none-any.whl",
+				"hash": "a4ee0376a5b1f679be6683602bf7932eee9cc49050cb6a9c72df040261c7c749"
+			}
+		}
+	]
+}

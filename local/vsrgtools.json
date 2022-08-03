@@ -1,0 +1,99 @@
+{
+	"name": "vs-rgtools",
+	"type": "PyWheel",
+	"category": "Denoising",
+	"description": "Wrapper for RGVS, RGSF, and various other functions",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-rgtools",
+	"identifier": "vsrgtools",
+	"modulename": "vsrgtools",
+	"wheelname": "vsrgtools",
+	"dependencies": [
+		"vsutil",
+		"com.vapoursynth.removegrainsf",
+		"com.vapoursynth.removegrainvs",
+		"info.akarin.vsplugin",
+		"com.holywu.ctmf"
+	],
+	"releases": [
+		{
+			"version": "0.1.10",
+			"published": "2022-07-29T23:04:29.277570Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/0f/24/86de58d6692a8ef627404596b1fb3b2b8e5fb3c4fcba3b474d2deb900b73/vsrgtools-0.1.10-py3-none-any.whl",
+				"hash": "d6578c9702b9bcd5f9b89fe0b7df34f48580cce51daa5681dd43ac38c836aae4"
+			}
+		},
+		{
+			"version": "0.1.9",
+			"published": "2022-07-27T20:01:05.266844Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/51/c4/3b3e6eec44abf503de4c3641976eac76bc27652002e52a501e1a08ff300b/vsrgtools-0.1.9-py3-none-any.whl",
+				"hash": "a904364219425f3fc6cdc10621c2ff4c984992dcbabf90d54c29fb3f11d8e684"
+			}
+		},
+		{
+			"version": "0.1.8",
+			"published": "2022-07-26T14:33:22.458815Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/4a/be/9ff957ddfa688d9be7eab74eb56ae5e3d8028313e10e40d86e0cf796d227/vsrgtools-0.1.8-py3-none-any.whl",
+				"hash": "72b79d6b62fc70a5ba56c5af423fb2d67c7d0a3ed0b803632ad70f533f5e71c6"
+			}
+		},
+		{
+			"version": "0.1.7",
+			"published": "2022-07-15T13:52:12.043483Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/35/44/3aa53cad972f6ea5fc105b92d464ba4498f89f6fdf507d395c3c51373150/vsrgtools-0.1.7-py3-none-any.whl",
+				"hash": "a2f872840594917c31843a7a2be56334bb76b5704c76a34346d2cc9d6362c648"
+			}
+		},
+		{
+			"version": "0.1.6",
+			"published": "2022-07-10T21:42:30.499282Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/65/32/6d522465a1eb864feffad83b2e4eb9ccef8a20081edb415a0925db05e65b/vsrgtools-0.1.6-py3-none-any.whl",
+				"hash": "6a2e0d578bd31ac366656ea3df93bd6e8d35818bfc4b364e5506da7b76dde2b2"
+			}
+		},
+		{
+			"version": "0.1.5",
+			"published": "2022-07-09T21:39:45.651022Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/1a/4a/cc0f7613e287a5f0577363a341594e372e337b92895dbbb3765cfe474186/vsrgtools-0.1.5-py3-none-any.whl",
+				"hash": "f3c4c37b92298b83793fd0e2be47d4c085f30a7d8987493fdb5520b51fba6890"
+			}
+		},
+		{
+			"version": "0.1.4",
+			"published": "2022-06-25T20:07:16.183980Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/86/11/e37e2fd0e851a0118974dfa12d487c38a76c169d3090adccf08f80069269/vsrgtools-0.1.4-py3-none-any.whl",
+				"hash": "6adb2e5dc60031a631dd29a29af3b15c43a6429052d20df0f3a2c9568cd63567"
+			}
+		},
+		{
+			"version": "0.1.3",
+			"published": "2022-06-22T20:54:47.065942Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/41/8b/492c6770a790f12c9f8595fbb3db047120d2cd6570f2901eb530f08311d6/vsrgtools-0.1.3-py3-none-any.whl",
+				"hash": "2a8c8313994ba101c175f5f60b586a8a4c098e7e8ee8ae7fc514aff3ac4530f2"
+			}
+		},
+		{
+			"version": "0.1.2",
+			"published": "2022-06-11T10:49:03.888975Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/6c/bc/40149b85f3ee2f2cb45e8fe4a9ab77b6dfd82174f45026371cf043702e38/vsrgtools-0.1.2-py3-none-any.whl",
+				"hash": "2fd6452e43d9ae0f4d8c00df52a6110e2a05971970871ddf1e5c37ce0fc52bfd"
+			}
+		},
+		{
+			"version": "0.1.1",
+			"published": "2022-06-08T14:10:04.985193Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/82/f4/78bf8c73e6b0219d6ff03db22acea13bb1f31c7524fbf3d66f8521362a06/vsrgtools-0.1.1-py3-none-any.whl",
+				"hash": "fbbbc72757006336e25bddb878ac876159eae95259a26eab07d58635e50213df"
+			}
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"name": "vs-exprtools",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "Helpers for writing RPN expressions",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-exprtools",
+	"identifier": "vsexprtools",
+	"modulename": "vsexprtools",
+	"wheelname": "vsexprtools",
+	"dependencies": [
+		"vsutil"
+	],
+	"releases": [
+		{
+			"version": "1.0.1",
+			"published": "2022-08-01T21:56:16.734014Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/12/8b/1698191f58b5999eaf4c9187f69580346ac19dc3ab5c0da58aa6e0c6e911/vsexprtools-1.0.1-py3-none-any.whl",
+				"hash": "32f0cdf5d60be66b27fb608d8b34d1e9f75018a1383a8155733d4d60af731cc6"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2022-07-29T22:52:10.701258Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/95/3e/95c35afb52f0f1ee8558b0df8b076d1063afc1e47bfbd026386ecf0cb829/vsexprtools-1.0.0-py3-none-any.whl",
+				"hash": "65cdf03e158ea5bc17f883fb30596f521ff63362e4e38cc274645b4d0a15213a"
+			}
+		},
+		{
+			"version": "0.0.2",
+			"published": "2022-07-26T14:34:34.309456Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/39/82/b95e67d082145fff2312fc1e977e8290fd8df820f6c53ec30cb913b7c5d3/vsexprtools-0.0.2-py3-none-any.whl",
+				"hash": "f562bb79df9be55f0f0f21094641249d04701c9c382edc951070aac3d7ac3b1d"
+			}
+		}
+	]
+}

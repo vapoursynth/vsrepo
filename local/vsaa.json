@@ -1,0 +1,35 @@
+{
+	"name": "vs-aa",
+	"type": "PyWheel",
+	"category": "Resizing and Format Conversion",
+	"description": "Wrappers for aa/scaling plugins and functions, aimed to have compatibility with vs-kernels scalers.",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-aa",
+	"identifier": "vsaa",
+	"modulename": "vsaa",
+	"wheelname": "vsaa",
+	"dependencies": [
+		"vsutil",
+		"vskernels",
+		"vsrgtools",
+		"vsmask",
+		"vsexprtools"
+	],
+	"releases": [
+		{
+			"version": "1.0.1",
+			"published": "2022-07-29T23:18:44.833256Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ef/60/0862fe089b53d754584d2c5cd2daa0fca97d344cfe46bb13c90b7ac6b488/vsaa-1.0.1-py3-none-any.whl",
+				"hash": "2fa5ee2f3b0e0b305c252b2e2ed85e7e5227bc2737642139a4722ab658a5b6b0"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2022-07-26T16:51:45.731531Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/6a/6a/33948ae8dba338068ba92ec79a36063cbba51f922c078fea5e162bd94236/vsaa-1.0.0-py3-none-any.whl",
+				"hash": "4fc6e3c2fc2a1b4e9948d18292f789ec45fd4179e6e91403c4154a2b61374472"
+			}
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"name": "vs-scale",
+	"type": "PyWheel",
+	"category": "Resizing and Format Conversion",
+	"description": "Wrappers for scaling and descaling functions.",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-scale",
+	"identifier": "vsscale",
+	"modulename": "vsscale",
+	"wheelname": "vsscale",
+	"dependencies": [
+		"vsutil",
+		"vsmask",
+		"vskernels",
+		"vsexprtools",
+		"vsrgtools",
+		"vsaa"
+	],
+	"releases": [
+		{
+			"version": "0.1.0",
+			"published": "2022-07-29T23:33:12.912802Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/f2/46/3b2ce6f7e30d9eeabf0ce28e072e6a2c582fddcaf3713aa89cdb6f698da9/vsscale-0.1.0-py3-none-any.whl",
+				"hash": "a99be053161c841d705b694013918d76881b4303efda5d17de80e442a8d8d613"
+			}
+		},
+		{
+			"version": "0.0.0",
+			"published": "2022-07-29T23:33:09.453290Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/1b/9b/a88565a407d3bce5779d414114eb30f932750b97bb5e9261611780909617/vsscale-0.0.0-py3-none-any.whl",
+				"hash": "ffef65a82d269b4aa3f65b54fdfd0f233776f7dedd7168d5d9e69ac8d14c4d9b"
+			}
+		}
+	]
+}

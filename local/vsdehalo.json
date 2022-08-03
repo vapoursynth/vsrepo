@@ -1,0 +1,66 @@
+{
+	"name": "vs-dehalo",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "Collection of dehaloing VapourSynth functions",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-dehalo",
+	"identifier": "vsdehalo",
+	"modulename": "vsdehalo",
+	"wheelname": "vsdehalo",
+	"dependencies": [
+		"vsmask",
+		"vsutil",
+		"vskernels",
+		"vsexprtools"
+	],
+	"releases": [
+		{
+			"version": "0.1.5",
+			"published": "2022-07-29T23:11:23.351014Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/5a/a5/79a6330c32bbd49a4b1bf8474176d754d7e557fb9572d931171603e68f72/vsdehalo-0.1.5-py3-none-any.whl",
+				"hash": "ee776f49a5f2d08daf0fdd691f9e088dfe260d6a3482c015dd055c6075104d16"
+			}
+		},
+		{
+			"version": "0.1.4",
+			"published": "2022-07-26T14:44:29.490248Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/fe/e9/843c301ed43cf75391293151012ad1bca67d0b587e2a8f08b855aa5343c3/vsdehalo-0.1.4-py3-none-any.whl",
+				"hash": "6a01b316f61b7e11d51ad8a7cac8c2eec5df4f263e27c35b655a2b0042ff0e7d"
+			}
+		},
+		{
+			"version": "0.1.3",
+			"published": "2022-07-15T13:54:27.631395Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/49/a7/4479b0b0230c0d5caffb7afc0183bde1710c52fd5ba6861b80dc7c1cb74e/vsdehalo-0.1.3-py3-none-any.whl",
+				"hash": "1cd0da5a174e54a9805a1484fc3b539009a19b4ef6fd595b2948257e7f3c2926"
+			}
+		},
+		{
+			"version": "0.1.2",
+			"published": "2022-07-12T12:40:47.268734Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/53/8a/9e13cfee6c1083733a7b92625acd97884a2f69161e6b8336a1df80da78fb/vsdehalo-0.1.2-py3-none-any.whl",
+				"hash": "ec558926d49a38136353b2af8b16a90912856479f4b8505848e6cb306e3f29eb"
+			}
+		},
+		{
+			"version": "0.1.1",
+			"published": "2022-06-30T10:55:42.619031Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/62/cf/4d0fc8714477d51b794271a44ad02033accfa4bfcf2e7ab5c01b595f01bc/vsdehalo-0.1.1-py3-none-any.whl",
+				"hash": "1a0689dcbd3c58c9a8454cc90d039d65bd5f1f41df100092e4d5cf3a1dac5b25"
+			}
+		},
+		{
+			"version": "0.1.0",
+			"published": "2022-06-22T20:59:04.904919Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/5c/a6/b31e2d5522bf0e318c1b5f82f46229f20f12f81003185cbcb1da112c3ec2/vsdehalo-0.1.0-py3-none-any.whl",
+				"hash": "37821d4e2e74355caee2ae61d414527d0613788956215ca0ebfc48d4465b9e6f"
+			}
+		}
+	]
+}

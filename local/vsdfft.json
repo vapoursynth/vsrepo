@@ -1,0 +1,28 @@
+{
+	"name": "vs-dfft",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "Collection of Discrete/Fast Fourier Transform VapourSynth functions",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-dfft",
+	"identifier": "vsdfft",
+	"modulename": "vsdfft",
+	"wheelname": "vsdfft",
+	"releases": [
+		{
+			"version": "0.1.0",
+			"published": "2022-06-25T18:16:37.680535Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/33/9d/471682b0ecab628e8ab0e069087239de94183481d67c00fe50481d37f0e3/vsdfft-0.1.0-py3-none-any.whl",
+				"hash": "d1dfd230bfb4c6e344b1d2efffb43995c9e89334634cd30385b95d90af0962b2"
+			}
+		},
+		{
+			"version": "0.0.1",
+			"published": "2022-05-29T19:12:41.429383Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/8f/dc/ec4b0d81ee41ee1adc944cf3a9090c1e1d352c71a291594eff2d2f758bd9/vsdfft-0.0.1-py3-none-any.whl",
+				"hash": "4b7f2643fc2858055185632b283f6d61f182fb47df94de44d4242d8f3c1fffa0"
+			}
+		}
+	]
+}

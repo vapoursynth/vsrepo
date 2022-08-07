@@ -12,6 +12,19 @@
 	],
 	"releases": [
 		{
+			"version": "v0.94",
+			"published": "2022-07-11T12:48:21Z",
+			"win64": {
+				"url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.94/akarin-release-lexpr-amd64-v0.94.7z",
+				"files": {
+					"akarin.dll": [
+						"akarin.dll",
+						"1258f347eb128cf83417da17314777a4624e3f7137369fb4b79f2f898fa4ffcd"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.92",
 			"published": "2021-11-15T11:10:13Z",
 			"win64": {

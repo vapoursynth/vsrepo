@@ -10,6 +10,22 @@
 	"github": "https://github.com/Irrational-Encoding-Wizardry/vsutil",
 	"releases": [
 		{
+			"version": "0.8.0",
+			"published": "2022-06-22T13:29:26.750959Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/35/89/daadc3c87b3c0f1f5ca36fd900222ea4c023af6a4acefd033ef7f55df3b5/vsutil-0.8.0-py3-none-any.whl",
+				"hash": "b14751680f1aa47a8671a943932e160fc3b6029b3e60227875fd73d7a47dac86"
+			}
+		},
+		{
+			"version": "0.7.0",
+			"published": "2022-06-16T20:57:49.604827Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/87/a5/e1545d8c695c180ea48ad15c8ae7b7ea58f5c2e67aaa5ed97fb155fcf414/vsutil-0.7.0-py3-none-any.whl",
+				"hash": "20adf5fe78d5fcf571773ede4f74a493b2146383dcf0e9936d28102984e6c296"
+			}
+		},
+		{
 			"version": "0.5.0",
 			"published": "2020-07-15T10:57:32Z",
 			"wheel": {

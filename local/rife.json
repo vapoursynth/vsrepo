@@ -15,6 +15,32 @@
 	],
 	"releases": [
 		{
+			"version": "r9",
+			"published": "2022-08-06T04:47:00Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan/releases/download/r9/RIFE-r9-win64.7z",
+				"files": {
+					"RIFE.dll": [
+						"RIFE.dll",
+						"04f784ed36840591be4c8774c6909a72367321c08a6838061f131c8dcfecffbb"
+					]
+				}
+			}
+		},
+		{
+			"version": "r8",
+			"published": "2022-08-06T02:21:17Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-RIFE-ncnn-Vulkan/releases/download/r8/RIFE-r8-win64.7z",
+				"files": {
+					"RIFE.dll": [
+						"RIFE.dll",
+						"c1ff07ffa5b5e28c8c33792caf702a194da9be26193ec4075ab57c3fd79ce046"
+					]
+				}
+			}
+		},
+		{
 			"version": "r7",
 			"published": "2022-07-30T11:09:32Z",
 			"win64": {

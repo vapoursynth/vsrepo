@@ -9,6 +9,28 @@
 	"github": "https://github.com/AmusementClub/assrender",
 	"releases": [
 		{
+			"version": "0.37.1",
+			"published": "2022-08-06T13:27:19Z",
+			"win32": {
+				"url": "https://github.com/AmusementClub/assrender/releases/download/0.37.1/assrender_v0371_0.16.0.zip",
+				"files": {
+					"assrender.dll": [
+						"x86/assrender.dll",
+						"71ad66f3722d4b720a8a5c7d9416a4db073f3b9f369eb60afd44fbcc58ce5e65"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/AmusementClub/assrender/releases/download/0.37.1/assrender_v0371_0.16.0.zip",
+				"files": {
+					"assrender.dll": [
+						"x64/assrender.dll",
+						"f0c0cf63e06727df0a8b1ef773520b41f73426abc9549aeab26f8f4bc56c1e38"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.37.0",
 			"published": "2022-05-20T14:18:48Z",
 			"win32": {

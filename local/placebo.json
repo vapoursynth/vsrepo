@@ -11,6 +11,19 @@
 	],
 	"releases": [
 		{
+			"version": "1.4.3",
+			"published": "2022-08-06T00:54:49Z",
+			"win64": {
+				"url": "https://github.com/Lypheo/vs-placebo/releases/download/1.4.3/libvs_placebo-1.4.3.zip",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"8761c0dd09c4f269d1fc3b6826a23d41e42e1b67202615eece21737b87af3eb4"
+					]
+				}
+			}
+		},
+		{
 			"version": "1.4.2",
 			"published": "2022-04-25T18:43:38Z",
 			"win64": {

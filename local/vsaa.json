@@ -16,6 +16,14 @@
 	],
 	"releases": [
 		{
+			"version": "1.1.0",
+			"published": "2022-08-08T18:33:31.219874Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/6a/ad/1da641486e00e547411eee9dac91bf5f334f56ac5580d750d093fbfc8c82/vsaa-1.1.0-py3-none-any.whl",
+				"hash": "d9b018ca43f2a66b595dcb3beb8eb6242fb0cd2806c371d8caea7b3a376b3b41"
+			}
+		},
+		{
 			"version": "1.0.1",
 			"published": "2022-07-29T23:18:44.833256Z",
 			"wheel": {

@@ -17,6 +17,14 @@
 	],
 	"releases": [
 		{
+			"version": "1.0.0",
+			"published": "2022-08-08T18:37:26.284884Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/7a/41/a76f7b1e5b3060fed1e6d363af559855d4d9602017906bcaa40e661f3c54/vsscale-1.0.0-py3-none-any.whl",
+				"hash": "30b1e5a7e91374237ff8c28734ba2e37c52351780f1aa76e9d0011ffc40e322a"
+			}
+		},
+		{
 			"version": "0.1.0",
 			"published": "2022-07-29T23:33:12.912802Z",
 			"wheel": {

@@ -16,6 +16,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:314c644",
+			"published": "2022-08-12T10:27:46Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/nnedi3_resample/zipball/314c6446a65c2e25fd7a997051b09830f361675e",
+				"files": {
+					"nnedi3_resample.py": [
+						"HomeOfVapourSynthEvolution-nnedi3_resample-314c644/nnedi3_resample.py",
+						"f6bd9321499d5b4e5dc67c3d117088af203db313280af67465b54519e2c7402c"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:5ef5bf4",
 			"published": "2021-11-29T03:21:24Z",
 			"script": {

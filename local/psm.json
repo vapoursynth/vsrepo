@@ -8,6 +8,19 @@
 	"namespace": "psm",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2022-08-24T04:25:01Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/VapourSynth-PlaneStatsMod/releases/download/r3/PlaneStatsMod-r3.7z",
+				"files": {
+					"PlaneStatsMod.dll": [
+						"PlaneStatsMod.dll",
+						"c14b1cfbd37603449e9abca6556f29c022bcddc7f06712bc5d6a144b1dc73196"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2022-07-29T23:21:25Z",
 			"win64": {

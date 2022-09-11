@@ -84,7 +84,7 @@ from logging import Handler, LogRecord
 from types import MappingProxyType, TracebackType
 from typing import (
     TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,
-    NamedTuple, NoReturn, Optional, Sequence, Type, TypedDict, TypeVar, Union, overload
+    NamedTuple, NoReturn, Optional, Protocol, Sequence, Type, TypedDict, TypeVar, Union, overload
 )
 
 __all__ = [
@@ -221,6 +221,12 @@ S = TypeVar('S')
 
 SingleAndSequence = Union[T, Sequence[T]]
 
+
+class Callback(Protocol):
+    def __call__(self, *args: Any, **kwds: Any) -> _VapourSynthMapValue:
+        ...
+
+
 _VapourSynthMapValue = Union[
     SingleAndSequence[int],
     SingleAndSequence[float],
@@ -229,7 +235,7 @@ _VapourSynthMapValue = Union[
     SingleAndSequence['VideoFrame'],
     SingleAndSequence['AudioNode'],
     SingleAndSequence['AudioFrame'],
-    SingleAndSequence[Callable[..., Any]]
+    SingleAndSequence[Callback]
 ]
 
 

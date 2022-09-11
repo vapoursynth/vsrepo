@@ -110,8 +110,8 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
             signature = signature.replace('Tuple', 'Tuple')
 
             # Make Callable definitions sensible
-            signature = signature.replace('Union[Func, Callable]', 'Callable[..., Any]')
-            signature = signature.replace('Union[Func, Callable, None]', 'Optional[Callable[..., Any]]')
+            signature = signature.replace('Union[Func, Callable]', 'Callback')
+            signature = signature.replace('Union[Func, Callable, None]', 'Optional[Callback]')
 
             # Replace the keywords with valid values
             for kw in keyword.kwlist:

@@ -74,12 +74,13 @@
 # noinspection ReturnValueFromInit
 
 
-from logging import Handler, LogRecord, NOTSET as LogLevelUnset
 from abc import abstractmethod
 from ctypes import Structure, c_void_p
 from enum import IntEnum
 from fractions import Fraction
 from inspect import Parameter, Signature
+from logging import NOTSET as LogLevelUnset
+from logging import Handler, LogRecord
 from types import MappingProxyType, TracebackType
 from typing import (
     TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,

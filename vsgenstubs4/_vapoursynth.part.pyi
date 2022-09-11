@@ -84,7 +84,7 @@ from logging import Handler, LogRecord
 from types import MappingProxyType, TracebackType
 from typing import (
     TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,
-    NamedTuple, NoReturn, Sequence, Type, TypedDict, TypeVar, Union, overload
+    NamedTuple, NoReturn, Optional, Sequence, Type, TypedDict, TypeVar, Union, overload
 )
 
 __all__ = [

@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
 
-import argparse
 import keyword
 import os
+from os import path
+from os.path import join as join_path
 import sys
+from argparse import Namespace, ArgumentParser
 from inspect import Parameter, Signature
 from inspect import signature as signature_from
 from typing import Any, Iterable, Iterator, List, NamedTuple, Optional, Union
@@ -16,9 +18,13 @@ def indent(strings: Iterable[str], spaces: int = 4) -> str:
     return '\n'.join(' ' * spaces + line for line in strings)
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--plugin', '-p', action='append', help='Also include manually added plugin')
-parser.add_argument('--avs-plugin', action='append', help='Also include manually added AviSynth plugin.')
+parser = ArgumentParser()
+parser.add_argument(
+    '--plugin', '-p', action='append', help='Also include manually added plugin'
+)
+parser.add_argument(
+    '--avs-plugin', action='append', help='Also include manually added AviSynth plugin.'
+)
 parser.add_argument(
     '--output', '-o', default='@',
     help="Where to output the file. The special value '-' means output to stdout. "
@@ -26,7 +32,7 @@ parser.add_argument(
 )
 parser.add_argument(
     '--pyi-template',
-    default=os.path.join(os.path.dirname(__file__), '_vapoursynth.part.pyi'),
+    default=join_path(path.dirname(__file__), '_vapoursynth.part.pyi'),
     help='Don\'t use unless you know what you are doing.'
 )
 
@@ -41,16 +47,16 @@ class PluginMeta(NamedTuple):
 site_package_dirname = 'vapoursynth-stubs'
 
 
-def prepare_cores(ns) -> vs.Core:
+def prepare_cores(ns: Namespace) -> vs.Core:
     core = vs.core.core
 
     if ns.plugin:
         for plugin in ns.plugin:
-            core.std.LoadPlugin(os.path.abspath(plugin))
+            core.std.LoadPlugin(path.abspath(plugin))
 
     if ns.avs_plugin:
         for plugin in ns.avs_plugin:
-            core.avs.LoadPlugin(os.path.abspath(plugin))
+            core.avs.LoadPlugin(path.abspath(plugin))
 
     return core
 
@@ -141,25 +147,25 @@ def make_instance_vars(suffix: str, sigs: Iterable[PluginMeta]) -> Iterator[str]
         yield f'def {p.name}(self) -> _Plugin_{p.name}_{p.bound_to}_{suffix}:'
         yield '    """'
         yield f'    {p.description}'
-        yield '    """'
+        yield '    """\n'
 
 
 def inject_stub_package() -> str:
-    site_package_dir = os.path.dirname(vs.__file__)
-    stub_dir = os.path.join(site_package_dir, site_package_dirname)
+    site_package_dir = path.dirname(vs.__file__)
+    stub_dir = join_path(site_package_dir, site_package_dirname)
 
-    if not os.path.exists(stub_dir):
+    if not path.exists(stub_dir):
         os.makedirs(stub_dir)
 
-    output_path = os.path.join(stub_dir, '__init__.pyi')
+    output_path = join_path(stub_dir, '__init__.pyi')
 
     for iname in os.listdir(site_package_dir):
-        if iname.startswith('vs-') and iname.endswith('.dist-info'):
+        if iname.startswith('vapoursynth-') and iname.endswith('.dist-info'):
             break
     else:
         return output_path
 
-    with open(os.path.join(site_package_dir, iname, 'RECORD'), 'a+', newline='') as f:
+    with open(join_path(site_package_dir, iname, 'RECORD'), 'a+', newline='') as f:
         f.seek(0)
         contents = f.read()
         if '__init__.pyi' not in contents:

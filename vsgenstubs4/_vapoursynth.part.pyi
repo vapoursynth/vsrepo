@@ -932,7 +932,7 @@ class AudioFrame(RawFrame):
     num_channels: int
 
 
-# include <plugins/implementations>
+#include <plugins/implementations>
 
 
 class RawNode(Generic[SelfFrame]):
@@ -1016,7 +1016,7 @@ class VideoNode(RawNode[VideoFrame]):
         self, fileobj: BinaryIO, y4m: bool = False, progress_update: object = None, prefetch: int = 0, backlog: int = -1
     ) -> None: ...
 
-# include <plugins_vnode/bound>
+#include <plugins_vnode/bound>
 
 
 class AudioNode(RawNode[AudioFrame]):
@@ -1032,7 +1032,7 @@ class AudioNode(RawNode[AudioFrame]):
 
     num_frames: int
 
-# include <plugins_anode/bound>
+#include <plugins_anode/bound>
 
 
 class CallbackData(Generic[SelfFrame]):
@@ -1119,7 +1119,7 @@ class Core:
 
     def version_number(self) -> int: ...
 
-# include <plugins/unbound>
+#include <plugins/unbound>
 
 
 class _CoreProxy(Core):

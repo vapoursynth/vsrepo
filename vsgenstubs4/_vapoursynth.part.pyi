@@ -73,20 +73,261 @@
 # noinspection PyUnusedLocal
 # noinspection ReturnValueFromInit
 
-import ctypes
-import enum
-import fractions
-import inspect
-import types
-import typing
 
-T = typing.TypeVar("T")
-SingleAndSequence = typing.Union[T, typing.Sequence[T]]
+from logging import Handler, LogRecord, NOTSET as LogLevelUnset
+from abc import abstractmethod
+from ctypes import Structure, c_void_p
+from enum import IntEnum
+from fractions import Fraction
+from inspect import Parameter, Signature
+from types import MappingProxyType, TracebackType
+from typing import (
+    TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,
+    NamedTuple, NoReturn, Sequence, Type, TypedDict, TypeVar, Union, overload
+)
+
+__all__ = [
+    # Versioning
+    '__version__', '__api_version__',
+
+    # Cython capsule
+    '__pyx_capi__',
+
+    # Enums and constants
+    'MessageType',
+        'MESSAGE_TYPE_DEBUG', 'MESSAGE_TYPE_INFORMATION', 'MESSAGE_TYPE_WARNING',
+        'MESSAGE_TYPE_CRITICAL', 'MESSAGE_TYPE_FATAL',
+
+    'FilterMode',
+        'fmParallel', 'fmParallelRequests', 'fmUnordered', 'fmFrameState',
+
+    'CoreCreationFlags',
+        'ccfEnableGraphInspection', 'ccfDisableAutoLoading', 'ccfDisableLibraryUnloading',
+
+    'MediaType',
+        'VIDEO', 'AUDIO',
+
+    'ColorFamily',
+        'UNDEFINED', 'GRAY', 'RGB', 'YUV',
+
+    'ColorRange',
+        'RANGE_FULL', 'RANGE_LIMITED',
+
+    'SampleType',
+        'INTEGER', 'FLOAT',
+
+    'PresetFormat',
+        'GRAY',
+        'GRAY8', 'GRAY9', 'GRAY10', 'GRAY12', 'GRAY14', 'GRAY16', 'GRAY32', 'GRAYH', 'GRAYS',
+        'RGB',
+        'RGB24', 'RGB27', 'RGB30', 'RGB36', 'RGB42', 'RGB48', 'RGBH', 'RGBS',
+        'YUV',
+        'YUV410P8',
+        'YUV411P8',
+        'YUV420P8', 'YUV420P9', 'YUV420P10', 'YUV420P12', 'YUV420P14', 'YUV420P16',
+        'YUV422P8', 'YUV422P9', 'YUV422P10', 'YUV422P12', 'YUV422P14', 'YUV422P16',
+        'YUV440P8',
+        'YUV444P8', 'YUV444P9', 'YUV444P10', 'YUV444P12', 'YUV444P14', 'YUV444P16', 'YUV444PH', 'YUV444PS',
+        'NONE',
+
+    'AudioChannels',
+        'FRONT_LEFT', 'FRONT_RIGHT', 'FRONT_CENTER',
+        'BACK_LEFT', 'BACK_RIGHT', 'BACK_CENTER',
+        'SIDE_LEFT', 'SIDE_RIGHT',
+        'TOP_CENTER',
+
+        'TOP_FRONT_LEFT', 'TOP_FRONT_RIGHT', 'TOP_FRONT_CENTER',
+        'TOP_BACK_LEFT', 'TOP_BACK_RIGHT', 'TOP_BACK_CENTER',
+
+        'WIDE_LEFT', 'WIDE_RIGHT',
+
+        'SURROUND_DIRECT_LEFT', 'SURROUND_DIRECT_RIGHT',
+
+        'FRONT_LEFT_OF_CENTER', 'FRONT_RIGHT_OF_CENTER',
+
+        'STEREO_LEFT', 'STEREO_RIGHT',
+
+        'LOW_FREQUENCY', 'LOW_FREQUENCY2',
+
+    'ChromaLocation',
+        'CHROMA_TOP_LEFT', 'CHROMA_TOP',
+        'CHROMA_LEFT', 'CHROMA_CENTER',
+        'CHROMA_BOTTOM_LEFT', 'CHROMA_BOTTOM',
+
+    'FieldBased',
+        'FIELD_PROGRESSIVE', 'FIELD_TOP', 'FIELD_BOTTOM',
+
+    'MatrixCoefficients',
+        'MATRIX_RGB', 'MATRIX_BT709', 'MATRIX_UNSPECIFIED', 'MATRIX_FCC',
+        'MATRIX_BT470_BG', 'MATRIX_ST170_M', 'MATRIX_YCGCO', 'MATRIX_BT2020_NCL', 'MATRIX_BT2020_CL',
+        'MATRIX_CHROMATICITY_DERIVED_NCL', 'MATRIX_CHROMATICITY_DERIVED_CL', 'MATRIX_ICTCP',
+
+    'TransferCharacteristics',
+        'TRANSFER_BT709', 'TRANSFER_UNSPECIFIED', 'TRANSFER_BT470_M', 'TRANSFER_BT470_BG', 'TRANSFER_BT601',
+        'TRANSFER_ST240_M', 'TRANSFER_LINEAR', 'TRANSFER_LOG_100', 'TRANSFER_LOG_316', 'TRANSFER_IEC_61966_2_4',
+        'TRANSFER_IEC_61966_2_1', 'TRANSFER_BT2020_10', 'TRANSFER_BT2020_12', 'TRANSFER_ST2084', 'TRANSFER_ARIB_B67',
+
+    'ColorPrimaries', 'PRIMARIES_BT709', 'PRIMARIES_UNSPECIFIED',
+        'PRIMARIES_BT470_M', 'PRIMARIES_BT470_BG', 'PRIMARIES_ST170_M', 'PRIMARIES_ST240_M', 'PRIMARIES_FILM',
+        'PRIMARIES_BT2020', 'PRIMARIES_ST428', 'PRIMARIES_ST431_2', 'PRIMARIES_ST432_1', 'PRIMARIES_EBU3213_E',
+
+    # Environment SubSystem
+    'Environment', 'EnvironmentData',
+
+    'EnvironmentPolicy',
+        'StandaloneEnvironmentPolicy',
+        'VSScriptEnvironmentPolicy',
+
+    'EnvironmentPolicyAPI',
+    'register_policy', 'has_policy',
+
+    'get_current_environment',
+
+    'VideoOutputTuple',
+    'clear_output', 'clear_outputs', 'get_outputs', 'get_output',
+
+    '_construct_type', '_construct_parameter', 'construct_signature',
+
+    # Logging
+    'PythonVSScriptLoggingBridge', 'LogHandle', 'Error',
+
+    # Functions
+    'FuncData', 'Func', 'CallbackData', 'FramePtr',
+    'Plugin', 'Function',
+
+    # Formats
+    'VideoFormat',
+
+    # Frames
+    'RawFrame', 'VideoFrame', 'AudioFrame',
+    'FrameProps',
+
+    # Nodes
+    'RawNode', 'VideoNode', 'AudioNode',
+
+    'Core', '_CoreProxy', 'core',
+
+    # Inspection API [UNSTABLE API]
+    '_try_enable_introspection'
+]
 
 
 ###
-# ENUMS AND CONSTANTS
-class MediaType(enum.IntEnum):
+# Typing
+
+T = TypeVar('T')
+S = TypeVar('S')
+
+SingleAndSequence = Union[T, Sequence[T]]
+
+_VapourSynthMapValue = Union[
+    SingleAndSequence[int],
+    SingleAndSequence[float],
+    SingleAndSequence[str],
+    SingleAndSequence['VideoNode'],
+    SingleAndSequence['VideoFrame'],
+    SingleAndSequence['AudioNode'],
+    SingleAndSequence['AudioFrame'],
+    SingleAndSequence[Callable[..., Any]]
+]
+
+
+class _Future(Generic[T]):
+    def set_result(self, value: T) -> None: ...
+
+    def set_exception(self, exception: BaseException) -> None: ...
+
+    def result(self) -> T: ...
+
+    def exception(self) -> Union[NoReturn, None]: ...
+
+###
+# Typed dicts
+
+
+class _VideoFormatInfo(TypedDict):
+    id: int
+    name: str
+    color_family: 'ColorFamily'
+    sample_type: 'SampleType'
+    bits_per_sample: int
+    bytes_per_sample: int
+    subsampling_w: int
+    subsampling_h: int
+    num_planes: int
+
+
+###
+# VapourSynth Versioning
+
+
+class VapourSynthVersion(NamedTuple):
+    release_major: int
+    release_minor: int
+
+
+class VapourSynthAPIVersion(NamedTuple):
+    api_major: int
+    api_minor: int
+
+
+__version__: VapourSynthVersion
+__api_version__: VapourSynthAPIVersion
+
+###
+# VapourSynth Cython capsule
+
+
+class PyCapsule(Structure):
+    ...
+
+
+__pyx_capi__: Dict[str, PyCapsule]
+
+###
+# VapourSynth Enums and Constants
+
+
+class MessageType(IntEnum):
+    MESSAGE_TYPE_DEBUG: 'MessageType'
+    MESSAGE_TYPE_INFORMATION: 'MessageType'
+    MESSAGE_TYPE_WARNING: 'MessageType'
+    MESSAGE_TYPE_CRITICAL: 'MessageType'
+    MESSAGE_TYPE_FATAL: 'MessageType'
+
+
+MESSAGE_TYPE_DEBUG: MessageType
+MESSAGE_TYPE_INFORMATION: MessageType
+MESSAGE_TYPE_WARNING: MessageType
+MESSAGE_TYPE_CRITICAL: MessageType
+MESSAGE_TYPE_FATAL: MessageType
+
+
+class FilterMode(IntEnum):
+    fmParallel: 'FilterMode'
+    fmParallelRequests: 'FilterMode'
+    fmUnordered: 'FilterMode'
+    fmFrameState: 'FilterMode'
+
+
+fmParallel: FilterMode
+fmParallelRequests: FilterMode
+fmUnordered: FilterMode
+fmFrameState: FilterMode
+
+
+class CoreCreationFlags(IntEnum):
+    ccfEnableGraphInspection: 'CoreCreationFlags'
+    ccfDisableAutoLoading: 'CoreCreationFlags'
+    ccfDisableLibraryUnloading: 'CoreCreationFlags'
+
+
+ccfEnableGraphInspection: 'CoreCreationFlags'
+ccfDisableAutoLoading: 'CoreCreationFlags'
+ccfDisableLibraryUnloading: 'CoreCreationFlags'
+
+
+class MediaType(IntEnum):
     VIDEO: 'MediaType'
     AUDIO: 'MediaType'
 
@@ -95,18 +336,29 @@ VIDEO: MediaType
 AUDIO: MediaType
 
 
-class ColorFamily(enum.IntEnum):
+class ColorFamily(IntEnum):
+    UNDEFINED: 'ColorFamily'
     GRAY: 'ColorFamily'
     RGB: 'ColorFamily'
     YUV: 'ColorFamily'
 
 
+UNDEFINED: ColorFamily
 GRAY: ColorFamily
 RGB: ColorFamily
 YUV: ColorFamily
 
 
-class SampleType(enum.IntEnum):
+class ColorRange(IntEnum):
+    RANGE_FULL: 'ColorRange'
+    RANGE_LIMITED: 'ColorRange'
+
+
+RANGE_FULL: ColorRange
+RANGE_LIMITED: ColorRange
+
+
+class SampleType(IntEnum):
     INTEGER: 'SampleType'
     FLOAT: 'SampleType'
 
@@ -115,7 +367,7 @@ INTEGER: SampleType
 FLOAT: SampleType
 
 
-class PresetFormat(enum.IntEnum):
+class PresetFormat(IntEnum):
     NONE: 'PresetFormat'
 
     GRAY8: 'PresetFormat'
@@ -224,7 +476,7 @@ RGBH: PresetFormat
 RGBS: PresetFormat
 
 
-class AudioChannels(enum.IntEnum):
+class AudioChannels(IntEnum):
     FRONT_LEFT: 'AudioChannels'
     FRONT_RIGHT: 'AudioChannels'
     FRONT_CENTER: 'AudioChannels'
@@ -279,47 +531,7 @@ SURROUND_DIRECT_RIGHT: AudioChannels
 LOW_FREQUENCY2: AudioChannels
 
 
-class MessageType(enum.IntEnum):
-    MESSAGE_TYPE_DEBUG: 'MessageType'
-    MESSAGE_TYPE_INFORMATION: 'MessageType'
-    MESSAGE_TYPE_WARNING: 'MessageType'
-    MESSAGE_TYPE_CRITICAL: 'MessageType'
-    MESSAGE_TYPE_FATAL: 'MessageType'
-
-
-MESSAGE_TYPE_DEBUG: MessageType
-MESSAGE_TYPE_INFORMATION: MessageType
-MESSAGE_TYPE_WARNING: MessageType
-MESSAGE_TYPE_CRITICAL: MessageType
-MESSAGE_TYPE_FATAL: MessageType
-
-
-class VapourSynthVersion(typing.NamedTuple):
-    release_major: int
-    release_minor: int
-
-
-__version__: VapourSynthVersion
-
-
-class VapourSynthAPIVersion(typing.NamedTuple):
-    api_major: int
-    api_minor: int
-
-
-__api_version__: VapourSynthAPIVersion
-
-
-class ColorRange(enum.IntEnum):
-    RANGE_FULL: 'ColorRange'
-    RANGE_LIMITED: 'ColorRange'
-
-
-RANGE_FULL: ColorRange
-RANGE_LIMITED: ColorRange
-
-
-class ChromaLocation(enum.IntEnum):
+class ChromaLocation(IntEnum):
     CHROMA_LEFT: 'ChromaLocation'
     CHROMA_CENTER: 'ChromaLocation'
     CHROMA_TOP_LEFT: 'ChromaLocation'
@@ -336,7 +548,7 @@ CHROMA_BOTTOM_LEFT: ChromaLocation
 CHROMA_BOTTOM: ChromaLocation
 
 
-class FieldBased(enum.IntEnum):
+class FieldBased(IntEnum):
     FIELD_PROGRESSIVE: 'FieldBased'
     FIELD_TOP: 'FieldBased'
     FIELD_BOTTOM: 'FieldBased'
@@ -347,7 +559,7 @@ FIELD_TOP: FieldBased
 FIELD_BOTTOM: FieldBased
 
 
-class MatrixCoefficients(enum.IntEnum):
+class MatrixCoefficients(IntEnum):
     MATRIX_RGB: 'MatrixCoefficients'
     MATRIX_BT709: 'MatrixCoefficients'
     MATRIX_UNSPECIFIED: 'MatrixCoefficients'
@@ -376,7 +588,7 @@ MATRIX_CHROMATICITY_DERIVED_CL: MatrixCoefficients
 MATRIX_ICTCP: MatrixCoefficients
 
 
-class TransferCharacteristics(enum.IntEnum):
+class TransferCharacteristics(IntEnum):
     TRANSFER_BT709: 'TransferCharacteristics'
     TRANSFER_UNSPECIFIED: 'TransferCharacteristics'
     TRANSFER_BT470_M: 'TransferCharacteristics'
@@ -411,7 +623,7 @@ TRANSFER_ST2084: TransferCharacteristics
 TRANSFER_ARIB_B67: TransferCharacteristics
 
 
-class ColorPrimaries(enum.IntEnum):
+class ColorPrimaries(IntEnum):
     PRIMARIES_BT709: 'ColorPrimaries'
     PRIMARIES_UNSPECIFIED: 'ColorPrimaries'
     PRIMARIES_BT470_M: 'ColorPrimaries'
@@ -442,67 +654,167 @@ PRIMARIES_EBU3213_E: ColorPrimaries
 
 ###
 # VapourSynth Environment SubSystem
+
+
 class EnvironmentData:
-    """
-    Contains the data VapourSynth stores for a specific environment.
-    """
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
+
+class EnvironmentPolicy:
+    def on_policy_registered(self, special_api: 'EnvironmentPolicyAPI') -> None: ...
+
+    def on_policy_cleared(self) -> None: ...
+
+    @abstractmethod
+    def get_current_environment(self) -> Union[EnvironmentData, None]: ...
+
+    @abstractmethod
+    def set_environment(self, environment: Union[EnvironmentData, None]) -> Union[EnvironmentData, None]: ...
+
+    def is_alive(self, environment: EnvironmentData) -> bool: ...
+
+
+class StandaloneEnvironmentPolicy(EnvironmentPolicy):
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
+    def _on_log_message(self, level: MessageType, msg: str) -> None: ...
+
+    def on_policy_registered(self, api: 'EnvironmentPolicyAPI') -> None: ...
+
+    def on_policy_cleared(self) -> None: ...
+
+    def get_current_environment(self) -> EnvironmentData: ...
+
+    def set_environment(self, environment: Union[EnvironmentData, None]) -> EnvironmentData: ...
+
+    def is_alive(self, environment: EnvironmentData) -> bool: ...
+
+
+class VSScriptEnvironmentPolicy(EnvironmentPolicy):
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
+    def on_policy_registered(self, policy_api: 'EnvironmentPolicyAPI') -> None: ...
+
+    def on_policy_cleared(self) -> None: ...
+
+    def get_current_environment(self) -> Union[EnvironmentData, None]: ...
+
+    def set_environment(self, environment: Union[EnvironmentData, None]) -> Union[EnvironmentData, None]: ...
+
+    def is_alive(self, environment: EnvironmentData) -> bool: ...
+
+
+class EnvironmentPolicyAPI:
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
+    def wrap_environment(self, environment_data: EnvironmentData) -> 'Environment': ...
+
+    def create_environment(self, flags: int = 0) -> EnvironmentData: ...
+
+    def set_logger(self, env: EnvironmentData, logger: Callable[[int, str], None]) -> None: ...
+
+    def destroy_environment(self, env: EnvironmentData) -> None: ...
+
+    def unregister_policy(self) -> None: ...
+
+
+def register_policy(policy: EnvironmentPolicy) -> None:
+    ...
+
+
+if not TYPE_CHECKING:
+    def _try_enable_introspection(version: int = None): ...
+
+
+def has_policy() -> bool:
+    ...
 
 
 class Environment:
+    env: EnvironmentData
+
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
     @property
     def alive(self) -> bool: ...
+
     @property
     def single(self) -> bool: ...
+
+    @classmethod
+    def is_single(self) -> bool: ...
+
     @property
     def env_id(self) -> int: ...
+
     @property
     def active(self) -> bool: ...
-    @classmethod
-    def is_single(cls) -> bool: ...
-    def copy(self) -> Environment: ...
-    def use(self) -> typing.ContextManager[None]: ...
 
-    def __enter__(self) -> Environment: ...
-    def __exit__(self, ty: typing.Optional[typing.Type[BaseException]], tv: typing.Optional[BaseException], tb: typing.Optional[types.TracebackType]) -> None: ...
+    def copy(self) -> 'Environment': ...
 
-class EnvironmentPolicyAPI:
-    def wrap_environment(self, environment_data: EnvironmentData) -> Environment: ...
-    def create_environment(self, flags: int = 0) -> EnvironmentData: ...
-    def set_logger(self, env: Environment, logger: typing.Callable[[int, str], None]) -> None: ...
-    def destroy_environment(self, env: EnvironmentData) -> None: ...
-    def unregister_policy(self) -> None: ...
+    def use(self) -> ContextManager[None]: ...
 
-class EnvironmentPolicy:
-    def on_policy_registered(self, special_api: EnvironmentPolicyAPI) -> None: ...
-    def on_policy_cleared(self) -> None: ...
-    def get_current_environment(self) -> typing.Optional[EnvironmentData]: ...
-    def set_environment(self, environment: typing.Optional[EnvironmentData]) -> None: ...
-    def is_active(self, environment: EnvironmentData) -> bool: ...
+    def __eq__(self, other: 'Environment') -> bool: ...  # type: ignore[override]
+
+    def __repr__(self) -> str: ...
 
 
-def register_policy(policy: EnvironmentPolicy) -> None: ...
-def has_policy() -> bool: ...
-
-# vpy_current_environment is deprecated
-def vpy_current_environment() -> Environment: ...
-def get_current_environment() -> Environment: ...
-
-def construct_signature(signature: str, return_signature: str, injected: typing.Optional[str] = None) -> inspect.Signature: ...
+def get_current_environment() -> Environment:
+    ...
 
 
-class VideoOutputTuple(typing.NamedTuple):
+class VideoOutputTuple(NamedTuple):
     clip: 'VideoNode'
-    alpha: typing.Optional['VideoNode']
-    alt_output: int
+    alpha: Union['VideoNode', None]
+    alt_output: Literal[0, 1, 2]
 
 
-class Error(Exception): ...
+def _construct_type(signature: str) -> type:
+    ...
 
-def set_message_handler(handler_func: typing.Callable[[int, str], None]) -> None: ...
-def clear_output(index: int = 0) -> None: ...
-def clear_outputs() -> None: ...
-def get_outputs() -> types.MappingProxyType[int, typing.Union[VideoOutputTuple, 'AudioNode']]: ...
-def get_output(index: int = 0) -> typing.Union[VideoOutputTuple, 'AudioNode']: ...
+
+def _construct_parameter(signature: str) -> Parameter:
+    ...
+
+
+def construct_signature(signature: str, return_signature: str, injected: Union[str, None] = None) -> Signature:
+    ...
+
+
+class Error(Exception):
+    ...
+
+
+def clear_output(index: int = 0) -> None:
+    ...
+
+
+def clear_outputs() -> None:
+    ...
+
+
+def get_outputs() -> MappingProxyType[int, Union[VideoOutputTuple, 'AudioNode']]:
+    ...
+
+
+def get_output(index: int = 0) -> Union[VideoOutputTuple, 'AudioNode']:
+    ...
+
+
+class FuncData:
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
+    def __call__(self, **kwargs: _VapourSynthMapValue) -> _VapourSynthMapValue: ...
+
+
+class Func:
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
+    def __call__(self, **kwargs: _VapourSynthMapValue) -> _VapourSynthMapValue: ...
+
+
+class FramePtr:
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
 
 class VideoFormat:
@@ -516,84 +828,244 @@ class VideoFormat:
     subsampling_h: int
     num_planes: int
 
-    def __int__(self) -> int: ...
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
-    def _as_dict(self) -> typing.Dict[str, typing.Any]: ...
-    def replace(self, *,
-                color_family: typing.Optional[ColorFamily] = None,
-                sample_type: typing.Optional[SampleType] = None,
-                bits_per_sample: typing.Optional[int] = None,
-                subsampling_w: typing.Optional[int] = None,
-                subsampling_h: typing.Optional[int] = None
-                ) -> 'VideoFormat': ...
+    def _as_dict(self) -> _VideoFormatInfo: ...
+
+    def replace(
+        self, *,
+        color_family: Union[ColorFamily, None] = None,
+        sample_type: Union[SampleType, None] = None,
+        bits_per_sample: Union[int, None] = None,
+        subsampling_w: Union[int, None] = None,
+        subsampling_h: Union[int, None] = None
+    ) -> 'VideoFormat': ...
+
+    @overload
+    def __eq__(self, other: 'VideoFormat') -> bool: ...  # type: ignore[misc]
+
+    @overload
+    def __eq__(self, other: Any) -> Literal[False]: ...
 
 
-_FramePropsValue = typing.Union[
-    SingleAndSequence[int],
-    SingleAndSequence[float],
-    SingleAndSequence[str],
-    SingleAndSequence['VideoNode'],
-    SingleAndSequence['VideoFrame'],
-    SingleAndSequence['AudioNode'],
-    SingleAndSequence['AudioFrame'],
-    SingleAndSequence[typing.Callable[..., typing.Any]]
-]
+class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
-class FrameProps(typing.MutableMapping[str, _FramePropsValue]):
+    def setdefault(  # type: ignore[override]
+        self, key: str, default: _VapourSynthMapValue = 0
+    ) -> _VapourSynthMapValue: ...
 
-    def copy(self) -> typing.Dict[str, _FramePropsValue]: ...
+    def copy(self) -> 'FrameProps': ...
 
-    def __getattr__(self, name: str) -> _FramePropsValue: ...
-    def __setattr__(self, name: str, value: _FramePropsValue) -> None: ...
+    def __setattr__(self, name: str, value: _VapourSynthMapValue) -> None: ...
 
-    # mypy lo vult.
-    # In all seriousness, why do I need to manually define them in a typestub?
+    def __getattr__(self, name: str) -> _VapourSynthMapValue: ...
+
+    def __delattr__(self, name: str) -> None: ...
+
+    def __setitem__(self, name: str, value: _VapourSynthMapValue) -> None: ...
+
+    def __getitem__(self, name: str) -> _VapourSynthMapValue: ...
+
     def __delitem__(self, name: str) -> None: ...
-    def __setitem__(self, name: str, value: _FramePropsValue) -> None: ...
-    def __getitem__(self, name: str) -> _FramePropsValue: ...
-    def __iter__(self) -> typing.Iterator[str]: ...
+
+    def __iter__(self) -> Iterator[str]: ...
+
     def __len__(self) -> int: ...
 
 
-class _RawFrame:
-    @property
-    def readonly(self) -> bool: ...
-
-    @property
-    def props(self) -> FrameProps: ...
-
-    def get_read_ptr(self, plane: int) -> ctypes.c_void_p: ...
-    def get_write_ptr(self, plane: int) -> ctypes.c_void_p: ...
-    def get_stride(self, plane: int) -> int: ...
+class RawFrame:
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
     @property
     def closed(self) -> bool: ...
 
     def close(self) -> None: ...
-    def __enter__(self) -> '_RawFrame': ...
-    def __exit__(self, ty: typing.Optional[typing.Type[BaseException]], tv: typing.Optional[BaseException], tb: typing.Optional[types.TracebackType]) -> None: ...
 
+    def copy(self: 'SelfFrame') -> 'SelfFrame': ...
 
-class VideoFrame(_RawFrame):
-    height: int
-    width: int
-    format: VideoFormat
+    @property
+    def props(self) -> FrameProps: ...
 
-    def copy(self) -> 'VideoFrame': ...
+    @props.setter
+    def props(self, new_props: MappingProxyType[str, _VapourSynthMapValue]) -> None: ...
+
+    def get_write_ptr(self, plane: int) -> c_void_p: ...
+
+    def get_read_ptr(self, plane: int) -> c_void_p: ...
+
+    def get_stride(self, plane: int) -> int: ...
+
+    @property
+    def readonly(self) -> bool: ...
+
+    def __enter__(self: 'SelfFrame') -> 'SelfFrame': ...
+
+    def __exit__(
+        self, exc_type: Union[Type[BaseException], None],
+        exc_value: Union[BaseException, None],
+        traceback: Union[TracebackType, None], /,
+    ) -> Union[bool, None]: ...
 
     def __getitem__(self, index: int) -> memoryview: ...
+
     def __len__(self) -> int: ...
-    def __enter__(self) -> 'VideoFrame': ...
 
 
-class _Future(typing.Generic[T]):
-    def set_result(self, value: T) -> None: ...
-    def set_exception(self, exception: BaseException) -> None: ...
-    def result(self) -> T: ...
-    def exception(self) -> typing.Optional[typing.NoReturn]: ...
+SelfFrame = TypeVar('SelfFrame', bound=RawFrame)
 
 
-Func = typing.Callable[..., typing.Any]
+class VideoFrame(RawFrame):
+    format: VideoFormat
+    width: int
+    height: int
+
+    def _writelines(self, write: Callable[[bytes], None]) -> None: ...
+
+
+class AudioFrame(RawFrame):
+    sample_type: SampleType
+    bits_per_sample: int
+    bytes_per_sample: int
+    channel_layout: int
+    num_channels: int
+
+
+# include <plugins/implementations>
+
+
+class RawNode(Generic[SelfFrame]):
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
+    def get_frame(self, n: int) -> SelfFrame: ...
+
+    @overload
+    def get_frame_async(self, n: int, cb: None = None) -> _Future[SelfFrame]: ...
+
+    @overload
+    def get_frame_async(self, n: int, cb: Callable[[Union[SelfFrame, None], Union[Exception, None]], None]) -> None: ...
+
+    def frames(
+        self, prefetch: Union[int, None] = None, backlog: Union[int, None] = None, close: bool = False
+    ) -> Iterator[SelfFrame]: ...
+
+    def set_output(self, index: int = 0) -> None: ...
+
+    def is_inspectable(self, version: Union[int, None] = None) -> bool: ...
+
+    if not TYPE_CHECKING:
+        @property
+        def _node_name(self) -> str: ...
+
+        @property
+        def _name(self) -> str: ...
+
+        @property
+        def _inputs(self) -> Dict[str, _VapourSynthMapValue]: ...
+
+        @property
+        def _timings(self) -> int: ...
+
+        @property
+        def _mode(self) -> FilterMode: ...
+
+        @property
+        def _dependencies(self): ...
+
+    @overload
+    def __eq__(self: 'SelfRawNode', other: 'SelfRawNode', /) -> bool: ...  # type: ignore[misc]
+
+    @overload
+    def __eq__(self: 'SelfRawNode', other: Any, /) -> Literal[False]: ...
+
+    def __add__(self: 'SelfRawNode', other: 'SelfRawNode', /) -> 'SelfRawNode': ...
+
+    def __radd__(self: 'SelfRawNode', other: 'SelfRawNode', /) -> 'SelfRawNode': ...
+
+    def __mul__(self: 'SelfRawNode', other: int, /) -> 'SelfRawNode': ...
+
+    def __rmul__(self: 'SelfRawNode', other: int, /) -> 'SelfRawNode': ...
+
+    def __getitem__(self, index: Union[int, slice], /) -> 'SelfRawNode': ...
+
+    def __len__(self) -> int: ...
+
+
+SelfRawNode = TypeVar('SelfRawNode', bound=RawNode)  # type: ignore[type-arg]
+
+
+class VideoNode(RawNode[VideoFrame]):
+    format: Union[VideoFormat, None]
+
+    width: int
+    height: int
+
+    fps_num: int
+    fps_den: int
+
+    fps: Fraction
+
+    num_frames: int
+
+    def set_output(
+        self, index: int = 0, alpha: Union['VideoNode', None] = None, alt_output: Literal[0, 1, 2] = 0
+    ) -> None: ...
+
+    def output(
+        self, fileobj: BinaryIO, y4m: bool = False, progress_update: object = None, prefetch: int = 0, backlog: int = -1
+    ) -> None: ...
+
+# include <plugins_vnode/bound>
+
+
+class AudioNode(RawNode[AudioFrame]):
+    sample_type: object
+    bits_per_sample: int
+    bytes_per_sample: int
+
+    channel_layout: int
+    num_channels: int
+
+    sample_rate: int
+    num_samples: int
+
+    num_frames: int
+
+# include <plugins_anode/bound>
+
+
+class CallbackData(Generic[SelfFrame]):
+    def __init__(
+        self, node: RawNode[SelfFrame], env: EnvironmentData,
+        callback: Union[Callable[[Union[SelfFrame, None], Union[Exception, None]], None], None] = None
+    ) -> None: ...
+
+    def receive(self, n: int, result: Union[SelfFrame, Exception]) -> None: ...
+
+
+class LogHandle:
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
+
+class PythonVSScriptLoggingBridge(Handler):
+
+    def __init__(self, parent: Handler, level: int = LogLevelUnset) -> None: ...
+
+    def emit(self, record: LogRecord) -> None: ...
+
+
+class Function:
+    plugin: 'Plugin'
+    name: str
+    signature: str
+    return_signature: str
+
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+
+    def __call__(self, *args: _VapourSynthMapValue, **kwargs: _VapourSynthMapValue) -> _VapourSynthMapValue: ...
+
+    @property
+    def __signature__(self) -> Signature: ...
 
 
 class Plugin:
@@ -601,155 +1073,59 @@ class Plugin:
     namespace: str
     name: str
 
-    def functions(self) -> typing.Iterator[Function]: ...
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
-    # get_functions is deprecated
-    def get_functions(self) -> typing.Dict[str, str]: ...
-    # list_functions is deprecated
-    def list_functions(self) -> str: ...
+    def __getattr__(self, name: str) -> Function: ...
 
-
-class Function:
-    plugin: Plugin
-    name: str
-    signature: str
-    return_signature: str
-
-    @property
-    def __signature__(self) -> inspect.Signature: ...
-    def __call__(self, *args: typing.Any, **kwargs: typing.Any) -> typing.Any: ...
-
-
-#include <plugins/implementations>
-
-
-class VideoNode:
-#include <plugins_vnode/bound>
-
-    format: typing.Optional[VideoFormat]
-
-    fps: fractions.Fraction
-    fps_den: int
-    fps_num: int
-
-    height: int
-    width: int
-
-    num_frames: int
-
-    # RawNode methods
-    @typing.overload
-    def get_frame_async_raw(self, n: int, cb: typing.Callable[['VideoNode', int, VideoFrame], None]) -> None: ...
-    @typing.overload
-    def get_frame_async_raw(self, n: int, cb: _Future[VideoFrame], future_wrapper: typing.Optional[typing.Callable[..., None]] = None) -> _Future[VideoFrame]: ...
-    def get_frame_async(self, n: int) -> _Future[VideoFrame]: ...
-    def frames(self, prefetch: typing.Optional[int] = None, backlog: typing.Optional[int] = None, close: bool = False) -> typing.Iterator[VideoFrame]: ...
-
-    def get_frame(self, n: int) -> VideoFrame: ...
-    def set_output(self, index: int = 0, alpha: typing.Optional['VideoNode'] = None, alt_output: int = 0) -> None: ...
-    def output(self, fileobj: typing.BinaryIO, y4m: bool = False, progress_update: typing.Optional[typing.Callable[[int, int], None]] = None, prefetch: int = 0, backlog: int = -1) -> None: ...
-
-    def __add__(self, other: 'VideoNode') -> 'VideoNode': ...
-    def __radd__(self, other: 'VideoNode') -> 'VideoNode': ...
-    def __mul__(self, other: int) -> 'VideoNode': ...
-    def __rmul__(self, other: int) -> 'VideoNode': ...
-    def __getitem__(self, other: typing.Union[int, slice]) -> 'VideoNode': ...
-    def __len__(self) -> int: ...
-
-
-class AudioFrame(_RawFrame):
-    sample_type: SampleType
-    bits_per_sample: int
-    bytes_per_sample: int
-    channel_layout: int
-    num_channels: int
-
-    def copy(self) -> 'AudioFrame': ...
-
-    def __enter__(self) -> 'AudioFrame': ...
-
-    def __getitem__(self, index: int) -> memoryview: ...
-    def __len__(self) -> int: ...
-
-
-class AudioNode:
-#include <plugins_anode/bound>
-
-    sample_type: SampleType
-    bits_per_sample: int
-    bytes_per_sample: int
-    channel_layout: int
-    num_channels: int
-    sample_rate: int
-    num_samples: int
-
-    num_frames: int
-
-    # RawNode methods
-    @typing.overload
-    def get_frame_async_raw(self, n: int, cb: typing.Callable[['AudioNode', int, AudioFrame], None]) -> None: ...
-    @typing.overload
-    def get_frame_async_raw(self, n: int, cb: _Future[AudioFrame], future_wrapper: typing.Optional[typing.Callable[..., None]] = None) -> _Future[AudioFrame]: ...
-    def get_frame_async(self, n: int) -> _Future[AudioFrame]: ...
-    def frames(self, prefetch: typing.Optional[int] = None, backlog: typing.Optional[int] = None, close: bool = False) -> typing.Iterator[AudioFrame]: ...
-
-    def get_frame(self, n: int) -> AudioFrame: ...
-    def set_output(self, index: int = 0) -> None: ...
-
-    def __add__(self, other: 'AudioNode') -> 'AudioNode': ...
-    def __radd__(self, other: 'AudioNode') -> 'AudioNode': ...
-    def __mul__(self, other: int) -> 'AudioNode': ...
-    def __rmul__(self, other: int) -> 'AudioNode': ...
-    def __getitem__(self, other: typing.Union[int, slice]) -> 'AudioNode': ...
-    def __len__(self) -> int: ...
-
-
-class _PluginMeta(typing.TypedDict):
-    namespace: str
-    identifier: str
-    name: str
-    functions: typing.Dict[str, str]
-
-
-class LogHandle:
-    handler_func: typing.Callable[[MessageType, str], None]
+    def functions(self) -> Iterator[Function]: ...
 
 
 class Core:
-#include <plugins/unbound>
+    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
     @property
     def num_threads(self) -> int: ...
+
     @num_threads.setter
     def num_threads(self) -> None: ...
+
     @property
     def max_cache_size(self) -> int: ...
+
     @max_cache_size.setter
     def max_cache_size(self) -> None: ...
 
-    def plugins(self) -> typing.Iterator[Plugin]: ...
-    # get_plugins is deprecated
-    def get_plugins(self) -> typing.Dict[str, _PluginMeta]: ...
-    # list_functions is deprecated
-    def list_functions(self) -> str: ...
+    @property
+    def flags(self) -> int: ...
 
-    def query_video_format(self, color_family: ColorFamily, sample_type: SampleType, bits_per_sample: int, subsampling_w: int = 0, subsampling_h: int = 0) -> VideoFormat: ...
-    # register_format is deprecated
-    def register_format(self, color_family: ColorFamily, sample_type: SampleType, bits_per_sample: int, subsampling_w: int, subsampling_h: int) -> VideoFormat: ...
-    def get_video_format(self, id: typing.Union[VideoFormat, int, PresetFormat]) -> VideoFormat: ...
-    # get_format is deprecated
-    def get_format(self, id: typing.Union[VideoFormat, int, PresetFormat]) -> VideoFormat: ...
+    def plugins(self) -> Iterator[Plugin]: ...
+
+    def query_video_format(
+        self, color_family: ColorFamily, sample_type: SampleType, bits_per_sample: int, subsampling_w: int = 0,
+        subsampling_h: int = 0) -> VideoFormat: ...
+
+    def get_video_format(self, id: Union[VideoFormat, int, PresetFormat]) -> VideoFormat: ...
+
+    def create_video_frame(self, format: VideoFormat, width: int, height: int) -> VideoFrame: ...
+
     def log_message(self, message_type: MessageType, message: str) -> None: ...
-    def add_log_handler(self, handler_func: typing.Optional[typing.Callable[[MessageType, str], None]]) -> LogHandle: ...
+
+    def add_log_handler(self, handler_func: Callable[[MessageType, str], None]) -> LogHandle: ...
+
     def remove_log_handler(self, handle: LogHandle) -> None: ...
 
     def version(self) -> str: ...
+
     def version_number(self) -> int: ...
+
+# include <plugins/unbound>
 
 
 class _CoreProxy(Core):
     @property
     def core(self) -> Core: ...
+
+    def version_number(self) -> int: ...
 
 
 core: _CoreProxy

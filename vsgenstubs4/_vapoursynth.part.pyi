@@ -1135,7 +1135,8 @@ class Core:
 
     def query_video_format(
         self, color_family: ColorFamily, sample_type: SampleType, bits_per_sample: int, subsampling_w: int = 0,
-        subsampling_h: int = 0) -> VideoFormat: ...
+        subsampling_h: int = 0
+    ) -> VideoFormat: ...
 
     def get_video_format(self, id: Union[VideoFormat, int, PresetFormat]) -> VideoFormat: ...
 

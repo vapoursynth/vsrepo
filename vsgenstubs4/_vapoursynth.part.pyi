@@ -935,20 +935,20 @@ class AudioFrame(RawFrame):
 #include <plugins/implementations>
 
 
-class RawNode(Generic[SelfFrame]):
+class RawNode:
     def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
-    def get_frame(self, n: int) -> SelfFrame: ...
+    def get_frame(self, n: int) -> RawFrame: ...
 
     @overload
-    def get_frame_async(self, n: int, cb: None = None) -> _Future[SelfFrame]: ...
+    def get_frame_async(self, n: int, cb: None = None) -> _Future[RawFrame]: ...
 
     @overload
-    def get_frame_async(self, n: int, cb: Callable[[Union[SelfFrame, None], Union[Exception, None]], None]) -> None: ...
+    def get_frame_async(self, n: int, cb: Callable[[Union[RawFrame, None], Union[Exception, None]], None]) -> None: ...
 
     def frames(
         self, prefetch: Union[int, None] = None, backlog: Union[int, None] = None, close: bool = False
-    ) -> Iterator[SelfFrame]: ...
+    ) -> Iterator[RawFrame]: ...
 
     def set_output(self, index: int = 0) -> None: ...
 
@@ -997,7 +997,7 @@ class RawNode(Generic[SelfFrame]):
 SelfRawNode = TypeVar('SelfRawNode', bound=RawNode)  # type: ignore[type-arg]
 
 
-class VideoNode(RawNode[VideoFrame]):
+class VideoNode(RawNode):
     format: Union[VideoFormat, None]
 
     width: int
@@ -1018,10 +1018,22 @@ class VideoNode(RawNode[VideoFrame]):
         self, fileobj: BinaryIO, y4m: bool = False, progress_update: object = None, prefetch: int = 0, backlog: int = -1
     ) -> None: ...
 
+    def get_frame(self, n: int) -> VideoFrame: ...
+
+    @overload  # type: ignore[override]
+    def get_frame_async(self, n: int, cb: None = None) -> _Future[VideoFrame]: ...
+
+    @overload
+    def get_frame_async(self, n: int, cb: Callable[[Union[VideoFrame, None], Union[Exception, None]], None]) -> None: ...
+
+    def frames(
+        self, prefetch: Union[int, None] = None, backlog: Union[int, None] = None, close: bool = False
+    ) -> Iterator[VideoFrame]: ...
+
 #include <plugins_vnode/bound>
 
 
-class AudioNode(RawNode[AudioFrame]):
+class AudioNode(RawNode):
     sample_type: object
     bits_per_sample: int
     bytes_per_sample: int
@@ -1034,16 +1046,28 @@ class AudioNode(RawNode[AudioFrame]):
 
     num_frames: int
 
+    def get_frame(self, n: int) -> AudioFrame: ...
+
+    @overload  # type: ignore[override]
+    def get_frame_async(self, n: int, cb: None = None) -> _Future[AudioFrame]: ...
+
+    @overload
+    def get_frame_async(self, n: int, cb: Callable[[Union[AudioFrame, None], Union[Exception, None]], None]) -> None: ...
+
+    def frames(
+        self, prefetch: Union[int, None] = None, backlog: Union[int, None] = None, close: bool = False
+    ) -> Iterator[AudioFrame]: ...
+
 #include <plugins_anode/bound>
 
 
-class CallbackData(Generic[SelfFrame]):
+class CallbackData:
     def __init__(
-        self, node: RawNode[SelfFrame], env: EnvironmentData,
-        callback: Union[Callable[[Union[SelfFrame, None], Union[Exception, None]], None], None] = None
+        self, node: RawNode, env: EnvironmentData,
+        callback: Union[Callable[[Union[RawFrame, None], Union[Exception, None]], None], None] = None
     ) -> None: ...
 
-    def receive(self, n: int, result: Union[SelfFrame, Exception]) -> None: ...
+    def receive(self, n: int, result: Union[RawFrame, Exception]) -> None: ...
 
 
 class LogHandle:

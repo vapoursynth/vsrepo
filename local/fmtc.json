@@ -11,6 +11,28 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "r30",
+			"published": "2022-08-31T06:58:58Z",
+			"win32": {
+				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r30/fmtconv-r30.zip",
+				"files": {
+					"fmtconv.dll": [
+						"win32/fmtconv.dll",
+						"74320bbf2e8cc0af59e225760aafd54894fdbb651b9bfd25c9dd91b56873dc4f"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/EleonoreMizo/fmtconv/releases/download/r30/fmtconv-r30.zip",
+				"files": {
+					"fmtconv.dll": [
+						"win64/fmtconv.dll",
+						"ddbe77e0b09d745608202c9fbca2c70d0c26e0428b27b15b92dfd2cad87f1898"
+					]
+				}
+			}
+		},
+		{
 			"version": "r29",
 			"published": "2022-04-11T16:01:24Z",
 			"win32": {

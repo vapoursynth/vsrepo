@@ -127,8 +127,8 @@ def make_plugin_classes(suffix: str, sigs: Iterable[PluginMeta]) -> Iterator[str
     for p in sigs:
         yield f'class _Plugin_{p.name}_{p.bound_to}_{suffix}(Plugin):'
         yield '    """'
-        yield f'    This class implements the module definitions for the "{p.name}" vs plugin.'
-        yield '    This class cannot be imported.'
+        yield f'    This class implements the module definitions for the "{p.name}" VapourSynth plugin.\n'
+        yield '    *This class cannot be imported.*'
         yield '    """'
         yield p.functions
         yield ''

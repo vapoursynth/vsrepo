@@ -8,7 +8,10 @@ packages = [
     "vsgenstubs"
 ]
 requirements = []
-entrypoints = ["vsgenstubs=vsgenstubs:main"]
+entrypoints = [
+    "vsgenstubs=vsgenstubs:main",
+    "vsgenstubs4=vsgenstubs:main",
+]
 
 if platform.platform().startswith("Windows"):
     modules.extend(["vsrepo", "vsrupdate"])

@@ -5,12 +5,12 @@ import platform
 
 modules = []
 packages = [
-    "vsgenstubs"
+    "vsgenstubs", "vsgenstubs4"
 ]
 requirements = []
 entrypoints = [
     "vsgenstubs=vsgenstubs:main",
-    "vsgenstubs4=vsgenstubs:main",
+    "vsgenstubs4=vsgenstubs4:main",
 ]
 
 if platform.platform().startswith("Windows"):
@@ -33,12 +33,12 @@ setup(
     long_description_content_type = "text/markdown",
     url="http://www.vapoursynth.com/",
     author = "Myrsloik",
-    packages=["vsgenstubs"],
+    packages=packages,
     py_modules = modules,
     install_requires=requirements,
     include_package_data=True,
     package_data={
-        "vsgenstubs": ["*.pyi"]
+        package: ["*.pyi"] for package in packages
     },
     entry_points = {
         'console_scripts': entrypoints

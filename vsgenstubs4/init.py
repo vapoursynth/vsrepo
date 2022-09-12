@@ -113,14 +113,22 @@ types = {
 
 
 def load_plugins(args: Namespace) -> vs.Core:
+    def _check_plugin(path: str) -> str:
+        pathl = Path(path).absolute()
+
+        if not pathl.exists():
+            raise ValueError(f'Plugin "{path}" was not found!')
+
+        return str(pathl)
+
     if args.load_plugin:
         for plugin in args.load_plugin:
-            vs.core.std.LoadPlugin(path.abspath(plugin))
+            vs.core.std.LoadPlugin(_check_plugin(plugin))
 
     if args.avs_plugin:
         if hasattr(vs.core, 'avs'):
             for plugin in args.avs_plugin:
-                vs.core.avs.LoadPlugin(path.abspath(plugin))
+                vs.core.avs.LoadPlugin(_check_plugin(plugin))
         else:
             raise AttributeError('Core is missing avs plugin!')
 

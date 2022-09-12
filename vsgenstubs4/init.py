@@ -73,6 +73,11 @@ parser.add_argument(
     default=join_path(path.dirname(__file__), '_vapoursynth.part.pyi'),
     help='Don\'t use unless you know what you are doing.'
 )
+parser.add_argument(
+    '--force', '-f',
+    action='store_true',
+    help='Force rewrite of the file.'
+)
 
 
 def indent(strings: Iterable[str], spaces: int = 4) -> str:
@@ -435,6 +440,10 @@ def output_stubs(
             outf = outf.absolute()
 
         existing_stubs = outf if outf.exists() and outf.is_file() else None
+
+    if existing_stubs and args.force:
+        existing_stubs.unlink(True)
+        existing_stubs.touch()
 
     template = generate_template(args, cores, implementations, instances, existing_stubs)
 

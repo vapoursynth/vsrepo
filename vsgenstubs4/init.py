@@ -51,6 +51,11 @@ parser.add_argument(
     "append these if the stubs file already exists."
 )
 parser.add_argument(
+    "--exclude-plugin", "-r",
+    metavar="VS_EXCL_PLUGIN", action="append", help="Remove selected plugin from new stubs, "
+    "or remove from existing stubs."
+)
+parser.add_argument(
     "--load-plugin", "-p",
     metavar="VS_PLUGIN", action="append", help="Load non-auto-loaded VapourSynth plugin."
 )
@@ -386,6 +391,10 @@ def generate_template(
             ]
             for inst_name in missing_impl if inst_name in impl
         ])
+
+    if args.exclude_plugin and existing_stubs:
+        implementations = [x for x in implementations if x.plugin.name not in args.exclude_plugin]
+        instances = [x for x in instances if x.plugin.name not in args.exclude_plugin]
 
     implementations = sorted(implementations)
     instances = sorted(instances)

@@ -1,7 +1,50 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, NamedTuple, TypedDict, Union
+import json
+import logging
+from pathlib import Path
+import sys
+from typing import Dict, Generic, List, NamedTuple, Tuple, Type, TypeVar, TypedDict, Union
 
+T = TypeVar('T')
+VT = TypeVar('VT')
+
+
+class DescriptorBase(Generic[VT, T]):
+    cls_type: Type[T]
+
+    def __class_getitem__(cls, new_cls_type: Tuple[Type[VT], Type[T]]) -> 'Type[DescriptorBase[VT, T]]':
+        class inner_Descriptor(cls):  # type: ignore
+            @property
+            def cls_type(cls) -> Type[T]:
+                if not hasattr(cls, '_cls_type'):
+                    cls._cls_type = eval(new_cls_type[-1])  # type: ignore
+                return cls._cls_type  # type: ignore
+
+        return inner_Descriptor
+
+    def __init__(self, *, default: T) -> None:
+        self._default = default
+
+    def __set_name__(self, owner: object, name: str) -> None:
+        self._name = "_" + name
+
+    def __get__(self, obj: object, ctype: type) -> T:
+        if obj is None:
+            return self._default
+
+        return getattr(obj, self._name, self._default)
+
+    def __set__(self, obj: object, value: Union[VT, T]) -> None:
+        setattr(obj, self._name, self.cls_type(value))  # type: ignore
+
+
+class VSPackageUpdateMode(str, Enum):
+    MANUAL = 'manual'
+    GIT = 'git-commits'
+
+    class Descriptor(DescriptorBase[str, 'VSPackageUpdateMode']):
+        ...
 
 
 class VSPackageDeviceType(str, Enum):
@@ -10,11 +53,17 @@ class VSPackageDeviceType(str, Enum):
     OPENCL = 'opencl'
     VULKAN = 'vulkan'
 
+    class Descriptor(DescriptorBase[str, 'VSPackageDeviceType']):
+        ...
+
 
 class VSPackageType(str, Enum):
     SCRIPT = 'PyScript'
     WHEEL = 'PyWheel'
     PLUGIN = 'VSPlugin'
+
+    class Descriptor(DescriptorBase[str, 'VSPackageType']):
+        ...
 
     def get_package_key(self, n_bits: int = 64) -> str:
         if self is VSPackageType.SCRIPT:
@@ -80,13 +129,14 @@ class VSPackageReleaseWin(_VSPackageReleaseWin32, _VSPackageReleaseWin64, VSPack
 @dataclass
 class VSPackage:
     name: str
-    type: VSPackageType
     category: str
     description: str
     github: str
     identifier: str
     namespace: str
     releases: List[VSPackageRelease]
+    type: VSPackageType.Descriptor = VSPackageType.Descriptor(default=VSPackageType.SCRIPT)
+    updatemode: VSPackageUpdateMode.Descriptor = VSPackageUpdateMode.Descriptor(default=VSPackageUpdateMode.MANUAL)
     dependencies: List[str] = field(default_factory=list)
     device: List[VSPackageDeviceType] = field(default_factory=list)
     modulename: Union[str, None] = None

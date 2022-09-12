@@ -259,6 +259,11 @@ class Implementation(NamedTuple):
     def get_name(plugin: PluginMeta, core_name: str, /) -> str:
         return f'_Plugin_{plugin.name}_{core_name}_Bound'
 
+    def __gt__(self, x: 'Implementation', /) -> bool: return self.plugin.__gt__(x.plugin)  # type: ignore[override]
+    def __lt__(self, x: 'Implementation', /) -> bool: return self.plugin.__lt__(x.plugin)  # type: ignore[override]
+    def __ge__(self, x: 'Implementation', /) -> bool: return self.plugin.__ge__(x.plugin)  # type: ignore[override]
+    def __le__(self, x: 'Implementation', /) -> bool: return self.plugin.__le__(x.plugin)  # type: ignore[override]
+
 
 def make_implementations(plugins: Iterable[PluginMeta]) -> Iterator[Implementation]:
     for plugin in plugins:
@@ -301,6 +306,11 @@ class Instance(NamedTuple):
     @staticmethod
     def get_head(plugin: PluginMeta, core_name: str) -> str:
         return f"{instance_start}{core_name}: {plugin.name}"
+
+    def __gt__(self, x: 'Implementation', /) -> bool: return self.plugin.__gt__(x.plugin)  # type: ignore[override]
+    def __lt__(self, x: 'Implementation', /) -> bool: return self.plugin.__lt__(x.plugin)  # type: ignore[override]
+    def __ge__(self, x: 'Implementation', /) -> bool: return self.plugin.__ge__(x.plugin)  # type: ignore[override]
+    def __le__(self, x: 'Implementation', /) -> bool: return self.plugin.__le__(x.plugin)  # type: ignore[override]
 
 
 def make_instances(plugins: Iterable[PluginMeta]) -> Iterator[Instance]:
@@ -376,6 +386,9 @@ def generate_template(
             ]
             for inst_name in missing_impl if inst_name in impl
         ])
+
+    implementations = sorted(implementations)
+    instances = sorted(instances)
 
     implementation_inject = indent('\n'.join(x.content) for x in implementations)
 
@@ -483,7 +496,7 @@ def main(argv: list[str] = sys.argv[1:]):
 
     cores = list[CoreLike]([core, core.std.BlankClip(), core.std.BlankAudio()])
 
-    signatures = sorted(retrieve_plugins(core, cores, only_plugins=args.plugins))
+    signatures = list(retrieve_plugins(core, cores, only_plugins=args.plugins))
 
     implementations = make_implementations(signatures)
     instances = make_instances(signatures)

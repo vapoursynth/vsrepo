@@ -155,3 +155,29 @@ class VSPackages:
     def __iter__(self) -> Iterator[VSPackage]:
         return iter(self.packages)
 
+    @classmethod
+    def from_file(cls, filepath: Path, /) -> 'VSPackages':
+        try:
+            vspackages = json.loads(filepath.read_text())
+
+            if vspackages is None:
+                raise ValueError
+
+            file_format = int(vspackages['file-format'])
+
+            if file_format != 3:
+                raise ValueError(
+                    f'Package definition format is {file_format} but only version 3 is supported'
+                )
+
+            packages = [
+                VSPackage(**package) for package in vspackages['packages']
+            ]
+        except (OSError, FileExistsError, ValueError) as e:
+            message = str(e) or 'No valid package definitions found. Run update command first!'
+
+            logging.error(message)
+
+            sys.exit(1)
+
+        return VSPackages(file_format, packages)

@@ -29,7 +29,6 @@ import glob
 import hashlib
 import importlib.util as imputil
 import io
-import json
 import os
 import os.path
 import re
@@ -38,7 +37,10 @@ import sys
 import tempfile
 import urllib.request
 import zipfile
+from pathlib import Path
 from typing import Any, Iterator, List, MutableMapping, Optional, Tuple, cast
+
+from utils import VSPackage, VSPackages
 
 try:
     import winreg
@@ -264,18 +266,7 @@ def fetch_url_cached(url: str, desc: str = "") -> bytearray:
 
 package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 
-package_list: Optional[List[MutableMapping[str, Any]]] = None
-try:
-    with open(package_json_path, 'r', encoding='utf-8') as pl:
-        vspackages = json.load(pl)
-    if package_list is None:
-        raise ValueError()
-    if vspackages['file-format'] != 3:
-        print('Package definition format is {} but only version 3 is supported'.format(vspackages['file-format']))
-        raise ValueError()
-    package_list = vspackages.get('packages')
-except (OSError, FileExistsError, ValueError):
-    pass
+package_list = VSPackages.from_file(Path(package_json_path))
 
 
 def check_hash(data: bytes, ref_hash: str) -> Tuple[bool, str, str]:

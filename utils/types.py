@@ -4,7 +4,7 @@ import json
 import logging
 from pathlib import Path
 import sys
-from typing import Dict, Generic, List, NamedTuple, Tuple, Type, TypeVar, TypedDict, Union
+from typing import Dict, Generic, Iterator, List, NamedTuple, Tuple, Type, TypeVar, TypedDict, Union
 
 T = TypeVar('T')
 VT = TypeVar('VT')
@@ -151,4 +151,7 @@ class VSPackage:
 class VSPackages:
     file_format: int
     packages: List[VSPackage]
+
+    def __iter__(self) -> Iterator[VSPackage]:
+        return iter(self.packages)
 

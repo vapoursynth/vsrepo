@@ -84,7 +84,7 @@ from logging import Handler, LogRecord
 from types import MappingProxyType, TracebackType
 from typing import (
     TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,
-    NamedTuple, NoReturn, Optional, Protocol, Sequence, Type, TypedDict, TypeVar, Union, overload
+    NamedTuple, NoReturn, Optional, Protocol, Sequence, Type, TypedDict, TypeVar, Union, overload, runtime_checkable
 )
 
 __all__ = [
@@ -223,14 +223,22 @@ SingleAndSequence = Union[T, Sequence[T]]
 
 
 class Callback(Protocol):
-    def __call__(self, *args: Any, **kwds: Any) -> _VapourSynthMapValue:
+    def __call__(self, *args: Any, **kwds: Any) -> '_VapourSynthMapValue':
         ...
 
+@runtime_checkable
+class SupportsString(Protocol):
+    @abstractmethod
+    def __str__(self) -> str:
+        ...
+
+
+DataType = Union[str, bytes, bytearray, SupportsString]
 
 _VapourSynthMapValue = Union[
     SingleAndSequence[int],
     SingleAndSequence[float],
-    SingleAndSequence[str],
+    SingleAndSequence[DataType],
     SingleAndSequence['VideoNode'],
     SingleAndSequence['VideoFrame'],
     SingleAndSequence['AudioNode'],
@@ -1036,7 +1044,7 @@ class VideoNode(RawNode):
         self, prefetch: Union[int, None] = None, backlog: Union[int, None] = None, close: bool = False
     ) -> Iterator[VideoFrame]: ...
 
-#include <plugins_vnode/bound>
+#include <plugins/bound/VideoNode>
 
 
 class AudioNode(RawNode):
@@ -1064,7 +1072,7 @@ class AudioNode(RawNode):
         self, prefetch: Union[int, None] = None, backlog: Union[int, None] = None, close: bool = False
     ) -> Iterator[AudioFrame]: ...
 
-#include <plugins_anode/bound>
+#include <plugins/bound/AudioNode>
 
 
 class CallbackData:
@@ -1154,14 +1162,12 @@ class Core:
 
     def __getattr__(self, name: str) -> Plugin: ...
 
-#include <plugins/unbound>
+#include <plugins/bound/Core>
 
 
 class _CoreProxy(Core):
     @property
     def core(self) -> Core: ...
-
-    def version_number(self) -> int: ...
 
 
 core: _CoreProxy

@@ -193,6 +193,17 @@ class PluginMeta(NamedTuple):
     description: str
     bound: BoundSignature
 
+    @classmethod
+    def from_namespace(cls, namespace: str, cores: Sequence[CoreLike]) -> 'PluginMeta':
+        try:
+            plugin = cores[0].__getattr__(namespace)
+        except BaseException:
+            raise ValueError(f'Invalid namespace! Plugin not found: "{namespace}"')
+
+        return PluginMeta(
+            plugin.namespace, plugin.name, BoundSignature(plugin.namespace, cores)
+        )
+
     def _str_(self, kind: str, __x: tuple[object, ...]) -> bool:
         return getattr(str, kind)(self.name.lower(), str(__x[0]).lower())
 
@@ -235,6 +246,10 @@ class Implementation(NamedTuple):
     plugin: PluginMeta
     content: List[str]
 
+    @classmethod
+    def from_namespace(cls, namespace: str, cores: Sequence[CoreLike]) -> 'Implementation':
+        return Implementation(PluginMeta.from_namespace(namespace, cores), [])
+
     @staticmethod
     def get_name(plugin: PluginMeta, core_name: str, /) -> str:
         return f'_Plugin_{plugin.name}_{core_name}_Bound'
@@ -270,6 +285,10 @@ class Instance(NamedTuple):
     plugin: PluginMeta
     core_name: str
     definition: List[str]
+
+    @classmethod
+    def from_namespace(cls, namespace: str, core_name: str, cores: Sequence[CoreLike]) -> 'Instance':
+        return Instance(PluginMeta.from_namespace(namespace, cores), core_name, [])
 
 
 def make_instances(plugins: Iterable[PluginMeta]) -> Iterator[Instance]:

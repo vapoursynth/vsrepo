@@ -10,7 +10,7 @@ from keyword import kwlist as reserved_keywords
 from os import SEEK_END, listdir, makedirs, path
 from os.path import join as join_path
 from pathlib import Path
-from typing import Any, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TypeVar, Union
+from typing import Any, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TextIO, TypeVar, Union
 
 import vapoursynth as vs
 
@@ -47,7 +47,8 @@ parser = ArgumentParser()
 parser.add_argument(
     "plugins",
     type=str, nargs="*",
-    help="Only generate stubs for and inject specified plugin namespaces."
+    help="Only generate stubs for and inject specified plugin namespaces, "
+    "append these if the stubs file already exists."
 )
 parser.add_argument(
     "--load-plugin", "-p",
@@ -242,7 +243,7 @@ def retrieve_plugins(
         yield PluginMeta(p.namespace, p.name, BoundSignature(p.namespace, cores))
 
 
-implementation_start = '# implementation:'
+implementation_start = '# implementation'
 implementation_end = '# end implementation'
 
 
@@ -347,9 +348,34 @@ def locate_or_create_stub_file() -> str:
 
 
 def generate_template(
-    args: Namespace, cores: Sequence[CoreLike], implementations: Iterable[Implementation], instances: Iterable[Instance]
+    args: Namespace, cores: Sequence[CoreLike],
+    implementations: List[Implementation], instances: List[Instance],
+    existing_stubs: Path | None = None
 ) -> str:
     template = Path(args.pyi_template).read_text()
+
+    if args.plugins and existing_stubs:
+        existing_implementations = get_existing_implementations(existing_stubs, cores)
+        existing_instances = get_existing_instances(existing_stubs, cores)
+
+        selected_implementations = [impl.plugin.name for impl in implementations]
+        selected_instances = [inst.core_name for inst in instances]
+
+        missing_impl = {*existing_implementations} - {*selected_implementations}
+
+        total_core_names = {*existing_instances, *selected_instances}
+
+        implementations.extend([
+            existing_implementations[name] for name in missing_impl
+        ])
+
+        instances.extend([
+            impl[inst_name]
+            for impl in [
+                existing_instances[core_name] for core_name in total_core_names
+            ]
+            for inst_name in missing_impl if inst_name in impl
+        ])
 
     implementation_inject = indent('\n'.join(x.content) for x in implementations)
 
@@ -368,36 +394,49 @@ def generate_template(
 
 
 def output_stubs(
-    args: Namespace, cores: Sequence[CoreLike], implementations: Iterable[Implementation], instances: Iterable[Instance]
+    args: Namespace, cores: Sequence[CoreLike], implementations: List[Implementation], instances: List[Instance]
 ) -> None:
+    existing_stubs: Path | None = None
+
+    outf: Any
+
     if args.output == '-':
         outf = sys.stdout
-    elif args.output == '@':
-        outf = open(locate_or_create_stub_file(), 'w')
     else:
-        outf = open(args.output, 'w')
+        outf = Path(locate_or_create_stub_file() if args.output == '@' else args.output)
 
-    template = generate_template(args, cores, implementations, instances)
+        if not outf.is_absolute():
+            if not outf.parent:
+                outf = outf.cwd() / outf
+            outf = outf.absolute()
+
+        existing_stubs = outf if outf.exists() and outf.is_file() else None
+
+    template = generate_template(args, cores, implementations, instances, existing_stubs)
+
+    if not isinstance(outf, TextIO):
+        outf = open(str(outf), 'w')
 
     with outf:
         outf.write(template)
         outf.flush()
 
-def get_existing_implementations(path: str, cores: Sequence[CoreLike]) -> Dict[str, Implementation]:
+
+def get_existing_implementations(path: str | Path, cores: Sequence[CoreLike]) -> Dict[str, Implementation]:
     result: Dict[str, Implementation] = {}
 
     with open(path, "r") as f:
         plugin_name: Optional[str] = None
 
-        for line in f:
-            line = line.strip()
+        for orig_line in f:
+            line = orig_line.strip()
 
             if line.startswith(implementation_start):
                 plugin_name = line[len(implementation_start) + 1:].strip()
                 result[plugin_name] = Implementation.from_namespace(plugin_name, cores)
 
             if plugin_name:
-                result[plugin_name].content.append(line)
+                result[plugin_name].content.append(orig_line.rstrip())
 
             if line.startswith(implementation_end):
                 plugin_name = None
@@ -405,15 +444,15 @@ def get_existing_implementations(path: str, cores: Sequence[CoreLike]) -> Dict[s
     return result
 
 
-def get_existing_instances(path: str, cores: Sequence[CoreLike]) -> Dict[str, Dict[str, Instance]]:
+def get_existing_instances(path: str | Path, cores: Sequence[CoreLike]) -> Dict[str, Dict[str, Instance]]:
     result: Dict[str, Dict[str, Instance]] = {}
 
     with open(path, "r") as f:
         core_name: str = ''
         plugin_name: Optional[str] = None
 
-        for line in f:
-            line = line.strip()
+        for orig_line in f:
+            line = orig_line.strip()
 
             if line.startswith(instance_start):
                 core_name, plugin_name = instance_bound_pattern.findall(line)[0]
@@ -429,7 +468,7 @@ def get_existing_instances(path: str, cores: Sequence[CoreLike]) -> Dict[str, Di
                     )
 
             if plugin_name:
-                result[core_name][plugin_name].definition.append(line)
+                result[core_name][plugin_name].definition.append(orig_line.rstrip()[4:])
 
             if line.startswith(instance_end):
                 plugin_name = None

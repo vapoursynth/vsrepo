@@ -47,18 +47,9 @@ class PluginMeta(NamedTuple):
 site_package_dirname = 'vapoursynth-stubs'
 
 
-def prepare_cores(ns: Namespace) -> vs.Core:
-    core = vs.core.core
 
-    if ns.plugin:
-        for plugin in ns.plugin:
-            core.std.LoadPlugin(path.abspath(plugin))
 
-    if ns.avs_plugin:
-        for plugin in ns.avs_plugin:
-            core.avs.LoadPlugin(path.abspath(plugin))
 
-    return core
 
 
 def retrieve_ns_and_funcs_unbound(core: vs.Core) -> List[PluginMeta]:
@@ -182,7 +173,18 @@ def main(argv: Union[list[str], None] = None):
         argv = sys.argv[1:]
 
     args = parser.parse_args(args=argv)
-    core = prepare_cores(args)
+    core = vs.core.core
+
+    if args.load_plugin:
+        for plugin in args.load_plugin:
+            core.std.LoadPlugin(path.abspath(plugin))
+
+    if args.avs_plugin:
+        if hasattr(core, "avs"):
+            for plugin in args.avs_plugin:
+                core.avs.LoadPlugin(path.abspath(plugin))
+        else:
+            raise AttributeError("Core is missing avs plugin!")
 
     # bound = retrieve_ns_and_funcs(core, bound=True)
     bound_video = retrieve_ns_and_funcs_bound(core, audio=False)

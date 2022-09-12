@@ -91,6 +91,7 @@ class VSPackagePlatformReleaseWheel:
 class VSPackagePlatformRelease:
     url: str
     files: Dict[str, VSPackagePlatformReleaseFile]
+    api: int = 3
 
 
 class VSPackageRelease(TypedDict, total=False):
@@ -107,11 +108,11 @@ class VSPackageReleasePyWheel(VSPackageRelease):
 
 
 class _VSPackageReleaseWin32(TypedDict, total=False):
-    win32: VSPackagePlatformReleaseFile
+    win32: VSPackagePlatformRelease
 
 
 class _VSPackageReleaseWin64(TypedDict, total=False):
-    win64: VSPackagePlatformReleaseFile
+    win64: VSPackagePlatformRelease
 
 
 class VSPackageReleaseWin32(_VSPackageReleaseWin32, VSPackageRelease):
@@ -131,12 +132,15 @@ class VSPackage:
     name: str
     category: str
     description: str
-    github: str
     identifier: str
-    namespace: str
-    releases: List[VSPackageRelease]
+    github: str = ''
+    namespace: str = ''
+    website: str = ''
+    doom9: str = ''
+    api: int = 3
     type: VSPackageType.Descriptor = VSPackageType.Descriptor(default=VSPackageType.SCRIPT)
     updatemode: VSPackageUpdateMode.Descriptor = VSPackageUpdateMode.Descriptor(default=VSPackageUpdateMode.MANUAL)
+    releases: List[VSPackageRelease] = field(default_factory=list)
     dependencies: List[str] = field(default_factory=list)
     device: List[VSPackageDeviceType] = field(default_factory=list)
     modulename: Union[str, None] = None
@@ -147,3 +151,4 @@ class VSPackage:
 class VSPackages:
     file_format: int
     packages: List[VSPackage]
+

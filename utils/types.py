@@ -2,14 +2,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, NamedTuple, TypedDict, Union
 
-__all__ = [
-    'VSPackageType',
-    'VSPackagePlatformReleaseFile',
-    'VSPackagePlatformRelease',
-    'VSPackageRelease',
-    'VSPackage',
-    'VSPackages'
-]
 
 
 class VSPackageDeviceType(str, Enum):

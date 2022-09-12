@@ -9,10 +9,9 @@ from keyword import kwlist as reserved_keywords
 from os import SEEK_END, listdir, makedirs, path
 from os.path import join as join_path
 from pathlib import Path
-from typing import Any, Iterable, Iterator, NamedTuple, Optional, Protocol, Sequence, TypeVar, Union
+from typing import Any, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TypeVar, Union
 
 import vapoursynth as vs
-
 
 __all__ = [
     'main'
@@ -242,6 +241,10 @@ def retrieve_plugins(
         yield PluginMeta(p.namespace, p.name, BoundSignature(p.namespace, cores))
 
 
+implementation_start = '# implementation:'
+implementation_end = '# end implementation'
+
+
 class Implementation(NamedTuple):
     plugin: PluginMeta
     content: List[str]
@@ -253,9 +256,6 @@ class Implementation(NamedTuple):
     @staticmethod
     def get_name(plugin: PluginMeta, core_name: str, /) -> str:
         return f'_Plugin_{plugin.name}_{core_name}_Bound'
-
-    def get_own_name(self, core_name: str, /) -> str:
-        return self.get_name(self.plugin, core_name)
 
 
 def make_implementations(plugins: Iterable[PluginMeta]) -> Iterator[Implementation]:
@@ -272,13 +272,19 @@ def make_implementations(plugins: Iterable[PluginMeta]) -> Iterator[Implementati
             ) for core_name, signatures in plugin.bound
         )
 
-            ['', f"# implementation: {plugin.name}"],
         content = chain.from_iterable([
+            ['', f"{implementation_start}: {plugin.name}"],
             implementation_content,
-            ['', "# end implementation", '']
+            ['', implementation_end, '']
         ])
 
         yield Implementation(plugin, list(content))
+
+
+instance_start = '# instance_bound_'
+instance_end = '# end instance'
+
+instance_bound_pattern = re.compile(fr"^{instance_start}([^:]+): (.+)")
 
 
 class Instance(NamedTuple):
@@ -290,21 +296,25 @@ class Instance(NamedTuple):
     def from_namespace(cls, namespace: str, core_name: str, cores: Sequence[CoreLike]) -> 'Instance':
         return Instance(PluginMeta.from_namespace(namespace, cores), core_name, [])
 
+    @staticmethod
+    def get_head(plugin: PluginMeta, core_name: str) -> str:
+        return f"{instance_start}{core_name}: {plugin.name}"
+
 
 def make_instances(plugins: Iterable[PluginMeta]) -> Iterator[Instance]:
     for plugin in plugins:
         for core_name, _ in plugin.bound:
             definition = [
-                f"# instance_bound_{core_name}: {plugin.name}",
+                Instance.get_head(plugin, core_name),
                 "@property",
                 f"def {plugin.name}(self) -> {Implementation.get_name(plugin, core_name)}:",
                 f'    """{plugin.description}"""',
-                "# end instance",
+                instance_end,
             ]
             yield Instance(plugin, core_name, definition)
 
 
-def locat_or_creat_stub_file() -> str:
+def locate_or_create_stub_file() -> str:
     site_package_dir = path.dirname(vs.__file__)
     stub_dir = join_path(site_package_dir, site_package_dirname)
 
@@ -362,7 +372,7 @@ def output_stubs(
     if args.output == '-':
         outf = sys.stdout
     elif args.output == '@':
-        outf = open(locat_or_creat_stub_file(), 'w')
+        outf = open(locate_or_create_stub_file(), 'w')
     else:
         outf = open(args.output, 'w')
 

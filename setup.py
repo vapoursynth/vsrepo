@@ -36,7 +36,7 @@ setuptools.setup(
     python_requires='>=3.8',
     py_modules=modules,
     packages=[
-        package_name
+        *packages, *modules, 'utils'
     ],
     include_package_data=True,
     package_data={

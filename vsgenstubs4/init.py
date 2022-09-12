@@ -382,6 +382,26 @@ def output_stubs(
         outf.write(template)
         outf.flush()
 
+def get_existing_implementations(path: str, cores: Sequence[CoreLike]) -> Dict[str, Implementation]:
+    result: Dict[str, Implementation] = {}
+
+    with open(path, "r") as f:
+        plugin_name: Optional[str] = None
+
+        for line in f:
+            line = line.strip()
+
+            if line.startswith(implementation_start):
+                plugin_name = line[len(implementation_start) + 1:].strip()
+                result[plugin_name] = Implementation.from_namespace(plugin_name, cores)
+
+            if plugin_name:
+                result[plugin_name].content.append(line)
+
+            if line.startswith(implementation_end):
+                plugin_name = None
+
+    return result
 
 def main(argv: list[str] = sys.argv[1:]):
     args = parser.parse_args(args=argv)

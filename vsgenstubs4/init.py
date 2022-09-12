@@ -233,7 +233,7 @@ def retrieve_plugins(
 
 class Implementation(NamedTuple):
     plugin: PluginMeta
-    classes: Iterable[str]
+    content: List[str]
 
     @staticmethod
     def get_name(plugin: PluginMeta, core_name: str, /) -> str:
@@ -257,19 +257,19 @@ def make_implementations(plugins: Iterable[PluginMeta]) -> Iterator[Implementati
             ) for core_name, signatures in plugin.bound
         )
 
-        classes = chain.from_iterable([
             ['', f"# implementation: {plugin.name}"],
+        content = chain.from_iterable([
             implementation_content,
             ['', "# end implementation", '']
         ])
 
-        yield Implementation(plugin, list(classes))
+        yield Implementation(plugin, list(content))
 
 
 class Instance(NamedTuple):
     plugin: PluginMeta
     core_name: str
-    definition: str
+    definition: List[str]
 
 
 def make_instances(plugins: Iterable[PluginMeta]) -> Iterator[Instance]:
@@ -282,7 +282,7 @@ def make_instances(plugins: Iterable[PluginMeta]) -> Iterator[Instance]:
                 f'    """{plugin.description}"""',
                 "# end instance",
             ]
-            yield Instance(plugin, core_name, indent(definition))
+            yield Instance(plugin, core_name, definition)
 
 
 def locat_or_creat_stub_file() -> str:
@@ -317,11 +317,11 @@ def locat_or_creat_stub_file() -> str:
 
 
 def generate_template(
-    args: Namespace, cores: Iterable[CoreLike], implementations: Iterable[Implementation], instances: Iterable[Instance]
+    args: Namespace, cores: Sequence[CoreLike], implementations: Iterable[Implementation], instances: Iterable[Instance]
 ) -> str:
     template = Path(args.pyi_template).read_text()
 
-    implementation_inject = indent('\n'.join(x.classes) for x in implementations)
+    implementation_inject = indent('\n'.join(x.content) for x in implementations)
 
     template = template.replace('#include <plugins/implementations>', implementation_inject)
 
@@ -329,7 +329,7 @@ def generate_template(
         this_core_name = core.__class__.__name__
 
         this_core_template = '\n'.join(
-            definition for _, core_name, definition in instances if core_name == this_core_name
+            indent(definition) for _, core_name, definition in instances if core_name == this_core_name
         )
 
         template = template.replace(f'#include <plugins/bound/{this_core_name}>', this_core_template)
@@ -338,7 +338,7 @@ def generate_template(
 
 
 def output_stubs(
-    args: Namespace, cores: Iterable[CoreLike], implementations: Iterable[Implementation], instances: Iterable[Instance]
+    args: Namespace, cores: Sequence[CoreLike], implementations: Iterable[Implementation], instances: Iterable[Instance]
 ) -> None:
     if args.output == '-':
         outf = sys.stdout

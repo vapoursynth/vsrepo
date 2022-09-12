@@ -10,7 +10,7 @@ from keyword import kwlist as reserved_keywords
 from os import SEEK_END, listdir, makedirs, path
 from os.path import join as join_path
 from pathlib import Path
-from typing import Any, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TextIO, TypeVar, Union
+from typing import Any, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TypeVar, Union
 
 import vapoursynth as vs
 
@@ -435,30 +435,26 @@ def output_stubs(
 ) -> None:
     existing_stubs: Path | None = None
 
-    outf: Any
+    if (stubs_path := str(args.output)) != '-':
+        if stubs_path == '@' or not stubs_path:
+            stubs_path = locate_or_create_stub_file()
 
-    if args.output == '-':
-        outf = sys.stdout
-    else:
-        outf = Path(locate_or_create_stub_file() if args.output == '@' else args.output)
+        stubs = Path(stubs_path)
 
-        if not outf.is_absolute():
-            if not outf.parent:
-                outf = outf.cwd() / outf
-            outf = outf.absolute()
+        if not stubs.is_absolute():
+            if not stubs.parent:
+                stubs = stubs.cwd() / stubs
+            stubs = stubs.absolute()
 
-        existing_stubs = outf if outf.exists() and outf.is_file() else None
+        existing_stubs = stubs if stubs.exists() and stubs.is_file() else None
 
-    if existing_stubs and args.force:
-        existing_stubs.unlink(True)
-        existing_stubs.touch()
+        if existing_stubs and args.force:
+            existing_stubs.unlink(True)
+            existing_stubs.touch()
 
     template = generate_template(args, cores, implementations, instances, existing_stubs)
 
-    if not isinstance(outf, TextIO):
-        outf = open(str(outf), 'w')
-
-    with outf:
+    with (sys.stdout if stubs_path == '-' else open(str(stubs), 'w')) as outf:
         outf.write(template)
         outf.flush()
 

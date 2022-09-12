@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
 
+import re
 import sys
 from argparse import ArgumentParser, Namespace
 from inspect import Parameter, Signature
@@ -402,6 +403,39 @@ def get_existing_implementations(path: str, cores: Sequence[CoreLike]) -> Dict[s
                 plugin_name = None
 
     return result
+
+
+def get_existing_instances(path: str, cores: Sequence[CoreLike]) -> Dict[str, Dict[str, Instance]]:
+    result: Dict[str, Dict[str, Instance]] = {}
+
+    with open(path, "r") as f:
+        core_name: str = ''
+        plugin_name: Optional[str] = None
+
+        for line in f:
+            line = line.strip()
+
+            if line.startswith(instance_start):
+                core_name, plugin_name = instance_bound_pattern.findall(line)[0]
+
+                assert plugin_name
+
+                if core_name not in result:
+                    result[core_name] = {}
+
+                if plugin_name not in result[core_name]:
+                    result[core_name][plugin_name] = Instance.from_namespace(
+                        plugin_name, core_name, cores
+                    )
+
+            if plugin_name:
+                result[core_name][plugin_name].definition.append(line)
+
+            if line.startswith(instance_end):
+                plugin_name = None
+
+    return result
+
 
 def main(argv: list[str] = sys.argv[1:]):
     args = parser.parse_args(args=argv)

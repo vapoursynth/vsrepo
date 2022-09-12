@@ -220,9 +220,9 @@ class PluginMeta(NamedTuple):
 
 
 def retrieve_plugins(
-    core: vs.Core, cores: Iterable[CoreLike], *, only_plugins: Union[Sequence[str], None] = None
+    args: Namespace, core: vs.Core, cores: Iterable[CoreLike]
 ) -> Iterator[PluginMeta]:
-    lower_plugins = list(map(str.lower, only_plugins)) if only_plugins else []
+    lower_plugins = list(map(str.lower, args.plugins)) if args.plugins else []
 
     if lower_plugins:
         find_plugins = lower_plugins.copy()
@@ -388,8 +388,10 @@ def generate_template(
             impl[inst_name]
             for impl in [
                 existing_instances[core_name] for core_name in total_core_names
+                if core_name in existing_instances
             ]
-            for inst_name in missing_impl if inst_name in impl
+            for inst_name in missing_impl
+            if inst_name in impl
         ])
 
     if args.exclude_plugin and existing_stubs:
@@ -505,7 +507,7 @@ def main(argv: list[str] = sys.argv[1:]):
 
     cores = list[CoreLike]([core, core.std.BlankClip(), core.std.BlankAudio()])
 
-    signatures = list(retrieve_plugins(core, cores, only_plugins=args.plugins))
+    signatures = list(retrieve_plugins(args, core, cores))
 
     implementations = make_implementations(signatures)
     instances = make_instances(signatures)

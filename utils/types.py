@@ -6,6 +6,8 @@ from enum import Enum
 from pathlib import Path
 from typing import Dict, Generic, Iterator, List, NamedTuple, Type, TypedDict, TypeVar, Union
 
+from .utils import sanitize_keys
+
 T = TypeVar('T')
 
 
@@ -137,7 +139,7 @@ class VSPackage:
     website: str = ''
     doom9: str = ''
     api: int = 3
-    type: VSPackageType = VSPackageType.Descriptor(VSPackageType.SCRIPT)
+    pkg_type: VSPackageType = VSPackageType.Descriptor(VSPackageType.SCRIPT)
     updatemode: VSPackageUpdateMode = VSPackageUpdateMode.Descriptor(VSPackageUpdateMode.MANUAL)
     releases: List[VSPackageRelease] = field(default_factory=list)
     dependencies: List[str] = field(default_factory=list)
@@ -170,7 +172,8 @@ class VSPackages:
                 )
 
             packages = [
-                VSPackage(**package) for package in vspackages['packages']
+                VSPackage(**sanitize_keys(package, 'package'))
+                for package in vspackages['packages']
             ]
         except (OSError, FileExistsError, ValueError) as e:
             message = str(e) or 'No valid package definitions found. Run update command first!'

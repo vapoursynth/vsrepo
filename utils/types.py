@@ -128,8 +128,11 @@ class VSPackageReleaseWin(_VSPackageReleaseWin32, _VSPackageReleaseWin64, VSPack
     ...
 
 
+BoundVSPackageReleaseT = TypeVar('BoundVSPackageReleaseT', bound=VSPackageRelease)
+
+
 @dataclass
-class VSPackage:
+class VSPackage(Generic[BoundVSPackageReleaseT]):
     name: str
     category: str
     description: str
@@ -141,7 +144,7 @@ class VSPackage:
     api: int = 3
     pkg_type: VSPackageType = VSPackageType.Descriptor(VSPackageType.SCRIPT)
     updatemode: VSPackageUpdateMode = VSPackageUpdateMode.Descriptor(VSPackageUpdateMode.MANUAL)
-    releases: List[VSPackageRelease] = field(default_factory=list)
+    releases: List[BoundVSPackageReleaseT] = field(default_factory=list)
     dependencies: List[str] = field(default_factory=list)
     device: List[VSPackageDeviceType] = field(default_factory=list)
     modulename: Union[str, None] = None
@@ -151,9 +154,9 @@ class VSPackage:
 @dataclass
 class VSPackages:
     file_format: int
-    packages: List[VSPackage]
+    packages: List[VSPackage[VSPackageRelease]]
 
-    def __iter__(self) -> Iterator[VSPackage]:
+    def __iter__(self) -> Iterator[VSPackage[VSPackageRelease]]:
         return iter(self.packages)
 
     @classmethod

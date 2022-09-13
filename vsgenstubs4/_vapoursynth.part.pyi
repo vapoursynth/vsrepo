@@ -222,10 +222,6 @@ S = TypeVar('S')
 SingleAndSequence = Union[T, Sequence[T]]
 
 
-class Callback(Protocol):
-    def __call__(self, *args: Any, **kwds: Any) -> '_VapourSynthMapValue':
-        ...
-
 @runtime_checkable
 class SupportsString(Protocol):
     @abstractmethod
@@ -243,8 +239,12 @@ _VapourSynthMapValue = Union[
     SingleAndSequence['VideoFrame'],
     SingleAndSequence['AudioNode'],
     SingleAndSequence['AudioFrame'],
-    SingleAndSequence[Callback]
+    SingleAndSequence['Callback']
 ]
+
+BoundVSMapValue = TypeVar('BoundVSMapValue', bound=_VapourSynthMapValue)
+
+Callback = Callable[..., BoundVSMapValue]
 
 
 class _Future(Generic[T]):

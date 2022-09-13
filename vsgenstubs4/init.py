@@ -3,6 +3,7 @@
 
 import re
 import sys
+from abc import abstractmethod
 from argparse import ArgumentParser, Namespace
 from inspect import Parameter, Signature
 from itertools import chain
@@ -10,7 +11,10 @@ from keyword import kwlist as reserved_keywords
 from os import SEEK_END, listdir, makedirs, path
 from os.path import join as join_path
 from pathlib import Path
-from typing import Any, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TypeVar, Union
+from typing import (
+    Any, Callable, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TypeVar, Union,
+    runtime_checkable
+)
 
 import vapoursynth as vs
 
@@ -24,21 +28,30 @@ CoreLike = Union[vs.Core, vs.RawNode]
 SingleAndSequence = Union[T, Sequence[T]]
 
 
-class Callback(Protocol):
-    def __call__(self, *args: Any, **kwds: Any) -> '_VapourSynthMapValue':
+@runtime_checkable
+class SupportsString(Protocol):
+    @abstractmethod
+    def __str__(self) -> str:
         ...
 
+
+DataType = Union[str, bytes, bytearray, SupportsString]
 
 _VapourSynthMapValue = Union[
     SingleAndSequence[int],
     SingleAndSequence[float],
-    SingleAndSequence[str],
+    SingleAndSequence[DataType],
     SingleAndSequence[vs.VideoNode],
     SingleAndSequence[vs.VideoFrame],
     SingleAndSequence[vs.AudioNode],
     SingleAndSequence[vs.AudioFrame],
-    SingleAndSequence[Callback]
+    SingleAndSequence['Callback']
 ]
+
+BoundVSMapValue = TypeVar('BoundVSMapValue', bound=_VapourSynthMapValue)
+
+Callback = Callable[..., BoundVSMapValue]
+
 
 vs_value_type = '_VapourSynthMapValue'
 site_package_dirname = 'vapoursynth-stubs'
@@ -174,8 +187,8 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
                     )
 
             # Make Callable definitions sensible
-            signature = signature.replace('Union[Func, Callable]', 'Callback')
-            signature = signature.replace('Union[Func, Callable, None]', 'Optional[Callback]')
+            signature = signature.replace('Union[Func, Callable]', 'Callback[_VapourSynthMapValue]')
+            signature = signature.replace('Union[Func, Callable, None]', 'Optional[Callback[_VapourSynthMapValue]]')
 
             # Replace the keywords with valid values
             for kw in reserved_keywords:

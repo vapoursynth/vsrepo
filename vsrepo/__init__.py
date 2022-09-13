@@ -40,7 +40,7 @@ import zipfile
 from pathlib import Path
 from typing import Dict, Iterator, List, MutableMapping, Optional, Tuple, cast
 
-from utils import VSPackage, VSPackages, BoundVSPackageReleaseT, VSPackageRelease
+from utils import BoundVSPackageRelT, VSPackage, VSPackageRel, VSPackages
 
 try:
     import winreg
@@ -274,7 +274,7 @@ def check_hash(data: bytes, ref_hash: str) -> Tuple[bool, str, str]:
     return (data_hash == ref_hash, data_hash, ref_hash)
 
 
-def get_install_path(p: VSPackage[VSPackageRelease]) -> str:
+def get_install_path(p: VSPackage[VSPackageRel]) -> str:
     if p.pkg_type == 'PyScript' or p.pkg_type == 'PyWheel':
         return py_script_path
     elif p.pkg_type == 'VSPlugin':
@@ -283,7 +283,7 @@ def get_install_path(p: VSPackage[VSPackageRelease]) -> str:
         raise ValueError('Unknown install type')
 
 
-def get_package_from_id(id: str, required: bool = False) -> Optional[VSPackage[VSPackageRelease]]:
+def get_package_from_id(id: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
     for p in package_list:
         if p.identifier == id:
             return p
@@ -294,7 +294,7 @@ def get_package_from_id(id: str, required: bool = False) -> Optional[VSPackage[V
     return None
 
 
-def get_package_from_plugin_name(name: str, required: bool = False) -> Optional[VSPackage[VSPackageRelease]]:
+def get_package_from_plugin_name(name: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
     for p in package_list:
         if p.name.casefold() == name.casefold():
             return p
@@ -303,7 +303,7 @@ def get_package_from_plugin_name(name: str, required: bool = False) -> Optional[
     return None
 
 
-def get_package_from_namespace(namespace: str, required: bool = False) -> Optional[VSPackage[VSPackageRelease]]:
+def get_package_from_namespace(namespace: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
     for p in package_list:
         if p.namespace == namespace:
             return p
@@ -314,7 +314,7 @@ def get_package_from_namespace(namespace: str, required: bool = False) -> Option
     return None
 
 
-def get_package_from_modulename(modulename: str, required: bool = False) -> Optional[VSPackage[VSPackageRelease]]:
+def get_package_from_modulename(modulename: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
     for p in package_list:
         if p.modulename == modulename:
             return p
@@ -325,7 +325,7 @@ def get_package_from_modulename(modulename: str, required: bool = False) -> Opti
     return None
 
 
-def get_package_from_name(name: str) -> VSPackage[VSPackageRelease]:
+def get_package_from_name(name: str) -> VSPackage[VSPackageRel]:
     p = get_package_from_id(name)
     if p is None:
         p = get_package_from_namespace(name)
@@ -362,13 +362,13 @@ def is_package_upgradable(id: str, force: bool) -> bool:
         )
 
 
-def get_python_package_name(pkg: VSPackage[BoundVSPackageReleaseT]) -> str:
+def get_python_package_name(pkg: VSPackage[BoundVSPackageRelT]) -> str:
     package_name = pkg.wheelname or pkg.name
 
     return package_name.replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "")
 
 
-def find_dist_version(pkg: VSPackage[BoundVSPackageReleaseT], path: Optional[str]) -> Optional[str]:
+def find_dist_version(pkg: VSPackage[BoundVSPackageRelT], path: Optional[str]) -> Optional[str]:
     if path is None:
         return None
 
@@ -408,13 +408,13 @@ def detect_installed_packages() -> None:
                             exists = False
                             matched = False
                     if matched:
-                        installed_packages[p.identifier] = v.version
+                        installed_packages[p.identifier] = v['version']
                         break
                     elif exists:
                         installed_packages[p.identifier] = 'Unknown'
 
 
-def print_package_status(p: VSPackage[VSPackageRelease]) -> None:
+def print_package_status(p: VSPackage[VSPackageRel]) -> None:
     lastest_installable = get_latest_installable_release(p)
     name = p.name
     if is_package_upgradable(p.identifier, False):
@@ -446,7 +446,7 @@ def list_available_packages() -> None:
         print_package_status(p)
 
 
-def get_latest_installable_release_with_index(p: VSPackage[VSPackageRelease]) -> Tuple[int, Optional[VSPackageRelease]]:
+def get_latest_installable_release_with_index(p: VSPackage[VSPackageRel]) -> Tuple[int, Optional[VSPackageRel]]:
     max_api = get_vapoursynth_api_version()
     bin_name = p.pkg_type.value
     for idx, rel in enumerate(p.releases):
@@ -461,11 +461,11 @@ def get_latest_installable_release_with_index(p: VSPackage[VSPackageRelease]) ->
     return (-1, None)
 
 
-def get_latest_installable_release(p: VSPackage[VSPackageRelease]) -> Optional[VSPackageRelease]:
+def get_latest_installable_release(p: VSPackage[VSPackageRel]) -> Optional[VSPackageRel]:
     return get_latest_installable_release_with_index(p)[1]
 
 
-def can_install(p: VSPackage[VSPackageRelease]) -> bool:
+def can_install(p: VSPackage[VSPackageRel]) -> bool:
     return get_latest_installable_release(p) is not None
 
 
@@ -517,7 +517,7 @@ def find_dist_dirs(name: str, path: Optional[str] = site_package_dir) -> Iterato
         yield os.path.join(path, targetname)
 
 
-def remove_package_meta(pkg: VSPackage[BoundVSPackageReleaseT]) -> None:
+def remove_package_meta(pkg: VSPackage[BoundVSPackageRelT]) -> None:
     if site_package_dir is None:
         return
 
@@ -529,7 +529,7 @@ def remove_package_meta(pkg: VSPackage[BoundVSPackageReleaseT]) -> None:
 
 def install_package_meta(
         files: List[Tuple[str, str, str]],
-        pkg: VSPackage[BoundVSPackageReleaseT], rel: BoundVSPackageReleaseT, index: int) -> None:
+        pkg: VSPackage[BoundVSPackageRelT], rel: BoundVSPackageRelT, index: int) -> None:
     if site_package_dir is None:
         return
 
@@ -566,7 +566,7 @@ Platform: All""")
             w.writerow([filename, sha256hex, length])
 
 
-def install_files(p: VSPackage[VSPackageRelease]) -> Tuple[int, int]:
+def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
     err = (0, 1)
     dest_path = get_install_path(p)
     bin_name = p.pkg_type.value
@@ -698,7 +698,7 @@ def install_package(name: str) -> Tuple[int, int, int]:
         return (0, 0, 1)
 
 
-def upgrade_files(p: VSPackage[VSPackageRelease]) -> Tuple[int, int, int]:
+def upgrade_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int, int]:
     if can_install(p):
         inst = (0, 0, 0)
         if p.dependencies:
@@ -741,7 +741,7 @@ def upgrade_all_packages(force: bool) -> Tuple[int, int, int]:
     return inst
 
 
-def uninstall_files(p: VSPackage[VSPackageRelease]) -> None:
+def uninstall_files(p: VSPackage[VSPackageRel]) -> None:
     dest_path = get_install_path(p)
     bin_name = p.pkg_type.value
 
@@ -764,7 +764,7 @@ def uninstall_files(p: VSPackage[VSPackageRelease]) -> None:
         for dist_dir in find_dist_dirs(pyname, dest_path):
             rmdir(dist_dir)
     else:
-        installed_rel: Optional[VSPackageRelease] = None
+        installed_rel: Optional[VSPackageRel] = None
         if p.identifier in installed_packages:
             for rel in p.releases:
                 if rel['version'] == installed_packages[p.identifier]:

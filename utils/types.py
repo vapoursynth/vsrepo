@@ -4,7 +4,7 @@ import sys
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
-from typing import Dict, Generic, Iterator, List, NamedTuple, Type, TypedDict, TypeVar, Union
+from typing import Dict, Generic, Iterator, List, Literal, NamedTuple, Type, TypedDict, TypeVar, Union, overload
 
 from .utils import sanitize_keys
 
@@ -95,44 +95,44 @@ class VSPackagePlatformRelease:
     api: int = 3
 
 
-class VSPackageRelease(TypedDict, total=False):
+class VSPackageRel(TypedDict, total=False):
     version: str
     published: str
 
 
-class VSPackageReleasePyScript(VSPackageRelease):
+class VSPackageRelPyScript(VSPackageRel):
     script: VSPackagePlatformRelease
 
 
-class VSPackageReleasePyWheel(VSPackageRelease):
+class VSPackageRelPyWheel(VSPackageRel):
     wheel: VSPackagePlatformReleaseWheel
 
 
-class _VSPackageReleaseWin32(TypedDict, total=False):
+class _VSPackageRelWin32(TypedDict, total=False):
     win32: VSPackagePlatformRelease
 
 
-class _VSPackageReleaseWin64(TypedDict, total=False):
+class _VSPackageRelWin64(TypedDict, total=False):
     win64: VSPackagePlatformRelease
 
 
-class VSPackageReleaseWin32(_VSPackageReleaseWin32, VSPackageRelease):
+class VSPackageRelWin32(_VSPackageRelWin32, VSPackageRel):
     ...
 
 
-class VSPackageReleaseWin64(_VSPackageReleaseWin64, VSPackageRelease):
+class VSPackageRelWin64(_VSPackageRelWin64, VSPackageRel):
     ...
 
 
-class VSPackageReleaseWin(_VSPackageReleaseWin32, _VSPackageReleaseWin64, VSPackageRelease):
+class VSPackageRelWin(_VSPackageRelWin32, _VSPackageRelWin64, VSPackageRel):
     ...
 
 
-BoundVSPackageReleaseT = TypeVar('BoundVSPackageReleaseT', bound=VSPackageRelease)
+BoundVSPackageRelT = TypeVar('BoundVSPackageRelT', bound=VSPackageRel)
 
 
 @dataclass
-class VSPackage(Generic[BoundVSPackageReleaseT]):
+class VSPackage(Generic[BoundVSPackageRelT]):
     name: str
     category: str
     description: str
@@ -144,7 +144,7 @@ class VSPackage(Generic[BoundVSPackageReleaseT]):
     api: int = 3
     pkg_type: VSPackageType = VSPackageType.Descriptor(VSPackageType.SCRIPT)
     updatemode: VSPackageUpdateMode = VSPackageUpdateMode.Descriptor(VSPackageUpdateMode.MANUAL)
-    releases: List[BoundVSPackageReleaseT] = field(default_factory=list)
+    releases: List[BoundVSPackageRelT] = field(default_factory=list)
     dependencies: List[str] = field(default_factory=list)
     device: List[VSPackageDeviceType] = field(default_factory=list)
     modulename: Union[str, None] = None
@@ -154,9 +154,9 @@ class VSPackage(Generic[BoundVSPackageReleaseT]):
 @dataclass
 class VSPackages:
     file_format: int
-    packages: List[VSPackage[VSPackageRelease]]
+    packages: List[VSPackage[VSPackageRel]]
 
-    def __iter__(self) -> Iterator[VSPackage[VSPackageRelease]]:
+    def __iter__(self) -> Iterator[VSPackage[VSPackageRel]]:
         return iter(self.packages)
 
     @classmethod

@@ -4,7 +4,10 @@ import sys
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
-from typing import Dict, Generic, Iterator, List, Literal, NamedTuple, Type, TypedDict, TypeVar, Union, overload
+from typing import (
+    Dict, Generic, Iterator, List, Literal, NamedTuple, Type, TypedDict, TypeVar, Union, overload
+)
+from typing_extensions import TypeGuard
 
 from .utils import sanitize_keys
 
@@ -150,6 +153,25 @@ class VSPackage(Generic[BoundVSPackageRelT]):
     modulename: Union[str, None] = None
     wheelname: Union[str, None] = None
 
+    @overload
+    def is_type(self, pkg_type: Literal[VSPackageType.SCRIPT]) -> TypeGuard[VSPackageRelPyScript]:
+        ...
+
+    @overload
+    def is_type(self, pkg_type: Literal[VSPackageType.WHEEL]) -> TypeGuard[VSPackageRelPyWheel]:
+        ...
+
+    @overload
+    def is_type(self, pkg_type: Literal[VSPackageType.PLUGIN]) -> TypeGuard[VSPackageRelWin]:
+        ...
+
+    @overload
+    def is_type(self, pkg_type: VSPackageType) -> bool:
+        ...
+
+    def is_type(self, pkg_type: VSPackageType) -> bool:
+        return self.pkg_type is pkg_type
+
 
 @dataclass
 class VSPackages:
@@ -158,6 +180,21 @@ class VSPackages:
 
     def __iter__(self) -> Iterator[VSPackage[VSPackageRel]]:
         return iter(self.packages)
+
+    @overload
+    def packages_from_type(self, pkg_type: Literal[VSPackageType.SCRIPT]) -> Iterator[VSPackage[VSPackageRelPyScript]]:
+        ...
+
+    @overload
+    def packages_from_type(self, pkg_type: Literal[VSPackageType.WHEEL]) -> Iterator[VSPackage[VSPackageRelPyWheel]]:
+        ...
+
+    @overload
+    def packages_from_type(self, pkg_type: Literal[VSPackageType.PLUGIN]) -> Iterator[VSPackage[VSPackageRelWin]]:
+        ...
+
+    def packages_from_type(self, pkg_type: VSPackageType) -> Iterator[VSPackage[VSPackageRel]]:  # type: ignore
+        return (package for package in self.packages if package.is_type(pkg_type))
 
     @classmethod
     def from_file(cls, filepath: Path, /) -> 'VSPackages':

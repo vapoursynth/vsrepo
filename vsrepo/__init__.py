@@ -40,8 +40,7 @@ import zipfile
 from pathlib import Path
 from typing import Dict, Iterator, List, MutableMapping, Optional, Tuple, cast
 
-from utils import VSPackage, VSPackages
-from utils.types import BoundVSPackageReleaseT, VSPackageRelease
+from utils import VSPackage, VSPackages, BoundVSPackageReleaseT, VSPackageRelease
 
 try:
     import winreg

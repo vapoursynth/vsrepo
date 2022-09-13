@@ -38,9 +38,10 @@ import tempfile
 import urllib.request
 import zipfile
 from pathlib import Path
-from typing import Any, Iterator, List, MutableMapping, Optional, Tuple, cast
+from typing import Dict, Iterator, List, MutableMapping, Optional, Tuple, cast
 
 from utils import VSPackage, VSPackages
+from utils.types import BoundVSPackageReleaseT, VSPackageRelease
 
 try:
     import winreg
@@ -234,8 +235,8 @@ if not os.path.isfile(cmd7zip_path):
     except BaseException:
         cmd7zip_path = '7z.exe'
 
-installed_packages: MutableMapping[str, Any] = {}
-download_cache: MutableMapping[str, Any] = {}
+installed_packages: Dict[str, str] = {}
+download_cache: Dict[str, bytearray] = {}
 
 
 def fetch_ur1(url: str, desc: Optional[str] = None) -> bytearray:
@@ -261,7 +262,7 @@ def fetch_url_cached(url: str, desc: str = "") -> bytearray:
     if data is None:
         data = fetch_ur1(url, desc)
         download_cache[url] = data
-    return cast(bytearray, data)
+    return data
 
 
 package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
@@ -274,35 +275,18 @@ def check_hash(data: bytes, ref_hash: str) -> Tuple[bool, str, str]:
     return (data_hash == ref_hash, data_hash, ref_hash)
 
 
-def get_bin_name(p: MutableMapping[str, Any]) -> str:
-    if p['type'] == 'PyScript':
-        return 'script'
-    if p['type'] == 'PyWheel':
-        return 'wheel'
-    elif p['type'] == 'VSPlugin':
-        if is_64bits:
-            return 'win64'
-        else:
-            return 'win32'
-
-    raise ValueError('Unknown install type')
-
-
-def get_install_path(p: MutableMapping[str, Any]) -> str:
-    if p['type'] == 'PyScript' or p['type'] == 'PyWheel':
+def get_install_path(p: VSPackage[VSPackageRelease]) -> str:
+    if p.pkg_type == 'PyScript' or p.pkg_type == 'PyWheel':
         return py_script_path
-    elif p['type'] == 'VSPlugin':
+    elif p.pkg_type == 'VSPlugin':
         return plugin_path
     else:
         raise ValueError('Unknown install type')
 
 
-def get_package_from_id(id: str, required: bool = False) -> Optional[MutableMapping[str, Any]]:
-    if package_list is None:
-        return None
-
+def get_package_from_id(id: str, required: bool = False) -> Optional[VSPackage[VSPackageRelease]]:
     for p in package_list:
-        if p['identifier'] == id:
+        if p.identifier == id:
             return p
 
     if required:
@@ -311,42 +295,38 @@ def get_package_from_id(id: str, required: bool = False) -> Optional[MutableMapp
     return None
 
 
-def get_package_from_plugin_name(name: str, required: bool = False) -> Optional[MutableMapping[str, Any]]:
-    if package_list is None:
-        return None
+def get_package_from_plugin_name(name: str, required: bool = False) -> Optional[VSPackage[VSPackageRelease]]:
     for p in package_list:
-        if p['name'].casefold() == name.casefold():
+        if p.name.casefold() == name.casefold():
             return p
     if required:
         raise ValueError(f'No package with the name {name} found')
     return None
 
 
-def get_package_from_namespace(namespace: str, required: bool = False) -> Optional[MutableMapping[str, Any]]:
-    if package_list is None:
-        return None
+def get_package_from_namespace(namespace: str, required: bool = False) -> Optional[VSPackage[VSPackageRelease]]:
     for p in package_list:
-        if 'namespace' in p:
-            if p['namespace'] == namespace:
-                return p
+        if p.namespace == namespace:
+            return p
+
     if required:
         raise ValueError(f'No package with the namespace {namespace} found')
+
     return None
 
 
-def get_package_from_modulename(modulename: str, required: bool = False) -> Optional[MutableMapping[str, Any]]:
-    if package_list is None:
-        return None
+def get_package_from_modulename(modulename: str, required: bool = False) -> Optional[VSPackage[VSPackageRelease]]:
     for p in package_list:
-        if 'modulename' in p:
-            if p['modulename'] == modulename:
-                return p
+        if p.modulename == modulename:
+            return p
+
     if required:
         raise ValueError(f'No package with the modulename {modulename} found')
+
     return None
 
 
-def get_package_from_name(name: str) -> MutableMapping[str, Any]:
+def get_package_from_name(name: str) -> VSPackage[VSPackageRelease]:
     p = get_package_from_id(name)
     if p is None:
         p = get_package_from_namespace(name)
@@ -383,14 +363,13 @@ def is_package_upgradable(id: str, force: bool) -> bool:
         )
 
 
-def get_python_package_name(pkg: MutableMapping[str, Any]) -> str:
-    if "wheelname" in pkg:
-        return str(pkg["wheelname"].replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", ""))
-    else:
-        return str(pkg["name"].replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", ""))
+def get_python_package_name(pkg: VSPackage[BoundVSPackageReleaseT]) -> str:
+    package_name = pkg.wheelname or pkg.name
+
+    return package_name.replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "")
 
 
-def find_dist_version(pkg: MutableMapping[str, Any], path: Optional[str]) -> Optional[str]:
+def find_dist_version(pkg: VSPackage[BoundVSPackageReleaseT], path: Optional[str]) -> Optional[str]:
     if path is None:
         return None
 
@@ -409,50 +388,46 @@ def find_dist_version(pkg: MutableMapping[str, Any], path: Optional[str]) -> Opt
 
 
 def detect_installed_packages() -> None:
-    if package_list is not None:
-        for p in package_list:
-            dest_path = get_install_path(p)
-            if p['type'] == 'PyWheel':
-                version = find_dist_version(p, dest_path)
-                if version is not None:
-                    installed_packages[p['identifier']] = version
-            else:
-                for v in p['releases']:
-                    matched = True
-                    exists = True
-                    bin_name = get_bin_name(p)
-                    if bin_name in v:
-                        for f in v[bin_name]['files']:
-                            try:
-                                with open(os.path.join(dest_path, f), 'rb') as fh:
-                                    if not check_hash(fh.read(), v[bin_name]['files'][f][1])[0]:
-                                        matched = False
-                            except FileNotFoundError:
-                                exists = False
-                                matched = False
-                        if matched:
-                            installed_packages[p['identifier']] = v['version']
-                            break
-                        elif exists:
-                            installed_packages[p['identifier']] = 'Unknown'
-    else:
-        print('No valid package definitions found. Run update command first!')
-        sys.exit(1)
+    for p in package_list:
+        dest_path = get_install_path(p)
+        if p.pkg_type == 'PyWheel':
+            version = find_dist_version(p, dest_path)
+            if version is not None:
+                installed_packages[p.identifier] = version
+        else:
+            for v in p.releases:
+                matched = True
+                exists = True
+                bin_name = p.pkg_type.value
+                if bin_name in v:
+                    for f in v[bin_name].files:
+                        try:
+                            with open(os.path.join(dest_path, f), 'rb') as fh:
+                                if not check_hash(fh.read(), v[bin_name].files[f][1])[0]:
+                                    matched = False
+                        except FileNotFoundError:
+                            exists = False
+                            matched = False
+                    if matched:
+                        installed_packages[p.identifier] = v.version
+                        break
+                    elif exists:
+                        installed_packages[p.identifier] = 'Unknown'
 
 
-def print_package_status(p: MutableMapping[str, Any]) -> None:
+def print_package_status(p: VSPackage[VSPackageRelease]) -> None:
     lastest_installable = get_latest_installable_release(p)
-    name = p['name']
-    if is_package_upgradable(p['identifier'], False):
+    name = p.name
+    if is_package_upgradable(p.identifier, False):
         name = '*' + name
-    elif is_package_upgradable(p['identifier'], True):
+    elif is_package_upgradable(p.identifier, True):
         name = '+' + name
     print(
         package_print_string.format(
-            name, p['namespace'] if p['type'] == 'VSPlugin' else p['modulename'],
-            installed_packages.get(p['identifier'], ""),
+            name, p.namespace if p.pkg_type == 'VSPlugin' else p.modulename,
+            installed_packages.get(p.identifier, ""),
             lastest_installable.get('version') if lastest_installable is not None else '',
-            p['identifier']
+            p.identifier
         )
     )
 
@@ -467,26 +442,19 @@ def list_installed_packages() -> None:
 
 def list_available_packages() -> None:
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
-    if package_list is None:
-        print("Nothing available to list, please try updating first.")
-        return
+
     for p in package_list:
         print_package_status(p)
 
 
-def get_latest_installable_release_with_index(
-    p: MutableMapping[str, Any]
-) -> Tuple[int, Optional[MutableMapping[str, Any]]]:
+def get_latest_installable_release_with_index(p: VSPackage[VSPackageRelease]) -> Tuple[int, Optional[VSPackageRelease]]:
     max_api = get_vapoursynth_api_version()
-    package_api: int = 3
-    if 'api' in p:
-        package_api = int(p['api'])
-    bin_name = get_bin_name(p)
-    for idx, rel in enumerate(p['releases']):
+    bin_name = p.pkg_type.value
+    for idx, rel in enumerate(p.releases):
         if not isinstance(rel, MutableMapping):
             continue
         if bin_name in rel:
-            bin_api: int = package_api
+            bin_api: int = p.api
             if 'api' in rel[bin_name]:
                 bin_api = int(rel[bin_name]['api'])
             if bin_api <= max_api and bin_api >= 3:
@@ -494,11 +462,11 @@ def get_latest_installable_release_with_index(
     return (-1, None)
 
 
-def get_latest_installable_release(p: MutableMapping[str, Any]) -> Optional[MutableMapping[str, Any]]:
+def get_latest_installable_release(p: VSPackage[VSPackageRelease]) -> Optional[VSPackageRelease]:
     return get_latest_installable_release_with_index(p)[1]
 
 
-def can_install(p: MutableMapping[str, Any]) -> bool:
+def can_install(p: VSPackage[VSPackageRelease]) -> bool:
     return get_latest_installable_release(p) is not None
 
 
@@ -550,7 +518,7 @@ def find_dist_dirs(name: str, path: Optional[str] = site_package_dir) -> Iterato
         yield os.path.join(path, targetname)
 
 
-def remove_package_meta(pkg: MutableMapping[str, Any]) -> None:
+def remove_package_meta(pkg: VSPackage[BoundVSPackageReleaseT]) -> None:
     if site_package_dir is None:
         return
 
@@ -562,7 +530,7 @@ def remove_package_meta(pkg: MutableMapping[str, Any]) -> None:
 
 def install_package_meta(
         files: List[Tuple[str, str, str]],
-        pkg: MutableMapping[str, Any], rel: MutableMapping[str, Any], index: int) -> None:
+        pkg: VSPackage[BoundVSPackageReleaseT], rel: BoundVSPackageReleaseT, index: int) -> None:
     if site_package_dir is None:
         return
 
@@ -582,7 +550,7 @@ def install_package_meta(
         f.write(f"""Metadata-Version: 2.1
 Name: {name}
 Version: {version}
-Summary: {pkg.get('description', name)}
+Summary: {pkg.description or name}
 Platform: All""")
 
     with open(os.path.join(dist_dir, "RECORD"), "w", newline="") as f:
@@ -599,20 +567,20 @@ Platform: All""")
             w.writerow([filename, sha256hex, length])
 
 
-def install_files(p: MutableMapping[str, Any]) -> Tuple[int, int]:
+def install_files(p: VSPackage[VSPackageRelease]) -> Tuple[int, int]:
     err = (0, 1)
     dest_path = get_install_path(p)
-    bin_name = get_bin_name(p)
+    bin_name = p.pkg_type.value
     idx, install_rel = get_latest_installable_release_with_index(p)
     if install_rel is None:
         return err
     url = install_rel[bin_name]['url']
     data: Optional[bytearray] = None
     try:
-        data = fetch_url_cached(url, p['name'] + ' ' + install_rel['version'])
+        data = fetch_url_cached(url, p.name + ' ' + install_rel['version'])
     except BaseException:
         print(
-            'Failed to download ' + p['name'] + ' ' + install_rel['version'] + ', skipping installation and moving on')
+            'Failed to download ' + p.name + ' ' + install_rel['version'] + ', skipping installation and moving on')
         return err
 
     files: List[Tuple[str, str, str]] = []
@@ -655,14 +623,14 @@ def install_files(p: MutableMapping[str, Any]) -> Tuple[int, int]:
                     f.write(basename + '.dist-info/INSTALLER,,\n')
         except BaseException as e:
             print(
-                'Failed to decompress ' + p['name'] + ' ' + install_rel['version'] + ' with error: ' + str(e)
+                'Failed to decompress ' + p.name + ' ' + install_rel['version'] + ' with error: ' + str(e)
                 + ', skipping installation and moving on')
             return err
     else:
         single_file: Optional[Tuple[str, str, str]] = None
-        if len(install_rel[bin_name]['files']) == 1:
-            for key in install_rel[bin_name]['files']:
-                single_file = (key, install_rel[bin_name]['files'][key][0], install_rel[bin_name]['files'][key][1])
+        if len(install_rel[bin_name].files) == 1:
+            for key in install_rel[bin_name].files:
+                single_file = (key, install_rel[bin_name].files[key][0], install_rel[bin_name].files[key][1])
         if (single_file is not None) and (single_file[1] == url.rsplit('/', 2)[-1]):
             install_fn = single_file[0]
             hash_result = check_hash(data, single_file[2])
@@ -679,8 +647,8 @@ def install_files(p: MutableMapping[str, Any]) -> Tuple[int, int]:
             with open(tffd, mode='wb') as tf:
                 tf.write(data)
             result_cache = {}
-            for install_fn in install_rel[bin_name]['files']:
-                fn_props = install_rel[bin_name]['files'][install_fn]
+            for install_fn in install_rel[bin_name].files:
+                fn_props = install_rel[bin_name].files[install_fn]
                 result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, fn_props[0]],
                                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 result.check_returncode()
@@ -691,7 +659,7 @@ def install_files(p: MutableMapping[str, Any]) -> Tuple[int, int]:
                     )
                 result_cache[install_fn] = (result.stdout, fn_props[1])
             uninstall_files(p)
-            for install_fn in install_rel[bin_name]['files']:
+            for install_fn in install_rel[bin_name].files:
                 os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
                 with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
                     files.append((os.path.join(dest_path, install_fn),
@@ -702,62 +670,62 @@ def install_files(p: MutableMapping[str, Any]) -> Tuple[int, int]:
 
         install_package_meta(files, p, install_rel, idx)
 
-    installed_packages[p['identifier']] = install_rel['version']
-    print('Successfully installed ' + p['name'] + ' ' + install_rel['version'])
+    installed_packages[p.identifier] = install_rel['version']
+    print('Successfully installed ' + p.name + ' ' + install_rel['version'])
     return (1, 0)
 
 
 def install_package(name: str) -> Tuple[int, int, int]:
     p = get_package_from_name(name)
     if get_vapoursynth_api_version() <= 3:
-        if p['identifier'] in bundled_api3_plugins:
-            print('Binaries are already bundled for ' + p['name'] + ', skipping installation')
+        if p.identifier in bundled_api3_plugins:
+            print('Binaries are already bundled for ' + p.name + ', skipping installation')
             return (0, 0, 0)
     if can_install(p):
         inst = (0, 0, 0)
         if not args.skip_deps:
-            if 'dependencies' in p:
+            if p.dependencies:
                 for dep in p['dependencies']:
                     if not isinstance(dep, str):
                         continue
                     res = install_package(dep)
                     inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
-        if not is_package_installed(p['identifier']):
+        if not is_package_installed(p.identifier):
             fres = install_files(p)
             inst = (inst[0] + fres[0], inst[1], inst[2] + fres[1])
         return inst
     else:
-        print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
+        print('No binaries available for ' + args.target + ' in package ' + p.name + ', skipping installation')
         return (0, 0, 1)
 
 
-def upgrade_files(p: MutableMapping[str, Any]) -> Tuple[int, int, int]:
+def upgrade_files(p: VSPackage[VSPackageRelease]) -> Tuple[int, int, int]:
     if can_install(p):
         inst = (0, 0, 0)
-        if 'dependencies' in p:
-            for dep in p['dependencies']:
+        if p.dependencies:
+            for dep in p.dependencies:
                 if not is_package_installed(dep):
                     res = install_package(dep)
                     inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
         fres = install_files(p)
         return (inst[0] + fres[0], inst[1], inst[2] + fres[1])
     else:
-        print('No binaries available for ' + args.target + ' in package ' + p['name'] + ', skipping installation')
+        print('No binaries available for ' + args.target + ' in package ' + p.name + ', skipping installation')
         return (0, 0, 1)
 
 
 def upgrade_package(name: str, force: bool) -> Tuple[int, int, int]:
     inst = (0, 0, 0)
     p = get_package_from_name(name)
-    if not is_package_installed(p['identifier']):
-        print('Package ' + p['name'] + ' not installed, can\'t upgrade')
-    elif is_package_upgradable(p['identifier'], force):
+    if not is_package_installed(p.identifier):
+        print('Package ' + p.name + ' not installed, can\'t upgrade')
+    elif is_package_upgradable(p.identifier, force):
         res = upgrade_files(p)
         return (res[0], 0, res[1])
-    elif not is_package_upgradable(p['identifier'], True):
-        print('Package ' + p['name'] + ' not upgraded, latest version installed')
+    elif not is_package_upgradable(p.identifier, True):
+        print('Package ' + p.name + ' not upgraded, latest version installed')
     else:
-        print('Package ' + p['name'] + ' not upgraded, unknown version must use -f to force replacement')
+        print('Package ' + p.name + ' not upgraded, unknown version must use -f to force replacement')
     return inst
 
 
@@ -774,11 +742,11 @@ def upgrade_all_packages(force: bool) -> Tuple[int, int, int]:
     return inst
 
 
-def uninstall_files(p: MutableMapping[str, Any]) -> None:
+def uninstall_files(p: VSPackage[VSPackageRelease]) -> None:
     dest_path = get_install_path(p)
-    bin_name = get_bin_name(p)
+    bin_name = p.pkg_type.value
 
-    if p['type'] == 'PyWheel':
+    if p.pkg_type == 'PyWheel':
         files: List[str] = []
         pyname = get_python_package_name(p)
         for dist_dir in find_dist_dirs(pyname, dest_path):
@@ -797,14 +765,14 @@ def uninstall_files(p: MutableMapping[str, Any]) -> None:
         for dist_dir in find_dist_dirs(pyname, dest_path):
             rmdir(dist_dir)
     else:
-        installed_rel: Optional[MutableMapping[str, Any]] = None
-        if p['identifier'] in installed_packages:
-            for rel in p['releases']:
-                if rel['version'] == installed_packages[p['identifier']]:
+        installed_rel: Optional[VSPackageRelease] = None
+        if p.identifier in installed_packages:
+            for rel in p.releases:
+                if rel['version'] == installed_packages[p.identifier]:
                     installed_rel = rel
                     break
         if installed_rel is not None:
-            for f in installed_rel[bin_name]['files']:
+            for f in installed_rel[bin_name].files:
                 os.remove(os.path.join(dest_path, f))
 
         remove_package_meta(p)
@@ -812,16 +780,16 @@ def uninstall_files(p: MutableMapping[str, Any]) -> None:
 
 def uninstall_package(name: str) -> Tuple[int, int]:
     p = get_package_from_name(name)
-    if is_package_installed(p['identifier']):
-        if installed_packages[p['identifier']] == 'Unknown':
-            print('Can\'t uninstall unknown version of package: ' + p['name'])
+    if is_package_installed(p.identifier):
+        if installed_packages[p.identifier] == 'Unknown':
+            print('Can\'t uninstall unknown version of package: ' + p.name)
             return (0, 0)
         else:
             uninstall_files(p)
-            print('Uninstalled package: ' + p['name'] + ' ' + installed_packages[p['identifier']])
+            print('Uninstalled package: ' + p.name + ' ' + installed_packages[p.identifier])
             return (1, 0)
     else:
-        print('No files installed for ' + p['name'] + ', skipping uninstall')
+        print('No files installed for ' + p.name + ', skipping uninstall')
         return (0, 0)
 
 
@@ -950,10 +918,10 @@ def rebuild_distinfo() -> None:
         pkg = get_package_from_id(pkg_id)
         if pkg is None:
             continue
-        if pkg['type'] == 'PyWheel':
+        if pkg.pkg_type == 'PyWheel':
             continue
 
-        for idx, rel in enumerate(pkg["releases"]):
+        for idx, rel in enumerate(pkg.releases):
             if rel["version"] == pkg_ver:
                 break
         else:
@@ -961,7 +929,7 @@ def rebuild_distinfo() -> None:
             continue
 
         dest_path = get_install_path(pkg)
-        bin_name = get_bin_name(pkg)
+        bin_name = pkg.pkg_type.value
         files = [
             (os.path.join(dest_path, fn), fd[1], str(os.stat(os.path.join(dest_path, fn)).st_size))
             for fn, fd in rel[bin_name]["files"].items()
@@ -981,10 +949,6 @@ def print_paths() -> None:
     else:
         print("Dist-Infos: <Will not be installed>")
 
-
-if args.operation != 'update' and package_list is None:
-    print('Failed to open vspackages3.json. Run update command.')
-    sys.exit(1)
 
 for name in args.package:
     try:

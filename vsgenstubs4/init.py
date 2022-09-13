@@ -124,6 +124,18 @@ types = {
     'VideoFrame', 'AudioFrame'
 }
 
+special_callbacks_types = {
+    'std': {
+        'ModifyFrame.selector': 'VideoFrame',
+        'FrameEval.eval': 'VideoNode',
+        'Lut.function': 'Union[int, float]',
+        'Lut2.function': 'Union[int, float]',
+    },
+    'descale': {
+        'Descale.custom_kernel': 'Union[int, float]'
+    }
+}
+
 
 def load_plugins(args: Namespace) -> vs.Core:
     def _check_plugin(path: str) -> str:
@@ -186,9 +198,23 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
                         f'Union[{t_}, Sequence[{t_}], None]', f'Optional[SingleAndSequence[{t}]]'
                     )
 
+            callback_type = 'Callback[_VapourSynthMapValue]'
+
             # Make Callable definitions sensible
-            signature = signature.replace('Union[Func, Callable]', 'Callback[_VapourSynthMapValue]')
-            signature = signature.replace('Union[Func, Callable, None]', 'Optional[Callback[_VapourSynthMapValue]]')
+            signature = signature.replace('Union[Func, Callable]', callback_type)
+            signature = signature.replace('Union[Func, Callable, None]', f'Optional[{callback_type}]')
+
+            if plugin.namespace in special_callbacks_types:
+                for func_ns, call_type in special_callbacks_types[plugin.namespace].items():
+                    func_name, arg_name = func_ns.split('.')
+
+                    if func_name == func.name:
+                        signature = signature.replace(
+                            f'{arg_name}: {callback_type}', f'{arg_name}: Callback[{call_type}]'
+                        )
+                        signature = signature.replace(
+                            f'{arg_name}: Optional[{callback_type}]', f'{arg_name}: Optional[Callback[{call_type}]]'
+                        )
 
             # Replace the keywords with valid values
             for kw in reserved_keywords:

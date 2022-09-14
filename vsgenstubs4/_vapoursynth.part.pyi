@@ -311,11 +311,11 @@ class MessageType(IntEnum):
     MESSAGE_TYPE_FATAL: 'MessageType'
 
 
-MESSAGE_TYPE_DEBUG: MessageType
-MESSAGE_TYPE_INFORMATION: MessageType
-MESSAGE_TYPE_WARNING: MessageType
-MESSAGE_TYPE_CRITICAL: MessageType
-MESSAGE_TYPE_FATAL: MessageType
+MESSAGE_TYPE_DEBUG: Literal[MessageType.MESSAGE_TYPE_DEBUG]
+MESSAGE_TYPE_INFORMATION: Literal[MessageType.MESSAGE_TYPE_INFORMATION]
+MESSAGE_TYPE_WARNING: Literal[MessageType.MESSAGE_TYPE_WARNING]
+MESSAGE_TYPE_CRITICAL: Literal[MessageType.MESSAGE_TYPE_CRITICAL]
+MESSAGE_TYPE_FATAL: Literal[MessageType.MESSAGE_TYPE_FATAL]
 
 
 class FilterMode(IntEnum):
@@ -325,10 +325,10 @@ class FilterMode(IntEnum):
     fmFrameState: 'FilterMode'
 
 
-fmParallel: FilterMode
-fmParallelRequests: FilterMode
-fmUnordered: FilterMode
-fmFrameState: FilterMode
+fmParallel: Literal[FilterMode.fmParallel]
+fmParallelRequests: Literal[FilterMode.fmParallelRequests]
+fmUnordered: Literal[FilterMode.fmUnordered]
+fmFrameState: Literal[FilterMode.fmFrameState]
 
 
 class CoreCreationFlags(IntEnum):
@@ -337,9 +337,9 @@ class CoreCreationFlags(IntEnum):
     ccfDisableLibraryUnloading: 'CoreCreationFlags'
 
 
-ccfEnableGraphInspection: 'CoreCreationFlags'
-ccfDisableAutoLoading: 'CoreCreationFlags'
-ccfDisableLibraryUnloading: 'CoreCreationFlags'
+ccfEnableGraphInspection: Literal[CoreCreationFlags.ccfEnableGraphInspection]
+ccfDisableAutoLoading: Literal[CoreCreationFlags.ccfDisableAutoLoading]
+ccfDisableLibraryUnloading: Literal[CoreCreationFlags.ccfDisableLibraryUnloading]
 
 
 class MediaType(IntEnum):
@@ -347,8 +347,8 @@ class MediaType(IntEnum):
     AUDIO: 'MediaType'
 
 
-VIDEO: MediaType
-AUDIO: MediaType
+VIDEO: Literal[MediaType.VIDEO]
+AUDIO: Literal[MediaType.AUDIO]
 
 
 class ColorFamily(IntEnum):
@@ -358,10 +358,10 @@ class ColorFamily(IntEnum):
     YUV: 'ColorFamily'
 
 
-UNDEFINED: ColorFamily
-GRAY: ColorFamily
-RGB: ColorFamily
-YUV: ColorFamily
+UNDEFINED: Literal[ColorFamily.UNDEFINED]
+GRAY: Literal[ColorFamily.GRAY]
+RGB: Literal[ColorFamily.RGB]
+YUV: Literal[ColorFamily.YUV]
 
 
 class ColorRange(IntEnum):
@@ -369,8 +369,8 @@ class ColorRange(IntEnum):
     RANGE_LIMITED: 'ColorRange'
 
 
-RANGE_FULL: ColorRange
-RANGE_LIMITED: ColorRange
+RANGE_FULL: Literal[ColorRange.RANGE_FULL]
+RANGE_LIMITED: Literal[ColorRange.RANGE_LIMITED]
 
 
 class SampleType(IntEnum):
@@ -378,8 +378,8 @@ class SampleType(IntEnum):
     FLOAT: 'SampleType'
 
 
-INTEGER: SampleType
-FLOAT: SampleType
+INTEGER: Literal[SampleType.INTEGER]
+FLOAT: Literal[SampleType.FLOAT]
 
 
 class PresetFormat(IntEnum):
@@ -437,58 +437,58 @@ class PresetFormat(IntEnum):
     RGBS: 'PresetFormat'
 
 
-NONE: PresetFormat
+NONE: Literal[PresetFormat.NONE]
 
-GRAY8: PresetFormat
-GRAY9: PresetFormat
-GRAY10: PresetFormat
-GRAY12: PresetFormat
-GRAY14: PresetFormat
-GRAY16: PresetFormat
-GRAY32: PresetFormat
+GRAY8: Literal[PresetFormat.GRAY8]
+GRAY9: Literal[PresetFormat.GRAY9]
+GRAY10: Literal[PresetFormat.GRAY10]
+GRAY12: Literal[PresetFormat.GRAY12]
+GRAY14: Literal[PresetFormat.GRAY14]
+GRAY16: Literal[PresetFormat.GRAY16]
+GRAY32: Literal[PresetFormat.GRAY32]
 
-GRAYH: PresetFormat
-GRAYS: PresetFormat
+GRAYH: Literal[PresetFormat.GRAYH]
+GRAYS: Literal[PresetFormat.GRAYS]
 
-YUV420P8: PresetFormat
-YUV422P8: PresetFormat
-YUV444P8: PresetFormat
-YUV410P8: PresetFormat
-YUV411P8: PresetFormat
-YUV440P8: PresetFormat
+YUV420P8: Literal[PresetFormat.YUV420P8]
+YUV422P8: Literal[PresetFormat.YUV422P8]
+YUV444P8: Literal[PresetFormat.YUV444P8]
+YUV410P8: Literal[PresetFormat.YUV410P8]
+YUV411P8: Literal[PresetFormat.YUV411P8]
+YUV440P8: Literal[PresetFormat.YUV440P8]
 
-YUV420P9: PresetFormat
-YUV422P9: PresetFormat
-YUV444P9: PresetFormat
+YUV420P9: Literal[PresetFormat.YUV420P9]
+YUV422P9: Literal[PresetFormat.YUV422P9]
+YUV444P9: Literal[PresetFormat.YUV444P9]
 
-YUV420P10: PresetFormat
-YUV422P10: PresetFormat
-YUV444P10: PresetFormat
+YUV420P10: Literal[PresetFormat.YUV420P10]
+YUV422P10: Literal[PresetFormat.YUV422P10]
+YUV444P10: Literal[PresetFormat.YUV444P10]
 
-YUV420P12: PresetFormat
-YUV422P12: PresetFormat
-YUV444P12: PresetFormat
+YUV420P12: Literal[PresetFormat.YUV420P12]
+YUV422P12: Literal[PresetFormat.YUV422P12]
+YUV444P12: Literal[PresetFormat.YUV444P12]
 
-YUV420P14: PresetFormat
-YUV422P14: PresetFormat
-YUV444P14: PresetFormat
+YUV420P14: Literal[PresetFormat.YUV420P14]
+YUV422P14: Literal[PresetFormat.YUV422P14]
+YUV444P14: Literal[PresetFormat.YUV444P14]
 
-YUV420P16: PresetFormat
-YUV422P16: PresetFormat
-YUV444P16: PresetFormat
+YUV420P16: Literal[PresetFormat.YUV420P16]
+YUV422P16: Literal[PresetFormat.YUV422P16]
+YUV444P16: Literal[PresetFormat.YUV444P16]
 
-YUV444PH: PresetFormat
-YUV444PS: PresetFormat
+YUV444PH: Literal[PresetFormat.YUV444PH]
+YUV444PS: Literal[PresetFormat.YUV444PS]
 
-RGB24: PresetFormat
-RGB27: PresetFormat
-RGB30: PresetFormat
-RGB36: PresetFormat
-RGB42: PresetFormat
-RGB48: PresetFormat
+RGB24: Literal[PresetFormat.RGB24]
+RGB27: Literal[PresetFormat.RGB27]
+RGB30: Literal[PresetFormat.RGB30]
+RGB36: Literal[PresetFormat.RGB36]
+RGB42: Literal[PresetFormat.RGB42]
+RGB48: Literal[PresetFormat.RGB48]
 
-RGBH: PresetFormat
-RGBS: PresetFormat
+RGBH: Literal[PresetFormat.RGBH]
+RGBS: Literal[PresetFormat.RGBS]
 
 
 class AudioChannels(IntEnum):
@@ -519,31 +519,31 @@ class AudioChannels(IntEnum):
     LOW_FREQUENCY2: 'AudioChannels'
 
 
-FRONT_LEFT: AudioChannels
-FRONT_RIGHT: AudioChannels
-FRONT_CENTER: AudioChannels
-LOW_FREQUENCY: AudioChannels
-BACK_LEFT: AudioChannels
-BACK_RIGHT: AudioChannels
-FRONT_LEFT_OF_CENTER: AudioChannels
-FRONT_RIGHT_OF_CENTER: AudioChannels
-BACK_CENTER: AudioChannels
-SIDE_LEFT: AudioChannels
-SIDE_RIGHT: AudioChannels
-TOP_CENTER: AudioChannels
-TOP_FRONT_LEFT: AudioChannels
-TOP_FRONT_CENTER: AudioChannels
-TOP_FRONT_RIGHT: AudioChannels
-TOP_BACK_LEFT: AudioChannels
-TOP_BACK_CENTER: AudioChannels
-TOP_BACK_RIGHT: AudioChannels
-STEREO_LEFT: AudioChannels
-STEREO_RIGHT: AudioChannels
-WIDE_LEFT: AudioChannels
-WIDE_RIGHT: AudioChannels
-SURROUND_DIRECT_LEFT: AudioChannels
-SURROUND_DIRECT_RIGHT: AudioChannels
-LOW_FREQUENCY2: AudioChannels
+FRONT_LEFT: Literal[AudioChannels.FRONT_LEFT]
+FRONT_RIGHT: Literal[AudioChannels.FRONT_RIGHT]
+FRONT_CENTER: Literal[AudioChannels.FRONT_CENTER]
+LOW_FREQUENCY: Literal[AudioChannels.LOW_FREQUENCY]
+BACK_LEFT: Literal[AudioChannels.BACK_LEFT]
+BACK_RIGHT: Literal[AudioChannels.BACK_RIGHT]
+FRONT_LEFT_OF_CENTER: Literal[AudioChannels.FRONT_LEFT_OF_CENTER]
+FRONT_RIGHT_OF_CENTER: Literal[AudioChannels.FRONT_RIGHT_OF_CENTER]
+BACK_CENTER: Literal[AudioChannels.BACK_CENTER]
+SIDE_LEFT: Literal[AudioChannels.SIDE_LEFT]
+SIDE_RIGHT: Literal[AudioChannels.SIDE_RIGHT]
+TOP_CENTER: Literal[AudioChannels.TOP_CENTER]
+TOP_FRONT_LEFT: Literal[AudioChannels.TOP_FRONT_LEFT]
+TOP_FRONT_CENTER: Literal[AudioChannels.TOP_FRONT_CENTER]
+TOP_FRONT_RIGHT: Literal[AudioChannels.TOP_FRONT_RIGHT]
+TOP_BACK_LEFT: Literal[AudioChannels.TOP_BACK_LEFT]
+TOP_BACK_CENTER: Literal[AudioChannels.TOP_BACK_CENTER]
+TOP_BACK_RIGHT: Literal[AudioChannels.TOP_BACK_RIGHT]
+STEREO_LEFT: Literal[AudioChannels.STEREO_LEFT]
+STEREO_RIGHT: Literal[AudioChannels.STEREO_RIGHT]
+WIDE_LEFT: Literal[AudioChannels.WIDE_LEFT]
+WIDE_RIGHT: Literal[AudioChannels.WIDE_RIGHT]
+SURROUND_DIRECT_LEFT: Literal[AudioChannels.SURROUND_DIRECT_LEFT]
+SURROUND_DIRECT_RIGHT: Literal[AudioChannels.SURROUND_DIRECT_RIGHT]
+LOW_FREQUENCY2: Literal[AudioChannels.LOW_FREQUENCY2]
 
 
 class ChromaLocation(IntEnum):
@@ -555,12 +555,12 @@ class ChromaLocation(IntEnum):
     CHROMA_BOTTOM: 'ChromaLocation'
 
 
-CHROMA_LEFT: ChromaLocation
-CHROMA_CENTER: ChromaLocation
-CHROMA_TOP_LEFT: ChromaLocation
-CHROMA_TOP: ChromaLocation
-CHROMA_BOTTOM_LEFT: ChromaLocation
-CHROMA_BOTTOM: ChromaLocation
+CHROMA_LEFT: Literal[ChromaLocation.CHROMA_LEFT]
+CHROMA_CENTER: Literal[ChromaLocation.CHROMA_CENTER]
+CHROMA_TOP_LEFT: Literal[ChromaLocation.CHROMA_TOP_LEFT]
+CHROMA_TOP: Literal[ChromaLocation.CHROMA_TOP]
+CHROMA_BOTTOM_LEFT: Literal[ChromaLocation.CHROMA_BOTTOM_LEFT]
+CHROMA_BOTTOM: Literal[ChromaLocation.CHROMA_BOTTOM]
 
 
 class FieldBased(IntEnum):
@@ -569,9 +569,9 @@ class FieldBased(IntEnum):
     FIELD_BOTTOM: 'FieldBased'
 
 
-FIELD_PROGRESSIVE: FieldBased
-FIELD_TOP: FieldBased
-FIELD_BOTTOM: FieldBased
+FIELD_PROGRESSIVE: Literal[FieldBased.FIELD_PROGRESSIVE]
+FIELD_TOP: Literal[FieldBased.FIELD_TOP]
+FIELD_BOTTOM: Literal[FieldBased.FIELD_BOTTOM]
 
 
 class MatrixCoefficients(IntEnum):
@@ -589,18 +589,18 @@ class MatrixCoefficients(IntEnum):
     MATRIX_ICTCP: 'MatrixCoefficients'
 
 
-MATRIX_RGB: MatrixCoefficients
-MATRIX_BT709: MatrixCoefficients
-MATRIX_UNSPECIFIED: MatrixCoefficients
-MATRIX_FCC: MatrixCoefficients
-MATRIX_BT470_BG: MatrixCoefficients
-MATRIX_ST170_M: MatrixCoefficients
-MATRIX_YCGCO: MatrixCoefficients
-MATRIX_BT2020_NCL: MatrixCoefficients
-MATRIX_BT2020_CL: MatrixCoefficients
-MATRIX_CHROMATICITY_DERIVED_NCL: MatrixCoefficients
-MATRIX_CHROMATICITY_DERIVED_CL: MatrixCoefficients
-MATRIX_ICTCP: MatrixCoefficients
+MATRIX_RGB: Literal[MatrixCoefficients.MATRIX_RGB]
+MATRIX_BT709: Literal[MatrixCoefficients.MATRIX_BT709]
+MATRIX_UNSPECIFIED: Literal[MatrixCoefficients.MATRIX_UNSPECIFIED]
+MATRIX_FCC: Literal[MatrixCoefficients.MATRIX_FCC]
+MATRIX_BT470_BG: Literal[MatrixCoefficients.MATRIX_BT470_BG]
+MATRIX_ST170_M: Literal[MatrixCoefficients.MATRIX_ST170_M]
+MATRIX_YCGCO: Literal[MatrixCoefficients.MATRIX_YCGCO]
+MATRIX_BT2020_NCL: Literal[MatrixCoefficients.MATRIX_BT2020_NCL]
+MATRIX_BT2020_CL: Literal[MatrixCoefficients.MATRIX_BT2020_CL]
+MATRIX_CHROMATICITY_DERIVED_NCL: Literal[MatrixCoefficients.MATRIX_CHROMATICITY_DERIVED_NCL]
+MATRIX_CHROMATICITY_DERIVED_CL: Literal[MatrixCoefficients.MATRIX_CHROMATICITY_DERIVED_CL]
+MATRIX_ICTCP: Literal[MatrixCoefficients.MATRIX_ICTCP]
 
 
 class TransferCharacteristics(IntEnum):
@@ -621,21 +621,21 @@ class TransferCharacteristics(IntEnum):
     TRANSFER_ARIB_B67: 'TransferCharacteristics'
 
 
-TRANSFER_BT709: TransferCharacteristics
-TRANSFER_UNSPECIFIED: TransferCharacteristics
-TRANSFER_BT470_M: TransferCharacteristics
-TRANSFER_BT470_BG: TransferCharacteristics
-TRANSFER_BT601: TransferCharacteristics
-TRANSFER_ST240_M: TransferCharacteristics
-TRANSFER_LINEAR: TransferCharacteristics
-TRANSFER_LOG_100: TransferCharacteristics
-TRANSFER_LOG_316: TransferCharacteristics
-TRANSFER_IEC_61966_2_4: TransferCharacteristics
-TRANSFER_IEC_61966_2_1: TransferCharacteristics
-TRANSFER_BT2020_10: TransferCharacteristics
-TRANSFER_BT2020_12: TransferCharacteristics
-TRANSFER_ST2084: TransferCharacteristics
-TRANSFER_ARIB_B67: TransferCharacteristics
+TRANSFER_BT709: Literal[TransferCharacteristics.TRANSFER_BT709]
+TRANSFER_UNSPECIFIED: Literal[TransferCharacteristics.TRANSFER_UNSPECIFIED]
+TRANSFER_BT470_M: Literal[TransferCharacteristics.TRANSFER_BT470_M]
+TRANSFER_BT470_BG: Literal[TransferCharacteristics.TRANSFER_BT470_BG]
+TRANSFER_BT601: Literal[TransferCharacteristics.TRANSFER_BT601]
+TRANSFER_ST240_M: Literal[TransferCharacteristics.TRANSFER_ST240_M]
+TRANSFER_LINEAR: Literal[TransferCharacteristics.TRANSFER_LINEAR]
+TRANSFER_LOG_100: Literal[TransferCharacteristics.TRANSFER_LOG_100]
+TRANSFER_LOG_316: Literal[TransferCharacteristics.TRANSFER_LOG_316]
+TRANSFER_IEC_61966_2_4: Literal[TransferCharacteristics.TRANSFER_IEC_61966_2_4]
+TRANSFER_IEC_61966_2_1: Literal[TransferCharacteristics.TRANSFER_IEC_61966_2_1]
+TRANSFER_BT2020_10: Literal[TransferCharacteristics.TRANSFER_BT2020_10]
+TRANSFER_BT2020_12: Literal[TransferCharacteristics.TRANSFER_BT2020_12]
+TRANSFER_ST2084: Literal[TransferCharacteristics.TRANSFER_ST2084]
+TRANSFER_ARIB_B67: Literal[TransferCharacteristics.TRANSFER_ARIB_B67]
 
 
 class ColorPrimaries(IntEnum):
@@ -653,18 +653,18 @@ class ColorPrimaries(IntEnum):
     PRIMARIES_EBU3213_E: 'ColorPrimaries'
 
 
-PRIMARIES_BT709: ColorPrimaries
-PRIMARIES_UNSPECIFIED: ColorPrimaries
-PRIMARIES_BT470_M: ColorPrimaries
-PRIMARIES_BT470_BG: ColorPrimaries
-PRIMARIES_ST170_M: ColorPrimaries
-PRIMARIES_ST240_M: ColorPrimaries
-PRIMARIES_FILM: ColorPrimaries
-PRIMARIES_BT2020: ColorPrimaries
-PRIMARIES_ST428: ColorPrimaries
-PRIMARIES_ST431_2: ColorPrimaries
-PRIMARIES_ST432_1: ColorPrimaries
-PRIMARIES_EBU3213_E: ColorPrimaries
+PRIMARIES_BT709: Literal[ColorPrimaries.PRIMARIES_BT709]
+PRIMARIES_UNSPECIFIED: Literal[ColorPrimaries.PRIMARIES_UNSPECIFIED]
+PRIMARIES_BT470_M: Literal[ColorPrimaries.PRIMARIES_BT470_M]
+PRIMARIES_BT470_BG: Literal[ColorPrimaries.PRIMARIES_BT470_BG]
+PRIMARIES_ST170_M: Literal[ColorPrimaries.PRIMARIES_ST170_M]
+PRIMARIES_ST240_M: Literal[ColorPrimaries.PRIMARIES_ST240_M]
+PRIMARIES_FILM: Literal[ColorPrimaries.PRIMARIES_FILM]
+PRIMARIES_BT2020: Literal[ColorPrimaries.PRIMARIES_BT2020]
+PRIMARIES_ST428: Literal[ColorPrimaries.PRIMARIES_ST428]
+PRIMARIES_ST431_2: Literal[ColorPrimaries.PRIMARIES_ST431_2]
+PRIMARIES_ST432_1: Literal[ColorPrimaries.PRIMARIES_ST432_1]
+PRIMARIES_EBU3213_E: Literal[ColorPrimaries.PRIMARIES_EBU3213_E]
 
 
 ###

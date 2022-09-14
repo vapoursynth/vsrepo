@@ -193,7 +193,7 @@ __all__ = [
     'PythonVSScriptLoggingBridge', 'LogHandle', 'Error',
 
     # Functions
-    'FuncData', 'Func', 'CallbackData', 'FramePtr',
+    'FuncData', 'Func', 'VSMapValueCallbackData', 'FramePtr',
     'Plugin', 'Function',
 
     # Formats
@@ -239,12 +239,12 @@ _VapourSynthMapValue = Union[
     SingleAndSequence['VideoFrame'],
     SingleAndSequence['AudioNode'],
     SingleAndSequence['AudioFrame'],
-    SingleAndSequence['Callback[Any]']
+    SingleAndSequence['VSMapValueCallback[Any]']
 ]
 
 BoundVSMapValue = TypeVar('BoundVSMapValue', bound=_VapourSynthMapValue)
 
-Callback = Callable[..., BoundVSMapValue]
+VSMapValueCallback = Callable[..., BoundVSMapValue]
 
 
 class _Future(Generic[T]):
@@ -1075,7 +1075,7 @@ class AudioNode(RawNode):
 #include <plugins/bound/AudioNode>
 
 
-class CallbackData:
+class VSMapValueCallbackData:
     def __init__(
         self, node: RawNode, env: EnvironmentData,
         callback: Union[Callable[[Union[RawFrame, None], Union[Exception, None]], None], None] = None

@@ -45,12 +45,12 @@ _VapourSynthMapValue = Union[
     SingleAndSequence[vs.VideoFrame],
     SingleAndSequence[vs.AudioNode],
     SingleAndSequence[vs.AudioFrame],
-    SingleAndSequence['Callback[Any]']
+    SingleAndSequence['VSMapValueCallback[Any]']
 ]
 
 BoundVSMapValue = TypeVar('BoundVSMapValue', bound=_VapourSynthMapValue)
 
-Callback = Callable[..., BoundVSMapValue]
+VSMapValueCallback = Callable[..., BoundVSMapValue]
 
 
 vs_value_type = '_VapourSynthMapValue'
@@ -198,7 +198,7 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
                         f'Union[{t_}, Sequence[{t_}], None]', f'Optional[SingleAndSequence[{t}]]'
                     )
 
-            callback_type = 'Callback[_VapourSynthMapValue]'
+            callback_type = 'VSMapValueCallback[_VapourSynthMapValue]'
 
             # Make Callable definitions sensible
             signature = signature.replace('Union[Func, Callable]', callback_type)
@@ -210,11 +210,11 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
 
                     if func_name == func.name:
                         signature = signature.replace(
-                            f'{arg_name}: {callback_type}', f'{arg_name}: Callback[{call_type}]'
+                            f'{arg_name}: {callback_type}', f'{arg_name}: VSMapValueCallback[{call_type}]'
                         )
                         signature = signature.replace(
-                            f'{arg_name}: Optional[{callback_type}]', f'{arg_name}: Optional[Callback[{call_type}]]'
-                        )
+                            f'{arg_name}: Optional[{callback_type}]',
+                            f'{arg_name}: Optional[VSMapValueCallback[{call_type}]]')
 
             # Replace the keywords with valid values
             for kw in reserved_keywords:

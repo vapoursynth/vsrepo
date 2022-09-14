@@ -866,7 +866,7 @@ class VideoFormat:
 class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
     def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
-    def setdefault(  # type: ignore[override]
+    def setdefault(
         self, key: str, default: _VapourSynthMapValue = 0
     ) -> _VapourSynthMapValue: ...
 
@@ -1008,7 +1008,7 @@ class RawNode:
     def __len__(self) -> int: ...
 
 
-SelfRawNode = TypeVar('SelfRawNode', bound=RawNode)  # type: ignore[type-arg]
+SelfRawNode = TypeVar('SelfRawNode', bound=RawNode)
 
 
 class VideoNode(RawNode):

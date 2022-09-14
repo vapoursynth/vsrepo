@@ -77,7 +77,7 @@ parser.add_argument(
 )
 parser.add_argument(
     '--output', '-o', default='@',
-    help="Where to output the file. "
+    help="Where to output the file. Can be a full file path or directory."
     "The special value '-' means output to stdout. "
     "The spcial value '@' will install it as a stub-package inside site-packages."
 )
@@ -485,11 +485,19 @@ def output_stubs(
                 stubs = stubs.cwd() / stubs
             stubs = stubs.absolute()
 
+        if not stubs.suffix:
+            if stubs.name.lower() == 'vapoursynth':
+                stubs /= '__init__.pyi'
+            else:
+                stubs /= 'vapoursynth.pyi'
+
         existing_stubs = stubs if stubs.exists() and stubs.is_file() else None
 
         if existing_stubs and args.force:
             existing_stubs.unlink(True)
             existing_stubs.touch()
+        else:
+            makedirs(stubs.parent, exist_ok=True)
 
     template = generate_template(args, cores, implementations, instances, existing_stubs)
 

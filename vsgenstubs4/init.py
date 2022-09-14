@@ -45,7 +45,7 @@ _VapourSynthMapValue = Union[
     SingleAndSequence[vs.VideoFrame],
     SingleAndSequence[vs.AudioNode],
     SingleAndSequence[vs.AudioFrame],
-    SingleAndSequence['Callback']
+    SingleAndSequence['Callback[Any]']
 ]
 
 BoundVSMapValue = TypeVar('BoundVSMapValue', bound=_VapourSynthMapValue)

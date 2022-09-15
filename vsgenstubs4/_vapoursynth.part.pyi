@@ -193,7 +193,7 @@ __all__ = [
     'PythonVSScriptLoggingBridge', 'LogHandle', 'Error',
 
     # Functions
-    'FuncData', 'Func', 'VSMapValueCallbackData', 'FramePtr',
+    'FuncData', 'Func', 'CallbackData', 'FramePtr',
     'Plugin', 'Function',
 
     # Formats
@@ -1075,7 +1075,7 @@ class AudioNode(RawNode):
 #include <plugins/bound/AudioNode>
 
 
-class VSMapValueCallbackData:
+class CallbackData:
     def __init__(
         self, node: RawNode, env: EnvironmentData,
         callback: Union[Callable[[Union[RawFrame, None], Union[Exception, None]], None], None] = None

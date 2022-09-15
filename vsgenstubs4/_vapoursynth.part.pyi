@@ -209,7 +209,7 @@ __all__ = [
     'Core', '_CoreProxy', 'core',
 
     # Inspection API [UNSTABLE API]
-    '_try_enable_introspection'
+    # '_try_enable_introspection'
 ]
 
 
@@ -757,7 +757,7 @@ class Environment:
     def single(self) -> bool: ...
 
     @classmethod
-    def is_single(self) -> bool: ...
+    def is_single(cls) -> bool: ...
 
     @property
     def env_id(self) -> int: ...
@@ -991,7 +991,7 @@ class RawNode:
     def __eq__(self: 'SelfRawNode', other: 'SelfRawNode', /) -> bool: ...  # type: ignore[misc]
 
     @overload
-    def __eq__(self: 'SelfRawNode', other: Any, /) -> Literal[False]: ...
+    def __eq__(self, other: Any, /) -> Literal[False]: ...
 
     def __add__(self: 'SelfRawNode', other: 'SelfRawNode', /) -> 'SelfRawNode': ...
 

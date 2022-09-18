@@ -40,6 +40,7 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 from utils import BoundVSPackageRelT, VSPackage, VSPackageRel, VSPackages
+from utils.install import InstallFileResult
 from utils.installations import get_vapoursynth_api_version
 from utils.net import fetch_url_cached
 from utils.packages import InstalledPackages
@@ -292,23 +293,27 @@ Platform: All""")
             w.writerow([filename, sha256hex, length])
 
 
-def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
-    err = (0, 1)
+def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
+    err = InstallFileResult(0, 1)
     dest_path = get_install_path(p)
 
     idx, install_rel = p.get_latest_installable_release_with_index()
+
     if install_rel is None:
         return err
+
     release = install_rel.get_release(p.pkg_type)
     assert release
 
     data: Optional[bytearray] = None
+
     try:
         data = fetch_url_cached(release.url, p.name + ' ' + install_rel.version)
     except BaseException:
         print(
             'Failed to download ' + p.name + ' ' + install_rel.version + ', skipping installation and moving on'
         )
+
         return err
 
     files: List[Tuple[str, str, str]] = []
@@ -318,35 +323,48 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
 
         try:
             hash_result = check_hash(data, release.hash)
+
             if not hash_result[0]:
                 raise ValueError(
                     'Hash mismatch for ' + release.url + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+
             with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
                 basename: Optional[str] = None
+
                 for fn in zf.namelist():
                     if fn.endswith('.dist-info/WHEEL'):
                         basename = fn[:-len('.dist-info/WHEEL')]
                         break
+
                 if basename is None:
                     raise Exception('Wheel: failed to determine package base name')
+
                 for fn in zf.namelist():
                     if fn.startswith(basename + '.data'):
                         raise Exception('Wheel: .data dir mapping not supported')
+
                 wheelfile = zf.read(basename + '.dist-info/WHEEL').decode().splitlines()
                 wheeldict = {}
+
                 for line in wheelfile:
                     tmp = line.split(': ', 2)
                     if len(tmp) == 2:
                         wheeldict[tmp[0]] = tmp[1]
+
                 if wheeldict['Wheel-Version'] != '1.0':
                     raise Exception('Wheel: only version 1.0 supported')
+
                 if wheeldict['Root-Is-Purelib'] != 'true':
                     raise Exception('Wheel: only purelib root supported')
+
                 zf.extractall(path=dest_path)
+
                 with open(os.path.join(dest_path, basename + '.dist-info', 'INSTALLER'), mode='w') as f:
                     f.write("vsrepo")
+
                 with open(os.path.join(dest_path, basename + '.dist-info', 'RECORD')) as f:
                     contents = f.read()
+
                 with open(os.path.join(dest_path, basename + '.dist-info', 'RECORD'), mode='a') as f:
                     if not contents.endswith("\n"):
                         f.write("\n")
@@ -355,9 +373,11 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
             print(
                 'Failed to decompress ' + p.name + ' ' + install_rel.version + ' with error: ' + str(e)
                 + ', skipping installation and moving on')
+
             return err
     else:
         single_file: Optional[Tuple[str, str, str]] = None
+
         if len(release.files) == 1:
             for key in release.files:
                 single_file = (
@@ -365,22 +385,30 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
                     release.files[key][0],
                     release.files[key][1]
                 )
+
         if (single_file is not None) and (single_file[1] == release.url.rsplit('/', 2)[-1]):
             install_fn = single_file[0]
             hash_result = check_hash(data, single_file[2])
+
             if not hash_result[0]:
                 raise Exception(
                     'Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+
             uninstall_files(p)
+
             os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
+
             with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
                 files.append((os.path.join(dest_path, install_fn), single_file[2], str(len(data))))
                 outfile.write(data)
         else:
             tffd, tfpath = tempfile.mkstemp(prefix='vsm')
+
             with open(tffd, mode='wb') as tf:
                 tf.write(data)
+
             result_cache = {}
+
             for install_fn in release.files:
                 fn_props = release.files[install_fn]
                 result = subprocess.run(
@@ -389,26 +417,34 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
                 )
                 result.check_returncode()
                 hash_result = check_hash(result.stdout, fn_props[1])
+
                 if not hash_result[0]:
                     raise Exception(
                         'Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2]
                     )
+
                 result_cache[install_fn] = (result.stdout, fn_props[1])
+
             uninstall_files(p)
+
             for install_fn in release.files:
                 os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
                 with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
-                    files.append((os.path.join(dest_path, install_fn),
-                                  str(result_cache[install_fn][1]),
-                                  str(len(result_cache[install_fn][0]))))
+                    files.append((
+                        os.path.join(dest_path, install_fn),
+                        str(result_cache[install_fn][1]),
+                        str(len(result_cache[install_fn][0]))
+                    ))
                     outfile.write(result_cache[install_fn][0])
             os.remove(tfpath)
 
         install_package_meta(files, p, install_rel, idx)
 
     installed_packages[p.identifier] = install_rel.version
+
     print('Successfully installed ' + p.name + ' ' + install_rel.version)
-    return (1, 0)
+
+    return InstallFileResult(1, 0)
 
 
 def install_package(name: str) -> Tuple[int, int, int]:

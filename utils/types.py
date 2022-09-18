@@ -6,6 +6,8 @@ from enum import Enum
 from pathlib import Path
 from typing import Dict, Generic, Iterator, List, Literal, NamedTuple, Tuple, Type, TypeVar, Union, overload
 
+from utils.site import InstallationInfo
+
 from .installations import get_vapoursynth_api_version
 from .utils import sanitize_keys
 
@@ -185,6 +187,20 @@ class VSPackage(Generic[BoundVSPackageRelT]):
 
     def get_latest_installable_release(self) -> Union[VSPackageRel, None]:
         return self.get_latest_installable_release_with_index()[1]
+
+    def get_install_path(self, info: InstallationInfo) -> str:
+        if self.pkg_type in {VSPackageType.SCRIPT, VSPackageType.WHEEL}:
+            return info.py_script_path
+
+        if self.pkg_type is VSPackageType.PLUGIN:
+            return info.plugin_path
+
+        raise ValueError('Unknown install type')
+
+    def get_python_name(self) -> str:
+        package_name = self.wheelname or self.name
+
+        return package_name.replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "")
 
 
 @dataclass

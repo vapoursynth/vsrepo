@@ -97,27 +97,11 @@ def check_hash(data: bytes, ref_hash: str) -> Tuple[bool, str, str]:
     return (data_hash == ref_hash, data_hash, ref_hash)
 
 
-def get_install_path(p: VSPackage[VSPackageRel]) -> str:
-    if p.pkg_type == 'PyScript' or p.pkg_type == 'PyWheel':
-        return info.py_script_path
-
-    if p.pkg_type == 'VSPlugin':
-        return info.plugin_path
-
-    raise ValueError('Unknown install type')
-
-
-def get_python_package_name(pkg: VSPackage[BoundVSPackageRelT]) -> str:
-    package_name = pkg.wheelname or pkg.name
-
-    return package_name.replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "")
-
-
 def find_dist_version(pkg: VSPackage[BoundVSPackageRelT], path: Optional[str]) -> Optional[str]:
     if path is None:
         return None
 
-    name = get_python_package_name(pkg)
+    name = pkg.get_python_name()
     versions: List[str] = []
 
     for targetname in os.listdir(path):
@@ -133,7 +117,7 @@ def find_dist_version(pkg: VSPackage[BoundVSPackageRelT], path: Optional[str]) -
 
 def detect_installed_packages() -> None:
     for p in package_list:
-        dest_path = get_install_path(p)
+        dest_path = p.get_install_path(info)
         if p.pkg_type == 'PyWheel':
             version = find_dist_version(p, dest_path)
             if version is not None:
@@ -248,7 +232,7 @@ def remove_package_meta(pkg: VSPackage[BoundVSPackageRelT]) -> None:
     if info.site_package_dir is None:
         return
 
-    name = get_python_package_name(pkg)
+    name = pkg.get_python_name()
 
     for dist_dir in find_dist_dirs(name):
         rmdir(dist_dir)
@@ -260,7 +244,7 @@ def install_package_meta(
     if info.site_package_dir is None:
         return
 
-    name = get_python_package_name(pkg)
+    name = pkg.get_python_name()
 
     version = make_pyversion(rel.version, index)
     dist_dir = os.path.join(info.site_package_dir, f"{name}-{version}.dist-info")
@@ -295,7 +279,7 @@ Platform: All""")
 
 def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
     err = InstallFileResult(0, 1)
-    dest_path = get_install_path(p)
+    dest_path = p.get_install_path(info)
 
     idx, install_rel = p.get_latest_installable_release_with_index()
 
@@ -518,11 +502,11 @@ def upgrade_all_packages(force: bool) -> InstallPackageResult:
 
 
 def uninstall_files(p: VSPackage[VSPackageRel]) -> None:
-    dest_path = get_install_path(p)
+    dest_path = p.get_install_path(info)
 
     if p.pkg_type == 'PyWheel':
         files: List[str] = []
-        pyname = get_python_package_name(p)
+        pyname = p.get_python_name()
         for dist_dir in find_dist_dirs(pyname, dest_path):
             with open(os.path.join(dest_path, dist_dir, 'RECORD'), mode='r') as rec:
                 lines = rec.read().splitlines()
@@ -683,7 +667,7 @@ def rebuild_distinfo() -> None:
             remove_package_meta(pkg)
             continue
 
-        dest_path = get_install_path(pkg)
+        dest_path = pkg.get_install_path(info)
 
         prel = rel.get_release(pkg.pkg_type)
         assert prel

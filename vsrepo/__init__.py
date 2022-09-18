@@ -164,9 +164,9 @@ def print_package_status(p: VSPackage[VSPackageRel]) -> None:
     lastest_installable = p.get_latest_installable_release()
     name = p.name
     if installed_packages.is_package_upgradable(p.identifier, False):
-        name = '*' + name
+        name = f'*{name}'
     elif installed_packages.is_package_upgradable(p.identifier, True):
-        name = '+' + name
+        name = f'+{name}'
     print(
         package_print_string.format(
             name, p.namespace if p.pkg_type == 'VSPlugin' else p.modulename,
@@ -308,10 +308,10 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
     data: Optional[bytearray] = None
 
     try:
-        data = fetch_url_cached(release.url, p.name + ' ' + install_rel.version)
+        data = fetch_url_cached(release.url, f'{p.name} {install_rel.version}')
     except BaseException:
         print(
-            'Failed to download {p.name} ' + install_rel.version + ', skipping installation and moving on'
+            f'Failed to download {p.name} {install_rel.version}, skipping installation and moving on'
         )
 
         return err
@@ -325,8 +325,7 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
             hash_result = check_hash(data, release.hash)
 
             if not hash_result[0]:
-                raise ValueError(
-                    'Hash mismatch for ' + release.url + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+                raise ValueError(f'Hash mismatch for {release.url} got {hash_result[1]} but expected {hash_result[2]}')
 
             with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
                 basename: Optional[str] = None
@@ -340,10 +339,10 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
                     raise Exception('Wheel: failed to determine package base name')
 
                 for fn in zf.namelist():
-                    if fn.startswith(basename + '.data'):
+                    if fn.startswith(f'{basename}.data'):
                         raise Exception('Wheel: .data dir mapping not supported')
 
-                wheelfile = zf.read(basename + '.dist-info/WHEEL').decode().splitlines()
+                wheelfile = zf.read(f'{basename}.dist-info/WHEEL').decode().splitlines()
                 wheeldict = {}
 
                 for line in wheelfile:
@@ -359,20 +358,21 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
 
                 zf.extractall(path=dest_path)
 
-                with open(os.path.join(dest_path, basename + '.dist-info', 'INSTALLER'), mode='w') as f:
+                with open(os.path.join(dest_path, f'{basename}.dist-info', 'INSTALLER'), mode='w') as f:
                     f.write("vsrepo")
 
-                with open(os.path.join(dest_path, basename + '.dist-info', 'RECORD')) as f:
+                with open(os.path.join(dest_path, f'{basename}.dist-info', 'RECORD')) as f:
                     contents = f.read()
 
-                with open(os.path.join(dest_path, basename + '.dist-info', 'RECORD'), mode='a') as f:
+                with open(os.path.join(dest_path, f'{basename}.dist-info', 'RECORD'), mode='a') as f:
                     if not contents.endswith("\n"):
                         f.write("\n")
-                    f.write(basename + '.dist-info/INSTALLER,,\n')
+                    f.write(f'{basename}.dist-info/INSTALLER,,\n')
         except BaseException as e:
             print(
-                'Failed to decompress {p.name} ' + install_rel.version + ' with error: ' + str(e)
-                + ', skipping installation and moving on')
+                f'Failed to decompress {p.name} {install_rel.version} with error: {e},'
+                ' skipping installation and moving on'
+            )
 
             return err
     else:
@@ -392,7 +392,8 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
 
             if not hash_result[0]:
                 raise Exception(
-                    'Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+                    f'Hash mismatch for {install_fn} got {hash_result[1]} but expected {hash_result[2]}'
+                )
 
             uninstall_files(p)
 
@@ -420,7 +421,7 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
 
                 if not hash_result[0]:
                     raise Exception(
-                        'Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2]
+                        f'Hash mismatch for {install_fn} got {hash_result[1]} but expected {hash_result[2]}'
                     )
 
                 result_cache[install_fn] = (result.stdout, fn_props[1])
@@ -442,7 +443,7 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
 
     installed_packages[p.identifier] = install_rel.version
 
-    print('Successfully installed {p.name} ' + install_rel.version)
+    print(f'Successfully installed {p.name} {install_rel.version}')
 
     return InstallFileResult(1, 0)
 
@@ -452,7 +453,7 @@ def install_package(name: str) -> InstallPackageResult:
 
     if get_vapoursynth_api_version() <= 3:
         if p.identifier in bundled_api3_plugins:
-            print('Binaries are already bundled for {p.name}, skipping installation')
+            print(f'Binaries are already bundled for {p.name}, skipping installation')
             return InstallPackageResult()
 
     if can_install(p):
@@ -534,7 +535,7 @@ def uninstall_files(p: VSPackage[VSPackageRel]) -> None:
             try:
                 os.remove(os.path.join(dest_path, f))
             except BaseException as e:
-                print('File removal error: ' + str(e))
+                print(f'File removal error: {e}')
         for dist_dir in find_dist_dirs(pyname, dest_path):
             rmdir(dist_dir)
     else:
@@ -557,12 +558,12 @@ def uninstall_package(name: str) -> InstallPackageResult:
     p = installed_packages.get_package_from_name(name)
     if installed_packages.is_package_installed(p.identifier):
         if installed_packages[p.identifier] == 'Unknown':
-            print('Can\'t uninstall unknown version of package: ' + p.name)
+            print(f'Can\'t uninstall unknown version of package: {p.name}')
             return InstallPackageResult()
 
         uninstall_files(p)
 
-        print(f'Uninstalled package: {p.name} ' + installed_packages[p.identifier])
+        print(f'Uninstalled package: {p.name} {installed_packages[p.identifier]}')
         return InstallPackageResult(1)
 
     print(f'No files installed for {p.name}, skipping uninstall')
@@ -592,11 +593,11 @@ def update_package_definition(url: str) -> None:
                     os.utime(info.package_json_path, times=(remote_modtime, remote_modtime))
     except HTTPError as httperr:
         if httperr.code == 304:
-            print('Local definitions already up to date: ' + formatdate(localmtimeval, usegmt=True))
+            print(f'Local definitions already up to date: {formatdate(localmtimeval, usegmt=True)}')
         else:
             raise
     else:
-        print('Local definitions updated to: ' + formatdate(remote_modtime, usegmt=True))
+        print(f'Local definitions updated to: {formatdate(remote_modtime, usegmt=True)}')
 
 
 def update_genstubs() -> None:

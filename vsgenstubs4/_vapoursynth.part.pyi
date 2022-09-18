@@ -89,9 +89,6 @@ __all__ = [
     # Versioning
     '__version__', '__api_version__',
 
-    # Cython capsule
-    '__pyx_capi__',
-
     # Enums and constants
     'MessageType',
         'MESSAGE_TYPE_DEBUG', 'MESSAGE_TYPE_INFORMATION', 'MESSAGE_TYPE_WARNING',
@@ -285,15 +282,6 @@ class VapourSynthAPIVersion(NamedTuple):
 __version__: VapourSynthVersion
 __api_version__: VapourSynthAPIVersion
 
-###
-# VapourSynth Cython capsule
-
-
-class PyCapsule(Structure):
-    ...
-
-
-__pyx_capi__: Dict[str, PyCapsule]
 
 ###
 # VapourSynth Enums and Constants

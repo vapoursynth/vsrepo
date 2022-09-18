@@ -78,9 +78,7 @@ from abc import abstractmethod
 from ctypes import Structure, c_void_p
 from enum import IntEnum
 from fractions import Fraction
-from inspect import Parameter, Signature
-from logging import NOTSET as LogLevelUnset
-from logging import Handler, LogRecord
+from inspect import Signature
 from types import MappingProxyType, TracebackType
 from typing import (
     TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,
@@ -188,10 +186,10 @@ __all__ = [
     'construct_signature',
 
     # Logging
-    'PythonVSScriptLoggingBridge', 'LogHandle', 'Error',
+    'LogHandle', 'Error',
 
     # Functions
-    'FuncData', 'Func', 'CallbackData', 'FramePtr',
+    'FuncData', 'Func', 'FramePtr',
     'Plugin', 'Function',
 
     # Formats
@@ -1039,24 +1037,8 @@ class AudioNode(RawNode):
 #include <plugins/bound/AudioNode>
 
 
-class CallbackData:
-    def __init__(
-        self, node: RawNode, env: EnvironmentData,
-        callback: Union[Callable[[Union[RawFrame, None], Union[Exception, None]], None], None] = None
-    ) -> None: ...
-
-    def receive(self, n: int, result: Union[RawFrame, Exception]) -> None: ...
-
-
 class LogHandle:
     def __init__(self) -> NoReturn: ...  # type: ignore[misc]
-
-
-class PythonVSScriptLoggingBridge(Handler):
-
-    def __init__(self, parent: Handler, level: int = LogLevelUnset) -> None: ...
-
-    def emit(self, record: LogRecord) -> None: ...
 
 
 class Function:

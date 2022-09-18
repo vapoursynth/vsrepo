@@ -8,6 +8,28 @@ from os.path import join as join_path
 from .site import is_venv
 
 
+def get_vapoursynth_version() -> int:
+    try:
+        import vapoursynth
+    except ImportError:
+        return 1
+
+    if hasattr(vapoursynth, "__version__"):
+        return vapoursynth.__version__[0]
+    return vapoursynth.core.version_number()
+
+
+def get_vapoursynth_api_version() -> int:
+    try:
+        import vapoursynth
+    except ImportError:
+        return 1
+
+    if hasattr(vapoursynth, "__api_version__"):
+        return vapoursynth.__api_version__[0]
+    # assume lowest widespread api version, will probably error out somewhere else
+    return 3
+
 def detect_vapoursynth_installation() -> str:
     try:
         spec = find_spec("vapoursynth")

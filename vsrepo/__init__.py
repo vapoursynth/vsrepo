@@ -43,6 +43,7 @@ from utils import BoundVSPackageRelT, VSPackage, VSPackageRel, VSPackages
 from utils.net import fetch_url_cached
 from utils.site import get_installation_info
 from utils.types import VSPackageType
+from utils.installations import get_vapoursynth_api_version
 
 bundled_api3_plugins = {
     'com.vapoursynth.avisource', 'com.vapoursynth.eedi3', 'com.vapoursynth.imwri',
@@ -644,28 +645,6 @@ def update_package_definition(url: str) -> None:
     else:
         print('Local definitions updated to: ' + formatdate(remote_modtime, usegmt=True))
 
-
-def get_vapoursynth_version() -> int:
-    try:
-        import vapoursynth
-    except ImportError:
-        return 1
-
-    if hasattr(vapoursynth, "__version__"):
-        return vapoursynth.__version__[0]
-    return vapoursynth.core.version_number()
-
-
-def get_vapoursynth_api_version() -> int:
-    try:
-        import vapoursynth
-    except ImportError:
-        return 1
-
-    if hasattr(vapoursynth, "__api_version__"):
-        return vapoursynth.__api_version__[0]
-    # assume lowest widespread api version, will probably error out somewhere else
-    return 3
 
 
 def update_genstubs() -> None:

@@ -30,6 +30,7 @@ def get_vapoursynth_api_version() -> int:
     # assume lowest widespread api version, will probably error out somewhere else
     return 3
 
+
 def detect_vapoursynth_installation() -> str:
     try:
         spec = find_spec("vapoursynth")

@@ -5,9 +5,8 @@ from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
 from typing import (
-    Dict, Generic, Iterator, List, Literal, NamedTuple, Type, TypedDict, TypeVar, Union, overload
+    Dict, Generic, Iterator, List, Literal, NamedTuple, Type, TypeVar, Union, overload
 )
-from typing_extensions import TypeGuard
 
 from .utils import sanitize_keys
 
@@ -104,6 +103,17 @@ class VSPackagePlatformRelease:
 class VSPackageRel:
     version: str
     published: str
+
+    @overload
+    def get_release(self, pkg_type: Literal[VSPackageType.WHEEL]) -> VSPackagePlatformReleaseWheel:  # type: ignore
+        ...
+
+    @overload
+    def get_release(self, pkg_type: VSPackageType) -> VSPackagePlatformRelease:
+        ...
+
+    def get_release(self, pkg_type: VSPackageType) -> Union[VSPackagePlatformRelease, VSPackagePlatformReleaseWheel]:
+        return getattr(self, pkg_type.get_package_key())  # type: ignore
 
 
 @dataclass

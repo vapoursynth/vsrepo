@@ -79,6 +79,8 @@ class VSPackageType(str, CustomEnum):
         if self is VSPackageType.PLUGIN:
             return f'win{n_bits}'
 
+        raise ValueError
+
 
 class VSPackagePlatformReleaseFile(NamedTuple):
     filename: str

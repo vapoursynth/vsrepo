@@ -1,9 +1,7 @@
+from pathlib import Path
 import sys
 from glob import glob
 from importlib.util import find_spec
-from os.path import dirname
-from os.path import exists as path_exists
-from os.path import join as join_path
 
 from .site import is_venv
 
@@ -31,7 +29,7 @@ def get_vapoursynth_api_version() -> int:
     return 3
 
 
-def detect_vapoursynth_installation() -> str:
+def detect_vapoursynth_installation() -> Path:
     try:
         spec = find_spec("vapoursynth")
 
@@ -47,13 +45,13 @@ def detect_vapoursynth_installation() -> str:
         except ImportError:
             print("The vapoursynth-module could not be found or imported.")
         else:
-            return vapoursynth.__file__
+            return Path(vapoursynth.__file__)
 
     if spec.origin is None:
         print("VapourSynth's origin could not be determined.")
         sys.exit(1)
 
-    return spec.origin
+    return Path(spec.origin)
 
 
 def is_sitepackage_install_portable(portable: bool) -> bool:
@@ -61,39 +59,18 @@ def is_sitepackage_install_portable(portable: bool) -> bool:
         return False
 
     vapoursynth_path = detect_vapoursynth_installation()
-    return path_exists(join_path(dirname(vapoursynth_path), 'portable.vs'))
+    return vapoursynth_path.with_name('portable.vs').exists()
 
 
 def is_sitepackage_install(portable: bool) -> bool:
     if portable:
         return False
 
-    vapoursynth_path = detect_vapoursynth_installation()
-    base_path = dirname(vapoursynth_path)
+    base_path = detect_vapoursynth_installation().parent
 
-    # We reside in a venv.
-    if is_venv():
-        # VapourSynth has not been installed as a package.
-        # Assume no site-package install
-        if len(glob.glob(join_path(base_path, 'VapourSynth-*.dist-info'))) == 0:
-            return False
+    vs_path = 'VapourSynth' if is_venv() else 'VapourSynth_portable'
 
-        if path_exists(join_path(base_path, "portable.vs")):
-            return True
-
-        # Assume this is not a global install.
+    if not glob(str(base_path / f'{vs_path}-*.dist-info')):
         return False
 
-    # We do not reside in a venv.
-    else:
-        # pip install vapoursynth-portable
-        # Install all packages to site-packages and treat them as packages.
-        if len(glob.glob(join_path(base_path, 'VapourSynth_portable-*.dist-info'))) > 0:
-            return True
-
-        # This is a portable installation, this cannot be a site-package install.
-        if path_exists(join_path(base_path, "portable.vs")):
-            return False
-
-        # This is a global install. Install dist-info files.
-        return True
+    return (base_path / 'portable.vs').exists()

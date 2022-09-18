@@ -96,7 +96,7 @@ class VSPackagePlatformReleaseWheel:
 @dataclass
 class VSPackagePlatformRelease:
     url: str
-    files: Dict[str, VSPackagePlatformReleaseFile]
+    files: Dict[Path, VSPackagePlatformReleaseFile]
     api: int = 3
 
 
@@ -188,7 +188,7 @@ class VSPackage(Generic[BoundVSPackageRelT]):
     def get_latest_installable_release(self) -> Union[VSPackageRel, None]:
         return self.get_latest_installable_release_with_index()[1]
 
-    def get_install_path(self, info: InstallationInfo) -> str:
+    def get_install_path(self, info: InstallationInfo) -> Path:
         if self.pkg_type in {VSPackageType.SCRIPT, VSPackageType.WHEEL}:
             return info.py_script_path
 

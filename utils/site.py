@@ -1,3 +1,4 @@
+from pathlib import Path
 import sys
 from argparse import Namespace
 from os import getcwd, getenv, makedirs
@@ -33,31 +34,29 @@ def get_vs_installation_site() -> str:
 
 class InstallationInfo(NamedTuple):
     is_64bits: bool
-    file_dirname: str
-    package_json_path: str
-    plugin_path: str
-    site_package_dir: Union[str, None]
-    py_script_path: str
-    cmd7zip_path: str
+    file_dirname: Path
+    package_json_path: Path
+    plugin_path: Path
+    site_package_dir: Union[Path, None]
+    py_script_path: Path
+    cmd7zip_path: Path
 
     def print_info(self) -> None:
         print('Paths:')
-        print('Definitions: ' + self.package_json_path)
-        print('Binaries: ' + self.plugin_path)
-        print('Scripts: ' + self.py_script_path)
+        print(f'Definitions: {self.package_json_path}')
+        print(f'Binaries: {self.plugin_path}')
+        print(f'Scripts: {self.py_script_path}')
 
         if self.site_package_dir is not None:
-            print("Dist-Infos: " + self.site_package_dir)
+            print(f'Dist-Infos: {self.site_package_dir}')
         else:
-            print("Dist-Infos: <Will not be installed>")
+            print('Dist-Infos: <Will not be installed>')
 
 
 def get_installation_info(args: Namespace) -> InstallationInfo:
     is_64bits = args.target == 'win64'
 
     file_dirname = dirname(join_path(pardir, pardir, abspath(__file__)))
-
-    print(file_dirname)
 
     # VSRepo is installed to the site-packages.
     if abspath(file_dirname).startswith(abspath(sys.prefix)):
@@ -120,5 +119,7 @@ def get_installation_info(args: Namespace) -> InstallationInfo:
             cmd7zip_path = '7z.exe'
 
     return InstallationInfo(
-        is_64bits, file_dirname, package_json_path, plugin_path, site_package_dir, py_script_path, cmd7zip_path
+        is_64bits, Path(file_dirname), Path(package_json_path), Path(plugin_path),
+        site_package_dir and Path(site_package_dir) or None,
+        Path(py_script_path), Path(cmd7zip_path)
     )

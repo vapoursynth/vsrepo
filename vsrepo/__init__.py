@@ -693,65 +693,64 @@ def main() -> None:
         detect_installed_packages()
         rebuild_distinfo()
 
-        inst = (0, 0, 0)
+        inst = InstallPackageResult()
         for name in args.package:
-            res = install_package(name)
-            inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
+            inst += install_package(name)
 
         update_genstubs()
 
-        pack_str = f'package{inst[0] > 1 and "s" or "s"}'
-        deps_str = f'dependenc{inst[0] > 1 and "ies" or "y"}'
+        pack_str = f'package{inst.success > 1 and "s" or "s"}'
+        deps_str = f'dependenc{inst.success > 1 and "ies" or "y"}'
 
-        if inst[0] == inst[1] == 0:
+        if not inst.success and not inst.success_dependecies:
             print('Nothing done')
-        elif (inst[0] > 0) and (inst[1] == 0):
-            print(f'{inst[0]} {pack_str} installed')
-        elif (inst[0] == 0) and (inst[1] > 0):
-            print(f'{inst[1]} missing {deps_str} installed')
+        elif inst.success and not inst.success_dependecies:
+            print(f'{inst.success} {pack_str} installed')
+        elif not inst.success and inst.success_dependecies:
+            print(f'{inst.success_dependecies} missing {deps_str} installed')
         else:
-            print(f'{inst[0]} {pack_str} and {inst[1]} additional {deps_str} installed')
+            print(f'{inst.success} {pack_str} and {inst.success_dependecies} additional {deps_str} installed')
 
-        if (inst[2] > 0):
-            print(f'{inst[2]} {pack_str} failed')
+        if inst.error:
+            print(f'{inst.error} {pack_str} failed')
     elif args.operation in ('upgrade', 'upgrade-all'):
         detect_installed_packages()
         rebuild_distinfo()
 
-        inst = (0, 0, 0)
+        inst = InstallPackageResult()
         if args.operation == 'upgrade-all':
             inst = upgrade_all_packages(args.force)
         else:
             for name in args.package:
-                res = upgrade_package(name, args.force)
-                inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
+                inst += upgrade_package(name, args.force)
 
         update_genstubs()
 
-        pack_str = f'package{inst[0] > 1 and "s" or "s"}'
-        deps_str = f'dependenc{inst[0] > 1 and "ies" or "y"}'
+        pack_str = f'package{inst.success > 1 and "s" or "s"}'
+        deps_str = f'dependenc{inst.success > 1 and "ies" or "y"}'
 
-        if (inst[0] == 0) and (inst[1] == 0):
+        if not inst.success and not inst.success_dependecies:
             print('Nothing done')
-        elif (inst[0] > 0) and (inst[1] == 0):
-            print(f'{inst[0]} {pack_str} upgraded')
-        elif (inst[0] == 0) and (inst[1] > 0):
-            print(f'{inst[1]} missing {deps_str} installed')
+        elif inst.success and not inst.success_dependecies:
+            print(f'{inst.success} {pack_str} upgraded')
+        elif not inst.success and inst.success_dependecies:
+            print(f'{inst.success_dependecies} missing {deps_str} installed')
         else:
-            print(f'{inst[0]} {pack_str} upgraded and {inst[1]} additional {deps_str} installed')
+            print(f'{inst.success} {pack_str} upgraded and {inst.success_dependecies} additional {deps_str} installed')
 
-        if (inst[2] > 0):
-            print(f'{inst[2]} {pack_str} failed')
+        if inst.error:
+            print(f'{inst.error} {pack_str} failed')
     elif args.operation == 'uninstall':
         detect_installed_packages()
-        uninst = (0, 0)
+        uninst = InstallPackageResult()
         for name in args.package:
-            uninst_res = uninstall_package(name)
-            uninst = (uninst[0] + uninst_res[0], uninst[1] + uninst_res[1])
-        if uninst[0] == 0:
+            uninst += uninstall_package(name)
+
+        if not uninst.success:
             print('No packages uninstalled')
         else:
-            print(f'{uninst[0]} package{uninst[0] > 1 and "s" or "s"} uninstalled')
+            print(f'{uninst.success} package{uninst.success > 1 and "s" or "s"} uninstalled')
+
         update_genstubs()
     elif args.operation == 'installed':
         detect_installed_packages()

@@ -35,15 +35,18 @@ import tempfile
 import zipfile
 from email.utils import formatdate, mktime_tz, parsedate_tz
 from pathlib import Path
-from typing import Dict, Iterator, List, MutableMapping, Optional, Tuple
+from typing import Iterator, List, Optional, Tuple
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 from utils import BoundVSPackageRelT, VSPackage, VSPackageRel, VSPackages
-from utils.net import fetch_url_cached
-from utils.site import get_installation_info
-from utils.types import VSPackageType
 from utils.installations import get_vapoursynth_api_version
+from utils.net import fetch_url_cached
+from utils.packages import InstalledPackages
+from utils.site import get_installation_info
+from utils.types import VSPackagePlatformReleaseWheel, VSPackageType
+
+package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 
 bundled_api3_plugins = {
     'com.vapoursynth.avisource', 'com.vapoursynth.eedi3', 'com.vapoursynth.imwri',
@@ -83,11 +86,9 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) and not args.package:
 
 info = get_installation_info(args)
 
-installed_packages: Dict[str, str] = {}
-
-package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
-
 package_list = VSPackages.from_file(Path(info.package_json_path))
+
+installed_packages = InstalledPackages(info, package_list)
 
 
 def check_hash(data: bytes, ref_hash: str) -> Tuple[bool, str, str]:
@@ -103,85 +104,6 @@ def get_install_path(p: VSPackage[VSPackageRel]) -> str:
         return info.plugin_path
 
     raise ValueError('Unknown install type')
-
-
-def get_package_from_id(id: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
-    for p in package_list:
-        if p.identifier == id:
-            return p
-
-    if required:
-        raise ValueError(f'No package with the identifier {id} found')
-
-    return None
-
-
-def get_package_from_plugin_name(name: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
-    for p in package_list:
-        if p.name.casefold() == name.casefold():
-            return p
-    if required:
-        raise ValueError(f'No package with the name {name} found')
-    return None
-
-
-def get_package_from_namespace(namespace: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
-    for p in package_list:
-        if p.namespace == namespace:
-            return p
-
-    if required:
-        raise ValueError(f'No package with the namespace {namespace} found')
-
-    return None
-
-
-def get_package_from_modulename(modulename: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
-    for p in package_list:
-        if p.modulename == modulename:
-            return p
-
-    if required:
-        raise ValueError(f'No package with the modulename {modulename} found')
-
-    return None
-
-
-def get_package_from_name(name: str) -> VSPackage[VSPackageRel]:
-    p = get_package_from_id(name)
-    if p is None:
-        p = get_package_from_namespace(name)
-    if p is None:
-        p = get_package_from_modulename(name)
-    if p is None:
-        p = get_package_from_plugin_name(name)
-    if p is None:
-        raise ValueError(f'Package {name} not found')
-    return p
-
-
-def is_package_installed(id: str) -> bool:
-    return id in installed_packages
-
-
-def is_package_upgradable(id: str, force: bool) -> bool:
-    pkg = get_package_from_id(id, True)
-    if pkg is None:
-        return False
-    lastest_installable = get_latest_installable_release(pkg)
-    if force:
-        return (
-            is_package_installed(id)
-            and (lastest_installable is not None)
-            and (installed_packages[id] != lastest_installable.version)
-        )
-    else:
-        return (
-            is_package_installed(id)
-            and (lastest_installable is not None)
-            and (installed_packages[id] != 'Unknown')
-            and (installed_packages[id] != lastest_installable.version)
-        )
 
 
 def get_python_package_name(pkg: VSPackage[BoundVSPackageRelT]) -> str:
@@ -220,8 +142,8 @@ def detect_installed_packages() -> None:
                 matched = True
                 exists = True
 
-                if files := v.get_release(p.pkg_type).files:
-                    for f, rel_file in files.items():
+                if (release := v.get_release(p.pkg_type)) and release.files:
+                    for f, rel_file in release.files.items():
                         try:
                             with open(os.path.join(dest_path, f), 'rb') as fh:
                                 if not check_hash(fh.read(), rel_file.filename)[0]:
@@ -238,11 +160,11 @@ def detect_installed_packages() -> None:
 
 
 def print_package_status(p: VSPackage[VSPackageRel]) -> None:
-    lastest_installable = get_latest_installable_release(p)
+    lastest_installable = p.get_latest_installable_release()
     name = p.name
-    if is_package_upgradable(p.identifier, False):
+    if installed_packages.is_package_upgradable(p.identifier, False):
         name = '*' + name
-    elif is_package_upgradable(p.identifier, True):
+    elif installed_packages.is_package_upgradable(p.identifier, True):
         name = '+' + name
     print(
         package_print_string.format(
@@ -257,7 +179,7 @@ def print_package_status(p: VSPackage[VSPackageRel]) -> None:
 def list_installed_packages() -> None:
     print(package_print_string.format('Name', 'Namespace', 'Installed', 'Latest', 'Identifier'))
     for id in installed_packages:
-        pkg = get_package_from_id(id, True)
+        pkg = installed_packages.get_package_from_id(id, True)
         if pkg is not None:
             print_package_status(pkg)
 
@@ -269,27 +191,8 @@ def list_available_packages() -> None:
         print_package_status(p)
 
 
-def get_latest_installable_release_with_index(p: VSPackage[VSPackageRel]) -> Tuple[int, Optional[VSPackageRel]]:
-    max_api = get_vapoursynth_api_version()
-    bin_name = p.pkg_type.value
-    for idx, rel in enumerate(p.releases):
-        if not isinstance(rel, MutableMapping):
-            continue
-        if bin_name in rel:
-            bin_api: int = p.api
-            if 'api' in rel[bin_name]:
-                bin_api = int(rel[bin_name]['api'])
-            if bin_api <= max_api and bin_api >= 3:
-                return (idx, rel)
-    return (-1, None)
-
-
-def get_latest_installable_release(p: VSPackage[VSPackageRel]) -> Optional[VSPackageRel]:
-    return get_latest_installable_release_with_index(p)[1]
-
-
 def can_install(p: VSPackage[VSPackageRel]) -> bool:
-    return get_latest_installable_release(p) is not None
+    return p.get_latest_installable_release() is not None
 
 
 def make_pyversion(version: str, index: int) -> str:
@@ -393,13 +296,15 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
     err = (0, 1)
     dest_path = get_install_path(p)
 
-    idx, install_rel = get_latest_installable_release_with_index(p)
+    idx, install_rel = p.get_latest_installable_release_with_index()
     if install_rel is None:
         return err
-    url = install_rel.get_release(p.pkg_type).url
+    release = install_rel.get_release(p.pkg_type)
+    assert release
+
     data: Optional[bytearray] = None
     try:
-        data = fetch_url_cached(url, p.name + ' ' + install_rel.version)
+        data = fetch_url_cached(release.url, p.name + ' ' + install_rel.version)
     except BaseException:
         print(
             'Failed to download ' + p.name + ' ' + install_rel.version + ', skipping installation and moving on'
@@ -409,11 +314,13 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
     files: List[Tuple[str, str, str]] = []
 
     if p.pkg_type is VSPackageType.WHEEL:
+        assert isinstance(release, VSPackagePlatformReleaseWheel)
+
         try:
-            hash_result = check_hash(data, install_rel.get_release(p.pkg_type).hash)
+            hash_result = check_hash(data, release.hash)
             if not hash_result[0]:
                 raise ValueError(
-                    'Hash mismatch for ' + url + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
+                    'Hash mismatch for ' + release.url + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
             with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
                 basename: Optional[str] = None
                 for fn in zf.namelist():
@@ -451,14 +358,14 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
             return err
     else:
         single_file: Optional[Tuple[str, str, str]] = None
-        if len(install_rel.get_release(p.pkg_type).files) == 1:
-            for key in install_rel.get_release(p.pkg_type).files:
+        if len(release.files) == 1:
+            for key in release.files:
                 single_file = (
                     key,
-                    install_rel.get_release(p.pkg_type).files[key][0],
-                    install_rel.get_release(p.pkg_type).files[key][1]
+                    release.files[key][0],
+                    release.files[key][1]
                 )
-        if (single_file is not None) and (single_file[1] == url.rsplit('/', 2)[-1]):
+        if (single_file is not None) and (single_file[1] == release.url.rsplit('/', 2)[-1]):
             install_fn = single_file[0]
             hash_result = check_hash(data, single_file[2])
             if not hash_result[0]:
@@ -474,8 +381,8 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
             with open(tffd, mode='wb') as tf:
                 tf.write(data)
             result_cache = {}
-            for install_fn in install_rel.get_release(p.pkg_type).files:
-                fn_props = install_rel.get_release(p.pkg_type).files[install_fn]
+            for install_fn in release.files:
+                fn_props = release.files[install_fn]
                 result = subprocess.run(
                     [info.cmd7zip_path, "e", "-so", tfpath, fn_props[0]],
                     stdout=subprocess.PIPE, stderr=subprocess.PIPE
@@ -488,7 +395,7 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
                     )
                 result_cache[install_fn] = (result.stdout, fn_props[1])
             uninstall_files(p)
-            for install_fn in install_rel.get_release(p.pkg_type).files:
+            for install_fn in release.files:
                 os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
                 with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
                     files.append((os.path.join(dest_path, install_fn),
@@ -505,7 +412,7 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
 
 
 def install_package(name: str) -> Tuple[int, int, int]:
-    p = get_package_from_name(name)
+    p = installed_packages.get_package_from_name(name)
     if get_vapoursynth_api_version() <= 3:
         if p.identifier in bundled_api3_plugins:
             print('Binaries are already bundled for ' + p.name + ', skipping installation')
@@ -516,7 +423,7 @@ def install_package(name: str) -> Tuple[int, int, int]:
             for dep in p.dependencies:
                 res = install_package(dep)
                 inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
-        if not is_package_installed(p.identifier):
+        if not installed_packages.is_package_installed(p.identifier):
             fres = install_files(p)
             inst = (inst[0] + fres[0], inst[1], inst[2] + fres[1])
         return inst
@@ -529,7 +436,7 @@ def upgrade_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int, int]:
     if can_install(p):
         inst = (0, 0, 0)
         for dep in p.dependencies:
-            if not is_package_installed(dep):
+            if not installed_packages.is_package_installed(dep):
                 res = install_package(dep)
                 inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
         fres = install_files(p)
@@ -541,13 +448,13 @@ def upgrade_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int, int]:
 
 def upgrade_package(name: str, force: bool) -> Tuple[int, int, int]:
     inst = (0, 0, 0)
-    p = get_package_from_name(name)
-    if not is_package_installed(p.identifier):
+    p = installed_packages.get_package_from_name(name)
+    if not installed_packages.is_package_installed(p.identifier):
         print('Package ' + p.name + ' not installed, can\'t upgrade')
-    elif is_package_upgradable(p.identifier, force):
+    elif installed_packages.is_package_upgradable(p.identifier, force):
         res = upgrade_files(p)
         return (res[0], 0, res[1])
-    elif not is_package_upgradable(p.identifier, True):
+    elif not installed_packages.is_package_upgradable(p.identifier, True):
         print('Package ' + p.name + ' not upgraded, latest version installed')
     else:
         print('Package ' + p.name + ' not upgraded, unknown version must use -f to force replacement')
@@ -558,8 +465,8 @@ def upgrade_all_packages(force: bool) -> Tuple[int, int, int]:
     inst = (0, 0, 0)
     installed_ids: List[str] = list(installed_packages.keys())
     for id in installed_ids:
-        if is_package_upgradable(id, force):
-            pkg = get_package_from_id(id, True)
+        if installed_packages.is_package_upgradable(id, force):
+            pkg = installed_packages.get_package_from_id(id, True)
             if pkg is None:
                 return inst
             res = upgrade_files(pkg)
@@ -596,15 +503,17 @@ def uninstall_files(p: VSPackage[VSPackageRel]) -> None:
                     installed_rel = rel
                     break
         if installed_rel is not None:
-            for f in installed_rel.get_release(p.pkg_type).files:
+            prel = installed_rel.get_release(p.pkg_type)
+            assert prel
+            for f in prel.files:
                 os.remove(os.path.join(dest_path, f))
 
         remove_package_meta(p)
 
 
 def uninstall_package(name: str) -> Tuple[int, int]:
-    p = get_package_from_name(name)
-    if is_package_installed(p.identifier):
+    p = installed_packages.get_package_from_name(name)
+    if installed_packages.is_package_installed(p.identifier):
         if installed_packages[p.identifier] == 'Unknown':
             print('Can\'t uninstall unknown version of package: ' + p.name)
             return (0, 0)
@@ -644,7 +553,6 @@ def update_package_definition(url: str) -> None:
             raise
     else:
         print('Local definitions updated to: ' + formatdate(remote_modtime, usegmt=True))
-
 
 
 def update_genstubs() -> None:
@@ -717,7 +625,7 @@ def update_genstubs() -> None:
 def rebuild_distinfo() -> None:
     print("Rebuilding dist-info dirs for other python package installers")
     for pkg_id, pkg_ver in installed_packages.items():
-        pkg = get_package_from_id(pkg_id)
+        pkg = installed_packages.get_package_from_id(pkg_id)
         if pkg is None:
             continue
         if pkg.pkg_type == 'PyWheel':
@@ -732,20 +640,22 @@ def rebuild_distinfo() -> None:
 
         dest_path = get_install_path(pkg)
 
+        prel = rel.get_release(pkg.pkg_type)
+        assert prel
+
         files = [
             (os.path.join(dest_path, fn), fd[1], str(os.stat(os.path.join(dest_path, fn)).st_size))
-            for fn, fd in rel.get_release(pkg.pkg_type).files.items()
+            for fn, fd in prel.files.items()
         ]
 
         install_package_meta(files, pkg, rel, idx)
 
 
 def main() -> None:
-
     for name in args.package:
         try:
             assert isinstance(name, str)
-            get_package_from_name(name)
+            installed_packages.get_package_from_name(name)
         except Exception as e:
             print(e)
             sys.exit(1)

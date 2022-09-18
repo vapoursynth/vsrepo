@@ -40,7 +40,7 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 from utils import BoundVSPackageRelT, VSPackage, VSPackageRel, VSPackages
-from utils.install import InstallFileResult
+from utils.install import InstallFileResult, InstallPackageResult
 from utils.installations import get_vapoursynth_api_version
 from utils.net import fetch_url_cached
 from utils.packages import InstalledPackages
@@ -311,7 +311,7 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
         data = fetch_url_cached(release.url, p.name + ' ' + install_rel.version)
     except BaseException:
         print(
-            'Failed to download ' + p.name + ' ' + install_rel.version + ', skipping installation and moving on'
+            'Failed to download {p.name} ' + install_rel.version + ', skipping installation and moving on'
         )
 
         return err
@@ -371,7 +371,7 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
                     f.write(basename + '.dist-info/INSTALLER,,\n')
         except BaseException as e:
             print(
-                'Failed to decompress ' + p.name + ' ' + install_rel.version + ' with error: ' + str(e)
+                'Failed to decompress {p.name} ' + install_rel.version + ' with error: ' + str(e)
                 + ', skipping installation and moving on')
 
             return err
@@ -442,71 +442,77 @@ def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
 
     installed_packages[p.identifier] = install_rel.version
 
-    print('Successfully installed ' + p.name + ' ' + install_rel.version)
+    print('Successfully installed {p.name} ' + install_rel.version)
 
     return InstallFileResult(1, 0)
 
 
-def install_package(name: str) -> Tuple[int, int, int]:
+def install_package(name: str) -> InstallPackageResult:
     p = installed_packages.get_package_from_name(name)
+
     if get_vapoursynth_api_version() <= 3:
         if p.identifier in bundled_api3_plugins:
-            print('Binaries are already bundled for ' + p.name + ', skipping installation')
-            return (0, 0, 0)
+            print('Binaries are already bundled for {p.name}, skipping installation')
+            return InstallPackageResult()
+
     if can_install(p):
-        inst = (0, 0, 0)
+        inst = InstallPackageResult()
+
         if not args.skip_deps:
             for dep in p.dependencies:
-                res = install_package(dep)
-                inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
+                inst += install_package(dep)
+
         if not installed_packages.is_package_installed(p.identifier):
-            fres = install_files(p)
-            inst = (inst[0] + fres[0], inst[1], inst[2] + fres[1])
+            inst += install_files(p)
+
         return inst
-    else:
-        print('No binaries available for ' + args.target + ' in package ' + p.name + ', skipping installation')
-        return (0, 0, 1)
+
+    print(f'No binaries available for {args.target} in package {p.name}, skipping installation')
+
+    return InstallPackageResult(error=1)
 
 
-def upgrade_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int, int]:
+def upgrade_files(p: VSPackage[VSPackageRel]) -> InstallPackageResult:
     if can_install(p):
-        inst = (0, 0, 0)
+        inst = InstallPackageResult()
+
         for dep in p.dependencies:
             if not installed_packages.is_package_installed(dep):
-                res = install_package(dep)
-                inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
-        fres = install_files(p)
-        return (inst[0] + fres[0], inst[1], inst[2] + fres[1])
-    else:
-        print('No binaries available for ' + args.target + ' in package ' + p.name + ', skipping installation')
-        return (0, 0, 1)
+                inst += install_package(dep)
+
+        return inst + install_files(p)
+
+    print(f'No binaries available for {args.target} in package {p.name}, skipping installation')
+
+    return InstallPackageResult(error=1)
 
 
-def upgrade_package(name: str, force: bool) -> Tuple[int, int, int]:
-    inst = (0, 0, 0)
+def upgrade_package(name: str, force: bool) -> InstallPackageResult:
+    inst = InstallPackageResult()
+
     p = installed_packages.get_package_from_name(name)
+
     if not installed_packages.is_package_installed(p.identifier):
-        print('Package ' + p.name + ' not installed, can\'t upgrade')
+        print(f'Package {p.name} not installed, can\'t upgrade')
     elif installed_packages.is_package_upgradable(p.identifier, force):
-        res = upgrade_files(p)
-        return (res[0], 0, res[1])
+        return upgrade_files(p)
     elif not installed_packages.is_package_upgradable(p.identifier, True):
-        print('Package ' + p.name + ' not upgraded, latest version installed')
+        print(f'Package {p.name} not upgraded, latest version installed')
     else:
-        print('Package ' + p.name + ' not upgraded, unknown version must use -f to force replacement')
+        print(f'Package {p.name} not upgraded, unknown version must use -f to force replacement')
+
     return inst
 
 
-def upgrade_all_packages(force: bool) -> Tuple[int, int, int]:
-    inst = (0, 0, 0)
-    installed_ids: List[str] = list(installed_packages.keys())
-    for id in installed_ids:
+def upgrade_all_packages(force: bool) -> InstallPackageResult:
+    inst = InstallPackageResult()
+
+    for id in installed_packages:
         if installed_packages.is_package_upgradable(id, force):
             pkg = installed_packages.get_package_from_id(id, True)
-            if pkg is None:
-                return inst
-            res = upgrade_files(pkg)
-            inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
+
+            inst += upgrade_files(pkg)
+
     return inst
 
 
@@ -547,19 +553,21 @@ def uninstall_files(p: VSPackage[VSPackageRel]) -> None:
         remove_package_meta(p)
 
 
-def uninstall_package(name: str) -> Tuple[int, int]:
+def uninstall_package(name: str) -> InstallPackageResult:
     p = installed_packages.get_package_from_name(name)
     if installed_packages.is_package_installed(p.identifier):
         if installed_packages[p.identifier] == 'Unknown':
             print('Can\'t uninstall unknown version of package: ' + p.name)
-            return (0, 0)
-        else:
-            uninstall_files(p)
-            print('Uninstalled package: ' + p.name + ' ' + installed_packages[p.identifier])
-            return (1, 0)
-    else:
-        print('No files installed for ' + p.name + ', skipping uninstall')
-        return (0, 0)
+            return InstallPackageResult()
+
+        uninstall_files(p)
+
+        print(f'Uninstalled package: {p.name} ' + installed_packages[p.identifier])
+        return InstallPackageResult(1)
+
+    print(f'No files installed for {p.name}, skipping uninstall')
+
+    return InstallPackageResult()
 
 
 def update_package_definition(url: str) -> None:

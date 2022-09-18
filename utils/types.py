@@ -105,15 +105,19 @@ class VSPackageRel:
     published: str
 
     @overload
-    def get_release(self, pkg_type: Literal[VSPackageType.WHEEL]) -> VSPackagePlatformReleaseWheel:  # type: ignore
+    def get_release(self, pkg_type: Literal[VSPackageType.WHEEL]) -> Union[  # type: ignore
+        VSPackagePlatformReleaseWheel, None
+    ]:
         ...
 
     @overload
-    def get_release(self, pkg_type: VSPackageType) -> VSPackagePlatformRelease:
+    def get_release(self, pkg_type: VSPackageType) -> Union[VSPackagePlatformRelease, None]:
         ...
 
-    def get_release(self, pkg_type: VSPackageType) -> Union[VSPackagePlatformRelease, VSPackagePlatformReleaseWheel]:
-        return getattr(self, pkg_type.get_package_key())  # type: ignore
+    def get_release(self, pkg_type: VSPackageType) -> Union[
+        VSPackagePlatformRelease, VSPackagePlatformReleaseWheel, None
+    ]:
+        return getattr(self, pkg_type.get_package_key(), None)
 
 
 @dataclass

@@ -269,6 +269,8 @@ class PluginMeta(NamedTuple):
     def __lt__(self, x: 'PluginMeta', /) -> bool: return self._str_('__lt__', x)  # type: ignore[override]
     def __ge__(self, x: 'PluginMeta', /) -> bool: return self._str_('__ge__', x)  # type: ignore[override]
     def __le__(self, x: 'PluginMeta', /) -> bool: return self._str_('__le__', x)  # type: ignore[override]
+    def __eq__(self, x: 'PluginMeta', /) -> bool: return self._str_('__eq__', x)  # type: ignore[override]
+    def __ne__(self, x: 'PluginMeta', /) -> bool: return self._str_('__ne__', x)  # type: ignore[override]
 
 
 def retrieve_plugins(
@@ -320,6 +322,8 @@ class Implementation(NamedTuple):
     def __lt__(self, x: 'Implementation', /) -> bool: return self.plugin.__lt__(x.plugin)  # type: ignore[override]
     def __ge__(self, x: 'Implementation', /) -> bool: return self.plugin.__ge__(x.plugin)  # type: ignore[override]
     def __le__(self, x: 'Implementation', /) -> bool: return self.plugin.__le__(x.plugin)  # type: ignore[override]
+    def __eq__(self, x: 'Implementation', /) -> bool: return self.plugin.__eq__(x.plugin)  # type: ignore[override]
+    def __ne__(self, x: 'Implementation', /) -> bool: return self.plugin.__ne__(x.plugin)  # type: ignore[override]
 
 
 def make_implementations(plugins: Iterable[PluginMeta]) -> Iterator[Implementation]:
@@ -364,10 +368,12 @@ class Instance(NamedTuple):
     def get_head(plugin: PluginMeta, core_name: str) -> str:
         return f"{instance_start}{core_name}: {plugin.name}"
 
-    def __gt__(self, x: 'Implementation', /) -> bool: return self.plugin.__gt__(x.plugin)  # type: ignore[override]
-    def __lt__(self, x: 'Implementation', /) -> bool: return self.plugin.__lt__(x.plugin)  # type: ignore[override]
-    def __ge__(self, x: 'Implementation', /) -> bool: return self.plugin.__ge__(x.plugin)  # type: ignore[override]
-    def __le__(self, x: 'Implementation', /) -> bool: return self.plugin.__le__(x.plugin)  # type: ignore[override]
+    def __gt__(self, x: 'Instance', /) -> bool: return self.plugin.__gt__(x.plugin)  # type: ignore[override]
+    def __lt__(self, x: 'Instance', /) -> bool: return self.plugin.__lt__(x.plugin)  # type: ignore[override]
+    def __ge__(self, x: 'Instance', /) -> bool: return self.plugin.__ge__(x.plugin)  # type: ignore[override]
+    def __le__(self, x: 'Instance', /) -> bool: return self.plugin.__le__(x.plugin)  # type: ignore[override]
+    def __eq__(self, x: 'Instance', /) -> bool: return self.plugin.__eq__(x.plugin)  # type: ignore[override]
+    def __ne__(self, x: 'Instance', /) -> bool: return self.plugin.__ne__(x.plugin)  # type: ignore[override]
 
 
 def make_instances(plugins: Iterable[PluginMeta]) -> Iterator[Instance]:

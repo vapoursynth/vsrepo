@@ -40,17 +40,9 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 from utils import BoundVSPackageRelT, VSPackage, VSPackageRel, VSPackages
-from utils.installations import detect_vapoursynth_installation, is_sitepackage_install, is_sitepackage_install_portable
 from utils.net import fetch_url_cached
-from utils.site import get_vs_installation_site, is_venv
+from utils.site import get_installation_info
 from utils.types import VSPackageType
-
-try:
-    import winreg
-except ImportError:
-    print('{} is only supported on Windows.'.format(__file__))
-    sys.exit(1)
-
 
 bundled_api3_plugins = {
     'com.vapoursynth.avisource', 'com.vapoursynth.eedi3', 'com.vapoursynth.imwri',
@@ -58,8 +50,6 @@ bundled_api3_plugins = {
     'com.vapoursynth.subtext', 'com.vapoursynth.vinverse', 'org.ivtc.v', 'com.nodame.histogram'
 }
 
-
-is_64bits: bool = sys.maxsize > 2**32
 
 parser = argparse.ArgumentParser(description='A simple VapourSynth package manager')
 parser.add_argument(
@@ -76,7 +66,7 @@ parser.add_argument('-p', action='store_true', dest='portable', help='use paths 
 parser.add_argument('-d', action='store_true', dest='skip_deps', help='skip installing dependencies')
 parser.add_argument(
     '-t', choices=['win32', 'win64'],
-    default='win64' if is_64bits else 'win32', dest='target',
+    default='win64' if sys.maxsize > 2**32 else 'win32', dest='target',
     help='binaries to install, defaults to python\'s architecture'
 )
 parser.add_argument('-b', dest='binary_path', help='custom binary install path')
@@ -86,81 +76,17 @@ parser.add_argument("--force-dist-info", action="store_true", default=False, hel
 
 args = parser.parse_args()
 
-is_64bits = args.target == 'win64'
-
-file_dirname = os.path.dirname(os.path.abspath(__file__))
-
-# VSRepo is installed to the site-packages.
-if os.path.abspath(file_dirname).startswith(os.path.abspath(sys.prefix)):
-    file_dirname = os.getcwd()
-
-if args.portable:
-    plugin32_path = os.path.join(file_dirname, 'vapoursynth32', 'plugins')
-    plugin64_path = os.path.join(file_dirname, 'vapoursynth64', 'plugins')
-    package_json_path = os.path.join(file_dirname, 'vspackages3.json')
-elif is_sitepackage_install_portable(args.portable):
-    vapoursynth_path = detect_vapoursynth_installation()
-    base_path = os.path.dirname(vapoursynth_path)
-    plugin32_path = os.path.join(base_path, 'vapoursynth32', 'plugins')
-    plugin64_path = os.path.join(base_path, 'vapoursynth64', 'plugins')
-    package_json_path = os.path.join(base_path, 'vspackages3.json')
-    del vapoursynth_path
-else:
-    pluginparent = [str(os.getenv("APPDATA")), 'VapourSynth']
-    plugin32_path = os.path.join(*pluginparent, 'plugins32')
-    plugin64_path = os.path.join(*pluginparent, 'plugins64')
-    package_json_path = os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
-
-plugin_path: str = plugin64_path if is_64bits else plugin32_path
-
-if (args.operation in ['install', 'upgrade', 'uninstall']) and ((args.package is None) or len(args.package) == 0):
+if (args.operation in ['install', 'upgrade', 'uninstall']) and not args.package:
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
-if args.force_dist_info or is_sitepackage_install(args.portable):
-    if is_venv():
-        try:
-            import setuptools
-            site_package_dir: Optional[str] = os.path.dirname(os.path.dirname(setuptools.__file__))
-            del setuptools
-        except ImportError:
-            site_package_dir = None
-    else:
-        import site
-        site_package_dir = site.getusersitepackages()
-else:
-    site_package_dir = None
-
-py_script_path: str = file_dirname if args.portable else (
-    site_package_dir if site_package_dir is not None else get_vs_installation_site()
-)
-if args.script_path is not None:
-    py_script_path = args.script_path
-
-
-if args.binary_path is not None:
-    plugin_path = args.binary_path
-
-os.makedirs(py_script_path, exist_ok=True)
-os.makedirs(plugin_path, exist_ok=True)
-os.makedirs(os.path.dirname(package_json_path), exist_ok=True)
-
-
-cmd7zip_path: str = os.path.join(file_dirname, '7z.exe')
-if not os.path.isfile(cmd7zip_path):
-    try:
-        with winreg.OpenKeyEx(
-            winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ
-        ) as regkey:
-            cmd7zip_path = os.path.join(winreg.QueryValueEx(regkey, 'Path')[0], '7z.exe')
-    except BaseException:
-        cmd7zip_path = '7z.exe'
+info = get_installation_info(args)
 
 installed_packages: Dict[str, str] = {}
 
 package_print_string = "{:25s} {:15s} {:11s} {:11s} {:s}"
 
-package_list = VSPackages.from_file(Path(package_json_path))
+package_list = VSPackages.from_file(Path(info.package_json_path))
 
 
 def check_hash(data: bytes, ref_hash: str) -> Tuple[bool, str, str]:
@@ -170,11 +96,12 @@ def check_hash(data: bytes, ref_hash: str) -> Tuple[bool, str, str]:
 
 def get_install_path(p: VSPackage[VSPackageRel]) -> str:
     if p.pkg_type == 'PyScript' or p.pkg_type == 'PyWheel':
-        return py_script_path
-    elif p.pkg_type == 'VSPlugin':
-        return plugin_path
-    else:
-        raise ValueError('Unknown install type')
+        return info.py_script_path
+
+    if p.pkg_type == 'VSPlugin':
+        return info.plugin_path
+
+    raise ValueError('Unknown install type')
 
 
 def get_package_from_id(id: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
@@ -402,7 +329,7 @@ def rmdir(path: str) -> None:
 # See the portion about only yielding values, it's an alternative to Generator[str, None, None]
 
 
-def find_dist_dirs(name: str, path: Optional[str] = site_package_dir) -> Iterator[str]:
+def find_dist_dirs(name: str, path: Optional[str] = info.site_package_dir) -> Iterator[str]:
     if path is None:
         return
 
@@ -413,7 +340,7 @@ def find_dist_dirs(name: str, path: Optional[str] = site_package_dir) -> Iterato
 
 
 def remove_package_meta(pkg: VSPackage[BoundVSPackageRelT]) -> None:
-    if site_package_dir is None:
+    if info.site_package_dir is None:
         return
 
     name = get_python_package_name(pkg)
@@ -425,13 +352,13 @@ def remove_package_meta(pkg: VSPackage[BoundVSPackageRelT]) -> None:
 def install_package_meta(
         files: List[Tuple[str, str, str]],
         pkg: VSPackage[BoundVSPackageRelT], rel: BoundVSPackageRelT, index: int) -> None:
-    if site_package_dir is None:
+    if info.site_package_dir is None:
         return
 
     name = get_python_package_name(pkg)
 
     version = make_pyversion(rel.version, index)
-    dist_dir = os.path.join(site_package_dir, f"{name}-{version}.dist-info")
+    dist_dir = os.path.join(info.site_package_dir, f"{name}-{version}.dist-info")
 
     remove_package_meta(pkg)
 
@@ -455,7 +382,7 @@ Platform: All""")
                 sha256hex = "sha256=" + base64.urlsafe_b64encode(binascii.unhexlify(
                     sha256hex.encode("ascii"))).rstrip(b"=").decode("ascii")
             try:
-                filename = os.path.relpath(filename, site_package_dir)
+                filename = os.path.relpath(filename, info.site_package_dir)
             except ValueError:
                 pass
             w.writerow([filename, sha256hex, length])
@@ -548,8 +475,10 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
             result_cache = {}
             for install_fn in install_rel.get_release(p.pkg_type).files:
                 fn_props = install_rel.get_release(p.pkg_type).files[install_fn]
-                result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, fn_props[0]],
-                                        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                result = subprocess.run(
+                    [info.cmd7zip_path, "e", "-so", tfpath, fn_props[0]],
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE
+                )
                 result.check_returncode()
                 hash_result = check_hash(result.stdout, fn_props[1])
                 if not hash_result[0]:
@@ -691,7 +620,7 @@ def update_package_definition(url: str) -> None:
     localmtimeval = 0.0
 
     try:
-        localmtimeval = os.path.getmtime(package_json_path)
+        localmtimeval = os.path.getmtime(info.package_json_path)
     except OSError:
         pass
 
@@ -704,9 +633,9 @@ def update_package_definition(url: str) -> None:
             data = urlreq.read()
             with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
                 with zf.open('vspackages3.json') as pkgfile:
-                    with open(package_json_path, 'wb') as dstfile:
+                    with open(info.package_json_path, 'wb') as dstfile:
                         dstfile.write(pkgfile.read())
-                    os.utime(package_json_path, times=(remote_modtime, remote_modtime))
+                    os.utime(info.package_json_path, times=(remote_modtime, remote_modtime))
     except HTTPError as httperr:
         if httperr.code == 304:
             print('Local definitions already up to date: ' + formatdate(localmtimeval, usegmt=True))
@@ -758,8 +687,8 @@ def update_genstubs() -> None:
         fp = sys.stderr
     else:
         if not stubpath:
-            if site_package_dir:
-                stubpath = site_package_dir
+            if info.site_package_dir:
+                stubpath = info.site_package_dir
                 site_package = True
             else:
                 stubpath = "."
@@ -773,9 +702,9 @@ def update_genstubs() -> None:
         fp.write(contents)
 
     if site_package:
-        if site_package_dir is None:
+        if info.site_package_dir is None:
             return
-        vs_stub_pkg = os.path.join(site_package_dir, "vapoursynth-stubs")
+        vs_stub_pkg = os.path.join(info.site_package_dir, "vapoursynth-stubs")
         if os.path.exists(vs_stub_pkg):
             rmdir(vs_stub_pkg)
 
@@ -794,7 +723,7 @@ def update_genstubs() -> None:
                 contents = f.read()
 
             try:
-                filename = os.path.relpath(stubpath, site_package_dir)
+                filename = os.path.relpath(stubpath, info.site_package_dir)
             except ValueError:
                 filename = stubpath
 
@@ -830,18 +759,6 @@ def rebuild_distinfo() -> None:
         ]
 
         install_package_meta(files, pkg, rel, idx)
-
-
-def print_paths() -> None:
-    print('Paths:')
-    print('Definitions: ' + package_json_path)
-    print('Binaries: ' + plugin_path)
-    print('Scripts: ' + py_script_path)
-
-    if site_package_dir is not None:
-        print("Dist-Infos: " + site_package_dir)
-    else:
-        print("Dist-Infos: <Will not be installed>")
 
 
 def main() -> None:
@@ -927,7 +844,7 @@ def main() -> None:
     elif args.operation == 'update':
         update_package_definition('http://www.vapoursynth.com/vsrepo/vspackages3.zip')
     elif args.operation == 'paths':
-        print_paths()
+        info.print_info()
     elif args.operation == "genstubs":
         update_genstubs()
     elif args.operation == "gendistinfo":

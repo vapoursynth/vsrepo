@@ -671,20 +671,20 @@ def main() -> None:
 
         update_genstubs()
 
-        if (inst[0] == 0) and (inst[1] == 0):
+        pack_str = f'package{inst[0] > 1 and "s" or "s"}'
+        deps_str = f'dependenc{inst[0] > 1 and "ies" or "y"}'
+
+        if inst[0] == inst[1] == 0:
             print('Nothing done')
         elif (inst[0] > 0) and (inst[1] == 0):
-            print('{} {} installed'.format(inst[0], 'package' if inst[0] == 1 else 'packages'))
+            print(f'{inst[0]} {pack_str} installed')
         elif (inst[0] == 0) and (inst[1] > 0):
-            print('{} missing {} installed'.format(inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
+            print(f'{inst[1]} missing {deps_str} installed')
         else:
-            print(
-                '{} {} and {} additional {} installed'.format(
-                    inst[0],
-                    'package' if inst[0] == 1 else 'packages', inst[1],
-                    'dependency' if inst[1] == 1 else 'dependencies'))
+            print(f'{inst[0]} {pack_str} and {inst[1]} additional {deps_str} installed')
+
         if (inst[2] > 0):
-            print('{} {} failed'.format(inst[2], 'package' if inst[0] == 1 else 'packages'))
+            print(f'{inst[2]} {pack_str} failed')
     elif args.operation in ('upgrade', 'upgrade-all'):
         detect_installed_packages()
         rebuild_distinfo()
@@ -699,20 +699,20 @@ def main() -> None:
 
         update_genstubs()
 
+        pack_str = f'package{inst[0] > 1 and "s" or "s"}'
+        deps_str = f'dependenc{inst[0] > 1 and "ies" or "y"}'
+
         if (inst[0] == 0) and (inst[1] == 0):
             print('Nothing done')
         elif (inst[0] > 0) and (inst[1] == 0):
-            print('{} {} upgraded'.format(inst[0], 'package' if inst[0] == 1 else 'packages'))
+            print(f'{inst[0]} {pack_str} upgraded')
         elif (inst[0] == 0) and (inst[1] > 0):
-            print('{} missing {} installed'.format(inst[1], 'dependency' if inst[1] == 1 else 'dependencies'))
+            print(f'{inst[1]} missing {deps_str} installed')
         else:
-            print(
-                '{} {} upgraded and {} additional {} installed'.format(
-                    inst[0],
-                    'package' if inst[0] == 1 else 'packages', inst[1],
-                    'dependency' if inst[1] == 1 else 'dependencies'))
+            print(f'{inst[0]} {pack_str} upgraded and {inst[1]} additional {deps_str} installed')
+
         if (inst[2] > 0):
-            print('{} {} failed'.format(inst[2], 'package' if inst[0] == 1 else 'packages'))
+            print(f'{inst[2]} {pack_str} failed')
     elif args.operation == 'uninstall':
         detect_installed_packages()
         uninst = (0, 0)
@@ -722,7 +722,7 @@ def main() -> None:
         if uninst[0] == 0:
             print('No packages uninstalled')
         else:
-            print('{} {} uninstalled'.format(uninst[0], 'package' if uninst[0] == 1 else 'packages'))
+            print(f'{uninst[0]} package{uninst[0] > 1 and "s" or "s"} uninstalled')
         update_genstubs()
     elif args.operation == 'installed':
         detect_installed_packages()

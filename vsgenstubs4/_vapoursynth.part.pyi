@@ -872,6 +872,10 @@ class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
 
     def copy(self) -> 'FrameProps': ...
 
+    # Since we're inheriting from the MutableMapping abstract class,
+    # we *have* to specify that we have indeed created these methods.
+    # If we don't, mypy will complain that we're working with abstract methods.
+
     def __setattr__(self, name: str, value: _VapourSynthMapValue) -> None: ...
 
     def __getattr__(self, name: str) -> _VapourSynthMapValue: ...

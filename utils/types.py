@@ -100,36 +100,34 @@ class VSPackagePlatformRelease:
     api: int = 3
 
 
-class VSPackageRel(TypedDict, total=False):
+@dataclass
+class VSPackageRel:
     version: str
     published: str
 
 
+@dataclass
 class VSPackageRelPyScript(VSPackageRel):
     script: VSPackagePlatformRelease
 
 
+@dataclass
 class VSPackageRelPyWheel(VSPackageRel):
     wheel: VSPackagePlatformReleaseWheel
 
 
-class _VSPackageRelWin32(TypedDict, total=False):
+@dataclass
+class VSPackageRelWin32(VSPackageRel):
     win32: VSPackagePlatformRelease
 
 
-class _VSPackageRelWin64(TypedDict, total=False):
+@dataclass
+class VSPackageRelWin64(VSPackageRel):
     win64: VSPackagePlatformRelease
 
 
-class VSPackageRelWin32(_VSPackageRelWin32, VSPackageRel):
-    ...
-
-
-class VSPackageRelWin64(_VSPackageRelWin64, VSPackageRel):
-    ...
-
-
-class VSPackageRelWin(_VSPackageRelWin32, _VSPackageRelWin64, VSPackageRel):
+@dataclass
+class VSPackageRelWin(VSPackageRelWin32, VSPackageRelWin64):
     ...
 
 

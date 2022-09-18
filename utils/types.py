@@ -4,10 +4,9 @@ import sys
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
-from typing import (
-    Dict, Generic, Iterator, List, Literal, NamedTuple, Type, TypeVar, Union, overload
-)
+from typing import Dict, Generic, Iterator, List, Literal, NamedTuple, Tuple, Type, TypeVar, Union, overload
 
+from .installations import get_vapoursynth_api_version
 from .utils import sanitize_keys
 
 T = TypeVar('T')
@@ -169,6 +168,23 @@ class VSPackage(Generic[BoundVSPackageRelT]):
 
     def is_type(self, pkg_type: VSPackageType) -> bool:
         return self.pkg_type is pkg_type
+
+    def get_latest_installable_release_with_index(self) -> Tuple[int, Union[VSPackageRel, None]]:
+        max_api = get_vapoursynth_api_version()
+
+        for idx, rel in enumerate(self.releases):
+            prel = rel.get_release(self.pkg_type)
+
+            if prel:
+                bin_api = max(self.api, prel.api)
+
+                if 3 <= bin_api <= max_api:
+                    return (idx, rel)
+
+        return (-1, None)
+
+    def get_latest_installable_release(self) -> Union[VSPackageRel, None]:
+        return self.get_latest_installable_release_with_index()[1]
 
 
 @dataclass

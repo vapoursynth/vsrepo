@@ -185,7 +185,7 @@ __all__ = [
     'VideoOutputTuple',
     'clear_output', 'clear_outputs', 'get_outputs', 'get_output',
 
-    '_construct_type', '_construct_parameter', 'construct_signature',
+    'construct_signature',
 
     # Logging
     'PythonVSScriptLoggingBridge', 'LogHandle', 'Error',
@@ -750,14 +750,6 @@ class VideoOutputTuple(NamedTuple):
     clip: 'VideoNode'
     alpha: Union['VideoNode', None]
     alt_output: Literal[0, 1, 2]
-
-
-def _construct_type(signature: str) -> type:
-    ...
-
-
-def _construct_parameter(signature: str) -> Parameter:
-    ...
 
 
 def construct_signature(signature: str, return_signature: str, injected: Union[str, None] = None) -> Signature:

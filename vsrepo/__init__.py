@@ -41,6 +41,7 @@ from pathlib import Path
 from typing import Dict, Iterator, List, MutableMapping, Optional, Tuple, cast
 
 from utils import BoundVSPackageRelT, VSPackage, VSPackageRel, VSPackages
+from utils.types import VSPackageType
 
 try:
     import winreg
@@ -348,14 +349,14 @@ def is_package_upgradable(id: str, force: bool) -> bool:
         return (
             is_package_installed(id)
             and (lastest_installable is not None)
-            and (installed_packages[id] != lastest_installable['version'])
+            and (installed_packages[id] != lastest_installable.version)
         )
     else:
         return (
             is_package_installed(id)
             and (lastest_installable is not None)
             and (installed_packages[id] != 'Unknown')
-            and (installed_packages[id] != lastest_installable['version'])
+            and (installed_packages[id] != lastest_installable.version)
         )
 
 
@@ -394,18 +395,19 @@ def detect_installed_packages() -> None:
             for v in p.releases:
                 matched = True
                 exists = True
-                bin_name = p.pkg_type.value
-                if bin_name in v:
-                    for f in v[bin_name].files:
+
+                if files := v.get_release(p.pkg_type).files:
+                    for f, rel_file in files.items():
                         try:
                             with open(os.path.join(dest_path, f), 'rb') as fh:
-                                if not check_hash(fh.read(), v[bin_name].files[f][1])[0]:
+                                if not check_hash(fh.read(), rel_file.filename)[0]:
                                     matched = False
                         except FileNotFoundError:
                             exists = False
                             matched = False
+
                     if matched:
-                        installed_packages[p.identifier] = v['version']
+                        installed_packages[p.identifier] = v.version
                         break
                     elif exists:
                         installed_packages[p.identifier] = 'Unknown'
@@ -422,7 +424,7 @@ def print_package_status(p: VSPackage[VSPackageRel]) -> None:
         package_print_string.format(
             name, p.namespace if p.pkg_type == 'VSPlugin' else p.modulename,
             installed_packages.get(p.identifier, ""),
-            lastest_installable.get('version') if lastest_installable is not None else '',
+            lastest_installable.version if lastest_installable is not None else '',
             p.identifier
         )
     )
@@ -532,7 +534,7 @@ def install_package_meta(
 
     name = get_python_package_name(pkg)
 
-    version = make_pyversion(rel["version"], index)
+    version = make_pyversion(rel.version, index)
     dist_dir = os.path.join(site_package_dir, f"{name}-{version}.dist-info")
 
     remove_package_meta(pkg)
@@ -566,24 +568,25 @@ Platform: All""")
 def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
     err = (0, 1)
     dest_path = get_install_path(p)
-    bin_name = p.pkg_type.value
+
     idx, install_rel = get_latest_installable_release_with_index(p)
     if install_rel is None:
         return err
-    url = install_rel[bin_name]['url']
+    url = install_rel.get_release(p.pkg_type).url
     data: Optional[bytearray] = None
     try:
-        data = fetch_url_cached(url, p.name + ' ' + install_rel['version'])
+        data = fetch_url_cached(url, p.name + ' ' + install_rel.version)
     except BaseException:
         print(
-            'Failed to download ' + p.name + ' ' + install_rel['version'] + ', skipping installation and moving on')
+            'Failed to download ' + p.name + ' ' + install_rel.version + ', skipping installation and moving on'
+        )
         return err
 
     files: List[Tuple[str, str, str]] = []
 
-    if bin_name == 'wheel':
+    if p.pkg_type is VSPackageType.WHEEL:
         try:
-            hash_result = check_hash(data, install_rel[bin_name]['hash'])
+            hash_result = check_hash(data, install_rel.get_release(p.pkg_type).hash)
             if not hash_result[0]:
                 raise ValueError(
                     'Hash mismatch for ' + url + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
@@ -619,14 +622,18 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
                     f.write(basename + '.dist-info/INSTALLER,,\n')
         except BaseException as e:
             print(
-                'Failed to decompress ' + p.name + ' ' + install_rel['version'] + ' with error: ' + str(e)
+                'Failed to decompress ' + p.name + ' ' + install_rel.version + ' with error: ' + str(e)
                 + ', skipping installation and moving on')
             return err
     else:
         single_file: Optional[Tuple[str, str, str]] = None
-        if len(install_rel[bin_name].files) == 1:
-            for key in install_rel[bin_name].files:
-                single_file = (key, install_rel[bin_name].files[key][0], install_rel[bin_name].files[key][1])
+        if len(install_rel.get_release(p.pkg_type).files) == 1:
+            for key in install_rel.get_release(p.pkg_type).files:
+                single_file = (
+                    key,
+                    install_rel.get_release(p.pkg_type).files[key][0],
+                    install_rel.get_release(p.pkg_type).files[key][1]
+                )
         if (single_file is not None) and (single_file[1] == url.rsplit('/', 2)[-1]):
             install_fn = single_file[0]
             hash_result = check_hash(data, single_file[2])
@@ -643,8 +650,8 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
             with open(tffd, mode='wb') as tf:
                 tf.write(data)
             result_cache = {}
-            for install_fn in install_rel[bin_name].files:
-                fn_props = install_rel[bin_name].files[install_fn]
+            for install_fn in install_rel.get_release(p.pkg_type).files:
+                fn_props = install_rel.get_release(p.pkg_type).files[install_fn]
                 result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, fn_props[0]],
                                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 result.check_returncode()
@@ -655,7 +662,7 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
                     )
                 result_cache[install_fn] = (result.stdout, fn_props[1])
             uninstall_files(p)
-            for install_fn in install_rel[bin_name].files:
+            for install_fn in install_rel.get_release(p.pkg_type).files:
                 os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)
                 with open(os.path.join(dest_path, install_fn), 'wb') as outfile:
                     files.append((os.path.join(dest_path, install_fn),
@@ -666,8 +673,8 @@ def install_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int]:
 
         install_package_meta(files, p, install_rel, idx)
 
-    installed_packages[p.identifier] = install_rel['version']
-    print('Successfully installed ' + p.name + ' ' + install_rel['version'])
+    installed_packages[p.identifier] = install_rel.version
+    print('Successfully installed ' + p.name + ' ' + install_rel.version)
     return (1, 0)
 
 
@@ -680,12 +687,9 @@ def install_package(name: str) -> Tuple[int, int, int]:
     if can_install(p):
         inst = (0, 0, 0)
         if not args.skip_deps:
-            if p.dependencies:
-                for dep in p['dependencies']:
-                    if not isinstance(dep, str):
-                        continue
-                    res = install_package(dep)
-                    inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
+            for dep in p.dependencies:
+                res = install_package(dep)
+                inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
         if not is_package_installed(p.identifier):
             fres = install_files(p)
             inst = (inst[0] + fres[0], inst[1], inst[2] + fres[1])
@@ -698,11 +702,10 @@ def install_package(name: str) -> Tuple[int, int, int]:
 def upgrade_files(p: VSPackage[VSPackageRel]) -> Tuple[int, int, int]:
     if can_install(p):
         inst = (0, 0, 0)
-        if p.dependencies:
-            for dep in p.dependencies:
-                if not is_package_installed(dep):
-                    res = install_package(dep)
-                    inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
+        for dep in p.dependencies:
+            if not is_package_installed(dep):
+                res = install_package(dep)
+                inst = (inst[0], inst[1] + res[0] + res[1], inst[2] + res[2])
         fres = install_files(p)
         return (inst[0] + fres[0], inst[1], inst[2] + fres[1])
     else:
@@ -740,7 +743,6 @@ def upgrade_all_packages(force: bool) -> Tuple[int, int, int]:
 
 def uninstall_files(p: VSPackage[VSPackageRel]) -> None:
     dest_path = get_install_path(p)
-    bin_name = p.pkg_type.value
 
     if p.pkg_type == 'PyWheel':
         files: List[str] = []
@@ -764,11 +766,11 @@ def uninstall_files(p: VSPackage[VSPackageRel]) -> None:
         installed_rel: Optional[VSPackageRel] = None
         if p.identifier in installed_packages:
             for rel in p.releases:
-                if rel['version'] == installed_packages[p.identifier]:
+                if rel.version == installed_packages[p.identifier]:
                     installed_rel = rel
                     break
         if installed_rel is not None:
-            for f in installed_rel[bin_name].files:
+            for f in installed_rel.get_release(p.pkg_type).files:
                 os.remove(os.path.join(dest_path, f))
 
         remove_package_meta(p)
@@ -918,17 +920,17 @@ def rebuild_distinfo() -> None:
             continue
 
         for idx, rel in enumerate(pkg.releases):
-            if rel["version"] == pkg_ver:
+            if rel.version == pkg_ver:
                 break
         else:
             remove_package_meta(pkg)
             continue
 
         dest_path = get_install_path(pkg)
-        bin_name = pkg.pkg_type.value
+
         files = [
             (os.path.join(dest_path, fn), fd[1], str(os.stat(os.path.join(dest_path, fn)).st_size))
-            for fn, fd in rel[bin_name]["files"].items()
+            for fn, fd in rel.get_release(pkg.pkg_type).files.items()
         ]
 
         install_package_meta(files, pkg, rel, idx)

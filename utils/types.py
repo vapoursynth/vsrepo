@@ -153,22 +153,6 @@ class VSPackage(Generic[BoundVSPackageRelT]):
     modulename: Union[str, None] = None
     wheelname: Union[str, None] = None
 
-    @overload
-    def is_type(self, pkg_type: Literal[VSPackageType.SCRIPT]) -> TypeGuard[VSPackageRelPyScript]:
-        ...
-
-    @overload
-    def is_type(self, pkg_type: Literal[VSPackageType.WHEEL]) -> TypeGuard[VSPackageRelPyWheel]:
-        ...
-
-    @overload
-    def is_type(self, pkg_type: Literal[VSPackageType.PLUGIN]) -> TypeGuard[VSPackageRelWin]:
-        ...
-
-    @overload
-    def is_type(self, pkg_type: VSPackageType) -> bool:
-        ...
-
     def is_type(self, pkg_type: VSPackageType) -> bool:
         return self.pkg_type is pkg_type
 

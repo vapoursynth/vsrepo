@@ -474,12 +474,14 @@ def output_stubs(
 ) -> None:
     existing_stubs: Path | None = None
 
-    if (stubs_path := str(args.output)) != '-':
-        if stubs_path == '@' or not stubs_path:
-            stubs_path = locate_or_create_stub_file()
+    stubs_path = str(args.output)
 
-        stubs = Path(stubs_path)
+    if stubs_path == '@' or not stubs_path:
+        stubs_path = locate_or_create_stub_file()
 
+    stubs = Path(stubs_path)
+
+    if stubs_path != '-':
         if not stubs.is_absolute():
             if not stubs.parent:
                 stubs = stubs.cwd() / stubs
@@ -501,9 +503,11 @@ def output_stubs(
 
     template = generate_template(args, cores, implementations, instances, existing_stubs)
 
-    with (sys.stdout if stubs_path == '-' else open(str(stubs), 'w')) as outf:
-        outf.write(template)
-        outf.flush()
+    out_file = sys.stdout if stubs_path == '-' else open(str(stubs), 'w')
+
+    with out_file:
+        out_file.write(template)
+        out_file.flush()
 
 
 def get_existing_implementations(path: str | Path, cores: Sequence[CoreLike]) -> Dict[str, Implementation]:

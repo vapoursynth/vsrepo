@@ -4,12 +4,11 @@ import sys
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
-from typing import Dict, Generic, Iterator, List, Literal, NamedTuple, Tuple, Type, TypeVar, Union, overload
-
-from utils.site import InstallationInfo
+from typing import Any, Dict, Generic, Iterator, List, Literal, NamedTuple, Tuple, Type, TypeVar, Union, overload
 
 from .installations import get_vapoursynth_api_version
-from .utils import sanitize_keys
+from .site import InstallationInfo
+from .utils import sanitize_dict
 
 T = TypeVar('T')
 
@@ -91,6 +90,7 @@ class VSPackagePlatformReleaseFile(NamedTuple):
 class VSPackagePlatformReleaseWheel:
     url: str
     hash: str
+    api: int = 3
 
 
 @dataclass
@@ -104,6 +104,40 @@ class VSPackagePlatformRelease:
 class VSPackageRel:
     version: str
     published: str
+
+    @staticmethod
+    def from_dict(obj: Dict[str, Any]) -> 'VSPackageRel':
+        cls: Type[VSPackageRel] = VSPackageRel
+        if (key := VSPackageType.SCRIPT.get_package_key()) in obj:
+            cls = VSPackageRelPyScript
+        elif (whl_key := VSPackageType.WHEEL.get_package_key()) in obj:
+            cls = VSPackageRelPyWheel
+        else:
+            win32 = (win32_key := VSPackageType.PLUGIN.get_package_key(32)) in obj
+            win64 = (win64_key := VSPackageType.PLUGIN.get_package_key(64)) in obj
+
+            if win64 and win32:
+                cls = VSPackageRelWin
+            elif win64:
+                cls = VSPackageRelWin64
+                key = win64_key
+            elif win32:
+                cls = VSPackageRelWin32
+                key = win32_key
+
+        if cls is VSPackageRelPyWheel:
+            obj[whl_key] = VSPackagePlatformReleaseWheel(**obj[whl_key])
+        elif cls is VSPackageRelWin:
+            obj[win32_key] = VSPackagePlatformRelease(**obj[win32_key])
+            obj[win64_key] = VSPackagePlatformRelease(**obj[win64_key])
+        elif cls is not VSPackageRel:
+            obj[key] = VSPackagePlatformRelease(**obj[key])
+
+        # kw_only is Py3.10 only...
+        if 'published' not in obj:
+            obj['published'] = '2000-01-01T00:00:00Z'
+
+        return cls(**sanitize_dict(obj, 'release'))
 
     @overload
     def get_release(self, pkg_type: Literal[VSPackageType.WHEEL]) -> Union[  # type: ignore

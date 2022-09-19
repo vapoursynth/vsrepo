@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Any, Dict, Mapping
 
 
@@ -14,6 +15,13 @@ def sanitize_value(key: str, value: Any, obj_type: str) -> Any:
         if key == 'releases':
             from .types import VSPackageRel
             return [VSPackageRel.from_dict(release) for release in value]
+    elif obj_type == 'platform_release':
+        if key == 'files':
+            from .types import VSPackagePlatformReleaseFile
+            return {
+                Path(filename): VSPackagePlatformReleaseFile(filename, file_hash)
+                for filename, (filename, file_hash) in value.items()
+            }
 
     return value
 

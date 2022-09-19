@@ -127,11 +127,10 @@ class VSPackageRel:
 
         if cls is VSPackageRelPyWheel:
             obj[whl_key] = VSPackagePlatformReleaseWheel(**obj[whl_key])
-        elif cls is VSPackageRelWin:
-            obj[win32_key] = VSPackagePlatformRelease(**obj[win32_key])
-            obj[win64_key] = VSPackagePlatformRelease(**obj[win64_key])
         elif cls is not VSPackageRel:
-            obj[key] = VSPackagePlatformRelease(**obj[key])
+            keys = [win32_key, win64_key] if cls is VSPackageRelWin else [key]
+            for key in keys:
+                obj[key] = VSPackagePlatformRelease(**sanitize_dict(obj[key], 'platform_release'))
 
         # kw_only is Py3.10 only...
         if 'published' not in obj:

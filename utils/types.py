@@ -208,21 +208,6 @@ class VSPackages:
     def __iter__(self) -> Iterator[VSPackage]:
         return iter(self.packages)
 
-    @overload
-    def packages_from_type(self, pkg_type: Literal[VSPackageType.SCRIPT]) -> Iterator[VSPackage[VSPackageRelPyScript]]:
-        ...
-
-    @overload
-    def packages_from_type(self, pkg_type: Literal[VSPackageType.WHEEL]) -> Iterator[VSPackage[VSPackageRelPyWheel]]:
-        ...
-
-    @overload
-    def packages_from_type(self, pkg_type: Literal[VSPackageType.PLUGIN]) -> Iterator[VSPackage[VSPackageRelWin]]:
-        ...
-
-    def packages_from_type(self, pkg_type: VSPackageType) -> Iterator[VSPackage[VSPackageRel]]:  # type: ignore
-        return (package for package in self.packages if package.is_type(pkg_type))
-
     @classmethod
     def from_file(cls, filepath: Path, /) -> 'VSPackages':
         try:

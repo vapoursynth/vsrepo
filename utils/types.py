@@ -239,7 +239,7 @@ class VSPackages:
                 )
 
             packages = [
-                VSPackage(**sanitize_keys(package, 'package'))
+                VSPackage(**sanitize_dict(package, 'package'))
                 for package in vspackages['packages']
             ]
         except (OSError, FileExistsError, ValueError) as e:

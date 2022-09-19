@@ -82,7 +82,8 @@ from inspect import Signature
 from types import MappingProxyType, TracebackType
 from typing import (
     TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,
-    NamedTuple, NoReturn, Optional, Protocol, Sequence, Type, TypedDict, TypeVar, Union, overload, runtime_checkable
+    NamedTuple, NoReturn, Optional, Protocol, Sequence, Tuple, Type, TypedDict, TypeVar, Union, overload,
+    runtime_checkable
 )
 
 __all__ = [
@@ -839,6 +840,46 @@ class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
     def __len__(self) -> int: ...
 
 
+class audio_view(memoryview):  # type: ignore[misc]
+    @property
+    def shape(self) -> tuple[int]: ...
+    
+    @property
+    def strides(self) -> tuple[int]: ...
+
+    @property
+    def ndim(self) -> Literal[1]: ...
+
+    @property
+    def obj(self) -> FramePtr: ...  # type: ignore[override]
+
+    def __getitem__(self, index: int) -> int | float: ...  # type: ignore[override]
+
+    def __setitem__(self, index: int, other: int | float) -> None: ...  # type: ignore[override]
+
+    def tolist(self) -> list[int | float]: ...  # type: ignore[override]
+
+
+class video_view(memoryview):  # type: ignore[misc]
+    @property
+    def shape(self) -> tuple[int, int]: ...
+    
+    @property
+    def strides(self) -> tuple[int, int]: ...
+
+    @property
+    def ndim(self) -> Literal[2]: ...
+
+    @property
+    def obj(self) -> FramePtr: ...  # type: ignore[override]
+
+    def __getitem__(self, index: Tuple[int, int]) -> int | float: ...  # type: ignore[override]
+
+    def __setitem__(self, index: Tuple[int, int], other: int | float) -> None: ...  # type: ignore[override]
+
+    def tolist(self) -> list[int | float]: ...  # type: ignore[override]
+
+
 class RawFrame:
     def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
@@ -887,6 +928,8 @@ class VideoFrame(RawFrame):
 
     def _writelines(self, write: Callable[[bytes], None]) -> None: ...
 
+    def __getitem__(self, index: int) -> video_view: ...
+
 
 class AudioFrame(RawFrame):
     sample_type: SampleType
@@ -895,6 +938,7 @@ class AudioFrame(RawFrame):
     channel_layout: int
     num_channels: int
 
+    def __getitem__(self, index: int) -> audio_view: ...
 
 #include <plugins/implementations>
 

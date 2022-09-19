@@ -3,6 +3,7 @@
 
 import re
 import sys
+from abc import abstractmethod
 from argparse import ArgumentParser, Namespace
 from inspect import Parameter, Signature
 from itertools import chain
@@ -10,7 +11,10 @@ from keyword import kwlist as reserved_keywords
 from os import SEEK_END, listdir, makedirs, path
 from os.path import join as join_path
 from pathlib import Path
-from typing import Any, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TypeVar, Union
+from typing import (
+    Any, Callable, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TypeVar, Union,
+    runtime_checkable
+)
 
 import vapoursynth as vs
 
@@ -24,21 +28,30 @@ CoreLike = Union[vs.Core, vs.RawNode]
 SingleAndSequence = Union[T, Sequence[T]]
 
 
-class Callback(Protocol):
-    def __call__(self, *args: Any, **kwds: Any) -> '_VapourSynthMapValue':
+@runtime_checkable
+class SupportsString(Protocol):
+    @abstractmethod
+    def __str__(self) -> str:
         ...
 
+
+DataType = Union[str, bytes, bytearray, SupportsString]
 
 _VapourSynthMapValue = Union[
     SingleAndSequence[int],
     SingleAndSequence[float],
-    SingleAndSequence[str],
+    SingleAndSequence[DataType],
     SingleAndSequence[vs.VideoNode],
     SingleAndSequence[vs.VideoFrame],
     SingleAndSequence[vs.AudioNode],
     SingleAndSequence[vs.AudioFrame],
-    SingleAndSequence[Callback]
+    SingleAndSequence['VSMapValueCallback[Any]']
 ]
+
+BoundVSMapValue = TypeVar('BoundVSMapValue', bound=_VapourSynthMapValue)
+
+VSMapValueCallback = Callable[..., BoundVSMapValue]
+
 
 vs_value_type = '_VapourSynthMapValue'
 site_package_dirname = 'vapoursynth-stubs'
@@ -64,7 +77,7 @@ parser.add_argument(
 )
 parser.add_argument(
     '--output', '-o', default='@',
-    help="Where to output the file. "
+    help="Where to output the file. Can be a full file path or directory."
     "The special value '-' means output to stdout. "
     "The spcial value '@' will install it as a stub-package inside site-packages."
 )
@@ -173,9 +186,11 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
                         f'Union[{t_}, Sequence[{t_}], None]', f'Optional[SingleAndSequence[{t}]]'
                     )
 
+            callback_type = 'VSMapValueCallback[_VapourSynthMapValue]'
+
             # Make Callable definitions sensible
-            signature = signature.replace('Union[Func, Callable]', 'Callback')
-            signature = signature.replace('Union[Func, Callable, None]', 'Optional[Callback]')
+            signature = signature.replace('Union[Func, Callable]', callback_type)
+            signature = signature.replace('Union[Func, Callable, None]', f'Optional[{callback_type}]')
 
             # Replace the keywords with valid values
             for kw in reserved_keywords:
@@ -230,6 +245,8 @@ class PluginMeta(NamedTuple):
     def __lt__(self, x: 'PluginMeta', /) -> bool: return self._str_('__lt__', x)  # type: ignore[override]
     def __ge__(self, x: 'PluginMeta', /) -> bool: return self._str_('__ge__', x)  # type: ignore[override]
     def __le__(self, x: 'PluginMeta', /) -> bool: return self._str_('__le__', x)  # type: ignore[override]
+    def __eq__(self, x: 'PluginMeta', /) -> bool: return self._str_('__eq__', x)  # type: ignore[override]
+    def __ne__(self, x: 'PluginMeta', /) -> bool: return self._str_('__ne__', x)  # type: ignore[override]
 
 
 def retrieve_plugins(
@@ -281,6 +298,8 @@ class Implementation(NamedTuple):
     def __lt__(self, x: 'Implementation', /) -> bool: return self.plugin.__lt__(x.plugin)  # type: ignore[override]
     def __ge__(self, x: 'Implementation', /) -> bool: return self.plugin.__ge__(x.plugin)  # type: ignore[override]
     def __le__(self, x: 'Implementation', /) -> bool: return self.plugin.__le__(x.plugin)  # type: ignore[override]
+    def __eq__(self, x: 'Implementation', /) -> bool: return self.plugin.__eq__(x.plugin)  # type: ignore[override]
+    def __ne__(self, x: 'Implementation', /) -> bool: return self.plugin.__ne__(x.plugin)  # type: ignore[override]
 
 
 def make_implementations(plugins: Iterable[PluginMeta]) -> Iterator[Implementation]:
@@ -325,10 +344,12 @@ class Instance(NamedTuple):
     def get_head(plugin: PluginMeta, core_name: str) -> str:
         return f"{instance_start}{core_name}: {plugin.name}"
 
-    def __gt__(self, x: 'Implementation', /) -> bool: return self.plugin.__gt__(x.plugin)  # type: ignore[override]
-    def __lt__(self, x: 'Implementation', /) -> bool: return self.plugin.__lt__(x.plugin)  # type: ignore[override]
-    def __ge__(self, x: 'Implementation', /) -> bool: return self.plugin.__ge__(x.plugin)  # type: ignore[override]
-    def __le__(self, x: 'Implementation', /) -> bool: return self.plugin.__le__(x.plugin)  # type: ignore[override]
+    def __gt__(self, x: 'Instance', /) -> bool: return self.plugin.__gt__(x.plugin)  # type: ignore[override]
+    def __lt__(self, x: 'Instance', /) -> bool: return self.plugin.__lt__(x.plugin)  # type: ignore[override]
+    def __ge__(self, x: 'Instance', /) -> bool: return self.plugin.__ge__(x.plugin)  # type: ignore[override]
+    def __le__(self, x: 'Instance', /) -> bool: return self.plugin.__le__(x.plugin)  # type: ignore[override]
+    def __eq__(self, x: 'Instance', /) -> bool: return self.plugin.__eq__(x.plugin)  # type: ignore[override]
+    def __ne__(self, x: 'Instance', /) -> bool: return self.plugin.__ne__(x.plugin)  # type: ignore[override]
 
 
 def make_instances(plugins: Iterable[PluginMeta]) -> Iterator[Instance]:
@@ -435,28 +456,40 @@ def output_stubs(
 ) -> None:
     existing_stubs: Path | None = None
 
-    if (stubs_path := str(args.output)) != '-':
-        if stubs_path == '@' or not stubs_path:
-            stubs_path = locate_or_create_stub_file()
+    stubs_path = str(args.output)
 
-        stubs = Path(stubs_path)
+    if stubs_path == '@' or not stubs_path:
+        stubs_path = locate_or_create_stub_file()
 
+    stubs = Path(stubs_path)
+
+    if stubs_path != '-':
         if not stubs.is_absolute():
             if not stubs.parent:
                 stubs = stubs.cwd() / stubs
             stubs = stubs.absolute()
+
+        if not stubs.suffix:
+            if stubs.name.lower() == 'vapoursynth':
+                stubs /= '__init__.pyi'
+            else:
+                stubs /= 'vapoursynth.pyi'
 
         existing_stubs = stubs if stubs.exists() and stubs.is_file() else None
 
         if existing_stubs and args.force:
             existing_stubs.unlink(True)
             existing_stubs.touch()
+        else:
+            makedirs(stubs.parent, exist_ok=True)
 
     template = generate_template(args, cores, implementations, instances, existing_stubs)
 
-    with (sys.stdout if stubs_path == '-' else open(str(stubs), 'w')) as outf:
-        outf.write(template)
-        outf.flush()
+    out_file = sys.stdout if stubs_path == '-' else open(str(stubs), 'w')
+
+    with out_file:
+        out_file.write(template)
+        out_file.flush()
 
 
 def get_existing_implementations(path: str | Path, cores: Sequence[CoreLike]) -> Dict[str, Implementation]:

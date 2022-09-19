@@ -30,7 +30,7 @@ def fetch_url(url: str, desc: Union[str, None] = None) -> bytearray:
 download_cache: Dict[str, bytearray] = {}
 
 
-def fetch_url_cached(url: str, desc: str = "") -> bytearray:
+def fetch_url_cached(url: str, desc: str = '') -> bytearray:
     data = download_cache.get(url, None)
     if data is None:
         data = fetch_url(url, desc)

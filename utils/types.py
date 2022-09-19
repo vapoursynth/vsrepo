@@ -230,7 +230,7 @@ class VSPackage:
     def get_python_name(self) -> str:
         package_name = self.wheelname or self.name
 
-        return package_name.replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "")
+        return package_name.replace('.', '_').replace(' ', '_').replace('(', '_').replace(')', '')
 
 
 @dataclass

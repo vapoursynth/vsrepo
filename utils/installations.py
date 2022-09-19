@@ -10,7 +10,7 @@ def get_vapoursynth_version() -> int:
     except ImportError:
         return 1
 
-    if hasattr(vapoursynth, "__version__"):
+    if hasattr(vapoursynth, '__version__'):
         return vapoursynth.__version__[0]
     return vapoursynth.core.version_number()
 
@@ -21,7 +21,7 @@ def get_vapoursynth_api_version() -> int:
     except ImportError:
         return 1
 
-    if hasattr(vapoursynth, "__api_version__"):
+    if hasattr(vapoursynth, '__api_version__'):
         return vapoursynth.__api_version__[0]
     # assume lowest widespread api version, will probably error out somewhere else
     return 3
@@ -29,24 +29,24 @@ def get_vapoursynth_api_version() -> int:
 
 def detect_vapoursynth_installation() -> Path:
     try:
-        spec = find_spec("vapoursynth")
+        spec = find_spec('vapoursynth')
 
         if spec is None:
             raise ModuleNotFoundError
     except (ValueError, ModuleNotFoundError):
-        print("Could not detect vapoursynth.")
+        print('Could not detect vapoursynth.')
         sys.exit(1)
 
     if not spec.has_location:
         try:
             import vapoursynth
         except ImportError:
-            print("The vapoursynth-module could not be found or imported.")
+            print('The vapoursynth-module could not be found or imported.')
         else:
             return Path(vapoursynth.__file__)
 
     if spec.origin is None:
-        print("VapourSynth's origin could not be determined.")
+        print('VapourSynth\'s origin could not be determined.')
         sys.exit(1)
 
     return Path(spec.origin)

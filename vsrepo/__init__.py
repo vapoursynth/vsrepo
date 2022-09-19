@@ -38,7 +38,7 @@ from typing import Iterator, List, Optional, Tuple
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
-from utils import BoundVSPackageRelT, VSPackage, VSPackageRel, VSPackages
+from utils import VSPackage, VSPackageRel, VSPackages
 from utils.install import InstallFileResult, InstallPackageResult
 from utils.installations import get_vapoursynth_api_version
 from utils.net import fetch_url_cached
@@ -96,7 +96,7 @@ def check_hash(data: bytes, ref_hash: str) -> Tuple[bool, str, str]:
     return (data_hash == ref_hash, data_hash, ref_hash)
 
 
-def find_dist_version(pkg: VSPackage[BoundVSPackageRelT], path: Optional[Path]) -> Optional[str]:
+def find_dist_version(pkg: VSPackage, path: Optional[Path]) -> Optional[str]:
     if path is None:
         return None
 
@@ -145,7 +145,7 @@ def detect_installed_packages() -> None:
                         installed_packages[p.identifier] = 'Unknown'
 
 
-def print_package_status(p: VSPackage[VSPackageRel]) -> None:
+def print_package_status(p: VSPackage) -> None:
     lastest_installable = p.get_latest_installable_release()
     name = p.name
     if installed_packages.is_package_upgradable(p.identifier, False):
@@ -177,7 +177,7 @@ def list_available_packages() -> None:
         print_package_status(p)
 
 
-def can_install(p: VSPackage[VSPackageRel]) -> bool:
+def can_install(p: VSPackage) -> bool:
     return p.get_latest_installable_release() is not None
 
 
@@ -229,7 +229,7 @@ def find_dist_dirs(name: str, path: Optional[Path] = info.site_package_dir) -> I
         yield targetname
 
 
-def remove_package_meta(pkg: VSPackage[BoundVSPackageRelT]) -> None:
+def remove_package_meta(pkg: VSPackage) -> None:
     if info.site_package_dir is None:
         return
 
@@ -239,10 +239,7 @@ def remove_package_meta(pkg: VSPackage[BoundVSPackageRelT]) -> None:
         rmdir(dist_dir)
 
 
-def install_package_meta(
-    files: List[Tuple[Path, str, str]],
-    pkg: VSPackage[BoundVSPackageRelT], rel: BoundVSPackageRelT, index: int
-) -> None:
+def install_package_meta(files: List[Tuple[Path, str, str]], pkg: VSPackage, rel: VSPackageRel, index: int) -> None:
     if info.site_package_dir is None:
         return
 
@@ -278,7 +275,7 @@ def install_package_meta(
             w.writerow([filename, sha256hex, length])
 
 
-def install_files(p: VSPackage[VSPackageRel]) -> InstallFileResult:
+def install_files(p: VSPackage) -> InstallFileResult:
     err = InstallFileResult(0, 1)
     dest_path = p.get_install_path(info)
 
@@ -455,7 +452,7 @@ def install_package(name: str) -> InstallPackageResult:
     return InstallPackageResult(error=1)
 
 
-def upgrade_files(p: VSPackage[VSPackageRel]) -> InstallPackageResult:
+def upgrade_files(p: VSPackage) -> InstallPackageResult:
     if can_install(p):
         inst = InstallPackageResult()
 
@@ -499,7 +496,7 @@ def upgrade_all_packages(force: bool) -> InstallPackageResult:
     return inst
 
 
-def uninstall_files(p: VSPackage[VSPackageRel]) -> None:
+def uninstall_files(p: VSPackage) -> None:
     dest_path = p.get_install_path(info)
 
     if p.pkg_type == 'PyWheel':
@@ -773,3 +770,7 @@ def main() -> None:
     elif args.operation == "gendistinfo":
         detect_installed_packages()
         rebuild_distinfo()
+
+
+if __name__ == '__main__':
+    main()

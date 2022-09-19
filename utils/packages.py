@@ -1,7 +1,7 @@
 from typing import Dict, Literal, Optional, overload
 
 from .site import InstallationInfo
-from .types import VSPackage, VSPackageRel, VSPackages
+from .types import VSPackage, VSPackages
 
 
 class InstalledPackages(Dict[str, str]):
@@ -10,14 +10,14 @@ class InstalledPackages(Dict[str, str]):
         self.packages = packages
 
     @overload
-    def get_package_from_id(self, id: str, required: Literal[True]) -> VSPackage[VSPackageRel]:
+    def get_package_from_id(self, id: str, required: Literal[True]) -> VSPackage:
         ...
 
     @overload
-    def get_package_from_id(self, id: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
+    def get_package_from_id(self, id: str, required: bool = False) -> Optional[VSPackage]:
         ...
 
-    def get_package_from_id(self, id: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
+    def get_package_from_id(self, id: str, required: bool = False) -> Optional[VSPackage]:
         for p in self.packages:
             if p.identifier == id:
                 return p
@@ -28,14 +28,14 @@ class InstalledPackages(Dict[str, str]):
         return None
 
     @overload
-    def get_package_from_plugin_name(self, name: str, required: Literal[True]) -> VSPackage[VSPackageRel]:
+    def get_package_from_plugin_name(self, name: str, required: Literal[True]) -> VSPackage:
         ...
 
     @overload
-    def get_package_from_plugin_name(self, name: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
+    def get_package_from_plugin_name(self, name: str, required: bool = False) -> Optional[VSPackage]:
         ...
 
-    def get_package_from_plugin_name(self, name: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
+    def get_package_from_plugin_name(self, name: str, required: bool = False) -> Optional[VSPackage]:
         for p in self.packages:
             if p.name.casefold() == name.casefold():
                 return p
@@ -46,14 +46,14 @@ class InstalledPackages(Dict[str, str]):
         return None
 
     @overload
-    def get_package_from_namespace(self, namespace: str, required: Literal[True]) -> VSPackage[VSPackageRel]:
+    def get_package_from_namespace(self, namespace: str, required: Literal[True]) -> VSPackage:
         ...
 
     @overload
-    def get_package_from_namespace(self, namespace: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
+    def get_package_from_namespace(self, namespace: str, required: bool = False) -> Optional[VSPackage]:
         ...
 
-    def get_package_from_namespace(self, namespace: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
+    def get_package_from_namespace(self, namespace: str, required: bool = False) -> Optional[VSPackage]:
         for p in self.packages:
             if p.namespace == namespace:
                 return p
@@ -64,14 +64,14 @@ class InstalledPackages(Dict[str, str]):
         return None
 
     @overload
-    def get_package_from_modulename(self, modulename: str, required: Literal[True]) -> VSPackage[VSPackageRel]:
+    def get_package_from_modulename(self, modulename: str, required: Literal[True]) -> VSPackage:
         ...
 
     @overload
-    def get_package_from_modulename(self, modulename: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
+    def get_package_from_modulename(self, modulename: str, required: bool = False) -> Optional[VSPackage]:
         ...
 
-    def get_package_from_modulename(self, modulename: str, required: bool = False) -> Optional[VSPackage[VSPackageRel]]:
+    def get_package_from_modulename(self, modulename: str, required: bool = False) -> Optional[VSPackage]:
         for p in self.packages:
             if p.modulename == modulename:
                 return p
@@ -81,7 +81,7 @@ class InstalledPackages(Dict[str, str]):
 
         return None
 
-    def get_package_from_name(self, name: str) -> VSPackage[VSPackageRel]:
+    def get_package_from_name(self, name: str) -> VSPackage:
         p = self.get_package_from_id(name)
 
         if p is None:

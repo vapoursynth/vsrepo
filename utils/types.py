@@ -146,11 +146,8 @@ class VSPackageRelWin(VSPackageRelWin32, VSPackageRelWin64):
     ...
 
 
-BoundVSPackageRelT = TypeVar('BoundVSPackageRelT', bound=VSPackageRel)
-
-
 @dataclass
-class VSPackage(Generic[BoundVSPackageRelT]):
+class VSPackage:
     name: str
     category: str
     description: str
@@ -162,7 +159,7 @@ class VSPackage(Generic[BoundVSPackageRelT]):
     api: int = 3
     pkg_type: VSPackageType = VSPackageType.Descriptor(VSPackageType.SCRIPT)
     updatemode: VSPackageUpdateMode = VSPackageUpdateMode.Descriptor(VSPackageUpdateMode.MANUAL)
-    releases: List[BoundVSPackageRelT] = field(default_factory=list)
+    releases: List[VSPackageRel] = field(default_factory=list)
     dependencies: List[str] = field(default_factory=list)
     device: List[VSPackageDeviceType] = field(default_factory=list)
     modulename: Union[str, None] = None
@@ -206,9 +203,9 @@ class VSPackage(Generic[BoundVSPackageRelT]):
 @dataclass
 class VSPackages:
     file_format: int
-    packages: List[VSPackage[VSPackageRel]]
+    packages: List[VSPackage]
 
-    def __iter__(self) -> Iterator[VSPackage[VSPackageRel]]:
+    def __iter__(self) -> Iterator[VSPackage]:
         return iter(self.packages)
 
     @overload

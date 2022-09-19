@@ -1,9 +1,7 @@
-from pathlib import Path
 import sys
 from glob import glob
 from importlib.util import find_spec
-
-from .site import is_venv
+from pathlib import Path
 
 
 def get_vapoursynth_version() -> int:
@@ -63,6 +61,8 @@ def is_sitepackage_install_portable(portable: bool) -> bool:
 
 
 def is_sitepackage_install(portable: bool) -> bool:
+    from .site import is_venv
+
     if portable:
         return False
 

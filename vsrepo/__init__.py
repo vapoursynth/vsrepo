@@ -101,48 +101,48 @@ def find_dist_version(pkg: VSPackage, path: Optional[Path]) -> Optional[str]:
         return None
 
     name = pkg.get_python_name()
-    versions: List[str] = []
-
-    for targetname in path.iterdir():
-        if (targetname.name.startswith(f"{name}-") and targetname.name.endswith(".dist-info")):
+    versions = [
+        targetname.name[len(name) + 1:-10]
+        for targetname in path.iterdir() if (
             # only bother with dist-info dirs that actually have a usable
             # record in case a package uninstall failed to delete the dir
+            targetname.name.startswith(f"{name}-") and targetname.name.endswith(".dist-info")
+            and (targetname / 'RECORD').is_file()
+        )
+    ]
 
-            if (targetname / 'RECORD').is_file():
-                versions.append(targetname.name[len(name) + 1:-10])
-
-    if not versions:
-        return None
-
-    return max(versions)
+    return max(versions, default=None)
 
 
 def detect_installed_packages() -> None:
     for p in package_list:
         dest_path = p.get_install_path(info)
-        if p.pkg_type == 'PyWheel':
-            version = find_dist_version(p, dest_path)
-            if version is not None:
+
+        if p.pkg_type is VSPackageType.WHEEL:
+            if (version := find_dist_version(p, dest_path)) is not None:
                 installed_packages[p.identifier] = version
-        else:
-            for v in p.releases:
-                matched = True
-                exists = True
 
-                if (release := v.get_release(p.pkg_type)) and release.files:
-                    for f, rel_file in release.files.items():
-                        try:
-                            if not check_hash((dest_path / f).read_bytes(), rel_file.filename)[0]:
-                                matched = False
-                        except FileNotFoundError:
-                            exists = False
+            continue
+
+        for v in p.releases:
+            matched = True
+            exists = True
+
+            if (release := v.get_release(p.pkg_type)) and release.files:
+                for f, rel_file in release.files.items():
+                    try:
+                        if not check_hash((dest_path / f).read_bytes(), rel_file.filename)[0]:
                             matched = False
+                    except FileNotFoundError:
+                        exists = False
+                        matched = False
 
-                    if matched:
-                        installed_packages[p.identifier] = v.version
-                        break
-                    elif exists:
-                        installed_packages[p.identifier] = 'Unknown'
+                if matched:
+                    installed_packages[p.identifier] = v.version
+                    break
+
+                if exists:
+                    installed_packages[p.identifier] = 'Unknown'
 
 
 def print_package_status(p: VSPackage) -> None:

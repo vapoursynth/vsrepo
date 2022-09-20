@@ -1,10 +1,13 @@
 import json
 import logging
 import sys
+from argparse import Namespace
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
-from typing import Any, Dict, Generic, Iterator, List, Literal, NamedTuple, Tuple, Type, TypeVar, Union, overload
+from typing import (
+    Any, Dict, Generic, Iterator, List, Literal, NamedTuple, Sequence, Tuple, Type, TypeVar, Union, overload
+)
 
 from .installations import get_vapoursynth_api_version
 from .site import InstallationInfo
@@ -268,3 +271,19 @@ class VSPackages:
             sys.exit(1)
 
         return VSPackages(file_format, packages)
+
+
+class VSRepoNamespace(Namespace):
+    operation: Literal[
+        'install', 'update', 'upgrade', 'upgrade-all', 'uninstall',
+        'installed', 'available', 'paths', 'genstubs', 'gendistinfo'
+    ]
+    package: Sequence[str]
+    force: bool
+    portable: bool
+    skip_deps: bool
+    target: Literal['win32', 'win64']
+    binary_path: Path
+    script_path: Path
+    stub_output_file: Path
+    force_dist_info: bool

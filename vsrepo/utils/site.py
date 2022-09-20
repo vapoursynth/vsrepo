@@ -1,10 +1,14 @@
-from pathlib import Path
 import sys
-from argparse import Namespace
 from os import getenv
-from typing import NamedTuple, Optional, Union
+from pathlib import Path
+from typing import TYPE_CHECKING, NamedTuple, Optional, Union
 
 from .installations import detect_vapoursynth_installation, is_sitepackage_install, is_sitepackage_install_portable
+
+if TYPE_CHECKING:
+    from .types import VSRepoNamespace
+else:
+    from argparse import Namespace as VSRepoNamespace
 
 try:
     import winreg
@@ -50,7 +54,7 @@ class InstallationInfo(NamedTuple):
             print('Dist-Infos: <Will not be installed>')
 
 
-def get_installation_info(args: Namespace) -> InstallationInfo:
+def get_installation_info(args: VSRepoNamespace) -> InstallationInfo:
     is_64bits = str(args.target) == 'win64'
 
     file_dirname = Path(__file__).parent.parent.absolute()

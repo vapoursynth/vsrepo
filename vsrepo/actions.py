@@ -9,7 +9,6 @@ import subprocess
 import sys
 import tempfile
 import zipfile
-from argparse import Namespace
 from email.utils import formatdate, mktime_tz, parsedate_tz
 from pathlib import Path
 from typing import Iterator, List, Optional, Tuple
@@ -18,18 +17,18 @@ from urllib.request import Request, urlopen
 
 from .utils import (
     InstallationInfo, InstalledPackages, InstallFileResult, InstallPackageResult, VSPackage,
-    VSPackagePlatformReleaseWheel, VSPackageRel, VSPackages, VSPackageType, fetch_url_cached,
+    VSPackagePlatformReleaseWheel, VSPackageRel, VSPackages, VSPackageType, VSRepoNamespace, fetch_url_cached,
     get_vapoursynth_api_version
 )
 
-args: Namespace = None  # type: ignore
+args: VSRepoNamespace = None  # type: ignore
 info: InstallationInfo = None  # type: ignore
 package_list: VSPackages = None  # type: ignore
 installed_packages: InstalledPackages = None  # type: ignore
 
 
 def set_variables(
-    _args: Namespace, _info: InstallationInfo, _package_list: VSPackages, _installed_packages: InstalledPackages
+    _args: VSRepoNamespace, _info: InstallationInfo, _package_list: VSPackages, _installed_packages: InstalledPackages
 ) -> None:
     global args, info, package_list, installed_packages
     args = _args

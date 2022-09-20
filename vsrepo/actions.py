@@ -37,7 +37,7 @@ def set_variables(
     installed_packages = _installed_packages
 
 
-package_print_string = '{:25s} {:15s} {:11s} {:11s} {:s}'
+package_print_string = '{:30s} {:15s} {:11s} {:11s} {:s}'
 
 bundled_api3_plugins = {
     'com.vapoursynth.avisource', 'com.vapoursynth.eedi3', 'com.vapoursynth.imwri',

@@ -175,6 +175,7 @@ __all__ = [
 
     'EnvironmentPolicyAPI',
     'register_policy', 'has_policy',
+    'register_on_destroy', 'unregister_on_destroy',
 
     'get_current_environment',
 
@@ -697,6 +698,14 @@ if not TYPE_CHECKING:
 
 
 def has_policy() -> bool:
+    ...
+
+
+def register_on_destroy(callback: Callable[..., None]) -> None:
+    ...
+
+
+def unregister_on_destroy(callback: Callable[..., None]) -> None:
     ...
 
 

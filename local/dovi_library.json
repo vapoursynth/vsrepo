@@ -8,6 +8,7 @@
 	"namespace": "dovi_library",
 	"github": "https://github.com/quietvoid/dovi_tool",
 	"ignore": [
+		"1.5.7",
 		"1.5.6",
 		"1.5.5",
 		"1.5.4",
@@ -42,6 +43,19 @@
 		"0.3.3"
 	],
 	"releases": [
+		{
+			"version": "libdovi-1.6.7",
+			"published": "2022-06-24T18:55:36Z",
+			"win64": {
+				"url": "https://github.com/quietvoid/dovi_tool/releases/download/libdovi-1.6.7/libdovi-1.6.7-x86_64-pc-windows-msvc.zip",
+				"files": {
+					"dovi.dll": [
+						"dovi.dll",
+						"cc9ca13720acebea92febeb7c57669c8297182bae3369afe7f0beb5dc5bcfa7e"
+					]
+				}
+			}
+		},
 		{
 			"version": "libdovi-1.6.3",
 			"published": "2022-04-25T17:49:44Z",

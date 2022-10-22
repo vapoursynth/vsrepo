@@ -16,6 +16,22 @@
 	],
 	"releases": [
 		{
+			"version": "1.3.0",
+			"published": "2022-10-17T10:43:39.576317Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/5f/ab/a80a9e217a526cf2e5528b8f8894821864fbe77a91d78063c6996d04c9b9/vsaa-1.3.0-py3-none-any.whl",
+				"hash": "77f77a1451f31edf509cfbc0478559a57e51bdb5ab27c4db9e718e282678b570"
+			}
+		},
+		{
+			"version": "1.2.1",
+			"published": "2022-10-14T21:15:55.503017Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/fb/9a/1b2529cfca9bc8f5a9eef2af42ff66d955646d0f7613962577cebd2182ff/vsaa-1.2.1-py3-none-any.whl",
+				"hash": "9e875109f35fecdc599398d246d6092bd80016b28f3341c32348d9e247259047"
+			}
+		},
+		{
 			"version": "1.2.0",
 			"published": "2022-10-06T11:01:17.892955Z",
 			"wheel": {

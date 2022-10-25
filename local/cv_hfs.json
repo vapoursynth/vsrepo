@@ -1,0 +1,27 @@
+{
+	"name": "cv_hfs",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Image segmentation with OpenCV Hierarchical Feature Selection module",
+	"github": "https://github.com/dnjulek/VapourSynth-cv_hfs",
+	"identifier": "com.julek.cv_hfs",
+	"namespace": "cv_hfs",
+	"device": [
+		"cuda"
+	],
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2022-10-25T03:49:35Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/VapourSynth-cv_hfs/releases/download/r1/cv_hfs-r1-win64.7z",
+				"files": {
+					"cv_hfs.dll": [
+						"cv_hfs.dll",
+						"f37887c447ce776f4365ea0bdd1f12eb34295db8f386b92eeda851dd5ecb48e3"
+					]
+				}
+			}
+		}
+	]
+}

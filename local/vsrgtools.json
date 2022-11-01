@@ -16,6 +16,14 @@
 	],
 	"releases": [
 		{
+			"version": "1.2.1",
+			"published": "2022-10-24T09:01:56.731248Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/2c/af/064b4968b6f20e445eee9549694b5c4d890574fa9eb634aba95522b6533b/vsrgtools-1.2.1-py3-none-any.whl",
+				"hash": "1223bd2859ca1cb5f116cb9ef22e1c52b8797b309073a2643fab7d1a072b4948"
+			}
+		},
+		{
 			"version": "1.2.0",
 			"published": "2022-10-17T10:32:08.638415Z",
 			"wheel": {

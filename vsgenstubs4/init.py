@@ -13,7 +13,7 @@ from os.path import join as join_path
 from pathlib import Path
 from typing import (
     Any, Callable, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, Tuple, TypeVar, Union,
-    runtime_checkable
+    cast, runtime_checkable
 )
 
 import vapoursynth as vs
@@ -149,7 +149,7 @@ def load_plugins(args: Namespace) -> vs.Core:
 
 
 def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iterator[str]:
-    plugin = core.__getattr__(namespace)
+    plugin = cast(vs.Plugin, getattr(core, namespace))
 
     ordered_functions = sorted(plugin.functions(), key=lambda x: x.name.lower())
 
@@ -158,7 +158,9 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
 
         if func.name in dir(plugin):
             try:
-                signature_base = Signature.from_callable(plugin.__getattr__(func.name), follow_wrapped=True)
+                signature_base = Signature.from_callable(
+                    cast(vs.Function, getattr(plugin, func.name)), follow_wrapped=True
+                )
             except sig_excepted_errors:
                 if isinstance(core, vs.RawNode):
                     signature_base.replace(return_annotation=core.__class__)
@@ -228,7 +230,7 @@ class PluginMeta(NamedTuple):
     @classmethod
     def from_namespace(cls, namespace: str, cores: Sequence[CoreLike]) -> 'PluginMeta':
         try:
-            plugin = cores[0].__getattr__(namespace)
+            plugin = cast(vs.Plugin, getattr(cores[0], namespace))
         except BaseException:
             raise ValueError(f'Invalid namespace! Plugin not found: "{namespace}"')
 

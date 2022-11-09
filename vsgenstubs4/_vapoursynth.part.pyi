@@ -182,8 +182,6 @@ __all__ = [
     'VideoOutputTuple',
     'clear_output', 'clear_outputs', 'get_outputs', 'get_output',
 
-    'construct_signature',
-
     # Logging
     'LogHandle', 'Error',
 
@@ -746,10 +744,6 @@ class VideoOutputTuple(NamedTuple):
     clip: 'VideoNode'
     alpha: Union['VideoNode', None]
     alt_output: Literal[0, 1, 2]
-
-
-def construct_signature(signature: str, return_signature: str, injected: Union[str, None] = None) -> Signature:
-    ...
 
 
 class Error(Exception):

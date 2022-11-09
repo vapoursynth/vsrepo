@@ -1,0 +1,24 @@
+{
+	"name": "cv_inpaint",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Image Inpainting with OpenCV",
+	"github": "https://github.com/dnjulek/VapourSynth-cv_inpaint",
+	"identifier": "com.julek.cv_inpaint",
+	"namespace": "cv_inpaint",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2022-10-20T20:30:16Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/VapourSynth-cv_inpaint/releases/download/r1/cv_inpaint-r1-win64.7z",
+				"files": {
+					"cv_inpaint.dll": [
+						"cv_inpaint.dll",
+						"596e448256c29e807b83a1a3b3c87e983d5d937b20a4584a5391d5ca36cb9cbb"
+					]
+				}
+			}
+		}
+	]
+}

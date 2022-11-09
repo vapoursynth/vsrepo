@@ -15,6 +15,19 @@
 	],
 	"releases": [
 		{
+			"version": "R2.11",
+			"published": "2022-10-04T01:59:28Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.11/VapourSynth-BM3DCUDA-R2.11.7z",
+				"files": {
+					"BM3DCUDA.dll": [
+						"VapourSynth-BM3DCUDA-R2.11/bm3dcuda.dll",
+						"c134e8c35c1d14a244b8ff0909eceabd57454b4a31ecf897fcbfba7f7efb7997"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2.10",
 			"published": "2022-07-15T05:53:57Z",
 			"win64": {

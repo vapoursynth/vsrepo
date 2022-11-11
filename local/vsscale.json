@@ -17,6 +17,62 @@
 	],
 	"releases": [
 		{
+			"version": "1.3.0",
+			"published": "2022-10-27T22:09:24.846867Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/50/21/baa3dd4fab2dd932151671f86ce79881627dce9662c6a2f1c9769d5aa685/vsscale-1.3.0-py3-none-any.whl",
+				"hash": "85a56d666f952d9292e09deee1b63144d28ff22ecff82cf64280936738069efd"
+			}
+		},
+		{
+			"version": "1.2.3",
+			"published": "2022-10-27T13:54:01.340074Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/f0/d5/600bec1137197cfcf40dbc454495f3ad4337c2acfa952f7cc14f20cc3e23/vsscale-1.2.3-py3-none-any.whl",
+				"hash": "e8bedc97e9095e7f4cf1db2d3e2ec31a0eb4255e7caa85a5481b102667f33d67"
+			}
+		},
+		{
+			"version": "1.2.2",
+			"published": "2022-10-24T09:01:17.726243Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/9d/d8/14dedac52a53ad2d2a7626aefc39d44b133ba4e239fecea0294b6b532e10/vsscale-1.2.2-py3-none-any.whl",
+				"hash": "ba4e133115b9e29717292275d0595dc2defc87041fb3659e5f694516f4c1eab9"
+			}
+		},
+		{
+			"version": "1.2.1",
+			"published": "2022-10-20T09:16:30.021506Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/3e/e2/b50abe15cef9643d664a3ac4f1c2eb972c8e2fd415507d5d5fdf00bf07ba/vsscale-1.2.1-py3-none-any.whl",
+				"hash": "a03edffa2cdea42e8fad0fce02926e13500dff8b2c17aa11e6711e9bf41c0873"
+			}
+		},
+		{
+			"version": "1.2.0",
+			"published": "2022-10-17T10:44:35.894976Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/57/36/d30601ce5df1e6acfb56cd8af22964db89ea2b4f1ed4259fa8448c500106/vsscale-1.2.0-py3-none-any.whl",
+				"hash": "9d877c11ea331340a3b3933800fa1a6c10b3cba4c727b21addf2f60124d3a917"
+			}
+		},
+		{
+			"version": "1.1.1",
+			"published": "2022-10-14T21:17:36.573912Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/4f/d6/7ce91bb0eb4111263d044ce6bf49549dc9147f18498e269e1bdac87f290a/vsscale-1.1.1-py3-none-any.whl",
+				"hash": "63f12564e58d7dd301b0d6250217fa70a0d981fd01d3fc63c4a8aaf78c9b56b9"
+			}
+		},
+		{
+			"version": "1.1.0",
+			"published": "2022-10-06T11:45:07.364780Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/af/a1/0d70761fa5299d0e83d3190a8b2075088223eac36bcf35ff67a8b2f0236b/vsscale-1.1.0-py3-none-any.whl",
+				"hash": "3ea0cf160b0062c97088ae76e8d25aabe97afa61b6b2fd7371cec9723b70c0d2"
+			}
+		},
+		{
 			"version": "1.0.1",
 			"published": "2022-09-08T16:36:36.613034Z",
 			"wheel": {

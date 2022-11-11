@@ -19,6 +19,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:44dc654",
+			"published": "2022-10-17T09:55:32Z",
+			"script": {
+				"url": "https://api.github.com/repos/dubhater/vapoursynth-dfmderainbow/zipball/44dc6545bced8fc25672bdda717943a02c6b5d71",
+				"files": {
+					"dfmderainbow.py": [
+						"dubhater-vapoursynth-dfmderainbow-44dc654/dfmderainbow.py",
+						"fdf037e63100b8388cfdc194a72e14338fcc3faf286550161020578b9a125f24"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:61bafd9",
 			"published": "2022-02-05T14:17:35Z",
 			"script": {

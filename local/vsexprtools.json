@@ -12,6 +12,38 @@
 	],
 	"releases": [
 		{
+			"version": "1.2.3",
+			"published": "2022-10-18T14:45:58.537026Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/56/8f/19d529c75731cdf9a232d169946b042f433a1ad22122a9bdf0685bdc43cc/vsexprtools-1.2.3-py3-none-any.whl",
+				"hash": "5a35b29828bf267e6189f13fc2b7a5915c020444511da82facea8337c6dac126"
+			}
+		},
+		{
+			"version": "1.2.2",
+			"published": "2022-10-17T13:07:06.838418Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/dc/00/0a60e1cb4c7c1616b217993e047dd0fca348f434c2a1eed67856b07a0571/vsexprtools-1.2.2-py3-none-any.whl",
+				"hash": "f66b93e816e07f7be26a280556770857111f7875ec47429ba7f95743b5f8e34e"
+			}
+		},
+		{
+			"version": "1.2.1",
+			"published": "2022-10-14T21:00:39.171812Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/76/a3/814751bca53196534b9abf22a9a2bcc6a60eeccbbae11f423e8e3f8946c9/vsexprtools-1.2.1-py3-none-any.whl",
+				"hash": "b1626de62cdebbea18f6ab4aede09eeb2b45b9ac698367bfb113d161b9b5ddab"
+			}
+		},
+		{
+			"version": "1.2.0",
+			"published": "2022-10-06T10:59:03.781522Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/3a/68/5598722860c57313d1113e6d013ec99022c7cef4c31d323c24592940f1ad/vsexprtools-1.2.0-py3-none-any.whl",
+				"hash": "bcc6b5a5ff1a04c0fc9264b919f7bb83fdccbf3923ef2942579def8276cc4b39"
+			}
+		},
+		{
 			"version": "1.1.0",
 			"published": "2022-10-02T19:39:45.721666Z",
 			"wheel": {

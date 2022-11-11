@@ -28,6 +28,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:076dbde",
+			"published": "2022-10-13T23:15:12Z",
+			"script": {
+				"url": "https://api.github.com/repos/Irrational-Encoding-Wizardry/fvsfunc/zipball/076dbde68227f6cca91304a447b2a02b0e95413e",
+				"files": {
+					"fvsfunc.py": [
+						"Irrational-Encoding-Wizardry-fvsfunc-076dbde/fvsfunc.py",
+						"1e7f3d9bf293b9bd771bf0886b7ba3f3bed07c1eda47d384ed61fd363a2b715c"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:81d6d63",
 			"published": "2022-04-12T06:13:55Z",
 			"script": {

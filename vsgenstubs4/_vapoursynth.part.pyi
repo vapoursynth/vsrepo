@@ -82,7 +82,8 @@ from inspect import Signature
 from types import MappingProxyType, TracebackType
 from typing import (
     TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,
-    NamedTuple, NoReturn, Optional, Protocol, Sequence, Type, TypedDict, TypeVar, Union, overload, runtime_checkable
+    NamedTuple, NoReturn, Optional, Protocol, Sequence, Tuple, Type, TypedDict, TypeVar, Union, overload,
+    runtime_checkable
 )
 
 __all__ = [
@@ -174,13 +175,12 @@ __all__ = [
 
     'EnvironmentPolicyAPI',
     'register_policy', 'has_policy',
+    'register_on_destroy', 'unregister_on_destroy',
 
     'get_current_environment',
 
     'VideoOutputTuple',
     'clear_output', 'clear_outputs', 'get_outputs', 'get_output',
-
-    'construct_signature',
 
     # Logging
     'LogHandle', 'Error',
@@ -699,6 +699,14 @@ def has_policy() -> bool:
     ...
 
 
+def register_on_destroy(callback: Callable[..., None]) -> None:
+    ...
+
+
+def unregister_on_destroy(callback: Callable[..., None]) -> None:
+    ...
+
+
 class Environment:
     env: EnvironmentData
 
@@ -736,10 +744,6 @@ class VideoOutputTuple(NamedTuple):
     clip: 'VideoNode'
     alpha: Union['VideoNode', None]
     alt_output: Literal[0, 1, 2]
-
-
-def construct_signature(signature: str, return_signature: str, injected: Union[str, None] = None) -> Signature:
-    ...
 
 
 class Error(Exception):
@@ -816,7 +820,7 @@ class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
         self, key: str, default: _VapourSynthMapValue = 0
     ) -> _VapourSynthMapValue: ...
 
-    def copy(self) -> 'FrameProps': ...
+    def copy(self) -> MutableMapping[str, _VapourSynthMapValue]: ...
 
     # Since we're inheriting from the MutableMapping abstract class,
     # we *have* to specify that we have indeed created these methods.
@@ -837,6 +841,46 @@ class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
     def __iter__(self) -> Iterator[str]: ...
 
     def __len__(self) -> int: ...
+
+
+class audio_view(memoryview):  # type: ignore[misc]
+    @property
+    def shape(self) -> tuple[int]: ...
+    
+    @property
+    def strides(self) -> tuple[int]: ...
+
+    @property
+    def ndim(self) -> Literal[1]: ...
+
+    @property
+    def obj(self) -> FramePtr: ...  # type: ignore[override]
+
+    def __getitem__(self, index: int) -> int | float: ...  # type: ignore[override]
+
+    def __setitem__(self, index: int, other: int | float) -> None: ...  # type: ignore[override]
+
+    def tolist(self) -> list[int | float]: ...  # type: ignore[override]
+
+
+class video_view(memoryview):  # type: ignore[misc]
+    @property
+    def shape(self) -> tuple[int, int]: ...
+    
+    @property
+    def strides(self) -> tuple[int, int]: ...
+
+    @property
+    def ndim(self) -> Literal[2]: ...
+
+    @property
+    def obj(self) -> FramePtr: ...  # type: ignore[override]
+
+    def __getitem__(self, index: Tuple[int, int]) -> int | float: ...  # type: ignore[override]
+
+    def __setitem__(self, index: Tuple[int, int], other: int | float) -> None: ...  # type: ignore[override]
+
+    def tolist(self) -> list[int | float]: ...  # type: ignore[override]
 
 
 class RawFrame:
@@ -885,7 +929,9 @@ class VideoFrame(RawFrame):
     width: int
     height: int
 
-    def _writelines(self, write: Callable[[bytes], None]) -> None: ...
+    def readchunks(self) -> Iterator[video_view]: ...
+
+    def __getitem__(self, index: int) -> video_view: ...
 
 
 class AudioFrame(RawFrame):
@@ -895,6 +941,7 @@ class AudioFrame(RawFrame):
     channel_layout: int
     num_channels: int
 
+    def __getitem__(self, index: int) -> audio_view: ...
 
 #include <plugins/implementations>
 
@@ -952,8 +999,6 @@ class RawNode:
     def __rmul__(self: 'SelfRawNode', other: int) -> 'SelfRawNode': ...
 
     def __getitem__(self: 'SelfRawNode', index: Union[int, slice], /) -> 'SelfRawNode': ...
-
-    def __getattr__(self, name: str) -> Plugin: ...
 
     def __len__(self) -> int: ...
 
@@ -1093,8 +1138,6 @@ class Core:
     def version(self) -> str: ...
 
     def version_number(self) -> int: ...
-
-    def __getattr__(self, name: str) -> Plugin: ...
 
 #include <plugins/bound/Core>
 

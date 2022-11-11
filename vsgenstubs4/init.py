@@ -12,8 +12,8 @@ from os import SEEK_END, listdir, makedirs, path
 from os.path import join as join_path
 from pathlib import Path
 from typing import (
-    Any, Callable, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, TypeVar, Union,
-    runtime_checkable
+    Any, Callable, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, Tuple, TypeVar, Union,
+    cast, runtime_checkable
 )
 
 import vapoursynth as vs
@@ -149,7 +149,7 @@ def load_plugins(args: Namespace) -> vs.Core:
 
 
 def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iterator[str]:
-    plugin = core.__getattr__(namespace)
+    plugin = cast(vs.Plugin, getattr(core, namespace))
 
     ordered_functions = sorted(plugin.functions(), key=lambda x: x.name.lower())
 
@@ -159,7 +159,7 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
         if func.name in dir(plugin):
             try:
                 signature_base = Signature.from_callable(
-                    plugin.__getattr__(func.name), follow_wrapped=True, eval_str=False
+                    cast(vs.Function, getattr(plugin, func.name)), follow_wrapped=True
                 )
             except sig_excepted_errors:
                 if isinstance(core, vs.RawNode):
@@ -210,7 +210,7 @@ class BoundSignature:
         self.namespace = namespace
         self.cores = cores
 
-    def __iter__(self) -> Iterator[tuple[str, Iterator[str]]]:
+    def __iter__(self) -> Iterator[Tuple[str, Iterator[str]]]:
         for core in self.cores:
             signatures = retrieve_func_sigs(core, self.namespace)
 
@@ -230,7 +230,7 @@ class PluginMeta(NamedTuple):
     @classmethod
     def from_namespace(cls, namespace: str, cores: Sequence[CoreLike]) -> 'PluginMeta':
         try:
-            plugin = cores[0].__getattr__(namespace)
+            plugin = cast(vs.Plugin, getattr(cores[0], namespace))
         except BaseException:
             raise ValueError(f'Invalid namespace! Plugin not found: "{namespace}"')
 
@@ -238,7 +238,7 @@ class PluginMeta(NamedTuple):
             plugin.namespace, plugin.name, BoundSignature(plugin.namespace, cores)
         )
 
-    def _str_(self, kind: str, __x: tuple[object, ...]) -> bool:
+    def _str_(self, kind: str, __x: Tuple[object, ...]) -> bool:
         return getattr(str, kind)(self.name.lower(), str(__x[0]).lower())
 
     def __gt__(self, x: 'PluginMeta', /) -> bool: return self._str_('__gt__', x)  # type: ignore[override]
@@ -399,7 +399,7 @@ def locate_or_create_stub_file() -> str:
 def generate_template(
     args: Namespace, cores: Sequence[CoreLike],
     implementations: List[Implementation], instances: List[Instance],
-    existing_stubs: Path | None = None
+    existing_stubs: Union[Path, None] = None
 ) -> str:
     template = Path(args.pyi_template).read_text()
 
@@ -454,7 +454,7 @@ def generate_template(
 def output_stubs(
     args: Namespace, cores: Sequence[CoreLike], implementations: List[Implementation], instances: List[Instance]
 ) -> None:
-    existing_stubs: Path | None = None
+    existing_stubs: Union[Path, None] = None
 
     stubs_path = str(args.output)
 
@@ -492,7 +492,7 @@ def output_stubs(
         out_file.flush()
 
 
-def get_existing_implementations(path: str | Path, cores: Sequence[CoreLike]) -> Dict[str, Implementation]:
+def get_existing_implementations(path: Union[str, Path], cores: Sequence[CoreLike]) -> Dict[str, Implementation]:
     result: Dict[str, Implementation] = {}
 
     with open(path, "r") as f:
@@ -514,7 +514,7 @@ def get_existing_implementations(path: str | Path, cores: Sequence[CoreLike]) ->
     return result
 
 
-def get_existing_instances(path: str | Path, cores: Sequence[CoreLike]) -> Dict[str, Dict[str, Instance]]:
+def get_existing_instances(path: Union[str, Path], cores: Sequence[CoreLike]) -> Dict[str, Dict[str, Instance]]:
     result: Dict[str, Dict[str, Instance]] = {}
 
     with open(path, "r") as f:
@@ -546,12 +546,12 @@ def get_existing_instances(path: str | Path, cores: Sequence[CoreLike]) -> Dict[
     return result
 
 
-def main(argv: list[str] = sys.argv[1:]):
+def main(argv: List[str] = sys.argv[1:]):
     args = parser.parse_args(args=argv)
 
     core = load_plugins(args)
 
-    cores = list[CoreLike]([core, core.std.BlankClip(), core.std.BlankAudio()])
+    cores: List[CoreLike] = [core, core.std.BlankClip(), core.std.BlankAudio()]
 
     signatures = list(retrieve_plugins(args, core, cores))
 

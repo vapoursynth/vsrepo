@@ -14,6 +14,14 @@
 	],
 	"releases": [
 		{
+			"version": "2.2.0",
+			"published": "2022-11-03T18:04:18.427511Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/c7/e8/6664c3c859716ad7bd778def0899ee5cb568488459484e6822388457976c/stgfunc-2.2.0-py3-none-any.whl",
+				"hash": "a30099565ad23ce1fa40f9e1b36e147510830c98e6da79a0007ca34c89d917c7"
+			}
+		},
+		{
 			"version": "2.1.0",
 			"published": "2022-10-17T10:30:01.523327Z",
 			"wheel": {

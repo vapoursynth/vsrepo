@@ -656,7 +656,7 @@ PRIMARIES_EBU3213_E: Literal[ColorPrimaries.PRIMARIES_EBU3213_E]
 
 
 class EnvironmentData:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
 
 class EnvironmentPolicy:
@@ -674,7 +674,7 @@ class EnvironmentPolicy:
 
 
 class EnvironmentPolicyAPI:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def wrap_environment(self, environment_data: EnvironmentData) -> 'Environment': ...
 
@@ -710,7 +710,7 @@ def unregister_on_destroy(callback: Callable[..., None]) -> None:
 class Environment:
     env: EnvironmentData
 
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     @property
     def alive(self) -> bool: ...
@@ -767,19 +767,19 @@ def get_output(index: int = 0) -> Union[VideoOutputTuple, 'AudioNode']:
 
 
 class FuncData:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def __call__(self, **kwargs: _VapourSynthMapValue) -> _VapourSynthMapValue: ...
 
 
 class Func:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def __call__(self, **kwargs: _VapourSynthMapValue) -> _VapourSynthMapValue: ...
 
 
 class FramePtr:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
 
 class VideoFormat:
@@ -793,7 +793,7 @@ class VideoFormat:
     subsampling_h: int
     num_planes: int
 
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def _as_dict(self) -> _VideoFormatInfo: ...
 
@@ -814,7 +814,7 @@ class VideoFormat:
 
 
 class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def setdefault(
         self, key: str, default: _VapourSynthMapValue = 0
@@ -884,7 +884,7 @@ class video_view(memoryview):  # type: ignore[misc]
 
 
 class RawFrame:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     @property
     def closed(self) -> bool: ...
@@ -947,7 +947,7 @@ class AudioFrame(RawFrame):
 
 
 class RawNode:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def get_frame(self, n: int) -> RawFrame: ...
 
@@ -1071,7 +1071,7 @@ class AudioNode(RawNode):
 
 
 class LogHandle:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
 
 class Function:
@@ -1080,7 +1080,7 @@ class Function:
     signature: str
     return_signature: str
 
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def __call__(self, *args: _VapourSynthMapValue, **kwargs: _VapourSynthMapValue) -> _VapourSynthMapValue: ...
 
@@ -1093,7 +1093,7 @@ class Plugin:
     namespace: str
     name: str
 
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def __getattr__(self, name: str) -> Function: ...
 
@@ -1101,7 +1101,7 @@ class Plugin:
 
 
 class Core:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     @property
     def num_threads(self) -> int: ...

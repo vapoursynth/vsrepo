@@ -15,6 +15,14 @@
 	],
 	"releases": [
 		{
+			"version": "1.0.0",
+			"published": "2022-11-14T16:38:21.624872Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ab/7d/0cc4b162ce61624f9152e68d6e90dfc85c6a7a9f2f458768cefdcc5c8540/vsdehalo-1.0.0-py3-none-any.whl",
+				"hash": "39847eba68af5d4b657863393a4de1689ff2d8df40dc07f3ca172f627b5be820"
+			}
+		},
+		{
 			"version": "0.2.1",
 			"published": "2022-10-14T21:10:08.258903Z",
 			"wheel": {

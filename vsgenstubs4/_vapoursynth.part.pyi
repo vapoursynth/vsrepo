@@ -1024,7 +1024,8 @@ class VideoNode(RawNode):
     ) -> None: ...
 
     def output(
-        self, fileobj: BinaryIO, y4m: bool = False, progress_update: object = None, prefetch: int = 0, backlog: int = -1
+        self, fileobj: BinaryIO, y4m: bool = False, progress_update: Callable[[int, int], None] | None = None,
+        prefetch: int = 0, backlog: int = -1
     ) -> None: ...
 
     def get_frame(self, n: int) -> VideoFrame: ...
@@ -1043,7 +1044,7 @@ class VideoNode(RawNode):
 
 
 class AudioNode(RawNode):
-    sample_type: object
+    sample_type: SampleType
     bits_per_sample: int
     bytes_per_sample: int
 

@@ -40,7 +40,7 @@
 		},
 		{
 			"version": "3.3.5",
-			"published": "2016-31-07T12:00:00Z",
+			"published": "2016-07-31T12:00:00Z",
 			"win32": {
 				"url": "ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll32.zip",
 				"files": {

@@ -15,6 +15,38 @@
 	],
 	"releases": [
 		{
+			"version": "1.2.0",
+			"published": "2022-12-09T21:12:32.288467Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/6c/a7/d47890f68732ffbaa8a3d199bd847f403d76fcce2ccd28848f145afad5b3/vsdehalo-1.2.0-py3-none-any.whl",
+				"hash": "db643c9661670b64c1c1e2f2c11d7c570d71ec12604b5c46631013af5b34ef1b"
+			}
+		},
+		{
+			"version": "1.1.1",
+			"published": "2022-11-22T12:46:54.838681Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/00/dd/a713e88134b8c918ba3ec51e5ba8924c0bea5903e1dda31adf0fc7171818/vsdehalo-1.1.1-py3-none-any.whl",
+				"hash": "0fccf3fc8e9ce8e7cbd234ffe682eff2baf608f9dbac5458c394587b2a139d71"
+			}
+		},
+		{
+			"version": "1.1.0",
+			"published": "2022-11-21T00:28:45.095806Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/4d/e7/9d2fe325fa38cbc724a9e46dbfeec6dcfbe1dace59e387153e372538b05e/vsdehalo-1.1.0-py3-none-any.whl",
+				"hash": "925e079835e3afeb4201de5a332aee4bc1aff8fd2588f901900ff4167af69cfd"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2022-11-14T16:38:21.624872Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ab/7d/0cc4b162ce61624f9152e68d6e90dfc85c6a7a9f2f458768cefdcc5c8540/vsdehalo-1.0.0-py3-none-any.whl",
+				"hash": "39847eba68af5d4b657863393a4de1689ff2d8df40dc07f3ca172f627b5be820"
+			}
+		},
+		{
 			"version": "0.2.1",
 			"published": "2022-10-14T21:10:08.258903Z",
 			"wheel": {

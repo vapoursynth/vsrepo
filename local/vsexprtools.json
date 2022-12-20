@@ -12,6 +12,22 @@
 	],
 	"releases": [
 		{
+			"version": "1.2.8",
+			"published": "2022-12-14T20:58:56.278553Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/fd/cd/b1944f6d7fe725891a6dba7622589ec28edaaea642eec030b185edb1622f/vsexprtools-1.2.8-py3-none-any.whl",
+				"hash": "f946935d56ed00208e51269d9ae8e84e6e50e89cf3b47baa5f253cdd2fa5ab75"
+			}
+		},
+		{
+			"version": "1.2.7",
+			"published": "2022-12-12T20:48:52.912669Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d3/ec/51176c770f4ecf384b70409e59551d87eb6dab8a8957f4c739e18a08303e/vsexprtools-1.2.7-py3-none-any.whl",
+				"hash": "407b13b5b1b15a1c07ce635d7fca979ee545f459f4cf00d919aa389a5e86b318"
+			}
+		},
+		{
 			"version": "1.2.6",
 			"published": "2022-12-05T13:34:01.192525Z",
 			"wheel": {

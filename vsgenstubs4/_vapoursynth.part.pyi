@@ -846,7 +846,7 @@ class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
 class audio_view(memoryview):  # type: ignore[misc]
     @property
     def shape(self) -> tuple[int]: ...
-    
+
     @property
     def strides(self) -> tuple[int]: ...
 
@@ -866,7 +866,7 @@ class audio_view(memoryview):  # type: ignore[misc]
 class video_view(memoryview):  # type: ignore[misc]
     @property
     def shape(self) -> tuple[int, int]: ...
-    
+
     @property
     def strides(self) -> tuple[int, int]: ...
 

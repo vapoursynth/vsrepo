@@ -151,6 +151,7 @@ args = parser.parse_args()
 is_64bits = args.target == 'win64'
 
 file_dirname: str = os.path.dirname(os.path.abspath(__file__))
+package_json_path: str = os.path.join(file_dirname, 'vspackages3.json')
 
 # VSRepo is installed to the site-packages.
 if os.path.abspath(file_dirname).startswith(os.path.abspath(sys.prefix)):
@@ -169,12 +170,11 @@ else:
     pluginparent = [str(os.getenv("APPDATA")), 'VapourSynth']
     plugin32_path = os.path.join(*pluginparent, 'plugins32')
     plugin64_path = os.path.join(*pluginparent, 'plugins64')
+    package_json_path = os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
 
 if (args.operation in ['install', 'upgrade', 'uninstall']) and ((args.package is None) or len(args.package) == 0):
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
-
-package_json_path = os.path.join(file_dirname, 'vspackages3.json') if args.portable else os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
 
 if args.force_dist_info or is_sitepackage_install():
     if is_venv():

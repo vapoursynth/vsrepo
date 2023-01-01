@@ -17,6 +17,22 @@
 	],
 	"releases": [
 		{
+			"version": "1.4.1",
+			"published": "2022-12-22T17:40:14.104621Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/af/8f/0429ac96a8a7e5252f74719b5a52bc072d285f65989ae8feaa524628953c/vsscale-1.4.1-py3-none-any.whl",
+				"hash": "b162dcd5c948a073c2ae8f8b4921819c92538c40dd4c4e42758cf026e5d8d401"
+			}
+		},
+		{
+			"version": "1.4.0",
+			"published": "2022-12-22T16:17:41.679549Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/19/4f/0b9859a9908ed55adcc5c7c43498c1403bae3acd707000e7c01d0d5fb691/vsscale-1.4.0-py3-none-any.whl",
+				"hash": "87211b63bd7515b80cb19393f73ee8799dfd26f8e0332fbb7a10c3df8d2615d6"
+			}
+		},
+		{
 			"version": "1.3.4",
 			"published": "2022-12-01T14:35:53.685283Z",
 			"wheel": {

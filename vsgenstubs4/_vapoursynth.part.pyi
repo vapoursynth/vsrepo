@@ -88,7 +88,7 @@ from typing import (
 
 __all__ = [
     # Versioning
-    '__version__', '__api_version__',
+    '__version__', '__api_version__', 'PluginVersion',
 
     # Enums and constants
     'MessageType',
@@ -190,7 +190,7 @@ __all__ = [
     'Plugin', 'Function',
 
     # Formats
-    'VideoFormat',
+    'VideoFormat', 'ChannelLayout',
 
     # Frames
     'RawFrame', 'VideoFrame', 'AudioFrame',
@@ -281,6 +281,15 @@ class VapourSynthAPIVersion(NamedTuple):
 
 __version__: VapourSynthVersion
 __api_version__: VapourSynthAPIVersion
+
+
+###
+# Plugin Versioning
+
+
+class PluginVersion(NamedTuple):
+    major: int
+    minor: int
 
 
 ###
@@ -656,7 +665,7 @@ PRIMARIES_EBU3213_E: Literal[ColorPrimaries.PRIMARIES_EBU3213_E]
 
 
 class EnvironmentData:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
 
 class EnvironmentPolicy:
@@ -674,13 +683,17 @@ class EnvironmentPolicy:
 
 
 class EnvironmentPolicyAPI:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def wrap_environment(self, environment_data: EnvironmentData) -> 'Environment': ...
 
     def create_environment(self, flags: int = 0) -> EnvironmentData: ...
 
     def set_logger(self, env: EnvironmentData, logger: Callable[[int, str], None]) -> None: ...
+
+    def get_vapoursynth_api(self, version: int) -> c_void_p: ...
+
+    def get_core_ptr(self, environment_data: EnvironmentData) -> c_void_p: ...
 
     def destroy_environment(self, env: EnvironmentData) -> None: ...
 
@@ -710,7 +723,7 @@ def unregister_on_destroy(callback: Callable[..., None]) -> None:
 class Environment:
     env: EnvironmentData
 
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     @property
     def alive(self) -> bool: ...
@@ -767,19 +780,19 @@ def get_output(index: int = 0) -> Union[VideoOutputTuple, 'AudioNode']:
 
 
 class FuncData:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def __call__(self, **kwargs: _VapourSynthMapValue) -> _VapourSynthMapValue: ...
 
 
 class Func:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def __call__(self, **kwargs: _VapourSynthMapValue) -> _VapourSynthMapValue: ...
 
 
 class FramePtr:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
 
 class VideoFormat:
@@ -793,7 +806,7 @@ class VideoFormat:
     subsampling_h: int
     num_planes: int
 
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def _as_dict(self) -> _VideoFormatInfo: ...
 
@@ -814,7 +827,7 @@ class VideoFormat:
 
 
 class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def setdefault(
         self, key: str, default: _VapourSynthMapValue = 0
@@ -843,10 +856,26 @@ class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
     def __len__(self) -> int: ...
 
 
+class ChannelLayout(int):
+    def __init__(self) -> NoReturn: ...
+
+    def __contains__(self, layout: AudioChannels) -> bool: ...
+
+    def __iter__(self) -> Iterator[AudioChannels]: ...
+
+    @overload
+    def __eq__(self, other: 'ChannelLayout') -> bool: ...  # type: ignore[misc]
+
+    @overload
+    def __eq__(self, other: Any) -> Literal[False]: ...
+
+    def __len__(self) -> int: ...
+
+
 class audio_view(memoryview):  # type: ignore[misc]
     @property
     def shape(self) -> tuple[int]: ...
-    
+
     @property
     def strides(self) -> tuple[int]: ...
 
@@ -866,7 +895,7 @@ class audio_view(memoryview):  # type: ignore[misc]
 class video_view(memoryview):  # type: ignore[misc]
     @property
     def shape(self) -> tuple[int, int]: ...
-    
+
     @property
     def strides(self) -> tuple[int, int]: ...
 
@@ -884,7 +913,7 @@ class video_view(memoryview):  # type: ignore[misc]
 
 
 class RawFrame:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     @property
     def closed(self) -> bool: ...
@@ -941,13 +970,16 @@ class AudioFrame(RawFrame):
     channel_layout: int
     num_channels: int
 
+    @property
+    def channels(self) -> ChannelLayout: ...
+
     def __getitem__(self, index: int) -> audio_view: ...
 
 #include <plugins/implementations>
 
 
 class RawNode:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def get_frame(self, n: int) -> RawFrame: ...
 
@@ -1024,7 +1056,8 @@ class VideoNode(RawNode):
     ) -> None: ...
 
     def output(
-        self, fileobj: BinaryIO, y4m: bool = False, progress_update: object = None, prefetch: int = 0, backlog: int = -1
+        self, fileobj: BinaryIO, y4m: bool = False, progress_update: Callable[[int, int], None] | None = None,
+        prefetch: int = 0, backlog: int = -1
     ) -> None: ...
 
     def get_frame(self, n: int) -> VideoFrame: ...
@@ -1043,7 +1076,7 @@ class VideoNode(RawNode):
 
 
 class AudioNode(RawNode):
-    sample_type: object
+    sample_type: SampleType
     bits_per_sample: int
     bytes_per_sample: int
 
@@ -1054,6 +1087,9 @@ class AudioNode(RawNode):
     num_samples: int
 
     num_frames: int
+
+    @property
+    def channels(self) -> ChannelLayout: ...
 
     def get_frame(self, n: int) -> AudioFrame: ...
 
@@ -1071,7 +1107,7 @@ class AudioNode(RawNode):
 
 
 class LogHandle:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
 
 class Function:
@@ -1080,7 +1116,7 @@ class Function:
     signature: str
     return_signature: str
 
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def __call__(self, *args: _VapourSynthMapValue, **kwargs: _VapourSynthMapValue) -> _VapourSynthMapValue: ...
 
@@ -1093,15 +1129,18 @@ class Plugin:
     namespace: str
     name: str
 
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     def __getattr__(self, name: str) -> Function: ...
 
     def functions(self) -> Iterator[Function]: ...
 
+    @property
+    def version(self) -> PluginVersion: ...
+
 
 class Core:
-    def __init__(self) -> NoReturn: ...  # type: ignore[misc]
+    def __init__(self) -> NoReturn: ...
 
     @property
     def num_threads(self) -> int: ...

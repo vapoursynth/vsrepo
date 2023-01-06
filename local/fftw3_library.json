@@ -4,11 +4,43 @@
 	"description": "Package for the FFTW3 library shared between several plugins",
 	"website": "http://www.fftw.org/",
 	"category": "Plugin Dependency",
+	"github": "https://github.com/Vapoursynth-Plugins-Gitify/fftw3",
 	"identifier": "org.fftw.fftw3",
 	"namespace": "fftw3_library",
 	"releases": [
 		{
+			"version": "3.3.10",
+			"published": "2022-11-08T15:56:47Z",
+			"win32": {
+				"url": "https://github.com/Vapoursynth-Plugins-Gitify/fftw3/releases/download/3.3.10/FFTW-3.3.10.zip",
+				"files": {
+					"libfftw3-3.dll": [
+						"FFTW-3.3.10/mingw32/libfftw3-3.dll",
+						"ee6223d6eed7e839ad47d6e1484ea069817ac068278d5650fddb55c6a4fd1f84"
+					],
+					"libfftw3f-3.dll": [
+						"FFTW-3.3.10/mingw32/libfftw3f-3.dll",
+						"bfde1710923287dbb580ba65fb3ff2fc408fc9050173ef705faa872cbdd6d4b5"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/Vapoursynth-Plugins-Gitify/fftw3/releases/download/3.3.10/FFTW-3.3.10.zip",
+				"files": {
+					"libfftw3-3.dll": [
+						"FFTW-3.3.10/mingw64/libfftw3-3.dll",
+						"6e5424ab1ab2690f8dc4756af16e9fa4a75bc7885d84d1cfeb7f254e55bac930"
+					],
+					"libfftw3f-3.dll": [
+						"FFTW-3.3.10/mingw64/libfftw3f-3.dll",
+						"8f35a79e1299edf403edb8f3269c833b79a81d2ef4b45ba378a66f47c19c957a"
+					]
+				}
+			}
+		},
+		{
 			"version": "3.3.5",
+			"published": "2016-07-31T12:00:00Z",
 			"win32": {
 				"url": "ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll32.zip",
 				"files": {

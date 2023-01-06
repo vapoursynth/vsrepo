@@ -8,6 +8,7 @@
 	"identifier": "yomiko.collection.iccconvert.magick",
 	"namespace": "iccc_magick",
 	"ignore": [
+		"4.1",
 		"4.0",
 		"3.1",
 		"2.5.1",

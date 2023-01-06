@@ -1102,14 +1102,14 @@ class Plugin:
     namespace: str
     name: str
 
-    @property
-    def __version__(self) -> PluginVersion: ...
-
     def __init__(self) -> NoReturn: ...  # type: ignore[misc]
 
     def __getattr__(self, name: str) -> Function: ...
 
     def functions(self) -> Iterator[Function]: ...
+
+    @property
+    def version(self) -> PluginVersion: ...
 
 
 class Core:

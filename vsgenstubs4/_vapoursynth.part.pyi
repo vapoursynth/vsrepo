@@ -88,7 +88,7 @@ from typing import (
 
 __all__ = [
     # Versioning
-    '__version__', '__api_version__',
+    '__version__', '__api_version__', 'PluginVersion',
 
     # Enums and constants
     'MessageType',
@@ -281,6 +281,15 @@ class VapourSynthAPIVersion(NamedTuple):
 
 __version__: VapourSynthVersion
 __api_version__: VapourSynthAPIVersion
+
+
+###
+# Plugin Versioning
+
+
+class PluginVersion(NamedTuple):
+    major: int
+    minor: int
 
 
 ###
@@ -1125,6 +1134,9 @@ class Plugin:
     def __getattr__(self, name: str) -> Function: ...
 
     def functions(self) -> Iterator[Function]: ...
+
+    @property
+    def version(self) -> PluginVersion: ...
 
 
 class Core:

@@ -190,7 +190,7 @@ __all__ = [
     'Plugin', 'Function',
 
     # Formats
-    'VideoFormat',
+    'VideoFormat', 'ChannelLayout',
 
     # Frames
     'RawFrame', 'VideoFrame', 'AudioFrame',
@@ -847,6 +847,22 @@ class FrameProps(MutableMapping[str, _VapourSynthMapValue]):
     def __len__(self) -> int: ...
 
 
+class ChannelLayout(int):
+    def __init__(self) -> NoReturn: ...
+
+    def __contains__(self, layout: AudioChannels) -> bool: ...
+
+    def __iter__(self) -> Iterator[AudioChannels]: ...
+
+    @overload
+    def __eq__(self, other: 'ChannelLayout') -> bool: ...  # type: ignore[misc]
+
+    @overload
+    def __eq__(self, other: Any) -> Literal[False]: ...
+
+    def __len__(self) -> int: ...
+
+
 class audio_view(memoryview):  # type: ignore[misc]
     @property
     def shape(self) -> tuple[int]: ...
@@ -944,6 +960,9 @@ class AudioFrame(RawFrame):
     bytes_per_sample: int
     channel_layout: int
     num_channels: int
+
+    @property
+    def channels(self) -> ChannelLayout: ...
 
     def __getitem__(self, index: int) -> audio_view: ...
 
@@ -1059,6 +1078,9 @@ class AudioNode(RawNode):
     num_samples: int
 
     num_frames: int
+
+    @property
+    def channels(self) -> ChannelLayout: ...
 
     def get_frame(self, n: int) -> AudioFrame: ...
 

@@ -740,6 +740,17 @@ def get_current_environment() -> Environment:
     ...
 
 
+class Local:
+    def __getattr__(self, key: str) -> Any: ...
+    
+    # Even though object does have set/del methods, typecheckers will treat them differently
+    # when they are not explicit; for example by raising a member not found warning.
+
+    def __setattr__(self, key: str, value: Any) -> None: ...
+    
+    def __delattr__(self, key: str) -> None: ...
+
+
 class VideoOutputTuple(NamedTuple):
     clip: 'VideoNode'
     alpha: Union['VideoNode', None]

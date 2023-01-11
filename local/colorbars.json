@@ -9,6 +9,28 @@
 	"github": "https://github.com/ifb/vapoursynth-colorbars",
 	"releases": [
 		{
+			"version": "R4",
+			"published": "2023-01-05T20:23:17Z",
+			"win32": {
+				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R4/colorbars-R4.7z",
+				"files": {
+					"colorbars.dll": [
+						"colorbars-R4/Win32/colorbars.dll",
+						"3873f34eb107e85547bc9f32ef292fe94aa1cd86f4dc270d9d2f7c48246fe8cc"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/ifb/vapoursynth-colorbars/releases/download/R4/colorbars-R4.7z",
+				"files": {
+					"colorbars.dll": [
+						"colorbars-R4/Win64/colorbars.dll",
+						"7bffc1a1dae0a34fd41795ce58d1c9b3c3f3971c4351b586c68b50a8bc63dbba"
+					]
+				}
+			}
+		},
+		{
 			"version": "R3",
 			"published": "2022-03-04T01:11:39Z",
 			"win32": {

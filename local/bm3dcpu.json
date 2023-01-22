@@ -13,6 +13,32 @@
 	],
 	"releases": [
 		{
+			"version": "R2.12-cuda118",
+			"published": "2023-01-21T03:46:42Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.12-cuda118/VapourSynth-BM3DCPU-R2.12-cuda118.7z",
+				"files": {
+					"BM3DCPU-znver2.dll": [
+						"VapourSynth-BM3DCPU-R2.12-cuda118/bm3dcpu-znver2.dll",
+						"09435f305341617aa5c9d7b18ccee471e43d616fb66368ab1a6f0d42588d87cd"
+					]
+				}
+			}
+		},
+		{
+			"version": "R2.12",
+			"published": "2022-12-13T11:40:00Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.12/VapourSynth-BM3DCPU-R2.12.7z",
+				"files": {
+					"BM3DCPU-znver2.dll": [
+						"VapourSynth-BM3DCPU-R2.12/bm3dcpu-znver2.dll",
+						"6067a7e650d3f8559a2452576d89300bd480fc512ced051b66612e28800e4710"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2.11",
 			"published": "2022-10-04T01:59:28Z",
 			"win64": {

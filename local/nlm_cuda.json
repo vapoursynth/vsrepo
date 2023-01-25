@@ -1,0 +1,27 @@
+{
+	"name": "nlm_cuda",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "Non-local means denoise filter in CUDA, drop-in replacement of the KNLMeansCL filter",
+	"github": "https://github.com/AmusementClub/vs-nlm-cuda",
+	"identifier": "io.github.amusementclub.nlm_cuda",
+	"namespace": "nlm_cuda",
+	"device": [
+		"cuda"
+	],
+	"releases": [
+		{
+			"version": "v1",
+			"published": "2023-01-19T11:27:10Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-nlm-cuda/releases/download/v1/vs-nlm-cuda-windows-v1.7z",
+				"files": {
+					"vsnlm_cuda.dll": [
+						"vs-nlm-cuda-windows-v1/vsnlm_cuda.dll",
+						"f26a5718badd74c34510a7630a7d22b586fc17b2622745af0101f93643997ff8"
+					]
+				}
+			}
+		}
+	]
+}

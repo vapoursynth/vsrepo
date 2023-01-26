@@ -1,0 +1,27 @@
+{
+	"name": "WNNM",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "WNNM is a denoising algorithm based on block-matching and weighted nuclear norm minimization",
+	"github": "https://github.com/AmusementClub/VapourSynth-WNNM",
+	"identifier": "com.wolframrhodium.wnnm",
+	"namespace": "wnnm",
+	"device": [
+		"cuda"
+	],
+	"releases": [
+		{
+			"version": "v1",
+			"published": "2022-07-19T01:40:00Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/VapourSynth-WNNM/releases/download/v1/VapourSynth-WNNM-v1.7z",
+				"files": {
+					"wnnm.dll": [
+						"wnnm.dll",
+						"3f09016ed3ef479a6df3e3fb858a21ae438f2a072802f493a35909d908082cbc"
+					]
+				}
+			}
+		}
+	]
+}

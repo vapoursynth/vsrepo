@@ -11,6 +11,19 @@
 	],
 	"releases": [
 		{
+			"version": "v2",
+			"published": "2022-12-13T12:03:16Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/VapourSynth-WNNM/releases/download/v2/VapourSynth-WNNM-v2.7z",
+				"files": {
+					"wnnm.dll": [
+						"wnnm.dll",
+						"bacd17f9ab70fa79941a93e2cf5d1bd0b663052a416c9592a1b046c954d87243"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1",
 			"published": "2022-07-19T01:40:00Z",
 			"win64": {

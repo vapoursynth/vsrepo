@@ -17,6 +17,30 @@
 	],
 	"releases": [
 		{
+			"version": "1.7.0",
+			"published": "2023-02-10T11:31:12.641444Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/26/9e/12b04407822ea8871405ae8552c1cbe899a6ad8e4f897890f1e55e8e6ae4/vsscale-1.7.0-py3-none-any.whl",
+				"hash": "d4b5378174744b633254f800d8201d2c2551d83a4c6c8817dc15eb23c11b4a70"
+			}
+		},
+		{
+			"version": "1.6.1",
+			"published": "2023-01-30T19:02:24.274828Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/66/f8/6e21c069e3b4c34d6c3812b62fd9f9eb1b3a8d94eb9a1570fac0b05aee54/vsscale-1.6.1-py3-none-any.whl",
+				"hash": "884280f1ac0fbec7d54be9c202eda288933ac2378b657d6342215c9f772c8278"
+			}
+		},
+		{
+			"version": "1.6.0",
+			"published": "2023-01-30T09:28:33.832013Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/f2/3e/4eb184ebbbc93e5ca59cf4203aa4f132fd82e4c3cbf96da05e1100b7f73b/vsscale-1.6.0-py3-none-any.whl",
+				"hash": "f674794cd917689fa7551c43e02806cfad228f91d7cc4f2abd874dcf7cc9076d"
+			}
+		},
+		{
 			"version": "1.5.0",
 			"published": "2023-01-03T21:01:46.403540Z",
 			"wheel": {

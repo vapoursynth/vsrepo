@@ -8,6 +8,9 @@
 	"namespace": "dovi_library",
 	"github": "https://github.com/quietvoid/dovi_tool",
 	"ignore": [
+		"2.0.2",
+		"2.0.1",
+		"2.0.0",
 		"1.6.0",
 		"1.5.8",
 		"1.5.7",

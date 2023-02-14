@@ -22,6 +22,19 @@
 	],
 	"releases": [
 		{
+			"version": "v0.8.2",
+			"published": "2023-02-13T16:39:01Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/vsTAAmbk/zipball/v0.8.2",
+				"files": {
+					"vsTAAmbk.py": [
+						"HomeOfVapourSynthEvolution-vsTAAmbk-2749197/vsTAAmbk.py",
+						"a54ffc5f9cc88ce000f32b1b62fd5696516390889cb83f97cf80e8b7d67e2900"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.8.1",
 			"published": "2021-09-10T15:01:11Z",
 			"script": {

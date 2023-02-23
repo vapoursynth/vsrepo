@@ -1,0 +1,75 @@
+{
+    "name": "rvsfunc",
+    "type": "PyWheel",
+    "category": "Script",
+    "description": "Riven Skaye's minimaliastic VapourSynth functions.",
+    "doom9": "",
+    "website": "https://rvsfunc.tae.moe",
+    "github": "https://github.com/RivenSkaye/rvsfunc/",
+    "identifier": "rvsfunc",
+    "modulename": "rvsfunc",
+    "wheelname": "rvsfunc",
+    "dependencies": [
+        "tegaf.asi.xe",
+        "vsutil",
+        "xxx.abc.znedi3"
+    ],
+    "releases": [
+        {
+            "version": "0.1.1",
+            "published": "2021-10-12T11:05:04.392981Z",
+            "wheel": {
+                "url": "https://files.pythonhosted.org/packages/51/d7/46b6e2911505b24c68a6afc5545e066d0bb93975e0ba9e6a5e85e20c92aa/rvsfunc-0.1.1-py3-none-any.whl",
+                "hash": "55c9d4b5aa9d312f4a39c4ab9562a92627b92a5b66bd5ac9ca7c6caa4ae5a0f7"
+            }
+        },
+        {
+            "version": "0.1.0",
+            "published": "2021-09-30T08:18:51.093590Z",
+            "wheel": {
+                "url": "https://files.pythonhosted.org/packages/57/e6/8afeb646308820c0aaf749906918ada079dca5304d8fe15775fbc29ee3c2/rvsfunc-0.1.0-py3-none-any.whl",
+                "hash": "c0c4619ee74d01f1fc8debea07a8859db694f0a0463da3917bfb89e1ca28ca8c"
+            }
+        },
+        {
+            "version": "0.0.6",
+            "published": "2021-09-16T10:43:01.453420Z",
+            "wheel": {
+                "url": "https://files.pythonhosted.org/packages/98/a6/671b081848985037cb966a8e554cb82e2f4dc644ad32da2e07806d7eadbe/rvsfunc-0.0.6-py3-none-any.whl",
+                "hash": "4c9e42727067afbe2389f308d6454aa450642617ed61ba71756885204b6bbc1b"
+            }
+        },
+        {
+            "version": "0.0.5",
+            "published": "2021-09-14T11:23:24.876863Z",
+            "wheel": {
+                "url": "https://files.pythonhosted.org/packages/35/7e/a014364d08b8b22444fd48415530ee03095f171aafb3362a0b4f8966ba21/rvsfunc-0.0.5-py3-none-any.whl",
+                "hash": "75f76a69f2afdcf22cbf33af11056c5b57c4f5f6efa265f39d926d8dc24e5609"
+            }
+        },
+        {
+            "version": "0.0.4",
+            "published": "2021-09-03T13:40:05.649301Z",
+            "wheel": {
+                "url": "https://files.pythonhosted.org/packages/af/92/f869bfb127cbb81b984ef97e212bfeb2cc55a895fcb5ff13aae26ed0288b/rvsfunc-0.0.4-py3-none-any.whl",
+                "hash": "3fb4487d0e6a26358894af7be28f05f51e264fd783e0515eed11accc12827db8"
+            }
+        },
+        {
+            "version": "0.0.3",
+            "published": "2021-09-01T19:47:44.700262Z",
+            "wheel": {
+                "url": "https://files.pythonhosted.org/packages/9e/49/7eca23062940af8cc399ae4d0d38b2ab5c291e3dcb944bd56bbd40982fe4/rvsfunc-0.0.3-py3-none-any.whl",
+                "hash": "1212e7deb311013ea2af14a593bda9618e8d7b7ad26398b726869dedf9788683"
+            }
+        },
+        {
+            "version": "0.0.2",
+            "published": "2021-08-31T10:12:15.795490Z",
+            "wheel": {
+                "url": "https://files.pythonhosted.org/packages/d4/1c/14c75144e9ef6cd782ce194c56c6c77a07b77a33768bfe730e8580ab794c/rvsfunc-0.0.2-py3-none-any.whl",
+                "hash": "a93f61b403a53d5914724e46644effe6f506f3eb7536a52a2ccac5ff3fe35db6"
+            }
+        }
+    ]
+}

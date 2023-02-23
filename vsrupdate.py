@@ -1,43 +1,44 @@
-##    MIT License
-##
-##    Copyright (c) 2018-2020 Fredrik Mellbin
-##
-##    Permission is hereby granted, free of charge, to any person obtaining a copy
-##    of this software and associated documentation files (the "Software"), to deal
-##    in the Software without restriction, including without limitation the rights
-##    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-##    copies of the Software, and to permit persons to whom the Software is
-##    furnished to do so, subject to the following conditions:
-##
-##    The above copyright notice and this permission notice shall be included in all
-##    copies or substantial portions of the Software.
-##
-##    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-##    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-##    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-##    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-##    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-##    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-##    SOFTWARE.
+#    MIT License
+#
+#    Copyright (c) 2018-2020 Fredrik Mellbin
+#
+#    Permission is hereby granted, free of charge, to any person obtaining a copy
+#    of this software and associated documentation files (the "Software"), to deal
+#    in the Software without restriction, including without limitation the rights
+#    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#    copies of the Software, and to permit persons to whom the Software is
+#    furnished to do so, subject to the following conditions:
+#
+#    The above copyright notice and this permission notice shall be included in all
+#    copies or substantial portions of the Software.
+#
+#    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#    SOFTWARE.
 
-import urllib.request
-import json
-import sys
-import os
-import os.path
-import datetime as dt
 import argparse
-import hashlib
-import subprocess
 import difflib
 import ftplib
+import hashlib
+import json
+import os
+import subprocess
+import sys
+import urllib.request
 import zipfile
-from typing import Any, List, MutableMapping, Optional, Dict, Sequence, Tuple, TypeVar, Union
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List, MutableMapping, MutableSequence, Optional, Sequence, Set, Tuple
+from urllib.error import URLError, HTTPError
 
 try:
     import winreg
 except ImportError:
-    print('{} is only supported on Windows.'.format(__file__))
+    print(f'{__file__} is only supported on Windows.')
     sys.exit(1)
 
 try:
@@ -56,14 +57,26 @@ parser.add_argument('-passwd', dest='passwd', nargs=1, help='FTP Password')
 parser.add_argument('-dir', dest='dir', nargs=1, help='FTP dir')
 parser.add_argument('-url', dest='packageurl', help='URL of the archive from which a package is to be created')
 parser.add_argument('-pname', dest='packagename', help='Filename or namespace of your package')
-parser.add_argument('-script', action='store_true', dest='packagescript', help='Type of the package is script. Otherwise a package of type plugin is created')
-parser.add_argument('-types', dest='packagefiletypes', nargs='+', default=['.dll', '.py'], help='Which file types should be included. default is .dll')
+parser.add_argument('-outpath', dest='outpath', required=False, default=None,
+                    help='Directory for package definitions, default is the `local` folder in the vsrepo directory.'
+                    'Appends `local` to the given path if the last component is not `local`.')
+parser.add_argument('-script', action='store_true', dest='packagescript',
+                    help='Type of the package is script. Otherwise a package of type plugin is created')
+parser.add_argument('-types', dest='packagefiletypes', nargs='+', default=['.dll', '.py'],
+                    help='Which file types should be included. default is .dll')
 parser.add_argument('-kf', dest='keepfolder', type=int, default=-1, nargs='?', help='Keep the folder structure')
 
 args = parser.parse_args()
 
-cmd7zip_path: str = '7z.exe'
+localpath = Path(args.outpath) if args.outpath is not None else Path(__file__).parent
+if not localpath.name == 'local':
+    localpath = localpath.joinpath('local')
+if not localpath.exists():
+    localpath.mkdir()
+    print(f'outputting all packages to {localpath}')
+
 time_limit: int = 14  # time limit after a commit is treated as new in days | (updatemode: git-commits)
+cmd7zip_path: str = '7z.exe'
 
 try:
     with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
@@ -71,8 +84,10 @@ try:
 except OSError:
     pass
 
+
 def similarity(a: str, b: str) -> float:
     return difflib.SequenceMatcher(None, a, b).ratio()
+
 
 def get_most_similar(a: str, b: Sequence[str]) -> str:
     res: Tuple[float, str] = (0.0, '')
@@ -82,6 +97,7 @@ def get_most_similar(a: str, b: Sequence[str]) -> str:
             res = (v, s)
     return res[1]
 
+
 def get_git_api_url(url: str) -> Optional[str]:
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
@@ -89,26 +105,31 @@ def get_git_api_url(url: str) -> Optional[str]:
     else:
         return None
 
+
 def get_git_api_commits_url(url: str, path: Optional[str] = None, branch: Optional[str] = None) -> Optional[str]:
-    sha = f"sha={branch}&" if branch else ""
+    sha = f'sha={branch}&' if branch else ''
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
-        return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/commits?{sha}' + f'path={path}' if path else ''
+        return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/commits?{sha}' + (f'path={path}' if path else '')
     else:
         return None
 
-def get_git_api_zipball_url(url: str, ref: Optional[str] = None):
+
+def get_git_api_zipball_url(url: str, ref: Optional[str] = None) -> Optional[str]:
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
-        return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/zipball' + f'/{ref}' if ref else ''
+        return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/zipball' + (f'/{ref}' if ref else '')
     else:
         return None
+
 
 def get_pypi_api_url(name: str):
-    return 'https://pypi.org/pypi/' + name + '/json'
+    return f'https://pypi.org/pypi/{name}/json'
+
 
 def fetch_url(url: str, desc: Optional[str] = None, token: Optional[str] = None) -> bytearray:
-    req = urllib.request.Request(url, headers={'Authorization': 'token ' + token}) if token is not None else urllib.request.Request(url)
+    headers = {'Authorization': 'token ' + token} if token is not None else None
+    req = urllib.request.Request(url, headers=headers) if headers else urllib.request.Request(url)
     with urllib.request.urlopen(req) as urlreq:
         if ('tqdm' in sys.modules) and (urlreq.headers['content-length'] is not None):
             size = int(urlreq.headers['content-length'])
@@ -125,65 +146,69 @@ def fetch_url(url: str, desc: Optional[str] = None, token: Optional[str] = None)
             print('Fetching: ' + url)
             return urlreq.read()
 
-def fetch_url_to_cache(url: str, name: str, tag_name: str, desc: Optional[str] = None) -> str:
-    cache_path = os.path.join('dlcache', name + '_' + tag_name, os.path.basename(url))
-    if not os.path.isfile(cache_path):
-        os.makedirs(os.path.split(cache_path)[0], exist_ok=True)
-        with urllib.request.urlopen(urllib.request.Request(url, method='HEAD')) as urlreq:
-            if not os.path.isfile(cache_path):
-                data = fetch_url(url, desc)
-                with open(cache_path, 'wb') as pl:
-                    pl.write(data)
+
+def fetch_url_to_cache(url: str, name: str, tag_name: str, desc: Optional[str] = None) -> Path:
+    cache_path = Path('dlcache').joinpath(f'{name}_{tag_name}', os.path.basename(url))
+    if not cache_path.parent.exists():
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        if not cache_path.exists():
+            data = fetch_url(url, desc)
+            with open(cache_path, 'wb') as pl:
+                pl.write(data)
     return cache_path
 
-def list_archive_files(fn: str) -> MutableMapping:
-    result = subprocess.run([cmd7zip_path, "l", "-ba", fn], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+def list_archive_files(fn: Path) -> MutableMapping:
+    result = subprocess.run([cmd7zip_path, 'l', '-ba', str(fn)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     result.check_returncode()
-    l = {}
+    list_arch = {}
     lines = result.stdout.decode('utf-8').splitlines()
     for line in lines:
         t = line[53:].replace('\\', '/')
-        l[t.lower()] = t
-    return l
+        list_arch[t.lower()] = t
+    return list_arch
 
-def generate_fn_candidates(fn: str, insttype: str):
+
+def generate_fn_candidates(fn: str, insttype: str) -> List[str]:
     tmp_fn = fn.lower()
-    fn_guesses = [
-        tmp_fn,
-        tmp_fn.replace('x64', 'win64'),
-        tmp_fn.replace('win64', 'x64'),
-        tmp_fn.replace('x86', 'win32'),
-        tmp_fn.replace('win32', 'x86')]
+    fn_guesses = [tmp_fn,
+                  tmp_fn.replace('x64', 'win64'),
+                  tmp_fn.replace('win64', 'x64'),
+                  tmp_fn.replace('x86', 'win32'),
+                  tmp_fn.replace('win32', 'x86')]
     if insttype == 'win32':
-        return list(filter(lambda x: (x.find('64') == -1) and (x.find('x64') == -1) , fn_guesses))
+        return [x for x in fn_guesses if '64' not in x]
     elif insttype == 'win64':
-        return list(filter(lambda x: (x.find('32') == -1) and (x.find('x86') == -1) , fn_guesses))
+        return [x for x in fn_guesses if '64' in x]
     else:
         return fn_guesses
 
-def decompress_and_hash(archivefn: str, fn: str, insttype: str) -> Tuple[Dict, str]:
+
+def decompress_and_hash(archivefn: Path, fn: str, insttype: str) -> Tuple[MutableMapping, str]:
     existing_files = list_archive_files(archivefn)
     for fn_guess in generate_fn_candidates(fn, insttype):
         if fn_guess in existing_files:
-            result = subprocess.run([cmd7zip_path, "e", "-so", archivefn, fn_guess], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            result = subprocess.run([cmd7zip_path, 'e', '-so', str(archivefn), fn_guess],
+                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             result.check_returncode()
             return (existing_files[fn_guess], hashlib.sha256(result.stdout).hexdigest())
-    base_dirs = []
+    base_dirs: Set[str] = set()
     for f in existing_files:
         bn = f.split('/')[0]
-        if bn not in base_dirs:
-            base_dirs.append(bn)
+        base_dirs.add(bn)
     if len(base_dirs) == 1:
         sfn = fn.split('/')
         if len(sfn) > 1:
-            sfn[0] = base_dirs[0]
+            sfn[0] = base_dirs.pop()
             mfn = '/'.join(sfn)
             for fn_guess in generate_fn_candidates(mfn, insttype):
                 if fn_guess in existing_files:
-                    result = subprocess.run([cmd7zip_path, "e", "-so", archivefn, fn_guess], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    result = subprocess.run([cmd7zip_path, 'e', '-so', str(archivefn), fn_guess],
+                                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     result.check_returncode()
                     return (existing_files[fn_guess], hashlib.sha256(result.stdout).hexdigest())
-    raise Exception('No file match found')
+    raise ValueError('No file match found')
+
 
 def get_latest_installable_release(p: MutableMapping, bin_name: str) -> Optional[MutableMapping]:
     for rel in p['releases']:
@@ -191,106 +216,156 @@ def get_latest_installable_release(p: MutableMapping, bin_name: str) -> Optional
             return rel
     return None
 
-def get_python_package_name(pkg: MutableMapping) -> str:
-    return pkg.get("wheelname", pkg.get("name")).replace(".", "_").replace(" ", "_")
 
-def write_new_releses(name: str, pfile: MutableMapping, new_rels: MutableMapping, rel_order: List) -> int:
-    if bool(new_rels):
+def get_python_package_name(pkg: MutableMapping) -> str:
+    return pkg.get('wheelname', pkg.get('name')).replace('.', '_').replace(' ', '_').replace('(', '_').replace(')', '')
+
+
+def write_new_releses(name: str, pfile: MutableMapping, new_rels: MutableMapping, rel_order: MutableSequence) -> bool:
+    if new_rels:
         for rel in pfile['releases']:
             new_rels[rel['version']] = rel
         rel_list = []
         for rel_ver in rel_order:
+            # This is a placeholder default for creating packages. Yeet it.
+            if rel_ver == 'create-package':
+                continue
             rel_list.append(new_rels[rel_ver])
         pfile['releases'] = rel_list
         pfile['releases'].sort(key=lambda r: r['published'], reverse=True)
 
         fnext = '.json' if args.overwrite else '.new.json'
-        with open('local/' + name + fnext, 'w', encoding='utf-8') as pl:
-            json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent='\t')
+        with open(localpath.joinpath(name + fnext), 'w', encoding='utf-8') as pl:
+            json.dump(fp=pl, obj=pfile, ensure_ascii=False, indent=4)
         print('Release file updated')
-        return 1
+        return True
     else:
         print('Release file already up to date')
-        return 0
+        return False
+
+
+def get_new_rel(name: str, reltype: str, rel: MutableMapping,
+                pfile: MutableMapping, dl_files: MutableSequence,
+                zipball: Optional[str] = None) -> Optional[MutableMapping[str, Any]]:
+    ret_rel_entry = {'version': rel['tag_name'], 'published': rel['published_at']}
+    latest_rel = get_latest_installable_release(pfile, reltype)
+    if latest_rel is None or latest_rel.get(reltype) is None:
+        return None
+    new_url = None
+    if reltype == 'script' and ('/archive/' in latest_rel['script']['url'] or
+                                '/zipball/' in latest_rel['script']['url']):
+        new_url = zipball
+    if new_url is None:
+        new_url = get_most_similar(latest_rel[reltype]['url'], dl_files)
+    try:
+        temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'],
+                                     f"{pfile['name']} {rel['tag_name']} {reltype}")
+        ret_rel_entry[reltype] = {'url': new_url, 'files': {}}
+        for fn in latest_rel[reltype]['files']:
+            new_fn, digest = decompress_and_hash(temp_fn, fn[0], reltype)
+    except (URLError, subprocess.CalledProcessError, ValueError):
+        print(f'No {reltype} release found.')
+        return None
+    ret_rel_entry[reltype]['files'][fn] = [new_fn, digest]
+    return ret_rel_entry
+
 
 def update_package(name: str) -> int:
-    with open('local/' + name + '.json', 'r', encoding='utf-8') as ml:
+    with open(localpath.joinpath(name + '.json'), 'r', encoding='utf-8') as ml:
         pfile: Dict = json.load(ml)
+
+    new_rel_entry: Optional[MutableMapping[str, Any]] = {'version': '', 'published': ''}
+    assert isinstance(new_rel_entry, MutableMapping)
 
     existing_rel_list = []
     for rel in pfile['releases']:
         existing_rel_list.append(rel['version'])
-    rel_order = list(existing_rel_list)
+    rel_order = existing_rel_list.copy()
 
-    use_pypi = (pfile['type'] == 'PyWheel')
-    if ('source' in pfile) and (pfile['source'] != 'pypi'):
-        use_pypi = False
+    use_pypi = pfile['type'] == 'PyWheel' and (pfile.get('source', 'pypi') == 'pypi')
 
     if pfile['type'] == 'PyWheel':
         if use_pypi:
             new_rels = {}
             apifile: Dict = json.loads(fetch_url(get_pypi_api_url(get_python_package_name(pfile)), pfile['name']))
             for version in apifile['releases']:
+                version = str(version)
                 for rel in apifile['releases'][version]:
                     if rel['yanked'] or rel['packagetype'] != 'bdist_wheel':
-                        continue
-                    new_rel_entry = { 'version': version, 'published': rel['upload_time_iso_8601'], 'wheel': { 'url': rel['url'], 'hash': rel['digests']['sha256'] } }
+                        break
+                    new_rel_entry = {'version': version, 'published': rel['upload_time_iso_8601'],
+                                     'wheel': {'url': rel['url'], 'hash': rel['digests']['sha256']}
+                                     }
                     new_rels[version] = new_rel_entry
                     if version not in rel_order:
                         rel_order.insert(0, version)
-            return write_new_releses(name, pfile, new_rels, rel_order)
+            return int(write_new_releses(name, pfile, new_rels, rel_order))
         else:
             print('PyWheel can only be scanned from pypi')
             return -1
     elif 'github' in pfile:
         new_rels = {}
-        is_plugin = (pfile['type'] == 'VSPlugin')
-        is_pyscript = (pfile['type'] == 'PyScript')
-        is_pywheel = (pfile['type'] == 'PyWheel')
+        is_pyscript = pfile['type'] == 'PyScript'
 
-        if (is_pyscript and ('updatemode' in pfile) and pfile['updatemode'] == 'git-commits'):
-            apifile = {} # no releases dummy
-            new_rel_entry = { 'version': "", 'published': "" }
+        if is_pyscript and pfile.get('updatemode', '') == 'git-commits':
+            apifile = {}  # no releases dummy
             try:
                 latest_rel = get_latest_installable_release(pfile, 'script')
-                fpath: str = os.path.basename(list(latest_rel['script']['files'].values())[0][0])  # type: ignore
+                if latest_rel is None:
+                    return 0
+                fpath = Path(list(latest_rel['script']['files'].values())[0][0]).name  # type: ignore
 
-                git_commits = json.loads(fetch_url(get_git_api_commits_url(url = pfile['github'], path = fpath, branch = pfile['gitbranch'] if 'gitbranch' in pfile else None) or "", pfile['name']))
+                git_commits = json.loads(
+                    fetch_url(
+                        get_git_api_commits_url(pfile['github'], fpath, pfile.get('gitbranch')) or '',
+                        pfile['name']
+                    )
+                )
 
                 git_hash = git_commits[0]['sha']
                 git_hash_short = git_hash[:7]
+                git_datetime_fmt = '%Y-%m-%dT%H:%M:%SZ'
 
                 try:
-                    #diff_date_commit = (dt.datetime.now() - dt.datetime.strptime(git_commits[0]['commit']['committer']['date'], "%Y-%m-%dT%H:%M:%SZ")).days
-                    diff_date_package = (dt.datetime.now() - dt.datetime.strptime(latest_rel['published'], "%Y-%m-%dT%H:%M:%SZ")).days  # type: ignore
-                except:
-                    print("Parsing published date failed")
+                    # commit_date = datetime.strptime(git_commits[0]['commit']['committer']['date'], git_datetime_fmt)
+                    # diff_date_commit = (datetime.now() - commit_date).days
+                    pub_date = datetime.strptime(latest_rel.get('published', ''), git_datetime_fmt)
+                    diff_date_package = (datetime.now() - pub_date).days
+                except ValueError:
+                    print('Parsing published date failed')
+                    diff_date_package = 0
 
                 if(diff_date_package > time_limit):
-                    if not any(('git:' + git_hash_short) in ver for ver in rel_order):
-                        rel_order.insert(0, 'git:' + git_hash_short)
-                        print('git:' + git_hash_short + ' (new)')
-                    new_rel_entry = { 'version': 'git:' + git_hash_short, 'published': git_commits[0]['commit']['committer']['date'] }
+                    git_txt = f'git:{git_hash_short}'
+                    if not any(git_txt in ver for ver in rel_order):
+                        rel_order.insert(0, git_txt)
+                        print(f'{git_txt} (new)')
+                    new_rel_entry.update({'version': git_txt,
+                                          'published': git_commits[0]['commit']['committer']['date']})
 
                     new_url = get_git_api_zipball_url(pfile['github'], git_hash)
-                    temp_fn = fetch_url_to_cache(new_url, name,  git_hash_short, pfile['name'] + ' ' + git_hash_short + ' script')
-                    new_rel_entry['script'] = { 'url': new_url, 'files': {} }
-                    for fn in latest_rel['script']['files']:  # type: ignore
-                        new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')  # type: ignore
+                    if new_url is None:
+                        return 0
+                    temp_fn = fetch_url_to_cache(new_url, name, git_hash_short,
+                                                 f"{pfile['name']} {git_hash_short} script")
+                    new_rel_entry['script'] = {'url': new_url, 'files': {}}
+                    for fn in latest_rel['script']['files']:
+                        new_fn, digest = decompress_and_hash(temp_fn, fn[0], 'script')
                         new_rel_entry['script']['files'][fn] = [new_fn, digest]
-						
-                        new_rels[new_rel_entry['version']] = new_rel_entry
+                    assert isinstance(new_rel_entry, dict)
+                    new_rels[new_rel_entry['version']] = new_rel_entry
+
+                    new_rels[new_rel_entry['version']] = new_rel_entry
                 else:
                     print(f'skipping git commit(s) - this and the last commit must be at least {time_limit} days apart')
-                    
-
-            except:
+            except Exception:
                 new_rel_entry.pop('script', None)
                 print('No script found')
         else:
-            apifile = json.loads(fetch_url(get_git_api_url(pfile['github']) or "", pfile['name'], token=args.git_token))
+            apifile = json.loads(fetch_url(get_git_api_url(pfile['github']) or '', pfile['name'], token=args.git_token))
 
         for rel in apifile:
+            zipball = None
             if rel['prerelease']:
                 continue
             if rel['tag_name'] in pfile.get('ignore', []):
@@ -304,131 +379,99 @@ def update_package(name: str) -> int:
                 for asset in rel['assets']:
                     dl_files.append(asset['browser_download_url'])
 
-                #ugly copypaste here because I'm lazy
-                if is_plugin:
-                    new_rel_entry = { 'version': rel['tag_name'], 'published': rel['published_at'] }
-                    try:
-                        latest_rel = get_latest_installable_release(pfile, 'win32')
-                        if latest_rel is not None:
-                            new_url = get_most_similar(latest_rel['win32']['url'], dl_files)
-                            temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win32')
-                            new_rel_entry['win32'] = { 'url': new_url, 'files': {}}
-                            for fn in latest_rel['win32']['files']:
-                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win32']['files'][fn][0], 'win32')
-                                new_rel_entry['win32']['files'][fn] = [new_fn, digest]
-                    except:
-                        new_rel_entry.pop('win32', None)
-                        print('No win32 binary found')
-                    try:
-                        latest_rel = get_latest_installable_release(pfile, 'win64')
-                        if latest_rel is not None:
-                            new_url = get_most_similar(latest_rel['win64']['url'], dl_files)
-                            temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win64')
-                            new_rel_entry['win64'] = { 'url': new_url, 'files': {} }
-                            for fn in latest_rel['win64']['files']:
-                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win64']['files'][fn][0], 'win64')
-                                new_rel_entry['win64']['files'][fn] = [new_fn, digest]
-                    except:
-                        new_rel_entry.pop('win64', None)
-                        print('No win64 binary found')
-                else:
-                    new_rel_entry = { 'version': rel['tag_name'], 'published': rel['published_at'] }
-                    try:
-                        latest_rel = get_latest_installable_release(pfile, 'script')
-                        new_url = None
-                        if ('/archive/' in latest_rel['script']['url']) or ('/zipball/' in latest_rel['script']['url']):  # type: ignore
-                            new_url = zipball
-                        else:
-                            new_url = get_most_similar(latest_rel['script']['url'], dl_files)  # type: ignore
-                        temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
-                        new_rel_entry['script'] = { 'url': new_url, 'files': {} }
-                        for fn in latest_rel['script']['files']:  # type: ignore
-                            new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')  # type: ignore
-                            new_rel_entry['script']['files'][fn] = [new_fn, digest]
-                    except:
-                        new_rel_entry.pop('script', None)
-                        print('No script found')
+                new_rel_entry = (get_new_rel(name, 'win32', rel, pfile, dl_files) or
+                                 get_new_rel(name, 'win64', rel, pfile, dl_files) or
+                                 get_new_rel(name, 'script', rel, pfile, dl_files, zipball))
+                if new_rel_entry is None:
+                    return 0
+
+                assert isinstance(new_rel_entry, dict)
                 new_rels[new_rel_entry['version']] = new_rel_entry
-        return write_new_releses(name, pfile, new_rels, rel_order)
+        return int(write_new_releses(name, pfile, new_rels, rel_order))
     else:
         print(f'Only github and pypi projects supported, {name} not scanned')
         return -1
 
+
 def verify_package(pfile: MutableMapping, existing_identifiers: Sequence[str]) -> None:
     name: str = pfile['name']
     for key in pfile.keys():
-        if key not in ('name', 'type', 'device', 'api', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases', 'updatemode', 'gitbranch'):
-            raise Exception(f'Unknown key: {key} in {name}')
+        if key not in ('name', 'type', 'device', 'api', 'description', 'website', 'category', 'identifier',
+                       'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore',
+                       'releases', 'updatemode', 'gitbranch'):
+            raise ValueError(f'Unknown key: {key} in {name}')
     if pfile['type'] not in ('VSPlugin', 'PyScript', 'PyWheel'):
-        raise Exception('Invalid type in ' + name)
+        raise ValueError('Invalid type in ' + name)
     if (pfile['type'] == 'VSPlugin') and ('modulename' in pfile):
-        raise Exception('VSPlugin can\'t have modulenames: ' + name)
+        raise ValueError(f"VSPlugin can't have modulenames: {name}")
     if (pfile['type'] == 'VSPlugin') and (('modulename' in pfile) or ('namespace' not in pfile)):
-        raise Exception('VSPlugin must have namespace, not modulename: ' + name)
-    if (pfile['type'] == 'PyScript' or pfile['type'] == 'PyWheel') and (('namespace' in pfile) or ('modulename' not in pfile)):
-        raise Exception('PyScript must have modulename, not namespace: ' + name)
+        raise ValueError('VSPlugin must have namespace, not modulename: ' + name)
+    if (pfile['type'] in ('PyScript', 'PyWheel')) and ('namespace' in pfile or 'modulename' not in pfile):
+        raise ValueError('PyScript must have modulename, not namespace: ' + name)
     if ((pfile['type'] == 'PyScript' or pfile['type'] == 'VSPlugin') and 'wheelname' in pfile):
-        raise Exception('Only PyWheel type can have wheelname: ' + name)
-    allowed_categories = ('Scripts', 'Plugin Dependency', 'Resizing and Format Conversion', 'Other', 'Dot Crawl and Rainbows', 'Sharpening', 'Denoising', 'Deinterlacing', 'Inverse Telecine', 'Source/Output', 'Subtitles', 'Color/Levels')
+        raise ValueError('Only PyWheel type can have wheelname: ' + name)
+    allowed_categories = ('Scripts', 'Plugin Dependency', 'Resizing and Format Conversion', 'Other',
+                          'Dot Crawl and Rainbows', 'Sharpening', 'Denoising', 'Deinterlacing', 'Inverse Telecine',
+                          'Source/Output', 'Subtitles', 'Color/Levels')
     if pfile['category'] not in allowed_categories:
-        raise Exception('Not allowed catogry in ' + name + ': ' + pfile['category'] + ' not in ' + repr(allowed_categories))
+        raise ValueError(f"Not allowed catogry in {name}: {pfile['category']} not in {repr(allowed_categories)}")
     if 'updatemode' in pfile:
         if pfile['updatemode'] not in ('git-commits'):
-            raise Exception('Invalid updatemode in ' + name)
+            raise ValueError('Invalid updatemode in ' + name)
     if 'api' in pfile:
         if pfile['api'] not in (3, 4):
-            raise Exception('Invalid api version in ' + name)
+            raise ValueError('Invalid api version in ' + name)
     if 'dependencies' in pfile:
         for dep in pfile['dependencies']:
             if dep not in existing_identifiers:
-                raise Exception('Referenced unknown identifier ' + dep + ' in ' + name)
+                raise ValueError('Referenced unknown identifier ' + dep + ' in ' + name)
     if 'device' in pfile:
         for dev in pfile['device']:
-            if dev not in ("cpu", "cuda", "opencl", "vulkan"):
-                raise Exception('Invalid device in ' + name)
+            if dev not in ('cpu', 'cuda', 'opencl', 'vulkan'):
+                raise ValueError('Invalid device in ' + name)
+
 
 def compile_packages() -> None:
     combined = []
     existing_identifiers = []
-    for f in os.scandir('local'):
-        if f.is_file() and f.path.endswith('.json'):
-            with open(f.path, 'r', encoding='utf-8') as ml:
+    for f in localpath.iterdir():
+        if f.is_file() and f.name.endswith('.json'):
+            with open(f, 'r', encoding='utf-8') as ml:
                 pfile: Dict = json.load(ml)
-                if pfile['identifier'] in existing_identifiers:
-                    raise Exception('Duplicate identifier: ' + pfile['identifier'])
+                if pfile.get('identifier', 'vsrupdate_default') in existing_identifiers:
+                    raise ValueError('Duplicate identifier: ' + pfile['identifier'])
                 existing_identifiers.append(pfile['identifier'])
 
-    for f in os.scandir('local'):
-        if f.is_file() and f.path.endswith('.json') and not f.path.endswith('.new.json'):
-            with open(f.path, 'r', encoding='utf-8') as ml:
-                print('Combining: ' + f.path)
+    for f in localpath.iterdir():
+        if f.is_file() and f.name.endswith('.json') and not f.name.endswith('.new.json'):
+            with open(f, 'r', encoding='utf-8') as ml:
                 pfile = json.load(ml)
-                verify_package(pfile, existing_identifiers)
-                pfile.pop('ignore', None)
-                combined.append(pfile)
+            print('Combining: ' + f.name)
+            verify_package(pfile, existing_identifiers)
+            pfile.pop('ignore', None)
+            combined.append(pfile)
 
-    data = json.dumps(obj={ 'file-format': 3, 'packages': combined}, ensure_ascii=False, indent=2)
-
-    try:
-        os.remove('vspackages3.zip')
-    except:
-        pass
+    data = json.dumps(obj={'file-format': 3, 'packages': combined}, ensure_ascii=False, indent=4)
+    Path('vspackages3.zip').unlink(missing_ok=True)
 
     with zipfile.ZipFile('vspackages3.zip', mode='w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
         zf.writestr('vspackages3.json', data)
 
 
 def getBinaryArch(bin: bytes) -> Optional[int]:
-    if b"PE\x00\x00d\x86" in bin:     # hex: 50 45 00 00 64 86 | PE..d†
+    if b'PE\x00\x00d\x86' in bin:     # hex: 50 45 00 00 64 86 | PE..d†
         return 64
-    if b"PE\x00\x00L" in bin:         # hex: 50 45 00 00 4c     | PE..L
+    if b'PE\x00\x00L' in bin:         # hex: 50 45 00 00 4c     | PE..L
         return 32
     return None
 
-def decompress_hash_simple(archive: str, file: str) -> Tuple[str, str, Optional[int]]:
-    result = subprocess.run([cmd7zip_path, "e", "-so", archive, file], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+def decompress_hash_simple(archive: Path, file: str) -> Tuple[str, str, Optional[int]]:
+    result = subprocess.run([cmd7zip_path, 'e', '-so', str(archive), file],
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     result.check_returncode()
     return (file, hashlib.sha256(result.stdout).hexdigest(), getBinaryArch(result.stdout))
+
 
 def extract_git_repo(url: str) -> Optional[str]:
     if url.startswith('https://github.com/'):
@@ -436,14 +479,16 @@ def extract_git_repo(url: str) -> Optional[str]:
     else:
         return None
 
+
 def keep_folder_structure(path: str, level: int = 0) -> str:
     folder = path.split('/', level)
     return folder[-1]
 
-def blank_package(name: str = "", is_script: bool = False, is_wheel: bool = False, url: str = "") -> MutableMapping:
+
+def blank_package(name: str, url: str, is_script: bool = False, is_wheel: bool = False) -> MutableMapping:
     giturl = extract_git_repo(url)
     p = {
-            'name': '',
+            'name': name,
             'type': 'PyScript' if is_script else ('PyWheel' if is_wheel else 'VSPlugin'),
             'category': '',
             'description': '',
@@ -459,6 +504,7 @@ def blank_package(name: str = "", is_script: bool = False, is_wheel: bool = Fals
         del p['wheelname']
     return p
 
+
 if args.operation == 'compile':
     compile_packages()
     print('Packages successfully compiled')
@@ -467,9 +513,16 @@ elif args.operation == 'update-local':
         num_skipped = 0
         num_nochange = 0
         num_updated = 0
-        for f in os.scandir('local'):
-            if f.is_file() and f.path.endswith('.json'):
-                result = update_package(os.path.splitext(os.path.basename(f))[0])
+        ratelimited = False
+        for f in localpath.iterdir():
+            if f.is_file() and f.name.endswith('.json'):
+                try:
+                    result = update_package(f.stem)
+                except HTTPError as e:
+                    if e.code == 403:
+                        print(f'Ratelimit exceeded for {e.geturl()} Aborting!')
+                        ratelimited = True
+                        result = -1
                 if result == -1:
                     num_skipped = num_skipped + 1
                 elif result == 1:
@@ -480,8 +533,7 @@ elif args.operation == 'update-local':
     else:
         update_package(args.package)
 elif args.operation == 'create-package':
-
-    import pathlib
+    print(f'outputting the new package definition to {localpath}')
 
     if not args.packageurl:
         print('-url parameter is missing')
@@ -491,53 +543,54 @@ elif args.operation == 'create-package':
         sys.exit(1)
 
     url = args.packageurl
-    is_wheel = pathlib.Path(url).suffix.lower() == '.whl'
+    is_wheel = Path(url).suffix.lower() == '.whl'
 
-    print("fetching remote url")
-    dlfile = fetch_url_to_cache(url, "package", "creator", "")
+    print('fetching remote url')
+    dlfile = fetch_url_to_cache(url, 'package', 'creator', '')
 
-    print("creating package")
-    new_rel_entry: MutableMapping[str, Any] = { 'version': 'create-package', 'published': '' }
-
+    print('creating package')
+    new_rel_entry: MutableMapping[str, Any] = {'version': 'create-package', 'published': ''}
 
     if is_wheel:
-        new_rel_entry['wheel'] = { 'url': url }
-        new_rel_entry['wheel']['hash'] = hashlib.sha256(open(dlfile,'rb').read()).hexdigest()
+        new_rel_entry['wheel'] = {'url': url}
+        new_rel_entry['wheel']['hash'] = hashlib.sha256(open(dlfile, 'rb').read()).hexdigest()
 
-    else: # is plugin or script
+    # is plugin or script
+    else:
         listzip = list_archive_files(dlfile)
         files_to_hash: List[str] = []
         for f in listzip.values():
-            if pathlib.Path(f).suffix: # simple folder filter
-                if "*" in args.packagefiletypes:
+            # simple folder filter
+            if Path(f).suffix:
+                if '*' in args.packagefiletypes:
                     files_to_hash.append(str(f))
                 else:
-                    if pathlib.Path(f).suffix in args.packagefiletypes:
+                    if Path(f).suffix in args.packagefiletypes:
                         files_to_hash.append(str(f))
 
         files_to_hash = sorted(files_to_hash)
 
-
-        print("\n\nFound the following dlls:")
+        print('\n\nFound the following dlls:')
         for fname in files_to_hash:
             fullpath, hash, arch = decompress_hash_simple(dlfile, fname)
             if arch == 32:
                 print('win32:', fullpath, hash)
             if arch == 64:
                 print('win64:', fullpath, hash)
-        print("\n\n")
+        print('\n\n')
 
-        if not args.packagescript: # is plugin
-            new_rel_entry['win32'] = { 'url': url, 'files': {} }
-            new_rel_entry['win64'] = { 'url': url, 'files': {} }
+        # is plugin
+        if not args.packagescript:
+            new_rel_entry['win32'] = {'url': url, 'files': {}}
+            new_rel_entry['win64'] = {'url': url, 'files': {}}
             for fname in files_to_hash:
                 fullpath, hash, arch = decompress_hash_simple(dlfile, fname)
-                file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else os.path.basename(fullpath)
+                file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else Path(fullpath).name
                 if arch == 32:
                     new_rel_entry['win32']['files'][file] = [fullpath, hash]
                 if arch == 64:
                     new_rel_entry['win64']['files'][file] = [fullpath, hash]
-                if arch == None:
+                if arch is None:
                     new_rel_entry['win32']['files'][file] = [fullpath, hash]
                     new_rel_entry['win64']['files'][file] = [fullpath, hash]
 
@@ -547,43 +600,41 @@ elif args.operation == 'create-package':
             if not new_rel_entry['win64']['files']:
                 new_rel_entry.pop('win64', None)
 
-        else: # is script
-            new_rel_entry['script'] = { 'url': url, 'files': {} }
+        else:  # is script
+            new_rel_entry['script'] = {'url': url, 'files': {}}
             for fname in files_to_hash:
                 fullpath, hash, arch = decompress_hash_simple(dlfile, fname)
-                file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else os.path.basename(fullpath)
+                file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else Path(fullpath).name
                 new_rel_entry['script']['files'][file] = [fullpath, hash]
 
     if not args.packagescript:
         if is_wheel:
-            final_package = blank_package(name = args.packagename, url = url, is_wheel = True)
+            final_package = blank_package(args.packagename, url, is_wheel=True)
         else:
-            final_package = blank_package(name = args.packagename, url = url)
+            final_package = blank_package(args.packagename, url)
     else:
-        final_package = blank_package(name = args.packagename, url = url, is_script = True)
-    final_package['releases'] = [ new_rel_entry ]
-
+        final_package = blank_package(args.packagename, url, is_script=True)
+    final_package['releases'] = [new_rel_entry]
 
     print(json.dumps(final_package, indent=4))
-    if not os.path.exists('local/' + args.packagename + '.json'):
-        with open('local/' + args.packagename + '.json', 'x', encoding='utf-8') as pl:
-            json.dump(fp=pl, obj=final_package, ensure_ascii=False, indent='\t')
+    pkgfile = localpath.joinpath(args.packagename + '.json')
+    if not pkgfile.exists():
+        with open(pkgfile, 'x', encoding='utf-8') as pl:
+            json.dump(fp=pl, obj=final_package, ensure_ascii=False, indent=4)
 
-        print("package created")
+        print('package created')
 
         if extract_git_repo(url) and not is_wheel:
-            print("Is hosted on GitHub - auto updating package")
+            print('Is hosted on GitHub - auto updating package')
             args.overwrite = True
             update_package(args.packagename)
 
         if is_wheel and url.startswith('https://files.pythonhosted.org'):
-            print("Auto updating wheel package")
+            print('Auto updating wheel package')
             args.overwrite = True
             update_package(args.packagename)
     else:
-        print("package file '{}'.json already exists. Skipping writing file.".format(args.packagename))
-
-
+        print(f"package file '{args.packagename}.json' already exists. Skipping writing file.")
 elif args.operation == 'upload':
     compile_packages()
     print('Packages successfully compiled')
@@ -593,10 +644,7 @@ elif args.operation == 'upload':
                 ftp.cwd(args.dir[0])
             try:
                 ftp.delete('vspackages3.zip')
-            except:
+            except (ftplib.error_perm, ftplib.error_reply):
                 print('Failed to delete vspackages3.zip')
             ftp.storbinary('STOR vspackages3.zip', bpl)
     print('Upload done')
-
-def noop():
-    pass

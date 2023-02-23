@@ -10,14 +10,19 @@
 	"updatemode": "git-commits",
 	"dependencies": [
 		"com.Khanattila.KNLMeansCL",
+		"com.nodame.awarpsharp2",
 		"com.nodame.mvsf",
 		"com.nodame.mvtools",
-		"com.nodame.temporalmedian",
+		"com.vapoursynth.bm3d",
 		"com.vapoursynth.removegrainsf",
 		"com.vapoursynth.removegrainvs",
 		"com.wolframrhodium.bm3dcpu",
-		"com.wolframrhodium.bm3dcuda",
-		"fmtconv"
+		"com.wolframrhodium.bm3dcuda_rtc",
+		"fmtconv",
+		"in.7086.neo_f3kdb",
+		"in.7086.neo_tmedian",
+		"info.akarin.vsplugin",
+		"nnedi3_resample"
 	],
 	"releases": [
 		{

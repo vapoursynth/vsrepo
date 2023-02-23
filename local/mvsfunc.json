@@ -11,7 +11,8 @@
 	"updatemode": "git-commits",
 	"dependencies": [
 		"fmtconv",
-		"com.vapoursynth.bm3d"
+		"com.vapoursynth.bm3d",
+		"info.akarin.vsplugin"
 	],
 	"releases": [
 		{

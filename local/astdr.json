@@ -9,15 +9,16 @@
 	"github": "https://github.com/dubhater/vapoursynth-astdr",
 	"dependencies": [
 		"adjust",
-		"com.nodame.decross",
-		"com.vapoursynth.hqdn3d",
-		"com.nodame.motionmask",
-		"com.nodame.awarpsharp2",
-		"com.nodame.fluxsmooth",
 		"chikuzen.does.not.have.his.own.domain.focus2",
-		"systems.innocent.fft3dfilter",
+		"com.holywu.ctmf",
+		"com.nodame.awarpsharp2",
+		"com.nodame.decross",
+		"com.nodame.fluxsmooth",
+		"com.nodame.motionmask",
 		"com.nodame.mvtools",
-		"com.holywu.ctmf"
+		"com.vapoursynth.hqdn3d",
+		"com.vapoursynth.removegrainvs",
+		"systems.innocent.fft3dfilter"
 	],
 	"releases": [
 		{

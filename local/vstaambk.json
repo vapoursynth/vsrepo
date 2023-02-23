@@ -8,17 +8,21 @@
 	"modulename": "vsTAAmbk",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/vsTAAmbk",
 	"dependencies": [
-		"com.holywu.eedi2",
-		"xxx.abc.znedi3",
 		"com.deinterlace.nnedi3",
-		"com.holywu.nnedi3cl",
+		"com.holywu.eedi2",
 		"com.holywu.eedi3",
-		"com.nodame.mvtools",
-		"fmtconv",
-		"com.mio.sangnom",
+		"com.holywu.nnedi3cl",
 		"com.holywu.tcanny",
+		"com.mio.sangnom",
+		"com.nodame.awarpsharp2",
 		"com.nodame.msmoosh",
-		"com.nodame.awarpsharp2"
+		"com.nodame.mvtools",
+		"com.vapoursynth.eedi3",
+		"com.vapoursynth.removegrainvs",
+		"fmtconv",
+		"havsfunc",
+		"mvsfunc",
+		"xxx.abc.znedi3"
 	],
 	"releases": [
 		{

@@ -8,7 +8,9 @@
 	"modulename": "nnedi3_rpow2",
 	"dependencies": [
 		"com.deinterlace.nnedi3",
-		"fmtconv"
+		"com.holywu.nnedi3cl",
+		"fmtconv",
+		"xxx.abc.znedi3"
 	],
 	"releases": [
 		{

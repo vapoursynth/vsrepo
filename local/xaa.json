@@ -9,12 +9,13 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=176203",
 	"dependencies": [
 		"com.holywu.eedi2",
-		"xxx.abc.znedi3",
-		"com.mio.sangnom",
-		"com.holywu.tcanny",
-		"com.nodame.tedgemask",
+		"com.holywu.eedi3",
 		"com.holywu.nnedi3cl",
-		"com.holywu.eedi3"
+		"com.holywu.tcanny",
+		"com.mio.sangnom",
+		"com.nodame.tedgemask",
+		"com.vapoursynth.removegrainvs",
+		"xxx.abc.znedi3"
 	],
 	"releases": [
 		{

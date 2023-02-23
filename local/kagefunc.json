@@ -9,16 +9,16 @@
 	"github": "https://github.com/Irrational-Encoding-Wizardry/kagefunc",
 	"updatemode": "git-commits",
 	"dependencies": [
-		"mvsfunc",
-		"fvsfunc",
-		"tegaf.asi.xe",
-		"fmtconv",
-		"com.invalid.identifier.retinex",
-		"com.vapoursynth.bm3d",
+		"biz.srsfckn.subtext",
 		"com.Khanattila.KNLMeansCL",
-		"com.holywu.tcanny",
 		"com.holywu.addgrain",
-		"vsutil"
+		"com.holywu.tcanny",
+		"com.invalid.identifier.retinex",
+		"com.vapoursynth.misc",
+		"fmtconv",
+		"fvsfunc",
+		"mvsfunc",
+		"tegaf.asi.xe"
 	],
 	"releases": [
 		{

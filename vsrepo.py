@@ -795,68 +795,13 @@ def get_vapoursynth_api_version() -> int:
 
 
 def update_genstubs() -> None:
+    sys.path.append(os.path.dirname(__file__))
+
+    from vsgenstubs4 import main as genstubs4
+
     print("Updating VapourSynth stubs")
 
-    genstubs = os.path.join(os.path.dirname(__file__), "vsgenstubs4/__init__.py")
-
-    contents = subprocess.getoutput([sys.executable, genstubs, '-o', '-'])  # type: ignore
-
-    site_package = False
-    stubpath: Optional[str] = None
-    if stubpath == "-":
-        stubpath = None
-        fp = sys.stdout
-    elif stubpath == "--":
-        stubpath = None
-        fp = sys.stderr
-    else:
-        if not stubpath:
-            if site_package_dir:
-                stubpath = site_package_dir
-                site_package = True
-            else:
-                stubpath = "."
-
-        if os.path.isdir(stubpath):
-            stubpath = os.path.join(stubpath, "vapoursynth.pyi")
-
-        fp = open(stubpath, "w")
-
-    with fp:
-        fp.write(contents)
-
-    if site_package:
-        if site_package_dir is None:
-            return
-        vs_stub_pkg = os.path.join(site_package_dir, "vapoursynth-stubs")
-        if os.path.exists(vs_stub_pkg):
-            rmdir(vs_stub_pkg)
-
-        os.makedirs(vs_stub_pkg)
-
-        if stubpath is None:
-            return
-        with open(stubpath, "rb") as src:
-            with open(os.path.join(vs_stub_pkg, "__init__.pyi"), "wb") as dst:
-                dst.write(src.read())
-        os.remove(stubpath)
-        stubpath = os.path.join(vs_stub_pkg, "__init__.pyi")
-
-        for dist_dir in find_dist_dirs("VapourSynth"):
-            with open(os.path.join(dist_dir, "RECORD")) as f:
-                contents = f.read()
-
-            try:
-                filename = os.path.relpath(stubpath, site_package_dir)
-            except ValueError:
-                filename = stubpath
-
-            if "__init__.pyi" not in contents or "vapoursynth.pyi" not in contents:
-                with open(os.path.join(dist_dir, "RECORD"), "a") as f:
-                    if not contents.endswith("\n"):
-                        f.write("\n")
-                    f.write(f"{filename},,\n")
-            break
+    genstubs4([])
 
 def rebuild_distinfo() -> None:
     print("Rebuilding dist-info dirs for other python package installers")

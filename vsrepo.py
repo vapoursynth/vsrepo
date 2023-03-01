@@ -799,10 +799,8 @@ def get_vapoursynth_api_version() -> int:
 def update_genstubs() -> None:
     print("Updating VapourSynth stubs")
 
-    if get_vapoursynth_api_version() > 3:
-        genstubs = os.path.join(os.path.dirname(__file__), "vsgenstubs4/__init__.py")
-    else:
-        genstubs = os.path.join(os.path.dirname(__file__), "vsgenstubs/__init__.py")
+    genstubs = os.path.join(os.path.dirname(__file__), "vsgenstubs4/__init__.py")
+
     contents = subprocess.getoutput([sys.executable, genstubs, '-o', '-'])  # type: ignore
 
     site_package = False

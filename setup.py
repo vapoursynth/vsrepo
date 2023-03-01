@@ -5,11 +5,10 @@ import platform
 
 modules = []
 packages = [
-    "vsgenstubs", "vsgenstubs4"
+    "vsgenstubs4"
 ]
 requirements = []
 entrypoints = [
-    "vsgenstubs=vsgenstubs:main",
     "vsgenstubs4=vsgenstubs4:main",
 ]
 

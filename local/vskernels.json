@@ -9,6 +9,14 @@
 	"wheelname": "vskernels",
 	"releases": [
 		{
+			"version": "2.3.1",
+			"published": "2023-02-26T22:26:23.066361Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/2e/e8/045f48321e8b369fedf7585ce1d1a6d7ee2c0575d1f4680817e39ab3502c/vskernels-2.3.1-py3-none-any.whl",
+				"hash": "162e8dad55fbbf5714c0ad1bd3fa8dc1a6de4a07825bce6a7c21d70b7130bfff"
+			}
+		},
+		{
 			"version": "2.3.0",
 			"published": "2023-02-10T11:18:46.356060Z",
 			"wheel": {

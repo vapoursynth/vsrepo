@@ -12,6 +12,14 @@
 	"wheelname": "vsswinir",
 	"releases": [
 		{
+			"version": "2.0.0",
+			"published": "2023-02-25T12:59:30.511312Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/2c/3c/2ad064f3282be6185e583a4f42a270f836c36c12386e61e397f92b7abd9d/vsswinir-2.0.0-py3-none-any.whl",
+				"hash": "3a119754381c39122f2098f1f0a2f872f356adedff12711b85cb589ba733e0dc"
+			}
+		},
+		{
 			"version": "1.0.0",
 			"published": "2021-11-05T14:57:48.453564Z",
 			"wheel": {

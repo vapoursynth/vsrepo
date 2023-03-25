@@ -156,7 +156,7 @@ __all__ = [
 
     'MatrixCoefficients',
         'MATRIX_RGB', 'MATRIX_BT709', 'MATRIX_UNSPECIFIED', 'MATRIX_FCC',
-        'MATRIX_BT470_BG', 'MATRIX_ST170_M', 'MATRIX_YCGCO', 'MATRIX_BT2020_NCL', 'MATRIX_BT2020_CL',
+        'MATRIX_BT470_BG', 'MATRIX_ST170_M', 'MATRIX_ST240_M', 'MATRIX_YCGCO', 'MATRIX_BT2020_NCL', 'MATRIX_BT2020_CL',
         'MATRIX_CHROMATICITY_DERIVED_NCL', 'MATRIX_CHROMATICITY_DERIVED_CL', 'MATRIX_ICTCP',
 
     'TransferCharacteristics',
@@ -574,6 +574,7 @@ class MatrixCoefficients(IntEnum):
     MATRIX_FCC: 'MatrixCoefficients'
     MATRIX_BT470_BG: 'MatrixCoefficients'
     MATRIX_ST170_M: 'MatrixCoefficients'
+    MATRIX_ST240_M: 'MatrixCoefficients'
     MATRIX_YCGCO: 'MatrixCoefficients'
     MATRIX_BT2020_NCL: 'MatrixCoefficients'
     MATRIX_BT2020_CL: 'MatrixCoefficients'
@@ -588,6 +589,7 @@ MATRIX_UNSPECIFIED: Literal[MatrixCoefficients.MATRIX_UNSPECIFIED]
 MATRIX_FCC: Literal[MatrixCoefficients.MATRIX_FCC]
 MATRIX_BT470_BG: Literal[MatrixCoefficients.MATRIX_BT470_BG]
 MATRIX_ST170_M: Literal[MatrixCoefficients.MATRIX_ST170_M]
+MATRIX_ST240_M: Literal[MatrixCoefficients.MATRIX_ST240_M]
 MATRIX_YCGCO: Literal[MatrixCoefficients.MATRIX_YCGCO]
 MATRIX_BT2020_NCL: Literal[MatrixCoefficients.MATRIX_BT2020_NCL]
 MATRIX_BT2020_CL: Literal[MatrixCoefficients.MATRIX_BT2020_CL]

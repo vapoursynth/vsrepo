@@ -3,13 +3,34 @@
 	"type": "PyWheel",
 	"category": "Deinterlacing",
 	"description": "Collection of functions for working with interlaced content in VapourSynth.",
-	"website": "https://vsfieldkit.readthedocs.io",
+	"website": "https://vsfieldkit.justinarthur.com",
 	"doom9": "https://forum.doom9.org/showthread.php?t=184063",
 	"github": "https://github.com/JustinTArthur/vsfieldkit",
 	"identifier": "vsfieldkit",
 	"modulename": "vsfieldkit",
 	"wheelname": "vsfieldkit",
+	"dependencies": [
+		"com.deinterlace.nnedi3",
+		"com.nodame.fillborders",
+		"the.weather.channel"
+	],
 	"releases": [
+		{
+			"version": "2.0.1",
+			"published": "2023-03-26T08:27:04.476023Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/91/9c/bfc4d3c6138a8bd5ebcb171c18306109acab01b5aa2b988dcb2c5a188dba/vsfieldkit-2.0.1-py3-none-any.whl",
+				"hash": "2598c66aeb0c7a3b9bee9dbc0ea40ac46e14a50cc6f770256fa2d4ec0ec72249"
+			}
+		},
+		{
+			"version": "2.0.0",
+			"published": "2023-03-13T05:51:28.868749Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d0/63/c0fc23c244787172026eaef69b01c913243960e2a2278f8b04764ea3f33d/vsfieldkit-2.0.0-py3-none-any.whl",
+				"hash": "b92f84f7badd38e859e0486b02608e9d76b459626b70a1d3cf8b23bb9fb74a4c"
+			}
+		},
 		{
 			"version": "1.1.0",
 			"published": "2022-11-28T05:11:33.098484Z",

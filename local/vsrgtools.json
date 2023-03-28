@@ -16,6 +16,22 @@
 	],
 	"releases": [
 		{
+			"version": "1.4.3",
+			"published": "2023-03-26T17:38:54.474432Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d6/43/94015a798821863e36dfaacb328253a8302b7c34a8d86b661f9e4e098072/vsrgtools-1.4.3-py3-none-any.whl",
+				"hash": "c066322c24bcdb8474de1f6e8626b6b01db6fee0b73c51c20a867628f7819b3d"
+			}
+		},
+		{
+			"version": "1.4.2",
+			"published": "2023-03-18T13:06:19.868190Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ae/3d/b2811e441e6b256f722615961775b5a051321dcb761eb3fa540a70b17e0f/vsrgtools-1.4.2-py3-none-any.whl",
+				"hash": "96f4513b7cd015f479d27c6943fd7bf0a87c56ad2559648c792e62875badbf3e"
+			}
+		},
+		{
 			"version": "1.4.1",
 			"published": "2023-02-26T22:27:20.982115Z",
 			"wheel": {

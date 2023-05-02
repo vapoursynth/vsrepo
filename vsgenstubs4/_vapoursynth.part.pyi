@@ -113,7 +113,7 @@ __all__ = [
     'SampleType',
         'INTEGER', 'FLOAT',
 
-    'PresetFormat',
+    'PresetVideoFormat',
         'GRAY',
         'GRAY8', 'GRAY9', 'GRAY10', 'GRAY12', 'GRAY14', 'GRAY16', 'GRAY32', 'GRAYH', 'GRAYS',
         'RGB',
@@ -375,113 +375,113 @@ INTEGER: Literal[SampleType.INTEGER]
 FLOAT: Literal[SampleType.FLOAT]
 
 
-class PresetFormat(IntEnum):
-    NONE: 'PresetFormat'
+class PresetVideoFormat(IntEnum):
+    NONE: 'PresetVideoFormat'
 
-    GRAY8: 'PresetFormat'
-    GRAY9: 'PresetFormat'
-    GRAY10: 'PresetFormat'
-    GRAY12: 'PresetFormat'
-    GRAY14: 'PresetFormat'
-    GRAY16: 'PresetFormat'
-    GRAY32: 'PresetFormat'
+    GRAY8: 'PresetVideoFormat'
+    GRAY9: 'PresetVideoFormat'
+    GRAY10: 'PresetVideoFormat'
+    GRAY12: 'PresetVideoFormat'
+    GRAY14: 'PresetVideoFormat'
+    GRAY16: 'PresetVideoFormat'
+    GRAY32: 'PresetVideoFormat'
 
-    GRAYH: 'PresetFormat'
-    GRAYS: 'PresetFormat'
+    GRAYH: 'PresetVideoFormat'
+    GRAYS: 'PresetVideoFormat'
 
-    YUV420P8: 'PresetFormat'
-    YUV422P8: 'PresetFormat'
-    YUV444P8: 'PresetFormat'
-    YUV410P8: 'PresetFormat'
-    YUV411P8: 'PresetFormat'
-    YUV440P8: 'PresetFormat'
+    YUV420P8: 'PresetVideoFormat'
+    YUV422P8: 'PresetVideoFormat'
+    YUV444P8: 'PresetVideoFormat'
+    YUV410P8: 'PresetVideoFormat'
+    YUV411P8: 'PresetVideoFormat'
+    YUV440P8: 'PresetVideoFormat'
 
-    YUV420P9: 'PresetFormat'
-    YUV422P9: 'PresetFormat'
-    YUV444P9: 'PresetFormat'
+    YUV420P9: 'PresetVideoFormat'
+    YUV422P9: 'PresetVideoFormat'
+    YUV444P9: 'PresetVideoFormat'
 
-    YUV420P10: 'PresetFormat'
-    YUV422P10: 'PresetFormat'
-    YUV444P10: 'PresetFormat'
+    YUV420P10: 'PresetVideoFormat'
+    YUV422P10: 'PresetVideoFormat'
+    YUV444P10: 'PresetVideoFormat'
 
-    YUV420P12: 'PresetFormat'
-    YUV422P12: 'PresetFormat'
-    YUV444P12: 'PresetFormat'
+    YUV420P12: 'PresetVideoFormat'
+    YUV422P12: 'PresetVideoFormat'
+    YUV444P12: 'PresetVideoFormat'
 
-    YUV420P14: 'PresetFormat'
-    YUV422P14: 'PresetFormat'
-    YUV444P14: 'PresetFormat'
+    YUV420P14: 'PresetVideoFormat'
+    YUV422P14: 'PresetVideoFormat'
+    YUV444P14: 'PresetVideoFormat'
 
-    YUV420P16: 'PresetFormat'
-    YUV422P16: 'PresetFormat'
-    YUV444P16: 'PresetFormat'
+    YUV420P16: 'PresetVideoFormat'
+    YUV422P16: 'PresetVideoFormat'
+    YUV444P16: 'PresetVideoFormat'
 
-    YUV444PH: 'PresetFormat'
-    YUV444PS: 'PresetFormat'
+    YUV444PH: 'PresetVideoFormat'
+    YUV444PS: 'PresetVideoFormat'
 
-    RGB24: 'PresetFormat'
-    RGB27: 'PresetFormat'
-    RGB30: 'PresetFormat'
-    RGB36: 'PresetFormat'
-    RGB42: 'PresetFormat'
-    RGB48: 'PresetFormat'
+    RGB24: 'PresetVideoFormat'
+    RGB27: 'PresetVideoFormat'
+    RGB30: 'PresetVideoFormat'
+    RGB36: 'PresetVideoFormat'
+    RGB42: 'PresetVideoFormat'
+    RGB48: 'PresetVideoFormat'
 
-    RGBH: 'PresetFormat'
-    RGBS: 'PresetFormat'
+    RGBH: 'PresetVideoFormat'
+    RGBS: 'PresetVideoFormat'
 
 
-NONE: Literal[PresetFormat.NONE]
+NONE: Literal[PresetVideoFormat.NONE]
 
-GRAY8: Literal[PresetFormat.GRAY8]
-GRAY9: Literal[PresetFormat.GRAY9]
-GRAY10: Literal[PresetFormat.GRAY10]
-GRAY12: Literal[PresetFormat.GRAY12]
-GRAY14: Literal[PresetFormat.GRAY14]
-GRAY16: Literal[PresetFormat.GRAY16]
-GRAY32: Literal[PresetFormat.GRAY32]
+GRAY8: Literal[PresetVideoFormat.GRAY8]
+GRAY9: Literal[PresetVideoFormat.GRAY9]
+GRAY10: Literal[PresetVideoFormat.GRAY10]
+GRAY12: Literal[PresetVideoFormat.GRAY12]
+GRAY14: Literal[PresetVideoFormat.GRAY14]
+GRAY16: Literal[PresetVideoFormat.GRAY16]
+GRAY32: Literal[PresetVideoFormat.GRAY32]
 
-GRAYH: Literal[PresetFormat.GRAYH]
-GRAYS: Literal[PresetFormat.GRAYS]
+GRAYH: Literal[PresetVideoFormat.GRAYH]
+GRAYS: Literal[PresetVideoFormat.GRAYS]
 
-YUV420P8: Literal[PresetFormat.YUV420P8]
-YUV422P8: Literal[PresetFormat.YUV422P8]
-YUV444P8: Literal[PresetFormat.YUV444P8]
-YUV410P8: Literal[PresetFormat.YUV410P8]
-YUV411P8: Literal[PresetFormat.YUV411P8]
-YUV440P8: Literal[PresetFormat.YUV440P8]
+YUV420P8: Literal[PresetVideoFormat.YUV420P8]
+YUV422P8: Literal[PresetVideoFormat.YUV422P8]
+YUV444P8: Literal[PresetVideoFormat.YUV444P8]
+YUV410P8: Literal[PresetVideoFormat.YUV410P8]
+YUV411P8: Literal[PresetVideoFormat.YUV411P8]
+YUV440P8: Literal[PresetVideoFormat.YUV440P8]
 
-YUV420P9: Literal[PresetFormat.YUV420P9]
-YUV422P9: Literal[PresetFormat.YUV422P9]
-YUV444P9: Literal[PresetFormat.YUV444P9]
+YUV420P9: Literal[PresetVideoFormat.YUV420P9]
+YUV422P9: Literal[PresetVideoFormat.YUV422P9]
+YUV444P9: Literal[PresetVideoFormat.YUV444P9]
 
-YUV420P10: Literal[PresetFormat.YUV420P10]
-YUV422P10: Literal[PresetFormat.YUV422P10]
-YUV444P10: Literal[PresetFormat.YUV444P10]
+YUV420P10: Literal[PresetVideoFormat.YUV420P10]
+YUV422P10: Literal[PresetVideoFormat.YUV422P10]
+YUV444P10: Literal[PresetVideoFormat.YUV444P10]
 
-YUV420P12: Literal[PresetFormat.YUV420P12]
-YUV422P12: Literal[PresetFormat.YUV422P12]
-YUV444P12: Literal[PresetFormat.YUV444P12]
+YUV420P12: Literal[PresetVideoFormat.YUV420P12]
+YUV422P12: Literal[PresetVideoFormat.YUV422P12]
+YUV444P12: Literal[PresetVideoFormat.YUV444P12]
 
-YUV420P14: Literal[PresetFormat.YUV420P14]
-YUV422P14: Literal[PresetFormat.YUV422P14]
-YUV444P14: Literal[PresetFormat.YUV444P14]
+YUV420P14: Literal[PresetVideoFormat.YUV420P14]
+YUV422P14: Literal[PresetVideoFormat.YUV422P14]
+YUV444P14: Literal[PresetVideoFormat.YUV444P14]
 
-YUV420P16: Literal[PresetFormat.YUV420P16]
-YUV422P16: Literal[PresetFormat.YUV422P16]
-YUV444P16: Literal[PresetFormat.YUV444P16]
+YUV420P16: Literal[PresetVideoFormat.YUV420P16]
+YUV422P16: Literal[PresetVideoFormat.YUV422P16]
+YUV444P16: Literal[PresetVideoFormat.YUV444P16]
 
-YUV444PH: Literal[PresetFormat.YUV444PH]
-YUV444PS: Literal[PresetFormat.YUV444PS]
+YUV444PH: Literal[PresetVideoFormat.YUV444PH]
+YUV444PS: Literal[PresetVideoFormat.YUV444PS]
 
-RGB24: Literal[PresetFormat.RGB24]
-RGB27: Literal[PresetFormat.RGB27]
-RGB30: Literal[PresetFormat.RGB30]
-RGB36: Literal[PresetFormat.RGB36]
-RGB42: Literal[PresetFormat.RGB42]
-RGB48: Literal[PresetFormat.RGB48]
+RGB24: Literal[PresetVideoFormat.RGB24]
+RGB27: Literal[PresetVideoFormat.RGB27]
+RGB30: Literal[PresetVideoFormat.RGB30]
+RGB36: Literal[PresetVideoFormat.RGB36]
+RGB42: Literal[PresetVideoFormat.RGB42]
+RGB48: Literal[PresetVideoFormat.RGB48]
 
-RGBH: Literal[PresetFormat.RGBH]
-RGBS: Literal[PresetFormat.RGBS]
+RGBH: Literal[PresetVideoFormat.RGBH]
+RGBS: Literal[PresetVideoFormat.RGBS]
 
 
 class AudioChannels(IntEnum):
@@ -1177,7 +1177,7 @@ class Core:
         subsampling_h: int = 0
     ) -> VideoFormat: ...
 
-    def get_video_format(self, id: Union[VideoFormat, int, PresetFormat]) -> VideoFormat: ...
+    def get_video_format(self, id: Union[VideoFormat, int, PresetVideoFormat]) -> VideoFormat: ...
 
     def create_video_frame(self, format: VideoFormat, width: int, height: int) -> VideoFrame: ...
 

@@ -8,9 +8,6 @@
 	"identifier": "yomiko.collection.iccconvert",
 	"namespace": "iccc",
 	"api": 4,
-	"dependencies": [
-		"yomiko.collection.iccconvert.magick"
-	],
 	"ignore": [
 		"3.1",
 		"2.5.1",
@@ -20,6 +17,45 @@
 		"1.0"
 	],
 	"releases": [
+		{
+			"version": "5.2",
+			"published": "2023-05-13T13:38:37Z",
+			"win64": {
+				"url": "https://github.com/YomikoR/VapourSynth-ICCConvert/releases/download/5.2/libiccc.dll",
+				"files": {
+					"libiccc.dll": [
+						"libiccc.dll",
+						"acd58d62db0231d9e7f23d1e3bf765dcb8925f8be7b9ceaf962a731afc2557b5"
+					]
+				}
+			}
+		},
+		{
+			"version": "5.1",
+			"published": "2023-03-08T03:56:50Z",
+			"win64": {
+				"url": "https://github.com/YomikoR/VapourSynth-ICCConvert/releases/download/5.1/libiccc.dll",
+				"files": {
+					"libiccc.dll": [
+						"libiccc.dll",
+						"cda4ce6c7ba332dd1ff14a5d2070b5b854c34fac7a5e1c60ab92b33d8608afcc"
+					]
+				}
+			}
+		},
+		{
+			"version": "5.0",
+			"published": "2023-02-10T17:35:24Z",
+			"win64": {
+				"url": "https://github.com/YomikoR/VapourSynth-ICCConvert/releases/download/5.0/libiccc.dll",
+				"files": {
+					"libiccc.dll": [
+						"libiccc.dll",
+						"a7ff1bef0a93d5a8da15d842b2a21028b2adfc80d82cdbd07413657f4625f51c"
+					]
+				}
+			}
+		},
 		{
 			"version": "4.1",
 			"published": "2022-11-16T04:05:26Z",

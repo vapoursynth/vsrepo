@@ -12,6 +12,14 @@
 	],
 	"releases": [
 		{
+			"version": "1.4.5",
+			"published": "2023-06-05T13:58:55.823599Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/cb/4e/1f18786a2a4fc451681b88fa80ae870149bb264d1325b51eead7ee3c47e5/vsexprtools-1.4.5-py3-none-any.whl",
+				"hash": "0b2d62145a4525959118c0b840cb9a4d129e36a0fa5406e7fd7ba494958f3cec"
+			}
+		},
+		{
 			"version": "1.4.4",
 			"published": "2023-05-04T22:00:25.154512Z",
 			"wheel": {

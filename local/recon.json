@@ -1,0 +1,24 @@
+{
+	"name": "Chroma reconstruction",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Make chroma great again",
+	"github": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-reconstruct",
+	"identifier": "dev.setsugen.reconstruct",
+	"namespace": "recon",
+	"releases": [
+		{
+			"version": "v0.1.0",
+			"published": "2023-06-15T23:52:48Z",
+			"win64": {
+				"url": "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-reconstruct/releases/download/v0.1.0/recon.dll",
+				"files": {
+					"recon.dll": [
+						"recon.dll",
+						"14fceace4c3bfb6f5d33c69050f0743e3b50f555b6fcf39e5595790d75aebc8c"
+					]
+				}
+			}
+		}
+	]
+}

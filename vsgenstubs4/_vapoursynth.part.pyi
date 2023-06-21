@@ -75,7 +75,7 @@
 
 
 from abc import abstractmethod
-from ctypes import c_void_p
+from ctypes import Structure, c_void_p
 from enum import IntEnum
 from fractions import Fraction
 from inspect import Signature

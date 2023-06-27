@@ -75,16 +75,16 @@
 
 
 from abc import abstractmethod
-from ctypes import Structure, c_void_p
+from ctypes import c_void_p
 from enum import IntEnum
 from fractions import Fraction
 from inspect import Signature
 from types import MappingProxyType, TracebackType
 from typing import (
     TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,
-    NamedTuple, NoReturn, Optional, Protocol, Sequence, Tuple, Type, TypedDict, TypeVar, Union, overload,
-    runtime_checkable
+    NamedTuple, NoReturn, Protocol, Sequence, Tuple, Type, TypedDict, TypeVar, Union, overload, runtime_checkable
 )
+from weakref import ReferenceType
 
 __all__ = [
     # Versioning
@@ -723,7 +723,7 @@ def unregister_on_destroy(callback: Callable[..., None]) -> None:
 
 
 class Environment:
-    env: EnvironmentData
+    env: ReferenceType[EnvironmentData]
 
     def __init__(self) -> NoReturn: ...
 

@@ -9,8 +9,8 @@ from os import SEEK_END, listdir, makedirs, path
 from os.path import join as join_path
 from pathlib import Path
 from typing import (
-    Any, Callable, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, Tuple, TypeVar, Union,
-    cast, runtime_checkable
+    Any, Callable, Dict, Iterable, Iterator, List, NamedTuple, Optional, Protocol, Sequence, Tuple, TypedDict, TypeVar,
+    Union, cast, runtime_checkable
 )
 
 import vapoursynth as vs
@@ -145,7 +145,59 @@ def load_plugins(args: Namespace) -> vs.Core:
     return vs.core.core
 
 
-def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iterator[str]:
+def clean_signature(signature: Any) -> str:
+    signature = str(signature)
+
+    # Clean up the type annotations so that they are valid python syntax.
+    signature = signature.replace('typing.', '')
+    signature = signature.replace('vapoursynth.', '').replace('vs.', '')
+    signature = signature.replace('VideoNode', "'VideoNode'").replace('VideoFrame', "'VideoFrame'")
+    signature = signature.replace('AudioNode', "'AudioNode'").replace('AudioFrame', "'AudioFrame'")
+    signature = signature.replace('NoneType', 'None')
+    signature = signature.replace('str, bytes, bytearray', 'DataType')
+
+    for t in types:
+        for t_ in {t, f"'{t}'"}:
+            signature = signature.replace(f'Union[{t_}]', f'{t_}')
+            signature = signature.replace(f'Union[{t_}, None]', f'Optional[{t_}]')
+            signature = signature.replace(f'Union[{t_}, Sequence[{t_}]]', f'SingleAndSequence[{t_}]')
+            signature = signature.replace(
+                f'Union[{t_}, Sequence[{t_}], None]', f'Optional[SingleAndSequence[{t}]]'
+            )
+
+    callback_type = 'VSMapValueCallback[_VapourSynthMapValue]'
+
+    # Make Callable definitions sensible
+    signature = signature.replace('Union[Func, Callable]', callback_type)
+    signature = signature.replace('Union[Func, Callable, None]', f'Optional[{callback_type}]')
+
+    # Replace the keywords with valid values
+    for kw in reserved_keywords:
+        signature = signature.replace(f' {kw}:', f' {kw}_:')
+
+    return signature
+
+
+def get_complex_signature(signature: TypedDict) -> Tuple[str, str]:
+    dict_name = signature.__name__  # type: ignore
+
+    def _sanitize_type(value: Any) -> str:
+        if isinstance(value, type):
+            return str(value.__name__)
+        return str(value)
+
+    dict_signature = ', '.join(
+        f'"{name}": {_sanitize_type(value)}' for name, value in signature.__annotations__.items()
+    )
+
+    dict_signature = '{' + dict_signature + '}'
+
+    return dict_name, clean_signature(f'TypedDict("{dict_name}", {dict_signature})')
+
+
+def retrieve_func_sigs(
+    core: Union[vs.Core, vs.RawNode], namespace: str
+) -> Iterator[Tuple[str, Union[None, Tuple[str, str]]]]:
     plugin = cast(vs.Plugin, getattr(core, namespace))
 
     ordered_functions = sorted(plugin.functions(), key=lambda x: x.name.lower())
@@ -162,36 +214,16 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
                 if isinstance(core, vs.RawNode):
                     signature_base.replace(return_annotation=core.__class__)
 
-            if signature_base.return_annotation in {Any, Optional[Any]}:
+            complex_signature = None
+
+            rann = signature_base.return_annotation
+            if isinstance(rann, type) and issubclass(rann, dict):
+                complex_signature = get_complex_signature(rann)
+                signature_base = signature_base.replace(return_annotation=complex_signature[0])
+            elif rann in {Any, Optional[Any]}:
                 signature_base = signature_base.replace(return_annotation=vs.VideoNode)
 
-            signature = str(signature_base)
-
-            # Clean up the type annotations so that they are valid python syntax.
-            signature = signature.replace('vapoursynth.', '').replace('vs.', '')
-            signature = signature.replace('VideoNode', "'VideoNode'").replace('VideoFrame', "'VideoFrame'")
-            signature = signature.replace('AudioNode', "'AudioNode'").replace('AudioFrame', "'AudioFrame'")
-            signature = signature.replace('NoneType', 'None')
-            signature = signature.replace('str, bytes, bytearray', 'DataType')
-
-            for t in types:
-                for t_ in {t, f"'{t}'"}:
-                    signature = signature.replace(f'Union[{t_}]', f'{t_}')
-                    signature = signature.replace(f'Union[{t_}, None]', f'Optional[{t_}]')
-                    signature = signature.replace(f'Union[{t_}, Sequence[{t_}]]', f'SingleAndSequence[{t_}]')
-                    signature = signature.replace(
-                        f'Union[{t_}, Sequence[{t_}], None]', f'Optional[SingleAndSequence[{t}]]'
-                    )
-
-            callback_type = 'VSMapValueCallback[_VapourSynthMapValue]'
-
-            # Make Callable definitions sensible
-            signature = signature.replace('Union[Func, Callable]', callback_type)
-            signature = signature.replace('Union[Func, Callable, None]', f'Optional[{callback_type}]')
-
-            # Replace the keywords with valid values
-            for kw in reserved_keywords:
-                signature = signature.replace(f' {kw}:', f' {kw}_:')
+            signature = clean_signature(signature_base)
 
             # Remove anonymous Anys
             signature = signature.replace(' **kwargs: Any', f' **kwargs: {vs_value_type}')
@@ -199,7 +231,7 @@ def retrieve_func_sigs(core: Union[vs.Core, vs.RawNode], namespace: str) -> Iter
             # Add a self.
             signature = signature.replace('(', '(self, ').replace(', )', ')')
 
-            yield f'    def {func.name}{signature}: ...'
+            yield f'    def {func.name}{signature}: ...', complex_signature
 
 
 class BoundSignature:
@@ -207,7 +239,7 @@ class BoundSignature:
         self.namespace = namespace
         self.cores = cores
 
-    def __iter__(self) -> Iterator[Tuple[str, Iterator[str]]]:
+    def __iter__(self) -> Iterator[Tuple[str, Iterator[Tuple[str, Tuple[str, str] | None]]]]:
         for core in self.cores:
             signatures = retrieve_func_sigs(core, self.namespace)
 
@@ -299,23 +331,42 @@ class Implementation(NamedTuple):
     def __ne__(self, x: 'Implementation', /) -> bool: return self.plugin.__ne__(x.plugin)  # type: ignore[override]
 
 
+def get_implementation_content(plugin: PluginMeta) -> Iterator[str]:
+    body: List[str] = []
+
+    complex_types: Dict[str, str] = {}
+
+    for core_name, signatures in plugin.bound:
+        function_signatures: List[str] = []
+
+        for signature, complex_type in signatures:
+            function_signatures.append(str(signature))
+
+            if complex_type:
+                type_name, type_definition = complex_type
+                complex_types |= {type_name: (f'{type_name} = {type_definition}')}
+
+        body.extend([
+            '',
+            f"class {Implementation.get_name(plugin, core_name)}(Plugin):",
+            '    """'
+            f'This class implements the module definitions for the "{plugin.name}" VapourSynth plugin.'
+            '\\n\\n*This class cannot be imported.*'
+            '"""',
+            '\n'.join(function_signatures),
+        ])
+
+    if complex_types:
+        body.insert(0, '\n'.join(['', *complex_types.values(), '']))
+
+    return iter(body)
+
+
 def make_implementations(plugins: Iterable[PluginMeta]) -> Iterator[Implementation]:
     for plugin in plugins:
-        implementation_content = chain.from_iterable(
-            (
-                '',
-                f"class {Implementation.get_name(plugin, core_name)}(Plugin):",
-                '    """'
-                f'This class implements the module definitions for the "{plugin.name}" VapourSynth plugin.'
-                '\\n\\n*This class cannot be imported.*'
-                '"""',
-                '\n'.join(signatures),
-            ) for core_name, signatures in plugin.bound
-        )
-
         content = chain.from_iterable([
             ['', f"{implementation_start}: {plugin.name}"],
-            implementation_content,
+            get_implementation_content(plugin),
             ['', implementation_end, '']
         ])
 

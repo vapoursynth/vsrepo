@@ -10,6 +10,28 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "R2",
+			"published": "2023-06-14T20:08:20Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/vs-ocr/releases/download/R2/vs-ocr-r2.7z",
+				"files": {
+					"TesseractOCR.dll": [
+						"win32/TesseractOCR.dll",
+						"1672157c89769c5e85b6fbb8c460b5e45d0a98c486566ec5738bb39cf430d7f9"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/vs-ocr/releases/download/R2/vs-ocr-r2.7z",
+				"files": {
+					"TesseractOCR.dll": [
+						"win64/TesseractOCR.dll",
+						"d0fcc2fcf15b9e1b158db682d7dad4e755a2d555bc36f19125ff19deeb14df84"
+					]
+				}
+			}
+		},
+		{
 			"version": "R1",
 			"published": "2021-09-11T13:53:52Z",
 			"win32": {

@@ -10,6 +10,28 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "R4",
+			"published": "2023-06-14T20:09:47Z",
+			"win32": {
+				"url": "https://github.com/vapoursynth/subtext/releases/download/R4/subtext-r4.7z",
+				"files": {
+					"SubText.dll": [
+						"win32/SubText.dll",
+						"46700fe4e76058481d2d878b1c9de23831096ab055af12bf8ce2710ec5e61f54"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/vapoursynth/subtext/releases/download/R4/subtext-r4.7z",
+				"files": {
+					"SubText.dll": [
+						"win64/SubText.dll",
+						"5965f59a7fc2318b14b336ddb2363e6039acebee5f9bc83d8011f35793430c3c"
+					]
+				}
+			}
+		},
+		{
 			"version": "R3",
 			"published": "2022-04-17T19:27:52Z",
 			"win32": {

@@ -1,0 +1,24 @@
+{
+	"name": "zboxblur",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "BoxBlur filter for vapoursynth written in ziglang.",
+	"github": "https://github.com/dnjulek/vapoursynth-zboxblur",
+	"identifier": "com.julek.zboxblur",
+	"namespace": "zboxblur",
+	"releases": [
+		{
+			"version": "R2",
+			"published": "2023-07-07T23:35:13Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-zboxblur/releases/download/R2/vapoursynth-zboxblur-r2.7z",
+				"files": {
+					"zboxblur.dll": [
+						"zboxblur.dll",
+						"6c67b7432a307fe1621aeb371312b65cc601ceb1313332db9d11a511d0675bef"
+					]
+				}
+			}
+		}
+	]
+}

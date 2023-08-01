@@ -1,0 +1,24 @@
+{
+	"name": "chromanr",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "FFmpeg's chromanr for VapourSynth.",
+	"github": "https://github.com/dnjulek/vapoursynth-chromanr",
+	"identifier": "com.julek.chromanr",
+	"namespace": "chromanr",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2023-08-01T06:21:26Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-chromanr/releases/download/R1/vapoursynth-chromanr-r1.7z",
+				"files": {
+					"chromanr.dll": [
+						"chromanr.dll",
+						"86382a2b9caf90bfb16d960d8188d77595d9923df09ba904c0272108028b9564"
+					]
+				}
+			}
+		}
+	]
+}

@@ -46,6 +46,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:e498054",
+			"published": "2023-07-25T07:15:03Z",
+			"script": {
+				"url": "https://api.github.com/repos/xyx98/my-vapoursynth-script/zipball/e498054fd37d6cda2371db9663e5cc0ac32ebff7",
+				"files": {
+					"xvs.py": [
+						"xyx98-my-vapoursynth-script-e498054/xvs.py",
+						"97870a70a4722bf860a2fe7ff31b93c58ff543236de2a08e12656f62b49ceaee"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:b24d559",
 			"published": "2022-11-19T13:53:56Z",
 			"script": {

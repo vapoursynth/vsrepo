@@ -1,0 +1,25 @@
+{
+	"name": "chromanr cuda",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "FFmpeg's chromanr for VapourSynth, cuda version",
+	"github": "https://github.com/dnjulek/vapoursynth-chromanrcuda",
+	"identifier": "com.julek.chromanrcuda",
+	"namespace": "chromanrcuda",
+	"device": ["cuda"],
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2023-08-02T04:57:03Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-chromanrcuda/releases/download/r1/vapoursynth-chromanrcuda-r1.7z",
+				"files": {
+					"chromanrcuda.dll": [
+						"vapoursynth-chromanrcuda-r1/chromanrcuda.dll",
+						"fb0647f0db4af43997945b07098b70bef34536d13fe7cb6f2bce62b8bc4a1fa9"
+					]
+				}
+			}
+		}
+	]
+}

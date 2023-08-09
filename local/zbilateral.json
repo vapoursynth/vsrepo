@@ -1,0 +1,24 @@
+{
+	"name": "zbilateral",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "A faster version of VapourSynth-Bilateral written in zig",
+	"github": "https://github.com/dnjulek/vapoursynth-zbilateral",
+	"identifier": "com.julek.zbilateral",
+	"namespace": "zbilateral",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2023-08-07T05:50:01Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-zbilateral/releases/download/r1/vapoursynth-zbilateral-r1.7z",
+				"files": {
+					"zbilateral.dll": [
+						"zbilateral.dll",
+						"92914779451fbbc5a091741fe2596c4b01b437df7a5468e837995b4803501e46"
+					]
+				}
+			}
+		}
+	]
+}

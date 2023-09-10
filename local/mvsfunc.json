@@ -16,6 +16,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:2139285",
+			"published": "2022-07-05T16:07:31Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/21392857960103a31982edd5ab3e86b23e9b5a9e",
+				"files": {
+					"mvsfunc.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-2139285/mvsfunc/mvsfunc.py",
+						"cf51278e2e8c85b2fe70789a7e02aad721e0d3c3b223fee7d8a932c3de77261a"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:8b8f43a",
 			"published": "2021-11-04T10:21:41Z",
 			"script": {

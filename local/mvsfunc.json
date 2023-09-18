@@ -16,6 +16,31 @@
 	],
 	"releases": [
 		{
+			"version": "git:865c748",
+			"published": "2023-03-21T03:42:37Z",
+			"script": {
+				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/865c7486ca860d323754ec4774bc4cca540a7076",
+				"files": {
+					"mvsfunc/mvsfunc.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-865c748/mvsfunc/mvsfunc.py",
+						"1adeb385d19bac1f8c541b655d1f98a38e18c9a0065d4483c25184c22908a984"
+					],
+					"mvsfunc/__init__.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-865c748/mvsfunc/__init__.py",
+						"a08e2bc2d1b255ffa373ef52a63506da6a926e72a4d115aaabe5e95272016d89"
+					],
+					"mvsfunc/_metadata.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-865c748/mvsfunc/_metadata.py",
+						"654d75ba830a969d5940e1d6a18a7801a0a8b9860fd9aa85688f954ee0d5bd53"
+					],
+					"mvsfunc/py.typed": [
+						"HomeOfVapourSynthEvolution-mvsfunc-865c748/mvsfunc/py.typed",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					]
+				}
+			}
+		},
+		{
 			"version": "git:2139285",
 			"published": "2022-07-05T16:07:31Z",
 			"script": {

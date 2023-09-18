@@ -21,9 +21,21 @@
 			"script": {
 				"url": "https://api.github.com/repos/HomeOfVapourSynthEvolution/mvsfunc/zipball/21392857960103a31982edd5ab3e86b23e9b5a9e",
 				"files": {
-					"mvsfunc.py": [
+					"mvsfunc/mvsfunc.py": [
 						"HomeOfVapourSynthEvolution-mvsfunc-2139285/mvsfunc/mvsfunc.py",
 						"cf51278e2e8c85b2fe70789a7e02aad721e0d3c3b223fee7d8a932c3de77261a"
+					],
+					"mvsfunc/__init__.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-2139285/mvsfunc/__init__.py",
+						"a08e2bc2d1b255ffa373ef52a63506da6a926e72a4d115aaabe5e95272016d89"
+					],
+					"mvsfunc/_metadata.py": [
+						"HomeOfVapourSynthEvolution-mvsfunc-2139285/mvsfunc/_metadata.py",
+						"41d019e8a7ff934a12184c1b1b70b8331eee85cfc27405198049500ce7eb52cf"
+					],
+					"mvsfunc/py.typed": [
+						"HomeOfVapourSynthEvolution-mvsfunc-2139285/mvsfunc/py.typed",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 					]
 				}
 			}

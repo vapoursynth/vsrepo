@@ -10,6 +10,19 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "R5",
+			"published": "2023-10-04T13:10:40Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/subtext/releases/download/R5/subtext-r5.7z",
+				"files": {
+					"SubText.dll": [
+						"win64/SubText.dll",
+						"37ce1c6fafdb8788e44e9522ce47efb161c5cdcdc30352bc03104f86599cda80"
+					]
+				}
+			}
+		},
+		{
 			"version": "R4",
 			"published": "2023-06-14T20:09:47Z",
 			"win32": {

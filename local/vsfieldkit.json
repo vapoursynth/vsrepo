@@ -10,11 +10,19 @@
 	"modulename": "vsfieldkit",
 	"wheelname": "vsfieldkit",
 	"dependencies": [
-		"com.deinterlace.nnedi3",
 		"com.nodame.fillborders",
-		"the.weather.channel"
+		"the.weather.channel",
+		"xxx.abc.znedi3"
 	],
 	"releases": [
+		{
+			"version": "2.1.0",
+			"published": "2023-10-07T21:41:34.444163Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/55/33/a4a2cd1ebf2cf71d1880d87642d4fed7fcb29ec399a7ec8cf45f0983d289/vsfieldkit-2.1.0-py3-none-any.whl",
+				"hash": "bbf8be369b827cd284df712f5a5a292ae6c821e12ae73837b5e691c46cc24b98"
+			}
+		},
 		{
 			"version": "2.0.1",
 			"published": "2023-03-26T08:27:04.476023Z",

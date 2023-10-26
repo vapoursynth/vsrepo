@@ -1,0 +1,26 @@
+{
+	"name": "DeScratch",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "This plugin removes vertical scratches from films. Also it can be used for removing of horizontal noise lines such as drop-outs from analog VHS captures (after image rotation)",
+	"doom9": "https://forum.doom9.org/showthread.php?t=67794",
+	"website": "http://www.avisynth.nl/index.php/DeScratch",
+	"github": "https://github.com/vapoursynth/descratch",
+	"identifier": "com.vapoursynth.descratch",
+	"namespace": "descratch",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2023-10-25T20:20:50Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/descratch/releases/download/R1/descratch-r1.7z",
+				"files": {
+					"DeScratch.dll": [
+						"x64/DeScratch.dll",
+						"8bd07967d297c1241769efe891d205e65452fd0781011caeca6ae59cab59960b"
+					]
+				}
+			}
+		}
+	]
+}

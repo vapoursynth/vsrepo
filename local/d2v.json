@@ -19,6 +19,19 @@
 	],
 	"releases": [
 		{
+			"version": "v1.3",
+			"published": "2023-10-09T16:21:41Z",
+			"win64": {
+				"url": "https://github.com/dwbuiten/d2vsource/releases/download/v1.3/d2vsource-1.3-windows.zip",
+				"files": {
+					"d2vsource.dll": [
+						"win64/d2vsource.dll",
+						"5a9629c5526a40b5f98a26b8c4173dc22b2471e8e7944f87bfae29345baf21c3"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.2",
 			"published": "2019-08-18T17:01:56Z",
 			"win32": {

@@ -13,6 +13,19 @@
 	],
 	"releases": [
 		{
+			"version": "r10",
+			"published": "2023-10-18T01:46:30Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r10/VapourSynth-BilateralGPU-r10.7z",
+				"files": {
+					"BilateralGPU.dll": [
+						"VapourSynth-BilateralGPU-r10/BilateralGPU.dll",
+						"e048448fc8b96f316750b7aa959c58c3a6ccb79ee08bcfbd449958f0bbea8f0b"
+					]
+				}
+			}
+		},
+		{
 			"version": "r9",
 			"published": "2022-11-02T02:08:14Z",
 			"win64": {

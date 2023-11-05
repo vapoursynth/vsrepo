@@ -15,6 +15,19 @@
 	],
 	"releases": [
 		{
+			"version": "R2.13",
+			"published": "2023-10-25T23:26:57Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.13/VapourSynth-BM3DCUDA-R2.13.7z",
+				"files": {
+					"BM3DCUDA.dll": [
+						"VapourSynth-BM3DCUDA-R2.13/bm3dcuda.dll",
+						"dc626e60cf002eedb0b5b72a12533730fdf932d6a41189644b30a79df26911a9"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2.12-cuda118",
 			"published": "2023-01-21T03:46:42Z",
 			"win64": {

@@ -15,6 +15,22 @@
 	],
 	"releases": [
 		{
+			"version": "1.8.1",
+			"published": "2023-10-30T15:47:13.829199Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/86/80/361302ebc70635793099ed6f1ca384bf38072e00c0eb10ddb006afc0b67b/vsdehalo-1.8.1-py3-none-any.whl",
+				"hash": "4ea28e3bd6327a5e692893a289ba8bd2369d854500c227d5f29aacbde5c9b422"
+			}
+		},
+		{
+			"version": "1.8.0",
+			"published": "2023-10-29T18:36:34.529209Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/54/3b/eb93d888222d9d4ea749ff1cf7f263d9ecc583b43ff563dbc96aac334e06/vsdehalo-1.8.0-py3-none-any.whl",
+				"hash": "ae41c487ede0953333bd1ec4d044a385eb3bb2e19495e5d3578dbabb7828bc67"
+			}
+		},
+		{
 			"version": "1.7.2",
 			"published": "2023-06-20T15:27:18.853292Z",
 			"wheel": {

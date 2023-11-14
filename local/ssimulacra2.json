@@ -1,0 +1,24 @@
+{
+	"name": "SSIMULACRA2",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Perceptual metric",
+	"github": "https://github.com/dnjulek/vapoursynth-ssimulacra2",
+	"identifier": "com.julek.ssimulacra2",
+	"namespace": "ssimulacra2",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2023-11-14T14:25:06Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-ssimulacra2/releases/download/r1/vapoursynth-ssimulacra2-r1.7z",
+				"files": {
+					"ssimulacra2.dll": [
+						"ssimulacra2.dll",
+						"36caa5f3ea095c19da51c7a8accd33f6b49a13990a39d2bcf61965a225e427c6"
+					]
+				}
+			}
+		}
+	]
+}

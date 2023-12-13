@@ -172,7 +172,7 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) and ((args.package is
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
-package_json_path = os.path.join(file_dirname, 'vspackages3.json') if args.portable else os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
+package_json_path = os.path.join(file_dirname, 'vspackages3.json') if args.portable or is_sitepackage_install_portable() else os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
 
 if is_sitepackage_install():
     if is_venv():

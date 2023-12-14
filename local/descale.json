@@ -7,9 +7,22 @@
 	"category": "Resizing and Format Conversion",
 	"identifier": "tegaf.asi.xe",
 	"namespace": "descale",
-	"github": "https://github.com/Irrational-Encoding-Wizardry/descale",
+	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-descale",
 	"api": 4,
 	"releases": [
+		{
+			"version": "r9",
+			"published": "2023-11-29T22:00:25Z",
+			"win64": {
+				"url": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-descale/releases/download/r9/libdescale.7z",
+				"files": {
+					"libdescale.dll": [
+						"libdescale.dll",
+						"52cff0a5b2bcbfc859e11f0e3c799194fae4e646f62108c0f5051e324077921d"
+					]
+				}
+			}
+		},
 		{
 			"version": "r8",
 			"published": "2022-04-02T10:00:54Z",

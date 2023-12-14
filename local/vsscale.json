@@ -3,7 +3,7 @@
 	"type": "PyWheel",
 	"category": "Resizing and Format Conversion",
 	"description": "Wrappers for scaling and descaling functions.",
-	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-scale",
+	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-scale",
 	"identifier": "vsscale",
 	"modulename": "vsscale",
 	"wheelname": "vsscale",

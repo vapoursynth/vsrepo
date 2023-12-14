@@ -3,7 +3,7 @@
 	"type": "PyWheel",
 	"category": "Denoising",
 	"description": "Wrapper for RGVS, RGSF, and various other functions",
-	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-rgtools",
+	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-rgtools",
 	"identifier": "vsrgtools",
 	"modulename": "vsrgtools",
 	"wheelname": "vsrgtools",

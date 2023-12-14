@@ -3,7 +3,7 @@
 	"type": "PyWheel",
 	"category": "Other",
 	"description": "Helpers for writing RPN expressions",
-	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-exprtools",
+	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-exprtools",
 	"identifier": "vsexprtools",
 	"modulename": "vsexprtools",
 	"wheelname": "vsexprtools",

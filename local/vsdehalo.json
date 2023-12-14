@@ -3,7 +3,7 @@
 	"type": "PyWheel",
 	"category": "Other",
 	"description": "Collection of dehaloing VapourSynth functions",
-	"github": "https://github.com/Irrational-Encoding-Wizardry/vs-dehalo",
+	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-dehalo",
 	"identifier": "vsdehalo",
 	"modulename": "vsdehalo",
 	"wheelname": "vsdehalo",

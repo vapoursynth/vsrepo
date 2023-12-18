@@ -1,0 +1,36 @@
+{
+	"name": "vsgrlir",
+	"type": "PyWheel",
+	"category": "Denoising",
+	"description": "Efficient and Explicit Modelling of Image Hierarchies for Image Restoration, based on https://github.com/ofsoundof/GRL-Image-Restoration.",
+	"github": "https://github.com/HolyWu/vs-grlir",
+	"identifier": "vsgrlir",
+	"modulename": "vsgrlir",
+	"wheelname": "vsgrlir",
+	"releases": [
+		{
+			"version": "1.1.1",
+			"published": "2023-04-29T03:05:21.486287Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/89/9e/9cb4e28a15baaf6f2497f37144722bd3c57ffd7ee5bfa9a62a1f335f9111/vsgrlir-1.1.1-py3-none-any.whl",
+				"hash": "2716010676c221fe265821032447e13c1f7310765d95f7aeb68db080acbdac44"
+			}
+		},
+		{
+			"version": "1.1.0",
+			"published": "2023-04-23T08:43:26.786228Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/53/ca/c1f57915c7bf4efc065aa8672a232653db736a0f0e0b6d74f67c40658950/vsgrlir-1.1.0-py3-none-any.whl",
+				"hash": "5d6deb412c44cfa4b4029bcb19320f812b54463b974eec99e5d0daff0e377b2a"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2023-04-16T15:07:48.987103Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/7b/5a/7e8ea8079759c6d7f6e7d0b6044ce721e73fd60e39ec95d697bc4c81a203/vsgrlir-1.0.0-py3-none-any.whl",
+				"hash": "334b1c8afdc14559de6b42180520faf5bcd8a0b3af4756dce7231925602147f7"
+			}
+		}
+	]
+}

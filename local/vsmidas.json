@@ -1,0 +1,28 @@
+{
+	"name": "vsMiDaS",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-Shot Cross-Dataset Transfer, based on https://github.com/isl-org/MiDaS.",
+	"github": "https://github.com/HolyWu/vs-midas",
+	"identifier": "vsmidas",
+	"modulename": "vsmidas",
+	"wheelname": "vsmidas",
+	"releases": [
+		{
+			"version": "1.1.0",
+			"published": "2023-12-16T16:51:16.543534Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/3a/83/18c73446ed6df0b3d68f6a03a751633d84a8e0bb9a7129d979c7eb7fe09b/vsmidas-1.1.0-py3-none-any.whl",
+				"hash": "46601e3662ce97303e414c0019363f44adc9f1680ac7cfe51f28a9838a2d8dc2"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2023-04-03T01:22:28.841830Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/6d/0f/96f6e262b30a5e2fa85555540ae2e1f2973f56040eedc9eef672acd233ee/vsmidas-1.0.0-py3-none-any.whl",
+				"hash": "51156b5764c189c1b115c3e0ebde564c6367f4d12d65c4b1f50431bc5b573cbf"
+			}
+		}
+	]
+}

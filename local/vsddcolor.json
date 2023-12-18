@@ -1,0 +1,20 @@
+{
+	"name": "vsDDColor",
+	"type": "PyWheel",
+	"category": "Color/Levels",
+	"description": "Towards Photo-Realistic Image Colorization via Dual Decoders, based on https://github.com/piddnad/DDColor.",
+	"github": "https://github.com/HolyWu/vs-ddcolor",
+	"identifier": "vsddcolor",
+	"modulename": "vsddcolor",
+	"wheelname": "vsddcolor",
+	"releases": [
+		{
+			"version": "1.0.0",
+			"published": "2023-12-02T09:58:11.508439Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/63/fe/191f0bb53bc82c0067403b8a0f661c62e43a1a9fa43b8344324a29838b67/vsddcolor-1.0.0-py3-none-any.whl",
+				"hash": "61639f01fb1d83cfd5489116208766fe2f89e10d22cc54f0f74f950dc77998f4"
+			}
+		}
+	]
+}

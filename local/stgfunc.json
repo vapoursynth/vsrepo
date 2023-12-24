@@ -14,6 +14,14 @@
 	],
 	"releases": [
 		{
+			"version": "3.1.0",
+			"published": "2023-12-17T18:39:17.193934Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/86/1e/2395dc534c8457c5949776e958fd4644f0687f40dcb75be1d639bf13c0fe/stgfunc-3.1.0-py3-none-any.whl",
+				"hash": "9b2d21bd62fef6f4157ef83f6d42d847f7a206ac3d3bb765cf605faa907884dc"
+			}
+		},
+		{
 			"version": "3.0.1",
 			"published": "2023-03-26T17:42:04.465289Z",
 			"wheel": {

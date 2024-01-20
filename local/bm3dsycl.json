@@ -1,0 +1,48 @@
+{
+	"name": "BM3DCUDA SYCL",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "BM3D algorithm implemented in SYCL",
+	"github": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA",
+	"identifier": "com.wolframrhodium.bm3dsycl",
+	"namespace": "bm3dsycl",
+	"dependencies": [
+		"com.wolframrhodium.bm3dsycl.runtimes"
+	],
+	"device": [
+		"sycl"
+	],
+	"ignore": [
+		"R2.13",
+		"R2.12-cuda118",
+		"R2.12",
+		"R2.11",
+		"R2.10",
+		"R2.9",
+		"R2.8",
+		"R2.7",
+		"R2.6",
+		"R2.5",
+		"R2.4",
+		"R2.3",
+		"R2.2",
+		"R2.1",
+		"R2",
+		"R1"
+	],
+	"releases": [
+		{
+			"version": "R2.14",
+			"published": "2023-11-11T07:13:42Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.14/VapourSynth-BM3DSYCL-R2.14.7z",
+				"files": {
+					"bm3dsycl_gen12+.dll": [
+						"VapourSynth-BM3DSYCL-R2.14/bm3dsycl_gen12+.dll",
+						"8f111017a06a890f2b5c119c32d0863bf44593a208df42ad427bdc5b11bdb2c7"
+					]
+				}
+			}
+		}
+	]
+}

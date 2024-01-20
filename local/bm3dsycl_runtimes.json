@@ -1,0 +1,69 @@
+{
+	"name": "BM3DCUDA SYCL Runtimes",
+	"type": "VSPlugin",
+	"category": "Plugin Dependency",
+	"description": "Runtimes for BM3D SYCL",
+	"github": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA",
+	"identifier": "com.wolframrhodium.bm3dsycl.runtimes",
+	"namespace": "bm3dsycl_runtimes",
+	"device": [
+		"sycl"
+	],
+	"ignore": [
+		"R2.13",
+		"R2.12-cuda118",
+		"R2.12",
+		"R2.11",
+		"R2.10",
+		"R2.9",
+		"R2.8",
+		"R2.7",
+		"R2.6",
+		"R2.5",
+		"R2.4",
+		"R2.3",
+		"R2.2",
+		"R2.1",
+		"R2",
+		"R1"
+	],
+	"releases": [
+		{
+			"version": "R2.14",
+			"published": "2023-11-11T07:13:42Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.14/SYCL-Runtime-R2.14.7z",
+				"files": {
+					"libmmd.dll": [
+						"SYCL-Runtime-R2.14/libmmd.dll",
+						"ec9db4062eb835fa250edc01267cb97edf68c70b72b085e0fcf035b064c8852d"
+					],
+					"pi_level_zero.dll": [
+						"SYCL-Runtime-R2.14/pi_level_zero.dll",
+						"f350e173f8e2ba34ada3c6f68b2a5b1639836237af4f4879b8f3a7a8a19932b2"
+					],
+					"pi_opencl.dll": [
+						"SYCL-Runtime-R2.14/pi_opencl.dll",
+						"e6c3c2044b338afa9b6f24554a2407777d30f6d3ac3cb17f06e4fd645e51369c"
+					],
+					"pi_unified_runtime.dll": [
+						"SYCL-Runtime-R2.14/pi_unified_runtime.dll",
+						"649069988502442e4fb6f0af4fe27a8fce25bd35c59881eab33bb21a6cf27ff4"
+					],
+					"pi_win_proxy_loader.dll": [
+						"SYCL-Runtime-R2.14/pi_win_proxy_loader.dll",
+						"47b86611f8c1a17bea0116ca41d7b3b5d5d2fceaa1b46b1b87251b792e043002"
+					],
+					"pi_win_proxy_loaderd.dll": [
+						"SYCL-Runtime-R2.14/pi_win_proxy_loaderd.dll",
+						"b588fd1f34523a9c3cf16fbb344d52e0cabdf0b3899fcd485db860728931ea0a"
+					],
+					"sycl6.dll": [
+						"SYCL-Runtime-R2.14/sycl6.dll",
+						"05d3f39be3eacc5844d8f50ff3584a13da1262fa74cadea7d6418e76340bb378"
+					]
+				}
+			}
+		}
+	]
+}

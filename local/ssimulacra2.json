@@ -8,6 +8,32 @@
 	"namespace": "ssimulacra2",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2024-01-19T16:01:24Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-ssimulacra2/releases/download/r3/vapoursynth-ssimulacra2-r3.7z",
+				"files": {
+					"ssimulacra2.dll": [
+						"ssimulacra2.dll",
+						"da47358229bb4fec94cee7dcccf4de2e6002f4437161a111a1b3c086f6a1d426"
+					]
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"published": "2024-01-16T17:16:08Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-ssimulacra2/releases/download/r2/vapoursynth-ssimulacra2-r2.7z",
+				"files": {
+					"ssimulacra2.dll": [
+						"ssimulacra2.dll",
+						"43246a96c79255283ebc35929191a68583c9422323a78cdfe934f02443caa312"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2023-11-14T14:25:06Z",
 			"win64": {

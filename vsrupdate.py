@@ -351,7 +351,11 @@ def update_package(name: str) -> int:
                         temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
                         new_rel_entry['script'] = { 'url': new_url, 'files': {} }
                         for fn in latest_rel['script']['files']:  # type: ignore
-                            new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')  # type: ignore
+                            if os.path.splitext(temp_fn)[1].lower() in ['.py']:
+                                new_fn, digest = os.path.basename(temp_fn), hashlib.sha256(open(temp_fn,'rb').read()).hexdigest()
+                            else:
+                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')  # type: ignore
+
                             new_rel_entry['script']['files'][fn] = [new_fn, digest]
                     except:
                         new_rel_entry.pop('script', None)
@@ -514,7 +518,7 @@ elif args.operation == 'create-package':
 
     else: # is plugin or script
         files_to_hash: List[str] = []
-        if os.path.splitext(dlfile)[1].lower() not in ['.dll']:
+        if os.path.splitext(dlfile)[1].lower() not in ['.dll', '.py']:
             listzip = list_archive_files(dlfile)
             for f in listzip.values():
                 if pathlib.Path(f).suffix: # simple folder filter
@@ -579,6 +583,14 @@ elif args.operation == 'create-package':
                 fullpath, hash, arch = decompress_hash_simple(dlfile, fname)
                 file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else os.path.basename(fullpath)
                 new_rel_entry['script']['files'][file] = [fullpath, hash]
+            
+            if os.path.splitext(dlfile)[1].lower() in ['.py']:
+                file_bin = open(dlfile,'rb').read()
+                hash = hashlib.sha256(file_bin).hexdigest()
+                arch = getBinaryArch(file_bin)
+                filename = os.path.basename(dlfile)
+                new_rel_entry['script']['files'][filename] = [filename, hash]
+
 
     if not args.packagescript:
         if is_wheel:

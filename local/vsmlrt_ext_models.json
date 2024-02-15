@@ -1,0 +1,468 @@
+{
+	"name": "vsmlrt_ext_models",
+	"type": "VSPlugin",
+	"category": "Plugin Dependency",
+	"description": "ONNX ext models for vsmlrt plugin",
+	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"identifier": "io.github.amusementclub.vsmlrt_ext_models",
+	"namespace": "vsmlrt_ext_models",
+	"ignore": [
+		"v12",
+		"v11",
+		"v10",
+		"v9.2",
+		"v9.1",
+		"v9",
+		"v8",
+		"v7",
+		"v6",
+		"v5",
+		"v4",
+		"v3",
+		"v2",
+		"model-20211209",
+		"v1",
+		"v0"
+	],
+	"releases": [
+		{
+			"version": "v13.2",
+			"published": "2023-05-28T15:01:17Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.2/ext-models.v13.2.7z",
+				"files": {
+					"models/anime-segmentation/isnet_is.onnx": [
+						"models/anime-segmentation/isnet_is.onnx",
+						"f7ced1e6b9dff30caaabe3e855b92e010215474dbc71efd65e16b3925346fa3f"
+					],
+					"models/oidn/rt_ldr.onnx": [
+						"models/oidn/rt_ldr.onnx",
+						"ada1cd7b562990f4516be5cb4f88db056b1ac932f400bacede15527b81ac8f4a"
+					],
+					"models/ppocr/ml_PP-OCRv3_det.onnx": [
+						"models/ppocr/ml_PP-OCRv3_det.onnx",
+						"a38ba0ecb751c8e86fb72765a4f24df53a683b29f24e65a9baad7c0d8bb456e2"
+					],
+					"models/rife/rife_v4.0_ensemble.onnx": [
+						"models/rife/rife_v4.0_ensemble.onnx",
+						"cd2b7b4863f819aa932d4f91bbf1403b7bf02f60b573769afe47fd243f3b0beb"
+					],
+					"models/rife/rife_v4.2_ensemble.onnx": [
+						"models/rife/rife_v4.2_ensemble.onnx",
+						"219ce0ec9c18251f14685c19b8dd37650fb8acad50f4574641eb6752e8a105b2"
+					],
+					"models/rife/rife_v4.3_ensemble.onnx": [
+						"models/rife/rife_v4.3_ensemble.onnx",
+						"cd673e35e84347921ac75fbd6f46b640a6b1ea8b46885534f1fafeb622285eb3"
+					],
+					"models/rife/rife_v4.4_ensemble.onnx": [
+						"models/rife/rife_v4.4_ensemble.onnx",
+						"f509d824dba6a6c2e006ca1dceb18a5bf1fd7b45a19975cec473c83ee3f9dcbd"
+					],
+					"models/rife/rife_v4.5_ensemble.onnx": [
+						"models/rife/rife_v4.5_ensemble.onnx",
+						"42f6616c69afcc5fea5e25a8a603d2d76cde09ab9d2d6a79e75ca74ce4ec1aa2"
+					],
+					"models/rife/rife_v4.6_ensemble.onnx": [
+						"models/rife/rife_v4.6_ensemble.onnx",
+						"5f42bc6eecf0e57513e78ae3554093809663cacb3f0e3a0df37650dc157d6db1"
+					],
+					"models/rife_v2/rife_v4.0.onnx": [
+						"models/rife_v2/rife_v4.0.onnx",
+						"4e59de6d0f35f0ee175170aba7897fbbda00199c198800dfa7649f17f905b252"
+					],
+					"models/rife_v2/rife_v4.0_ensemble.onnx": [
+						"models/rife_v2/rife_v4.0_ensemble.onnx",
+						"239b2fd791eced7f258f70c410af20a1f16c5a253b1f42cbf8a7e88af6cfc443"
+					],
+					"models/rife_v2/rife_v4.2.onnx": [
+						"models/rife_v2/rife_v4.2.onnx",
+						"1d58f636b71f243f5c432f89ee7391ad774b6ae17c655e1512061f7bc53e8d59"
+					],
+					"models/rife_v2/rife_v4.2_ensemble.onnx": [
+						"models/rife_v2/rife_v4.2_ensemble.onnx",
+						"6777661c8a4f31d127ff8c7ea41f45ce250294c625fbadc9b3b0aafd9acb5b7c"
+					],
+					"models/rife_v2/rife_v4.3.onnx": [
+						"models/rife_v2/rife_v4.3.onnx",
+						"30ea72242c37a8435a2e39fb9abe89261c934ec1bfa66a0e8741bfc7cda9f1fe"
+					],
+					"models/rife_v2/rife_v4.3_ensemble.onnx": [
+						"models/rife_v2/rife_v4.3_ensemble.onnx",
+						"96e3629990892ceae8490ebdb878975e5a64f571d8115f03ae1eaaa74343331c"
+					],
+					"models/rife_v2/rife_v4.4.onnx": [
+						"models/rife_v2/rife_v4.4.onnx",
+						"d7bf9fba8d6eb374b51f3f7dea5b9f95d9d834ba9bc7a097128eca2c6223623a"
+					],
+					"models/rife_v2/rife_v4.4_ensemble.onnx": [
+						"models/rife_v2/rife_v4.4_ensemble.onnx",
+						"3b8bd5ae6f3fda5e79dda594874615aeb63a1ab247f15ee319a185f7913c7fd7"
+					],
+					"models/rife_v2/rife_v4.5.onnx": [
+						"models/rife_v2/rife_v4.5.onnx",
+						"fbad3d9b072c2470cb8d81d2ee3779d83a470be9bda6ec4dc32f9b1ab24f73dc"
+					],
+					"models/rife_v2/rife_v4.5_ensemble.onnx": [
+						"models/rife_v2/rife_v4.5_ensemble.onnx",
+						"8af4f5cc972206b610e1df04c94c432b7f1d8568bfbcafb0649479efbdf17ffa"
+					],
+					"models/rife_v2/rife_v4.6.onnx": [
+						"models/rife_v2/rife_v4.6.onnx",
+						"6294aab9a9704f085caa65ab5bc897ac3a3ed0d054200e40b66bd7e43523e969"
+					],
+					"models/rife_v2/rife_v4.6_ensemble.onnx": [
+						"models/rife_v2/rife_v4.6_ensemble.onnx",
+						"2c3fc46762a1a3a587361e0222ccf0f626a0abb370427f2d208cd07951256e3a"
+					],
+					"models/waifu2x/swin_unet_art/noise0.onnx": [
+						"models/waifu2x/swin_unet_art/noise0.onnx",
+						"c034d59f41c0b488e3d14bf7b9626c057dd66502d32df8ba3b70012c21d17003"
+					],
+					"models/waifu2x/swin_unet_art/noise0_scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/noise0_scale2x.onnx",
+						"44f3b7265f6f564fcd335de876cbeb8ced68ec312cd71a5ebcd6537552decb06"
+					],
+					"models/waifu2x/swin_unet_art/noise0_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/noise0_scale4x.onnx",
+						"46e0a38aadaf1de8deba3e13a42aa44407aecea859562aa5ba992beba5a5d162"
+					],
+					"models/waifu2x/swin_unet_art/noise1.onnx": [
+						"models/waifu2x/swin_unet_art/noise1.onnx",
+						"32b668bb2d6612326c78d9def042b8ff78bc4b16ed723eaff6095861e516cde2"
+					],
+					"models/waifu2x/swin_unet_art/noise1_scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/noise1_scale2x.onnx",
+						"9fe9bfb17bb3b145d34938118d351626bd95c8bba8a5ede3974c1e95e7f11108"
+					],
+					"models/waifu2x/swin_unet_art/noise1_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/noise1_scale4x.onnx",
+						"3e230c95915ab819ffcf7ef52e2b4ea60772658ef5ece8752e58ac6c58070aa2"
+					],
+					"models/waifu2x/swin_unet_art/noise2.onnx": [
+						"models/waifu2x/swin_unet_art/noise2.onnx",
+						"5c01be4da52c5882212c6914eabc4637ea14a2142245b0213a98f62762787f4c"
+					],
+					"models/waifu2x/swin_unet_art/noise2_scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/noise2_scale2x.onnx",
+						"5315f9e6e2d5922884f3c9f514917b2a9f2dd753dddb19f90d36a4795c658cf9"
+					],
+					"models/waifu2x/swin_unet_art/noise2_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/noise2_scale4x.onnx",
+						"ca2924da002248ab9a5c8f59ebc048e3659282f18b9136b70523a77a6a4910aa"
+					],
+					"models/waifu2x/swin_unet_art/noise3.onnx": [
+						"models/waifu2x/swin_unet_art/noise3.onnx",
+						"e5e495fe5e6c63c08c7adfa32082217c103dc0b3e65c8cafa9edfa9d2395494c"
+					],
+					"models/waifu2x/swin_unet_art/noise3_scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/noise3_scale2x.onnx",
+						"c26e2adc5a7233a22ef1bfbf377876d571f7e6f6bc14632803bf952442bb9686"
+					],
+					"models/waifu2x/swin_unet_art/noise3_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/noise3_scale4x.onnx",
+						"4e7d0d32dee45d8bcb6b896fe6ddcfd782d052f686ca6c1bf0c6890808e7247f"
+					],
+					"models/waifu2x/swin_unet_art/scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/scale2x.onnx",
+						"f63e0fdac303281793e1a505397c5e8d988161fec86197a502d121db43427dc8"
+					],
+					"models/waifu2x/swin_unet_art/scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/scale4x.onnx",
+						"c2943ae8752a0b8700c49d049fd20221f9262307b634f20ca779b5739e25e506"
+					],
+					"models/waifu2x/swin_unet_art_scan/noise0_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/noise0_scale4x.onnx",
+						"21b36d95aff562a78b8668c69a4d54f1c09e12be3b13d9aa9537eb142c97f997"
+					],
+					"models/waifu2x/swin_unet_art_scan/noise1_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/noise1_scale4x.onnx",
+						"0abe641d2343b6eaf443aeb3dc2d0bd651734b0c8c466e7c7dc18a59000fed25"
+					],
+					"models/waifu2x/swin_unet_art_scan/noise2_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/noise2_scale4x.onnx",
+						"c66af68f5b072050ffecedb354e60f67ba8f62d70344a3c6da7ad270895116df"
+					],
+					"models/waifu2x/swin_unet_art_scan/noise3_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/noise3_scale4x.onnx",
+						"cfd81f75e107e9af65776448a54e687269cc25ebfef7f7784d62dcc1e7d1546b"
+					],
+					"models/waifu2x/swin_unet_art_scan/scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/scale4x.onnx",
+						"362c9d98a5fb66ac108bdafc57081555d913aba427ddba04dbac04ded8f54709"
+					],
+					"models/waifu2x/swin_unet_photo/noise0_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/noise0_scale4x.onnx",
+						"758128fb8e91d0cf04e26c4ad793122319349df2555387eb2b525900f90060e0"
+					],
+					"models/waifu2x/swin_unet_photo/noise1_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/noise1_scale4x.onnx",
+						"7ce6a7b7fec43fd256d4a147afd0484ee389bb91aa2be93177a95450b554682f"
+					],
+					"models/waifu2x/swin_unet_photo/noise2_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/noise2_scale4x.onnx",
+						"5b07659f7816b38fd14512282befffbf246ff35bdd3a55a5df734d21f5fa7f5c"
+					],
+					"models/waifu2x/swin_unet_photo/noise3_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/noise3_scale4x.onnx",
+						"3d111b4087d6398a92e68dfc6cb4d3ab2074860467d1f7fd9eaabda8915d28b4"
+					],
+					"models/waifu2x/swin_unet_photo/scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/scale4x.onnx",
+						"3ec0ea611ed9addaac1247dbf5dcd4e24a4c7417e0df17b3653a6ae6386889de"
+					],
+					"models/waifu2x/swin_unet_photo_v2/noise0_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/noise0_scale4x.onnx",
+						"1c5fbea71dbf49aeefb7cd7479edb46dbade107d812566948c8040011772ab95"
+					],
+					"models/waifu2x/swin_unet_photo_v2/noise1_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/noise1_scale4x.onnx",
+						"eaa6ad43208ee0202a4b1c406b8d0e877fb3d049153ce6c5c41d6f836edc8c88"
+					],
+					"models/waifu2x/swin_unet_photo_v2/noise2_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/noise2_scale4x.onnx",
+						"d95708388c29dc28a0c18d76d961ff1d4e9bc82d8ff9dddf547b4e5901c61621"
+					],
+					"models/waifu2x/swin_unet_photo_v2/noise3_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/noise3_scale4x.onnx",
+						"66cbc1f11d4826e3a94a3806101e8a7569078ce049bae3deedc71410141cd1df"
+					],
+					"models/waifu2x/swin_unet_photo_v2/scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/scale4x.onnx",
+						"69f33abc20647d9b42836b20c7a72775f3c276e5fa12047b8a0a41eb92062ade"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13.1",
+			"published": "2023-01-29T15:00:56Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.1/ext-models.v13.1.7z",
+				"files": {
+					"models/anime-segmentation/isnet_is.onnx": [
+						"models/anime-segmentation/isnet_is.onnx",
+						"f7ced1e6b9dff30caaabe3e855b92e010215474dbc71efd65e16b3925346fa3f"
+					],
+					"models/oidn/rt_ldr.onnx": [
+						"models/oidn/rt_ldr.onnx",
+						"ada1cd7b562990f4516be5cb4f88db056b1ac932f400bacede15527b81ac8f4a"
+					],
+					"models/ppocr/ml_PP-OCRv3_det.onnx": [
+						"models/ppocr/ml_PP-OCRv3_det.onnx",
+						"a38ba0ecb751c8e86fb72765a4f24df53a683b29f24e65a9baad7c0d8bb456e2"
+					],
+					"models/rife/rife_v4.0_ensemble.onnx": [
+						"models/rife/rife_v4.0_ensemble.onnx",
+						"cd2b7b4863f819aa932d4f91bbf1403b7bf02f60b573769afe47fd243f3b0beb"
+					],
+					"models/rife/rife_v4.2_ensemble.onnx": [
+						"models/rife/rife_v4.2_ensemble.onnx",
+						"219ce0ec9c18251f14685c19b8dd37650fb8acad50f4574641eb6752e8a105b2"
+					],
+					"models/rife/rife_v4.3_ensemble.onnx": [
+						"models/rife/rife_v4.3_ensemble.onnx",
+						"cd673e35e84347921ac75fbd6f46b640a6b1ea8b46885534f1fafeb622285eb3"
+					],
+					"models/rife/rife_v4.4_ensemble.onnx": [
+						"models/rife/rife_v4.4_ensemble.onnx",
+						"f509d824dba6a6c2e006ca1dceb18a5bf1fd7b45a19975cec473c83ee3f9dcbd"
+					],
+					"models/rife/rife_v4.5_ensemble.onnx": [
+						"models/rife/rife_v4.5_ensemble.onnx",
+						"42f6616c69afcc5fea5e25a8a603d2d76cde09ab9d2d6a79e75ca74ce4ec1aa2"
+					],
+					"models/rife/rife_v4.6_ensemble.onnx": [
+						"models/rife/rife_v4.6_ensemble.onnx",
+						"5f42bc6eecf0e57513e78ae3554093809663cacb3f0e3a0df37650dc157d6db1"
+					],
+					"models/rife_v2/rife_v4.0.onnx": [
+						"models/rife_v2/rife_v4.0.onnx",
+						"4e59de6d0f35f0ee175170aba7897fbbda00199c198800dfa7649f17f905b252"
+					],
+					"models/rife_v2/rife_v4.0_ensemble.onnx": [
+						"models/rife_v2/rife_v4.0_ensemble.onnx",
+						"239b2fd791eced7f258f70c410af20a1f16c5a253b1f42cbf8a7e88af6cfc443"
+					],
+					"models/rife_v2/rife_v4.2.onnx": [
+						"models/rife_v2/rife_v4.2.onnx",
+						"1d58f636b71f243f5c432f89ee7391ad774b6ae17c655e1512061f7bc53e8d59"
+					],
+					"models/rife_v2/rife_v4.2_ensemble.onnx": [
+						"models/rife_v2/rife_v4.2_ensemble.onnx",
+						"6777661c8a4f31d127ff8c7ea41f45ce250294c625fbadc9b3b0aafd9acb5b7c"
+					],
+					"models/rife_v2/rife_v4.3.onnx": [
+						"models/rife_v2/rife_v4.3.onnx",
+						"30ea72242c37a8435a2e39fb9abe89261c934ec1bfa66a0e8741bfc7cda9f1fe"
+					],
+					"models/rife_v2/rife_v4.3_ensemble.onnx": [
+						"models/rife_v2/rife_v4.3_ensemble.onnx",
+						"96e3629990892ceae8490ebdb878975e5a64f571d8115f03ae1eaaa74343331c"
+					],
+					"models/rife_v2/rife_v4.4.onnx": [
+						"models/rife_v2/rife_v4.4.onnx",
+						"d7bf9fba8d6eb374b51f3f7dea5b9f95d9d834ba9bc7a097128eca2c6223623a"
+					],
+					"models/rife_v2/rife_v4.4_ensemble.onnx": [
+						"models/rife_v2/rife_v4.4_ensemble.onnx",
+						"3b8bd5ae6f3fda5e79dda594874615aeb63a1ab247f15ee319a185f7913c7fd7"
+					],
+					"models/rife_v2/rife_v4.5.onnx": [
+						"models/rife_v2/rife_v4.5.onnx",
+						"fbad3d9b072c2470cb8d81d2ee3779d83a470be9bda6ec4dc32f9b1ab24f73dc"
+					],
+					"models/rife_v2/rife_v4.5_ensemble.onnx": [
+						"models/rife_v2/rife_v4.5_ensemble.onnx",
+						"8af4f5cc972206b610e1df04c94c432b7f1d8568bfbcafb0649479efbdf17ffa"
+					],
+					"models/rife_v2/rife_v4.6.onnx": [
+						"models/rife_v2/rife_v4.6.onnx",
+						"6294aab9a9704f085caa65ab5bc897ac3a3ed0d054200e40b66bd7e43523e969"
+					],
+					"models/rife_v2/rife_v4.6_ensemble.onnx": [
+						"models/rife_v2/rife_v4.6_ensemble.onnx",
+						"2c3fc46762a1a3a587361e0222ccf0f626a0abb370427f2d208cd07951256e3a"
+					],
+					"models/waifu2x/swin_unet_art/noise0.onnx": [
+						"models/waifu2x/swin_unet_art/noise0.onnx",
+						"c034d59f41c0b488e3d14bf7b9626c057dd66502d32df8ba3b70012c21d17003"
+					],
+					"models/waifu2x/swin_unet_art/noise0_scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/noise0_scale2x.onnx",
+						"44f3b7265f6f564fcd335de876cbeb8ced68ec312cd71a5ebcd6537552decb06"
+					],
+					"models/waifu2x/swin_unet_art/noise0_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/noise0_scale4x.onnx",
+						"46e0a38aadaf1de8deba3e13a42aa44407aecea859562aa5ba992beba5a5d162"
+					],
+					"models/waifu2x/swin_unet_art/noise1.onnx": [
+						"models/waifu2x/swin_unet_art/noise1.onnx",
+						"32b668bb2d6612326c78d9def042b8ff78bc4b16ed723eaff6095861e516cde2"
+					],
+					"models/waifu2x/swin_unet_art/noise1_scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/noise1_scale2x.onnx",
+						"9fe9bfb17bb3b145d34938118d351626bd95c8bba8a5ede3974c1e95e7f11108"
+					],
+					"models/waifu2x/swin_unet_art/noise1_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/noise1_scale4x.onnx",
+						"3e230c95915ab819ffcf7ef52e2b4ea60772658ef5ece8752e58ac6c58070aa2"
+					],
+					"models/waifu2x/swin_unet_art/noise2.onnx": [
+						"models/waifu2x/swin_unet_art/noise2.onnx",
+						"5c01be4da52c5882212c6914eabc4637ea14a2142245b0213a98f62762787f4c"
+					],
+					"models/waifu2x/swin_unet_art/noise2_scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/noise2_scale2x.onnx",
+						"5315f9e6e2d5922884f3c9f514917b2a9f2dd753dddb19f90d36a4795c658cf9"
+					],
+					"models/waifu2x/swin_unet_art/noise2_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/noise2_scale4x.onnx",
+						"ca2924da002248ab9a5c8f59ebc048e3659282f18b9136b70523a77a6a4910aa"
+					],
+					"models/waifu2x/swin_unet_art/noise3.onnx": [
+						"models/waifu2x/swin_unet_art/noise3.onnx",
+						"e5e495fe5e6c63c08c7adfa32082217c103dc0b3e65c8cafa9edfa9d2395494c"
+					],
+					"models/waifu2x/swin_unet_art/noise3_scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/noise3_scale2x.onnx",
+						"c26e2adc5a7233a22ef1bfbf377876d571f7e6f6bc14632803bf952442bb9686"
+					],
+					"models/waifu2x/swin_unet_art/noise3_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/noise3_scale4x.onnx",
+						"4e7d0d32dee45d8bcb6b896fe6ddcfd782d052f686ca6c1bf0c6890808e7247f"
+					],
+					"models/waifu2x/swin_unet_art/scale2x.onnx": [
+						"models/waifu2x/swin_unet_art/scale2x.onnx",
+						"f63e0fdac303281793e1a505397c5e8d988161fec86197a502d121db43427dc8"
+					],
+					"models/waifu2x/swin_unet_art/scale4x.onnx": [
+						"models/waifu2x/swin_unet_art/scale4x.onnx",
+						"c2943ae8752a0b8700c49d049fd20221f9262307b634f20ca779b5739e25e506"
+					],
+					"models/waifu2x/swin_unet_art_scan/noise0_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/noise0_scale4x.onnx",
+						"21b36d95aff562a78b8668c69a4d54f1c09e12be3b13d9aa9537eb142c97f997"
+					],
+					"models/waifu2x/swin_unet_art_scan/noise1_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/noise1_scale4x.onnx",
+						"0abe641d2343b6eaf443aeb3dc2d0bd651734b0c8c466e7c7dc18a59000fed25"
+					],
+					"models/waifu2x/swin_unet_art_scan/noise2_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/noise2_scale4x.onnx",
+						"c66af68f5b072050ffecedb354e60f67ba8f62d70344a3c6da7ad270895116df"
+					],
+					"models/waifu2x/swin_unet_art_scan/noise3_scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/noise3_scale4x.onnx",
+						"cfd81f75e107e9af65776448a54e687269cc25ebfef7f7784d62dcc1e7d1546b"
+					],
+					"models/waifu2x/swin_unet_art_scan/scale4x.onnx": [
+						"models/waifu2x/swin_unet_art_scan/scale4x.onnx",
+						"362c9d98a5fb66ac108bdafc57081555d913aba427ddba04dbac04ded8f54709"
+					],
+					"models/waifu2x/swin_unet_photo/noise0_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/noise0_scale4x.onnx",
+						"758128fb8e91d0cf04e26c4ad793122319349df2555387eb2b525900f90060e0"
+					],
+					"models/waifu2x/swin_unet_photo/noise1_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/noise1_scale4x.onnx",
+						"7ce6a7b7fec43fd256d4a147afd0484ee389bb91aa2be93177a95450b554682f"
+					],
+					"models/waifu2x/swin_unet_photo/noise2_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/noise2_scale4x.onnx",
+						"5b07659f7816b38fd14512282befffbf246ff35bdd3a55a5df734d21f5fa7f5c"
+					],
+					"models/waifu2x/swin_unet_photo/noise3_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/noise3_scale4x.onnx",
+						"3d111b4087d6398a92e68dfc6cb4d3ab2074860467d1f7fd9eaabda8915d28b4"
+					],
+					"models/waifu2x/swin_unet_photo/scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo/scale4x.onnx",
+						"3ec0ea611ed9addaac1247dbf5dcd4e24a4c7417e0df17b3653a6ae6386889de"
+					],
+					"models/waifu2x/swin_unet_photo_v2/noise0_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/noise0_scale4x.onnx",
+						"1c5fbea71dbf49aeefb7cd7479edb46dbade107d812566948c8040011772ab95"
+					],
+					"models/waifu2x/swin_unet_photo_v2/noise1_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/noise1_scale4x.onnx",
+						"eaa6ad43208ee0202a4b1c406b8d0e877fb3d049153ce6c5c41d6f836edc8c88"
+					],
+					"models/waifu2x/swin_unet_photo_v2/noise2_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/noise2_scale4x.onnx",
+						"d95708388c29dc28a0c18d76d961ff1d4e9bc82d8ff9dddf547b4e5901c61621"
+					],
+					"models/waifu2x/swin_unet_photo_v2/noise3_scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/noise3_scale4x.onnx",
+						"66cbc1f11d4826e3a94a3806101e8a7569078ce049bae3deedc71410141cd1df"
+					],
+					"models/waifu2x/swin_unet_photo_v2/scale4x.onnx": [
+						"models/waifu2x/swin_unet_photo_v2/scale4x.onnx",
+						"69f33abc20647d9b42836b20c7a72775f3c276e5fa12047b8a0a41eb92062ade"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13",
+			"published": "2023-01-14T10:49:47Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13/ext-models.v13.7z",
+				"files": {
+					"models/anime-segmentation/isnet_is.onnx": [
+						"models/anime-segmentation/isnet_is.onnx",
+						"f7ced1e6b9dff30caaabe3e855b92e010215474dbc71efd65e16b3925346fa3f"
+					],
+					"models/oidn/rt_ldr.onnx": [
+						"models/oidn/rt_ldr.onnx",
+						"ada1cd7b562990f4516be5cb4f88db056b1ac932f400bacede15527b81ac8f4a"
+					],
+					"models/ppocr/ml_PP-OCRv3_det.onnx": [
+						"models/ppocr/ml_PP-OCRv3_det.onnx",
+						"a38ba0ecb751c8e86fb72765a4f24df53a683b29f24e65a9baad7c0d8bb456e2"
+					]
+				}
+			}
+		}
+	]
+}

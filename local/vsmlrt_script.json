@@ -1,0 +1,201 @@
+{
+	"name": "vsmlrt_script",
+	"type": "PyScript",
+	"category": "Other",
+	"description": "To simplify usage, we also provide a Python wrapper vsmlrt.py for all bundled models and a unified interface to select different backends.",
+	"website": "https://github.com/AmusementClub/vs-mlrt/wiki",
+	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"identifier": "io.github.amusementclub.vsmlrt_script",
+	"modulename": "vsmlrt_script",
+	"ignore": [
+		"model-20211209",
+		"v3",
+		"v2",
+		"v1",
+		"v0"
+	],
+	"releases": [
+		{
+			"version": "v13.2",
+			"published": "2023-05-28T15:01:17Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.2/scripts.v13.2.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"9813a2976577b9c3782c8a8d0d52e360f1000fac9b8d19dd346fd7d150612f47"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13.1",
+			"published": "2023-01-29T15:00:56Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.1/scripts.v13.1.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"d90ab1ae4a2d3f87c9858baf9622e37402e08d9ecd0e7bcea0f310e1a6392901"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13",
+			"published": "2023-01-14T10:49:47Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13/scripts.v13.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"872c60be6a8984cd801c975d87b30a009d653a24796acba6c5c539d7a40e5195"
+					]
+				}
+			}
+		},
+		{
+			"version": "v12",
+			"published": "2022-11-01T10:57:20Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v12/scripts.v12.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"8c90edde5bc37e552d7b4db5127110d5ec52c10d7e2552f92a2b220d5c411623"
+					]
+				}
+			}
+		},
+		{
+			"version": "v11",
+			"published": "2022-10-26T00:37:56Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v11/scripts.v11.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"4b6f3d285bbc905d987fb1c09ab6be03bef74e503f155d336eeed93fa7c8f720"
+					]
+				}
+			}
+		},
+		{
+			"version": "v10",
+			"published": "2022-09-15T11:02:08Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v10/scripts.v10.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"e953a0f82b006fc71f58443f970db0fa9585f234fc63049d88eb137de171de67"
+					]
+				}
+			}
+		},
+		{
+			"version": "v9.2",
+			"published": "2022-08-07T07:48:21Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v9.2/scripts.v9.2.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"06f5901f3c3b728f22d253d259bfb54bf994aede7a3decdc647d8a3eb7f843de"
+					]
+				}
+			}
+		},
+		{
+			"version": "v9.1",
+			"published": "2022-07-28T07:25:18Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v9.1/scripts.v9.1.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"06f5901f3c3b728f22d253d259bfb54bf994aede7a3decdc647d8a3eb7f843de"
+					]
+				}
+			}
+		},
+		{
+			"version": "v9",
+			"published": "2022-03-25T10:46:13Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v9/scripts.v9.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"5f910c840ad64188d2515027b0a3b238583584b082dfdb69814ff5db4d431ef9"
+					]
+				}
+			}
+		},
+		{
+			"version": "v8",
+			"published": "2022-03-12T06:43:12Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v8/scripts.v8.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"4f01bd3c1e6d0245f12dd1ddbec41085b939dee36d7fb3ede06b67c42a71e949"
+					]
+				}
+			}
+		},
+		{
+			"version": "v7",
+			"published": "2022-01-27T08:22:07Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v7/scripts.v7.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"57ecca69473a34ec1125dc3d8ee7b294c801cbef05e12bc8223231523e9b47e3"
+					]
+				}
+			}
+		},
+		{
+			"version": "v6",
+			"published": "2022-01-20T14:31:38Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v6/scripts.v6.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"4f2cb366b1d6d6b0f9b0daba9ba1936994b015e4618bb71418a9deb611cc8599"
+					]
+				}
+			}
+		},
+		{
+			"version": "v5",
+			"published": "2021-12-30T14:14:21Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v5/scripts.v5.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"5c1c71536beac0dc36295f8628795b2e1156a90dac00ebeb412c1e41cdee864a"
+					]
+				}
+			}
+		},
+		{
+			"version": "v4",
+			"published": "2021-12-17T12:26:54Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v4/scripts.v4.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"3a583e5c8465effda806b00f7d1a65f6ae2a307306caebd3909c9a1022507995"
+					]
+				}
+			}
+		}
+	]
+}

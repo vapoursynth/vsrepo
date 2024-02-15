@@ -1,0 +1,406 @@
+{
+	"name": "vsmlrt-vsort",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "ONNX Runtime ML Filter. Optimized for CPU & CUDA.",
+	"website": "https://github.com/AmusementClub/vs-mlrt/wiki",
+	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"identifier": "io.github.amusementclub.vs_onnxruntime",
+	"namespace": "ort",
+	"device": [
+		"cpu",
+		"cuda"
+	],
+	"dependencies": [
+		"io.github.amusementclub.vsmlrt_script",
+		"io.github.amusementclub.vsmlrt_models",
+		"io.github.amusementclub.vsmlrt_ext_models"
+	],
+	"ignore": [
+		"model-20211209",
+		"v2",
+		"v1",
+		"v0"
+	],
+	"releases": [
+		{
+			"version": "v13.2",
+			"published": "2023-05-28T15:01:17Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.2/VSORT-Windows-x64.v13.2.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"76c8315a2b35d9cf901bc5262ace341be8b3785c2e2237b55070cb7dcfc2e605"
+					],
+					"DirectML.dll": [
+						"vsort/DirectML.dll",
+						"cc44fc08f1edb3cafca24de5361af11ce7ebd327bda2caa7936c632591f93393"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"d8fc13b92f1020d22fbff604a19973a9be0028eeca409b89ead0e0979c5bdec3"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"d8321575b7960231526217520fa018195a3713423a6d8cdbcea241bdcf968263"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"43ea59bb4a5fe602d58bb73a1ded14571611490f7430c1d317729927f98a4b28"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13.1",
+			"published": "2023-01-29T15:00:56Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.1/VSORT-Windows-x64.v13.1.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"6b7835216c0ab73fde8e0a9ee524629e9b166f4db0276164fd0b30a9db380453"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"54fa6668ef9b1c0b32cba45cca7b78e19ea80625b990558c945a02dea44c147c"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"b815d9e95bb1be4d07aa7d4cebb47b6b3052b09bcb387a7495e6e0af3c48e564"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"63dfa4dfa8ac2f78910d1f0b32183e31bb38dff2ea5d465571da17281f7457f7"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13",
+			"published": "2023-01-14T10:49:47Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13/VSORT-Windows-x64.v13.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"18789e0f783abc6c842641548819df2bd9a57ee115850d33a40e95dd918bb7e9"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"b648c61c5733c858e04bf8cec66b218e93b2cd6451a989678bba8e51d874bfc4"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"11bbc64cc18651867d2461d4b1ad7fa819a1896f1ecbb909e787f18fa74c7477"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"902fecbd20156667e77b8a9336cac0009e77cdcf71ea13900f3eccc3705556c1"
+					]
+				}
+			}
+		},
+		{
+			"version": "v12",
+			"published": "2022-11-01T10:57:20Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v12/VSORT-Windows-x64.v12.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"40931382193386606de67df88b9e50513ae3b44ddc1843cbbb45965e74749fa7"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"b648c61c5733c858e04bf8cec66b218e93b2cd6451a989678bba8e51d874bfc4"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"11bbc64cc18651867d2461d4b1ad7fa819a1896f1ecbb909e787f18fa74c7477"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"902fecbd20156667e77b8a9336cac0009e77cdcf71ea13900f3eccc3705556c1"
+					]
+				}
+			}
+		},
+		{
+			"version": "v11",
+			"published": "2022-10-26T00:37:56Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v11/VSORT-Windows-x64.v11.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"323b1ac5899f82820206e5226824c2843f2ee274cef46994fd7de74abadd34d4"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"4d29619c761c343b8950ce710f5bd066887efb79093094d175e23a84ee5c5949"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"87dae8263679abfabdea0d818f374421c94a9937e74b5fe8de52b0d4be37a624"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"a2b2e5c89a6c3a63ac59cb59a1fef0a6594b5edf8bf6a98dd397254adc313973"
+					]
+				}
+			}
+		},
+		{
+			"version": "v10",
+			"published": "2022-09-15T11:02:08Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v10/VSORT-Windows-x64.v10.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"f0e49a965d0413fa647225422a0c7e7434c464675cf058a73949a0bc6544e116"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"4d29619c761c343b8950ce710f5bd066887efb79093094d175e23a84ee5c5949"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"87dae8263679abfabdea0d818f374421c94a9937e74b5fe8de52b0d4be37a624"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"a2b2e5c89a6c3a63ac59cb59a1fef0a6594b5edf8bf6a98dd397254adc313973"
+					]
+				}
+			}
+		},
+		{
+			"version": "v9.2",
+			"published": "2022-08-07T07:48:21Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v9.2/VSORT-Windows-x64.v9.2.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"84d80b2b8285f93131bd73e19e2c5cb42f87a484eeb7b2c5c82da6d806de2ddb"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"4d29619c761c343b8950ce710f5bd066887efb79093094d175e23a84ee5c5949"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"87dae8263679abfabdea0d818f374421c94a9937e74b5fe8de52b0d4be37a624"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"a2b2e5c89a6c3a63ac59cb59a1fef0a6594b5edf8bf6a98dd397254adc313973"
+					]
+				}
+			}
+		},
+		{
+			"version": "v9.1",
+			"published": "2022-07-28T07:25:18Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v9.1/VSORT-Windows-x64.v9.1.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"2d5bde7a13f2b6427f2e7b4b925036e9c26e28001e7d0f3de4d0154deb91a1dd"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"4d29619c761c343b8950ce710f5bd066887efb79093094d175e23a84ee5c5949"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"87dae8263679abfabdea0d818f374421c94a9937e74b5fe8de52b0d4be37a624"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"a2b2e5c89a6c3a63ac59cb59a1fef0a6594b5edf8bf6a98dd397254adc313973"
+					]
+				}
+			}
+		},
+		{
+			"version": "v9",
+			"published": "2022-03-25T10:46:13Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v9/VSORT-Windows-x64.v9.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"78e280a47e6e36a17f81ad8d9564f0e35a211974809b745a27c50d54971cdca7"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"4d29619c761c343b8950ce710f5bd066887efb79093094d175e23a84ee5c5949"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"87dae8263679abfabdea0d818f374421c94a9937e74b5fe8de52b0d4be37a624"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"a2b2e5c89a6c3a63ac59cb59a1fef0a6594b5edf8bf6a98dd397254adc313973"
+					]
+				}
+			}
+		},
+		{
+			"version": "v8",
+			"published": "2022-03-12T06:43:12Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v8/VSORT-Windows-x64.v8.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"1aa1be3ed1fc8d0147a05620dfe27cbc0567ff54e7b7583edf458b811086deac"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"e71fa3dcb1f411e67dc7d0c5a6385ca15f268773d3d6bd22a11c05a548d61310"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"c3c732f5ecc1061637f3677abed88d071d2cc621bb03ea68367046588744611e"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"e1a3cf65418e4fc7564857f4ec26bf1a9be47a7bbd82e6255329ccd19a6565c2"
+					]
+				}
+			}
+		},
+		{
+			"version": "v7",
+			"published": "2022-01-27T08:22:07Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v7/VSORT-Windows-x64.v7.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"0ce95e56100e2cd48e5084140db7ed4eb585283747c10e0c225514b4ffbb5db1"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"7912217bbd93f735103088084266bd657804628cab16cc547efd3a919339a921"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"c6d06739ea9f7cda6f7530293d91ec83aeb3da2509d0c7e9785ea23ae71ccd9e"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"f1d0f0ad9cacc2a3aa59d96e6d4f1e19f358b28f3631579e42fb97d889405d88"
+					]
+				}
+			}
+		},
+		{
+			"version": "v6",
+			"published": "2022-01-20T14:31:38Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v6/VSORT-Windows-x64.v6.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"0c861e48d16b45fa6d8411dc3b09f883e4c7002f88bb449c1c3c947ac9f92544"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"7912217bbd93f735103088084266bd657804628cab16cc547efd3a919339a921"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"c6d06739ea9f7cda6f7530293d91ec83aeb3da2509d0c7e9785ea23ae71ccd9e"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"f1d0f0ad9cacc2a3aa59d96e6d4f1e19f358b28f3631579e42fb97d889405d88"
+					]
+				}
+			}
+		},
+		{
+			"version": "v5",
+			"published": "2021-12-30T14:14:21Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v5/VSORT-Windows-x64.v5.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"ac8fcddc8ea2f44fddc27bbd401aea702703f3d18cac6e7575d4f43acff52f3a"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"7912217bbd93f735103088084266bd657804628cab16cc547efd3a919339a921"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"c6d06739ea9f7cda6f7530293d91ec83aeb3da2509d0c7e9785ea23ae71ccd9e"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"f1d0f0ad9cacc2a3aa59d96e6d4f1e19f358b28f3631579e42fb97d889405d88"
+					]
+				}
+			}
+		},
+		{
+			"version": "v4",
+			"published": "2021-12-17T12:26:54Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v4/VSORT-Windows-x64.v4.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"7ddf4258e249f7b721546c4a816cc9add0f1500c31af0d577e43083f202115ee"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"eda995b7730ba6200e71bc9e601915d7031cb029c0382b577e903fea08c73aea"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"9dab5fa0473894fc925b8ffa2e5c9917998a3fddca1ed7816afeb06120afff9c"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"fae49fa2054bbd65462aac19eed9c20fedd46ac79a7b13f3a68fb768f56d0152"
+					]
+				}
+			}
+		},
+		{
+			"version": "v3",
+			"published": "2021-12-16T08:14:46Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v3/VSORT-Windows-x64.v3.zip",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"2edd74f5bf193fcc6f8065b25091d98a8b4ce3bde6abcb0097002ef123bf1c2f"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"eda995b7730ba6200e71bc9e601915d7031cb029c0382b577e903fea08c73aea"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"9dab5fa0473894fc925b8ffa2e5c9917998a3fddca1ed7816afeb06120afff9c"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"fae49fa2054bbd65462aac19eed9c20fedd46ac79a7b13f3a68fb768f56d0152"
+					]
+				}
+			}
+		}
+	]
+}

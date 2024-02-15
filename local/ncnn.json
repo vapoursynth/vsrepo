@@ -1,0 +1,113 @@
+{
+	"name": "vsmlrt-vsncnn",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "NCNN-based ML GPU (Vulkan) Filter Runtime. Includes support for on-the-fly ONNX to ncnn native format conversion.",
+	"website": "https://github.com/AmusementClub/vs-mlrt/wiki",
+	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"identifier": "io.github.amusementclub.vs_ncnn",
+	"namespace": "ncnn",
+	"device": [
+		"vulkan"
+	],
+	"dependencies": [
+		"io.github.amusementclub.vsmlrt_script",
+		"io.github.amusementclub.vsmlrt_models",
+		"io.github.amusementclub.vsmlrt_ext_models"
+	],
+	"ignore": [
+		"model-20211209",
+		"v9.2",
+		"v9.1",
+		"v9",
+		"v8",
+		"v7",
+		"v6",
+		"v5",
+		"v4",
+		"v3",
+		"v2",
+		"v1",
+		"v0"
+	],
+	"releases": [
+		{
+			"version": "v13.2",
+			"published": "2023-05-28T15:01:17Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.2/VSNCNN-Windows-x64.v13.2.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"8a03546f2067128d541b44e3fac7b07de068fe92ac83d5a14adcb72a7b39614d"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13.1",
+			"published": "2023-01-29T15:00:56Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.1/VSNCNN-Windows-x64.v13.1.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"b05695a01fbb62a2df5c4a3e9804767d3c1150504b2a935da9205d8beaf3744e"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13",
+			"published": "2023-01-14T10:49:47Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13/VSNCNN-Windows-x64.v13.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"3cbbd21b734569a2623d6bd567f89994e1600a5409d121ddca79426c4c3a7499"
+					]
+				}
+			}
+		},
+		{
+			"version": "v12",
+			"published": "2022-11-01T10:57:20Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v12/VSNCNN-Windows-x64.v12.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"db906b6f240c4e79b8988ef19297aecc96c7913959f40b466e9429a76592a607"
+					]
+				}
+			}
+		},
+		{
+			"version": "v11",
+			"published": "2022-10-26T00:37:56Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v11/VSNCNN-Windows-x64.v11.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"66b7be994e4240c688e144a0fd5f5b86a37067a1ca21e873f90bf3a7f35c7dc0"
+					]
+				}
+			}
+		},
+		{
+			"version": "v10",
+			"published": "2022-09-15T11:02:08Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v10/VSNCNN-Windows-x64.v10.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"54f1076fc4bb56029363960f594ad47d2b496e0fdc60809af621825e33ea1eb3"
+					]
+				}
+			}
+		}
+	]
+}

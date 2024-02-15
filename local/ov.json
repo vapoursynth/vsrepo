@@ -1,0 +1,658 @@
+{
+	"name": "vsmlrt-vsov",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "OpenVINO ML Filter Runtime. Optimized for CPU.",
+	"website": "https://github.com/AmusementClub/vs-mlrt/wiki",
+	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"identifier": "io.github.amusementclub.vs_openvino",
+	"namespace": "ov",
+	"dependencies": [
+		"io.github.amusementclub.vsmlrt_script",
+		"io.github.amusementclub.vsmlrt_models",
+		"io.github.amusementclub.vsmlrt_ext_models"
+	],
+	"ignore": [
+		"model-20211209",
+		"v8",
+		"v7",
+		"v6",
+		"v5",
+		"v4",
+		"v3",
+		"v2",
+		"v1",
+		"v0"
+	],
+	"releases": [
+		{
+			"version": "v13.2",
+			"published": "2023-05-28T15:01:17Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.2/VSOV-Windows-x64.v13.2.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"0fd7d95667f46603c1d3b5cd43d5351a7c978912792dfb883d595ae998cbdf01"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"02ff26281180dc08ec2746406cd2af6383d39d1b7a6437b2d46dceb3f4f0964b"
+					],
+					"vsov/openvino.dll": [
+						"vsov/openvino.dll",
+						"c957a46529396d3b3b662f0ade5a56af7897ae9742c86be0d7af8a67351044e2"
+					],
+					"vsov/openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"269137072b1f77b152386a64adc3eb766baadf8f4af3f13ad9c267948a536f29"
+					],
+					"vsov/openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"e1470336ceb515d06420be611853503cba3c677f38757054956a31c7a16b4d09"
+					],
+					"vsov/openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"99359bcf1752f385e9fc3cdd248994bf2014ea8cc8d76c19d3d3c52fff7b4219"
+					],
+					"vsov/openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"6e0535c30c0927b28eb0c4e8603a678db288358f7268d42dfecd458364381ccc"
+					],
+					"vsov/openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"dc9e1291a6e9f31ff80890fd8f477c2a06545da9f0778319d26656777626d0fa"
+					],
+					"vsov/openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"c9178dcad68e98e75948d6a52afe2e077040f06c5170793cc150059f8815250f"
+					],
+					"vsov/openvino_ir_frontend.dll": [
+						"vsov/openvino_ir_frontend.dll",
+						"f364b5531a18298b7cad4596eff11270a8a7aec324365497a68d4236d824ed84"
+					],
+					"vsov/openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"064109a94c99a089edffa885725edc1a575c04d3570a6e0bb607f8df9e6bec9e"
+					],
+					"vsov/openvino_pytorch_frontend.dll": [
+						"vsov/openvino_pytorch_frontend.dll",
+						"ae8a91738f5ae50607f8c09287185884c72435b60c7a38f13630058ef7f31806"
+					],
+					"vsov/openvino_tensorflow_frontend.dll": [
+						"vsov/openvino_tensorflow_frontend.dll",
+						"0b7c0dd3929b031df6869c7ade77cafb4a458dd8b743329ab1a29f468776c5c9"
+					],
+					"vsov/openvino_tensorflow_lite_frontend.dll": [
+						"vsov/openvino_tensorflow_lite_frontend.dll",
+						"2f174b880cfc7e92589d3257271463f06288c8658344bdab436e7576ac9b3608"
+					],
+					"vsov/plugins.xml": [
+						"vsov/plugins.xml",
+						"2b893859f87e5b71b96b21a7e905d01bf95bb3d1670e52d2dab2af5b62957d60"
+					],
+					"vsov/tbb.dll": [
+						"vsov/tbb.dll",
+						"7d46d20175870c9694cdfc3a62e6b60d44aad5a29a54400a8628fa92e5bf04ec"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13.1",
+			"published": "2023-01-29T15:00:56Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13.1/VSOV-Windows-x64.v13.1.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"e81aecb06d064a0115d0045193dc58107969cb33248bf1f92ca32466793683ab"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"02ff26281180dc08ec2746406cd2af6383d39d1b7a6437b2d46dceb3f4f0964b"
+					],
+					"vsov/openvino.dll": [
+						"vsov/openvino.dll",
+						"c957a46529396d3b3b662f0ade5a56af7897ae9742c86be0d7af8a67351044e2"
+					],
+					"vsov/openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"269137072b1f77b152386a64adc3eb766baadf8f4af3f13ad9c267948a536f29"
+					],
+					"vsov/openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"e1470336ceb515d06420be611853503cba3c677f38757054956a31c7a16b4d09"
+					],
+					"vsov/openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"99359bcf1752f385e9fc3cdd248994bf2014ea8cc8d76c19d3d3c52fff7b4219"
+					],
+					"vsov/openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"6e0535c30c0927b28eb0c4e8603a678db288358f7268d42dfecd458364381ccc"
+					],
+					"vsov/openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"dc9e1291a6e9f31ff80890fd8f477c2a06545da9f0778319d26656777626d0fa"
+					],
+					"vsov/openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"c9178dcad68e98e75948d6a52afe2e077040f06c5170793cc150059f8815250f"
+					],
+					"vsov/openvino_ir_frontend.dll": [
+						"vsov/openvino_ir_frontend.dll",
+						"f364b5531a18298b7cad4596eff11270a8a7aec324365497a68d4236d824ed84"
+					],
+					"vsov/openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"064109a94c99a089edffa885725edc1a575c04d3570a6e0bb607f8df9e6bec9e"
+					],
+					"vsov/openvino_pytorch_frontend.dll": [
+						"vsov/openvino_pytorch_frontend.dll",
+						"ae8a91738f5ae50607f8c09287185884c72435b60c7a38f13630058ef7f31806"
+					],
+					"vsov/openvino_tensorflow_frontend.dll": [
+						"vsov/openvino_tensorflow_frontend.dll",
+						"0b7c0dd3929b031df6869c7ade77cafb4a458dd8b743329ab1a29f468776c5c9"
+					],
+					"vsov/openvino_tensorflow_lite_frontend.dll": [
+						"vsov/openvino_tensorflow_lite_frontend.dll",
+						"2f174b880cfc7e92589d3257271463f06288c8658344bdab436e7576ac9b3608"
+					],
+					"vsov/plugins.xml": [
+						"vsov/plugins.xml",
+						"2b893859f87e5b71b96b21a7e905d01bf95bb3d1670e52d2dab2af5b62957d60"
+					],
+					"vsov/tbb.dll": [
+						"vsov/tbb.dll",
+						"7d46d20175870c9694cdfc3a62e6b60d44aad5a29a54400a8628fa92e5bf04ec"
+					]
+				}
+			}
+		},
+		{
+			"version": "v13",
+			"published": "2023-01-14T10:49:47Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v13/VSOV-Windows-x64.v13.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"94039f3c3f1af2fab51f4d9101e8012ef3e3ac46742a3789e78e0bc442efcd80"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"02ff26281180dc08ec2746406cd2af6383d39d1b7a6437b2d46dceb3f4f0964b"
+					],
+					"vsov/openvino.dll": [
+						"vsov/openvino.dll",
+						"b32097fb84b0da074b2ebffb6bd38cc87fc101b033e31e014a648fe9cc8ee17e"
+					],
+					"vsov/openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"5fe17a63a8abbdd7c2f388cb2b76cfd77bca30383113c7280f3995f4b4199347"
+					],
+					"vsov/openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"00a6d238b8bdda94b7f172f778555305b46179b9070045b74c4c56d816af4995"
+					],
+					"vsov/openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"dbe57e51eb5543e3dedb0f05382be8e62a2d18548ad1ae04dbed7dd20e107329"
+					],
+					"vsov/openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"bd603cc540aecab065156ddd4b2e7451181edddcb5071fc6f4ea2aec19ed58bc"
+					],
+					"vsov/openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"05a62d564af3ed67cb17ab2259a20013acbb3f7f34f82230289573f2bc1dc209"
+					],
+					"vsov/openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"3b1bcc51766f7c9caf8cc8b17f9087cea700c85775b7d17fe44924b42b082617"
+					],
+					"vsov/openvino_ir_frontend.dll": [
+						"vsov/openvino_ir_frontend.dll",
+						"1e1e39cfd5ec443f32b136722e1c9e8ec711a27cedc3f93f4406e38ab22a206c"
+					],
+					"vsov/openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"f4456857bc68753e4adce0db34d30583bfcef6ef07b4d5bea486c37f9a6d2b27"
+					],
+					"vsov/openvino_ov_c.dll": [
+						"vsov/openvino_ov_c.dll",
+						"95e846400b977afeb43d0d0b4ecb3aaf053cb36a4e8f12f9e047642e47fb2739"
+					],
+					"vsov/openvino_tensorflow_fe.dll": [
+						"vsov/openvino_tensorflow_fe.dll",
+						"af0f0bfe1f61fecf80fa489c899566d2a03fa92fa7f0d00c0f1cb09c09644741"
+					],
+					"vsov/plugins.xml": [
+						"vsov/plugins.xml",
+						"c22a0538f49359eed802ad2a0efd14b750b192fe301ad918d6716ec93a884e77"
+					],
+					"vsov/tbb.dll": [
+						"vsov/tbb.dll",
+						"57742065adfbac614a7e2cca7c11c293830bfabdb188e06e5a02f50506439f52"
+					]
+				}
+			}
+		},
+		{
+			"version": "v12",
+			"published": "2022-11-01T10:57:20Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v12/VSOV-Windows-x64.v12.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"2981c3b5a945a217722e47098d3137b8ded0af9e87fc5b0dfbdf6a8e733942dc"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"02ff26281180dc08ec2746406cd2af6383d39d1b7a6437b2d46dceb3f4f0964b"
+					],
+					"vsov/openvino.dll": [
+						"vsov/openvino.dll",
+						"b32097fb84b0da074b2ebffb6bd38cc87fc101b033e31e014a648fe9cc8ee17e"
+					],
+					"vsov/openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"5fe17a63a8abbdd7c2f388cb2b76cfd77bca30383113c7280f3995f4b4199347"
+					],
+					"vsov/openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"00a6d238b8bdda94b7f172f778555305b46179b9070045b74c4c56d816af4995"
+					],
+					"vsov/openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"dbe57e51eb5543e3dedb0f05382be8e62a2d18548ad1ae04dbed7dd20e107329"
+					],
+					"vsov/openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"bd603cc540aecab065156ddd4b2e7451181edddcb5071fc6f4ea2aec19ed58bc"
+					],
+					"vsov/openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"05a62d564af3ed67cb17ab2259a20013acbb3f7f34f82230289573f2bc1dc209"
+					],
+					"vsov/openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"3b1bcc51766f7c9caf8cc8b17f9087cea700c85775b7d17fe44924b42b082617"
+					],
+					"vsov/openvino_ir_frontend.dll": [
+						"vsov/openvino_ir_frontend.dll",
+						"1e1e39cfd5ec443f32b136722e1c9e8ec711a27cedc3f93f4406e38ab22a206c"
+					],
+					"vsov/openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"f4456857bc68753e4adce0db34d30583bfcef6ef07b4d5bea486c37f9a6d2b27"
+					],
+					"vsov/openvino_ov_c.dll": [
+						"vsov/openvino_ov_c.dll",
+						"95e846400b977afeb43d0d0b4ecb3aaf053cb36a4e8f12f9e047642e47fb2739"
+					],
+					"vsov/openvino_tensorflow_fe.dll": [
+						"vsov/openvino_tensorflow_fe.dll",
+						"af0f0bfe1f61fecf80fa489c899566d2a03fa92fa7f0d00c0f1cb09c09644741"
+					],
+					"vsov/plugins.xml": [
+						"vsov/plugins.xml",
+						"c22a0538f49359eed802ad2a0efd14b750b192fe301ad918d6716ec93a884e77"
+					],
+					"vsov/tbb.dll": [
+						"vsov/tbb.dll",
+						"57742065adfbac614a7e2cca7c11c293830bfabdb188e06e5a02f50506439f52"
+					]
+				}
+			}
+		},
+		{
+			"version": "v11",
+			"published": "2022-10-26T00:37:56Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v11/VSOV-Windows-x64.v11.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"b7776c2d92fd59ab1dab96eea5613ba380d24d74727c8f77cc662a983d721035"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"02ff26281180dc08ec2746406cd2af6383d39d1b7a6437b2d46dceb3f4f0964b"
+					],
+					"vsov/openvino.dll": [
+						"vsov/openvino.dll",
+						"b32097fb84b0da074b2ebffb6bd38cc87fc101b033e31e014a648fe9cc8ee17e"
+					],
+					"vsov/openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"5fe17a63a8abbdd7c2f388cb2b76cfd77bca30383113c7280f3995f4b4199347"
+					],
+					"vsov/openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"00a6d238b8bdda94b7f172f778555305b46179b9070045b74c4c56d816af4995"
+					],
+					"vsov/openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"dbe57e51eb5543e3dedb0f05382be8e62a2d18548ad1ae04dbed7dd20e107329"
+					],
+					"vsov/openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"bd603cc540aecab065156ddd4b2e7451181edddcb5071fc6f4ea2aec19ed58bc"
+					],
+					"vsov/openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"05a62d564af3ed67cb17ab2259a20013acbb3f7f34f82230289573f2bc1dc209"
+					],
+					"vsov/openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"3b1bcc51766f7c9caf8cc8b17f9087cea700c85775b7d17fe44924b42b082617"
+					],
+					"vsov/openvino_ir_frontend.dll": [
+						"vsov/openvino_ir_frontend.dll",
+						"1e1e39cfd5ec443f32b136722e1c9e8ec711a27cedc3f93f4406e38ab22a206c"
+					],
+					"vsov/openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"f4456857bc68753e4adce0db34d30583bfcef6ef07b4d5bea486c37f9a6d2b27"
+					],
+					"vsov/openvino_ov_c.dll": [
+						"vsov/openvino_ov_c.dll",
+						"95e846400b977afeb43d0d0b4ecb3aaf053cb36a4e8f12f9e047642e47fb2739"
+					],
+					"vsov/openvino_tensorflow_fe.dll": [
+						"vsov/openvino_tensorflow_fe.dll",
+						"af0f0bfe1f61fecf80fa489c899566d2a03fa92fa7f0d00c0f1cb09c09644741"
+					],
+					"vsov/plugins.xml": [
+						"vsov/plugins.xml",
+						"c22a0538f49359eed802ad2a0efd14b750b192fe301ad918d6716ec93a884e77"
+					],
+					"vsov/tbb.dll": [
+						"vsov/tbb.dll",
+						"57742065adfbac614a7e2cca7c11c293830bfabdb188e06e5a02f50506439f52"
+					]
+				}
+			}
+		},
+		{
+			"version": "v10",
+			"published": "2022-09-15T11:02:08Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v10/VSOV-Windows-x64.v10.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"08a74736e3b202737293009b4bf397f53a4b73b9d2c4ae973573d70ab7be3302"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"02ff26281180dc08ec2746406cd2af6383d39d1b7a6437b2d46dceb3f4f0964b"
+					],
+					"vsov/openvino.dll": [
+						"vsov/openvino.dll",
+						"b32097fb84b0da074b2ebffb6bd38cc87fc101b033e31e014a648fe9cc8ee17e"
+					],
+					"vsov/openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"5fe17a63a8abbdd7c2f388cb2b76cfd77bca30383113c7280f3995f4b4199347"
+					],
+					"vsov/openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"00a6d238b8bdda94b7f172f778555305b46179b9070045b74c4c56d816af4995"
+					],
+					"vsov/openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"dbe57e51eb5543e3dedb0f05382be8e62a2d18548ad1ae04dbed7dd20e107329"
+					],
+					"vsov/openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"bd603cc540aecab065156ddd4b2e7451181edddcb5071fc6f4ea2aec19ed58bc"
+					],
+					"vsov/openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"05a62d564af3ed67cb17ab2259a20013acbb3f7f34f82230289573f2bc1dc209"
+					],
+					"vsov/openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"3b1bcc51766f7c9caf8cc8b17f9087cea700c85775b7d17fe44924b42b082617"
+					],
+					"vsov/openvino_ir_frontend.dll": [
+						"vsov/openvino_ir_frontend.dll",
+						"1e1e39cfd5ec443f32b136722e1c9e8ec711a27cedc3f93f4406e38ab22a206c"
+					],
+					"vsov/openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"f4456857bc68753e4adce0db34d30583bfcef6ef07b4d5bea486c37f9a6d2b27"
+					],
+					"vsov/openvino_ov_c.dll": [
+						"vsov/openvino_ov_c.dll",
+						"95e846400b977afeb43d0d0b4ecb3aaf053cb36a4e8f12f9e047642e47fb2739"
+					],
+					"vsov/openvino_tensorflow_fe.dll": [
+						"vsov/openvino_tensorflow_fe.dll",
+						"af0f0bfe1f61fecf80fa489c899566d2a03fa92fa7f0d00c0f1cb09c09644741"
+					],
+					"vsov/plugins.xml": [
+						"vsov/plugins.xml",
+						"c22a0538f49359eed802ad2a0efd14b750b192fe301ad918d6716ec93a884e77"
+					],
+					"vsov/tbb.dll": [
+						"vsov/tbb.dll",
+						"57742065adfbac614a7e2cca7c11c293830bfabdb188e06e5a02f50506439f52"
+					]
+				}
+			}
+		},
+		{
+			"version": "v9.2",
+			"published": "2022-08-07T07:48:21Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v9.2/VSOV-Windows-x64.v9.2.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"e6d90ebd3599d1b0615edc2d1d1e9de7350964cc8dd2c9d6d4bb247ff281e7fd"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"02ff26281180dc08ec2746406cd2af6383d39d1b7a6437b2d46dceb3f4f0964b"
+					],
+					"vsov/openvino.dll": [
+						"vsov/openvino.dll",
+						"b32097fb84b0da074b2ebffb6bd38cc87fc101b033e31e014a648fe9cc8ee17e"
+					],
+					"vsov/openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"5fe17a63a8abbdd7c2f388cb2b76cfd77bca30383113c7280f3995f4b4199347"
+					],
+					"vsov/openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"00a6d238b8bdda94b7f172f778555305b46179b9070045b74c4c56d816af4995"
+					],
+					"vsov/openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"dbe57e51eb5543e3dedb0f05382be8e62a2d18548ad1ae04dbed7dd20e107329"
+					],
+					"vsov/openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"bd603cc540aecab065156ddd4b2e7451181edddcb5071fc6f4ea2aec19ed58bc"
+					],
+					"vsov/openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"05a62d564af3ed67cb17ab2259a20013acbb3f7f34f82230289573f2bc1dc209"
+					],
+					"vsov/openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"3b1bcc51766f7c9caf8cc8b17f9087cea700c85775b7d17fe44924b42b082617"
+					],
+					"vsov/openvino_ir_frontend.dll": [
+						"vsov/openvino_ir_frontend.dll",
+						"1e1e39cfd5ec443f32b136722e1c9e8ec711a27cedc3f93f4406e38ab22a206c"
+					],
+					"vsov/openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"f4456857bc68753e4adce0db34d30583bfcef6ef07b4d5bea486c37f9a6d2b27"
+					],
+					"vsov/openvino_ov_c.dll": [
+						"vsov/openvino_ov_c.dll",
+						"95e846400b977afeb43d0d0b4ecb3aaf053cb36a4e8f12f9e047642e47fb2739"
+					],
+					"vsov/openvino_tensorflow_fe.dll": [
+						"vsov/openvino_tensorflow_fe.dll",
+						"af0f0bfe1f61fecf80fa489c899566d2a03fa92fa7f0d00c0f1cb09c09644741"
+					],
+					"vsov/plugins.xml": [
+						"vsov/plugins.xml",
+						"c22a0538f49359eed802ad2a0efd14b750b192fe301ad918d6716ec93a884e77"
+					],
+					"vsov/tbb.dll": [
+						"vsov/tbb.dll",
+						"57742065adfbac614a7e2cca7c11c293830bfabdb188e06e5a02f50506439f52"
+					]
+				}
+			}
+		},
+		{
+			"version": "v9.1",
+			"published": "2022-07-28T07:25:18Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v9.1/VSOV-Windows-x64.v9.1.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"ff4f56bd9966d75a0256e262299ee09f31032f0a10daac70ac72917fa1574fe2"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"02ff26281180dc08ec2746406cd2af6383d39d1b7a6437b2d46dceb3f4f0964b"
+					],
+					"vsov/openvino.dll": [
+						"vsov/openvino.dll",
+						"b32097fb84b0da074b2ebffb6bd38cc87fc101b033e31e014a648fe9cc8ee17e"
+					],
+					"vsov/openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"5fe17a63a8abbdd7c2f388cb2b76cfd77bca30383113c7280f3995f4b4199347"
+					],
+					"vsov/openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"00a6d238b8bdda94b7f172f778555305b46179b9070045b74c4c56d816af4995"
+					],
+					"vsov/openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"dbe57e51eb5543e3dedb0f05382be8e62a2d18548ad1ae04dbed7dd20e107329"
+					],
+					"vsov/openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"bd603cc540aecab065156ddd4b2e7451181edddcb5071fc6f4ea2aec19ed58bc"
+					],
+					"vsov/openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"05a62d564af3ed67cb17ab2259a20013acbb3f7f34f82230289573f2bc1dc209"
+					],
+					"vsov/openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"3b1bcc51766f7c9caf8cc8b17f9087cea700c85775b7d17fe44924b42b082617"
+					],
+					"vsov/openvino_ir_frontend.dll": [
+						"vsov/openvino_ir_frontend.dll",
+						"1e1e39cfd5ec443f32b136722e1c9e8ec711a27cedc3f93f4406e38ab22a206c"
+					],
+					"vsov/openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"f4456857bc68753e4adce0db34d30583bfcef6ef07b4d5bea486c37f9a6d2b27"
+					],
+					"vsov/openvino_ov_c.dll": [
+						"vsov/openvino_ov_c.dll",
+						"95e846400b977afeb43d0d0b4ecb3aaf053cb36a4e8f12f9e047642e47fb2739"
+					],
+					"vsov/openvino_tensorflow_fe.dll": [
+						"vsov/openvino_tensorflow_fe.dll",
+						"af0f0bfe1f61fecf80fa489c899566d2a03fa92fa7f0d00c0f1cb09c09644741"
+					],
+					"vsov/plugins.xml": [
+						"vsov/plugins.xml",
+						"c22a0538f49359eed802ad2a0efd14b750b192fe301ad918d6716ec93a884e77"
+					],
+					"vsov/tbb.dll": [
+						"vsov/tbb.dll",
+						"57742065adfbac614a7e2cca7c11c293830bfabdb188e06e5a02f50506439f52"
+					]
+				}
+			}
+		},
+		{
+			"version": "v9",
+			"published": "2022-03-25T10:46:13Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v9/VSOV-Windows-x64.v9.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"de329f04e4244f2f9c63c1e6f852bd3246d3138d2cc9571148075ce2cc131eb6"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"02ff26281180dc08ec2746406cd2af6383d39d1b7a6437b2d46dceb3f4f0964b"
+					],
+					"vsov/openvino.dll": [
+						"vsov/openvino.dll",
+						"b32097fb84b0da074b2ebffb6bd38cc87fc101b033e31e014a648fe9cc8ee17e"
+					],
+					"vsov/openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"5fe17a63a8abbdd7c2f388cb2b76cfd77bca30383113c7280f3995f4b4199347"
+					],
+					"vsov/openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"00a6d238b8bdda94b7f172f778555305b46179b9070045b74c4c56d816af4995"
+					],
+					"vsov/openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"dbe57e51eb5543e3dedb0f05382be8e62a2d18548ad1ae04dbed7dd20e107329"
+					],
+					"vsov/openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"bd603cc540aecab065156ddd4b2e7451181edddcb5071fc6f4ea2aec19ed58bc"
+					],
+					"vsov/openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"05a62d564af3ed67cb17ab2259a20013acbb3f7f34f82230289573f2bc1dc209"
+					],
+					"vsov/openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"3b1bcc51766f7c9caf8cc8b17f9087cea700c85775b7d17fe44924b42b082617"
+					],
+					"vsov/openvino_ir_frontend.dll": [
+						"vsov/openvino_ir_frontend.dll",
+						"1e1e39cfd5ec443f32b136722e1c9e8ec711a27cedc3f93f4406e38ab22a206c"
+					],
+					"vsov/openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"f4456857bc68753e4adce0db34d30583bfcef6ef07b4d5bea486c37f9a6d2b27"
+					],
+					"vsov/openvino_ov_c.dll": [
+						"vsov/openvino_ov_c.dll",
+						"95e846400b977afeb43d0d0b4ecb3aaf053cb36a4e8f12f9e047642e47fb2739"
+					],
+					"vsov/openvino_tensorflow_fe.dll": [
+						"vsov/openvino_tensorflow_fe.dll",
+						"af0f0bfe1f61fecf80fa489c899566d2a03fa92fa7f0d00c0f1cb09c09644741"
+					],
+					"vsov/plugins.xml": [
+						"vsov/plugins.xml",
+						"c22a0538f49359eed802ad2a0efd14b750b192fe301ad918d6716ec93a884e77"
+					],
+					"vsov/tbb.dll": [
+						"vsov/tbb.dll",
+						"57742065adfbac614a7e2cca7c11c293830bfabdb188e06e5a02f50506439f52"
+					]
+				}
+			}
+		}
+	]
+}

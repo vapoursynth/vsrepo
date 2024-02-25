@@ -1,0 +1,37 @@
+{
+	"name": "bore",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "This is a bbmod-style border deringer, which works by multiplying every pixel by the average of dividing each pixel in a line by its nearest pixel in the next line. Unlike bbmod, this doesn't attempt to localize the result and just assumes the same adjustment to be made for the entire row. It's effectively an automated FixBrightness/rektlvls, hence the name.",
+	"github": "https://github.com/OpusGang/bore",
+	"identifier": "ng.opusga.bore",
+	"namespace": "bore",
+	"releases": [
+		{
+			"version": "v0.1.1",
+			"published": "2024-02-22T07:19:25Z",
+			"win64": {
+				"url": "https://github.com/OpusGang/bore/releases/download/v0.1.1/bore-win64.zip",
+				"files": {
+					"libbore.dll": [
+						"libbore.dll",
+						"d96a6d86d6c509e6e053498c2431e98e3127d6d922fd12223ddb1b57ff0fe1c0"
+					]
+				}
+			}
+		},
+		{
+			"version": "v0.1.0",
+			"published": "2024-01-25T14:56:00Z",
+			"win64": {
+				"url": "https://github.com/OpusGang/bore/releases/download/v0.1.0/libbore.dll",
+				"files": {
+					"libbore.dll": [
+						"libbore.dll",
+						"021bac4d15b4426a076b61d57801b50df1e2e7cba852e5299a94708307f5fef7"
+					]
+				}
+			}
+		}
+	]
+}

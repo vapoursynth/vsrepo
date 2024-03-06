@@ -1,0 +1,24 @@
+{
+	"name": "vapoursynth-zip",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "VapourSynth Zig Image Process",
+	"github": "https://github.com/dnjulek/vapoursynth-zip",
+	"identifier": "com.julek.vszip",
+	"namespace": "vszip",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2024-03-05T15:06:54Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-zip/releases/download/R1/vapoursynth-zip-r1.7z",
+				"files": {
+					"vszip.dll": [
+						"vszip.dll",
+						"a110e59494fbe57771c55bcd314f6adae14c2b9e50db88c505e9d13c9f7a7ed5"
+					]
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"name": "BestSource",
+	"type": "VSPlugin",
+	"category": "Source/Output",
+	"description": "A general source plugin based on FFmpeg with focus on accurate 'seeking'",
+	"doom9": "https://forum.doom9.org/showthread.php?p=1972253",
+	"github": "https://github.com/vapoursynth/bestsource",
+	"identifier": "com.vapoursynth.bestsource",
+	"namespace": "bs",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2024-03-07T20:00:54Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R1/BestSource-R1.7z",
+				"files": {
+					"BestSource.dll": [
+						"x64/BestSource.dll",
+						"c71ce3a363b8cbb7a9096c498783c1611f0bb3d66e75d03f492b8d7f237d72a3"
+					]
+				}
+			}
+		}
+	]
+}

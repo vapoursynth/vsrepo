@@ -39,6 +39,7 @@ import tempfile
 import urllib.request
 import zipfile
 from typing import Iterator, List, MutableMapping, Optional, Tuple
+from pathlib import Path
 
 try:
     import winreg
@@ -57,7 +58,18 @@ bundled_api3_plugins = ['com.vapoursynth.avisource', 'com.vapoursynth.eedi3', 'c
 def is_venv() -> bool:
     return hasattr(sys, "real_prefix") or (hasattr(sys, "base_prefix") and sys.base_prefix != sys.prefix)
 
+def get_portable_vs_path(directory, filename: str = 'portable.vs', limit: int = 3) -> Optional[str]:
+    path = Path(directory)
+    found_files = [file for file in path.glob(filename) if file.is_file()]
 
+    if not found_files:
+        if (path != path.parent) and (limit >= 1):
+            return get_portable_vs_path(path.parent, filename, (limit-1))
+        else:
+            return None
+    else:
+        return found_files[0]
+    
 def detect_vapoursynth_installation() -> str:
     try:
         spec = imputil.find_spec("vapoursynth")
@@ -85,7 +97,11 @@ def is_sitepackage_install_portable() -> bool:
         return False
 
     vapoursynth_path = detect_vapoursynth_installation()
-    return os.path.exists(os.path.join(os.path.dirname(vapoursynth_path), 'portable.vs'))
+    portable_path = get_portable_vs_path(vapoursynth_path)
+
+    if(portable_path):
+        return os.path.exists(portable_path)
+    return False
 
 def is_sitepackage_install() -> bool:
     if args.portable:
@@ -149,19 +165,27 @@ args = parser.parse_args()
 is_64bits = args.target == 'win64'
 
 file_dirname: str = os.path.dirname(os.path.abspath(__file__))
+portable_vs_path = os.path.dirname(get_portable_vs_path(detect_vapoursynth_installation())) if get_portable_vs_path(detect_vapoursynth_installation()) else ""
+is_portable_vs = False
+
+if(portable_vs_path and not args.portable):
+    is_portable_vs = True
+
 
 # VSRepo is installed to the site-packages.
 if os.path.abspath(file_dirname).startswith(os.path.abspath(sys.prefix)):
     file_dirname = os.getcwd()
 
 if args.portable:
-    plugin32_path = os.path.join(file_dirname, 'vapoursynth32', 'plugins')
-    plugin64_path = os.path.join(file_dirname, 'vapoursynth64', 'plugins')
+    plugin32_path = os.path.join(file_dirname, 'vs-plugins')
+    plugin64_path = os.path.join(file_dirname, 'vs-plugins')
+
 elif is_sitepackage_install_portable():
     vapoursynth_path = detect_vapoursynth_installation()
-    base_path = os.path.dirname(vapoursynth_path)
-    plugin32_path = os.path.join(base_path, 'vapoursynth32', 'plugins')
-    plugin64_path = os.path.join(base_path, 'vapoursynth64', 'plugins')
+    base_path = os.path.dirname(get_portable_vs_path(vapoursynth_path))
+
+    plugin32_path = os.path.join(base_path, 'vs-plugins')
+    plugin64_path = os.path.join(base_path, 'vs-plugins')
     del vapoursynth_path
 else:
     pluginparent = [str(os.getenv("APPDATA")), 'VapourSynth']
@@ -172,7 +196,7 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) and ((args.package is
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
-package_json_path = os.path.join(file_dirname, 'vspackages3.json') if args.portable else os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
+package_json_path = os.path.join(file_dirname, 'vspackages3.json') if (args.portable or is_portable_vs) else os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
 
 if is_sitepackage_install():
     if is_venv():
@@ -183,12 +207,18 @@ if is_sitepackage_install():
         except ImportError:
             site_package_dir = None
     else:
-        import site
-        site_package_dir = site.getusersitepackages()
+        if(is_portable_vs):
+            site_package_dir = os.path.dirname(detect_vapoursynth_installation())
+        else:
+            import site
+            site_package_dir = site.getusersitepackages()
 else:
     site_package_dir = None
 
 py_script_path: str = file_dirname if args.portable else (site_package_dir if site_package_dir is not None else get_vs_installation_site())
+if(portable_vs_path):
+    py_script_path = os.path.dirname(detect_vapoursynth_installation())
+
 if args.script_path is not None:
     py_script_path = args.script_path
 

@@ -208,7 +208,7 @@ if is_sitepackage_install():
             site_package_dir = None
     else:
         if(is_portable_vs):
-            site_package_dir = os.path.dirname(detect_vapoursynth_installation())
+            site_package_dir = os.path.join(base_path, 'vs-scripts') if os.path.exists(os.path.join(base_path, 'vs-scripts')) else os.path.dirname(detect_vapoursynth_installation())
         else:
             import site
             site_package_dir = site.getusersitepackages()
@@ -217,7 +217,7 @@ else:
 
 py_script_path: str = file_dirname if args.portable else (site_package_dir if site_package_dir is not None else get_vs_installation_site())
 if(portable_vs_path):
-    py_script_path = os.path.dirname(detect_vapoursynth_installation())
+    py_script_path = os.path.join(base_path, 'vs-scripts') if os.path.exists(os.path.join(base_path, 'vs-scripts')) else os.path.dirname(detect_vapoursynth_installation())
 
 if args.script_path is not None:
     py_script_path = args.script_path

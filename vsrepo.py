@@ -376,9 +376,9 @@ def is_package_upgradable(id: str, force: bool) -> bool:
 
 def get_python_package_name(pkg: MutableMapping) -> str:
     if "wheelname" in pkg:
-        return pkg["wheelname"].replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "")
+        return pkg["wheelname"].replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "").replace("_-_", "_")
     else:
-        return pkg["name"].replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "")
+        return pkg["name"].replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "").replace("_-_", "_")
 
 def find_dist_version(pkg: MutableMapping, path: Optional[str]) -> Optional[str]:
     if path is None:

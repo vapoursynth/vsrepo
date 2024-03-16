@@ -216,7 +216,7 @@ else:
     site_package_dir = None
 
 py_script_path: str = file_dirname if args.portable else (site_package_dir if site_package_dir is not None else get_vs_installation_site())
-if(portable_vs_path):
+if(is_portable_vs):
     py_script_path = os.path.join(base_path, 'vs-scripts') if os.path.exists(os.path.join(base_path, 'vs-scripts')) else os.path.dirname(detect_vapoursynth_installation())
 
 if args.script_path is not None:

@@ -1,0 +1,24 @@
+{
+	"name": "ccl_filter",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Vapoursynth Connected Components Label Filtering from OpenCV. Mask connected components label filtering.",
+	"github": "https://github.com/dtlnor/VapourSynth-cv_ccl_filter",
+	"identifier": "com.dtlnor.cv_ccl",
+	"namespace": "cv_ccl",
+	"releases": [
+		{
+			"version": "v0.1",
+			"published": "2024-03-20T08:55:11Z",
+			"win64": {
+				"url": "https://github.com/dtlnor/VapourSynth-cv_ccl_filter/releases/download/v0.1/cv_ccl_filter.7z",
+				"files": {
+					"cv_ccl_filter.dll": [
+						"cv_ccl_filter.dll",
+						"6f902be2968bf894093dc8996d28c46608c03a91abe71c62e11ac2c26a32edef"
+					]
+				}
+			}
+		}
+	]
+}

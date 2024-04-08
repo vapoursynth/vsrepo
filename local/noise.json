@@ -1,0 +1,63 @@
+{
+	"name": "vs-noise",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Generates film like noise or other effects (like rain) by adding random noise to a video clip",
+	"github": "https://github.com/wwww-wwww/vs-noise",
+	"identifier": "moe.grass.addnoise",
+	"namespace": "noise",
+	"releases": [
+		{
+			"version": "r4",
+			"published": "2024-04-08T19:46:51Z",
+			"win64": {
+				"url": "https://github.com/wwww-wwww/vs-noise/releases/download/r4/addnoise.zip",
+				"files": {
+					"addnoise.dll": [
+						"addnoise.dll",
+						"a0d8e023b3bbdbc2d7ec54a7708ca3c47caa7b44f2960bdb8fadfc13923520c3"
+					]
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"published": "2023-01-01T05:07:19Z",
+			"win64": {
+				"url": "https://github.com/wwww-wwww/vs-noise/releases/download/r3/addnoise.dll",
+				"files": {
+					"addnoise.dll": [
+						"addnoise.dll",
+						"cc67cda0c25536db0703e6dbb0987ab8c18032af987cbc9966f7fd48e75ec40a"
+					]
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"published": "2022-03-04T13:21:18Z",
+			"win64": {
+				"url": "https://github.com/wwww-wwww/vs-noise/releases/download/r2/addnoise.dll",
+				"files": {
+					"addnoise.dll": [
+						"addnoise.dll",
+						"0dc39a26d8dec5d5a4725e99d6467f5deb88fa61860373d97af7f02f850397c3"
+					]
+				}
+			}
+		},
+		{
+			"version": "r1",
+			"published": "2022-03-02T02:40:53Z",
+			"win64": {
+				"url": "https://github.com/wwww-wwww/vs-noise/releases/download/r1/addnoise.dll",
+				"files": {
+					"addnoise.dll": [
+						"addnoise.dll",
+						"789bc0be1e1961efc0d85bccc98fb6d6133da2c124a40ee7eac97ed911c7acda"
+					]
+				}
+			}
+		}
+	]
+}

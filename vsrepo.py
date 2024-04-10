@@ -148,6 +148,25 @@ def get_vs_installation_site() -> str:
     import site
     return site.getusersitepackages()
 
+def get_vapoursynth_version() -> int:
+    try:
+        import importlib.metadata as impmedata
+        VAPOURSYNTH_VERSION = int(impmedata.version('vapoursynth'))
+    except impmedata.PackageNotFoundError:
+        return 1
+    return VAPOURSYNTH_VERSION
+
+def get_vapoursynth_api_version() -> int:
+    try:
+        import vapoursynth
+    except ImportError:
+        return 1
+
+    if hasattr(vapoursynth, "__api_version__"):
+        return vapoursynth.__api_version__[0]
+    # assume lowest widespread api version, will probably error out somewhere else
+    return 3
+
 
 is_64bits: bool = sys.maxsize > 2**32
 
@@ -177,15 +196,26 @@ if os.path.abspath(file_dirname).startswith(os.path.abspath(sys.prefix)):
     file_dirname = os.getcwd()
 
 if args.portable:
-    plugin32_path = os.path.join(file_dirname, 'vs-plugins')
-    plugin64_path = os.path.join(file_dirname, 'vs-plugins')
+    if get_vapoursynth_version() >=66:
+        plugin32_path = os.path.join(file_dirname, 'vs-plugins')
+        plugin64_path = os.path.join(file_dirname, 'vs-plugins')
+        if not os.path.exists(plugin32_path):
+            plugin32_path = os.path.join(file_dirname, 'vapoursynth32', 'plugins')
+            plugin64_path = os.path.join(file_dirname, 'vapoursynth64', 'plugins')
+    else:
+        plugin32_path = os.path.join(file_dirname, 'vapoursynth32', 'plugins')
+        plugin64_path = os.path.join(file_dirname, 'vapoursynth64', 'plugins')
 
 elif is_sitepackage_install_portable():
     vapoursynth_path = detect_vapoursynth_installation()
     base_path = os.path.dirname(get_portable_vs_path(vapoursynth_path))
 
-    plugin32_path = os.path.join(base_path, 'vs-plugins')
-    plugin64_path = os.path.join(base_path, 'vs-plugins')
+    if get_vapoursynth_version() >=66:
+        plugin32_path = os.path.join(file_dirname, 'vs-plugins')
+        plugin64_path = os.path.join(file_dirname, 'vs-plugins')
+    else:
+        plugin32_path = os.path.join(base_path, 'vapoursynth32', 'plugins')
+        plugin64_path = os.path.join(base_path, 'vapoursynth64', 'plugins')
     del vapoursynth_path
 else:
     pluginparent = [str(os.getenv("APPDATA")), 'VapourSynth']
@@ -208,7 +238,7 @@ if is_sitepackage_install():
             site_package_dir = None
     else:
         if(is_portable_vs):
-            site_package_dir = os.path.join(base_path, 'vs-scripts') if os.path.exists(os.path.join(base_path, 'vs-scripts')) else os.path.dirname(detect_vapoursynth_installation())
+            site_package_dir = os.path.join(base_path, 'vapoursynth64') if os.path.exists(os.path.join(base_path, 'vapoursynth64')) else os.path.dirname(detect_vapoursynth_installation())
         else:
             import site
             site_package_dir = site.getusersitepackages()
@@ -217,7 +247,11 @@ else:
 
 py_script_path: str = file_dirname if args.portable else (site_package_dir if site_package_dir is not None else get_vs_installation_site())
 if(is_portable_vs):
-    py_script_path = os.path.join(base_path, 'vs-scripts') if os.path.exists(os.path.join(base_path, 'vs-scripts')) else os.path.dirname(detect_vapoursynth_installation())
+    if get_vapoursynth_version() >=66:
+        py_script_path = os.path.join(base_path, 'vs-scripts') if os.path.exists(os.path.join(base_path, 'vs-scripts')) else os.path.dirname(detect_vapoursynth_installation())
+        py_script_path = os.path.join(base_path, 'vapoursynth64') if not os.path.exists(os.path.join(base_path, 'vs-scripts')) and os.path.exists(os.path.join(base_path, 'vapoursynth64')) else os.path.dirname(detect_vapoursynth_installation())
+    else:
+        py_script_path = os.path.join(base_path, 'vapoursynth64') if os.path.exists(os.path.join(base_path, 'vapoursynth64')) else os.path.dirname(detect_vapoursynth_installation())
 
 if args.script_path is not None:
     py_script_path = args.script_path
@@ -800,29 +834,6 @@ def update_package_definition(url: str) -> None:
             raise
     else:
         print('Local definitions updated to: ' + email.utils.formatdate(remote_modtime, usegmt=True))
-
-
-def get_vapoursynth_version() -> int:
-    try:
-        import vapoursynth
-    except ImportError:
-        return 1
-
-    if hasattr(vapoursynth, "__version__"):
-        return vapoursynth.__version__[0]
-    return vapoursynth.core.version_number()
-
-def get_vapoursynth_api_version() -> int:
-    try:
-        import vapoursynth
-    except ImportError:
-        return 1
-
-    if hasattr(vapoursynth, "__api_version__"):
-        return vapoursynth.__api_version__[0]
-    # assume lowest widespread api version, will probably error out somewhere else
-    return 3
-
 
 def update_genstubs() -> None:
     sys.path.append(os.path.dirname(__file__))

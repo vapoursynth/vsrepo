@@ -9,6 +9,19 @@
 	"namespace": "bs",
 	"releases": [
 		{
+			"version": "R2",
+			"published": "2024-04-17T08:31:46Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R2/BestSource-R2-x64.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"5359236bd401db14d93b3b27f3a17b2ecfca30a4724cbe2b564858b3182d3396"
+					]
+				}
+			}
+		},
+		{
 			"version": "R1",
 			"published": "2024-03-07T20:00:54Z",
 			"win64": {

@@ -10,6 +10,19 @@
 	"namespace": "descratch",
 	"releases": [
 		{
+			"version": "R2",
+			"published": "2024-04-25T07:03:46Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/descratch/releases/download/R2/descratch-r2.7z",
+				"files": {
+					"DeScratch.dll": [
+						"x64/DeScratch.dll",
+						"2562f995312cbc19a948bc4db8e8b43fdfd62d6b465a04b43d8e11c121fead1d"
+					]
+				}
+			}
+		},
+		{
 			"version": "R1",
 			"published": "2023-10-25T20:20:50Z",
 			"win64": {

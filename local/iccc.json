@@ -18,6 +18,19 @@
 	],
 	"releases": [
 		{
+			"version": "6.1",
+			"published": "2024-04-20T09:48:50Z",
+			"win64": {
+				"url": "https://github.com/YomikoR/VapourSynth-ICCConvert/releases/download/6.1/libiccc.dll",
+				"files": {
+					"libiccc.dll": [
+						"libiccc.dll",
+						"d64b36dbfc0398b764c70e8b92ca7eb1a321dfcee1521efec296505bfd56a8d2"
+					]
+				}
+			}
+		},
+		{
 			"version": "6",
 			"published": "2024-04-11T06:18:56Z",
 			"win64": {

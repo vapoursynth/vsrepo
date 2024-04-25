@@ -1,0 +1,25 @@
+{
+	"name": "Zsmooth",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "Cross-platform smoothing functions written in Zig",
+	"doom9": "https://forum.doom9.org/showthread.php?t=185465",
+	"github": "https://github.com/adworacz/zsmooth",
+	"identifier": "com.adub.zsmooth",
+	"namespace": "zsmooth",
+	"releases": [
+		{
+			"version": "0.2",
+			"published": "2024-04-25T03:22:59Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.2/zsmooth.avx2.dll",
+				"files": {
+					"zsmooth.avx2.dll": [
+						"zsmooth.avx2.dll",
+						"aa1ec06037a953c362dc4cf65bf5dd76109071e3993925a1e5867e55c59d1972"
+					]
+				}
+			}
+		}
+	]
+}

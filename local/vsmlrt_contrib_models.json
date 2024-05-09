@@ -1,0 +1,65 @@
+{
+	"name": "vsmlrt_contrib_models",
+	"type": "VSPlugin",
+	"category": "Plugin Dependency",
+	"description": "contrib models for vsmlrt plugin",
+	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"identifier": "io.github.amusementclub.vsmlrt_contrib_models",
+	"namespace": "vsmlrt_contrib_models",
+	"ignore": [
+		"v13.2",
+		"v13.1",
+		"v13",
+		"v12",
+		"v11",
+		"v10",
+		"v9.2",
+		"v9.1",
+		"v9",
+		"v8",
+		"v7",
+		"v6",
+		"v5",
+		"v4",
+		"v3",
+		"v2",
+		"model-20211209",
+		"v1",
+		"v0"
+	],
+	"releases": [
+		{
+			"version": "v14",
+			"published": "2024-04-25T01:01:19Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v14/contrib-models.v14.7z",
+				"files": {
+					"models/RealESRGANv2/animejanaiV2L1.onnx": [
+						"models/RealESRGANv2/animejanaiV2L1.onnx",
+						"f074b67a4a4213c4bfa3a81e5dd32fdddeb622fc33b48035af7adeafb02dde66"
+					],
+					"models/RealESRGANv2/animejanaiV2L2.onnx": [
+						"models/RealESRGANv2/animejanaiV2L2.onnx",
+						"0b041514c20d05bc0d3e2547c954f9b8e9192870cf29e74b5308c2d931f97299"
+					],
+					"models/RealESRGANv2/animejanaiV2L3.onnx": [
+						"models/RealESRGANv2/animejanaiV2L3.onnx",
+						"d3247af6893968da7d8f4ae523e670a3c7ac64627f1cd85f1327fac03980e668"
+					],
+					"models/RealESRGANv2/animejanaiV3-HD-L1.onnx": [
+						"models/RealESRGANv2/animejanaiV3-HD-L1.onnx",
+						"d328ff0b2fc36145af167093d951ac6fd577e8be26fe0e48764557ac94e03877"
+					],
+					"models/RealESRGANv2/animejanaiV3-HD-L2.onnx": [
+						"models/RealESRGANv2/animejanaiV3-HD-L2.onnx",
+						"5efe1a8d65e02e09b5d408202477f009a6653e386ee3757105e541774879bdc1"
+					],
+					"models/RealESRGANv2/animejanaiV3-HD-L3.onnx": [
+						"models/RealESRGANv2/animejanaiV3-HD-L3.onnx",
+						"babd3dd2904d74d0d24f7468f25dd39fc65fa825d4ea43b2cb30e13b8d39cc31"
+					]
+				}
+			}
+		}
+	]
+}

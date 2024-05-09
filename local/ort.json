@@ -14,7 +14,8 @@
 	"dependencies": [
 		"io.github.amusementclub.vsmlrt_script",
 		"io.github.amusementclub.vsmlrt_models",
-		"io.github.amusementclub.vsmlrt_ext_models"
+		"io.github.amusementclub.vsmlrt_ext_models",
+		"io.github.amusementclub.vsmlrt_contrib_models"
 	],
 	"ignore": [
 		"model-20211209",
@@ -23,6 +24,35 @@
 		"v0"
 	],
 	"releases": [
+		{
+			"version": "v14",
+			"published": "2024-04-25T01:01:19Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v14/VSORT-Windows-x64.v14.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"a3cbbcbb08c20e6951a45b5d27f2ce2a6464b3dd3f45431699c2c70b720316ba"
+					],
+					"DirectML.dll": [
+						"vsort/DirectML.dll",
+						"8addcf4953bf3682541efa2a6526e240e8e231df91a8285306b2b9725f422961"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"20af7e86d2ad8ca2e79949002fd35bc487367c9d94ebd9c92c674f654f1524de"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"f73b0506087182daf71231bbeb99bdaa032a7e64bbdac5d37097ca8d9dcad897"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"5068b30ebb88cb456423c288ba9b1466d7dbaccdff8337eb6e66a8b6f46ec944"
+					]
+				}
+			}
+		},
 		{
 			"version": "v13.2",
 			"published": "2023-05-28T15:01:17Z",

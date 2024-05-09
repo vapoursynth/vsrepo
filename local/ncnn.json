@@ -13,7 +13,8 @@
 	"dependencies": [
 		"io.github.amusementclub.vsmlrt_script",
 		"io.github.amusementclub.vsmlrt_models",
-		"io.github.amusementclub.vsmlrt_ext_models"
+		"io.github.amusementclub.vsmlrt_ext_models",
+		"io.github.amusementclub.vsmlrt_contrib_models"
 	],
 	"ignore": [
 		"model-20211209",
@@ -31,6 +32,19 @@
 		"v0"
 	],
 	"releases": [
+		{
+			"version": "v14",
+			"published": "2024-04-25T01:01:19Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v14/VSNCNN-Windows-x64.v14.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"1d383cdafa77dc8cbad07a3a420184af504c147d6c61fe29225c19b0f859d505"
+					]
+				}
+			}
+		},
 		{
 			"version": "v13.2",
 			"published": "2023-05-28T15:01:17Z",

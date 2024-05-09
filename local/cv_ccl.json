@@ -8,6 +8,32 @@
 	"namespace": "cv_ccl",
 	"releases": [
 		{
+			"version": "v0.2.1",
+			"published": "2024-05-02T03:06:39Z",
+			"win64": {
+				"url": "https://github.com/dtlnor/VapourSynth-cv_ccl_filter/releases/download/v0.2.1/cv_ccl_filter.7z",
+				"files": {
+					"cv_ccl_filter.dll": [
+						"cv_ccl_filter.dll",
+						"fb620b0861c5f32eb456fc2cf09ddf0f47d798f4dc48bb4d69c8d8f6c05953ec"
+					]
+				}
+			}
+		},
+		{
+			"version": "v0.2",
+			"published": "2024-05-02T02:22:43Z",
+			"win64": {
+				"url": "https://github.com/dtlnor/VapourSynth-cv_ccl_filter/releases/download/v0.2/cv_ccl_filter.7z",
+				"files": {
+					"cv_ccl_filter.dll": [
+						"cv_ccl_filter.dll",
+						"25c4cd463ca619e625532384f807ad495e0fa4120ece51519bdcc00052b8036a"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.1",
 			"published": "2024-03-20T08:55:11Z",
 			"win64": {

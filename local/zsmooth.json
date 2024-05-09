@@ -9,6 +9,45 @@
 	"namespace": "zsmooth",
 	"releases": [
 		{
+			"version": "0.5",
+			"published": "2024-05-03T15:37:33Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.5/zsmooth.avx2.dll.zip",
+				"files": {
+					"zsmooth.avx2.dll": [
+						"zsmooth.avx2.dll",
+						"30fc26acad1c5e1708598ca1503e41f447280bd1703b7c70fb44c7ee4df07a5b"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.4",
+			"published": "2024-04-27T22:26:17Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.4/zsmooth.avx2.dll",
+				"files": {
+					"zsmooth.avx2.dll": [
+						"zsmooth.avx2.dll",
+						"e6d9360b2fd8a1bc3a94ed81efd272bd533f6f553de9ef56a4d45a913ab8f7c3"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.3",
+			"published": "2024-04-27T19:08:32Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.3/zsmooth.avx2.dll",
+				"files": {
+					"zsmooth.avx2.dll": [
+						"zsmooth.avx2.dll",
+						"9aca94d0102597df0a5eacaee4c1e7781a32bbdd6d3a4c15f41ff838ceb18453"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.2",
 			"published": "2024-04-25T03:22:59Z",
 			"win64": {

@@ -15,6 +15,7 @@
 		"io.github.amusementclub.vsmlrt_script",
 		"io.github.amusementclub.vsmlrt_models",
 		"io.github.amusementclub.vsmlrt_ext_models",
+		"io.github.amusementclub.vsmlrt_contrib_models",
 		"io.github.amusementclub.vsmlrt_cuda_runtime"
 	],
 	"ignore": [
@@ -25,6 +26,23 @@
 		"v0"
 	],
 	"releases": [
+		{
+			"version": "v14",
+			"published": "2024-04-25T01:01:19Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v14/VSTRT-Windows-x64.v14.7z",
+				"files": {
+					"vsmlrt-cuda/trtexec.exe": [
+						"vsmlrt-cuda/trtexec.exe",
+						"f1dc665a26c19306e6c16a88ad156204d66a3fb3ff674f2b085d0c6bc7a70b9e"
+					],
+					"vstrt.dll": [
+						"vstrt.dll",
+						"6daab1bbfea1ae8c7e0e3d576d6b9163a1a5dfe2a66686bc94b4cf8d858c223b"
+					]
+				}
+			}
+		},
 		{
 			"version": "v13.2",
 			"published": "2023-05-28T15:01:17Z",

@@ -10,6 +10,19 @@
 	"namespace": "descratch",
 	"releases": [
 		{
+			"version": "R3",
+			"published": "2024-05-04T17:58:36Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/descratch/releases/download/R3/descratch-r3.7z",
+				"files": {
+					"DeScratch.dll": [
+						"x64/DeScratch.dll",
+						"ba61b2a411f2ce1bbbc035ee7a71879527edb78dfc1731c94440ced0219bd84f"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2",
 			"published": "2024-04-25T07:03:46Z",
 			"win64": {

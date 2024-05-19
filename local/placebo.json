@@ -2,7 +2,7 @@
 	"name": "vs-placebo",
 	"type": "VSPlugin",
 	"description": "libplacebo-based debanding, scaling and color mapping plugin for VapourSynth",
-	"github": "https://github.com/Lypheo/vs-placebo",
+	"github": "https://github.com/sgt0/vs-placebo",
 	"category": "Other",
 	"identifier": "com.vs.placebo",
 	"namespace": "placebo",
@@ -10,6 +10,45 @@
 		"org.dovi.dovi"
 	],
 	"releases": [
+		{
+			"version": "v3.0.0",
+			"published": "2024-04-26T00:21:50Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vs-placebo/releases/download/v3.0.0/vsplacebo-windows-3.0.0.zip",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"58f334aa24d0f91cd820a046385e76025cfdae114970c0867e4d81e823ac1387"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0.1",
+			"published": "2024-04-25T16:00:05Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vs-placebo/releases/download/v2.0.1/vsplacebo-windows-2.0.1.zip",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"0bd67cb23f4c8017bfb11adc8a9bd96890dc23b1a1e3af31acf00849ebd8f151"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0.0",
+			"published": "2024-04-25T01:26:57Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vs-placebo/releases/download/v2.0.0/vsplacebo-windows-2.0.0.zip",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"308114c2266c722e5cf7cc92e0561533635402265268bff0c3cbb8133dfb2b30"
+					]
+				}
+			}
+		},
 		{
 			"version": "1.4.4",
 			"published": "2023-02-26T20:46:03Z",
@@ -197,6 +236,19 @@
 					"shaderc_shared.dll": [
 						"shaderc_shared.dll",
 						"fd10832964a42d693a5dc714adb8f3e7a7810b7c7c40979e40e75c14709cd05a"
+					]
+				}
+			}
+		},
+		{
+			"version": "create-package",
+			"published": "",
+			"win64": {
+				"url": "https://github.com/sgt0/vs-placebo/releases/download/v3.0.0/vsplacebo-windows-3.0.0.zip",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"58f334aa24d0f91cd820a046385e76025cfdae114970c0867e4d81e823ac1387"
 					]
 				}
 			}

@@ -10,27 +10,27 @@
 	"github": "https://github.com/dubhater/vapoursynth-bifrost",
 	"releases": [
 		{
-            "version": "create-package",
-            "published": "",
-            "win32": {
-                "url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
-                "files": {
-                    "bifrost.dll": [
-                        "x86/bifrost.dll",
-                        "2605965cb562ee8af3fd252610cb986cd698aa2ed1dbd74675d81e43c0a40602"
-                    ]
-                }
-            },
-            "win64": {
-                "url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
-                "files": {
-                    "bifrost.dll": [
-                        "x64/bifrost.dll",
-                        "bc0360aacb5ecc39a4cdcbcbe1f76b1b04cdfb8573ffdb5fb1390cee2aa161a3"
-                    ]
-                }
-            }
-        },
+			"version": "v3.0",
+			"published": "2024-05-08T20:21:32Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
+				"files": {
+					"bifrost.dll": [
+						"x86/bifrost.dll",
+						"2605965cb562ee8af3fd252610cb986cd698aa2ed1dbd74675d81e43c0a40602"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
+				"files": {
+					"bifrost.dll": [
+						"x64/bifrost.dll",
+						"bc0360aacb5ecc39a4cdcbcbe1f76b1b04cdfb8573ffdb5fb1390cee2aa161a3"
+					]
+				}
+			}
+		},
 		{
 			"version": "v2.2",
 			"published": "2014-05-16T09:05:10Z",
@@ -97,6 +97,28 @@
 					"libbifrost.dll": [
 						"libbifrost.dll",
 						"853fcc2c9d3f6e9bbf65588bda59dbec5e280694d3d5b88a87dcc0484eee1eaa"
+					]
+				}
+			}
+		},
+		{
+			"version": "create-package",
+			"published": "",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
+				"files": {
+					"bifrost.dll": [
+						"x86/bifrost.dll",
+						"2605965cb562ee8af3fd252610cb986cd698aa2ed1dbd74675d81e43c0a40602"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
+				"files": {
+					"bifrost.dll": [
+						"x64/bifrost.dll",
+						"bc0360aacb5ecc39a4cdcbcbe1f76b1b04cdfb8573ffdb5fb1390cee2aa161a3"
 					]
 				}
 			}

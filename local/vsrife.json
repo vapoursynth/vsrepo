@@ -9,6 +9,14 @@
 	"wheelname": "vsrife",
 	"releases": [
 		{
+			"version": "5.0.0",
+			"published": "2024-05-18T17:23:27.830081Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/85/99/9812f3bac86d87f324044208851a9a4d464d2127c77c0723f077ab98346c/vsrife-5.0.0-py3-none-any.whl",
+				"hash": "155f5f6db03471a57d602c2f769da794eb868907666f9695ee7df1d2789fee1a"
+			}
+		},
+		{
 			"version": "4.2.0",
 			"published": "2023-11-12T06:35:27.889566Z",
 			"wheel": {

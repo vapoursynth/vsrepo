@@ -15,6 +15,19 @@
 	],
 	"releases": [
 		{
+			"version": "5.0",
+			"published": "2024-05-28T19:53:13Z",
+			"win64": {
+				"url": "https://github.com/FFMS/ffms2/releases/download/5.0/ffms2-5.0-msvc.7z",
+				"files": {
+					"ffms2.dll": [
+						"ffms2-5.0-msvc/x64/ffms2.dll",
+						"970d3f8d170fd13a2dd8a7e8a7f56b0ce5a1dc7eea79d1774bbb2c2cab47e3f0"
+					]
+				}
+			}
+		},
+		{
 			"version": "2.40",
 			"published": "2020-08-22T11:29:17Z",
 			"win32": {

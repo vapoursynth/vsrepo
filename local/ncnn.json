@@ -33,6 +33,19 @@
 	],
 	"releases": [
 		{
+			"version": "v15",
+			"published": "2024-06-15T02:11:46Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15/VSNCNN-Windows-x64.v15.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"3ede1053d17c080da2efb5a2e3d386044c4e45f39907a991f514c37717ad6bd2"
+					]
+				}
+			}
+		},
+		{
 			"version": "v14",
 			"published": "2024-04-25T01:01:19Z",
 			"win64": {

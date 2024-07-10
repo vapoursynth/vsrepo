@@ -1,0 +1,24 @@
+{
+	"name": "Hysteresis",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Hysteresis filter as a VapourSynth plugin, with the same API as misc.Hysteresis() from vs-miscfilters-obsolete",
+	"github": "https://github.com/sgt0/vapoursynth-hysteresis",
+	"identifier": "sgt.hysteresis",
+	"namespace": "hysteresis",
+	"releases": [
+		{
+			"version": "v1.0.0",
+			"published": "2024-07-09T22:35:34Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-hysteresis/releases/download/v1.0.0/hysteresis-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"hysteresis.dll": [
+						"hysteresis.dll",
+						"743c1c1bb82ce84200dd302f6932b2ea73dcdbddbf98fc13b9a378bd01b77fab"
+					]
+				}
+			}
+		}
+	]
+}

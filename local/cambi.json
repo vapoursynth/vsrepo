@@ -1,0 +1,24 @@
+{
+	"name": "cambi",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Contrast Aware Multiscale Banding Index (CAMBI).",
+	"github": "https://github.com/sgt0/vapoursynth-cambi",
+	"identifier": "sgt.cambi",
+	"namespace": "cambi",
+	"releases": [
+		{
+			"version": "v1.0.0",
+			"published": "2024-07-19T18:55:17Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-cambi/releases/download/v1.0.0/cambi-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"cambi.dll": [
+						"cambi.dll",
+						"ab4895cdafeb987e1a53b5562478a6b7cc7e166718312b1f5bb8efac694807d9"
+					]
+				}
+			}
+		}
+	]
+}

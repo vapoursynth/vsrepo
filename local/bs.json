@@ -9,6 +9,19 @@
 	"namespace": "bs",
 	"releases": [
 		{
+			"version": "R6",
+			"published": "2024-07-14T16:01:45Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R6/BestSource-R6.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"66147cbda2a1787a766dc3c9904beb908462afffeca82e4b0bfcdfbcc2b70768"
+					]
+				}
+			}
+		},
+		{
 			"version": "R5",
 			"published": "2024-06-01T19:07:04Z",
 			"win64": {

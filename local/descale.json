@@ -11,6 +11,19 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "r10",
+			"published": "2024-07-29T20:10:02Z",
+			"win64": {
+				"url": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-descale/releases/download/r10/libdescale.dll",
+				"files": {
+					"libdescale.dll": [
+						"libdescale.dll",
+						"abe72e88fa2e183d178890f270306f8790272b7720c0aa1d17416e76c413e012"
+					]
+				}
+			}
+		},
+		{
 			"version": "r9",
 			"published": "2023-11-29T22:00:25Z",
 			"win64": {

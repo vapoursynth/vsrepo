@@ -1,0 +1,37 @@
+{
+	"name": "resize2",
+	"type": "VSPlugin",
+	"category": "Resizing and Format Conversion",
+	"description": "resize2",
+	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-resize2",
+	"identifier": "dev.setsugen.resize2",
+	"namespace": "resize2",
+	"releases": [
+		{
+			"version": "0.1.1",
+			"published": "2024-08-04T14:53:16Z",
+			"win64": {
+				"url": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-resize2/releases/download/0.1.1/resize2-w0.1.1-win64.zip",
+				"files": {
+					"libresize2.dll": [
+						"libresize2.dll",
+						"1318a78c1332646c1c329010d62e71944cf462b442b9de45c79e02436c57ead2"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.1.0",
+			"published": "2024-08-04T13:03:48Z",
+			"win64": {
+				"url": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-resize2/releases/download/0.1.0/resize2-0.1.0-win64.zip",
+				"files": {
+					"libresize2.dll": [
+						"libresize2.dll",
+						"d4e0f0a7a6275e569b22eab91e711ac68b082bef229e7dd60dfa4934c6e6fb26"
+					]
+				}
+			}
+		}
+	]
+}

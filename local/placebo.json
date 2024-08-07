@@ -11,6 +11,32 @@
 	],
 	"releases": [
 		{
+			"version": "v3.0.2",
+			"published": "2024-08-05T20:08:34Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vs-placebo/releases/download/v3.0.2/vsplacebo-windows-3.0.2.zip",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"7e617d3281100852f31329e4dd9539d84d36cdaf0eebd6916bb1e43327cb83be"
+					]
+				}
+			}
+		},
+		{
+			"version": "v3.0.1",
+			"published": "2024-08-05T20:03:47Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vs-placebo/releases/download/v3.0.1/vsplacebo-windows-3.0.1.zip",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"badf959dfe48eee4a53e00705c2af9e7e881612a7fda22573e734c51647e43b8"
+					]
+				}
+			}
+		},
+		{
 			"version": "v3.0.0",
 			"published": "2024-04-26T00:21:50Z",
 			"win64": {

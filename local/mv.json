@@ -13,6 +13,28 @@
 	],
 	"releases": [
 		{
+			"version": "v24",
+			"published": "2024-08-05T22:12:15Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v24/vapoursynth-mvtools-v24-win32.7z",
+				"files": {
+					"libmvtools.dll": [
+						"libmvtools.dll",
+						"e5f589e049cd78ab948dfc2017134bc27f68745c6b9042f89aa33153c31d3bb5"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-mvtools/releases/download/v24/vapoursynth-mvtools-v24-win64.7z",
+				"files": {
+					"libmvtools.dll": [
+						"libmvtools.dll",
+						"530a2f003901a7c0749b0b3797c2a2d2c9b12a2b87c4ca4e9d4ec7937260f091"
+					]
+				}
+			}
+		},
+		{
 			"version": "v23",
 			"published": "2020-05-08T16:22:53Z",
 			"win32": {

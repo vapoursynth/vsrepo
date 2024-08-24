@@ -11,6 +11,19 @@
 	],
 	"releases": [
 		{
+			"version": "v3.1.0",
+			"published": "2024-08-19T16:25:29Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vs-placebo/releases/download/v3.1.0/vsplacebo-windows-3.1.0.zip",
+				"files": {
+					"libvs_placebo.dll": [
+						"libvs_placebo.dll",
+						"4c74e8d2e8fe95fa818cc91fee4cd6abfb8a4b0b7ca40ee1abfa51ae15fe0022"
+					]
+				}
+			}
+		},
+		{
 			"version": "v3.0.2",
 			"published": "2024-08-05T20:08:34Z",
 			"win64": {

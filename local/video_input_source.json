@@ -1,0 +1,34 @@
+{
+	"name": "VideoInputSource",
+	"type": "VSPlugin",
+	"category": "Source/Output",
+	"description": "Captures video from a video capture device",
+	"doom9": "https://forum.doom9.org/showthread.php?p=2006040",
+	"github": "https://github.com/fieliapm/himawari_avs_plugin",
+	"identifier": "org.fieliapm.VideoInputSource",
+	"namespace": "video_input_source",
+	"releases": [
+		{
+			"version": "git:3cf3e05",
+			"published": "2024-07-29T22:24:32.000Z",
+			"win32": {
+                "url": "https://github.com/fieliapm/himawari_avs_plugin/raw/master/VideoInputSource/VideoInputSource.x86.dll",
+                "files": {
+                    "VideoInputSource.x86.dll": [
+                        "VideoInputSource.x86.dll",
+                        "ee8695b86bb8394276b838f0d26f505fd706b2b2889845f7441aecca9d5cd3b1"
+                    ]
+                }
+            },
+			"win64": {
+				"url": "https://github.com/fieliapm/himawari_avs_plugin/raw/master/VideoInputSource/VideoInputSource.x64.dll",
+				"files": {
+					"VideoInputSource.x64.dll": [
+						"VideoInputSource.x64.dll",
+						"443286a7ff14bf464a2cbd162789739af3aa7ea1a0a6f24ea965478a5d3c1e82"
+					]
+				}
+			}
+		}
+	]
+}

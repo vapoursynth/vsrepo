@@ -1010,24 +1010,24 @@ class RawNode:
 
     def is_inspectable(self, version: Union[int, None] = None) -> bool: ...
 
-    if not TYPE_CHECKING:
-        @property
-        def _node_name(self) -> str: ...
+    @property
+    def node_name(self) -> str: ...
 
+    @property
+    def timings(self) -> int: ...
+
+    @property
+    def mode(self) -> FilterMode: ...
+
+    @property
+    def dependencies(self): ...
+    
+    if not TYPE_CHECKING:
         @property
         def _name(self) -> str: ...
 
         @property
         def _inputs(self) -> Dict[str, _VapourSynthMapValue]: ...
-
-        @property
-        def _timings(self) -> int: ...
-
-        @property
-        def _mode(self) -> FilterMode: ...
-
-        @property
-        def _dependencies(self): ...
 
     @overload
     def __eq__(self: 'SelfRawNode', other: 'SelfRawNode', /) -> bool: ...  # type: ignore[misc]

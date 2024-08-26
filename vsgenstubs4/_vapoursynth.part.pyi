@@ -124,7 +124,9 @@ __all__ = [
         'YUV420P8', 'YUV420P9', 'YUV420P10', 'YUV420P12', 'YUV420P14', 'YUV420P16',
         'YUV422P8', 'YUV422P9', 'YUV422P10', 'YUV422P12', 'YUV422P14', 'YUV422P16',
         'YUV440P8',
-        'YUV444P8', 'YUV444P9', 'YUV444P10', 'YUV444P12', 'YUV444P14', 'YUV444P16', 'YUV444PH', 'YUV444PS',
+        'YUV444P8', 'YUV444P9', 'YUV444P10', 'YUV444P12', 'YUV444P14', 'YUV444P16',
+        'YUV420PH', 'YUV422PH', 'YUV444PH',
+        'YUV420PS', 'YUV422PS', 'YUV444PS',
         'NONE',
 
     'AudioChannels',
@@ -417,6 +419,12 @@ class PresetVideoFormat(IntEnum):
     YUV422P16: 'PresetVideoFormat'
     YUV444P16: 'PresetVideoFormat'
 
+    YUV420PH: 'PresetVideoFormat'
+    YUV420PS: 'PresetVideoFormat'
+
+    YUV422PH: 'PresetVideoFormat'
+    YUV422PS: 'PresetVideoFormat'
+
     YUV444PH: 'PresetVideoFormat'
     YUV444PS: 'PresetVideoFormat'
 
@@ -470,6 +478,12 @@ YUV444P14: Literal[PresetVideoFormat.YUV444P14]
 YUV420P16: Literal[PresetVideoFormat.YUV420P16]
 YUV422P16: Literal[PresetVideoFormat.YUV422P16]
 YUV444P16: Literal[PresetVideoFormat.YUV444P16]
+
+YUV420PH: Literal[PresetVideoFormat.YUV420PH]
+YUV420PS: Literal[PresetVideoFormat.YUV420PS]
+
+YUV422PH: Literal[PresetVideoFormat.YUV422PH]
+YUV422PS: Literal[PresetVideoFormat.YUV422PS]
 
 YUV444PH: Literal[PresetVideoFormat.YUV444PH]
 YUV444PS: Literal[PresetVideoFormat.YUV444PS]

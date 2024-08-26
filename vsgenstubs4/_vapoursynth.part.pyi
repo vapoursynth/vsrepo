@@ -1153,6 +1153,9 @@ class Plugin:
     @property
     def version(self) -> PluginVersion: ...
 
+    @property
+    def plugin_path(self) -> str: ...
+
 
 class Core:
     def __init__(self) -> NoReturn: ...

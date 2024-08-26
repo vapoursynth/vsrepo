@@ -312,27 +312,27 @@ MESSAGE_TYPE_FATAL: Literal[MessageType.MESSAGE_TYPE_FATAL]
 
 
 class FilterMode(IntEnum):
-    fmParallel: 'FilterMode'
-    fmParallelRequests: 'FilterMode'
-    fmUnordered: 'FilterMode'
-    fmFrameState: 'FilterMode'
+    PARALLEL: 'FilterMode'
+    PARALLEL_REQUESTS: 'FilterMode'
+    UNORDERED: 'FilterMode'
+    FRAME_STATE: 'FilterMode'
 
 
-fmParallel: Literal[FilterMode.fmParallel]
-fmParallelRequests: Literal[FilterMode.fmParallelRequests]
-fmUnordered: Literal[FilterMode.fmUnordered]
-fmFrameState: Literal[FilterMode.fmFrameState]
+PARALLEL: Literal[FilterMode.PARALLEL]
+PARALLEL_REQUESTS: Literal[FilterMode.PARALLEL_REQUESTS]
+UNORDERED: Literal[FilterMode.UNORDERED]
+FRAME_STATE: Literal[FilterMode.FRAME_STATE]
 
 
 class CoreCreationFlags(IntEnum):
-    ccfEnableGraphInspection: 'CoreCreationFlags'
-    ccfDisableAutoLoading: 'CoreCreationFlags'
-    ccfDisableLibraryUnloading: 'CoreCreationFlags'
+    ENABLE_GRAPH_INSPECTION: 'CoreCreationFlags'
+    DISABLE_AUTO_LOADING: 'CoreCreationFlags'
+    DISABLE_LIBRARY_UNLOADING: 'CoreCreationFlags'
 
 
-ccfEnableGraphInspection: Literal[CoreCreationFlags.ccfEnableGraphInspection]
-ccfDisableAutoLoading: Literal[CoreCreationFlags.ccfDisableAutoLoading]
-ccfDisableLibraryUnloading: Literal[CoreCreationFlags.ccfDisableLibraryUnloading]
+ENABLE_GRAPH_INSPECTION: Literal[CoreCreationFlags.ENABLE_GRAPH_INSPECTION]
+DISABLE_AUTO_LOADING: Literal[CoreCreationFlags.DISABLE_AUTO_LOADING]
+DISABLE_LIBRARY_UNLOADING: Literal[CoreCreationFlags.DISABLE_LIBRARY_UNLOADING]
 
 
 class MediaType(IntEnum):

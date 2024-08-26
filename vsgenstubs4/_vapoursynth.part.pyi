@@ -1187,8 +1187,16 @@ class Core:
 
     def remove_log_handler(self, handle: LogHandle) -> None: ...
 
+    @property
+    def core_version(self) -> VapourSynthVersion: ...
+
+    @property
+    def api_version(self) -> VapourSynthAPIVersion: ...
+
+    # deprecated
     def version(self) -> str: ...
 
+    # deprecated
     def version_number(self) -> int: ...
 
 #include <plugins/bound/Core>

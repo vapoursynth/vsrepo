@@ -1016,6 +1016,9 @@ class RawNode:
     @property
     def timings(self) -> int: ...
 
+    @timings.setter
+    def timings(self) -> None: ...
+
     @property
     def mode(self) -> FilterMode: ...
 

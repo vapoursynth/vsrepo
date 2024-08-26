@@ -162,7 +162,8 @@ __all__ = [
     'TransferCharacteristics',
         'TRANSFER_BT709', 'TRANSFER_UNSPECIFIED', 'TRANSFER_BT470_M', 'TRANSFER_BT470_BG', 'TRANSFER_BT601',
         'TRANSFER_ST240_M', 'TRANSFER_LINEAR', 'TRANSFER_LOG_100', 'TRANSFER_LOG_316', 'TRANSFER_IEC_61966_2_4',
-        'TRANSFER_IEC_61966_2_1', 'TRANSFER_BT2020_10', 'TRANSFER_BT2020_12', 'TRANSFER_ST2084', 'TRANSFER_ARIB_B67',
+        'TRANSFER_IEC_61966_2_1', 'TRANSFER_BT2020_10', 'TRANSFER_BT2020_12', 'TRANSFER_ST2084', 'TRANSFER_ST428',
+        'TRANSFER_ARIB_B67',
 
     'ColorPrimaries', 'PRIMARIES_BT709', 'PRIMARIES_UNSPECIFIED',
         'PRIMARIES_BT470_M', 'PRIMARIES_BT470_BG', 'PRIMARIES_ST170_M', 'PRIMARIES_ST240_M', 'PRIMARIES_FILM',
@@ -613,6 +614,7 @@ class TransferCharacteristics(IntEnum):
     TRANSFER_BT2020_10: 'TransferCharacteristics'
     TRANSFER_BT2020_12: 'TransferCharacteristics'
     TRANSFER_ST2084: 'TransferCharacteristics'
+    TRANSFER_ST428: 'TransferCharacteristics'
     TRANSFER_ARIB_B67: 'TransferCharacteristics'
 
 
@@ -630,6 +632,7 @@ TRANSFER_IEC_61966_2_1: Literal[TransferCharacteristics.TRANSFER_IEC_61966_2_1]
 TRANSFER_BT2020_10: Literal[TransferCharacteristics.TRANSFER_BT2020_10]
 TRANSFER_BT2020_12: Literal[TransferCharacteristics.TRANSFER_BT2020_12]
 TRANSFER_ST2084: Literal[TransferCharacteristics.TRANSFER_ST2084]
+TRANSFER_ST428: Literal[TransferCharacteristics.TRANSFER_ST428]
 TRANSFER_ARIB_B67: Literal[TransferCharacteristics.TRANSFER_ARIB_B67]
 
 

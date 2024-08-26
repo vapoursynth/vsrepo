@@ -1123,6 +1123,20 @@ class LogHandle:
     def __init__(self) -> NoReturn: ...
 
 
+class CoreTimings:
+    @property
+    def enabled(self) -> bool: ...
+
+    @enabled.setter
+    def enabled(self) -> None: ...
+
+    @property
+    def freed_nodes(self) -> int: ...
+
+    @freed_nodes.setter
+    def freed_nodes(self) -> None: ...
+
+
 class Function:
     plugin: 'Plugin'
     name: str
@@ -1153,6 +1167,8 @@ class Plugin:
 
 
 class Core:
+    timings: CoreTimings
+
     def __init__(self) -> NoReturn: ...
 
     @property

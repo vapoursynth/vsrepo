@@ -76,7 +76,7 @@
 
 from abc import abstractmethod
 from ctypes import c_void_p
-from enum import IntEnum
+from enum import IntEnum, IntFlag
 from fractions import Fraction
 from inspect import Signature
 from types import MappingProxyType, TracebackType
@@ -296,7 +296,7 @@ class PluginVersion(NamedTuple):
 # VapourSynth Enums and Constants
 
 
-class MessageType(IntEnum):
+class MessageType(IntFlag):
     MESSAGE_TYPE_DEBUG: 'MessageType'
     MESSAGE_TYPE_INFORMATION: 'MessageType'
     MESSAGE_TYPE_WARNING: 'MessageType'
@@ -324,7 +324,7 @@ UNORDERED: Literal[FilterMode.UNORDERED]
 FRAME_STATE: Literal[FilterMode.FRAME_STATE]
 
 
-class CoreCreationFlags(IntEnum):
+class CoreCreationFlags(IntFlag):
     ENABLE_GRAPH_INSPECTION: 'CoreCreationFlags'
     DISABLE_AUTO_LOADING: 'CoreCreationFlags'
     DISABLE_LIBRARY_UNLOADING: 'CoreCreationFlags'

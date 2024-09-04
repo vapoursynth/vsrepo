@@ -35,6 +35,19 @@
 			}
 		},
 		{
+			"version": "vsplugin/com.nodame.mvtools/a81d5b5/darwin-aarch64/2024-07-23T20.39.42Z",
+			"published": "2024-07-23T20:39:43Z",
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.mvtools/a81d5b5/darwin-aarch64/2024-07-23T20.39.42Z/MVTools-a81d5b5-darwin-aarch64.zip",
+				"files": {
+					"libmvtools.dylib": [
+						"libmvtools.dylib",
+						"8f8004b5bcbf8ea6c98ea1405f3d3281ce8cf169d4a7f7fcccbf4569cce51a0f"
+					]
+				}
+			}
+		},
+		{
 			"version": "v23",
 			"published": "2020-05-08T16:22:53Z",
 			"win32": {

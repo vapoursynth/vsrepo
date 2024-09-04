@@ -407,7 +407,7 @@ def compile_packages() -> None:
                 pfile.pop('ignore', None)
                 combined.append(pfile)
 
-    data = json.dumps(obj={ 'file-format': 3, 'packages': combined}, ensure_ascii=False, indent=2)
+    data = json.dumps(obj={ 'file-format': 4, 'packages': combined}, ensure_ascii=False, indent=2)
 
     try:
         os.remove('vspackages3.zip')

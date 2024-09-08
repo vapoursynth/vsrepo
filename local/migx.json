@@ -1,0 +1,72 @@
+{
+	"name": "vsmlrt-vsmigx",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "MIGraphX is a highly optimized AI inference runtime for AMD GPUs. It also uses benchmarking to find the optimal kernel",
+	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"identifier": "io.github.amusementclub.vs_migraphx",
+	"namespace": "migx",
+	"device": [
+		"hip"
+	],
+	"dependencies": [
+		"io.github.amusementclub.vsmlrt_script",
+		"io.github.amusementclub.vsmlrt_models",
+		"io.github.amusementclub.vsmlrt_ext_models",
+		"io.github.amusementclub.vsmlrt_contrib_models",
+		"io.github.amusementclub.vsmlrt_hip_migx_runtime"
+	],
+	"ignore": [
+		"v15.2",
+		"v15.1",
+		"v15",
+		"v14",
+		"v13.2",
+		"v13.1",
+		"v13",
+		"v12",
+		"v11",
+		"v10",
+		"v9.2",
+		"v9.1",
+		"v9",
+		"v8",
+		"v7",
+		"v6",
+		"v5",
+		"v4",
+		"v3",
+		"v2",
+		"model-20211209",
+		"v1",
+		"v0"
+	],
+	"releases": [
+		{
+			"version": "v15.4",
+			"published": "2024-09-07T01:05:26Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.4/VSMIGX-Windows-x64.v15.4.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"e13e85779c538e68b7679af1e8213c8b4041d5e10f3d8d821f2d2261333bb4d0"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.3",
+			"published": "2024-08-21T07:23:43Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.3/VSMIGX-Windows-x64.v15.3.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"327ac91de16bd53080cf1d98bc30badba518c98d2a2f3923d17ad34fc721ef93"
+					]
+				}
+			}
+		}
+	]
+}

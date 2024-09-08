@@ -384,7 +384,7 @@ def verify_package(pfile: MutableMapping, existing_identifiers: Sequence[str]) -
                 raise Exception('Referenced unknown identifier ' + dep + ' in ' + name)
     if 'device' in pfile:
         for dev in pfile['device']:
-            if dev not in ("cpu", "cuda", "opencl", "vulkan", "hip", "sycl"):
+            if dev not in ("cpu", "gpu", "cuda", "opencl", "vulkan", "hip", "sycl"):
                 raise Exception('Invalid device in ' + name)
 
 def compile_packages() -> None:

@@ -16,6 +16,32 @@
 	],
 	"releases": [
 		{
+			"version": "v15.4",
+			"published": "2024-09-07T01:05:26Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.4/scripts.v15.4.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"8aec0ffd0de2f0727d97472e42d4b1447bfd701c411974fb8eb5df5e50ea53ec"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.3",
+			"published": "2024-08-21T07:23:43Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.3/scripts.v15.3.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"665b61bbba06768e073c893065375ebc74a5f11d056967a2ed018da734314df5"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.2",
 			"published": "2024-08-07T06:42:45Z",
 			"script": {

@@ -25,6 +25,64 @@
 	],
 	"releases": [
 		{
+			"version": "v15.4",
+			"published": "2024-09-07T01:05:26Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.4/VSORT-Windows-x64.v15.4.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"6483d215d56d56b58354d0be10dbcca4596a2f0bfb827cd9971271e218b85383"
+					],
+					"DirectML.dll": [
+						"vsort/DirectML.dll",
+						"8addcf4953bf3682541efa2a6526e240e8e231df91a8285306b2b9725f422961"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"20af7e86d2ad8ca2e79949002fd35bc487367c9d94ebd9c92c674f654f1524de"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"f73b0506087182daf71231bbeb99bdaa032a7e64bbdac5d37097ca8d9dcad897"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"5068b30ebb88cb456423c288ba9b1466d7dbaccdff8337eb6e66a8b6f46ec944"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.3",
+			"published": "2024-08-21T07:23:43Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.3/VSORT-Windows-x64.v15.3.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"75eb69b2da4e44d35a19c0b9ec7be564d3084fb9e0230e1ebe669a84c64b1cb5"
+					],
+					"DirectML.dll": [
+						"vsort/DirectML.dll",
+						"8addcf4953bf3682541efa2a6526e240e8e231df91a8285306b2b9725f422961"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"20af7e86d2ad8ca2e79949002fd35bc487367c9d94ebd9c92c674f654f1524de"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"f73b0506087182daf71231bbeb99bdaa032a7e64bbdac5d37097ca8d9dcad897"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"5068b30ebb88cb456423c288ba9b1466d7dbaccdff8337eb6e66a8b6f46ec944"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.2",
 			"published": "2024-08-07T06:42:45Z",
 			"win64": {

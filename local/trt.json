@@ -27,6 +27,40 @@
 	],
 	"releases": [
 		{
+			"version": "v15.4",
+			"published": "2024-09-07T01:05:26Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.4/VSTRT-Windows-x64.v15.4.7z",
+				"files": {
+					"vsmlrt-cuda/trtexec.exe": [
+						"vsmlrt-cuda/trtexec.exe",
+						"4e728176a61fa6d673940755248a4478fb7afa821b57bffab6094a1defdcfbdf"
+					],
+					"vstrt.dll": [
+						"vstrt.dll",
+						"21a0a0a9d6f098ea684efcd5f40d0d7cd5786d10074dd0dec77acf3e2cf74e81"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.3",
+			"published": "2024-08-21T07:23:43Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.3/VSTRT-Windows-x64.v15.3.7z",
+				"files": {
+					"vsmlrt-cuda/trtexec.exe": [
+						"vsmlrt-cuda/trtexec.exe",
+						"27b0890a2fb21ccc4e78e9ca629a26cb63c467199639a4ec2fc796645de1d3fc"
+					],
+					"vstrt.dll": [
+						"vstrt.dll",
+						"77bbad6fc1074b8dfd13589ae7728212578ebdab227910cf56fa8bbaccf901f6"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.2",
 			"published": "2024-08-07T06:42:45Z",
 			"win64": {

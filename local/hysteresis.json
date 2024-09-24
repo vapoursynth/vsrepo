@@ -10,6 +10,24 @@
 		{
 			"version": "v1.0.1",
 			"published": "2024-09-22T16:31:00Z",
+			"darwin-x86_64": {
+				"url": "https://github.com/sgt0/vapoursynth-hysteresis/releases/download/v1.0.1/hysteresis-x86_64-apple-darwin.zip",
+				"files": {
+					"libhysteresis.dylib": [
+						"libhysteresis.dylib",
+						"3954edb4f2b16ad8d8a4e84e2db9c49b12b97d0a97df3061657203360f63670a"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/sgt0/vapoursynth-hysteresis/releases/download/v1.0.1/hysteresis-x86_64-unknown-linux-gnu.zip",
+				"files": {
+					"libhysteresis.so": [
+						"libhysteresis.so",
+						"81f2e766e4e84965a4b89d49d208f6a9b54ab2c8db8364b813d6e4bbd4613b6e"
+					]
+				}
+			},
 			"win64": {
 				"url": "https://github.com/sgt0/vapoursynth-hysteresis/releases/download/v1.0.1/hysteresis-x86_64-pc-windows-gnu.zip",
 				"files": {

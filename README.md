@@ -90,3 +90,23 @@ Usage example:
 vsrupdate.py update-local -o -g <github token>
 vsrupdate.py compile
 ```
+
+# VSRUpdate.py Usage Guide
+
+`VSRUpdate.py` has two main purposes:
+
+1. **Compile Command**: Combines individual package files into a single distributable file.
+2. **Update-Local Command**: Queries the GitHub API to automatically add new package releases.
+
+This tool is useful if you need to update or add new packages from GitHub repositories.
+
+---
+
+## Commands
+
+### 1. `update-local`
+The `update-local` command checks for new releases of packages on GitHub and updates your local repository. It uses the GitHub API to fetch the latest versions of repositories you're tracking.
+
+**Syntax:**
+```bash
+vsrupdate.py update-local [options]

@@ -47,7 +47,34 @@ consideration so uninstalling plugins may break scripts.
 ```
 vsrepo.py uninstall nnedi3
 ```
+# Fork This Repository
 
+To contribute to the project, make a fork using the instructions below
+
+---
+## Step 1: Fork the Repository
+
+1) At the top-right of the repository page, click the **Fork** button.
+
+2) Select your GitHub account or an organization to fork the repository to. This will create a copy of the repository in your account.
+
+---
+
+## Step 2: Clone Your Fork
+
+Once you’ve forked the repository, you can clone it to your local machine for development.
+
+1. Navigate to your forked repository on GitHub (e.g., `https://github.com/your-username/vsrepo`).
+2. Click the green **Code** button and copy the repository’s URL. You can choose HTTPS, SSH, or GitHub CLI.
+
+   ![Clone button](https://docs.github.com/assets/images/help/repository/code-button.png)
+
+3. Open your terminal and run the following command to clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/vsrepo.git
+
+## Step 3: contribute to the project!
 
 VSRUpdate
 ---------

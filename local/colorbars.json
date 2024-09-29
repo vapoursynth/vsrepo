@@ -9,45 +9,6 @@
 	"github": "https://github.com/ifb/vapoursynth-colorbars",
 	"releases": [
 		{
-			"version": "vsplugin/com.ifb.colorbars/R4/darwin-aarch64/2024-07-23T14.46.34Z",
-			"published": "2024-07-23T14:46:35Z",
-			"darwin-aarch64": {
-				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.ifb.colorbars/R4/darwin-aarch64/2024-07-23T14.46.34Z/ColorBars-R4-darwin-aarch64.zip",
-				"files": {
-					"libcolorbars.dylib": [
-						"libcolorbars.dylib",
-						"2f644580bfc5da0e6faf2e883a94d670776f5b864d10f677905bbfbbeba0829e"
-					]
-				}
-			}
-		},
-		{
-			"version": "colorbars-2d2de22687dcead00d395fdf2f88c33ec2c3ab7e",
-			"published": "2024-07-12T11:44:48Z",
-			"darwin-x86_64": {
-				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/colorbars-2d2de22687dcead00d395fdf2f88c33ec2c3ab7e/ColorBars-R4-darwin-x86_64.zip",
-				"files": {
-					"libcolorbars.dylib": [
-						"libcolorbars.dylib",
-						"8df5b67e1a7245a0a09cc66ab83b9df88aa350607cd186e4c8063fe3a9623ae6"
-					]
-				}
-			}
-		},
-		{
-			"version": "colorbars-5d3144a0436c55075733cdf1d587fb72929eaff1",
-			"published": "2024-07-12T11:05:25Z",
-			"linux-glibc-x86_64": {
-				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/colorbars-5d3144a0436c55075733cdf1d587fb72929eaff1/ColorBars-R4-linux-glibc-x86_64.zip",
-				"files": {
-					"libcolorbars.so": [
-						"libcolorbars.so",
-						"c70aa2a2569d2997fa2ad0edc0818a8fafaf0a31bde6005d12d6f71fb5028824"
-					]
-				}
-			}
-		},
-		{
 			"version": "R4",
 			"published": "2023-01-05T20:23:17Z",
 			"win32": {
@@ -65,6 +26,33 @@
 					"colorbars.dll": [
 						"colorbars-R4/Win64/colorbars.dll",
 						"7bffc1a1dae0a34fd41795ce58d1c9b3c3f3971c4351b586c68b50a8bc63dbba"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/colorbars-5d3144a0436c55075733cdf1d587fb72929eaff1/ColorBars-R4-linux-glibc-x86_64.zip",
+				"files": {
+					"libcolorbars.so": [
+						"libcolorbars.so",
+						"c70aa2a2569d2997fa2ad0edc0818a8fafaf0a31bde6005d12d6f71fb5028824"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/colorbars-2d2de22687dcead00d395fdf2f88c33ec2c3ab7e/ColorBars-R4-darwin-x86_64.zip",
+				"files": {
+					"libcolorbars.dylib": [
+						"libcolorbars.dylib",
+						"8df5b67e1a7245a0a09cc66ab83b9df88aa350607cd186e4c8063fe3a9623ae6"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.ifb.colorbars/R4/darwin-aarch64/2024-07-23T14.46.34Z/ColorBars-R4-darwin-aarch64.zip",
+				"files": {
+					"libcolorbars.dylib": [
+						"libcolorbars.dylib",
+						"2f644580bfc5da0e6faf2e883a94d670776f5b864d10f677905bbfbbeba0829e"
 					]
 				}
 			}

@@ -13,45 +13,6 @@
 	],
 	"releases": [
 		{
-			"version": "nnedi3-11f830025f46ea2a045e148395db48d771edba19",
-			"published": "2024-07-15T14:43:12Z",
-			"darwin-aarch64": {
-				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/nnedi3-11f830025f46ea2a045e148395db48d771edba19/NNEDI3-v12-darwin-aarch64.zip",
-				"files": {
-					"libnnedi3.dylib": [
-						"libnnedi3.dylib",
-						"ec677583c0b5976f890122b58ac010da2a5a1bfae4a96accb029d6cb8c096cd8"
-					]
-				}
-			}
-		},
-		{
-			"version": "nnedi3-a8b92beec0e027dcd7cdfc093aaf0c41687c233f",
-			"published": "2024-07-12T11:49:33Z",
-			"darwin-x86_64": {
-				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/nnedi3-a8b92beec0e027dcd7cdfc093aaf0c41687c233f/NNEDI3-v12-darwin-x86_64.zip",
-				"files": {
-					"libnnedi3.dylib": [
-						"libnnedi3.dylib",
-						"7c3dd64a9cdbcea67d08db6dfbe430f0573e164ce897a369ce46c5777bec7e43"
-					]
-				}
-			}
-		},
-		{
-			"version": "nnedi3-e39255010afd23b5a5d5074eca339f9ec4de1489",
-			"published": "2024-07-11T17:52:48Z",
-			"linux-glibc-x86_64": {
-				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/nnedi3-e39255010afd23b5a5d5074eca339f9ec4de1489/NNEDI3-v12-linux-glibc-x86_64.zip",
-				"files": {
-					"libnnedi3.so": [
-						"libnnedi3.so",
-						"fe7e14b58377ad6e480d7e7f81bffe8e60f333521e9b899cd26a1dbff8f825e3"
-					]
-				}
-			}
-		},
-		{
 			"version": "v12",
 			"published": "2018-09-29T16:09:17Z",
 			"win32": {
@@ -69,6 +30,33 @@
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
 						"9e3fa8cb07759aa8463a608fe4211ef4d8e2c398f3c4d41e593bdbf5c5440d61"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/nnedi3-11f830025f46ea2a045e148395db48d771edba19/NNEDI3-v12-darwin-aarch64.zip",
+				"files": {
+					"libnnedi3.dylib": [
+						"libnnedi3.dylib",
+						"ec677583c0b5976f890122b58ac010da2a5a1bfae4a96accb029d6cb8c096cd8"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/nnedi3-a8b92beec0e027dcd7cdfc093aaf0c41687c233f/NNEDI3-v12-darwin-x86_64.zip",
+				"files": {
+					"libnnedi3.dylib": [
+						"libnnedi3.dylib",
+						"7c3dd64a9cdbcea67d08db6dfbe430f0573e164ce897a369ce46c5777bec7e43"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/nnedi3-e39255010afd23b5a5d5074eca339f9ec4de1489/NNEDI3-v12-linux-glibc-x86_64.zip",
+				"files": {
+					"libnnedi3.so": [
+						"libnnedi3.so",
+						"fe7e14b58377ad6e480d7e7f81bffe8e60f333521e9b899cd26a1dbff8f825e3"
 					]
 				}
 			}

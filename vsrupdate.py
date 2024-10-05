@@ -416,7 +416,7 @@ def update_package(name: str) -> int:
                         if new_rels[version].get('published', None) == None:
                             new_rels[version]['published'] = t_data['published']
                         if new_rels[version].get(target, None) == None:
-                            temp_fn = fetch_url_to_cache(t_data['url'], name, version, pfile['name'] + ' ' + version + ' ' + target)
+                            temp_fn = fetch_url_to_cache(t_data['url'], name, version.replace(':','-'), pfile['name'] + ' ' + version + ' ' + target)
                             new_rels[version][target] = { 'url': t_data['url'], 'files': get_installable_files_list(temp_fn)}
         return write_new_releses(name, pfile, new_rels, rel_order)
     else:

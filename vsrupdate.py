@@ -28,17 +28,19 @@ import os.path
 import datetime as dt
 import argparse
 import hashlib
+import pathlib
 import subprocess
 import difflib
 import ftplib
 import zipfile
 from typing import Any, List, MutableMapping, Optional, Dict, Sequence, Tuple, TypeVar, Union
 
+is_windows: bool = True
+
 try:
     import winreg
 except ImportError:
-    print('{} is only supported on Windows.'.format(__file__))
-    sys.exit(1)
+    is_windows = False
 
 try:
     import tqdm  # type: ignore
@@ -50,6 +52,7 @@ parser.add_argument('operation', choices=['compile', 'update-local', 'upload', '
 parser.add_argument('-g', dest='git_token', help='OAuth access token for github')
 parser.add_argument('-p', dest='package', help='Package to update')
 parser.add_argument('-o', action='store_true', dest='overwrite', help='Overwrite existing package file')
+parser.add_argument('-multi-url', dest='multi_url', help='URL of GitHub repository, that provides releases for different plugins')
 parser.add_argument('-host', dest='host', nargs=1, help='FTP Host')
 parser.add_argument('-user', dest='user', nargs=1, help='FTP User')
 parser.add_argument('-passwd', dest='passwd', nargs=1, help='FTP Password')
@@ -57,19 +60,23 @@ parser.add_argument('-dir', dest='dir', nargs=1, help='FTP dir')
 parser.add_argument('-url', dest='packageurl', help='URL of the archive from which a package is to be created')
 parser.add_argument('-pname', dest='packagename', help='Filename or namespace of your package')
 parser.add_argument('-script', action='store_true', dest='packagescript', help='Type of the package is script. Otherwise a package of type plugin is created')
-parser.add_argument('-types', dest='packagefiletypes', nargs='+', default=['.dll', '.py'], help='Which file types should be included. default is .dll')
+parser.add_argument('-types', dest='packagefiletypes', nargs='+', default=['.dll', '.so', '.dylib', '.py'], help='Which file types should be included. default is .dll/.so/.dylib/.py')
 parser.add_argument('-kf', dest='keepfolder', type=int, default=-1, nargs='?', help='Keep the folder structure')
 
 args = parser.parse_args()
 
-cmd7zip_path: str = '7z.exe'
+
 time_limit: int = 14  # time limit after a commit is treated as new in days | (updatemode: git-commits)
 
-try:
-    with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
-        cmd7zip_path = winreg.QueryValueEx(regkey, 'Path')[0] + '7z.exe'
-except OSError:
-    pass
+if is_windows:
+    cmd7zip_path: str = '7z.exe'
+    try:
+        with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
+            cmd7zip_path = winreg.QueryValueEx(regkey, 'Path')[0] + '7z.exe'
+    except OSError:
+        pass
+else:
+    cmd7zip_path: str = '7z'
 
 def similarity(a: str, b: str) -> float:
     return difflib.SequenceMatcher(None, a, b).ratio()
@@ -82,10 +89,10 @@ def get_most_similar(a: str, b: Sequence[str]) -> str:
             res = (v, s)
     return res[1]
 
-def get_git_api_url(url: str) -> Optional[str]:
+def get_git_api_url(url: str, page: int = 0) -> Optional[str]:
     if url.startswith('https://github.com/'):
         s = url.rsplit('/', 3)
-        return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/releases'
+        return f'https://api.github.com/repos/{s[-2]}/{s[-1]}/releases' if page == 0 else f'https://api.github.com/repos/{s[-2]}/{s[-1]}/releases?page={str(page)}'
     else:
         return None
 
@@ -136,6 +143,29 @@ def fetch_url_to_cache(url: str, name: str, tag_name: str, desc: Optional[str] =
                     pl.write(data)
     return cache_path
 
+def get_multi_url_releases(multi_url: str) -> dict:
+    rel = {}
+    page = 1
+    while True:
+        apifile = json.loads(fetch_url(get_git_api_url(multi_url, page), 'Multi-release repository', token=args.git_token))
+        page += 1
+        if len(apifile) < 1:
+            break
+        for r in apifile:
+            if r['tag_name'].startswith('vsplugin/') == False:
+                continue
+            if r['prerelease']:
+                continue
+            if len(r.get('assets', [])) < 1:
+                continue
+            r_info = r['tag_name'].split('/')
+            if r_info[2].startswith('git-'):
+                r_info[2] = r_info[2].replace('git-','git:')
+            rel.setdefault(r_info[1], {})
+            rel[r_info[1]].setdefault(r_info[2], {})
+            rel[r_info[1]][r_info[2]][r_info[3]] = {'published': r['published_at'], 'url': r['assets'][0]['browser_download_url']}
+    return rel
+
 def list_archive_files(fn: str) -> MutableMapping:
     result = subprocess.run([cmd7zip_path, "l", "-ba", fn], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     result.check_returncode()
@@ -184,6 +214,22 @@ def decompress_and_hash(archivefn: str, fn: str, insttype: str) -> Tuple[Dict, s
                     result.check_returncode()
                     return (existing_files[fn_guess], hashlib.sha256(result.stdout).hexdigest())
     raise Exception('No file match found')
+
+def get_installable_files_list(temp_fn: str) -> dict:
+    ret = {}
+    listzip = list_archive_files(temp_fn)
+    files_to_hash: List[str] = []
+    for f in listzip.values():
+        if pathlib.Path(f).suffix: # simple folder filter
+            if "*" in args.packagefiletypes:
+                files_to_hash.append(str(f))
+            else:
+                if pathlib.Path(f).suffix in args.packagefiletypes:
+                    files_to_hash.append(str(f))
+    for fname in files_to_hash:
+        fullpath, hash, arch = decompress_hash_simple(temp_fn, fname)
+        ret[fname] = [ fullpath, hash ]
+    return ret
 
 def get_latest_installable_release(p: MutableMapping, bin_name: str) -> Optional[MutableMapping]:
     for rel in p['releases']:
@@ -278,7 +324,7 @@ def update_package(name: str) -> int:
                     for fn in latest_rel['script']['files']:  # type: ignore
                         new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')  # type: ignore
                         new_rel_entry['script']['files'][fn] = [new_fn, digest]
-						
+
                         new_rels[new_rel_entry['version']] = new_rel_entry
                 else:
                     print(f'skipping git commit(s) - this and the last commit must be at least {time_limit} days apart')
@@ -349,6 +395,29 @@ def update_package(name: str) -> int:
                         new_rel_entry.pop('script', None)
                         print('No script found')
                 new_rels[new_rel_entry['version']] = new_rel_entry
+        if is_plugin and multi_rel.get(pfile['identifier'], None) != None:
+            for version, targets in multi_rel[pfile['identifier']].items():
+                if version in existing_rel_list:
+                    for rel in pfile['releases']:
+                        if rel['version'] == version:
+                            for target, t_data in targets.items():
+                                if rel.get(target, None) == None:
+                                    temp_fn = fetch_url_to_cache(t_data['url'], name, rel['version'], pfile['name'] + ' ' + rel['version'] + ' ' + target)
+                                    rel[target] = { 'url': t_data['url'], 'files': get_installable_files_list(temp_fn)}
+                                    new_rels[rel['version']] = rel
+                            break
+                else:
+                    if version not in new_rels.keys():
+                        print(version + ' (new from multi-url)')
+                        new_rels[version] = { 'version': version }
+                        if version not in rel_order:
+                            rel_order.insert(0, version)
+                    for target, t_data in targets.items():
+                        if new_rels[version].get('published', None) == None:
+                            new_rels[version]['published'] = t_data['published']
+                        if new_rels[version].get(target, None) == None:
+                            temp_fn = fetch_url_to_cache(t_data['url'], name, version, pfile['name'] + ' ' + version + ' ' + target)
+                            new_rels[version][target] = { 'url': t_data['url'], 'files': get_installable_files_list(temp_fn)}
         return write_new_releses(name, pfile, new_rels, rel_order)
     else:
         print(f'Only github and pypi projects supported, {name} not scanned')
@@ -463,6 +532,7 @@ if args.operation == 'compile':
     compile_packages()
     print('Packages successfully compiled')
 elif args.operation == 'update-local':
+    multi_rel = get_multi_url_releases(args.multi_url) if args.multi_url != None else {}
     if args.package is None:
         num_skipped = 0
         num_nochange = 0
@@ -480,8 +550,6 @@ elif args.operation == 'update-local':
     else:
         update_package(args.package)
 elif args.operation == 'create-package':
-
-    import pathlib
 
     if not args.packageurl:
         print('-url parameter is missing')

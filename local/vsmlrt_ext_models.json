@@ -7,6 +7,7 @@
 	"identifier": "io.github.amusementclub.vsmlrt_ext_models",
 	"namespace": "vsmlrt_ext_models",
 	"ignore": [
+		"v15.5",
 		"v15.4",
 		"v15.3",
 		"v15.2",

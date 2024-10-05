@@ -21,6 +21,24 @@
 						"372d0399d9806026e5e3631a957525364c5bf06fd43766f111505769ca0c1aca"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.tcanny/r14/linux-glibc-x86_64/2024-09-30T20.55.31%2B00.00Z/TCanny-r14-linux-glibc-x86_64.zip",
+				"files": {
+					"libtcanny.so": [
+						"libtcanny.so",
+						"481f1b4026d815256a1f44f826964e95c09c85a83c8da12c40dc50275d59283a"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.tcanny/r14/darwin-x86_64/2024-09-30T21.00.45%2B00.00Z/TCanny-r14-darwin-x86_64.zip",
+				"files": {
+					"libtcanny.dylib": [
+						"libtcanny.dylib",
+						"d2124036f3ad8ea4dfb1f064f87f64d6cff4111b602f375bdb1c72ad63c2d5b2"
+					]
+				}
 			}
 		},
 		{

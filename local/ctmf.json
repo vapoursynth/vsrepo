@@ -23,6 +23,33 @@
 						"c5f39058dbe041e67c12424bbbb85ba5866a9fc4143d08e5175ccd866a338a09"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.ctmf/r5/linux-glibc-x86_64/2024-09-30T20.52.18%2B00.00Z/CTMF-r5-linux-glibc-x86_64.zip",
+				"files": {
+					"libctmf.so": [
+						"libctmf.so",
+						"ade32159cf534fc512eb5f8cd69ceeadd2573e1efc7539d4e71220b78b1a71a4"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.ctmf/r5/darwin-x86_64/2024-09-30T20.54.04%2B00.00Z/CTMF-r5-darwin-x86_64.zip",
+				"files": {
+					"libctmf.dylib": [
+						"libctmf.dylib",
+						"cc92472ec511d6cca0cd294a5137e25d2dbbfeee7db356747c953100abe7fb50"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.ctmf/r5/darwin-aarch64/2024-09-30T20.52.41%2B00.00Z/CTMF-r5-darwin-aarch64.zip",
+				"files": {
+					"libctmf.dylib": [
+						"libctmf.dylib",
+						"6c16d7c64c97e11a34b178d53ae320c274718747d8ca6c63fc4e0a42fe15f2be"
+					]
+				}
 			}
 		},
 		{

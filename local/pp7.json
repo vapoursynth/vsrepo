@@ -7,8 +7,32 @@
 	"category": "Other",
 	"identifier": "com.holywu.pp7",
 	"namespace": "pp7",
-	"ignore": ["r4.1"],
+	"ignore": [
+		"r4.1"
+	],
 	"releases": [
+		{
+			"version": "r4.1",
+			"published": "2024-09-30T20:54:41Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.pp7/r4.1/linux-glibc-x86_64/2024-09-30T20.54.40%2B00.00Z/DeblockPP7-r4.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libdeblockpp7.so": [
+						"libdeblockpp7.so",
+						"965a7eac35e4c770005173cc71b9c6f6123a333f5e13ee420056f2c3f39d7990"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.pp7/r4.1/darwin-x86_64/2024-09-30T20.58.52%2B00.00Z/DeblockPP7-r4.1-darwin-x86_64.zip",
+				"files": {
+					"libdeblockpp7.dylib": [
+						"libdeblockpp7.dylib",
+						"ab8613bacf8faa9ae3d556b481a529bd0537a27546e8431d68133cce20e2c184"
+					]
+				}
+			}
+		},
 		{
 			"version": "r4",
 			"published": "2018-04-29T02:05:04Z",

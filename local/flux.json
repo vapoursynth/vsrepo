@@ -29,6 +29,33 @@
 						"c4a7e5cc6ee1feb6279d36377208337a4fc6fa7c3849f355893d505a37c0ed8a"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.fluxsmooth/v2/linux-glibc-x86_64/2024-09-30T20.53.16%2B00.00Z/FluxSmooth-v2-linux-glibc-x86_64.zip",
+				"files": {
+					"libfluxsmooth.so": [
+						"libfluxsmooth.so",
+						"0ba5ece13c2727ffaffc25b8879cac3e52957c1b7dead39e858e21a93d5dfaa6"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.fluxsmooth/v2/darwin-x86_64/2024-09-30T20.56.06%2B00.00Z/FluxSmooth-v2-darwin-x86_64.zip",
+				"files": {
+					"libfluxsmooth.dylib": [
+						"libfluxsmooth.dylib",
+						"80451f66412fc1852db2fcb1b88fc0d9854816aee67078e8a61666ec5db604bd"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.fluxsmooth/v2/darwin-aarch64/2024-09-30T20.53.49%2B00.00Z/FluxSmooth-v2-darwin-aarch64.zip",
+				"files": {
+					"libfluxsmooth.dylib": [
+						"libfluxsmooth.dylib",
+						"e76f049c9e66ec1e28c3d0922defe447a2c5a2c2fd72260fa03d171664f9c1e4"
+					]
+				}
 			}
 		},
 		{

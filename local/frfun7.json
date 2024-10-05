@@ -27,6 +27,33 @@
 						"3076d933f44067608880a3bc3561584944e51893fed8b5073a2019933609ae22"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.frfun7/v2/linux-glibc-x86_64/2024-09-30T20.53.25%2B00.00Z/Frfun7-v2-linux-glibc-x86_64.zip",
+				"files": {
+					"libfrfun7.so": [
+						"libfrfun7.so",
+						"78fe8d3bb0ab0a600764a6f04ddf6eec992ab7c9795aa2676a3e31537970e7fe"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.frfun7/v2/darwin-x86_64/2024-09-30T20.56.24%2B00.00Z/Frfun7-v2-darwin-x86_64.zip",
+				"files": {
+					"libfrfun7.dylib": [
+						"libfrfun7.dylib",
+						"b4878415a7cd31d0f727e92bac58a76d6e23cf86c58aecfc2c3ab1a350fcade8"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.frfun7/v2/darwin-aarch64/2024-09-30T20.53.57%2B00.00Z/Frfun7-v2-darwin-aarch64.zip",
+				"files": {
+					"libfrfun7.dylib": [
+						"libfrfun7.dylib",
+						"9b99cc025fdeb9a83c41e6d4d62a35d93a3ca924f6be294fdf41574326186f96"
+					]
+				}
 			}
 		},
 		{

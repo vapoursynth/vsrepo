@@ -19,6 +19,24 @@
 						"e8970079a7d388be57c0756470f9627547561116f8955b55413808601e72ac48"
 					]
 				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R7/darwin-x86_64/2024-10-01T19.44.38%2B00.00Z/BestSource-R7-darwin-x86_64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"7f35efbb152e617ac9298b6c9915168cd12302392a0bd0bfae9f26705f4465da"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R7/darwin-aarch64/2024-10-01T15.44.50%2B00.00Z/BestSource-R7-darwin-aarch64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"2a4ba6a721c143358eec60375acf87a8386c31f1bf0b42c7f9f816d547aaf305"
+					]
+				}
 			}
 		},
 		{

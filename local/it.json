@@ -8,7 +8,13 @@
 	"identifier": "in.7086.it",
 	"namespace": "it",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-IT",
-	"ignore": ["v0.1", "v0.2", "v0.3", "v0.4", "v1.0"],
+	"ignore": [
+		"v0.1",
+		"v0.2",
+		"v0.3",
+		"v0.4",
+		"v1.0"
+	],
 	"releases": [
 		{
 			"version": "v1.2",
@@ -28,6 +34,15 @@
 					"vs_it.dll": [
 						"msvc/x64/Release SSE/vs_it.dll",
 						"35a004bafcb3047db562219a22b5f10be926ccca250c9f035a82e2025ab36599"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/in.7086.it/v1.2/linux-glibc-x86_64/2024-09-30T20.53.49%2B00.00Z/IT-v1.2-linux-glibc-x86_64.zip",
+				"files": {
+					"libit.so": [
+						"libit.so",
+						"e939e283c7530479abc801105be436817778d2c1ae05cf1af94334d3340f77f9"
 					]
 				}
 			}

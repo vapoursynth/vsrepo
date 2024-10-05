@@ -28,6 +28,33 @@
 						"b372542f3a3dceb0406ac7fa56f3bdc986dbb448af102ba260463f15ba1a0024"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.fieldhint/v3/linux-glibc-x86_64/2024-09-30T20.53.08%2B00.00Z/FieldHint-v3-linux-glibc-x86_64.zip",
+				"files": {
+					"libfieldhint.so": [
+						"libfieldhint.so",
+						"561c6df263e69bb49380fa696725388a75d2c1377139147defcc3430863afb94"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.fieldhint/v3/darwin-x86_64/2024-09-30T20.55.48%2B00.00Z/FieldHint-v3-darwin-x86_64.zip",
+				"files": {
+					"libfieldhint.dylib": [
+						"libfieldhint.dylib",
+						"0de8584684b70909a23bc9d30806688af0062c482f02610a577d728a52af1d68"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.fieldhint/v3/darwin-aarch64/2024-09-30T20.53.39%2B00.00Z/FieldHint-v3-darwin-aarch64.zip",
+				"files": {
+					"libfieldhint.dylib": [
+						"libfieldhint.dylib",
+						"f1479419494bd02f12f4d5f17ac5b7d39787b4e88962d194c2efd7f3d666d3ec"
+					]
+				}
 			}
 		},
 		{

@@ -18,6 +18,33 @@
 						"a0d8e023b3bbdbc2d7ec54a7708ca3c47caa7b44f2960bdb8fadfc13923520c3"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/moe.grass.addnoise/r4/linux-glibc-x86_64/2024-09-30T20.54.27%2B00.00Z/vs-noise-r4-linux-glibc-x86_64.zip",
+				"files": {
+					"libaddnoise.so": [
+						"libaddnoise.so",
+						"62073ae7d5d94b50a17482bdecb617cf01a7fedc71a664f1dfec36d6dbbfcaf1"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/moe.grass.addnoise/r4/darwin-x86_64/2024-09-30T20.58.26%2B00.00Z/vs-noise-r4-darwin-x86_64.zip",
+				"files": {
+					"libaddnoise.dylib": [
+						"libaddnoise.dylib",
+						"436be9bbb3c739e50e5a53504afe9d2cf172dd23d04b4189ba2fed04d1db8923"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/moe.grass.addnoise/r4/darwin-aarch64/2024-09-30T20.55.09%2B00.00Z/vs-noise-r4-darwin-aarch64.zip",
+				"files": {
+					"libaddnoise.dylib": [
+						"libaddnoise.dylib",
+						"24ed635afb024eb6b7b0f43f7b0845be587bd118a9ab7d21819a280dee46f139"
+					]
+				}
 			}
 		},
 		{

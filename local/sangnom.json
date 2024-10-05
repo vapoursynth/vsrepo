@@ -29,6 +29,33 @@
 						"eb656eb0c7c7b54f62138bda2342d3a4a77fd21df0eb29c991e157a8ae4d82aa"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.mio.sangnom/r42/linux-glibc-x86_64/2024-09-30T20.55.05%2B00.00Z/SangNom-r42-linux-glibc-x86_64.zip",
+				"files": {
+					"libsangnom.so": [
+						"libsangnom.so",
+						"975338bacdb484efe376c03b31276136ca5b960c3c4002e48836f13ebad6c814"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.mio.sangnom/r42/darwin-x86_64/2024-09-30T21.00.01%2B00.00Z/SangNom-r42-darwin-x86_64.zip",
+				"files": {
+					"libsangnom.dylib": [
+						"libsangnom.dylib",
+						"088a6acff00e6bd38d186c4f3a004119e282fb6818e80bb3492fb1b1ecd3396f"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.mio.sangnom/r42/darwin-aarch64/2024-09-30T20.55.58%2B00.00Z/SangNom-r42-darwin-aarch64.zip",
+				"files": {
+					"libsangnom.dylib": [
+						"libsangnom.dylib",
+						"da6ec4a713e2fb8e55b4b4cfbd2a2478a594a90abadca4de2409fc426925b2ba"
+					]
+				}
 			}
 		},
 		{

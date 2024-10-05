@@ -29,6 +29,33 @@
 						"cea13e4ecf0d430e42a6455cb3a608d4eddd7f2c13f1215489604667b4bd8093"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.awarpsharp2/v4/linux-glibc-x86_64/2024-07-22T18.49.37Z/AWarpSharp2-v4-linux-glibc-x86_64.zip",
+				"files": {
+					"libawarpsharp2.so": [
+						"libawarpsharp2.so",
+						"04cc683115e78f73b0815c3ea97de583889a0292619d315c33b221fcc10efcc5"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.awarpsharp2/v4/darwin-x86_64/2024-07-22T18.51.03Z/AWarpSharp2-v4-darwin-x86_64.zip",
+				"files": {
+					"libawarpsharp2.dylib": [
+						"libawarpsharp2.dylib",
+						"5a763e5d158de3671f65ab1a7d64f0080a66e67098085633615c942bda13775c"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.awarpsharp2/v4/darwin-aarch64/2024-07-22T18.52.31Z/AWarpSharp2-v4-darwin-aarch64.zip",
+				"files": {
+					"libawarpsharp2.dylib": [
+						"libawarpsharp2.dylib",
+						"72bf94235252930cbd4475ac50c53e98a02ff42aa742e3e1bc493d46f0aa1028"
+					]
+				}
 			}
 		},
 		{

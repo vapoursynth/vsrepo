@@ -29,6 +29,24 @@
 						"549216ce4f036daa71da6199b75b29b7c13969d58f20c1be6ad2974ffcd4f96c"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.decross/v1/linux-glibc-x86_64/2024-09-30T20.52.29%2B00.00Z/DeCross-v1-linux-glibc-x86_64.zip",
+				"files": {
+					"libdecross.so": [
+						"libdecross.so",
+						"200c92031722cbebe4bc336c66c6af19bec0aa98dac3e385ef38da7c3930263a"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.decross/v1/darwin-x86_64/2024-09-30T20.54.26%2B00.00Z/DeCross-v1-darwin-x86_64.zip",
+				"files": {
+					"libdecross.dylib": [
+						"libdecross.dylib",
+						"3fa2e0aa5c091ec16b523b56edb358428179bde215dc5d0917914c4ea6280856"
+					]
+				}
 			}
 		}
 	]

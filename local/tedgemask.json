@@ -28,6 +28,33 @@
 						"5ffc95c8160013267de8c79a8ad88daa7c4fa5ec4bbf3c9feaca089677c438b0"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tedgemask/v1/linux-glibc-x86_64/2024-09-30T20.55.45%2B00.00Z/TEdgeMask-v1-linux-glibc-x86_64.zip",
+				"files": {
+					"libtedgemask.so": [
+						"libtedgemask.so",
+						"e2a3a36d89c37676d297ef3fa831852914160b6a7a15671ea8329239159a6b12"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tedgemask/v1/darwin-x86_64/2024-09-30T21.01.13%2B00.00Z/TEdgeMask-v1-darwin-x86_64.zip",
+				"files": {
+					"libtedgemask.dylib": [
+						"libtedgemask.dylib",
+						"b3e2408bf7eed378c9b54c84bb60e39513fa77de273616b16480b7149732a390"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tedgemask/v1/darwin-aarch64/2024-09-30T20.56.33%2B00.00Z/TEdgeMask-v1-darwin-aarch64.zip",
+				"files": {
+					"libtedgemask.dylib": [
+						"libtedgemask.dylib",
+						"cb75d15ab50f471092056cfcfec942b3d33d6e5dad70e6e5c7202b88ad704ce2"
+					]
+				}
 			}
 		}
 	]

@@ -19,6 +19,15 @@
 						"c33762b6d55b1d3ca8056ed4e2ed2ca6c77ff4824391230df671e2c781c02a8a"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.jincresize/r7.2/linux-glibc-x86_64/2024-09-30T20.53.53%2B00.00Z/JincResize-r7.2-linux-glibc-x86_64.zip",
+				"files": {
+					"libjincresize.so": [
+						"libjincresize.so",
+						"f9e22907ee5b09ea63a220def76039d08ef41c76653a507f8d7aeaeb37ee71fd"
+					]
+				}
 			}
 		},
 		{

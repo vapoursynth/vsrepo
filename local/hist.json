@@ -27,6 +27,33 @@
 						"cedbae0e692727799c3b523a46bb4774c6aacbfb62c2c325aafaa4d048c5b8b0"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.histogram/v2/linux-glibc-x86_64/2024-09-30T20.53.38%2B00.00Z/Histogram-v2-linux-glibc-x86_64.zip",
+				"files": {
+					"libhistogram.so": [
+						"libhistogram.so",
+						"83e272685ec40f4da99229126fe6ec25744e7acf7d69284c27ad5d159e062c73"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.histogram/v2/darwin-x86_64/2024-09-30T20.56.51%2B00.00Z/Histogram-v2-darwin-x86_64.zip",
+				"files": {
+					"libhistogram.dylib": [
+						"libhistogram.dylib",
+						"446885575226eb20368767ae749ca297669e6885d1cabab5d35adadbd0998f2e"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.histogram/v2/darwin-aarch64/2024-09-30T20.54.13%2B00.00Z/Histogram-v2-darwin-aarch64.zip",
+				"files": {
+					"libhistogram.dylib": [
+						"libhistogram.dylib",
+						"df06b610531b931dff6a8095d3747e0a31fbc0a6ab0d9fbbcad69bd662306e43"
+					]
+				}
 			}
 		},
 		{

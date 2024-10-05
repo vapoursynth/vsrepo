@@ -19,6 +19,33 @@
 						"e6128294afdb5f0884c8f063c0da17e05999d4a7e977b3ff7cf1261eb616b0bc"
 					]
 				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.cas/r2/darwin-x86_64/2024-10-01T19.44.56%2B00.00Z/CAS-r2-darwin-x86_64.zip",
+				"files": {
+					"libcas.dylib": [
+						"libcas.dylib",
+						"470d457d056589b04ceb9f36cee23ed33064b3eb977967c6f7e40c7049bc9b8b"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.cas/r2/linux-glibc-x86_64/2024-09-30T22.06.05%2B00.00Z/CAS-r2-linux-glibc-x86_64.zip",
+				"files": {
+					"libcas.so": [
+						"libcas.so",
+						"b59c5d09af8c7f72c48d099582e394ff5025683cb956f3abad47f2f8635ee9db"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.cas/r2/darwin-aarch64/2024-09-30T21.19.47%2B00.00Z/CAS-r2-darwin-aarch64.zip",
+				"files": {
+					"libcas.dylib": [
+						"libcas.dylib",
+						"62e28c0e0decbf30c399947f4d27ee8f29d0551607a2ee52be0c0deba44b433e"
+					]
+				}
 			}
 		},
 		{

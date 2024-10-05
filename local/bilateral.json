@@ -29,6 +29,15 @@
 						"a9ea5ebd604611701fc988262f078a697f3110f9b8fb5ec748aa0957cad5e0a0"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.invalid.identifier.bilateral/r3/linux-glibc-x86_64/2024-09-30T20.51.50%2B00.00Z/Bilateral-r3-linux-glibc-x86_64.zip",
+				"files": {
+					"libbilateral.so": [
+						"libbilateral.so",
+						"3f78b1f0c04139784555867f723ed73fe87094be696a60f79800a1878467f4df"
+					]
+				}
 			}
 		},
 		{

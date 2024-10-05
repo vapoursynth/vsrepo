@@ -8,8 +8,32 @@
 	"identifier": "com.holywu.yadifmod",
 	"namespace": "yadifmod",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Yadifmod",
-	"ignore": ["r10.1"],
+	"ignore": [
+		"r10.1"
+	],
 	"releases": [
+		{
+			"version": "r10.1",
+			"published": "2024-09-30T20:56:05Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.yadifmod/r10.1/linux-glibc-x86_64/2024-09-30T20.56.04%2B00.00Z/Yadifmod-r10.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libyadifmod.so": [
+						"libyadifmod.so",
+						"d080a13f7f3c720d5d5bd7bca8ab6ed092196168bae09b0d5f459ad32517b983"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.yadifmod/r10.1/darwin-x86_64/2024-09-30T21.01.54%2B00.00Z/Yadifmod-r10.1-darwin-x86_64.zip",
+				"files": {
+					"libyadifmod.dylib": [
+						"libyadifmod.dylib",
+						"abc3c933fe4597fdf73c95861fa0ff91831e25181bc226bb0131969543dc5384"
+					]
+				}
+			}
+		},
 		{
 			"version": "r10",
 			"published": "2017-02-07T10:15:47Z",

@@ -8,8 +8,32 @@
 	"identifier": "com.holywu.tdeintmod",
 	"namespace": "tdm",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod",
-	"ignore": ["r10.1"],
+	"ignore": [
+		"r10.1"
+	],
 	"releases": [
+		{
+			"version": "r10.1",
+			"published": "2024-09-30T20:55:42Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.tdeintmod/r10.1/linux-glibc-x86_64/2024-09-30T20.55.41%2B00.00Z/TDeintMod-r10.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libtdeintmod.so": [
+						"libtdeintmod.so",
+						"6e0ebf5a55e1114aa0cd3de0f7043586bacc4306555eb3a69221a9dedce8a839"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.tdeintmod/r10.1/darwin-x86_64/2024-09-30T21.01.02%2B00.00Z/TDeintMod-r10.1-darwin-x86_64.zip",
+				"files": {
+					"libtdeintmod.dylib": [
+						"libtdeintmod.dylib",
+						"d7108ce8781878493ce4fd2a83a7fd84dbaf3a2ff47e93e547d17a49efb5578c"
+					]
+				}
+			}
+		},
 		{
 			"version": "r10",
 			"published": "2018-03-10T04:18:51Z",

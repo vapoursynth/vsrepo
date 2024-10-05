@@ -19,6 +19,15 @@
 						"dcbf8c284b681b70793baa541329494fae29377a373f6feb2b9e120e97109846"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.mio.noisegen/r1/linux-glibc-x86_64/2024-09-30T20.54.35%2B00.00Z/NoiseGen-r1-linux-glibc-x86_64.zip",
+				"files": {
+					"libnoisegen.so": [
+						"libnoisegen.so",
+						"27a38d2ff02818cf04d6fc7b23da7951ec216902f8a13f38dfd401eee069a519"
+					]
+				}
 			}
 		}
 	]

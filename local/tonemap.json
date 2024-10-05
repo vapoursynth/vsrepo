@@ -28,6 +28,33 @@
 						"f93d2f5e46d9b45eb813478a0ed1babfc2a900c9f3f1afe47a13638bd953bee8"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.ifb.tonemap/R2/linux-glibc-x86_64/2024-09-30T20.56.00%2B00.00Z/Tonemap-R2-linux-glibc-x86_64.zip",
+				"files": {
+					"libtonemap.so": [
+						"libtonemap.so",
+						"e2df3672e388dc57c7327bde7a1cf01cc0f16d100ff7c3134edfacc2083b40bc"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.ifb.tonemap/R2/darwin-x86_64/2024-09-30T21.01.44%2B00.00Z/Tonemap-R2-darwin-x86_64.zip",
+				"files": {
+					"libtonemap.dylib": [
+						"libtonemap.dylib",
+						"0e7b3b9db6eb62752698bd77529f0afaa450aabda71cf49d5250f56a344238a6"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.ifb.tonemap/R2/darwin-aarch64/2024-09-30T20.56.51%2B00.00Z/Tonemap-R2-darwin-aarch64.zip",
+				"files": {
+					"libtonemap.dylib": [
+						"libtonemap.dylib",
+						"bc6746365ae5174c0ec238b98e178f7eba1157f2c4c6a4a84c552254e14f964c"
+					]
+				}
 			}
 		},
 		{

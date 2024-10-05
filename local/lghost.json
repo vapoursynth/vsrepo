@@ -19,6 +19,33 @@
 						"7a9745b4b411270e0e79f296ef067c8f2e44124deed4202c5e9ba189d817b65a"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.lghost/r1/linux-glibc-x86_64/2024-09-30T20.53.59%2B00.00Z/LGhost-r1-linux-glibc-x86_64.zip",
+				"files": {
+					"liblghost.so": [
+						"liblghost.so",
+						"6fcfadf92dd9c5e75bb559e5068b90f7680d2a3b409b5c55f07f5b09833e8d3c"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.lghost/r1/darwin-x86_64/2024-09-30T20.57.30%2B00.00Z/LGhost-r1-darwin-x86_64.zip",
+				"files": {
+					"liblghost.dylib": [
+						"liblghost.dylib",
+						"25e393cb6ae1f91eff26f819d92994798678cd2972913d835d6be8d1511ee9e5"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.lghost/r1/darwin-aarch64/2024-09-30T20.54.34%2B00.00Z/LGhost-r1-darwin-aarch64.zip",
+				"files": {
+					"liblghost.dylib": [
+						"liblghost.dylib",
+						"c7a7b87fb43bff02d453f505d5655bacfb3a67cf8c1a4f445059a2e252a313c2"
+					]
+				}
 			}
 		}
 	]

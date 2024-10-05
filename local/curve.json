@@ -19,6 +19,33 @@
 						"66a012ae993e0f1f89e047052666f4cd399519bd42c087dfe0e5ea54dc338694"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.curve/r3/linux-glibc-x86_64/2024-09-30T20.52.22%2B00.00Z/Curve-r3-linux-glibc-x86_64.zip",
+				"files": {
+					"libcurve.so": [
+						"libcurve.so",
+						"053193e5cc7d42bc5d00d6a161304dece128d3ed491213e6c29f9a6b8c7536f9"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.curve/r3/darwin-x86_64/2024-09-30T20.54.12%2B00.00Z/Curve-r3-darwin-x86_64.zip",
+				"files": {
+					"libcurve.dylib": [
+						"libcurve.dylib",
+						"284e1f510af96b7315fa4fb20070209ce2637f47e7a65509696402149ee4c61a"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.curve/r3/darwin-aarch64/2024-09-30T20.52.46%2B00.00Z/Curve-r3-darwin-aarch64.zip",
+				"files": {
+					"libcurve.dylib": [
+						"libcurve.dylib",
+						"be7aa1aa264abc4be100e40a7ab319a893024891de0d39c69682c53d1b304569"
+					]
+				}
 			}
 		},
 		{

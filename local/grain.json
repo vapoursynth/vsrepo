@@ -21,6 +21,33 @@
 						"74f1fcb53e7a91efc015730a03a92cbed70485b68422805f441f43dd8a343a92"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.addgrain/r10/linux-glibc-x86_64/2024-09-30T20.53.31%2B00.00Z/AddGrain-r10-linux-glibc-x86_64.zip",
+				"files": {
+					"libaddgrain.so": [
+						"libaddgrain.so",
+						"26b83efb282d6b752fccbce198df0273ea50ef4399eae79823e6985bb271cd08"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.addgrain/r10/darwin-x86_64/2024-09-30T20.56.34%2B00.00Z/AddGrain-r10-darwin-x86_64.zip",
+				"files": {
+					"libaddgrain.dylib": [
+						"libaddgrain.dylib",
+						"d900120a91e562dfcb5dea0f794c1bab090203fc1ccf996f5e8c327ba0aeec16"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.addgrain/r10/darwin-aarch64/2024-09-30T20.54.02%2B00.00Z/AddGrain-r10-darwin-aarch64.zip",
+				"files": {
+					"libaddgrain.dylib": [
+						"libaddgrain.dylib",
+						"0f575e7cdd3e756086b236992cae554b6cede4e21579a44fc8625f5421aec3e3"
+					]
+				}
 			}
 		},
 		{

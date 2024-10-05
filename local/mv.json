@@ -32,6 +32,33 @@
 						"530a2f003901a7c0749b0b3797c2a2d2c9b12a2b87c4ca4e9d4ec7937260f091"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.mvtools/v24/linux-glibc-x86_64/2024-09-30T17.05.16%2B00.00Z/MVTools-v24-linux-glibc-x86_64.zip",
+				"files": {
+					"libmvtools.so": [
+						"libmvtools.so",
+						"be387378d792c1513ecb66090494bcce51bb1498274a848ebfea528dec84a22b"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.mvtools/v24/darwin-x86_64/2024-09-30T17.08.24%2B00.00Z/MVTools-v24-darwin-x86_64.zip",
+				"files": {
+					"libmvtools.dylib": [
+						"libmvtools.dylib",
+						"dba72f5370a5db5b29cdd9f97907a7ba0318c7729d6c7b28009e60409b2afea5"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.mvtools/v24/darwin-aarch64/2024-09-30T17.08.31%2B00.00Z/MVTools-v24-darwin-aarch64.zip",
+				"files": {
+					"libmvtools.dylib": [
+						"libmvtools.dylib",
+						"a08d52afb07bae6a1cd33eeb64e45013e83f994aebd4ee90b075c6001dafa848"
+					]
+				}
 			}
 		},
 		{

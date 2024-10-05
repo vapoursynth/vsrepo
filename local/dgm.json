@@ -29,6 +29,33 @@
 						"c204e04282386c2319ccd01d52eea97f5c0e33cbed6c6f86ab9ff988fbe79897"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.degrainmedian/v1/linux-glibc-x86_64/2024-09-30T20.52.51%2B00.00Z/degrainmedian-v1-linux-glibc-x86_64.zip",
+				"files": {
+					"libdegrainmedian.so": [
+						"libdegrainmedian.so",
+						"87d6b8e6446f5e04e93976704f4d14a8b8d4d062d6d64add71d2940b840d30f1"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.degrainmedian/v1/darwin-x86_64/2024-09-30T20.55.13%2B00.00Z/degrainmedian-v1-darwin-x86_64.zip",
+				"files": {
+					"libdegrainmedian.dylib": [
+						"libdegrainmedian.dylib",
+						"fa56cc3b4594d6d8393daca07b08cc2a4787cf47604041dc70939e37144289b8"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.degrainmedian/v1/darwin-aarch64/2024-09-30T20.53.17%2B00.00Z/degrainmedian-v1-darwin-aarch64.zip",
+				"files": {
+					"libdegrainmedian.dylib": [
+						"libdegrainmedian.dylib",
+						"9579c94194cfb599956383ac480ae8438a3fd17b7c2e8526ed03e3c27b97ff41"
+					]
+				}
 			}
 		}
 	]

@@ -27,6 +27,33 @@
 						"878c0b559eaf48ae11f15ba9907687396e52c8f8e41c303ddec1ec0268802bb6"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.median/v4/linux-glibc-x86_64/2024-09-30T20.54.06%2B00.00Z/Median-v4-linux-glibc-x86_64.zip",
+				"files": {
+					"libmedian.so": [
+						"libmedian.so",
+						"328e45037c8bd8d7f4979984972128088859807087e12d35991ad5390bb9f0f9"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.median/v4/darwin-x86_64/2024-09-30T20.57.46%2B00.00Z/Median-v4-darwin-x86_64.zip",
+				"files": {
+					"libmedian.dylib": [
+						"libmedian.dylib",
+						"5aa96e03fd77ada8f0cc62ee52adcc86769132a3e66cd316903104341dd9c04f"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.median/v4/darwin-aarch64/2024-09-30T20.54.44%2B00.00Z/Median-v4-darwin-aarch64.zip",
+				"files": {
+					"libmedian.dylib": [
+						"libmedian.dylib",
+						"d1fa769e68829e8a2c6afae0019f2407e2ade5c7c34f3117ef1a465410febd32"
+					]
+				}
 			}
 		},
 		{

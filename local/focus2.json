@@ -28,6 +28,24 @@
 						"9a3dd72e9b91916ee23fbad8107a73f5e573cda2343f15a23195aa0b1c54a1b6"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/chikuzen.does.not.have.his.own.domain.focus2/v1/linux-glibc-x86_64/2024-09-30T20.53.19%2B00.00Z/TemporalSoften2-v1-linux-glibc-x86_64.zip",
+				"files": {
+					"libtemporalsoften2.so": [
+						"libtemporalsoften2.so",
+						"3bce40d2dc3dd97dc7452b509c6f2c5058047e940233b4bd6b1a641ab612f01f"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/chikuzen.does.not.have.his.own.domain.focus2/v1/darwin-x86_64/2024-09-30T20.56.14%2B00.00Z/TemporalSoften2-v1-darwin-x86_64.zip",
+				"files": {
+					"libtemporalsoften2.dylib": [
+						"libtemporalsoften2.dylib",
+						"97d453f05df4f859aee988fb722f08157c473280c59f3878105e42fcf6045fec"
+					]
+				}
 			}
 		}
 	]

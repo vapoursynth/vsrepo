@@ -16,6 +16,37 @@
 	],
 	"releases": [
 		{
+			"version": "r9",
+			"published": "2024-09-30T22:05:59Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bm3d/r9/linux-glibc-x86_64/2024-09-30T22.05.56%2B00.00Z/BM3D-r9-linux-glibc-x86_64.zip",
+				"files": {
+					"libbm3d.so": [
+						"libbm3d.so",
+						"f52b269ff0292089873862f36554cf476b6c9c93b4f707b5457fd3f82b917a7f"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bm3d/r9/darwin-x86_64/2024-09-30T21.56.54%2B00.00Z/BM3D-r9-darwin-x86_64.zip",
+				"files": {
+					"libbm3d.dylib": [
+						"libbm3d.dylib",
+						"547914128615c6ce482dd1503da33905dd50d27194114b2f5a645761f11333af"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bm3d/r9/darwin-aarch64/2024-09-30T21.55.13%2B00.00Z/BM3D-r9-darwin-aarch64.zip",
+				"files": {
+					"libbm3d.dylib": [
+						"libbm3d.dylib",
+						"ec36070a6db305d70d8fa3f81eaa935255cb70615dc2e7d295796a75e7eb4954"
+					]
+				}
+			}
+		},
+		{
 			"version": "r8",
 			"published": "2019-01-03T04:23:22Z",
 			"win32": {

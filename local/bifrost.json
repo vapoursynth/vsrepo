@@ -29,6 +29,33 @@
 						"bc0360aacb5ecc39a4cdcbcbe1f76b1b04cdfb8573ffdb5fb1390cee2aa161a3"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.bifrost/v3.0/linux-glibc-x86_64/2024-09-30T17.13.23%2B00.00Z/Bifrost-v3.0-linux-glibc-x86_64.zip",
+				"files": {
+					"libbifrost.so": [
+						"libbifrost.so",
+						"5e80307c97bcd182aec4efec887ef5a1b74de6275dc49a407689c436384edabc"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.bifrost/v3.0/darwin-x86_64/2024-09-30T17.18.59%2B00.00Z/Bifrost-v3.0-darwin-x86_64.zip",
+				"files": {
+					"libbifrost.dylib": [
+						"libbifrost.dylib",
+						"cc271246a9b30f52102dddf62d0a1401c7e56d1ac1927749bc1ba08d8a197cec"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.bifrost/v3.0/darwin-aarch64/2024-09-30T20.43.17%2B00.00Z/Bifrost-v3.0-darwin-aarch64.zip",
+				"files": {
+					"libbifrost.dylib": [
+						"libbifrost.dylib",
+						"5267ab0047cacd0da9994eda4d849a6476fbe729a94ed02e58fbb45599ea86d9"
+					]
+				}
 			}
 		},
 		{

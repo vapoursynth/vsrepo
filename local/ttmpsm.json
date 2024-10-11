@@ -24,6 +24,33 @@
 						"0e3b2b94528544de50f6eeb44f5e68461145240dd99c698400daf151a97b7923"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.ttempsmooth/r4.1/linux-glibc-x86_64/2024-10-10T14.44.49%2B00.00Z/TTempSmooth-r4.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libttempsmooth.so": [
+						"libttempsmooth.so",
+						"b0f389960c8d055272701e4f5a6c924af86521ef4c5b30eb5b306e109bce218d"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.ttempsmooth/r4.1/darwin-x86_64/2024-10-10T14.56.29%2B00.00Z/TTempSmooth-r4.1-darwin-x86_64.zip",
+				"files": {
+					"libttempsmooth.dylib": [
+						"libttempsmooth.dylib",
+						"3a4c4a2b7d254d7b9a3d433cc3ba062372f4a7f71b138455b4edbb14ddecb0b9"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.ttempsmooth/r4.1/darwin-aarch64/2024-10-10T14.53.59%2B00.00Z/TTempSmooth-r4.1-darwin-aarch64.zip",
+				"files": {
+					"libttempsmooth.dylib": [
+						"libttempsmooth.dylib",
+						"5879ebef9aef21d6edd154db6b0572ed074eaa942b5fedf5d5e463a82a39d157"
+					]
+				}
 			}
 		},
 		{

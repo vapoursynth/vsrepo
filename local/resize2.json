@@ -8,6 +8,19 @@
 	"namespace": "resize2",
 	"releases": [
 		{
+			"version": "0.3.1",
+			"published": "2024-10-10T18:20:20Z",
+			"win64": {
+				"url": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-resize2/releases/download/0.3.1/resize2-0.3.1-win64.zip",
+				"files": {
+					"libresize2.dll": [
+						"libresize2.dll",
+						"065628610a1b808d475a35b5c2ffe280dc1023b745a7cdcea9e99a975920ff5b"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.3.0",
 			"published": "2024-08-23T15:01:03Z",
 			"win64": {

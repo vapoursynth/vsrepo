@@ -16,6 +16,37 @@
 	],
 	"releases": [
 		{
+			"version": "git:89034df",
+			"published": "2024-10-09T22:56:54Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.dfttest/git-89034df/linux-glibc-x86_64/2024-10-09T22.56.52%2B00.00Z/DFTTest-git-89034df-linux-glibc-x86_64.zip",
+				"files": {
+					"libdfttest.so": [
+						"libdfttest.so",
+						"5e41f8d5e43d6c6336faf796b41c9c37028885f0cc598351994fcbead12222fb"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.dfttest/git-89034df/darwin-x86_64/2024-10-09T23.03.28%2B00.00Z/DFTTest-git-89034df-darwin-x86_64.zip",
+				"files": {
+					"libdfttest.dylib": [
+						"libdfttest.dylib",
+						"8a9d4d7b714ac9dfa6591e0b4cb127dbc485ddae72d12a3bfc6209af7d588503"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.dfttest/git-89034df/darwin-aarch64/2024-10-09T22.54.49%2B00.00Z/DFTTest-git-89034df-darwin-aarch64.zip",
+				"files": {
+					"libdfttest.dylib": [
+						"libdfttest.dylib",
+						"ceea1055131865c97cfb3a89b81d3eb223e743955f860636eb0de4dec7c877d8"
+					]
+				}
+			}
+		},
+		{
 			"version": "r7",
 			"published": "2020-07-05T14:17:49Z",
 			"win64": {

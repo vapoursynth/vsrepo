@@ -10,8 +10,41 @@
 	"dependencies": [
 		"org.fftw.fftw3"
 	],
-	"ignore": ["r2.1"],
+	"ignore": [
+		"r2.1"
+	],
 	"releases": [
+		{
+			"version": "r2.1",
+			"published": "2024-10-09T17:27:48Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.dctfilter/r2.1/linux-glibc-x86_64/2024-10-09T17.27.45%2B00.00Z/DCTFilter-r2.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libdctfilter.so": [
+						"libdctfilter.so",
+						"9a91bce602694536365c3d7da92db482d3d05f8cd066e797c216c4ed2ec85e29"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.dctfilter/r2.1/darwin-x86_64/2024-10-09T17.32.30%2B00.00Z/DCTFilter-r2.1-darwin-x86_64.zip",
+				"files": {
+					"libdctfilter.dylib": [
+						"libdctfilter.dylib",
+						"8fa530d2307b0f554f82f199150ff3423429503e42403a4048cc493b09e9f164"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.dctfilter/r2.1/darwin-aarch64/2024-10-09T17.28.16%2B00.00Z/DCTFilter-r2.1-darwin-aarch64.zip",
+				"files": {
+					"libdctfilter.dylib": [
+						"libdctfilter.dylib",
+						"f083de90786dfd686dd76620e134bf0e33111644c592ae8d9748fe4d4af78529"
+					]
+				}
+			}
+		},
 		{
 			"version": "r2",
 			"published": "2017-12-23T15:50:56Z",

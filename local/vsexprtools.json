@@ -12,6 +12,14 @@
 	],
 	"releases": [
 		{
+			"version": "1.7.0",
+			"published": "2024-10-10T18:00:30.388838Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/6c/d0/27d7bd3888e4006e841d5189b1cfed77b822fe60f9d25ef877583c73825a/vsexprtools-1.7.0-py3-none-any.whl",
+				"hash": "518d9b30b184752925ce2f22cb5fe040ac987119045153ae446764ff4cfc728a"
+			}
+		},
+		{
 			"version": "1.6.0",
 			"published": "2024-06-17T13:45:58.839876Z",
 			"wheel": {

@@ -28,6 +28,24 @@
 						"407cb45c9303ce5e029155d06eaf9a21a410c974e3afea331b157cdab86c6da4"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tivtc/v2/linux-glibc-x86_64/2024-10-07T02.30.58%2B00.00Z/TIVTC-v2-linux-glibc-x86_64.zip",
+				"files": {
+					"libtivtc.so": [
+						"libtivtc.so",
+						"820c7e000d9b23ef48b73012c3611145b454e27061cb8c9f66b0975417e953c5"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tivtc/v2/darwin-x86_64/2024-10-07T02.46.26%2B00.00Z/TIVTC-v2-darwin-x86_64.zip",
+				"files": {
+					"libtivtc.dylib": [
+						"libtivtc.dylib",
+						"a97f84d9fefba84093f0ca389e7d54be45124552412168a72d6c71ab648de66b"
+					]
+				}
 			}
 		}
 	]

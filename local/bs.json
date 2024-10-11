@@ -37,6 +37,15 @@
 						"2a4ba6a721c143358eec60375acf87a8386c31f1bf0b42c7f9f816d547aaf305"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R7/linux-glibc-x86_64/2024-10-07T02.01.15%2B00.00Z/BestSource-R7-linux-glibc-x86_64.zip",
+				"files": {
+					"bestsource.so": [
+						"bestsource.so",
+						"ee18d847a752335a87b621cae88e6270b6796896198ce9a6409d4412d954eaff"
+					]
+				}
 			}
 		},
 		{

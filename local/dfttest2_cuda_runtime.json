@@ -1,0 +1,102 @@
+{
+	"name": "dfttest2-cuda-runtime",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "DFTTest re-implemetation (CUDA Runtime)",
+	"github": "https://github.com/AmusementClub/vs-dfttest2",
+	"identifier": "io.github.amusementclub.dfttest2_cuda_runtime",
+	"namespace": "dfttest2_cuda_runtime",
+	"releases": [
+		{
+			"version": "v7",
+			"published": "2024-04-27T07:56:31Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v7/cufft-windows-v7.7z",
+				"files": {
+					"vsmlrt-cuda/cufft64_11.dll": [
+						"vsmlrt-cuda/cufft64_11.dll",
+						"67f6fa9488c3b2bf15a126ddd3a823c5540764095c80aca4f2b165228c721f5e"
+					]
+				}
+			}
+		},
+		{
+			"version": "v6",
+			"published": "2023-08-19T01:23:29Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v6/cufft-windows-v6.7z",
+				"files": {
+					"vsmlrt-cuda/cufft64_10.dll": [
+						"vsmlrt-cuda/cufft64_10.dll",
+						"b23e067f0aba79e2dda64a45ed3e8fb591880211e7bfd4bc53b681d27e386093"
+					]
+				}
+			}
+		},
+		{
+			"version": "v5",
+			"published": "2022-10-05T14:11:32Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v5/cufft-windows-v5.7z",
+				"files": {
+					"vsmlrt-cuda/cufft64_10.dll": [
+						"vsmlrt-cuda/cufft64_10.dll",
+						"b23e067f0aba79e2dda64a45ed3e8fb591880211e7bfd4bc53b681d27e386093"
+					]
+				}
+			}
+		},
+		{
+			"version": "v4",
+			"published": "2022-08-31T10:27:19Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v4/cufft-windows-v4.7z",
+				"files": {
+					"vsmlrt-cuda/cufft64_10.dll": [
+						"vsmlrt-cuda/cufft64_10.dll",
+						"90648227616964d83dbea63881b4f84eb51e75a11665d968a4718a7d3a45c76b"
+					]
+				}
+			}
+		},
+		{
+			"version": "v3",
+			"published": "2022-08-19T09:46:13Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v3/cufft-windows-v3.7z",
+				"files": {
+					"vsmlrt-cuda/cufft64_10.dll": [
+						"vsmlrt-cuda/cufft64_10.dll",
+						"90648227616964d83dbea63881b4f84eb51e75a11665d968a4718a7d3a45c76b"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2",
+			"published": "2022-08-02T11:08:36Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v2/cufft-windows-v2.7z",
+				"files": {
+					"vsmlrt-cuda/cufft64_10.dll": [
+						"vsmlrt-cuda/cufft64_10.dll",
+						"90648227616964d83dbea63881b4f84eb51e75a11665d968a4718a7d3a45c76b"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1",
+			"published": "2022-07-23T01:44:39Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v1/cufft-windows-v1.7z",
+				"files": {
+					"vsmlrt-cuda/cufft64_10.dll": [
+						"vsmlrt-cuda/cufft64_10.dll",
+						"90648227616964d83dbea63881b4f84eb51e75a11665d968a4718a7d3a45c76b"
+					]
+				}
+			}
+		}
+	]
+}

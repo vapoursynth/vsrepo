@@ -27,6 +27,63 @@
 	],
 	"releases": [
 		{
+			"version": "v15.6",
+			"published": "2024-11-01T23:35:39Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.6/VSOV-Windows-x64.v15.6.7z",
+				"files": {
+					"vsov.dll": [
+						"vsov.dll",
+						"b85055c8a90783b31e93beceb8489945c363b34c60895e6854e97fc1c54f1586"
+					],
+					"openvino.dll": [
+						"vsov/openvino.dll",
+						"6183f41acd04fcd33f630105bba0b322cc45b9dd979ca3d8314dc29275a7d2c2"
+					],
+					"vsov/cache.json": [
+						"vsov/cache.json",
+						"82e823a6adf76951983d288e9dfbf3d68257d0123b39849e37b974de481b18e8"
+					],
+					"openvino_auto_batch_plugin.dll": [
+						"vsov/openvino_auto_batch_plugin.dll",
+						"19b507468815dba9786a9f6112033d4e882c2dd023a43965cf370043f44844cb"
+					],
+					"openvino_auto_plugin.dll": [
+						"vsov/openvino_auto_plugin.dll",
+						"a1464bd80c50bf59d6b77f7e84eb78e01576620d1eb1198287031f5277fcd099"
+					],
+					"openvino_c.dll": [
+						"vsov/openvino_c.dll",
+						"e970b10d6c9b4ae2b2fe9b2ee112e47bb3a65d6b346d0b7ac2c18e6d28ef1f4a"
+					],
+					"openvino_hetero_plugin.dll": [
+						"vsov/openvino_hetero_plugin.dll",
+						"eb9b971f50fc3e38472c30c9a43fbc3b0d917c092a31a9b709f5505946ade461"
+					],
+					"openvino_intel_cpu_plugin.dll": [
+						"vsov/openvino_intel_cpu_plugin.dll",
+						"84245078be491f42a1db91b0064f0833de0d470eba3778a5734bad4645176bb0"
+					],
+					"openvino_intel_gpu_plugin.dll": [
+						"vsov/openvino_intel_gpu_plugin.dll",
+						"0f8a583959540112d002a2c6ca38962dbc099a62b8566016ab3b98859422f782"
+					],
+					"openvino_intel_npu_plugin.dll": [
+						"vsov/openvino_intel_npu_plugin.dll",
+						"b61a3cbcee5e30df777cc11bdc15e2272ab258a5c073403a7d91b93dce68089b"
+					],
+					"openvino_onnx_frontend.dll": [
+						"vsov/openvino_onnx_frontend.dll",
+						"cdd3be1e65f1a2b7661cb9b652a77c3867da2b5aabb9f6d24c48e33e34f6efb6"
+					],
+					"tbb12.dll": [
+						"vsov/tbb12.dll",
+						"b1d6bdc28473e9472f9140524feeaa16518a0e129fb0f3435d3fb4e0081bef83"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.5",
 			"published": "2024-10-01T00:12:31Z",
 			"win64": {

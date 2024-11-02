@@ -24,6 +24,307 @@
 	],
 	"releases": [
 		{
+			"version": "v15.6",
+			"published": "2024-11-01T23:35:39Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.6/models.v15.6.7z",
+				"files": {
+					"models/RealESRGANv2/RealESRGANv2-animevideo-xsx2.onnx": [
+						"models/RealESRGANv2/RealESRGANv2-animevideo-xsx2.onnx",
+						"6fad590f96df553a5cc348a9c5129e7874504a7dcd414e4a15fb0b281fca7e0c"
+					],
+					"models/RealESRGANv2/RealESRGANv2-animevideo-xsx4.onnx": [
+						"models/RealESRGANv2/RealESRGANv2-animevideo-xsx4.onnx",
+						"414de3a5da4c56652c99f3bc0b960910e3561835a6c7a9cca546475bc4792158"
+					],
+					"models/RealESRGANv2/realesr-animevideov3.onnx": [
+						"models/RealESRGANv2/realesr-animevideov3.onnx",
+						"58425bdf2a28df7109aeefdc94d1b7366eac85414f6cd6f2fba41259f9d3307f"
+					],
+					"models/cugan/pro-conservative-up2x.onnx": [
+						"models/cugan/pro-conservative-up2x.onnx",
+						"391a30605ca4101b54ff968728512b344ef277d8dbd1f686b12f0bf6c0c2d9e8"
+					],
+					"models/cugan/pro-conservative-up3x.onnx": [
+						"models/cugan/pro-conservative-up3x.onnx",
+						"d9a36e8ecd2512e1425a1c9847040c9d95c236d72f9ae72cadd534b8819da5ae"
+					],
+					"models/cugan/pro-denoise3x-up2x.onnx": [
+						"models/cugan/pro-denoise3x-up2x.onnx",
+						"39d45f6bd3969f69af7348184ffacc4dfac4609a6c23dba4a3fc07548330bf76"
+					],
+					"models/cugan/pro-denoise3x-up3x.onnx": [
+						"models/cugan/pro-denoise3x-up3x.onnx",
+						"89bf6c826e8ffe64f360f1baa861db4f2058140a3bb57bfe6cc0b355c3f48582"
+					],
+					"models/cugan/pro-no-denoise3x-up2x.onnx": [
+						"models/cugan/pro-no-denoise3x-up2x.onnx",
+						"93492fa650d5cdb8aa4a26d694acfeca5e57e8c720849791e14bad3e4ec38df9"
+					],
+					"models/cugan/pro-no-denoise3x-up3x.onnx": [
+						"models/cugan/pro-no-denoise3x-up3x.onnx",
+						"bb79a315b3be3490e17e931791f3cae95af2ed7dd32cb452f5a0a79b0cbc63fb"
+					],
+					"models/cugan/up2x-latest-conservative.onnx": [
+						"models/cugan/up2x-latest-conservative.onnx",
+						"555bca3eb90caa37c7e1a02aec9cda3ca8479f252746c1885d382f87312f651c"
+					],
+					"models/cugan/up2x-latest-denoise1x.onnx": [
+						"models/cugan/up2x-latest-denoise1x.onnx",
+						"74ecabf4c1b3cbd1c2b03cc76116a9c25305b4560a5a085198a93206ac029ccb"
+					],
+					"models/cugan/up2x-latest-denoise2x.onnx": [
+						"models/cugan/up2x-latest-denoise2x.onnx",
+						"24b0faddfef109ebcc4a0871a2d142bf33a126916a481cd99732c98214e24181"
+					],
+					"models/cugan/up2x-latest-denoise3x.onnx": [
+						"models/cugan/up2x-latest-denoise3x.onnx",
+						"7bcb0510f9f989e681a51d39b7170883d3d5e75f1ec23ef5146e8ea50c3cc845"
+					],
+					"models/cugan/up2x-latest-no-denoise.onnx": [
+						"models/cugan/up2x-latest-no-denoise.onnx",
+						"3587278c3a7e62bbcb00a23b4de291ff906f62a88856ee457cbe4211cc593574"
+					],
+					"models/cugan/up3x-latest-conservative.onnx": [
+						"models/cugan/up3x-latest-conservative.onnx",
+						"827c95a767ecbdff7089f3ca0a96c6ef46eb7c6bd306ebbe1d76cc6beb8ac60d"
+					],
+					"models/cugan/up3x-latest-denoise3x.onnx": [
+						"models/cugan/up3x-latest-denoise3x.onnx",
+						"864b79239cbe58e46bf554e0223125ca723416cf8722dbe33f185a169e184b8d"
+					],
+					"models/cugan/up3x-latest-no-denoise.onnx": [
+						"models/cugan/up3x-latest-no-denoise.onnx",
+						"ddccf23f7ac0f15d10d22aa114cd11520cdb33e97c5f9a10794517f27c52be86"
+					],
+					"models/cugan/up4x-latest-conservative.onnx": [
+						"models/cugan/up4x-latest-conservative.onnx",
+						"7c109b9ccac88044a129ef6065be3efd1c45b73c0815ff208da79383af67507a"
+					],
+					"models/cugan/up4x-latest-denoise3x.onnx": [
+						"models/cugan/up4x-latest-denoise3x.onnx",
+						"ac93b7fd3c9c4363b644b8bd877e5ed21812c2b7acf0932668cfe4acaa4225b9"
+					],
+					"models/cugan/up4x-latest-no-denoise.onnx": [
+						"models/cugan/up4x-latest-no-denoise.onnx",
+						"14cbb48aa222fb2a9455e45bf97301b4c2d977240aad20849b140e1339647c72"
+					],
+					"models/dpir/drunet_color.onnx": [
+						"models/dpir/drunet_color.onnx",
+						"ae6af55252e268e9dd3f567e66b81227c98fd2846b3cb7febd9d0a6bbabb4617"
+					],
+					"models/dpir/drunet_deblocking_color.onnx": [
+						"models/dpir/drunet_deblocking_color.onnx",
+						"806a6d004f631d9726140035ce688088657695b734739edba83dc60f83d6eb10"
+					],
+					"models/dpir/drunet_deblocking_grayscale.onnx": [
+						"models/dpir/drunet_deblocking_grayscale.onnx",
+						"d08826ab176902a93cf637b32c6babd8b306b711858ff36e22efe27f8b03d809"
+					],
+					"models/dpir/drunet_gray.onnx": [
+						"models/dpir/drunet_gray.onnx",
+						"36efca77d215e8281140c94f22e0d461d2db368ebe0919ccde652bc10160e1f9"
+					],
+					"models/rife/rife_v4.0.onnx": [
+						"models/rife/rife_v4.0.onnx",
+						"bd642212b1e6856e26670f8cad02d83a6fd429a69d3dc03f73b9178fcfd95d9e"
+					],
+					"models/rife/rife_v4.10.onnx": [
+						"models/rife/rife_v4.10.onnx",
+						"397d5d3047066e5c4eacf0208bb9ec5c650e8c2f1086191327f57de2eb972204"
+					],
+					"models/rife/rife_v4.2.onnx": [
+						"models/rife/rife_v4.2.onnx",
+						"c53b7cb68fc7897afbb6abcd9b1a9a8f8cff35d4c71b31c2c2dcb5c6e93384ed"
+					],
+					"models/rife/rife_v4.3.onnx": [
+						"models/rife/rife_v4.3.onnx",
+						"d0b9fb2e1d7315a3ab58b2a773e72dcbdff640cdce8580c3d133ce6462a6dfb7"
+					],
+					"models/rife/rife_v4.4.onnx": [
+						"models/rife/rife_v4.4.onnx",
+						"b4f8de5f4eba89fcf821cef099ab6d2a90d417221236193142791f31164aafc5"
+					],
+					"models/rife/rife_v4.5.onnx": [
+						"models/rife/rife_v4.5.onnx",
+						"14f7acd826602e73a5a463a3c5d91364236fa4adc4ec17f612edb9fce766ab05"
+					],
+					"models/rife/rife_v4.6.onnx": [
+						"models/rife/rife_v4.6.onnx",
+						"b210fbec2bdf94dd37eb255b96035c2d2a16dab3576c484822bbe72351b6cf4d"
+					],
+					"models/rife/rife_v4.7.onnx": [
+						"models/rife/rife_v4.7.onnx",
+						"31ee257db95a9cf10a6d06be6724982e4a7464cd09dc3b9e8d057121a70ee013"
+					],
+					"models/rife/rife_v4.8.onnx": [
+						"models/rife/rife_v4.8.onnx",
+						"0c97a567a57456abfd2ddd2d849437297ae374df5fa1979728eb4afe1a2eba6a"
+					],
+					"models/rife/rife_v4.9.onnx": [
+						"models/rife/rife_v4.9.onnx",
+						"ff95b617482aeba18c6957661a0330ea4fcb30489f7ad321d1fca3aa88a7292f"
+					],
+					"models/waifu2x/anime_style_art/noise1_model.onnx": [
+						"models/waifu2x/anime_style_art/noise1_model.onnx",
+						"64a3436a3c6a5657fc58b17b9e6818599b6a55834d8c7fea9160e2979f7ca7f8"
+					],
+					"models/waifu2x/anime_style_art/noise2_model.onnx": [
+						"models/waifu2x/anime_style_art/noise2_model.onnx",
+						"cb74a3c889bf0089e2576b2e8ae61ee1382f793d349278caec861977046122a2"
+					],
+					"models/waifu2x/anime_style_art/noise3_model.onnx": [
+						"models/waifu2x/anime_style_art/noise3_model.onnx",
+						"cc9cddaf8aa90fa60d93d5ff55fa7a8943a6eda08cbb8408c0047ddafb1a2e4a"
+					],
+					"models/waifu2x/anime_style_art/scale2.0x_model.onnx": [
+						"models/waifu2x/anime_style_art/scale2.0x_model.onnx",
+						"18951afbd8b568582f82e7102ef1b25b5b7d80cfb83d8706a8caa5a828a2bfa6"
+					],
+					"models/waifu2x/anime_style_art_rgb/noise0_model.onnx": [
+						"models/waifu2x/anime_style_art_rgb/noise0_model.onnx",
+						"6634d831bdbfbacdd106f0a7661061d23e1716a23f07482c4a7a95bc1977e91e"
+					],
+					"models/waifu2x/anime_style_art_rgb/noise1_model.onnx": [
+						"models/waifu2x/anime_style_art_rgb/noise1_model.onnx",
+						"20bfcaa335404158bc2c84292e48cd8ae1f97e413e78241a93895a1acc0a698c"
+					],
+					"models/waifu2x/anime_style_art_rgb/noise2_model.onnx": [
+						"models/waifu2x/anime_style_art_rgb/noise2_model.onnx",
+						"2d4602901f8803201e0833f938c39095d2081aceadadaaa4a92b487e1293f146"
+					],
+					"models/waifu2x/anime_style_art_rgb/noise3_model.onnx": [
+						"models/waifu2x/anime_style_art_rgb/noise3_model.onnx",
+						"2f66bec62d18a1cd2ffde2ec9574ef99ab1952cde7635b3704cfd2c9c72f6400"
+					],
+					"models/waifu2x/anime_style_art_rgb/scale2.0x_model.onnx": [
+						"models/waifu2x/anime_style_art_rgb/scale2.0x_model.onnx",
+						"40504bbcf99e636e01592580a5814e59a626464f41ad589b395088355983608b"
+					],
+					"models/waifu2x/cunet/noise0_model.onnx": [
+						"models/waifu2x/cunet/noise0_model.onnx",
+						"4c5cc1ff03aa9459c16f0987778c0521261dc421deca72739a09535c00034156"
+					],
+					"models/waifu2x/cunet/noise0_scale2.0x_model.onnx": [
+						"models/waifu2x/cunet/noise0_scale2.0x_model.onnx",
+						"173514344da4b1cde822e5b2866fe2ddd389c0206f19893aa1289abc9f29c705"
+					],
+					"models/waifu2x/cunet/noise1_model.onnx": [
+						"models/waifu2x/cunet/noise1_model.onnx",
+						"70337ae74e5dbb90fdd3402e3404925628dab1de4b62164ce94b9b6dba117e7d"
+					],
+					"models/waifu2x/cunet/noise1_scale2.0x_model.onnx": [
+						"models/waifu2x/cunet/noise1_scale2.0x_model.onnx",
+						"71fe3eaae6620866e0a28d8ff81a04661088a69d90dafcf2ae97d4779931c06b"
+					],
+					"models/waifu2x/cunet/noise2_model.onnx": [
+						"models/waifu2x/cunet/noise2_model.onnx",
+						"0f9614ddf0dd14b1fd85f98026af4e735548d0e73112bb739d3108f1de9c24ce"
+					],
+					"models/waifu2x/cunet/noise2_scale2.0x_model.onnx": [
+						"models/waifu2x/cunet/noise2_scale2.0x_model.onnx",
+						"83be00c3bf440a80058feff23ec3cfa29028ffc1ee719b44857804e3c5866169"
+					],
+					"models/waifu2x/cunet/noise3_model.onnx": [
+						"models/waifu2x/cunet/noise3_model.onnx",
+						"1c2439403f8f2c6ac5f95d9be780d257e910d17dd89d79b41da0fe1b7ad11b21"
+					],
+					"models/waifu2x/cunet/noise3_scale2.0x_model.onnx": [
+						"models/waifu2x/cunet/noise3_scale2.0x_model.onnx",
+						"115f696fdbe36df56a980535b8828f2856e456a83e2c8fcb5f1766f944e71aeb"
+					],
+					"models/waifu2x/cunet/scale2.0x_model.onnx": [
+						"models/waifu2x/cunet/scale2.0x_model.onnx",
+						"35741dac3e4457bd937c195eb5c21e2e75f88c880b2200518d12f2e8719c74a1"
+					],
+					"models/waifu2x/photo/noise0_model.onnx": [
+						"models/waifu2x/photo/noise0_model.onnx",
+						"7aba9559e22aa34e3f883b46a888405d052e99ad7ee03d76eeed205ce6d6f1aa"
+					],
+					"models/waifu2x/photo/noise1_model.onnx": [
+						"models/waifu2x/photo/noise1_model.onnx",
+						"5a3a6750b10c9e63234ecc066701e47ca448e5c7529bb7c1a50f8af1de557183"
+					],
+					"models/waifu2x/photo/noise2_model.onnx": [
+						"models/waifu2x/photo/noise2_model.onnx",
+						"28c1d5c7a52529dbe679b639074213bd4abfffb6d5d643f6c3ddcf66b91a092d"
+					],
+					"models/waifu2x/photo/noise3_model.onnx": [
+						"models/waifu2x/photo/noise3_model.onnx",
+						"ae883615fde36142471e2c2569d9431c705b29bb95733c51adec3280d2da4028"
+					],
+					"models/waifu2x/photo/scale2.0x_model.onnx": [
+						"models/waifu2x/photo/scale2.0x_model.onnx",
+						"24126e2714adb70157df38c9a78c39d80f4e79dc03216ff5a5ca3f0cc4106a1a"
+					],
+					"models/waifu2x/ukbench/scale2.0x_model.onnx": [
+						"models/waifu2x/ukbench/scale2.0x_model.onnx",
+						"233a937c091c3b0f0d4e590908835477e33399e9e54a950bd3fc18c94a86c021"
+					],
+					"models/waifu2x/upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_anime_style_art_rgb/noise0_scale2.0x_model.onnx",
+						"8fac73e57f8abdddbc23f5e710383b42648cc91f4855fb9f4ea2bf2d20a34543"
+					],
+					"models/waifu2x/upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_anime_style_art_rgb/noise1_scale2.0x_model.onnx",
+						"17194ab8e06454fab7271fd29700023bb56252643dbfe6879178c22fd0ebe8fc"
+					],
+					"models/waifu2x/upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_anime_style_art_rgb/noise2_scale2.0x_model.onnx",
+						"63a87ee8171fa244c3e61bb699dcc6dbf53b816255a6435270827032e3f61fc8"
+					],
+					"models/waifu2x/upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_anime_style_art_rgb/noise3_scale2.0x_model.onnx",
+						"1b43be1487975cf4f668d319e58f0398e85a1187251bbc69f330315116f48e19"
+					],
+					"models/waifu2x/upconv_7_anime_style_art_rgb/scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_anime_style_art_rgb/scale2.0x_model.onnx",
+						"a4e8d83515852bf2b86338783edc1d610e0b343b424023dacbaedc5a099e27d6"
+					],
+					"models/waifu2x/upconv_7_photo/noise0_scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_photo/noise0_scale2.0x_model.onnx",
+						"cc2f66004e417f69b5ffac874137a50e374e013c4c3e0c35bc69ebae0f8d0be7"
+					],
+					"models/waifu2x/upconv_7_photo/noise1_scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_photo/noise1_scale2.0x_model.onnx",
+						"4f85f69903d82d6ee031a02f1c0875aa07852347c35dd83f0348f217b60c4d81"
+					],
+					"models/waifu2x/upconv_7_photo/noise2_scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_photo/noise2_scale2.0x_model.onnx",
+						"210f2674f944ef7ad80681f2a0c2ee976a54fc64ef4a082a9cfedc04fc2ada73"
+					],
+					"models/waifu2x/upconv_7_photo/noise3_scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_photo/noise3_scale2.0x_model.onnx",
+						"62c66c9c7c980119246413613643703b5830a87aee862298039766e807c14e52"
+					],
+					"models/waifu2x/upconv_7_photo/scale2.0x_model.onnx": [
+						"models/waifu2x/upconv_7_photo/scale2.0x_model.onnx",
+						"44b3b92a8aa949a2c9f4e301773d5427c6fd88dea498928879f14a5e69ab8607"
+					],
+					"models/waifu2x/upresnet10/noise0_scale2.0x_model.onnx": [
+						"models/waifu2x/upresnet10/noise0_scale2.0x_model.onnx",
+						"0073723f062f158752d17d43852279ec2a287e5175779724e8fa6bc54b03131c"
+					],
+					"models/waifu2x/upresnet10/noise1_scale2.0x_model.onnx": [
+						"models/waifu2x/upresnet10/noise1_scale2.0x_model.onnx",
+						"3740d247fefb4ab4b587a565136549a43bdd909830571544f887076bd2d8abe6"
+					],
+					"models/waifu2x/upresnet10/noise2_scale2.0x_model.onnx": [
+						"models/waifu2x/upresnet10/noise2_scale2.0x_model.onnx",
+						"e9e8d05f5324328a34e303d832a7ec90e15dba99f7beac527c2c4a62775a1bea"
+					],
+					"models/waifu2x/upresnet10/noise3_scale2.0x_model.onnx": [
+						"models/waifu2x/upresnet10/noise3_scale2.0x_model.onnx",
+						"2e3196a4ab7a8accd39d35bc6f1b1bfa7fff2f64b8c203d24c78e059f3944c5b"
+					],
+					"models/waifu2x/upresnet10/scale2.0x_model.onnx": [
+						"models/waifu2x/upresnet10/scale2.0x_model.onnx",
+						"cfb590d8b8df9c93349d4f7e3dc52fa02054d1f034c55c07df489aba8c42bef6"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.5",
 			"published": "2024-10-01T00:12:31Z",
 			"win64": {

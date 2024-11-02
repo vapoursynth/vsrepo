@@ -33,6 +33,67 @@
 	],
 	"releases": [
 		{
+			"version": "v15.6",
+			"published": "2024-11-01T23:35:39Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.6/vsmlrt-hip.v15.6.7z",
+				"files": {
+					"vsmlrt-hip/amd_comgr_2.dll": [
+						"vsmlrt-hip/amd_comgr_2.dll",
+						"5501890dee9e6e799fc43bc6fe07c557bc36c2712e08407848768ee3d56f195d"
+					],
+					"vsmlrt-hip/amdhip64_6.dll": [
+						"vsmlrt-hip/amdhip64_6.dll",
+						"9e4272209bb62e3ee1889192856b873d496d38667f30893f7a10c8478551af06"
+					],
+					"vsmlrt-hip/hiprtc-builtins0601.dll": [
+						"vsmlrt-hip/hiprtc-builtins0601.dll",
+						"cc29cf387cf1e1b59826f4ffe21922f849f47378cea3ec2ce00dc2ad38254d95"
+					],
+					"vsmlrt-hip/hiprtc0601.dll": [
+						"vsmlrt-hip/hiprtc0601.dll",
+						"4ac7b741cf60afc4de24a07f15c3bd2fce5e052e0be8497960b75004a6d2de11"
+					],
+					"vsmlrt-hip/migraphx.dll": [
+						"vsmlrt-hip/migraphx.dll",
+						"dda4968245af80a14665235cb22aecc61bff9cf1e6f75f4f2dc2911541e0f9b2"
+					],
+					"vsmlrt-hip/migraphx_c.dll": [
+						"vsmlrt-hip/migraphx_c.dll",
+						"2f1e97e3ace626c186d1af3e937c29b66023e3af6dbc608b8cae3f8571cd7d72"
+					],
+					"vsmlrt-hip/migraphx_device.dll": [
+						"vsmlrt-hip/migraphx_device.dll",
+						"9b224f2d4f0a2caacdc0ab91deef1d4a33e384fadc942565996c95fbe777ebee"
+					],
+					"vsmlrt-hip/migraphx_gpu.dll": [
+						"vsmlrt-hip/migraphx_gpu.dll",
+						"cc283d6312886780f326f8e9b0b0063838f1a1a9504e7386218bafc6acf938e9"
+					],
+					"vsmlrt-hip/migraphx_onnx.dll": [
+						"vsmlrt-hip/migraphx_onnx.dll",
+						"4a07b2e596b699eb52515cb06ab9f16995add444ca5eafd28a98a481b63c9e63"
+					],
+					"vsmlrt-hip/migraphx_ref.dll": [
+						"vsmlrt-hip/migraphx_ref.dll",
+						"9b7e7ff3c1799e704308e2d8f115b5f3047b8aa4ef416be2c94c5395c9b63d4a"
+					],
+					"vsmlrt-hip/migraphx_tf.dll": [
+						"vsmlrt-hip/migraphx_tf.dll",
+						"94364a29c2a6cb0a3e1cc507d898541b5cfe0e5ddea4dcd94d5cd99b67a0a16d"
+					],
+					"vsmlrt-hip/migraphx-driver.exe": [
+						"vsmlrt-hip/migraphx-driver.exe",
+						"e12e6a97502f83ddd6f71c1413e4f7436d7dd2078ed4bc3b5bd5cd90c7192824"
+					],
+					"vsmlrt-hip/migraphx-hiprtc-driver.exe": [
+						"vsmlrt-hip/migraphx-hiprtc-driver.exe",
+						"26573282d3bb31ec0f40e2ad01fe778dfd3dde0dc08f08ee92c203d12cbef381"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.5",
 			"published": "2024-10-01T00:12:31Z",
 			"win64": {

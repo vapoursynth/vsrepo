@@ -9,6 +9,22 @@
 	"wheelname": "vsrife",
 	"releases": [
 		{
+			"version": "5.4.1",
+			"published": "2024-10-28T15:59:55.377608Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d0/3d/d672838d50b6cec9e733e23db8f0db2320185aa69bc445857018a870e741/vsrife-5.4.1-py3-none-any.whl",
+				"hash": "b91e8b73cc3d93fae9c98bb1c6d2ec8e8d3c40af3d6e74e603bd3b0db35c2014"
+			}
+		},
+		{
+			"version": "5.4.0",
+			"published": "2024-10-27T11:22:38.296171Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/a0/65/81021442712c933f6b4bfa675700fbe703511f16c0ee5243b8161ee8587f/vsrife-5.4.0-py3-none-any.whl",
+				"hash": "956c1414cbbf82a0202b25a01b0e98046700918b2395bcca533929435c755897"
+			}
+		},
+		{
 			"version": "5.3.1",
 			"published": "2024-10-07T12:21:21.819201Z",
 			"wheel": {

@@ -43,6 +43,19 @@
 	],
 	"releases": [
 		{
+			"version": "v15.6",
+			"published": "2024-11-01T23:35:39Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.6/VSMIGX-Windows-x64.v15.6.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"04389b675ab74572740ea38858fec00e28170fe8e711447f853b9dfdc774d7f1"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.5",
 			"published": "2024-10-01T00:12:31Z",
 			"win64": {

@@ -1,0 +1,24 @@
+{
+	"name": "webp",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "WebP encoding as a VapourSynth plugin. Currently does VP8L lossless encoding.",
+	"github": "https://github.com/sgt0/vapoursynth-webp",
+	"identifier": "sgt.webp",
+	"namespace": "webp",
+	"releases": [
+		{
+			"version": "v1.0.0",
+			"published": "2024-11-23T20:09:58Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.0/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"413e1ac8093f0e1fcf975ff9ac97bafb78266aca6ea74006a20d9921e5131443"
+					]
+				}
+			}
+		}
+	]
+}

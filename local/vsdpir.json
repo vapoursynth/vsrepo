@@ -10,6 +10,14 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "4.2.0",
+			"published": "2024-12-01T07:22:50.348037Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/bd/c5/6080e8efd176761e9d9d30bb809a4d82f9324e4a36583440c89179e59c6b/vsdpir-4.2.0-py3-none-any.whl",
+				"hash": "a84b43ae9f38c53f846dc2f7b4601591f97f9be7e0c72ccd8b66bed47adafa58"
+			}
+		},
+		{
 			"version": "4.1.0",
 			"published": "2024-05-19T06:32:35.279045Z",
 			"wheel": {

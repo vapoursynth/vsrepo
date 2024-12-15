@@ -1,0 +1,37 @@
+{
+	"name": "FFTSpectrum-rs",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "A faster version of the FFT spectrum plugin. Displays the FFT frequency spectrum of a given clip.",
+	"github": "https://github.com/sgt0/vapoursynth-fftspectrum-rs",
+	"identifier": "sgt.fftspectrum_rs",
+	"namespace": "fftspectrum_rs",
+	"releases": [
+		{
+			"version": "v1.0.1",
+			"published": "2024-12-14T17:24:30Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-fftspectrum-rs/releases/download/v1.0.1/fftspectrum_rs-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"fftspectrum_rs.dll": [
+						"fftspectrum_rs.dll",
+						"a318c62d557e76fcd71b2c33f1449a46e82fde460e8d1a27ec01c5e2dd9059b4"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.0",
+			"published": "2024-12-14T16:53:28Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-fftspectrum-rs/releases/download/v1.0.0/fftspectrum_rs-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"fftspectrum_rs.dll": [
+						"fftspectrum_rs.dll",
+						"02b17c3a1968f665aa2d9e03da4a0aa61f7a2c0fdf2a8e7d8a8d8eb5aa476e13"
+					]
+				}
+			}
+		}
+	]
+}

@@ -16,6 +16,19 @@
 	],
 	"releases": [
 		{
+			"version": "v15.7",
+			"published": "2024-12-03T11:03:06Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.7/scripts.v15.7.7z",
+				"files": {
+					"vsmlrt.py": [
+						"vsmlrt.py",
+						"12e8cc86e8106a352d4c4988655852ff52573493ed1a6cd0164e71e22f3f027c"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.6",
 			"published": "2024-11-01T23:35:39Z",
 			"script": {

@@ -1,0 +1,50 @@
+{
+	"name": "HIP-SSIMU2-NVIDIA",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Performs SSIMU2 measurments using the GPU with HIP (Nvidia version)",
+	"github": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2",
+	"identifier": "com.lumen.vship_nvidia",
+	"namespace": "vship_nvidia",
+	"releases": [
+		{
+			"version": "release",
+			"published": "2024-12-30T13:18:36Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2/releases/download/release/hipssimu2_NVIDIA.zip",
+				"files": {
+					"hipssimu2.dll": [
+						"hipssimu2.dll",
+						"aaac4cb1e76e02029397dd877fa5a17178013cb7b47e6593f26b11490e838fb8"
+					]
+				}
+			}
+		},
+		{
+			"version": "beta",
+			"published": "2024-12-26T23:02:29Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2/releases/download/beta/hipssimu2_NVIDIAGPU.zip",
+				"files": {
+					"hipssimu2.dll": [
+						"hipssimu2.dll",
+						"62b875470a06a9e5a343e8aa5956f2779f99a11033e08115b21b307be225c086"
+					]
+				}
+			}
+		},
+		{
+			"version": "alpha",
+			"published": "2024-12-26T16:44:54Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2/releases/download/alpha/hipssimu2_NVIDIAGPU.zip",
+				"files": {
+					"hipssimu2.dll": [
+						"hipssimu2.dll",
+						"c91059d6c1833d10630bd8426216b951f4859ba44fbe51b9745124a85ec5f1b3"
+					]
+				}
+			}
+		}
+	]
+}

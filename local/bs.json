@@ -9,6 +9,32 @@
 	"namespace": "bs",
 	"releases": [
 		{
+			"version": "R10",
+			"published": "2025-01-01T12:11:49Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R10/BestSource-R10.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"f8698d598852948fce377c491c52bcb17bf030bc6b9e7676d5e88409e46ce712"
+					]
+				}
+			}
+		},
+		{
+			"version": "R9",
+			"published": "2024-12-30T22:51:45Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R9/BestSource-R9.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"953426a2011016e644e025c0d50faa2cfebed11d0f242f812ca6f2866a8154a0"
+					]
+				}
+			}
+		},
+		{
 			"version": "R8",
 			"published": "2024-10-23T18:42:53Z",
 			"win64": {

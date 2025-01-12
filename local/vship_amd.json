@@ -8,6 +8,32 @@
 	"namespace": "vship_amd",
 	"releases": [
 		{
+			"version": "v1.2",
+			"published": "2025-01-09T22:27:21Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v1.2/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"c63a671f001a83112b99f0c7ceb6b9adce0a6fcdae28865d9bd216bec4178464"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.1",
+			"published": "2025-01-07T16:15:21Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v1.1/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"9a33f025d12ab279288e3b711e50b996df2e2507885c2642ea13db89bb6a30d1"
+					]
+				}
+			}
+		},
+		{
 			"version": "release",
 			"published": "2024-12-30T13:18:36Z",
 			"win64": {

@@ -1,0 +1,37 @@
+{
+	"name": "Manipulate Motion Vectors",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "A vapoursynth plugin to do potentially useful things with motion vectors that have already been generated.",
+	"github": "https://github.com/Mikewando/manipulate-motion-vectors",
+	"identifier": "tools.mike.manipmv",
+	"namespace": "manipmv",
+	"releases": [
+		{
+			"version": "1.0.1",
+			"published": "2025-01-13T03:20:59Z",
+			"win64": {
+				"url": "https://github.com/Mikewando/manipulate-motion-vectors/releases/download/1.0.1/manipmv.dll",
+				"files": {
+					"manipmv.dll": [
+						"manipmv.dll",
+						"f9d6359d8fea8d27812edae81fe29769042ddbbb5a555a8223644df203f7f450"
+					]
+				}
+			}
+		},
+		{
+			"version": "1.0.0",
+			"published": "2025-01-13T02:52:55Z",
+			"win64": {
+				"url": "https://github.com/Mikewando/manipulate-motion-vectors/releases/download/1.0.0/manipmv.dll",
+				"files": {
+					"manipmv.dll": [
+						"manipmv.dll",
+						"f9d6359d8fea8d27812edae81fe29769042ddbbb5a555a8223644df203f7f450"
+					]
+				}
+			}
+		}
+	]
+}

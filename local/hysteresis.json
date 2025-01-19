@@ -8,6 +8,19 @@
 	"namespace": "hysteresis",
 	"releases": [
 		{
+			"version": "v1.0.3",
+			"published": "2025-01-14T21:03:17Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-hysteresis/releases/download/v1.0.3/hysteresis-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"hysteresis.dll": [
+						"hysteresis.dll",
+						"6342d2b429872aa0974928297107ab85f0acae9346407db13a7385e99d319755"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.0.2",
 			"published": "2024-12-28T22:49:18Z",
 			"win64": {

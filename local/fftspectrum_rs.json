@@ -8,6 +8,32 @@
 	"namespace": "fftspectrum_rs",
 	"releases": [
 		{
+			"version": "v1.0.5",
+			"published": "2025-01-18T05:22:21Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-fftspectrum-rs/releases/download/v1.0.5/fftspectrum_rs-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"fftspectrum_rs.dll": [
+						"fftspectrum_rs.dll",
+						"7c64340951aab940e74c920eb766d8395fc2acbefdeeee4e4d065d8f64f0ecac"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.4",
+			"published": "2025-01-16T21:47:04Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-fftspectrum-rs/releases/download/v1.0.4/fftspectrum_rs-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"fftspectrum_rs.dll": [
+						"fftspectrum_rs.dll",
+						"33cec7ebc00c15a156ac04cf9162d5455949a44ca4f79c159771c270959467c3"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.0.3",
 			"published": "2025-01-02T17:43:13Z",
 			"win64": {

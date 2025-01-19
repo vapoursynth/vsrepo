@@ -10,6 +10,14 @@
 	"wheelname": "vsbasicvsrpp",
 	"releases": [
 		{
+			"version": "3.0.0",
+			"published": "2025-01-19T13:27:54.574938Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/cb/fe/68cd19b17cafba1a20fabea9eb8ce37e0700da3ba7d1ada1bb9d16ac17b6/vsbasicvsrpp-3.0.0-py3-none-any.whl",
+				"hash": "4b363087af32a24d41d87586df9d55f879fa50c217c519b8714a437911ceda52"
+			}
+		},
+		{
 			"version": "2.1.0",
 			"published": "2023-05-20T12:46:04.661665Z",
 			"wheel": {

@@ -24,6 +24,216 @@
 	],
 	"releases": [
 		{
+			"version": "v15.8",
+			"published": "2025-01-24T15:33:37Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.8/vsmlrt-cuda.v15.8.7z",
+				"files": {
+					"vsmlrt-cuda/cublas64_12.dll": [
+						"vsmlrt-cuda/cublas64_12.dll",
+						"0a60a7ecbf906f7f3842826fecaf412f1587ff6269729339245a1ec224364161"
+					],
+					"vsmlrt-cuda/cublasLt64_12.dll": [
+						"vsmlrt-cuda/cublasLt64_12.dll",
+						"a21ddfc1c9cd090ab07d2c6aad235aa4f15fe60fe896d5db28adf7a279c09ef3"
+					],
+					"vsmlrt-cuda/cudart64_12.dll": [
+						"vsmlrt-cuda/cudart64_12.dll",
+						"9d9b868955149875ac4ef43442aaaa8913d4a7b3e4d6dd60ee871626aa045768"
+					],
+					"vsmlrt-cuda/cudnn64_8.dll": [
+						"vsmlrt-cuda/cudnn64_8.dll",
+						"74dd3f284b8958f6f558cf802642083821d038317d3fc9c424697cfa7a1e9756"
+					],
+					"vsmlrt-cuda/cudnn_adv_infer64_8.dll": [
+						"vsmlrt-cuda/cudnn_adv_infer64_8.dll",
+						"ef6803da98a4e84ba4cae3b13b5bff52fddcabe4fe1f18413607a0d2fa4fcb06"
+					],
+					"vsmlrt-cuda/cudnn_cnn_infer64_8.dll": [
+						"vsmlrt-cuda/cudnn_cnn_infer64_8.dll",
+						"faabb0b73b6c226cf23d04d43d2050144697c58b6bb86a49e38835e80b4b6387"
+					],
+					"vsmlrt-cuda/cudnn_ops_infer64_8.dll": [
+						"vsmlrt-cuda/cudnn_ops_infer64_8.dll",
+						"8b9635bc926e3a412a98c3155821b8d1da5b0b9f064835e8329d94d2869951dd"
+					],
+					"vsmlrt-cuda/cufft64_11.dll": [
+						"vsmlrt-cuda/cufft64_11.dll",
+						"619fcb005c8a18ffad478ff68b7a9cd154fa170e835dce9d41ff4fc0c0692113"
+					],
+					"vsmlrt-cuda/cufftw64_11.dll": [
+						"vsmlrt-cuda/cufftw64_11.dll",
+						"dd778bc18c2050c937279656cdbbdd2a37623ea5bf38c09ebcf6451771b7fbe3"
+					],
+					"vsmlrt-cuda/cupti64_2025.1.0.dll": [
+						"vsmlrt-cuda/cupti64_2025.1.0.dll",
+						"4e6a6cfe76cf5c56ef6d3c49d41747266af561f890a6926cb7e2c5fe75d3172b"
+					],
+					"vsmlrt-cuda/msvcp140.dll": [
+						"vsmlrt-cuda/msvcp140.dll",
+						"6a37c97308fb959c9d12c38c0f841aff09a17d34f91110ada1be79d22a8e67f9"
+					],
+					"vsmlrt-cuda/nvblas64_12.dll": [
+						"vsmlrt-cuda/nvblas64_12.dll",
+						"915484e5cf44fd89971c8daf17ebfd92df92027b59fedbbd0c06bd7f364c7e68"
+					],
+					"vsmlrt-cuda/nvinfer_10.dll": [
+						"vsmlrt-cuda/nvinfer_10.dll",
+						"99ed7bb3c071c1fd1c66d0eb775465d515c15b00eaca374a34bfa74c6144a57f"
+					],
+					"vsmlrt-cuda/nvinfer_builder_resource_10.dll": [
+						"vsmlrt-cuda/nvinfer_builder_resource_10.dll",
+						"1902b6350e79b15745b90913ffd04bf098de6dfedfd40e4cfd46f0c9d0da35a8"
+					],
+					"vsmlrt-cuda/nvinfer_dispatch_10.dll": [
+						"vsmlrt-cuda/nvinfer_dispatch_10.dll",
+						"aabaea55475e959ff8b5671ea93fd2cb9e28a8315cecaf8560362aecffdc7529"
+					],
+					"vsmlrt-cuda/nvinfer_lean_10.dll": [
+						"vsmlrt-cuda/nvinfer_lean_10.dll",
+						"e3c41c4b09811b61c1c0047330a8356ad531ddbac957a0fb447686a594b416c3"
+					],
+					"vsmlrt-cuda/nvinfer_plugin_10.dll": [
+						"vsmlrt-cuda/nvinfer_plugin_10.dll",
+						"d2830d57d4eca34763714cab9cc3a1227e048867c1862d0529690feeec50d1c4"
+					],
+					"vsmlrt-cuda/nvinfer_vc_plugin_10.dll": [
+						"vsmlrt-cuda/nvinfer_vc_plugin_10.dll",
+						"88844ed4c662614de0363f50d9350fcc69956997a11b5737869defa5a1d783d4"
+					],
+					"vsmlrt-cuda/nvonnxparser_10.dll": [
+						"vsmlrt-cuda/nvonnxparser_10.dll",
+						"68d84905535e6bc4d6b3f5a69ddf462754dee5fdb7ebf7913306f81e4ddde465"
+					],
+					"vsmlrt-cuda/nvrtc-builtins64_128.dll": [
+						"vsmlrt-cuda/nvrtc-builtins64_128.dll",
+						"96a28201dbffd4eff6dc93f310417b981bf7a141d46f2839036f5dbfd83b33ae"
+					],
+					"vsmlrt-cuda/nvrtc64_120_0.alt.dll": [
+						"vsmlrt-cuda/nvrtc64_120_0.alt.dll",
+						"239d04b4263d7e2c50f45d16672f6bbf78eb89e110adb5afb36eab875d126678"
+					],
+					"vsmlrt-cuda/nvrtc64_120_0.dll": [
+						"vsmlrt-cuda/nvrtc64_120_0.dll",
+						"ec2a860422b7d0396b45c29a1848faecc3788041ba52f166f0fc52c1b47e8245"
+					],
+					"vsmlrt-cuda/vcruntime140.dll": [
+						"vsmlrt-cuda/vcruntime140.dll",
+						"327899ded9bbf824ba4fe43cf77a65d621c92fa3a7158ac86da6c6c8a6e66ef5"
+					],
+					"vsmlrt-cuda/vcruntime140_1.dll": [
+						"vsmlrt-cuda/vcruntime140_1.dll",
+						"cf6d28242df881b8e08ef91b45c623e1aac27088770cb077d00ce8e8ec80b742"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.7111111",
+			"published": "2024-12-03T11:03:06Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.7/vsmlrt-cuda.v15.7.7z",
+				"files": {
+					"vsmlrt-cuda/cublas64_12.dll": [
+						"vsmlrt-cuda/cublas64_12.dll",
+						"01d8172b25d8e2d2cb6a276e76e719f5908c6124f484c8c8ca310fbe7b6634f3"
+					],
+					"vsmlrt-cuda/cublasLt64_12.dll": [
+						"vsmlrt-cuda/cublasLt64_12.dll",
+						"0d59d264782cec2782b9ac72483e53c9ba485a9d3a1e19b34071a17b8152102e"
+					],
+					"vsmlrt-cuda/cudart64_12.dll": [
+						"vsmlrt-cuda/cudart64_12.dll",
+						"d954ca542b3b6bcf03cc2b798a7d00051501cf734ca751050e986af505cf9dad"
+					],
+					"vsmlrt-cuda/cudnn64_8.dll": [
+						"vsmlrt-cuda/cudnn64_8.dll",
+						"74dd3f284b8958f6f558cf802642083821d038317d3fc9c424697cfa7a1e9756"
+					],
+					"vsmlrt-cuda/cudnn_adv_infer64_8.dll": [
+						"vsmlrt-cuda/cudnn_adv_infer64_8.dll",
+						"ef6803da98a4e84ba4cae3b13b5bff52fddcabe4fe1f18413607a0d2fa4fcb06"
+					],
+					"vsmlrt-cuda/cudnn_cnn_infer64_8.dll": [
+						"vsmlrt-cuda/cudnn_cnn_infer64_8.dll",
+						"faabb0b73b6c226cf23d04d43d2050144697c58b6bb86a49e38835e80b4b6387"
+					],
+					"vsmlrt-cuda/cudnn_ops_infer64_8.dll": [
+						"vsmlrt-cuda/cudnn_ops_infer64_8.dll",
+						"8b9635bc926e3a412a98c3155821b8d1da5b0b9f064835e8329d94d2869951dd"
+					],
+					"vsmlrt-cuda/cufft64_11.dll": [
+						"vsmlrt-cuda/cufft64_11.dll",
+						"cf3fdfe46470f694f9a1a6895ea2deb57d49059d08acfe5e12769ab3fcdc5320"
+					],
+					"vsmlrt-cuda/cufftw64_11.dll": [
+						"vsmlrt-cuda/cufftw64_11.dll",
+						"07a6b785dbc1e3da5405a36599528f9ab7498ab4cd345a396d90aa0e4216a0c7"
+					],
+					"vsmlrt-cuda/cupti64_2025.1.0.dll": [
+						"vsmlrt-cuda/cupti64_2025.1.0.dll",
+						"d7e6611b2f7aa8785176d3157940af41cb973ace0c4071b135f55defcd40d51b"
+					],
+					"vsmlrt-cuda/msvcp140.dll": [
+						"vsmlrt-cuda/msvcp140.dll",
+						"9057d39b36b6c7d054865ee2bf9cde7a490fe3b01ec4e82514687e24f576269f"
+					],
+					"vsmlrt-cuda/nvblas64_12.dll": [
+						"vsmlrt-cuda/nvblas64_12.dll",
+						"73456c112c896de801cada356312114ab301bbe7370f8a0208789c58875a7f64"
+					],
+					"vsmlrt-cuda/nvinfer_10.dll": [
+						"vsmlrt-cuda/nvinfer_10.dll",
+						"f53c34a7c02f1e7545826c534f3968c285fcee0dfa01ec6d306fdadacf8f7477"
+					],
+					"vsmlrt-cuda/nvinfer_builder_resource_10.dll": [
+						"vsmlrt-cuda/nvinfer_builder_resource_10.dll",
+						"bd83e745c1b6c8cef6ccea593dbf188aa57ae6934fabdc06485d2b4174363e3f"
+					],
+					"vsmlrt-cuda/nvinfer_dispatch_10.dll": [
+						"vsmlrt-cuda/nvinfer_dispatch_10.dll",
+						"78c9eb889f802a203ea2a014a0c12c911a4b620a608e7ad2c36a1f471b1d6b42"
+					],
+					"vsmlrt-cuda/nvinfer_lean_10.dll": [
+						"vsmlrt-cuda/nvinfer_lean_10.dll",
+						"44b50200b55b7badf20e72c91a2ee1c8aa1c2c90f11f33a1d343fda9d33a2885"
+					],
+					"vsmlrt-cuda/nvinfer_plugin_10.dll": [
+						"vsmlrt-cuda/nvinfer_plugin_10.dll",
+						"636e05abd270c326ebea0cec67a69b4de8ea48f5663ed2b5a7ee3a690bbea02d"
+					],
+					"vsmlrt-cuda/nvinfer_vc_plugin_10.dll": [
+						"vsmlrt-cuda/nvinfer_vc_plugin_10.dll",
+						"d143244b60d0d2e96e72e4a7fc80c06dc5d5680298d3693ad3ff3e71aba8e312"
+					],
+					"vsmlrt-cuda/nvonnxparser_10.dll": [
+						"vsmlrt-cuda/nvonnxparser_10.dll",
+						"df0abbe81dc4734bcd1bc6c6a588207df6db698fbae7d87f8fc6a8d2d4e30833"
+					],
+					"vsmlrt-cuda/nvrtc-builtins64_128.dll": [
+						"vsmlrt-cuda/nvrtc-builtins64_128.dll",
+						"49b2d9298a97425f32bd74767ed784d702c2831a132459e254b49144ecf23c02"
+					],
+					"vsmlrt-cuda/nvrtc64_120_0.alt.dll": [
+						"vsmlrt-cuda/nvrtc64_120_0.alt.dll",
+						"aeec38166605a19898caaf238ba9afeccaa7954760f324362be7f052aa3da0d6"
+					],
+					"vsmlrt-cuda/nvrtc64_120_0.dll": [
+						"vsmlrt-cuda/nvrtc64_120_0.dll",
+						"01700cdf0f7f566439260201a8b7ee57f914b56f639770f83feb0d1f2a078567"
+					],
+					"vsmlrt-cuda/vcruntime140.dll": [
+						"vsmlrt-cuda/vcruntime140.dll",
+						"da72e6677bd1bcd01c453c1998aaa19aeaf6659f4774cf6848409da8232a95b2"
+					],
+					"vsmlrt-cuda/vcruntime140_1.dll": [
+						"vsmlrt-cuda/vcruntime140_1.dll",
+						"26e470b29bed3d873e0c328186e53f95e9edbfe0b0fd0cda44743a0b1a04a828"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.7",
 			"published": "2024-12-03T11:03:06Z",
 			"win64": {

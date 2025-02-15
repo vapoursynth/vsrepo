@@ -8,6 +8,32 @@
 	"namespace": "vszip",
 	"releases": [
 		{
+			"version": "R5",
+			"published": "2025-02-03T03:55:43Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-zip/releases/download/R5/vapoursynth-zip-r5.7z",
+				"files": {
+					"vszip.dll": [
+						"vszip.dll",
+						"a937fb57efee4211c45fe67f7fc739a2bd33e2e84db22ffef5546bb16310749d"
+					]
+				}
+			}
+		},
+		{
+			"version": "R4",
+			"published": "2025-02-02T23:24:22Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-zip/releases/download/R4/vapoursynth-zip-r4.7z",
+				"files": {
+					"vszip.dll": [
+						"vszip.dll",
+						"900df5219d96914afceabc79e02a4ed9fc010d8275f82adbf8e2d01b8fd246d6"
+					]
+				}
+			}
+		},
+		{
 			"version": "R3",
 			"published": "2025-01-05T19:02:05Z",
 			"win64": {

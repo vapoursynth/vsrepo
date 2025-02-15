@@ -12,6 +12,30 @@
 	],
 	"releases": [
 		{
+			"version": "1.8.2",
+			"published": "2025-02-13T14:29:56.556988Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/cd/81/a68544b9c45361648668053cf09e8a7cbb9185c0158c462273621ee34adc/vsexprtools-1.8.2-py3-none-any.whl",
+				"hash": "be9dbfdefa3f2183811a4070adafcda25a635ad4d5e6cc4eb076e51b3265ee14"
+			}
+		},
+		{
+			"version": "1.8.1",
+			"published": "2025-02-10T01:40:33.728475Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/e4/20/52646fd9e7ea316fe8c765cb5b1357980913f0f17ee5cf0bcb84dcca3ee5/vsexprtools-1.8.1-py3-none-any.whl",
+				"hash": "8ad70634ec1479253f1721adb92b1c0d5642494ab3fcaeff4d10f33a631b7ffc"
+			}
+		},
+		{
+			"version": "1.8.0",
+			"published": "2025-02-09T23:36:48.168540Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/f1/51/b3f99ed31a059080c307f641397cc2a839617636ba8ef365660144459f5a/vsexprtools-1.8.0-py3-none-any.whl",
+				"hash": "7bd17799e5eff0b3b32fc579b82bfdf725bc5f2f3ce6bd74d477491c053a37d2"
+			}
+		},
+		{
 			"version": "1.7.1",
 			"published": "2024-12-06T07:08:43.059237Z",
 			"wheel": {

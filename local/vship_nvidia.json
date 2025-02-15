@@ -8,6 +8,58 @@
 	"namespace": "vship_nvidia",
 	"releases": [
 		{
+			"version": "v2.1",
+			"published": "2025-02-12T19:51:41Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.1/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"4d1d7307718acdaed0831192597ceab5784cc94714c1b4dfdecc93105e40ed53"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0.2",
+			"published": "2025-02-05T20:22:07Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.0.2/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"9df7752b44b37f5f0d88233903d160f3381237a99c4bcaf1a11dd3ba9c252e2b"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0.1",
+			"published": "2025-02-05T15:18:07Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.0.1/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"475bd0540f5ed54433746c2ec166652a671b5acf92ed9da1778e68f41403f00f"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0",
+			"published": "2025-02-04T21:59:09Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.0/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"b5da51a519aaa36a75e616ae380f8e17fcae63474d89735286413a67519ed83c"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.2",
 			"published": "2025-01-09T22:27:21Z",
 			"win64": {

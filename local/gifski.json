@@ -1,0 +1,24 @@
+{
+	"name": "gifski",
+	"type": "VSPlugin",
+	"category": "Source/Output",
+	"description": "Export video frames as GIF with gifski and vapoursynth. gifski makes smooth GIF animations using advanced techniques that work around the GIF format's limitations.",
+	"github": "https://github.com/dnjulek/vapoursynth-gifski",
+	"identifier": "com.julek.gifski",
+	"namespace": "gifski",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2025-02-26T16:46:43Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-gifski/releases/download/R1/vapoursynth-gifski-r1.7z",
+				"files": {
+					"vsgifski.dll": [
+						"vsgifski.dll",
+						"0dcfaa892cac09e704024c6630d9c9bb74c913698244b7aae5e1f6983b078d72"
+					]
+				}
+			}
+		}
+	]
+}

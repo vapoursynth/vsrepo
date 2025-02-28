@@ -1,0 +1,44 @@
+{
+	"name": "vs-jetpack",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "vs-jetpack provides a collection of Python modules for filtering video using VapourSynth. These include modules for scaling, masking, denoising, debanding, dehaloing, deinterlacing, and antialiasing, as well as general utility functions.",
+	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-jetpack",
+	"identifier": "vsjetpack",
+	"modulename": "vsjetpack",
+	"wheelname": "vsjetpack",
+	"releases": [
+		{
+			"version": "0.2.2",
+			"published": "2025-02-19T12:19:50.218166Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/5b/08/5059bb464113071fb8319a370761ea9bdfe2e855232a16734bcd3b810581/vsjetpack-0.2.2-py3-none-any.whl",
+				"hash": "9ed10736c1ec26a0c08a9d87c67ab8cc94570d4eb7cb12ea201fbe2d2848d16e"
+			}
+		},
+		{
+			"version": "0.2.1",
+			"published": "2025-02-13T20:24:28.842018Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/04/5b/62931a007886620c10df354d07fb4275075d15489685c72bf255f6b489c9/vsjetpack-0.2.1-py3-none-any.whl",
+				"hash": "ea33da0b606861486f6e992380ab49c78565c0fe35554450c902413800e4f918"
+			}
+		},
+		{
+			"version": "0.2.0",
+			"published": "2025-02-13T19:42:51.096200Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/df/5e/87d3d17bb46e84fb605223c0aa25d1d6387d5210cc0ec1ddb4ad789c772a/vsjetpack-0.2.0-py3-none-any.whl",
+				"hash": "13dd3644d5b8c43c8c3efb1610355be73d6a9698adbb58b510754f594effede9"
+			}
+		},
+		{
+			"version": "0.1.1",
+			"published": "2025-02-12T22:36:07.019326Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/9b/66/26d80ddda56dfc35d5939107aaed2226db9325402c8812d26d8144bd58db/vsjetpack-0.1.1-py3-none-any.whl",
+				"hash": "accf1d0e6a5789f1f8d7a96abe70aac6d56d82be5ae0a918d67b311925c7edce"
+			}
+		}
+	]
+}

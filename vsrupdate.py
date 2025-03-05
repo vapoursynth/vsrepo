@@ -360,7 +360,11 @@ def update_package(name: str) -> int:
                             temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win32')
                             new_rel_entry['win32'] = { 'url': new_url, 'files': {}}
                             for fn in latest_rel['win32']['files']:
-                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win32']['files'][fn][0], 'win32')
+                                if os.path.splitext(temp_fn)[1].lower() in ['.dll']:
+                                    new_fn, digest = os.path.basename(temp_fn), hashlib.sha256(open(temp_fn,'rb').read()).hexdigest()
+                                else:
+                                    new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win32']['files'][fn][0], 'win32')
+                                
                                 new_rel_entry['win32']['files'][fn] = [new_fn, digest]
                     except:
                         new_rel_entry.pop('win32', None)
@@ -372,7 +376,11 @@ def update_package(name: str) -> int:
                             temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' win64')
                             new_rel_entry['win64'] = { 'url': new_url, 'files': {} }
                             for fn in latest_rel['win64']['files']:
-                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win64']['files'][fn][0], 'win64')
+                                if os.path.splitext(temp_fn)[1].lower() in ['.dll']:
+                                    new_fn, digest = os.path.basename(temp_fn), hashlib.sha256(open(temp_fn,'rb').read()).hexdigest()
+                                else:
+                                    new_fn, digest = decompress_and_hash(temp_fn, latest_rel['win64']['files'][fn][0], 'win64')
+                                
                                 new_rel_entry['win64']['files'][fn] = [new_fn, digest]
                     except:
                         new_rel_entry.pop('win64', None)
@@ -389,7 +397,11 @@ def update_package(name: str) -> int:
                         temp_fn = fetch_url_to_cache(new_url, name, rel['tag_name'], pfile['name'] + ' ' +rel['tag_name'] + ' script')
                         new_rel_entry['script'] = { 'url': new_url, 'files': {} }
                         for fn in latest_rel['script']['files']:  # type: ignore
-                            new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')  # type: ignore
+                            if os.path.splitext(temp_fn)[1].lower() in ['.py']:
+                                new_fn, digest = os.path.basename(temp_fn), hashlib.sha256(open(temp_fn,'rb').read()).hexdigest()
+                            else:
+                                new_fn, digest = decompress_and_hash(temp_fn, latest_rel['script']['files'][fn][0], 'script')  # type: ignore
+
                             new_rel_entry['script']['files'][fn] = [new_fn, digest]
                     except:
                         new_rel_entry.pop('script', None)
@@ -573,31 +585,33 @@ elif args.operation == 'create-package':
         new_rel_entry['wheel']['hash'] = hashlib.sha256(open(dlfile,'rb').read()).hexdigest()
 
     else: # is plugin or script
-        listzip = list_archive_files(dlfile)
         files_to_hash: List[str] = []
-        for f in listzip.values():
-            if pathlib.Path(f).suffix: # simple folder filter
-                if "*" in args.packagefiletypes:
-                    files_to_hash.append(str(f))
-                else:
-                    if pathlib.Path(f).suffix in args.packagefiletypes:
+        if os.path.splitext(dlfile)[1].lower() not in ['.dll', '.py']:
+            listzip = list_archive_files(dlfile)
+            for f in listzip.values():
+                if pathlib.Path(f).suffix: # simple folder filter
+                    if "*" in args.packagefiletypes:
                         files_to_hash.append(str(f))
+                    else:
+                        if pathlib.Path(f).suffix in args.packagefiletypes:
+                            files_to_hash.append(str(f))
 
-        files_to_hash = sorted(files_to_hash)
+            files_to_hash = sorted(files_to_hash)
+            
 
-
-        print("\n\nFound the following dlls:")
-        for fname in files_to_hash:
-            fullpath, hash, arch = decompress_hash_simple(dlfile, fname)
-            if arch == 32:
-                print('win32:', fullpath, hash)
-            if arch == 64:
-                print('win64:', fullpath, hash)
-        print("\n\n")
+            print("\n\nFound the following dlls:")
+            for fname in files_to_hash:
+                fullpath, hash, arch = decompress_hash_simple(dlfile, fname)
+                if arch == 32:
+                    print('win32:', fullpath, hash)
+                if arch == 64:
+                    print('win64:', fullpath, hash)
+            print("\n\n")
 
         if not args.packagescript: # is plugin
             new_rel_entry['win32'] = { 'url': url, 'files': {} }
             new_rel_entry['win64'] = { 'url': url, 'files': {} }
+            
             for fname in files_to_hash:
                 fullpath, hash, arch = decompress_hash_simple(dlfile, fname)
                 file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else os.path.basename(fullpath)
@@ -608,6 +622,22 @@ elif args.operation == 'create-package':
                 if arch == None:
                     new_rel_entry['win32']['files'][file] = [fullpath, hash]
                     new_rel_entry['win64']['files'][file] = [fullpath, hash]
+
+
+            if os.path.splitext(dlfile)[1].lower() in ['.dll']:
+                file_bin = open(dlfile,'rb').read()
+                hash = hashlib.sha256(file_bin).hexdigest()
+                arch = getBinaryArch(file_bin)
+                filename = os.path.basename(dlfile)
+
+                if arch == 32:
+                    new_rel_entry['win32']['files'][filename] = [filename, hash]
+                if arch == 64:
+                    new_rel_entry['win64']['files'][filename] = [filename, hash]
+                if arch == None:
+                    new_rel_entry['win32']['files'][filename] = [filename, hash]
+                    new_rel_entry['win64']['files'][filename] = [filename, hash]
+                
 
             # remove 32/64 entry if no files are present
             if not new_rel_entry['win32']['files']:
@@ -621,6 +651,14 @@ elif args.operation == 'create-package':
                 fullpath, hash, arch = decompress_hash_simple(dlfile, fname)
                 file = keep_folder_structure(fullpath, args.keepfolder) if args.keepfolder >= 0 else os.path.basename(fullpath)
                 new_rel_entry['script']['files'][file] = [fullpath, hash]
+            
+            if os.path.splitext(dlfile)[1].lower() in ['.py']:
+                file_bin = open(dlfile,'rb').read()
+                hash = hashlib.sha256(file_bin).hexdigest()
+                arch = getBinaryArch(file_bin)
+                filename = os.path.basename(dlfile)
+                new_rel_entry['script']['files'][filename] = [filename, hash]
+
 
     if not args.packagescript:
         if is_wheel:

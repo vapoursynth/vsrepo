@@ -8,6 +8,19 @@
 	"namespace": "ares",
 	"releases": [
 		{
+			"version": "v0.1.1",
+			"published": "2025-03-27T09:41:26Z",
+			"win64": {
+				"url": "https://github.com/ropagr/VapourSynth-AudioResample/releases/download/v0.1.1/AudioResample-v0.1.1-x64.zip",
+				"files": {
+					"AudioResample.dll": [
+						"AudioResample-v0.1.1-x64/AudioResample.dll",
+						"40a63ebeb8c11e97ecfce8da986fa3136ba84c34d40834eabc70b48bf49d1bf2"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.1.0",
 			"published": "2025-01-23T19:47:35Z",
 			"win64": {

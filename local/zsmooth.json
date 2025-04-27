@@ -9,6 +9,32 @@
 	"namespace": "zsmooth",
 	"releases": [
 		{
+			"version": "0.8",
+			"published": "2025-04-20T17:14:45Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.8/zsmooth-x86_64-windows.zip",
+				"files": {
+					"zsmooth.dll": [
+						"zig-out/lib/zsmooth.dll",
+						"0f3be9bca740f382c7cfaf025d0ec518cc0893347ca66f6d6a909ca63109fff3"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.7",
+			"published": "2025-04-17T20:42:26Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.7/zsmooth.avx2.dll.zip",
+				"files": {
+					"zsmooth.avx2.dll": [
+						"zsmooth.avx2.dll",
+						"8da2e66518231f7668bcf77be170123b9ce16859cc1fe2dcf1a0c73f17139cb0"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.6",
 			"published": "2025-01-20T19:52:17Z",
 			"win64": {

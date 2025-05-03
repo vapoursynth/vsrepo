@@ -29,6 +29,55 @@
 	],
 	"releases": [
 		{
+			"version": "v15.10",
+			"published": "2025-05-01T23:37:33Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.10/contrib-models.v15.10.7z",
+				"files": {
+					"models/RealESRGANv2/Ani4Kv2_G6i2_Compact.onnx": [
+						"models/RealESRGANv2/Ani4Kv2_G6i2_Compact.onnx",
+						"82e533a8c534d37ee19600a1661d59dfb57f911d809539418cfa4329920f7085"
+					],
+					"models/RealESRGANv2/Ani4Kv2_G6i2_UltraCompact.onnx": [
+						"models/RealESRGANv2/Ani4Kv2_G6i2_UltraCompact.onnx",
+						"7bcc365d2c3a474402eecdd0f98c861e4dcbe5b08cdb7300e53283b7bdf61b5a"
+					],
+					"models/RealESRGANv2/Ani4Kv2-G6i2-Compact.onnx": [
+						"models/RealESRGANv2/Ani4Kv2-G6i2-Compact.onnx",
+						"82e533a8c534d37ee19600a1661d59dfb57f911d809539418cfa4329920f7085"
+					],
+					"models/RealESRGANv2/Ani4Kv2-G6i2-UltraCompact.onnx": [
+						"models/RealESRGANv2/Ani4Kv2-G6i2-UltraCompact.onnx",
+						"7bcc365d2c3a474402eecdd0f98c861e4dcbe5b08cdb7300e53283b7bdf61b5a"
+					],
+					"models/RealESRGANv2/animejanaiV2L1.onnx": [
+						"models/RealESRGANv2/animejanaiV2L1.onnx",
+						"f074b67a4a4213c4bfa3a81e5dd32fdddeb622fc33b48035af7adeafb02dde66"
+					],
+					"models/RealESRGANv2/animejanaiV2L2.onnx": [
+						"models/RealESRGANv2/animejanaiV2L2.onnx",
+						"0b041514c20d05bc0d3e2547c954f9b8e9192870cf29e74b5308c2d931f97299"
+					],
+					"models/RealESRGANv2/animejanaiV2L3.onnx": [
+						"models/RealESRGANv2/animejanaiV2L3.onnx",
+						"d3247af6893968da7d8f4ae523e670a3c7ac64627f1cd85f1327fac03980e668"
+					],
+					"models/RealESRGANv2/animejanaiV3-HD-L1.onnx": [
+						"models/RealESRGANv2/animejanaiV3-HD-L1.onnx",
+						"d328ff0b2fc36145af167093d951ac6fd577e8be26fe0e48764557ac94e03877"
+					],
+					"models/RealESRGANv2/animejanaiV3-HD-L2.onnx": [
+						"models/RealESRGANv2/animejanaiV3-HD-L2.onnx",
+						"5efe1a8d65e02e09b5d408202477f009a6653e386ee3757105e541774879bdc1"
+					],
+					"models/RealESRGANv2/animejanaiV3-HD-L3.onnx": [
+						"models/RealESRGANv2/animejanaiV3-HD-L3.onnx",
+						"babd3dd2904d74d0d24f7468f25dd39fc65fa825d4ea43b2cb30e13b8d39cc31"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.9",
 			"published": "2025-03-05T22:52:41Z",
 			"win64": {

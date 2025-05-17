@@ -12,6 +12,28 @@
 	],
 	"releases": [
 		{
+			"version": "1253.0.0.0",
+			"published": "2025-05-04T21:33:42Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/L-SMASH-Works/releases/download/1253.0.0.0/L-SMASH-Works-r1253.0.0.0.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"x86/LSMASHSource.dll",
+						"cb25e62080e35dc73e2f519479c364606b8abfa4922d36188af1d5db8590b717"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/L-SMASH-Works/releases/download/1253.0.0.0/L-SMASH-Works-r1253.0.0.0.7z",
+				"files": {
+					"LSMASHSource.dll": [
+						"x64/LSMASHSource.dll",
+						"d01e780e75bde18353eb4f4acaf33c0df74aed97fe5dd17ce12e8c99678749e4"
+					]
+				}
+			}
+		},
+		{
 			"version": "1252.0.0.0",
 			"published": "2025-05-01T05:07:59Z",
 			"win32": {

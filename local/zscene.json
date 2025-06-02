@@ -1,0 +1,25 @@
+{
+	"name": "zscene",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Scene change detection. Reads scene data from a given file. Adds the pertinent _SceneChangePrev and _SceneChangeNext properties to each frame.",
+	"doom9": "https://forum.doom9.org/showthread.php?t=186359",
+	"github": "https://github.com/adworacz/zscene",
+	"identifier": "com.adub.zscene",
+	"namespace": "zscene",
+	"releases": [
+		{
+			"version": "0.1",
+			"published": "2025-06-02T19:47:19Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zscene/releases/download/0.1/zscene-x86_64-windows.zip",
+				"files": {
+					"zscene.dll": [
+						"zscene.dll",
+						"6aa937955d51fe1f12ee7d6173a3da6a5e65d8e0870b0933865ac44c2f2429f2"
+					]
+				}
+			}
+		}
+	]
+}

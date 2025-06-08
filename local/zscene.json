@@ -1,5 +1,5 @@
 {
-	"name": "zscene",
+	"name": "Zscene",
 	"type": "VSPlugin",
 	"category": "Other",
 	"description": "Scene change detection. Reads scene data from a given file. Adds the pertinent _SceneChangePrev and _SceneChangeNext properties to each frame.",

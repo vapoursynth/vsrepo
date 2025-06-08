@@ -9,6 +9,19 @@
 	"namespace": "bs",
 	"releases": [
 		{
+			"version": "R12",
+			"published": "2025-06-02T14:39:12Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R12/BestSource-R12.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"cdd5fe8b610f7a7b4c0d8c4526b7acf3cc8d5131aed851dd47c2cb674156d3cb"
+					]
+				}
+			}
+		},
+		{
 			"version": "R11",
 			"published": "2025-03-06T21:20:37Z",
 			"win64": {

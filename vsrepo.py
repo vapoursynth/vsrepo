@@ -980,7 +980,7 @@ elif args.operation == 'available':
     detect_installed_packages()
     list_available_packages()
 elif args.operation == 'update':
-    update_package_definition('http://www.vapoursynth.com/vsrepo/vspackages3.zip')
+    update_package_definition('https://www.vapoursynth.com/vsrepo/vspackages3.zip')
 elif args.operation == 'paths':
     print_paths()
 elif args.operation == "genstubs":

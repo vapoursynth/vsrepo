@@ -2,7 +2,7 @@
    "name":"DGHDRtoSDR",
    "type":"VSPlugin",
    "description":"Convert HDR to SDR",
-   "website":"http://rationalqm.us/hdr",
+   "website":"https://rationalqm.us/hdr",
    "category":"Color/Levels",
    "identifier":"com.vapoursynth.dghdrtosdr",
    "namespace":"dghdrtosdr",
@@ -15,7 +15,7 @@
          "version":"1.15",
          "published":"2021-11-20T15:56Z",
          "win32":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.15.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.15.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "x32/DGHDRtoSDR.dll",
@@ -24,7 +24,7 @@
             }
          },
          "win64":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.15.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.15.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "DGHDRtoSDR.dll",
@@ -37,7 +37,7 @@
          "version":"1.14",
          "published":"2020-08-10T06:20Z",
          "win32":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.14.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.14.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "x32/DGHDRtoSDR.dll",
@@ -46,7 +46,7 @@
             }
          },
          "win64":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.14.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.14.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "DGHDRtoSDR.dll",
@@ -59,7 +59,7 @@
          "version":"1.13",
          "published":"2019-06-18T14:25Z",
          "win32":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.13.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.13.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "x32/DGHDRtoSDR.dll",
@@ -68,7 +68,7 @@
             }
          },
          "win64":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.13.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.13.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "DGHDRtoSDR.dll",
@@ -81,7 +81,7 @@
          "version":"1.12",
          "published":"2019-06-18T14:25Z",
          "win32":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.12.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.12.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "DGHDRtoSDR.dll",
@@ -90,7 +90,7 @@
             }
          },
          "win64":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.12.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.12.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "x64/DGHDRtoSDR.dll",
@@ -103,7 +103,7 @@
          "version":"1.11",
          "published":"2018-10-17T11:52Z",
          "win32":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.11.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.11.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "DGHDRtoSDR.dll",
@@ -112,7 +112,7 @@
             }
          },
          "win64":{
-            "url":"http://rationalqm.us/hdr/DGHDRtoSDR_1.11.rar",
+            "url":"https://rationalqm.us/hdr/DGHDRtoSDR_1.11.rar",
             "files":{
                "DGHDRtoSDR.dll":[
                   "x64/DGHDRtoSDR.dll",

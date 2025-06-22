@@ -19,6 +19,33 @@
 						"5ca3b982b13824488d7ee2ac606d6f0f013e94a974b1c3118dc92713d1efcc43"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.hqdn3d/r2.0.1/linux-glibc-x86_64/2024-09-30T20.53.46%2B00.00Z/HQDn3D-r2.0.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libhqdn3d.so": [
+						"libhqdn3d.so",
+						"4bd4a13f48031a24d0b1befb55ee0f41b4b292af493cc342c1bdf033620964b5"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.hqdn3d/r2.0.1/darwin-x86_64/2024-09-30T20.57.11%2B00.00Z/HQDn3D-r2.0.1-darwin-x86_64.zip",
+				"files": {
+					"libhqdn3d.dylib": [
+						"libhqdn3d.dylib",
+						"2e898fffda798fa70df7e06a22a46e638440f4c7d377fec4e47ec78ff8dc2000"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.hqdn3d/r2.0.1/darwin-aarch64/2024-09-30T20.54.24%2B00.00Z/HQDn3D-r2.0.1-darwin-aarch64.zip",
+				"files": {
+					"libhqdn3d.dylib": [
+						"libhqdn3d.dylib",
+						"caa679ab3e1a920f69f22abd71690853647a00765d586ea91fc6fd184bbefe71"
+					]
+				}
 			}
 		},
 		{

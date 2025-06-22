@@ -1,0 +1,176 @@
+{
+	"name": "vsmlrt-vsmigx",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "MIGraphX is a highly optimized AI inference runtime for AMD GPUs. It also uses benchmarking to find the optimal kernel",
+	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"identifier": "io.github.amusementclub.vs_migraphx",
+	"namespace": "migx",
+	"device": [
+		"hip"
+	],
+	"dependencies": [
+		"io.github.amusementclub.vsmlrt_script",
+		"io.github.amusementclub.vsmlrt_models",
+		"io.github.amusementclub.vsmlrt_ext_models",
+		"io.github.amusementclub.vsmlrt_contrib_models",
+		"io.github.amusementclub.vsmlrt_hip_migx_runtime"
+	],
+	"ignore": [
+		"v15.2",
+		"v15.1",
+		"v15",
+		"v14",
+		"v13.2",
+		"v13.1",
+		"v13",
+		"v12",
+		"v11",
+		"v10",
+		"v9.2",
+		"v9.1",
+		"v9",
+		"v8",
+		"v7",
+		"v6",
+		"v5",
+		"v4",
+		"v3",
+		"v2",
+		"model-20211209",
+		"v1",
+		"v0"
+	],
+	"releases": [
+		{
+			"version": "v15.12",
+			"published": "2025-06-13T02:44:25Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.12/VSMIGX-Windows-x64.v15.12.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"ed0a254a2478e0c74c2bf8c8e65fcb7833af49ea9319216dd9c3203aedc058d7"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.11",
+			"published": "2025-05-15T02:44:34Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.11/VSMIGX-Windows-x64.v15.11.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"b6725adc6ea0fe47bc3707632332a1a62322891afeafab45a400a29a4715b26f"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.10",
+			"published": "2025-05-01T23:37:33Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.10/VSMIGX-Windows-x64.v15.10.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"423bca7caba69a976cd0685146ec5b46a5f3b2cb886501619f6308ef6d34abec"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.9",
+			"published": "2025-03-05T22:52:41Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.9/VSMIGX-Windows-x64.v15.9.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"6d2d3e699e75dbbadf0f06f2a449e6b0351e4e69692e8fca1baa07a7fa664923"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.8",
+			"published": "2025-01-24T15:33:37Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.8/VSMIGX-Windows-x64.v15.8.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"5917c9d7ebcd9d7c96e7ae435e5411c9a4b4d2bed3accc0685245099f393d31c"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.7",
+			"published": "2024-12-03T11:03:06Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.7/VSMIGX-Windows-x64.v15.7.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"983d348d3084bd3fa5e953a27713a1fec3caebe399cf906025ce6a545720cfa0"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.6",
+			"published": "2024-11-01T23:35:39Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.6/VSMIGX-Windows-x64.v15.6.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"04389b675ab74572740ea38858fec00e28170fe8e711447f853b9dfdc774d7f1"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.5",
+			"published": "2024-10-01T00:12:31Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.5/VSMIGX-Windows-x64.v15.5.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"565bc97b11e9adc526ad15a849c9706c57a3ce1664aeaa6296aafea2a20544d0"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.4",
+			"published": "2024-09-07T01:05:26Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.4/VSMIGX-Windows-x64.v15.4.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"e13e85779c538e68b7679af1e8213c8b4041d5e10f3d8d821f2d2261333bb4d0"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.3",
+			"published": "2024-08-21T07:23:43Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.3/VSMIGX-Windows-x64.v15.3.7z",
+				"files": {
+					"vsmigx.dll": [
+						"vsmigx.dll",
+						"327ac91de16bd53080cf1d98bc30badba518c98d2a2f3923d17ad34fc721ef93"
+					]
+				}
+			}
+		}
+	]
+}

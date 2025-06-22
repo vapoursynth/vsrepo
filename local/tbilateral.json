@@ -27,6 +27,33 @@
 						"19500a3d614ae69c5ccec38f258b88abdb6080bc437b37465d8ba2872fc27a50"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tbilateral/v4/linux-glibc-x86_64/2024-09-30T20.55.22%2B00.00Z/TBilateral-v4-linux-glibc-x86_64.zip",
+				"files": {
+					"libtbilateral.so": [
+						"libtbilateral.so",
+						"8bd086b6eb95e08b4f891f4a578dd8cf37b1c61663f2186e71cf07ae5f86aa17"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tbilateral/v4/darwin-x86_64/2024-09-30T21.00.32%2B00.00Z/TBilateral-v4-darwin-x86_64.zip",
+				"files": {
+					"libtbilateral.dylib": [
+						"libtbilateral.dylib",
+						"71bc5605ac0f4e34c4bd5a7f712399d967615b4ce07e02511be23f6b430c9002"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tbilateral/v4/darwin-aarch64/2024-09-30T20.56.16%2B00.00Z/TBilateral-v4-darwin-aarch64.zip",
+				"files": {
+					"libtbilateral.dylib": [
+						"libtbilateral.dylib",
+						"28e1672460b42c9f96dab38d1e419251c8168f0df6cef37e71c0b3d9ca4e1bce"
+					]
+				}
 			}
 		},
 		{

@@ -28,6 +28,33 @@
 						"96d222a493bb488094306afc1837439396d03f419c4399aa4349178b4ecd2ef5"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.ssiq/v1.0/linux-glibc-x86_64/2024-09-30T20.55.16%2B00.00Z/SSIQ-v1.0-linux-glibc-x86_64.zip",
+				"files": {
+					"libssiq.so": [
+						"libssiq.so",
+						"f5fcbbdda21771720a51db20fa6fb760eea8b6f1d2080af39b8db25353a93f87"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.ssiq/v1.0/darwin-x86_64/2024-09-30T21.00.23%2B00.00Z/SSIQ-v1.0-darwin-x86_64.zip",
+				"files": {
+					"libssiq.dylib": [
+						"libssiq.dylib",
+						"c9bc7e013ad5b431eb0758b21597d069084d41fc7e8a1d8d0803b47b4eb14541"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.ssiq/v1.0/darwin-aarch64/2024-09-30T20.56.10%2B00.00Z/SSIQ-v1.0-darwin-aarch64.zip",
+				"files": {
+					"libssiq.dylib": [
+						"libssiq.dylib",
+						"d81680e9a054ca2d9c3d8d1f94cca512b77cb345c5aa9a5eff2e678d129be0de"
+					]
+				}
 			}
 		}
 	]

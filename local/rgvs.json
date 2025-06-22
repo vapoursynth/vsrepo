@@ -10,6 +10,37 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "git:89ca38a",
+			"published": "2024-10-09T22:47:45Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.removegrainvs/git-89ca38a/linux-glibc-x86_64/2024-10-09T22.47.43%2B00.00Z/RemoveGrain-git-89ca38a-linux-glibc-x86_64.zip",
+				"files": {
+					"libremovegrain.so": [
+						"libremovegrain.so",
+						"5f5ea8248e7752fc5964ac8cef87248d912d75fc046bdc15ce96e790281ef165"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.removegrainvs/git-89ca38a/darwin-x86_64/2024-10-09T22.52.26%2B00.00Z/RemoveGrain-git-89ca38a-darwin-x86_64.zip",
+				"files": {
+					"libremovegrain.dylib": [
+						"libremovegrain.dylib",
+						"1383538a702277d50edd669b2a692c5ceb16a0935ed0fb42972cdd9020de5510"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.removegrainvs/git-89ca38a/darwin-aarch64/2024-10-09T22.47.59%2B00.00Z/RemoveGrain-git-89ca38a-darwin-aarch64.zip",
+				"files": {
+					"libremovegrain.dylib": [
+						"libremovegrain.dylib",
+						"d925c3f25c0ec6d4f102b0248b8706cb309e99f580937de234e21c60c2512697"
+					]
+				}
+			}
+		},
+		{
 			"version": "R1",
 			"published": "2021-09-09T18:21:31Z",
 			"win32": {

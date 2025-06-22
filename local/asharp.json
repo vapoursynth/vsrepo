@@ -27,6 +27,33 @@
 						"d7b51f8a1c1043ae8bf1bb10de852c70d9939d115db28dcb0bfb47afacd137fe"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.asharp/v1/linux-glibc-x86_64/2024-09-30T17.13.14%2B00.00Z/ASharp-v1-linux-glibc-x86_64.zip",
+				"files": {
+					"libasharp.so": [
+						"libasharp.so",
+						"d45df8823f676a62b5fb2e86db8e9b2175d36fc8aff90aa124299e998680a815"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.asharp/v1/darwin-x86_64/2024-09-30T17.18.35%2B00.00Z/ASharp-v1-darwin-x86_64.zip",
+				"files": {
+					"libasharp.dylib": [
+						"libasharp.dylib",
+						"e48e08c96c30ba5fe22ca0c8fdd81e1bb9e5b36639bc88b3cd1201f51ed0f279"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.asharp/v1/darwin-aarch64/2024-09-30T17.17.26%2B00.00Z/ASharp-v1-darwin-aarch64.zip",
+				"files": {
+					"libasharp.dylib": [
+						"libasharp.dylib",
+						"8631e4cf4e25c09f6254336a26a5ff9bde0446d00a05310bc5fe916ec8be009e"
+					]
+				}
 			}
 		}
 	]

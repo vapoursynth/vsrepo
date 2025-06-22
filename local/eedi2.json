@@ -8,8 +8,41 @@
 	"identifier": "com.holywu.eedi2",
 	"namespace": "eedi2",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2",
-	"ignore": ["r7.1"],
+	"ignore": [
+		"r7.1"
+	],
 	"releases": [
+		{
+			"version": "r7.1",
+			"published": "2024-09-30T20:52:59Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.eedi2/r7.1/linux-glibc-x86_64/2024-09-30T20.52.58%2B00.00Z/EEDI2-r7.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libeedi2.so": [
+						"libeedi2.so",
+						"53ee34275c5f7a89126407faa126a3007a3d8d00c0c6f0d262ce0ece11359529"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.eedi2/r7.1/darwin-x86_64/2024-09-30T20.55.24%2B00.00Z/EEDI2-r7.1-darwin-x86_64.zip",
+				"files": {
+					"libeedi2.dylib": [
+						"libeedi2.dylib",
+						"de800b4d036549a55463cb22995e435e93842d1e5393eee22e84f1cc83b4c9c1"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.eedi2/r7.1/darwin-aarch64/2024-09-30T20.53.24%2B00.00Z/EEDI2-r7.1-darwin-aarch64.zip",
+				"files": {
+					"libeedi2.dylib": [
+						"libeedi2.dylib",
+						"120b678f4cb5c67ed181b416dd0b6869c46268d92c2cf850af2cbe37fd3bd6f8"
+					]
+				}
+			}
+		},
 		{
 			"version": "r7",
 			"published": "2017-03-04T14:55:13Z",

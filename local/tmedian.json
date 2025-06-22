@@ -28,6 +28,33 @@
 						"2bf666268f2d1bad6277112423c30566161f1e2f5ac38d98065f441ba3056d3a"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.temporalmedian/v1/linux-glibc-x86_64/2024-09-30T20.55.53%2B00.00Z/TemporalMedian-v1-linux-glibc-x86_64.zip",
+				"files": {
+					"libtemporalmedian.so": [
+						"libtemporalmedian.so",
+						"84e0a1a241cd5cded1361d8c414f7504a0f17ab50b3ec7a2fcae42739e3cc482"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.temporalmedian/v1/darwin-x86_64/2024-09-30T21.01.26%2B00.00Z/TemporalMedian-v1-darwin-x86_64.zip",
+				"files": {
+					"libtemporalmedian.dylib": [
+						"libtemporalmedian.dylib",
+						"c60490a673b8a6b7e2cb223e0819dc2ff496156a8241afdb34bda8234b7939f3"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.temporalmedian/v1/darwin-aarch64/2024-09-30T20.56.40%2B00.00Z/TemporalMedian-v1-darwin-aarch64.zip",
+				"files": {
+					"libtemporalmedian.dylib": [
+						"libtemporalmedian.dylib",
+						"e00160a244cb4290fe9200fc078357ad0a6fdd6fbda98ef3d61fce21be1b39a5"
+					]
+				}
 			}
 		}
 	]

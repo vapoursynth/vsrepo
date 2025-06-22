@@ -1,0 +1,206 @@
+{
+	"name": "HIP-SSIMU2-AMD",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Performs SSIMU2 measurments using the GPU with HIP (Amd version)",
+	"github": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2",
+	"identifier": "com.lumen.vship_amd",
+	"namespace": "vship_amd",
+	"releases": [
+		{
+			"version": "v3.0.0",
+			"published": "2025-06-14T17:43:02Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v3.0.0/vship_amd.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_amd.dll",
+						"a6d6af98ea4431bd8142f9c532927772e07d342dffc697b56dadce0183d5dea3"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.2.2",
+			"published": "2025-04-11T21:48:15Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.2.2/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"bf220104e312a390dc3999e90f161e774f7e595a500b95d4e0f2f6114161ef62"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.2.1",
+			"published": "2025-03-30T19:44:15Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.2.1/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"59284dc61a7f99d49834ad933a574697c8dca0b903c12090597e527d62c16582"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.2",
+			"published": "2025-03-20T20:14:16Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.2/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"63de627b9b0d48a37627a75178fb4a7062f14ce5e9459260caeaeb7e7c982645"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.1.2",
+			"published": "2025-03-12T20:13:18Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.1.2/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"dd1cf09ef2f0abcd4997d9f440931a8ac93e4cf1df2d8fd630bcbdc7461d718e"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.1.1",
+			"published": "2025-02-19T09:09:46Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.1.1/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"127d1eb658eb81e8247d88735b0bdf2a728ed6c450ede79439e945524b8bdbfe"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.1",
+			"published": "2025-02-12T19:51:41Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.1/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"0b3cc94bc35a4f473a546174253d42fd89b1126f5d5c52782a5221ded9b4e8ef"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0.2",
+			"published": "2025-02-05T20:22:07Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.0.2/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"d2f4a20a2f975b3439fe251b9e4f0097b9dbeef738e97208e4202443860a6d02"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0.1",
+			"published": "2025-02-05T15:18:07Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.0.1/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"4441a7c5aac10f2347ba179bb550e7ebb101a6aaa8507b25d65497030044b146"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0",
+			"published": "2025-02-04T21:59:09Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.0/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"b160ade6dd93b8bc25ab51c81c39a1749f5b44196b8a6b9ff54749674a46cab8"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.2",
+			"published": "2025-01-09T22:27:21Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v1.2/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"c63a671f001a83112b99f0c7ceb6b9adce0a6fcdae28865d9bd216bec4178464"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.1",
+			"published": "2025-01-07T16:15:21Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v1.1/vship_AMD.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_AMD.dll",
+						"9a33f025d12ab279288e3b711e50b996df2e2507885c2642ea13db89bb6a30d1"
+					]
+				}
+			}
+		},
+		{
+			"version": "release",
+			"published": "2024-12-30T13:18:36Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2/releases/download/release/hipssimu2_AMD.zip",
+				"files": {
+					"hipssimu2.dll": [
+						"hipssimu2.dll",
+						"d17806830f59f90d9c0bdc10695fd90a9437ff95c7858f63e727095e1ac6afb6"
+					]
+				}
+			}
+		},
+		{
+			"version": "beta",
+			"published": "2024-12-26T23:02:29Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2/releases/download/beta/hipssimu2_AMDGPU.zip",
+				"files": {
+					"hipssimu2.dll": [
+						"hipssimu2.dll",
+						"628b92b42276a361bc5ef51ddfa73359d2db23be3927ccd9858277407f38841a"
+					]
+				}
+			}
+		},
+		{
+			"version": "alpha",
+			"published": "2024-12-26T16:44:54Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2/releases/download/alpha/hipssimu2_AMDGPU.zip",
+				"files": {
+					"hipssimu2.dll": [
+						"hipssimu2.dll",
+						"de39ba2036b9e9ee0ac143fec4c30f982df2896c541e8589e8c5fa665708efd1"
+					]
+				}
+			}
+		}
+	]
+}

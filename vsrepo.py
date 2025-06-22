@@ -32,6 +32,7 @@ import io
 import json
 import os
 import os.path
+import platform
 import re
 import subprocess
 import sys
@@ -43,9 +44,9 @@ from pathlib import Path
 
 try:
     import winreg
+    is_windows = True
 except ImportError:
-    print('{} is only supported on Windows.'.format(__file__))
-    sys.exit(1)
+    is_windows = False
 
 try:
     import tqdm  # type: ignore
@@ -91,6 +92,25 @@ def detect_vapoursynth_installation() -> str:
         sys.exit(1)
     return spec.origin
 
+def detect_target() -> Optional[str]:
+    pl = platform.uname()
+    if pl.system.startswith('Windows'):
+        if sys.maxsize > 2**32:
+            return 'win64'
+        # at some point aarch64/arm64 could be added here
+        else:
+            return 'win32'
+    elif pl.system == 'Linux':
+        if pl.machine == 'x86_64':
+            return 'linux-glibc-x86_64'
+        if pl.machine == 'arm64' or pl.machine == 'aarch64':
+            return 'linux-glibc-aarch64'
+    elif pl.system == 'Darwin':
+        if pl.machine == 'x86_64':
+            return 'darwin-x86_64'
+        elif pl.machine == 'arm64' or pl.machine == 'aarch64':
+            return 'darwin-aarch64'
+    return None
 
 def is_sitepackage_install_portable() -> bool:
     if args.portable:
@@ -149,20 +169,25 @@ def get_vs_installation_site() -> str:
     return site.getusersitepackages()
 
 
-is_64bits: bool = sys.maxsize > 2**32
-
 parser = argparse.ArgumentParser(description='A simple VapourSynth package manager')
 parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'upgrade-all', 'uninstall', 'installed', 'available', 'paths', "genstubs", "gendistinfo"])
 parser.add_argument('package', nargs='*', help='identifier, namespace or module to install, upgrade or uninstall')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
 parser.add_argument('-p', action='store_true', dest='portable', help='use paths suitable for portable installs')
 parser.add_argument('-d', action='store_true', dest='skip_deps', help='skip installing dependencies')
-parser.add_argument('-t', choices=['win32', 'win64'], default='win64' if is_64bits else 'win32', dest='target', help='binaries to install, defaults to python\'s architecture')
+if is_windows:
+    parser.add_argument('-t', choices=['win32', 'win64'], default=detect_target(), dest='target', help='binaries to install, defaults to python\'s architecture')
+else:
+    parser.add_argument('-t', default=detect_target(), dest='target', help='binaries to install, defaults to python\'s architecture')
 parser.add_argument('-b', dest='binary_path', help='custom binary install path')
 parser.add_argument('-s', dest='script_path', help='custom script install path')
 args = parser.parse_args()
 
-is_64bits = args.target == 'win64'
+if args.target == None:
+    print('Target not supported or auto-detect failed (use -t parameter)')
+    sys.exit(1)
+
+vs_target = args.target
 
 file_dirname: str = os.path.dirname(os.path.abspath(__file__))
 portable_vs_path = os.path.dirname(get_portable_vs_path(detect_vapoursynth_installation())) if get_portable_vs_path(detect_vapoursynth_installation()) else ""
@@ -176,27 +201,35 @@ if(portable_vs_path and not args.portable):
 if os.path.abspath(file_dirname).startswith(os.path.abspath(sys.prefix)):
     file_dirname = os.getcwd()
 
-if args.portable:
-    plugin32_path = os.path.join(file_dirname, 'vs-plugins')
-    plugin64_path = os.path.join(file_dirname, 'vs-plugins')
+if args.binary_path is not None:
+    plugin_path = args.binary_path
+
+elif args.portable:
+    plugin_path = os.path.join(file_dirname, 'vs-plugins')
 
 elif is_sitepackage_install_portable():
     vapoursynth_path = detect_vapoursynth_installation()
     base_path = os.path.dirname(get_portable_vs_path(vapoursynth_path))
-
-    plugin32_path = os.path.join(base_path, 'vs-plugins')
-    plugin64_path = os.path.join(base_path, 'vs-plugins')
+    plugin_path = os.path.join(base_path, 'vs-plugins')
     del vapoursynth_path
+
 else:
-    pluginparent = [str(os.getenv("APPDATA")), 'VapourSynth']
-    plugin32_path = os.path.join(*pluginparent, 'plugins32')
-    plugin64_path = os.path.join(*pluginparent, 'plugins64')
+    if is_windows:
+        pluginparent = [str(os.getenv("APPDATA")), 'VapourSynth']
+        plugin_path = os.path.join(*pluginparent, 'plugins64') if vs_target == 'win64' else os.path.join(*pluginparent, 'plugins32')
+    else:
+        plugin_path = os.path.join('/usr', 'local', 'lib', 'vapoursynth') if os.geteuid() == 0 else os.path.join(str(os.getenv("HOME")), '.local', 'lib', 'vapoursynth')
 
 if (args.operation in ['install', 'upgrade', 'uninstall']) and ((args.package is None) or len(args.package) == 0):
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
-package_json_path = os.path.join(file_dirname, 'vspackages3.json') if (args.portable or is_portable_vs) else os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
+if args.portable or is_portable_vs:
+    package_json_path = os.path.join(file_dirname, 'vspackages3.json')
+elif is_windows:
+    package_json_path = os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
+else:
+    package_json_path = os.path.join(str(os.getenv("HOME")), '.config', 'vsrepo', 'vspackages3.json')
 
 if is_sitepackage_install():
     if is_venv():
@@ -211,7 +244,15 @@ if is_sitepackage_install():
             site_package_dir = os.path.join(base_path, 'vs-scripts') if os.path.exists(os.path.join(base_path, 'vs-scripts')) else os.path.dirname(detect_vapoursynth_installation())
         else:
             import site
-            site_package_dir = site.getusersitepackages()
+            if is_windows or os.geteuid() != 0:
+                site_package_dir = site.getusersitepackages()
+            else:
+                site_package_dirs = site.getsitepackages()
+                site_package_dir = site_package_dirs[0]
+                for s in site_package_dirs:
+                    if s.startswith('/usr/local/'):
+                        site_package_dir = s
+                        break
 else:
     site_package_dir = None
 
@@ -222,23 +263,20 @@ if(is_portable_vs):
 if args.script_path is not None:
     py_script_path = args.script_path
 
-
-plugin_path: str = plugin64_path if is_64bits else plugin32_path
-if args.binary_path is not None:
-    plugin_path = args.binary_path
-
 os.makedirs(py_script_path, exist_ok=True)
 os.makedirs(plugin_path, exist_ok=True)
 os.makedirs(os.path.dirname(package_json_path), exist_ok=True)
 
-
-cmd7zip_path: str = os.path.join(file_dirname, '7z.exe')
-if not os.path.isfile(cmd7zip_path):
-    try:
-        with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
-            cmd7zip_path = os.path.join(winreg.QueryValueEx(regkey, 'Path')[0], '7z.exe')
-    except:
-        cmd7zip_path = '7z.exe'
+if is_windows:
+    cmd7zip_path: str = os.path.join(file_dirname, '7z.exe')
+    if not os.path.isfile(cmd7zip_path):
+        try:
+            with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
+                cmd7zip_path = os.path.join(winreg.QueryValueEx(regkey, 'Path')[0], '7z.exe')
+        except:
+            cmd7zip_path = '7z.exe'
+else:
+    cmd7zip_path = '7z'
 
 installed_packages: MutableMapping = {}
 download_cache: MutableMapping = {}
@@ -292,10 +330,7 @@ def get_bin_name(p: MutableMapping):
     if p['type'] == 'PyWheel':
         return 'wheel'
     elif p['type'] == 'VSPlugin':
-        if is_64bits:
-            return 'win64'
-        else:
-            return 'win32'
+        return vs_target
     else:
         raise ValueError('Unknown install type')
 
@@ -375,10 +410,8 @@ def is_package_upgradable(id: str, force: bool) -> bool:
         return (is_package_installed(id) and (lastest_installable is not None) and (installed_packages[id] != 'Unknown') and (installed_packages[id] != lastest_installable['version']))
 
 def get_python_package_name(pkg: MutableMapping) -> str:
-    if "wheelname" in pkg:
-        return pkg["wheelname"].replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "").replace("_-_", "_")
-    else:
-        return pkg["name"].replace(".", "_").replace(" ", "_").replace("(", "_").replace(")", "").replace("_-_", "_")
+    name = pkg.get("wheelname", pkg["name"])
+    return re.sub(r"[.\s()_\-]+", "_", name).strip("_")
 
 def find_dist_version(pkg: MutableMapping, path: Optional[str]) -> Optional[str]:
     if path is None:
@@ -945,7 +978,7 @@ elif args.operation == 'available':
     detect_installed_packages()
     list_available_packages()
 elif args.operation == 'update':
-    update_package_definition('http://www.vapoursynth.com/vsrepo/vspackages3.zip')
+    update_package_definition('https://www.vapoursynth.com/vsrepo/vspackages3.zip')
 elif args.operation == 'paths':
     print_paths()
 elif args.operation == "genstubs":

@@ -8,8 +8,42 @@
 	"identifier": "com.holywu.deblock",
 	"namespace": "deblock",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock",
-	"ignore": ["r1", "r6.1"],
+	"ignore": [
+		"r1",
+		"r6.1"
+	],
 	"releases": [
+		{
+			"version": "r6.1",
+			"published": "2024-09-30T20:52:26Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.deblock/r6.1/linux-glibc-x86_64/2024-09-30T20.52.25%2B00.00Z/Deblock-r6.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libdeblock.so": [
+						"libdeblock.so",
+						"552d1dda62a6152fde7f63825b92ac63d908867ec6c798594518fa705c5a1f9c"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.deblock/r6.1/darwin-x86_64/2024-09-30T20.54.19%2B00.00Z/Deblock-r6.1-darwin-x86_64.zip",
+				"files": {
+					"libdeblock.dylib": [
+						"libdeblock.dylib",
+						"411bfe6cd87224e8a909f237593d167e4a78be651ad8fafd0325359e41d44c6b"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.deblock/r6.1/darwin-aarch64/2024-09-30T20.52.51%2B00.00Z/Deblock-r6.1-darwin-aarch64.zip",
+				"files": {
+					"libdeblock.dylib": [
+						"libdeblock.dylib",
+						"a22eda1fdb9b9e862a8eb5e9c16f4683fcea5a7e2ebe7636357ccb7f2dc79ac0"
+					]
+				}
+			}
+		},
 		{
 			"version": "r6",
 			"published": "2017-06-13T16:31:36Z",

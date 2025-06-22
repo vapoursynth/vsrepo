@@ -1,0 +1,68 @@
+{
+	"name": "dfttest2-cpu",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "DFTTest re-implemetation (x86)",
+	"github": "https://github.com/AmusementClub/vs-dfttest2",
+	"identifier": "io.github.amusementclub.dfttest2_cpu",
+	"namespace": "dfttest2_cpu",
+	"ignore": [
+		"v3",
+		"v2",
+		"v1"
+	],
+	"releases": [
+		{
+			"version": "v7",
+			"published": "2024-04-27T07:56:31Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v7/vs-dfttest2-cpu-windows-v7.7z",
+				"files": {
+					"dfttest2_cpu.dll": [
+						"vs-dfttest2-cpu-windows-v7/dfttest2_cpu.dll",
+						"ea1467efe7a481c424f3dbf5b08e302b1de1f3c4908bbff1775cf83f1e51ceb3"
+					]
+				}
+			}
+		},
+		{
+			"version": "v6",
+			"published": "2023-08-19T01:23:29Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v6/vs-dfttest2-cpu-windows-v6.7z",
+				"files": {
+					"dfttest2_cpu.dll": [
+						"vs-dfttest2-cpu-windows-v6/dfttest2_cpu.dll",
+						"db00b595bb43dd01ce445db731096626330f5a312dd971a88b01d210c20c499c"
+					]
+				}
+			}
+		},
+		{
+			"version": "v5",
+			"published": "2022-10-05T14:11:32Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v5/vs-dfttest2-cpu-windows-v5.7z",
+				"files": {
+					"dfttest2_cpu.dll": [
+						"vs-dfttest2-cpu-windows-v5/dfttest2_cpu.dll",
+						"804d1c0492c022266ecd483aca551d9b8249cf6f272ffe1da350c4161dbd5dd6"
+					]
+				}
+			}
+		},
+		{
+			"version": "v4",
+			"published": "2022-08-31T10:27:19Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v4/vs-dfttest2-cpu-windows-v4.7z",
+				"files": {
+					"dfttest2_avx2.dll": [
+						"vs-dfttest2-cpu-windows-v4/dfttest2_avx2.dll",
+						"0dd38a4230a709176e08bc5e90a54f14ecab776179295fd45968ebe1205e0d70"
+					]
+				}
+			}
+		}
+	]
+}

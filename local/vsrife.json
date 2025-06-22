@@ -9,6 +9,62 @@
 	"wheelname": "vsrife",
 	"releases": [
 		{
+			"version": "5.6.0",
+			"published": "2025-02-06T13:51:12.377962Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/10/0e/b96661a542d23f36f5fbad7fff3867bf577dc8eab1c4b2904b8cf9d25849/vsrife-5.6.0-py3-none-any.whl",
+				"hash": "f90f948a8a7dd032b7912eb8b7a575c72a226a0ea15ff33abb864f35392001f3"
+			}
+		},
+		{
+			"version": "5.5.1",
+			"published": "2025-01-04T14:34:20.437642Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/87/48/76cb0d45a8bca208789fd13700cda3508f2ff25f0a2cbaedc95b2cf10472/vsrife-5.5.1-py3-none-any.whl",
+				"hash": "23eb3968782e6c312002004a3f1f06d49d849431f309c3db009a3fad284db819"
+			}
+		},
+		{
+			"version": "5.5.0",
+			"published": "2024-12-28T15:45:44.631132Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/dd/8d/95ce6fe07560bcb8f422a965cfd02df7ce9bb98b3c3e3f7dd22b437e3dfe/vsrife-5.5.0-py3-none-any.whl",
+				"hash": "94301668bbc1bc6943c33f0452dec7e6864cc6ffb59d84d847b2a9badd9a20c8"
+			}
+		},
+		{
+			"version": "5.4.1",
+			"published": "2024-10-28T15:59:55.377608Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d0/3d/d672838d50b6cec9e733e23db8f0db2320185aa69bc445857018a870e741/vsrife-5.4.1-py3-none-any.whl",
+				"hash": "b91e8b73cc3d93fae9c98bb1c6d2ec8e8d3c40af3d6e74e603bd3b0db35c2014"
+			}
+		},
+		{
+			"version": "5.4.0",
+			"published": "2024-10-27T11:22:38.296171Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/a0/65/81021442712c933f6b4bfa675700fbe703511f16c0ee5243b8161ee8587f/vsrife-5.4.0-py3-none-any.whl",
+				"hash": "956c1414cbbf82a0202b25a01b0e98046700918b2395bcca533929435c755897"
+			}
+		},
+		{
+			"version": "5.3.1",
+			"published": "2024-10-07T12:21:21.819201Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/00/20/fdbf44d7a5e92a3c5d96cb5e32b7d8a598e55630aa0c4d8c4f1451a4d31d/vsrife-5.3.1-py3-none-any.whl",
+				"hash": "b360764ec45b2878308d6930e816b8a154bb1992068222e68e78f462e92ff3be"
+			}
+		},
+		{
+			"version": "5.3.0",
+			"published": "2024-10-05T10:57:45.709171Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/2f/d3/185773b07efb0bf57fe8feba1d8538502fa0dac6840987600b47c70f67d6/vsrife-5.3.0-py3-none-any.whl",
+				"hash": "c7c2ed687cb11cb849d08185106415a48eedb9a8b7b035c86cc715bd83b86056"
+			}
+		},
+		{
 			"version": "5.2.0",
 			"published": "2024-07-06T06:05:38.582037Z",
 			"wheel": {

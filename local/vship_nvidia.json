@@ -1,0 +1,206 @@
+{
+	"name": "HIP-SSIMU2-NVIDIA",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Performs SSIMU2 measurments using the GPU with HIP (Nvidia version)",
+	"github": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2",
+	"identifier": "com.lumen.vship_nvidia",
+	"namespace": "vship_nvidia",
+	"releases": [
+		{
+			"version": "v3.0.0",
+			"published": "2025-06-14T17:43:02Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v3.0.0/vship_amd.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_amd.dll",
+						"a6d6af98ea4431bd8142f9c532927772e07d342dffc697b56dadce0183d5dea3"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.2.2",
+			"published": "2025-04-11T21:48:15Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.2.2/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"af0abb00a45823a0bb115ee02d228c05aff8051bcbe39bad969dbf7b47157fa9"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.2.1",
+			"published": "2025-03-30T19:44:15Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.2.1/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"2fb5f2c35b60358c8cb4b91dc7c107038baeb4fd4c67a8fee20fbcf70b593a3f"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.2",
+			"published": "2025-03-20T20:14:16Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.2/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"153608049add1a4aff0c500dac905116616ab4686dd06ddc39cdfebd41c19e28"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.1.2",
+			"published": "2025-03-12T20:13:18Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.1.2/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"ebd9f63870afdf1dc68ca07b61526e87baaa0e92b42df714812631c7df7cfdb2"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.1.1",
+			"published": "2025-02-19T09:09:46Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.1.1/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"510547ab673146e960b3a99a0eb2c05a4f99ed5755897e4a2a8be3125ebf2efd"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.1",
+			"published": "2025-02-12T19:51:41Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.1/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"4d1d7307718acdaed0831192597ceab5784cc94714c1b4dfdecc93105e40ed53"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0.2",
+			"published": "2025-02-05T20:22:07Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.0.2/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"9df7752b44b37f5f0d88233903d160f3381237a99c4bcaf1a11dd3ba9c252e2b"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0.1",
+			"published": "2025-02-05T15:18:07Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.0.1/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"475bd0540f5ed54433746c2ec166652a671b5acf92ed9da1778e68f41403f00f"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2.0",
+			"published": "2025-02-04T21:59:09Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v2.0/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"b5da51a519aaa36a75e616ae380f8e17fcae63474d89735286413a67519ed83c"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.2",
+			"published": "2025-01-09T22:27:21Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v1.2/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"886ffb80e1a8c26e882a57c448073251462f360af3f4545a7e312bf8da6675f5"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.1",
+			"published": "2025-01-07T16:15:21Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v1.1/vship_NVIDIA.dll",
+				"files": {
+					"hipssimu2.dll": [
+						"vship_NVIDIA.dll",
+						"e37cf5c9c8801ca4d9bbe1ed0c988812afe77fc8f2e30ec754b9acfbfe342949"
+					]
+				}
+			}
+		},
+		{
+			"version": "release",
+			"published": "2024-12-30T13:18:36Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2/releases/download/release/hipssimu2_NVIDIA.zip",
+				"files": {
+					"hipssimu2.dll": [
+						"hipssimu2.dll",
+						"aaac4cb1e76e02029397dd877fa5a17178013cb7b47e6593f26b11490e838fb8"
+					]
+				}
+			}
+		},
+		{
+			"version": "beta",
+			"published": "2024-12-26T23:02:29Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2/releases/download/beta/hipssimu2_NVIDIAGPU.zip",
+				"files": {
+					"hipssimu2.dll": [
+						"hipssimu2.dll",
+						"62b875470a06a9e5a343e8aa5956f2779f99a11033e08115b21b307be225c086"
+					]
+				}
+			}
+		},
+		{
+			"version": "alpha",
+			"published": "2024-12-26T16:44:54Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vapoursynth-HIP-SSIMU2/releases/download/alpha/hipssimu2_NVIDIAGPU.zip",
+				"files": {
+					"hipssimu2.dll": [
+						"hipssimu2.dll",
+						"c91059d6c1833d10630bd8426216b951f4859ba44fbe51b9745124a85ec5f1b3"
+					]
+				}
+			}
+		}
+	]
+}

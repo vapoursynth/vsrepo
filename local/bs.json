@@ -9,6 +9,138 @@
 	"namespace": "bs",
 	"releases": [
 		{
+			"version": "R12",
+			"published": "2025-06-02T14:39:12Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R12/BestSource-R12.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"cdd5fe8b610f7a7b4c0d8c4526b7acf3cc8d5131aed851dd47c2cb674156d3cb"
+					]
+				}
+			}
+		},
+		{
+			"version": "R11",
+			"published": "2025-03-06T21:20:37Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R11/BestSource-R11.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"d747a2c8fb7a1f534ab25daae432a5e44f04fed7d7aaea82487d5697d2596375"
+					]
+				}
+			}
+		},
+		{
+			"version": "R10",
+			"published": "2025-01-01T12:11:49Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R10/BestSource-R10.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"f8698d598852948fce377c491c52bcb17bf030bc6b9e7676d5e88409e46ce712"
+					]
+				}
+			}
+		},
+		{
+			"version": "R9",
+			"published": "2024-12-30T22:51:45Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R9/BestSource-R9.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"953426a2011016e644e025c0d50faa2cfebed11d0f242f812ca6f2866a8154a0"
+					]
+				}
+			}
+		},
+		{
+			"version": "R8",
+			"published": "2024-10-23T18:42:53Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R8/BestSource-R8.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"e82aace947e2643dfdf47b5f30d77b33f575e8acbd2e64be3b235acb9573e1cf"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R8/linux-glibc-x86_64/2024-12-12T18.37.59%2B00.00Z/BestSource-R8-linux-glibc-x86_64.zip",
+				"files": {
+					"bestsource.so": [
+						"bestsource.so",
+						"57b37a2fa0f7c489e366b21b34c22faa9b14347e7f1d6848ad09a9089eae92e1"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R8/darwin-x86_64/2024-12-12T18.41.40%2B00.00Z/BestSource-R8-darwin-x86_64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"bac97526b5a5060ca1e81b71b5ac92b2157f4f1185ee82f496493dc6598d11c2"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R8/darwin-aarch64/2024-12-12T19.11.10%2B00.00Z/BestSource-R8-darwin-aarch64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"eb8edc04cb48d44ca3fda97e9aeecd298747242a959cb5c9aa9caa8894630c23"
+					]
+				}
+			}
+		},
+		{
+			"version": "R7",
+			"published": "2024-09-19T17:12:07Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R7/BestSource-R7.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"e8970079a7d388be57c0756470f9627547561116f8955b55413808601e72ac48"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R7/darwin-x86_64/2024-10-01T19.44.38%2B00.00Z/BestSource-R7-darwin-x86_64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"7f35efbb152e617ac9298b6c9915168cd12302392a0bd0bfae9f26705f4465da"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R7/darwin-aarch64/2024-10-01T15.44.50%2B00.00Z/BestSource-R7-darwin-aarch64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"2a4ba6a721c143358eec60375acf87a8386c31f1bf0b42c7f9f816d547aaf305"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R7/linux-glibc-x86_64/2024-10-07T02.01.15%2B00.00Z/BestSource-R7-linux-glibc-x86_64.zip",
+				"files": {
+					"bestsource.so": [
+						"bestsource.so",
+						"ee18d847a752335a87b621cae88e6270b6796896198ce9a6409d4412d954eaff"
+					]
+				}
+			}
+		},
+		{
 			"version": "R6",
 			"published": "2024-07-14T16:01:45Z",
 			"win64": {

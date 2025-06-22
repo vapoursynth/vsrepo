@@ -6,7 +6,11 @@
 	"category": "Resizing and Format Conversion",
 	"identifier": "github.tianzerl.anime4kcpp",
 	"namespace": "anime4kcpp",
-	"device": ["cpu", "cuda", "opencl"],
+	"device": [
+		"cpu",
+		"cuda",
+		"opencl"
+	],
 	"ignore": [
 		"v1.7.0",
 		"v1.6.0",

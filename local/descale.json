@@ -11,6 +11,19 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "r11",
+			"published": "2025-04-03T16:09:08Z",
+			"win64": {
+				"url": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-descale/releases/download/r11/descale-win64.zip",
+				"files": {
+					"libdescale.dll": [
+						"libdescale.dll",
+						"2de2b41300f2b35fe5203ac8402a6872115027993ec5083ef00937730010183d"
+					]
+				}
+			}
+		},
+		{
 			"version": "r10",
 			"published": "2024-07-29T20:10:02Z",
 			"win64": {
@@ -19,6 +32,33 @@
 					"libdescale.dll": [
 						"libdescale.dll",
 						"abe72e88fa2e183d178890f270306f8790272b7720c0aa1d17416e76c413e012"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/tegaf.asi.xe/r10/linux-glibc-x86_64/2024-09-30T20.52.40%2B00.00Z/Descale-r10-linux-glibc-x86_64.zip",
+				"files": {
+					"libdescale.so": [
+						"libdescale.so",
+						"d127cef6bbb568bb6645e93df1e591fbe0e39ec34c765b227bfdd0f1fd59ed82"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/tegaf.asi.xe/r10/darwin-x86_64/2024-09-30T20.54.49%2B00.00Z/Descale-r10-darwin-x86_64.zip",
+				"files": {
+					"libdescale.dylib": [
+						"libdescale.dylib",
+						"35fd0ae88bf8029989395d945fcff16ae7a540420aea2e03c8265a495ba2d098"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/tegaf.asi.xe/r10/darwin-aarch64/2024-09-30T20.53.06%2B00.00Z/Descale-r10-darwin-aarch64.zip",
+				"files": {
+					"libdescale.dylib": [
+						"libdescale.dylib",
+						"6c2f8b2bf365f970d640e93edbb8627eaab52472857d1d2868754562409365a8"
 					]
 				}
 			}

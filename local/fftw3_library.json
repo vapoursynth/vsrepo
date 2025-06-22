@@ -67,6 +67,22 @@
 					]
 				}
 			}
+		},
+		{
+			"version": "0",
+			"published": "1970-01-01T12:00:00Z",
+			"darwin-aarch64": {
+				"url": "ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll32.zip",
+				"files": {}
+			},
+			"darwin-x86_64": {
+				"url": "ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll32.zip",
+				"files": {}
+			},
+			"linux-glibc-x86_64": {
+				"url": "ftp://ftp.fftw.org/pub/fftw/fftw-3.3.5-dll32.zip",
+				"files": {}
+			}
 		}
 	]
 }

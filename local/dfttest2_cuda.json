@@ -1,0 +1,122 @@
+{
+	"name": "dfttest2-cuda",
+	"type": "VSPlugin",
+	"category": "Denoising",
+	"description": "DFTTest re-implemetation (CUDA)",
+	"github": "https://github.com/AmusementClub/vs-dfttest2",
+	"identifier": "io.github.amusementclub.dfttest2_cuda",
+	"namespace": "dfttest2_cuda",
+	"device": [
+		"cuda"
+	],
+	"dependencies": [
+		"io.github.amusementclub.dfttest2_cuda_runtime"
+	],
+	"ignore": [
+		"v1"
+	],
+	"releases": [
+		{
+			"version": "v7",
+			"published": "2024-04-27T07:56:31Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v7/vs-dfttest2-cuda-windows-v7.7z",
+				"files": {
+					"dfttest2_cuda.dll": [
+						"vs-dfttest2-cuda-windows-v7/dfttest2_cuda.dll",
+						"fc6d553c4807b3884cb57fbaaba84aa805ffbd1fededdbe727c7a86dca34a49f"
+					],
+					"dfttest2_nvrtc.dll": [
+						"vs-dfttest2-cuda-windows-v7/dfttest2_nvrtc.dll",
+						"2fe98244174caf68f9190697be7971a39d913fe14353693426bf94162381c419"
+					]
+				}
+			}
+		},
+		{
+			"version": "v6",
+			"published": "2023-08-19T01:23:29Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v6/vs-dfttest2-cuda-windows-v6.7z",
+				"files": {
+					"dfttest2_cuda.dll": [
+						"vs-dfttest2-cuda-windows-v6/dfttest2_cuda.dll",
+						"9190f1f01cee7c16b58983ee1bdb7a3442a9f5acff861c0ba3ff0ad2cbe1eaba"
+					],
+					"dfttest2_nvrtc.dll": [
+						"vs-dfttest2-cuda-windows-v6/dfttest2_nvrtc.dll",
+						"9f6134c5df6b0c7907fbd80a8f16b4d05f3a6860f2f69d3b1921826b549e5f2d"
+					]
+				}
+			}
+		},
+		{
+			"version": "v5",
+			"published": "2022-10-05T14:11:32Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v5/vs-dfttest2-cuda-windows-v5.7z",
+				"files": {
+					"dfttest2_cuda.dll": [
+						"vs-dfttest2-cuda-windows-v5/dfttest2_cuda.dll",
+						"730e90f79fedad4c3fa72b10833c9e8a30d03101a0c2f747c36f0dfc7fdabb77"
+					],
+					"dfttest2_nvrtc.dll": [
+						"vs-dfttest2-cuda-windows-v5/dfttest2_nvrtc.dll",
+						"631131bdf8ed88f4b310681cd1975a846f81b1bd50126902b95c33fc6c1ec604"
+					]
+				}
+			}
+		},
+		{
+			"version": "v4",
+			"published": "2022-08-31T10:27:19Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v4/vs-dfttest2-cuda-windows-v4.7z",
+				"files": {
+					"dfttest2_cuda.dll": [
+						"vs-dfttest2-cuda-windows-v4/dfttest2_cuda.dll",
+						"a25a3e93c51f053d2c64095fce55b5daa3e3f4d075b03e1ba9a90e2daff204d3"
+					],
+					"dfttest2_nvrtc.dll": [
+						"vs-dfttest2-cuda-windows-v4/dfttest2_nvrtc.dll",
+						"877b6e074d94bf72dbf8d9dc432e7716ee7bff5f6f617986ea922a47e3f0b183"
+					]
+				}
+			}
+		},
+		{
+			"version": "v3",
+			"published": "2022-08-19T09:46:13Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v3/vs-dfttest2-cuda-windows-v3.7z",
+				"files": {
+					"dfttest2_cuda.dll": [
+						"vs-dfttest2-cuda-windows-v3/dfttest2_cuda.dll",
+						"99a5497cbde4cd638ad2e5e254bf80d12bc0d019dfea069d82501c95eba694e4"
+					],
+					"dfttest2_nvrtc.dll": [
+						"vs-dfttest2-cuda-windows-v3/dfttest2_nvrtc.dll",
+						"6726d989cef132700a408e409e99033f7e132af6febd53b570ac559375d84278"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2",
+			"published": "2022-08-02T11:08:36Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v2/vs-dfttest2-cuda-windows-v2.7z",
+				"files": {
+					"dfttest2_cuda.dll": [
+						"vs-dfttest2-cuda-windows-v2/dfttest2_cuda.dll",
+						"e41a7779cee9131dca7cc19f6951b75b690f40ec49dc42eb776eae5856b3661e"
+					],
+					"dfttest2_nvrtc.dll": [
+						"vs-dfttest2-cuda-windows-v2/dfttest2_nvrtc.dll",
+						"04614ea235816894f3e45fa291674f344585b9a1717128a62ca90ed521bb5e09"
+					]
+				}
+			}
+		}
+	]
+}

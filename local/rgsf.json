@@ -8,7 +8,9 @@
 	"identifier": "com.vapoursynth.removegrainsf",
 	"namespace": "rgsf",
 	"github": "https://github.com/IFeelBloated/RGSF",
-	"ignore": ["tmp"],
+	"ignore": [
+		"tmp"
+	],
 	"releases": [
 		{
 			"version": "r5",

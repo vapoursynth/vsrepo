@@ -6,7 +6,9 @@
 	"github": "https://github.com/dnjulek/vapoursynth-chromanrcuda",
 	"identifier": "com.julek.chromanrcuda",
 	"namespace": "chromanrcuda",
-	"device": ["cuda"],
+	"device": [
+		"cuda"
+	],
 	"releases": [
 		{
 			"version": "r1",

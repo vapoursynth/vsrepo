@@ -8,7 +8,12 @@
 	"identifier": "in.7086.delogo",
 	"namespace": "delogo",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DeLogo",
-	"ignore": ["v0.1", "v0.11", "v0.2", "v0.3"],
+	"ignore": [
+		"v0.1",
+		"v0.11",
+		"v0.2",
+		"v0.3"
+	],
 	"releases": [
 		{
 			"version": "v0.4",
@@ -28,6 +33,24 @@
 					"libdelogo.dll": [
 						"mingw/x86_64-w64-mingw32/libdelogo.dll",
 						"391cafb3a8d8a61394da9cf64fd8003599b0dcec6087c9b2bb341feabf052dd6"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/in.7086.delogo/v0.4/linux-glibc-x86_64/2024-09-30T20.52.35%2B00.00Z/DeLogo-v0.4-linux-glibc-x86_64.zip",
+				"files": {
+					"libdelogo.so": [
+						"libdelogo.so",
+						"060e6d7ca3110232ab1ca583336e8e4058d077227e7aff30dcdb7aeaef9a8e11"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/in.7086.delogo/v0.4/darwin-x86_64/2024-09-30T20.54.40%2B00.00Z/DeLogo-v0.4-darwin-x86_64.zip",
+				"files": {
+					"libdelogo.dylib": [
+						"libdelogo.dylib",
+						"00000cd6b9e9183b0cd95330a391692abf4874761cf22e46c9383467d81d7198"
 					]
 				}
 			}

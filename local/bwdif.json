@@ -20,6 +20,33 @@
 						"8b6f11af10bae0896b35a8dbed08fbcc8995bb8cfcc7c820f5d3f4f9b0b556f0"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.bwdif/r4.1/linux-glibc-x86_64/2024-09-30T20.51.59%2B00.00Z/Bwdif-r4.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libbwdif.so": [
+						"libbwdif.so",
+						"212a21dbcfc010ec2dedd4bfbd98d9d7d60dcd1b820a031e806a90d160a2c320"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.bwdif/r4.1/darwin-x86_64/2024-09-30T20.53.26%2B00.00Z/Bwdif-r4.1-darwin-x86_64.zip",
+				"files": {
+					"libbwdif.dylib": [
+						"libbwdif.dylib",
+						"0f2fd5f0723ddd49b4cdd700978138f4302f7ed8705f26b81709b6d1c83f64e3"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.bwdif/r4.1/darwin-aarch64/2024-09-30T20.52.18%2B00.00Z/Bwdif-r4.1-darwin-aarch64.zip",
+				"files": {
+					"libbwdif.dylib": [
+						"libbwdif.dylib",
+						"43205762db8efcd26e9de33702aefaa695d7f5b54577b7b8f74c88812462ba94"
+					]
+				}
 			}
 		},
 		{

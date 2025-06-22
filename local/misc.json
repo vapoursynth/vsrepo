@@ -10,6 +10,37 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "git:07e0589",
+			"published": "2024-10-09T22:47:35Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.misc/git-07e0589/linux-glibc-x86_64/2024-10-09T22.47.34%2B00.00Z/Miscfilters-git-07e0589-linux-glibc-x86_64.zip",
+				"files": {
+					"libmiscfilters.so": [
+						"libmiscfilters.so",
+						"35d199090730c3793da4291bac95edcd3958720d253f871115939d9a3b3c09fe"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.misc/git-07e0589/darwin-x86_64/2024-10-09T22.52.15%2B00.00Z/Miscfilters-git-07e0589-darwin-x86_64.zip",
+				"files": {
+					"libmiscfilters.dylib": [
+						"libmiscfilters.dylib",
+						"dd8051f83bf100dc6c04fd67df83357e1130047bf14389deb0f30e6183b21a7a"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.misc/git-07e0589/darwin-aarch64/2024-10-09T22.47.53%2B00.00Z/Miscfilters-git-07e0589-darwin-aarch64.zip",
+				"files": {
+					"libmiscfilters.dylib": [
+						"libmiscfilters.dylib",
+						"184595652dac9cd05db4b9e024d0ab601d45847226d73ef294ffc1b135b207c7"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2",
 			"published": "2021-09-23T16:28:34Z",
 			"win32": {

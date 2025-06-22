@@ -8,6 +8,19 @@
 	"namespace": "bore",
 	"releases": [
 		{
+			"version": "v1.0.0",
+			"published": "2025-05-23T10:43:04Z",
+			"win64": {
+				"url": "https://github.com/OpusGang/bore/releases/download/v1.0.0/libbore.dll",
+				"files": {
+					"libbore.dll": [
+						"libbore.dll",
+						"a139ecc1e89166f5fba55c34c754461a65d3351da8460efd1ab28dc320db770b"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.1.1",
 			"published": "2024-02-22T07:19:25Z",
 			"win64": {

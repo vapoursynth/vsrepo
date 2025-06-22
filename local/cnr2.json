@@ -29,6 +29,33 @@
 						"de187de995fbefdd07fcd07ff219934f63f96feba09ef0301fc7238be69dbe10"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.cnr2/v1/linux-glibc-x86_64/2024-09-30T20.52.11%2B00.00Z/Cnr2-v1-linux-glibc-x86_64.zip",
+				"files": {
+					"libcnr2.so": [
+						"libcnr2.so",
+						"3bdfd223f24b853f1892bf0e0aa9ddb5a2369c78ff7a4c3cba91a089994f54af"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.cnr2/v1/darwin-x86_64/2024-09-30T20.53.55%2B00.00Z/Cnr2-v1-darwin-x86_64.zip",
+				"files": {
+					"libcnr2.dylib": [
+						"libcnr2.dylib",
+						"9295a4dc08155ee05f15319e2c47342fa982d5fdacedaee16942798bc11e9554"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.cnr2/v1/darwin-aarch64/2024-09-30T20.52.34%2B00.00Z/Cnr2-v1-darwin-aarch64.zip",
+				"files": {
+					"libcnr2.dylib": [
+						"libcnr2.dylib",
+						"512ec0bd9cd851ba52b993970e0338e07cfcf811a98faca24f61c7af2623f5fc"
+					]
+				}
 			}
 		}
 	]

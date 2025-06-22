@@ -27,6 +27,33 @@
 						"422fa49cf3c8050e5223bc900a92c6aed013f444c3cf2fd0aafe0567d2de3988"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/blaze.plugin.remap/v1.1/linux-glibc-x86_64/2024-09-30T20.54.56%2B00.00Z/RemapFrames-v1.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libremapframes.so": [
+						"libremapframes.so",
+						"1ad48e7858218430f5a65f2873ed398de9e64005e8565134b800d081607cdacb"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/blaze.plugin.remap/v1.1/darwin-x86_64/2024-09-30T20.59.42%2B00.00Z/RemapFrames-v1.1-darwin-x86_64.zip",
+				"files": {
+					"libremapframes.dylib": [
+						"libremapframes.dylib",
+						"b60d2242934b3a241f7e57d2c4fc24df31d325eaf2af6d9493125c9526263c38"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/blaze.plugin.remap/v1.1/darwin-aarch64/2024-09-30T20.55.47%2B00.00Z/RemapFrames-v1.1-darwin-aarch64.zip",
+				"files": {
+					"libremapframes.dylib": [
+						"libremapframes.dylib",
+						"4e7c3c22b41c70d18f0155fad2d25cf5e263d18918e79689d1603cb4168f6200"
+					]
+				}
 			}
 		},
 		{

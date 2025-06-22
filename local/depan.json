@@ -18,6 +18,24 @@
 						"77321664a73e0bcadf43186dda677189dd87c648934b97381fc1195941f57b1a"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.depan/r1/linux-glibc-x86_64/2024-09-30T22.06.42%2B00.00Z/DePan-r1-linux-glibc-x86_64.zip",
+				"files": {
+					"libdepan.so": [
+						"libdepan.so",
+						"90cf7d96bfc81034ed43eddbcc4f53504a65e3443be03809809815d8b68982b9"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.depan/r1/darwin-x86_64/2024-09-30T21.58.33%2B00.00Z/DePan-r1-darwin-x86_64.zip",
+				"files": {
+					"libdepan.dylib": [
+						"libdepan.dylib",
+						"e0b6980712d84e6f2400b41d24edd2ce784f45ca5610e9d961634f8557fc5016"
+					]
+				}
 			}
 		}
 	]

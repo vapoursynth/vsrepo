@@ -29,6 +29,33 @@
 						"df27bc89d43cbf28b5cae220c4849c3cf973c30944357b6d3e29e4dcaa2955c6"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.invalid.identifier.retinex/r4/linux-glibc-x86_64/2024-09-30T20.55.01%2B00.00Z/Retinex-r4-linux-glibc-x86_64.zip",
+				"files": {
+					"libretinex.so": [
+						"libretinex.so",
+						"f5f76c2d59cdffec23630c818529757039a1d6bf7177affef6f1f35663e825ff"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.invalid.identifier.retinex/r4/darwin-x86_64/2024-09-30T20.59.50%2B00.00Z/Retinex-r4-darwin-x86_64.zip",
+				"files": {
+					"libretinex.dylib": [
+						"libretinex.dylib",
+						"1a86263b25f3db37c205fab0e2ac07eeee6832b11ea7101b2ab124ebb126f43b"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.invalid.identifier.retinex/r4/darwin-aarch64/2024-09-30T20.55.53%2B00.00Z/Retinex-r4-darwin-aarch64.zip",
+				"files": {
+					"libretinex.dylib": [
+						"libretinex.dylib",
+						"0a888f2deb1b30b8de1e19b31e4c1934abee64ed13797127d99497e3343f79e5"
+					]
+				}
 			}
 		},
 		{

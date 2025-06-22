@@ -10,6 +10,37 @@
 	"github": "https://github.com/dubhater/vapoursynth-motionmask",
 	"releases": [
 		{
+			"version": "git:ed86b06",
+			"published": "2024-09-30T22:06:50Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.motionmask/git-ed86b06/linux-glibc-x86_64/2024-09-30T22.06.48%2B00.00Z/MotionMask-git-ed86b06-linux-glibc-x86_64.zip",
+				"files": {
+					"libmotionmask.so": [
+						"libmotionmask.so",
+						"8192380b6f5cef14626f3ee2423f2d69c1fcfa00058caa57653aa3bbb641eea9"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.motionmask/git-ed86b06/darwin-x86_64/2024-09-30T21.21.06%2B00.00Z/MotionMask-git-ed86b06-darwin-x86_64.zip",
+				"files": {
+					"libmotionmask.dylib": [
+						"libmotionmask.dylib",
+						"5c1cd75d8fdeca4787a530ffad0fc2b5be008680c0f9874214067c55fb644143"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.motionmask/git-ed86b06/darwin-aarch64/2024-09-30T21.19.54%2B00.00Z/MotionMask-git-ed86b06-darwin-aarch64.zip",
+				"files": {
+					"libmotionmask.dylib": [
+						"libmotionmask.dylib",
+						"f4e937a059a6804e7a564d1236314b4fb0e5cfa314eb5366049880180cbd4175"
+					]
+				}
+			}
+		},
+		{
 			"version": "v2",
 			"published": "2018-06-20T09:49:37Z",
 			"win32": {

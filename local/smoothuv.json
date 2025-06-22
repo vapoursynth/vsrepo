@@ -29,6 +29,15 @@
 						"865f07c2a114f1e8083fdad05d87b98bbe75f26a941886795f1299f77a3b4302"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.smoothuv/v3/linux-glibc-x86_64/2024-09-30T20.55.09%2B00.00Z/SmoothUV-v3-linux-glibc-x86_64.zip",
+				"files": {
+					"libsmoothuv.so": [
+						"libsmoothuv.so",
+						"d8ef03030bd8c5f981bf3d4fb4f02e2e35f42ab929ba4f45dfee7d9a6e05fd73"
+					]
+				}
 			}
 		},
 		{

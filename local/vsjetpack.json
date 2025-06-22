@@ -1,0 +1,100 @@
+{
+	"name": "vs-jetpack",
+	"type": "PyWheel",
+	"category": "Other",
+	"description": "vs-jetpack provides a collection of Python modules for filtering video using VapourSynth. These include modules for scaling, masking, denoising, debanding, dehaloing, deinterlacing, and antialiasing, as well as general utility functions.",
+	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-jetpack",
+	"identifier": "vsjetpack",
+	"modulename": "vsjetpack",
+	"wheelname": "vsjetpack",
+	"releases": [
+		{
+			"version": "0.4.0",
+			"published": "2025-05-06T20:13:40.747236Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/77/93/e1063c6f2782e6ba64eed4d7181dc765ee4907886d0b78786853755525d5/vsjetpack-0.4.0-py3-none-any.whl",
+				"hash": "4d96ed0114998b341209a9aba0d9941f5374d9d30bd237038e412ffaf1c71a58"
+			}
+		},
+		{
+			"version": "0.3.5",
+			"published": "2025-05-03T02:25:44.613134Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/2b/6f/606c1e7461001d24fd70b39a7fd2ddd620ee25143722f5dacbf9c8097041/vsjetpack-0.3.5-py3-none-any.whl",
+				"hash": "0e0747a37a63d6327b6b3445a80ff3fa909b00a57d8891b463cbb9f186a910dd"
+			}
+		},
+		{
+			"version": "0.3.4",
+			"published": "2025-04-07T22:39:07.569428Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/52/08/13125a3b9dbc46da5a34433c89fa5c673529df736d29f8147a86094e4c79/vsjetpack-0.3.4-py3-none-any.whl",
+				"hash": "cff60f1ffe129486a5c4fb86aff5fe8fd60f98673b6d3fa3c61bbbcabbaea239"
+			}
+		},
+		{
+			"version": "0.3.3",
+			"published": "2025-04-07T16:49:38.231011Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/bb/85/d8e5c0c4b85ad80b11845321a153bbd32f067d4a25f222def1980aefe36a/vsjetpack-0.3.3-py3-none-any.whl",
+				"hash": "46c2931ca4bfe70d21fdd9705106fc80630dc573962e356fb3bd9c4a04a4f37f"
+			}
+		},
+		{
+			"version": "0.3.2",
+			"published": "2025-04-06T15:18:09.824935Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ba/f9/5547ecba1c4c1f9fbe0ea272178f8b17bef8665052e45c3803ec030b5d98/vsjetpack-0.3.2-py3-none-any.whl",
+				"hash": "d923420dc1b458d5691188deb3779731f1d93fc7078c18111a997295f07b8c57"
+			}
+		},
+		{
+			"version": "0.3.1",
+			"published": "2025-04-05T22:10:04.843525Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/aa/e7/c8f6d47d005ecb014ff19a45d21950b9eb9c0f29e94fb6f3301b7f87ac35/vsjetpack-0.3.1-py3-none-any.whl",
+				"hash": "f2f3edab4e039463153ef1d350cb9f460c87f1a49e08ea640e4dbb00643f0467"
+			}
+		},
+		{
+			"version": "0.3.0",
+			"published": "2025-04-04T20:52:01.879595Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/49/1b/9b011ad087dba45d6e2d8249d4b3fb4db00bb96d9bc2d02db8e20e40387c/vsjetpack-0.3.0-py3-none-any.whl",
+				"hash": "e91a5fb6db993ea2cf5540bd85d087ca1d89cb2d75899a89cd1f52f565a4fe7e"
+			}
+		},
+		{
+			"version": "0.2.2",
+			"published": "2025-02-19T12:19:50.218166Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/5b/08/5059bb464113071fb8319a370761ea9bdfe2e855232a16734bcd3b810581/vsjetpack-0.2.2-py3-none-any.whl",
+				"hash": "9ed10736c1ec26a0c08a9d87c67ab8cc94570d4eb7cb12ea201fbe2d2848d16e"
+			}
+		},
+		{
+			"version": "0.2.1",
+			"published": "2025-02-13T20:24:28.842018Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/04/5b/62931a007886620c10df354d07fb4275075d15489685c72bf255f6b489c9/vsjetpack-0.2.1-py3-none-any.whl",
+				"hash": "ea33da0b606861486f6e992380ab49c78565c0fe35554450c902413800e4f918"
+			}
+		},
+		{
+			"version": "0.2.0",
+			"published": "2025-02-13T19:42:51.096200Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/df/5e/87d3d17bb46e84fb605223c0aa25d1d6387d5210cc0ec1ddb4ad789c772a/vsjetpack-0.2.0-py3-none-any.whl",
+				"hash": "13dd3644d5b8c43c8c3efb1610355be73d6a9698adbb58b510754f594effede9"
+			}
+		},
+		{
+			"version": "0.1.1",
+			"published": "2025-02-12T22:36:07.019326Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/9b/66/26d80ddda56dfc35d5939107aaed2226db9325402c8812d26d8144bd58db/vsjetpack-0.1.1-py3-none-any.whl",
+				"hash": "accf1d0e6a5789f1f8d7a96abe70aac6d56d82be5ae0a918d67b311925c7edce"
+			}
+		}
+	]
+}

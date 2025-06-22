@@ -11,6 +11,37 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "git:14ac2ce",
+			"published": "2024-10-12T16:53:42Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.tcanny/git-14ac2ce/linux-glibc-x86_64/2024-10-12T16.53.40%2B00.00Z/TCanny-git-14ac2ce-linux-glibc-x86_64.zip",
+				"files": {
+					"libtcanny.so": [
+						"libtcanny.so",
+						"5cf72b89c3857f72b941e02685360337914834d77fcc0a8710a0f47a32fbba15"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.tcanny/git-14ac2ce/darwin-x86_64/2024-10-12T16.55.48%2B00.00Z/TCanny-git-14ac2ce-darwin-x86_64.zip",
+				"files": {
+					"libtcanny.dylib": [
+						"libtcanny.dylib",
+						"305b12d6ef5dcc73056d57bebc5ce21202e0e58d4b561334d885e3ac13fab05c"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.tcanny/git-14ac2ce/darwin-aarch64/2024-10-12T16.53.45%2B00.00Z/TCanny-git-14ac2ce-darwin-aarch64.zip",
+				"files": {
+					"libtcanny.dylib": [
+						"libtcanny.dylib",
+						"c4d7e10f077bda87c12225f00d437c78b7e4b23a85ca038400d6a0e34641be10"
+					]
+				}
+			}
+		},
+		{
 			"version": "r14",
 			"published": "2022-01-15T04:00:06Z",
 			"win64": {
@@ -19,6 +50,24 @@
 					"TCanny.dll": [
 						"TCanny.dll",
 						"372d0399d9806026e5e3631a957525364c5bf06fd43766f111505769ca0c1aca"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.tcanny/r14/linux-glibc-x86_64/2024-09-30T20.55.31%2B00.00Z/TCanny-r14-linux-glibc-x86_64.zip",
+				"files": {
+					"libtcanny.so": [
+						"libtcanny.so",
+						"481f1b4026d815256a1f44f826964e95c09c85a83c8da12c40dc50275d59283a"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.tcanny/r14/darwin-x86_64/2024-09-30T21.00.45%2B00.00Z/TCanny-r14-darwin-x86_64.zip",
+				"files": {
+					"libtcanny.dylib": [
+						"libtcanny.dylib",
+						"d2124036f3ad8ea4dfb1f064f87f64d6cff4111b602f375bdb1c72ad63c2d5b2"
 					]
 				}
 			}

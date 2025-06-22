@@ -76,13 +76,14 @@
 
 from abc import abstractmethod
 from ctypes import c_void_p
-from enum import IntEnum
+from enum import IntEnum, IntFlag
 from fractions import Fraction
 from inspect import Signature
 from types import MappingProxyType, TracebackType
 from typing import (
-    TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal, MutableMapping,
-    NamedTuple, NoReturn, Protocol, Sequence, Tuple, Type, TypedDict, TypeVar, Union, overload, runtime_checkable
+    TYPE_CHECKING, Any, BinaryIO, Callable, ContextManager, Dict, Generic, Iterator, Literal,
+    MutableMapping, NamedTuple, NoReturn, Optional, Protocol, Sequence, Tuple, Type, TypedDict,
+    TypeVar, Union, cast, overload, runtime_checkable
 )
 from weakref import ReferenceType
 
@@ -124,7 +125,9 @@ __all__ = [
         'YUV420P8', 'YUV420P9', 'YUV420P10', 'YUV420P12', 'YUV420P14', 'YUV420P16',
         'YUV422P8', 'YUV422P9', 'YUV422P10', 'YUV422P12', 'YUV422P14', 'YUV422P16',
         'YUV440P8',
-        'YUV444P8', 'YUV444P9', 'YUV444P10', 'YUV444P12', 'YUV444P14', 'YUV444P16', 'YUV444PH', 'YUV444PS',
+        'YUV444P8', 'YUV444P9', 'YUV444P10', 'YUV444P12', 'YUV444P14', 'YUV444P16',
+        'YUV420PH', 'YUV422PH', 'YUV444PH',
+        'YUV420PS', 'YUV422PS', 'YUV444PS',
         'NONE',
 
     'AudioChannels',
@@ -162,7 +165,8 @@ __all__ = [
     'TransferCharacteristics',
         'TRANSFER_BT709', 'TRANSFER_UNSPECIFIED', 'TRANSFER_BT470_M', 'TRANSFER_BT470_BG', 'TRANSFER_BT601',
         'TRANSFER_ST240_M', 'TRANSFER_LINEAR', 'TRANSFER_LOG_100', 'TRANSFER_LOG_316', 'TRANSFER_IEC_61966_2_4',
-        'TRANSFER_IEC_61966_2_1', 'TRANSFER_BT2020_10', 'TRANSFER_BT2020_12', 'TRANSFER_ST2084', 'TRANSFER_ARIB_B67',
+        'TRANSFER_IEC_61966_2_1', 'TRANSFER_BT2020_10', 'TRANSFER_BT2020_12', 'TRANSFER_ST2084', 'TRANSFER_ST428',
+        'TRANSFER_ARIB_B67',
 
     'ColorPrimaries', 'PRIMARIES_BT709', 'PRIMARIES_UNSPECIFIED',
         'PRIMARIES_BT470_M', 'PRIMARIES_BT470_BG', 'PRIMARIES_ST170_M', 'PRIMARIES_ST240_M', 'PRIMARIES_FILM',
@@ -296,12 +300,12 @@ class PluginVersion(NamedTuple):
 # VapourSynth Enums and Constants
 
 
-class MessageType(IntEnum):
-    MESSAGE_TYPE_DEBUG: 'MessageType'
-    MESSAGE_TYPE_INFORMATION: 'MessageType'
-    MESSAGE_TYPE_WARNING: 'MessageType'
-    MESSAGE_TYPE_CRITICAL: 'MessageType'
-    MESSAGE_TYPE_FATAL: 'MessageType'
+class MessageType(IntFlag):
+    MESSAGE_TYPE_DEBUG = cast(MessageType, ...)
+    MESSAGE_TYPE_INFORMATION = cast(MessageType, ...)
+    MESSAGE_TYPE_WARNING = cast(MessageType, ...)
+    MESSAGE_TYPE_CRITICAL = cast(MessageType, ...)
+    MESSAGE_TYPE_FATAL = cast(MessageType, ...)
 
 
 MESSAGE_TYPE_DEBUG: Literal[MessageType.MESSAGE_TYPE_DEBUG]
@@ -312,32 +316,32 @@ MESSAGE_TYPE_FATAL: Literal[MessageType.MESSAGE_TYPE_FATAL]
 
 
 class FilterMode(IntEnum):
-    fmParallel: 'FilterMode'
-    fmParallelRequests: 'FilterMode'
-    fmUnordered: 'FilterMode'
-    fmFrameState: 'FilterMode'
+    PARALLEL = cast(FilterMode, ...)
+    PARALLEL_REQUESTS = cast(FilterMode, ...)
+    UNORDERED = cast(FilterMode, ...)
+    FRAME_STATE = cast(FilterMode, ...)
 
 
-fmParallel: Literal[FilterMode.fmParallel]
-fmParallelRequests: Literal[FilterMode.fmParallelRequests]
-fmUnordered: Literal[FilterMode.fmUnordered]
-fmFrameState: Literal[FilterMode.fmFrameState]
+PARALLEL: Literal[FilterMode.PARALLEL]
+PARALLEL_REQUESTS: Literal[FilterMode.PARALLEL_REQUESTS]
+UNORDERED: Literal[FilterMode.UNORDERED]
+FRAME_STATE: Literal[FilterMode.FRAME_STATE]
 
 
-class CoreCreationFlags(IntEnum):
-    ccfEnableGraphInspection: 'CoreCreationFlags'
-    ccfDisableAutoLoading: 'CoreCreationFlags'
-    ccfDisableLibraryUnloading: 'CoreCreationFlags'
+class CoreCreationFlags(IntFlag):
+    ENABLE_GRAPH_INSPECTION = cast(CoreCreationFlags, ...)
+    DISABLE_AUTO_LOADING = cast(CoreCreationFlags, ...)
+    DISABLE_LIBRARY_UNLOADING = cast(CoreCreationFlags, ...)
 
 
-ccfEnableGraphInspection: Literal[CoreCreationFlags.ccfEnableGraphInspection]
-ccfDisableAutoLoading: Literal[CoreCreationFlags.ccfDisableAutoLoading]
-ccfDisableLibraryUnloading: Literal[CoreCreationFlags.ccfDisableLibraryUnloading]
+ENABLE_GRAPH_INSPECTION: Literal[CoreCreationFlags.ENABLE_GRAPH_INSPECTION]
+DISABLE_AUTO_LOADING: Literal[CoreCreationFlags.DISABLE_AUTO_LOADING]
+DISABLE_LIBRARY_UNLOADING: Literal[CoreCreationFlags.DISABLE_LIBRARY_UNLOADING]
 
 
 class MediaType(IntEnum):
-    VIDEO: 'MediaType'
-    AUDIO: 'MediaType'
+    VIDEO = cast(MediaType, ...)
+    AUDIO = cast(MediaType, ...)
 
 
 VIDEO: Literal[MediaType.VIDEO]
@@ -345,10 +349,10 @@ AUDIO: Literal[MediaType.AUDIO]
 
 
 class ColorFamily(IntEnum):
-    UNDEFINED: 'ColorFamily'
-    GRAY: 'ColorFamily'
-    RGB: 'ColorFamily'
-    YUV: 'ColorFamily'
+    UNDEFINED = cast(ColorFamily, ...)
+    GRAY = cast(ColorFamily, ...)
+    RGB = cast(ColorFamily, ...)
+    YUV = cast(ColorFamily, ...)
 
 
 UNDEFINED: Literal[ColorFamily.UNDEFINED]
@@ -358,8 +362,8 @@ YUV: Literal[ColorFamily.YUV]
 
 
 class ColorRange(IntEnum):
-    RANGE_FULL: 'ColorRange'
-    RANGE_LIMITED: 'ColorRange'
+    RANGE_FULL = cast(ColorRange, ...)
+    RANGE_LIMITED = cast(ColorRange, ...)
 
 
 RANGE_FULL: Literal[ColorRange.RANGE_FULL]
@@ -367,8 +371,8 @@ RANGE_LIMITED: Literal[ColorRange.RANGE_LIMITED]
 
 
 class SampleType(IntEnum):
-    INTEGER: 'SampleType'
-    FLOAT: 'SampleType'
+    INTEGER = cast(SampleType, ...)
+    FLOAT = cast(SampleType, ...)
 
 
 INTEGER: Literal[SampleType.INTEGER]
@@ -376,58 +380,64 @@ FLOAT: Literal[SampleType.FLOAT]
 
 
 class PresetVideoFormat(IntEnum):
-    NONE: 'PresetVideoFormat'
+    NONE = cast(PresetVideoFormat, ...)
 
-    GRAY8: 'PresetVideoFormat'
-    GRAY9: 'PresetVideoFormat'
-    GRAY10: 'PresetVideoFormat'
-    GRAY12: 'PresetVideoFormat'
-    GRAY14: 'PresetVideoFormat'
-    GRAY16: 'PresetVideoFormat'
-    GRAY32: 'PresetVideoFormat'
+    GRAY8 = cast(PresetVideoFormat, ...)
+    GRAY9 = cast(PresetVideoFormat, ...)
+    GRAY10 = cast(PresetVideoFormat, ...)
+    GRAY12 = cast(PresetVideoFormat, ...)
+    GRAY14 = cast(PresetVideoFormat, ...)
+    GRAY16 = cast(PresetVideoFormat, ...)
+    GRAY32 = cast(PresetVideoFormat, ...)
 
-    GRAYH: 'PresetVideoFormat'
-    GRAYS: 'PresetVideoFormat'
+    GRAYH = cast(PresetVideoFormat, ...)
+    GRAYS = cast(PresetVideoFormat, ...)
 
-    YUV420P8: 'PresetVideoFormat'
-    YUV422P8: 'PresetVideoFormat'
-    YUV444P8: 'PresetVideoFormat'
-    YUV410P8: 'PresetVideoFormat'
-    YUV411P8: 'PresetVideoFormat'
-    YUV440P8: 'PresetVideoFormat'
+    YUV420P8 = cast(PresetVideoFormat, ...)
+    YUV422P8 = cast(PresetVideoFormat, ...)
+    YUV444P8 = cast(PresetVideoFormat, ...)
+    YUV410P8 = cast(PresetVideoFormat, ...)
+    YUV411P8 = cast(PresetVideoFormat, ...)
+    YUV440P8 = cast(PresetVideoFormat, ...)
 
-    YUV420P9: 'PresetVideoFormat'
-    YUV422P9: 'PresetVideoFormat'
-    YUV444P9: 'PresetVideoFormat'
+    YUV420P9 = cast(PresetVideoFormat, ...)
+    YUV422P9 = cast(PresetVideoFormat, ...)
+    YUV444P9 = cast(PresetVideoFormat, ...)
 
-    YUV420P10: 'PresetVideoFormat'
-    YUV422P10: 'PresetVideoFormat'
-    YUV444P10: 'PresetVideoFormat'
+    YUV420P10 = cast(PresetVideoFormat, ...)
+    YUV422P10 = cast(PresetVideoFormat, ...)
+    YUV444P10 = cast(PresetVideoFormat, ...)
 
-    YUV420P12: 'PresetVideoFormat'
-    YUV422P12: 'PresetVideoFormat'
-    YUV444P12: 'PresetVideoFormat'
+    YUV420P12 = cast(PresetVideoFormat, ...)
+    YUV422P12 = cast(PresetVideoFormat, ...)
+    YUV444P12 = cast(PresetVideoFormat, ...)
 
-    YUV420P14: 'PresetVideoFormat'
-    YUV422P14: 'PresetVideoFormat'
-    YUV444P14: 'PresetVideoFormat'
+    YUV420P14 = cast(PresetVideoFormat, ...)
+    YUV422P14 = cast(PresetVideoFormat, ...)
+    YUV444P14 = cast(PresetVideoFormat, ...)
 
-    YUV420P16: 'PresetVideoFormat'
-    YUV422P16: 'PresetVideoFormat'
-    YUV444P16: 'PresetVideoFormat'
+    YUV420P16 = cast(PresetVideoFormat, ...)
+    YUV422P16 = cast(PresetVideoFormat, ...)
+    YUV444P16 = cast(PresetVideoFormat, ...)
 
-    YUV444PH: 'PresetVideoFormat'
-    YUV444PS: 'PresetVideoFormat'
+    YUV420PH = cast(PresetVideoFormat, ...)
+    YUV420PS = cast(PresetVideoFormat, ...)
 
-    RGB24: 'PresetVideoFormat'
-    RGB27: 'PresetVideoFormat'
-    RGB30: 'PresetVideoFormat'
-    RGB36: 'PresetVideoFormat'
-    RGB42: 'PresetVideoFormat'
-    RGB48: 'PresetVideoFormat'
+    YUV422PH = cast(PresetVideoFormat, ...)
+    YUV422PS = cast(PresetVideoFormat, ...)
 
-    RGBH: 'PresetVideoFormat'
-    RGBS: 'PresetVideoFormat'
+    YUV444PH = cast(PresetVideoFormat, ...)
+    YUV444PS = cast(PresetVideoFormat, ...)
+
+    RGB24 = cast(PresetVideoFormat, ...)
+    RGB27 = cast(PresetVideoFormat, ...)
+    RGB30 = cast(PresetVideoFormat, ...)
+    RGB36 = cast(PresetVideoFormat, ...)
+    RGB42 = cast(PresetVideoFormat, ...)
+    RGB48 = cast(PresetVideoFormat, ...)
+
+    RGBH = cast(PresetVideoFormat, ...)
+    RGBS = cast(PresetVideoFormat, ...)
 
 
 NONE: Literal[PresetVideoFormat.NONE]
@@ -470,6 +480,12 @@ YUV420P16: Literal[PresetVideoFormat.YUV420P16]
 YUV422P16: Literal[PresetVideoFormat.YUV422P16]
 YUV444P16: Literal[PresetVideoFormat.YUV444P16]
 
+YUV420PH: Literal[PresetVideoFormat.YUV420PH]
+YUV420PS: Literal[PresetVideoFormat.YUV420PS]
+
+YUV422PH: Literal[PresetVideoFormat.YUV422PH]
+YUV422PS: Literal[PresetVideoFormat.YUV422PS]
+
 YUV444PH: Literal[PresetVideoFormat.YUV444PH]
 YUV444PS: Literal[PresetVideoFormat.YUV444PS]
 
@@ -485,31 +501,31 @@ RGBS: Literal[PresetVideoFormat.RGBS]
 
 
 class AudioChannels(IntEnum):
-    FRONT_LEFT: 'AudioChannels'
-    FRONT_RIGHT: 'AudioChannels'
-    FRONT_CENTER: 'AudioChannels'
-    LOW_FREQUENCY: 'AudioChannels'
-    BACK_LEFT: 'AudioChannels'
-    BACK_RIGHT: 'AudioChannels'
-    FRONT_LEFT_OF_CENTER: 'AudioChannels'
-    FRONT_RIGHT_OF_CENTER: 'AudioChannels'
-    BACK_CENTER: 'AudioChannels'
-    SIDE_LEFT: 'AudioChannels'
-    SIDE_RIGHT: 'AudioChannels'
-    TOP_CENTER: 'AudioChannels'
-    TOP_FRONT_LEFT: 'AudioChannels'
-    TOP_FRONT_CENTER: 'AudioChannels'
-    TOP_FRONT_RIGHT: 'AudioChannels'
-    TOP_BACK_LEFT: 'AudioChannels'
-    TOP_BACK_CENTER: 'AudioChannels'
-    TOP_BACK_RIGHT: 'AudioChannels'
-    STEREO_LEFT: 'AudioChannels'
-    STEREO_RIGHT: 'AudioChannels'
-    WIDE_LEFT: 'AudioChannels'
-    WIDE_RIGHT: 'AudioChannels'
-    SURROUND_DIRECT_LEFT: 'AudioChannels'
-    SURROUND_DIRECT_RIGHT: 'AudioChannels'
-    LOW_FREQUENCY2: 'AudioChannels'
+    FRONT_LEFT = cast(AudioChannels, ...)
+    FRONT_RIGHT = cast(AudioChannels, ...)
+    FRONT_CENTER = cast(AudioChannels, ...)
+    LOW_FREQUENCY = cast(AudioChannels, ...)
+    BACK_LEFT = cast(AudioChannels, ...)
+    BACK_RIGHT = cast(AudioChannels, ...)
+    FRONT_LEFT_OF_CENTER = cast(AudioChannels, ...)
+    FRONT_RIGHT_OF_CENTER = cast(AudioChannels, ...)
+    BACK_CENTER = cast(AudioChannels, ...)
+    SIDE_LEFT = cast(AudioChannels, ...)
+    SIDE_RIGHT = cast(AudioChannels, ...)
+    TOP_CENTER = cast(AudioChannels, ...)
+    TOP_FRONT_LEFT = cast(AudioChannels, ...)
+    TOP_FRONT_CENTER = cast(AudioChannels, ...)
+    TOP_FRONT_RIGHT = cast(AudioChannels, ...)
+    TOP_BACK_LEFT = cast(AudioChannels, ...)
+    TOP_BACK_CENTER = cast(AudioChannels, ...)
+    TOP_BACK_RIGHT = cast(AudioChannels, ...)
+    STEREO_LEFT = cast(AudioChannels, ...)
+    STEREO_RIGHT = cast(AudioChannels, ...)
+    WIDE_LEFT = cast(AudioChannels, ...)
+    WIDE_RIGHT = cast(AudioChannels, ...)
+    SURROUND_DIRECT_LEFT = cast(AudioChannels, ...)
+    SURROUND_DIRECT_RIGHT = cast(AudioChannels, ...)
+    LOW_FREQUENCY2 = cast(AudioChannels, ...)
 
 
 FRONT_LEFT: Literal[AudioChannels.FRONT_LEFT]
@@ -540,12 +556,12 @@ LOW_FREQUENCY2: Literal[AudioChannels.LOW_FREQUENCY2]
 
 
 class ChromaLocation(IntEnum):
-    CHROMA_LEFT: 'ChromaLocation'
-    CHROMA_CENTER: 'ChromaLocation'
-    CHROMA_TOP_LEFT: 'ChromaLocation'
-    CHROMA_TOP: 'ChromaLocation'
-    CHROMA_BOTTOM_LEFT: 'ChromaLocation'
-    CHROMA_BOTTOM: 'ChromaLocation'
+    CHROMA_LEFT = cast(ChromaLocation, ...)
+    CHROMA_CENTER = cast(ChromaLocation, ...)
+    CHROMA_TOP_LEFT = cast(ChromaLocation, ...)
+    CHROMA_TOP = cast(ChromaLocation, ...)
+    CHROMA_BOTTOM_LEFT = cast(ChromaLocation, ...)
+    CHROMA_BOTTOM = cast(ChromaLocation, ...)
 
 
 CHROMA_LEFT: Literal[ChromaLocation.CHROMA_LEFT]
@@ -557,9 +573,9 @@ CHROMA_BOTTOM: Literal[ChromaLocation.CHROMA_BOTTOM]
 
 
 class FieldBased(IntEnum):
-    FIELD_PROGRESSIVE: 'FieldBased'
-    FIELD_TOP: 'FieldBased'
-    FIELD_BOTTOM: 'FieldBased'
+    FIELD_PROGRESSIVE = cast(FieldBased, ...)
+    FIELD_TOP = cast(FieldBased, ...)
+    FIELD_BOTTOM = cast(FieldBased, ...)
 
 
 FIELD_PROGRESSIVE: Literal[FieldBased.FIELD_PROGRESSIVE]
@@ -568,19 +584,19 @@ FIELD_BOTTOM: Literal[FieldBased.FIELD_BOTTOM]
 
 
 class MatrixCoefficients(IntEnum):
-    MATRIX_RGB: 'MatrixCoefficients'
-    MATRIX_BT709: 'MatrixCoefficients'
-    MATRIX_UNSPECIFIED: 'MatrixCoefficients'
-    MATRIX_FCC: 'MatrixCoefficients'
-    MATRIX_BT470_BG: 'MatrixCoefficients'
-    MATRIX_ST170_M: 'MatrixCoefficients'
-    MATRIX_ST240_M: 'MatrixCoefficients'
-    MATRIX_YCGCO: 'MatrixCoefficients'
-    MATRIX_BT2020_NCL: 'MatrixCoefficients'
-    MATRIX_BT2020_CL: 'MatrixCoefficients'
-    MATRIX_CHROMATICITY_DERIVED_NCL: 'MatrixCoefficients'
-    MATRIX_CHROMATICITY_DERIVED_CL: 'MatrixCoefficients'
-    MATRIX_ICTCP: 'MatrixCoefficients'
+    MATRIX_RGB = cast(MatrixCoefficients, ...)
+    MATRIX_BT709 = cast(MatrixCoefficients, ...)
+    MATRIX_UNSPECIFIED = cast(MatrixCoefficients, ...)
+    MATRIX_FCC = cast(MatrixCoefficients, ...)
+    MATRIX_BT470_BG = cast(MatrixCoefficients, ...)
+    MATRIX_ST170_M = cast(MatrixCoefficients, ...)
+    MATRIX_ST240_M = cast(MatrixCoefficients, ...)
+    MATRIX_YCGCO = cast(MatrixCoefficients, ...)
+    MATRIX_BT2020_NCL = cast(MatrixCoefficients, ...)
+    MATRIX_BT2020_CL = cast(MatrixCoefficients, ...)
+    MATRIX_CHROMATICITY_DERIVED_NCL = cast(MatrixCoefficients, ...)
+    MATRIX_CHROMATICITY_DERIVED_CL = cast(MatrixCoefficients, ...)
+    MATRIX_ICTCP = cast(MatrixCoefficients, ...)
 
 
 MATRIX_RGB: Literal[MatrixCoefficients.MATRIX_RGB]
@@ -599,21 +615,22 @@ MATRIX_ICTCP: Literal[MatrixCoefficients.MATRIX_ICTCP]
 
 
 class TransferCharacteristics(IntEnum):
-    TRANSFER_BT709: 'TransferCharacteristics'
-    TRANSFER_UNSPECIFIED: 'TransferCharacteristics'
-    TRANSFER_BT470_M: 'TransferCharacteristics'
-    TRANSFER_BT470_BG: 'TransferCharacteristics'
-    TRANSFER_BT601: 'TransferCharacteristics'
-    TRANSFER_ST240_M: 'TransferCharacteristics'
-    TRANSFER_LINEAR: 'TransferCharacteristics'
-    TRANSFER_LOG_100: 'TransferCharacteristics'
-    TRANSFER_LOG_316: 'TransferCharacteristics'
-    TRANSFER_IEC_61966_2_4: 'TransferCharacteristics'
-    TRANSFER_IEC_61966_2_1: 'TransferCharacteristics'
-    TRANSFER_BT2020_10: 'TransferCharacteristics'
-    TRANSFER_BT2020_12: 'TransferCharacteristics'
-    TRANSFER_ST2084: 'TransferCharacteristics'
-    TRANSFER_ARIB_B67: 'TransferCharacteristics'
+    TRANSFER_BT709 = cast(TransferCharacteristics, ...)
+    TRANSFER_UNSPECIFIED = cast(TransferCharacteristics, ...)
+    TRANSFER_BT470_M = cast(TransferCharacteristics, ...)
+    TRANSFER_BT470_BG = cast(TransferCharacteristics, ...)
+    TRANSFER_BT601 = cast(TransferCharacteristics, ...)
+    TRANSFER_ST240_M = cast(TransferCharacteristics, ...)
+    TRANSFER_LINEAR = cast(TransferCharacteristics, ...)
+    TRANSFER_LOG_100 = cast(TransferCharacteristics, ...)
+    TRANSFER_LOG_316 = cast(TransferCharacteristics, ...)
+    TRANSFER_IEC_61966_2_4 = cast(TransferCharacteristics, ...)
+    TRANSFER_IEC_61966_2_1 = cast(TransferCharacteristics, ...)
+    TRANSFER_BT2020_10 = cast(TransferCharacteristics, ...)
+    TRANSFER_BT2020_12 = cast(TransferCharacteristics, ...)
+    TRANSFER_ST2084 = cast(TransferCharacteristics, ...)
+    TRANSFER_ST428 = cast(TransferCharacteristics, ...)
+    TRANSFER_ARIB_B67 = cast(TransferCharacteristics, ...)
 
 
 TRANSFER_BT709: Literal[TransferCharacteristics.TRANSFER_BT709]
@@ -630,22 +647,23 @@ TRANSFER_IEC_61966_2_1: Literal[TransferCharacteristics.TRANSFER_IEC_61966_2_1]
 TRANSFER_BT2020_10: Literal[TransferCharacteristics.TRANSFER_BT2020_10]
 TRANSFER_BT2020_12: Literal[TransferCharacteristics.TRANSFER_BT2020_12]
 TRANSFER_ST2084: Literal[TransferCharacteristics.TRANSFER_ST2084]
+TRANSFER_ST428: Literal[TransferCharacteristics.TRANSFER_ST428]
 TRANSFER_ARIB_B67: Literal[TransferCharacteristics.TRANSFER_ARIB_B67]
 
 
 class ColorPrimaries(IntEnum):
-    PRIMARIES_BT709: 'ColorPrimaries'
-    PRIMARIES_UNSPECIFIED: 'ColorPrimaries'
-    PRIMARIES_BT470_M: 'ColorPrimaries'
-    PRIMARIES_BT470_BG: 'ColorPrimaries'
-    PRIMARIES_ST170_M: 'ColorPrimaries'
-    PRIMARIES_ST240_M: 'ColorPrimaries'
-    PRIMARIES_FILM: 'ColorPrimaries'
-    PRIMARIES_BT2020: 'ColorPrimaries'
-    PRIMARIES_ST428: 'ColorPrimaries'
-    PRIMARIES_ST431_2: 'ColorPrimaries'
-    PRIMARIES_ST432_1: 'ColorPrimaries'
-    PRIMARIES_EBU3213_E: 'ColorPrimaries'
+    PRIMARIES_BT709 = cast(ColorPrimaries, ...)
+    PRIMARIES_UNSPECIFIED = cast(ColorPrimaries, ...)
+    PRIMARIES_BT470_M = cast(ColorPrimaries, ...)
+    PRIMARIES_BT470_BG = cast(ColorPrimaries, ...)
+    PRIMARIES_ST170_M = cast(ColorPrimaries, ...)
+    PRIMARIES_ST240_M = cast(ColorPrimaries, ...)
+    PRIMARIES_FILM = cast(ColorPrimaries, ...)
+    PRIMARIES_BT2020 = cast(ColorPrimaries, ...)
+    PRIMARIES_ST428 = cast(ColorPrimaries, ...)
+    PRIMARIES_ST431_2 = cast(ColorPrimaries, ...)
+    PRIMARIES_ST432_1 = cast(ColorPrimaries, ...)
+    PRIMARIES_EBU3213_E = cast(ColorPrimaries, ...)
 
 
 PRIMARIES_BT709: Literal[ColorPrimaries.PRIMARIES_BT709]
@@ -833,7 +851,7 @@ class VideoFormat:
     ) -> 'VideoFormat': ...
 
     @overload
-    def __eq__(self, other: 'VideoFormat') -> bool: ...  # type: ignore[misc]
+    def __eq__(self, other: 'VideoFormat') -> bool: ...
 
     @overload
     def __eq__(self, other: Any) -> Literal[False]: ...
@@ -877,7 +895,7 @@ class ChannelLayout(int):
     def __iter__(self) -> Iterator[AudioChannels]: ...
 
     @overload
-    def __eq__(self, other: 'ChannelLayout') -> bool: ...  # type: ignore[misc]
+    def __eq__(self, other: 'ChannelLayout') -> bool: ...
 
     @overload
     def __eq__(self, other: Any) -> Literal[False]: ...
@@ -926,7 +944,7 @@ class video_view(memoryview):  # type: ignore[misc]
 
 
 class RawFrame:
-    def __init__(self) -> NoReturn: ...
+    def __init__(self) -> None: ...
 
     @property
     def closed(self) -> bool: ...
@@ -992,7 +1010,7 @@ class AudioFrame(RawFrame):
 
 
 class RawNode:
-    def __init__(self) -> NoReturn: ...
+    def __init__(self) -> None: ...
 
     def get_frame(self, n: int) -> RawFrame: ...
 
@@ -1005,6 +1023,8 @@ class RawNode:
     def frames(
         self, prefetch: Union[int, None] = None, backlog: Union[int, None] = None, close: bool = False
     ) -> Iterator[RawFrame]: ...
+
+    def clear_cache(self) -> None: ...
 
     def set_output(self, index: int = 0) -> None: ...
 
@@ -1030,7 +1050,7 @@ class RawNode:
         def _dependencies(self): ...
 
     @overload
-    def __eq__(self: 'SelfRawNode', other: 'SelfRawNode', /) -> bool: ...  # type: ignore[misc]
+    def __eq__(self: 'SelfRawNode', other: 'SelfRawNode', /) -> bool: ...
 
     @overload
     def __eq__(self, other: Any, /) -> Literal[False]: ...
@@ -1151,6 +1171,9 @@ class Plugin:
     @property
     def version(self) -> PluginVersion: ...
 
+    @property
+    def plugin_path(self) -> str: ...
+
 
 class Core:
     def __init__(self) -> NoReturn: ...
@@ -1166,6 +1189,9 @@ class Core:
 
     @max_cache_size.setter
     def max_cache_size(self) -> None: ...
+
+    @property
+    def used_cache_size(self) -> int: ...
 
     @property
     def flags(self) -> int: ...
@@ -1186,7 +1212,9 @@ class Core:
     def add_log_handler(self, handler_func: Callable[[MessageType, str], None]) -> LogHandle: ...
 
     def remove_log_handler(self, handle: LogHandle) -> None: ...
-
+      
+    def clear_cache(self) -> None: ...
+      
     @property
     def core_version(self) -> VapourSynthVersion: ...
 

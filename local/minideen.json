@@ -29,6 +29,24 @@
 						"53f6081adec040902461592538de7abb562afa5b86619f69c95b8e1829a44662"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.minideen/v2/linux-glibc-x86_64/2024-09-30T20.54.10%2B00.00Z/MiniDeen-v2-linux-glibc-x86_64.zip",
+				"files": {
+					"libminideen.so": [
+						"libminideen.so",
+						"151b524f7cd28f4a1f7a4bd0c79f25c1e4946dfd649826b8fd08f59b8f8198fe"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.minideen/v2/darwin-aarch64/2024-09-30T20.54.50%2B00.00Z/MiniDeen-v2-darwin-aarch64.zip",
+				"files": {
+					"libminideen.dylib": [
+						"libminideen.dylib",
+						"6750bda0d4be57b8148e448eb92bc9725affe3d7fa64e28d0e5d3ab79dd84b0a"
+					]
+				}
 			}
 		},
 		{

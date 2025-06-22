@@ -29,6 +29,33 @@
 						"f1ffbd5f247c5058c7a88779a10a4490a0bbf61fb78420a0df59efa952e44b06"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tcomb/v4/linux-glibc-x86_64/2024-09-30T20.55.35%2B00.00Z/TComb-v4-linux-glibc-x86_64.zip",
+				"files": {
+					"libtcomb.so": [
+						"libtcomb.so",
+						"6bcd715aa8e6a13dd3e92c90ad3986a37017da3b582935aec73e9b3164681ff8"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tcomb/v4/darwin-x86_64/2024-09-30T21.00.52%2B00.00Z/TComb-v4-darwin-x86_64.zip",
+				"files": {
+					"libtcomb.dylib": [
+						"libtcomb.dylib",
+						"e571eb206d423150d2b4c484ac63be0c77fd330572961d4d77b46c73bbc922d4"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.tcomb/v4/darwin-aarch64/2024-09-30T20.56.24%2B00.00Z/TComb-v4-darwin-aarch64.zip",
+				"files": {
+					"libtcomb.dylib": [
+						"libtcomb.dylib",
+						"4d82a37356ca6d761c2804ab78f0c42e53ee9ca3a01765e6dc7b0979e18ac482"
+					]
+				}
 			}
 		},
 		{

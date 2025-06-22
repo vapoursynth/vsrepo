@@ -32,6 +32,33 @@
 						"6f4299318e8879d74b46b2516b95bf0dd170749a4ed42534a5d3c485eb2ab2ef"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/systems.innocent.fft3dfilter/R2/linux-glibc-x86_64/2024-10-09T17.43.07%2B00.00Z/FFT3DFilter-R2-linux-glibc-x86_64.zip",
+				"files": {
+					"libfft3dfilter.so": [
+						"libfft3dfilter.so",
+						"5568f88c13757c38ee0d41e9d6ba14c51bc8d69a9dc0e5500421de82a81eafb0"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/systems.innocent.fft3dfilter/R2/darwin-x86_64/2024-10-09T17.46.57%2B00.00Z/FFT3DFilter-R2-darwin-x86_64.zip",
+				"files": {
+					"libfft3dfilter.dylib": [
+						"libfft3dfilter.dylib",
+						"0dc6ef7739f16b5375cd5a25c264831a5454db213ddbe5277c45c550eb05474d"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/systems.innocent.fft3dfilter/R2/darwin-aarch64/2024-10-09T17.45.05%2B00.00Z/FFT3DFilter-R2-darwin-aarch64.zip",
+				"files": {
+					"libfft3dfilter.dylib": [
+						"libfft3dfilter.dylib",
+						"0568406b5794f510a6a42bc25df37235166073e044b574a44d94ed1113dd788e"
+					]
+				}
 			}
 		},
 		{

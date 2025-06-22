@@ -28,6 +28,33 @@
 						"2f6cbf900d6557e2354acd2f0d22ce8736102eb7e08a88c21b84aa6a13a548c3"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.dedot/v1/linux-glibc-x86_64/2024-09-30T20.52.32%2B00.00Z/DeDot-v1-linux-glibc-x86_64.zip",
+				"files": {
+					"libdedot.so": [
+						"libdedot.so",
+						"ac3722a00684ad952ce5bcc721acf1c9a0db4e95ccb8c5a6bb9f56eef837d251"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.dedot/v1/darwin-x86_64/2024-09-30T20.54.34%2B00.00Z/DeDot-v1-darwin-x86_64.zip",
+				"files": {
+					"libdedot.dylib": [
+						"libdedot.dylib",
+						"b2dbb282bf01589767192cf6dfce69d43fde5ce18b58a67cb0380887b2b734ce"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.dedot/v1/darwin-aarch64/2024-09-30T20.52.57%2B00.00Z/DeDot-v1-darwin-aarch64.zip",
+				"files": {
+					"libdedot.dylib": [
+						"libdedot.dylib",
+						"e26197e8f4851a84e5540625f4d2e77b21918c21583166971de8d2ffb13fe7e0"
+					]
+				}
 			}
 		}
 	]

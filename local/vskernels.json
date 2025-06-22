@@ -9,6 +9,54 @@
 	"wheelname": "vskernels",
 	"releases": [
 		{
+			"version": "3.4.3",
+			"published": "2025-02-13T14:29:53.500148Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/42/c4/57ce8db2d303e2466201db69549abf5f1c19f2f28b22624a379e11b3e55f/vskernels-3.4.3-py3-none-any.whl",
+				"hash": "29fe6361ea237154b59d0bce7fb5aca748a9e66e13bb08e38726c8359ef61ca9"
+			}
+		},
+		{
+			"version": "3.4.2",
+			"published": "2025-02-10T01:38:57.028880Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/c1/e2/36af37c7dd68d9b61629c5e1b2b49bb9e85ed74b67968b8dd72431389e90/vskernels-3.4.2-py3-none-any.whl",
+				"hash": "9812a3469e8576cb101ddd072416d846fa2e69b8f8e3d135b2281f80f517fc84"
+			}
+		},
+		{
+			"version": "3.4.1",
+			"published": "2025-02-10T01:28:50.835031Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/81/38/d5df942d9617ea670ee371098ec9b9618e88e7b98805bd2afcfadcbe038d/vskernels-3.4.1-py3-none-any.whl",
+				"hash": "c14e01316a1322f276191b096db97da51bafefd67d096ca558e731c4ac37f6b8"
+			}
+		},
+		{
+			"version": "3.4.0",
+			"published": "2025-02-09T23:37:23.687006Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/89/ca/8f46cd02a56c85582264a944124af326689d5566cbc84e17e4786d392df3/vskernels-3.4.0-py3-none-any.whl",
+				"hash": "6d300ef732ce9e243b9eca5c74eeb1dbb69d63cd04fbe0507dbe0e0c32fac69f"
+			}
+		},
+		{
+			"version": "3.3.1",
+			"published": "2024-12-06T07:08:42.552450Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/55/10/e67f3c90fdf8a0a79ec0774224c1e1d1bde2bb52bf6fe4c8fb47c41cb873/vskernels-3.3.1-py3-none-any.whl",
+				"hash": "03a0efa381c149ca10bd8177ee1a6cc6755d8d20f3610467fb008e4c48fe6fc8"
+			}
+		},
+		{
+			"version": "3.3.0",
+			"published": "2024-10-10T18:02:08.342499Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/20/9f/315f71b6e7c8341bd31880573703e617d365bcacab32e4dcc303f895fd3a/vskernels-3.3.0-py3-none-any.whl",
+				"hash": "be662643ae0da498de8e4bd4f68ceb2b69e34b2e270ae9e85234d65751f95eeb"
+			}
+		},
+		{
 			"version": "3.2.0",
 			"published": "2024-06-17T13:45:49.806985Z",
 			"wheel": {

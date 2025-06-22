@@ -16,6 +16,38 @@
 	],
 	"releases": [
 		{
+			"version": "1.9.1",
+			"published": "2025-02-13T14:29:57.974484Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/98/5a/0d5b3446c6d18d815b8173747f7d03d1f36049cdf274d4ecb15284c6e399/vsrgtools-1.9.1-py3-none-any.whl",
+				"hash": "55ea2920d969e0f4ba94e626a3820cb37b1056710a595119739c5805884cfa71"
+			}
+		},
+		{
+			"version": "1.9.0",
+			"published": "2025-02-10T01:48:39.744918Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/16/83/41b7807e0dac0fbb84ac80de7e9c531b29b123058d0e06bc7fad407c61c5/vsrgtools-1.9.0-py3-none-any.whl",
+				"hash": "e6c9874b62dfcda7898872a9642821e52bbd60237d1e1001115c68b4a6dc4fc6"
+			}
+		},
+		{
+			"version": "1.8.1",
+			"published": "2024-12-06T07:09:03.985588Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/72/33/00aaa0b1e4a4bb9a83559aa45ea61e8c43b844bf4db3f9227afbe3f965b0/vsrgtools-1.8.1-py3-none-any.whl",
+				"hash": "c087ff1458a7ccff878150cc7b27484982dbbe0c64dca6aa720bbfa5c6faca14"
+			}
+		},
+		{
+			"version": "1.8.0",
+			"published": "2024-10-10T18:06:30.422291Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/7c/ec/b5e4cd5e761e1cc9696ef1be338a4e4f8d5edd0bf69c11d84e1e45e7fdb7/vsrgtools-1.8.0-py3-none-any.whl",
+				"hash": "491e0214163bd8a7733ad7ee1b9e72b5d71014accddc0e33bdaafa483003659a"
+			}
+		},
+		{
 			"version": "1.7.0",
 			"published": "2024-06-17T13:46:13.845848Z",
 			"wheel": {

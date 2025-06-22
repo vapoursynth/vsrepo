@@ -1,0 +1,141 @@
+{
+	"name": "webp",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "WebP encoding as a VapourSynth plugin. Currently does VP8L lossless encoding.",
+	"github": "https://github.com/sgt0/vapoursynth-webp",
+	"identifier": "sgt.webp",
+	"namespace": "webp",
+	"releases": [
+		{
+			"version": "v1.0.9",
+			"published": "2025-06-16T22:51:33Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.9/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"e6d96886ee223c62dccbf710840ff8341117a0361fb027f229521dfffc83502e"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.8",
+			"published": "2025-05-04T16:28:28Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.8/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"3e7289ec3d1788f26c50d8adee4126cc3d525ae208ea95eb4d4842ab3cfa1319"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.7",
+			"published": "2025-03-27T15:48:19Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.7/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"2f009b6da956c34514262f578b47b8e0656de7e983972bec750e6c515766dd8f"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.6",
+			"published": "2025-02-11T21:42:48Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.6/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"2a97d4973b11bf71146a9006852b6110ac9a44197e212c404315abbf2d43d800"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.5",
+			"published": "2025-01-28T22:49:49Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.5/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"1814a9cd97fb0f9640b185e2327db70809e8bebb0a4f083754604d4f58baa101"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.4",
+			"published": "2025-01-16T21:41:43Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.4/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"023f63fb4827069035f07a7765d0a32dd592520d4bb7bab8ddb23d5f635bd5df"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.3",
+			"published": "2025-01-16T21:36:56Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.3/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"1f135b0fe309030782dd70a28cead991b98e60e0951630ab692f5adcafba7821"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.2",
+			"published": "2025-01-03T21:59:55Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.2/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"7002568d5eba6751f8909626f33de315719159fd7487f494383774005e4f27a2"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.1",
+			"published": "2024-12-28T16:23:15Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.1/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"109b06ff934534a4019e4f7c7457c32eeba5d889761d6985264f1a93aaf8a0b8"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1.0.0",
+			"published": "2024-11-23T20:09:58Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.0/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"413e1ac8093f0e1fcf975ff9ac97bafb78266aca6ea74006a20d9921e5131443"
+					]
+				}
+			}
+		}
+	]
+}

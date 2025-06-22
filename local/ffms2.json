@@ -25,6 +25,33 @@
 						"970d3f8d170fd13a2dd8a7e8a7f56b0ce5a1dc7eea79d1774bbb2c2cab47e3f0"
 					]
 				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/ffms2-257712fe8f3f103bfc94d236e8efb02dd18f1bcd/FFmpegSource2-5.0-darwin-aarch64.zip",
+				"files": {
+					"libffms2.dylib": [
+						"libffms2.dylib",
+						"d5932c47ee6e857f426dc4e40f8c4d38a27d91821637b31aad58831d9997e55a"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/ffms2-fb5016322ab87a120fcc750c6571e4cf5c9e1a5e/FFmpegSource2-5.0-darwin-x86_64.zip",
+				"files": {
+					"libffms2.dylib": [
+						"libffms2.dylib",
+						"2d45455dbfc34ef634fcd0627aa1c94a95d8204f97100bae2b9b0b33f600e9b0"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/ffms2-227a29cbcd8ac0fc2926a266d099a3c9feeda493/FFmpegSource2-5.0-linux-glibc-x86_64.zip",
+				"files": {
+					"libffms2.so": [
+						"libffms2.so",
+						"7c51de8036d1c62b9bca23b1ed9cc90ec118f361d4ff3c7c5ac0ef6acf554a02"
+					]
+				}
 			}
 		},
 		{

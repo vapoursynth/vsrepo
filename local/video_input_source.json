@@ -12,14 +12,14 @@
 			"version": "git:3cf3e05",
 			"published": "2024-07-29T22:24:32.000Z",
 			"win32": {
-                "url": "https://github.com/fieliapm/himawari_avs_plugin/raw/master/VideoInputSource/VideoInputSource.x86.dll",
-                "files": {
-                    "VideoInputSource.x86.dll": [
-                        "VideoInputSource.x86.dll",
-                        "ee8695b86bb8394276b838f0d26f505fd706b2b2889845f7441aecca9d5cd3b1"
-                    ]
-                }
-            },
+				"url": "https://github.com/fieliapm/himawari_avs_plugin/raw/master/VideoInputSource/VideoInputSource.x86.dll",
+				"files": {
+					"VideoInputSource.x86.dll": [
+						"VideoInputSource.x86.dll",
+						"ee8695b86bb8394276b838f0d26f505fd706b2b2889845f7441aecca9d5cd3b1"
+					]
+				}
+			},
 			"win64": {
 				"url": "https://github.com/fieliapm/himawari_avs_plugin/raw/master/VideoInputSource/VideoInputSource.x64.dll",
 				"files": {

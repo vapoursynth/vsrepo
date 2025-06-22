@@ -33,6 +33,136 @@
 	],
 	"releases": [
 		{
+			"version": "v15.12",
+			"published": "2025-06-13T02:44:25Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.12/VSNCNN-Windows-x64.v15.12.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"6336436f95ecf4650b2e6656e6bbd414f2be1b2e437fcb1905f79eb02fbfa607"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.11",
+			"published": "2025-05-15T02:44:34Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.11/VSNCNN-Windows-x64.v15.11.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"7ae78d1079cb68ce2fffc487608b4879eaf983f5f5b783d26df6b5632f757928"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.10",
+			"published": "2025-05-01T23:37:33Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.10/VSNCNN-Windows-x64.v15.10.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"0a835a6fb724ff3025d2ad333a4a0e20804bda0b494ce50a579c643ca1ed66fd"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.9",
+			"published": "2025-03-05T22:52:41Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.9/VSNCNN-Windows-x64.v15.9.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"73a17ebe102dea7fc3d2d328f125147fd7c9d3f2a6b7c09d1bff7edf717b0118"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.8",
+			"published": "2025-01-24T15:33:37Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.8/VSNCNN-Windows-x64.v15.8.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"6067eea4a2f7c0aa79afbbba678c1e53db1f8ad43b022674f85f3643cea51fac"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.7",
+			"published": "2024-12-03T11:03:06Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.7/VSNCNN-Windows-x64.v15.7.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"d16ef6d23dd586ed941fc5f71bc1199f46f9294b4752054281ef622b8be7faec"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.6",
+			"published": "2024-11-01T23:35:39Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.6/VSNCNN-Windows-x64.v15.6.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"35aea763e05452bd102f8dfa1093b32dc0d5f69ad46f0eaf361228911b7c12be"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.5",
+			"published": "2024-10-01T00:12:31Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.5/VSNCNN-Windows-x64.v15.5.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"a9fdbe2066370390f04ed6d2be415a4774d7701544d0e6e3e42b4c0f798a4999"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.4",
+			"published": "2024-09-07T01:05:26Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.4/VSNCNN-Windows-x64.v15.4.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"33ef1c9c6bba9003080ac4acf1a0835393a2f31f876891db67954398523b5bfe"
+					]
+				}
+			}
+		},
+		{
+			"version": "v15.3",
+			"published": "2024-08-21T07:23:43Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.3/VSNCNN-Windows-x64.v15.3.7z",
+				"files": {
+					"vsncnn.dll": [
+						"vsncnn.dll",
+						"5a4bf1ef98dc39557aa0f7b8bb32cd01394aaa9078ba019e7787776734bf9b00"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.2",
 			"published": "2024-08-07T06:42:45Z",
 			"win64": {

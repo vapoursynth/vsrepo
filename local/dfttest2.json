@@ -1,0 +1,110 @@
+{
+	"name": "dfttest2-Script",
+	"type": "PyScript",
+	"description": "DFTTest re-implemetation (CUDA and x86)",
+	"category": "Denoising",
+	"identifier": "dfttest2",
+	"modulename": "dfttest2_script",
+	"github": "https://github.com/AmusementClub/vs-dfttest2",
+	"device": [
+		"cpu",
+		"cuda"
+	],
+	"dependencies": [
+		"io.github.amusementclub.dfttest2_cpu",
+		"io.github.amusementclub.dfttest2_cuda"
+	],
+	"releases": [
+		{
+			"version": "v7",
+			"published": "2024-04-27T07:56:31Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v7/dfttest2.py",
+				"files": {
+					"dfttest2.py": [
+						"dfttest2.py",
+						"dc235a7b4c6a5e57ea1f0573e3743fb2d995a6709f859720d7456fe254a79cd4"
+					]
+				}
+			}
+		},
+		{
+			"version": "v6",
+			"published": "2023-08-19T01:23:29Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v6/dfttest2.py",
+				"files": {
+					"dfttest2.py": [
+						"dfttest2.py",
+						"c7f93967bbaa3b223a74f2540d6b1a4463b1ff39d0a116e599c209511a3dffde"
+					]
+				}
+			}
+		},
+		{
+			"version": "v5",
+			"published": "2022-10-05T14:11:32Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v5/dfttest2.py",
+				"files": {
+					"dfttest2.py": [
+						"dfttest2.py",
+						"c755c4ce632cf5b170c48b90b33d25320fe3cac435d1abb78ba7b9f8c0132834"
+					]
+				}
+			}
+		},
+		{
+			"version": "v4",
+			"published": "2022-08-31T10:27:19Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v4/dfttest2.py",
+				"files": {
+					"dfttest2.py": [
+						"dfttest2.py",
+						"ccf5f49f00e427dc47d6bcbe650251541a21e0d589d97b5b9105b974cbf0a8fd"
+					]
+				}
+			}
+		},
+		{
+			"version": "v3",
+			"published": "2022-08-19T09:46:13Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v3/dfttest2.py",
+				"files": {
+					"dfttest2.py": [
+						"dfttest2.py",
+						"747ea8d0530156cccb902b38fb14affd72f5e44544fe3406ca6d0c643f2eea3a"
+					]
+				}
+			}
+		},
+		{
+			"version": "v2",
+			"published": "2022-08-02T11:08:36Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v2/dfttest2.py",
+				"files": {
+					"dfttest2.py": [
+						"dfttest2.py",
+						"1df76fde867d84cbe842a5d5eef502e36d0126534bcbd5e9b4137ac451c02e0a"
+					]
+				}
+			}
+		},
+		{
+			"version": "v1",
+			"published": "2022-07-23T01:44:39Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v1/dfttest2.py",
+				"files": {
+					"dfttest2.py": [
+						"dfttest2.py",
+						"50fdcf519bcc7bddeee8f72cd51ba87b4fd6ac772ee1658903197fd5bb01c322"
+					]
+				}
+			}
+		}
+	]
+}

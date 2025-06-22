@@ -28,6 +28,33 @@
 						"f89706c65bc9c42b3585e80f474518ffefea15508a53d39010bdb41a655f344f"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.fillborders/v2/linux-glibc-x86_64/2024-09-30T20.53.01%2B00.00Z/fillborders-v2-linux-glibc-x86_64.zip",
+				"files": {
+					"libfillborders.so": [
+						"libfillborders.so",
+						"9e8e86202e9fc897ef7b243e2a51896b08fe37a8288032aa520b523b124e852b"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.fillborders/v2/darwin-x86_64/2024-09-30T20.55.32%2B00.00Z/fillborders-v2-darwin-x86_64.zip",
+				"files": {
+					"libfillborders.dylib": [
+						"libfillborders.dylib",
+						"1ea3d85f3c3946b9dfb5b5107b3a9aa239e3a165f9adc18260b7594679453608"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.fillborders/v2/darwin-aarch64/2024-09-30T20.53.29%2B00.00Z/fillborders-v2-darwin-aarch64.zip",
+				"files": {
+					"libfillborders.dylib": [
+						"libfillborders.dylib",
+						"ac488badfbe59dd2b82035b941f3e510bb838500cdb1ed5181157db5e8db3e5b"
+					]
+				}
 			}
 		},
 		{

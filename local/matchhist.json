@@ -27,6 +27,33 @@
 						"77b1e9079500be5ccb4d567e10c602938d00284acbd48465a5838f0ddc1f3bec"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.matchhistogram/v2/linux-glibc-x86_64/2024-09-30T20.54.02%2B00.00Z/MatchHistogram-v2-linux-glibc-x86_64.zip",
+				"files": {
+					"libmatchhistogram.so": [
+						"libmatchhistogram.so",
+						"2da0c7bff22617c6a5df116909adeafc311eb05c0adaba2268899a1849891d9c"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.matchhistogram/v2/darwin-x86_64/2024-09-30T20.57.38%2B00.00Z/MatchHistogram-v2-darwin-x86_64.zip",
+				"files": {
+					"libmatchhistogram.dylib": [
+						"libmatchhistogram.dylib",
+						"e6f2a40a11999108fec748d8eeada2da623a1e07a77cf7904245ac226294e021"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.matchhistogram/v2/darwin-aarch64/2024-09-30T20.54.39%2B00.00Z/MatchHistogram-v2-darwin-aarch64.zip",
+				"files": {
+					"libmatchhistogram.dylib": [
+						"libmatchhistogram.dylib",
+						"9d6fe20a5a25f836b0251249c926de2bc7a424f73791fb153663e87289d5edbd"
+					]
+				}
 			}
 		},
 		{

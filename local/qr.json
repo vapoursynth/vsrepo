@@ -28,6 +28,33 @@
 						"bac706bcc6b51150f628ce5241331aaedadd65dc7fd2e1930b195f85c2f1cbf1"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/net.bigjungle.qr/Release_1.0.0.0/linux-glibc-x86_64/2024-10-09T13.58.01%2B00.00Z/QRCodeSource-Release_1.0.0.0-linux-glibc-x86_64.zip",
+				"files": {
+					"libqrcodesource.so": [
+						"libqrcodesource.so",
+						"577a7718f77f2ff1b244f7b44a59c5eff648d192cac1f75fb4c1e29fcf224b3c"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/net.bigjungle.qr/Release_1.0.0.0/darwin-x86_64/2024-10-09T14.01.03%2B00.00Z/QRCodeSource-Release_1.0.0.0-darwin-x86_64.zip",
+				"files": {
+					"libqrcodesource.dylib": [
+						"libqrcodesource.dylib",
+						"405312d99f7c2cbe40ca546aad147521d3c21116dd32867786df8d4cb6b28d7f"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/net.bigjungle.qr/Release_1.0.0.0/darwin-aarch64/2024-10-09T13.59.23%2B00.00Z/QRCodeSource-Release_1.0.0.0-darwin-aarch64.zip",
+				"files": {
+					"libqrcodesource.dylib": [
+						"libqrcodesource.dylib",
+						"7617fc2546fa155fa831ea63a148d031f4860ade1de8b68596ac6b326ad4efca"
+					]
+				}
 			}
 		}
 	]

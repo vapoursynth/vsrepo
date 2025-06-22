@@ -9,6 +9,84 @@
 	"namespace": "zsmooth",
 	"releases": [
 		{
+			"version": "0.11",
+			"published": "2025-06-09T16:52:51Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.11/zsmooth-x86_64-windows.zip",
+				"files": {
+					"zsmooth.dll": [
+						"zsmooth.dll",
+						"e488c52cf64ee1eb211c03b9e61cf94d8678d60a6a6c1422266cd54c64a5b510"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.10",
+			"published": "2025-06-08T00:50:17Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.10/zsmooth-x86_64-windows.zip",
+				"files": {
+					"zsmooth.dll": [
+						"zsmooth.dll",
+						"70e70a5f0511428a38f0f0204981caa1590e5de606681d5f87d5ed8e615f635d"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.9",
+			"published": "2025-05-20T17:09:59Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.9/zsmooth-x86_64-windows.zip",
+				"files": {
+					"zsmooth.dll": [
+						"zsmooth.dll",
+						"c1da0a21fac0fc72e9f28650b6ed9203aa49908fccee632ae0d61dabf050b1e0"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.8",
+			"published": "2025-04-20T17:14:45Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.8/zsmooth-x86_64-windows.zip",
+				"files": {
+					"zsmooth.dll": [
+						"zig-out/lib/zsmooth.dll",
+						"0f3be9bca740f382c7cfaf025d0ec518cc0893347ca66f6d6a909ca63109fff3"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.7",
+			"published": "2025-04-17T20:42:26Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.7/zsmooth.avx2.dll.zip",
+				"files": {
+					"zsmooth.avx2.dll": [
+						"zsmooth.avx2.dll",
+						"8da2e66518231f7668bcf77be170123b9ce16859cc1fe2dcf1a0c73f17139cb0"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.6",
+			"published": "2025-01-20T19:52:17Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.6/zsmooth.avx2.dll.zip",
+				"files": {
+					"zsmooth.avx2.dll": [
+						"zsmooth.avx2.dll",
+						"9614536820ea867731e84aeed220a30f98b2897e3848a4e4fa43f800fe4fff46"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.5",
 			"published": "2024-05-03T15:37:33Z",
 			"win64": {

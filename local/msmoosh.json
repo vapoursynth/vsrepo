@@ -29,6 +29,33 @@
 						"3cc2ced0470e7e4e1115484739f87a81cb02519779049bf84f769afd6acf9544"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.msmoosh/v1.1/linux-glibc-x86_64/2024-09-30T20.54.20%2B00.00Z/MSmoosh-v1.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libmsmoosh.so": [
+						"libmsmoosh.so",
+						"81a26bdc51da639a233c57a3641af7ef3a4b51addebbc8b7c634fe250cf9fe33"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.msmoosh/v1.1/darwin-x86_64/2024-09-30T20.58.16%2B00.00Z/MSmoosh-v1.1-darwin-x86_64.zip",
+				"files": {
+					"libmsmoosh.dylib": [
+						"libmsmoosh.dylib",
+						"12cd60d1b6fc624a6e94710ac5e99fb96dafa97132a80f7a6dc05bc25ac4de3c"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.nodame.msmoosh/v1.1/darwin-aarch64/2024-09-30T20.55.03%2B00.00Z/MSmoosh-v1.1-darwin-aarch64.zip",
+				"files": {
+					"libmsmoosh.dylib": [
+						"libmsmoosh.dylib",
+						"d8d0134091ebedd86bea65abaef09c888e5dd971d9b196246420ae4f52965a69"
+					]
+				}
 			}
 		},
 		{

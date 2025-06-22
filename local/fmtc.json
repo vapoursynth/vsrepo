@@ -11,6 +11,37 @@
 	"api": 4,
 	"releases": [
 		{
+			"version": "git:18a9cecb",
+			"published": "2024-10-10T14:44:44Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/fmtconv/git-18a9cecb/linux-glibc-x86_64/2024-10-10T14.44.42%2B00.00Z/fmtconv-git-18a9cecb-linux-glibc-x86_64.zip",
+				"files": {
+					"libfmtconv.so": [
+						"libfmtconv.so",
+						"f2c7606362c9ff6d4dfab85ef3df67224d2f003c6888afa4532e806a4c62646c"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/fmtconv/git-18a9cecb/darwin-x86_64/2024-10-10T14.48.08%2B00.00Z/fmtconv-git-18a9cecb-darwin-x86_64.zip",
+				"files": {
+					"libfmtconv.dylib": [
+						"libfmtconv.dylib",
+						"2309153bb318c887eef4a77e400bb73b4840a7f4ab2fd5c3e4a9a11c9e8756ea"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/fmtconv/git-18a9cecb/darwin-aarch64/2024-10-10T14.43.54%2B00.00Z/fmtconv-git-18a9cecb-darwin-aarch64.zip",
+				"files": {
+					"libfmtconv.dylib": [
+						"libfmtconv.dylib",
+						"fb1445888bc13e74103a6c40ef581cd00a10e0913ff20037c9000b4d5c387bc2"
+					]
+				}
+			}
+		},
+		{
 			"version": "r30",
 			"published": "2022-08-31T06:58:58Z",
 			"win32": {

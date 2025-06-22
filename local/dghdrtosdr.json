@@ -11,6 +11,28 @@
       "cuda"
    ],
    "releases":[
+    {
+            "version": "1.16",
+            "published": "2024-08-04T04:00Z",
+            "win32": {
+                "url": "https://rationalqm.us/hdr/DGHDRtoSDR_1.16.rar",
+                "files": {
+                    "DGHDRtoSDR.dll": [
+                        "x32/DGHDRtoSDR.dll",
+                        "e5c9c68a7eb9db1ddd1850d6446cdf929e04a1be59be6e7ca91cc56fe4f5d261"
+                    ]
+                }
+            },
+            "win64": {
+                "url": "https://rationalqm.us/hdr/DGHDRtoSDR_1.16.rar",
+                "files": {
+                    "DGHDRtoSDR.dll": [
+                        "DGHDRtoSDR.dll",
+                        "13f34aeca542573631c0c5d35830b222693adbea0c6d8c36d6d2da56dcad1921"
+                    ]
+                }
+            }
+      },
       {
          "version":"1.15",
          "published":"2021-11-20T15:56Z",

@@ -18,12 +18,12 @@
 			"published": "2020-11-08T17:42:03Z",
 			"script": {
 				"url": "https://gist.github.com/4re/342624c9e1a144a696c6/archive/68ec4bdff1e51a3832b163198ed7ea00e1c1ab46.zip",
-                "files": {
-                    "nnedi3_rpow2.py": [
-                        "342624c9e1a144a696c6-68ec4bdff1e51a3832b163198ed7ea00e1c1ab46/nnedi3_rpow2.py",
-                        "8bf7aa7d3958e4f6e4b967a32e9908f458a95c56b08483e30f9098fa0807694a"
-                    ]
-                }
+				"files": {
+					"nnedi3_rpow2.py": [
+						"342624c9e1a144a696c6-68ec4bdff1e51a3832b163198ed7ea00e1c1ab46/nnedi3_rpow2.py",
+						"8bf7aa7d3958e4f6e4b967a32e9908f458a95c56b08483e30f9098fa0807694a"
+					]
+				}
 			}
 		},
 		{

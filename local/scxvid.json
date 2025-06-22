@@ -9,26 +9,26 @@
 	"github": "https://github.com/dubhater/vapoursynth-scxvid",
 	"releases": [
 		{
-                        "version": "v1",
-                        "published": "2014-12-24T21:23:24Z",
-                        "win32": {
-                                "url": "https://github.com/dubhater/vapoursynth-scxvid/releases/download/v1/vapoursynth-scxvid-v1-win32.7z",
-                                "files": {
-                                        "libscxvid.dll": [
-                                                "libscxvid.dll",
-                                                "de2162450b761cda91ef456b12c1d9cf873648d0204e0fc06d23b19b390b2984"
-                                        ]
-                                }
-                        },
-                        "win64": {
-                                "url": "https://github.com/dubhater/vapoursynth-scxvid/releases/download/v1/vapoursynth-scxvid-v1-win64.7z",
-                                "files": {
-                                        "libscxvid.dll": [
-                                                "libscxvid.dll",
-                                                "f94ef977339bd36ee614b449b3ca47c1adae27c9aa7d1fcd3c74f46d81cd3587"
-                                        ]
-                                }
-                        }
-                }
-        ]
+			"version": "v1",
+			"published": "2014-12-24T21:23:24Z",
+			"win32": {
+				"url": "https://github.com/dubhater/vapoursynth-scxvid/releases/download/v1/vapoursynth-scxvid-v1-win32.7z",
+				"files": {
+					"libscxvid.dll": [
+						"libscxvid.dll",
+						"de2162450b761cda91ef456b12c1d9cf873648d0204e0fc06d23b19b390b2984"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/dubhater/vapoursynth-scxvid/releases/download/v1/vapoursynth-scxvid-v1-win64.7z",
+				"files": {
+					"libscxvid.dll": [
+						"libscxvid.dll",
+						"f94ef977339bd36ee614b449b3ca47c1adae27c9aa7d1fcd3c74f46d81cd3587"
+					]
+				}
+			}
+		}
+	]
 }

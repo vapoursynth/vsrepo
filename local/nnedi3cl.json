@@ -8,7 +8,9 @@
 	"identifier": "com.holywu.nnedi3cl",
 	"namespace": "nnedi3cl",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-NNEDI3CL",
-	"device": ["opencl"],
+	"device": [
+		"opencl"
+	],
 	"dependencies": [
 		"com.deinterlace.nnedi3.weights"
 	],

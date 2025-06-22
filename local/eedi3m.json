@@ -9,7 +9,9 @@
 	"namespace": "eedi3m",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3",
 	"ignore": [
-		"r1", "r2", "r3.1"
+		"r1",
+		"r2",
+		"r3.1"
 	],
 	"releases": [
 		{

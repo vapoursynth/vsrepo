@@ -9,6 +9,19 @@
 	"namespace": "zsmooth",
 	"releases": [
 		{
+			"version": "0.12",
+			"published": "2025-07-10T16:05:55Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zsmooth/releases/download/0.12/zsmooth-x86_64-windows.zip",
+				"files": {
+					"zsmooth.dll": [
+						"zsmooth.dll",
+						"311c261200ab3ebb6497f7f76d104dcf1b3c5076449825eed5fa1395e6279622"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.11",
 			"published": "2025-06-09T16:52:51Z",
 			"win64": {

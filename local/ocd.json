@@ -1,0 +1,63 @@
+{
+	"name": "ocd",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "opencv dct with gaussianblur",
+	"github": "https://github.com/Mr-Z-2697/vapoursynth-ocd",
+	"identifier": "void.ocd",
+	"namespace": "ocd",
+	"releases": [
+		{
+			"version": "0.4",
+			"published": "2025-07-13T14:49:55Z",
+			"win64": {
+				"url": "https://github.com/Mr-Z-2697/vapoursynth-ocd/releases/download/0.4/vsocd-0.4-cv5-win64.7z",
+				"files": {
+					"vsocd.dll": [
+						"vsocd.dll",
+						"bcd7fa9b1eaaede0c29ca96ea9e2a3aa18e4dcc7fa0bbc37721d38be4c56fb46"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.3",
+			"published": "2025-02-14T10:53:55Z",
+			"win64": {
+				"url": "https://github.com/Mr-Z-2697/vapoursynth-ocd/releases/download/0.3/vsocd-0.3-cv5-win64.7z",
+				"files": {
+					"vsocd-cv5.dll": [
+						"vsocd-cv5.dll",
+						"d0643667b8dcff8300deafa162bdbf494c21b60e7d07a0934c327c2c520bc30b"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.2",
+			"published": "2025-02-13T17:13:08Z",
+			"win64": {
+				"url": "https://github.com/Mr-Z-2697/vapoursynth-ocd/releases/download/0.2/vsocd-0.2-cv5-win64.7z",
+				"files": {
+					"vsocd-cv5.dll": [
+						"vsocd-cv5.dll",
+						"6f0c8b782e7cbfbe19128d251aac7576a12f075fd3cefc601fac60960b3449ce"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.1",
+			"published": "2025-02-12T14:58:25Z",
+			"win64": {
+				"url": "https://github.com/Mr-Z-2697/vapoursynth-ocd/releases/download/0.1/vsocd-0.1-win64.7z",
+				"files": {
+					"vsocd.dll": [
+						"vsocd.dll",
+						"b9fa9844e83e27eba2a44871c8a24349d90368270604170244054ed0b1af2f43"
+					]
+				}
+			}
+		}
+	]
+}

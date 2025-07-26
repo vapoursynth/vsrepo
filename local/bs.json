@@ -9,6 +9,19 @@
 	"namespace": "bs",
 	"releases": [
 		{
+			"version": "R13",
+			"published": "2025-07-15T13:07:51Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R13/BestSource-R13.7z",
+				"files": {
+					"BestSource.dll": [
+						"BestSource.dll",
+						"dfddcdced11a7bed3f58c45c28b54930a902eefe262b16fadd4f49991e1b5347"
+					]
+				}
+			}
+		},
+		{
 			"version": "R12",
 			"published": "2025-06-02T14:39:12Z",
 			"win64": {

@@ -1,0 +1,24 @@
+{
+	"name": "AreaFilter",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "VapourSynth plugin for processing binary images by filtering connected components based on area size.",
+	"github": "https://github.com/yuygfgg/Vapoursynth-areafilter",
+	"identifier": "com.yuygfgg.areafilter",
+	"namespace": "areafilter",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2025-07-30T14:38:06Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-areafilter/releases/download/R1/release-windows-amd64.zip",
+				"files": {
+					"areafilter.dll": [
+						"areafilter.dll",
+						"7c0a807c7a890a930f04358c7640f389bdbcd05ae8c3f046e0f7c37b8e592b4b"
+					]
+				}
+			}
+		}
+	]
+}

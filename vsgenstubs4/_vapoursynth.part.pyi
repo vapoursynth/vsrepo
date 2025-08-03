@@ -1076,7 +1076,7 @@ SelfRawNode = TypeVar('SelfRawNode', bound=RawNode)
 
 
 class VideoNode(RawNode):
-    format: Union[VideoFormat, None]
+    format: VideoFormat
 
     width: int
     height: int

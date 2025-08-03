@@ -8,6 +8,19 @@
 	"namespace": "areafilter",
 	"releases": [
 		{
+			"version": "R2",
+			"published": "2025-07-31T09:33:25Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-areafilter/releases/download/R2/release-windows-amd64.zip",
+				"files": {
+					"areafilter.dll": [
+						"areafilter.dll",
+						"dd43ff88b7e5e072bed426b84c6359628bc3561bcf8aab97f4250541fc14518b"
+					]
+				}
+			}
+		},
+		{
 			"version": "R1",
 			"published": "2025-07-30T14:38:06Z",
 			"win64": {

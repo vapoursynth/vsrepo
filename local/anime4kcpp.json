@@ -23,6 +23,28 @@
 	],
 	"releases": [
 		{
+			"version": "v3.0.0",
+			"published": "2025-08-01T07:59:46Z",
+			"win32": {
+				"url": "https://github.com/TianZerL/Anime4KCPP/releases/download/v3.0.0/Anime4KCPP-Filter-AVS-VS-v3.0.0-x86-x64-MSVC.7z",
+				"files": {
+					"ac_filter_avs_vs.dll": [
+						"x86/ac_filter_avs_vs.dll",
+						"e5c6a2df32ebae18e079a33df989d914a84690013507df6df75b150d7e361924"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/TianZerL/Anime4KCPP/releases/download/v3.0.0/Anime4KCPP-Filter-AVS-VS-v3.0.0-x86-x64-MSVC.7z",
+				"files": {
+					"ac_filter_avs_vs.dll": [
+						"x64/ac_filter_avs_vs.dll",
+						"ab7e1be32fd72927715044ca760029012feebe775547a59eb2acc79cd79cdea3"
+					]
+				}
+			}
+		},
+		{
 			"version": "v2.5.0",
 			"published": "2021-01-19T04:19:03Z",
 			"win64": {

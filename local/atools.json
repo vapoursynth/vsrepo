@@ -1,0 +1,24 @@
+{
+	"name": "AudioTools",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Basic audio functions",
+	"github": "https://github.com/ropagr/VS-AudioTools",
+	"identifier": "com.ropagr.atools",
+	"namespace": "atools",
+	"releases": [
+		{
+			"version": "v0.1.0",
+			"published": "2025-08-14T00:09:41Z",
+			"win64": {
+				"url": "https://github.com/ropagr/VS-AudioTools/releases/download/v0.1.0/AudioTools-v0.1-x64.zip",
+				"files": {
+					"AudioTools.dll": [
+						"AudioTools-v0.1-x64/AudioTools.dll",
+						"b393e6b7a04b196fef1b6870ca8d4babf691311ab835e4dd03293434f4de7e25"
+					]
+				}
+			}
+		}
+	]
+}

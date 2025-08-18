@@ -8,6 +8,32 @@
 	"namespace": "ares",
 	"releases": [
 		{
+			"version": "v0.3.0",
+			"published": "2025-08-13T17:16:29Z",
+			"win64": {
+				"url": "https://github.com/ropagr/VS-AudioResample/releases/download/v0.3.0/AudioResample-v0.3-x64.zip",
+				"files": {
+					"AudioResample.dll": [
+						"AudioResample-v0.3-x64/AudioResample.dll",
+						"9c04055a3d9bea9c23db2baefcfa42aab76f1703f1a3d6abc518314faa528347"
+					]
+				}
+			}
+		},
+		{
+			"version": "v0.2.0",
+			"published": "2025-08-12T18:01:33Z",
+			"win64": {
+				"url": "https://github.com/ropagr/VS-AudioResample/releases/download/v0.2.0/AudioResample-v0.2-x64.zip",
+				"files": {
+					"AudioResample.dll": [
+						"AudioResample-v0.2-x64/AudioResample.dll",
+						"525cf2dd36da82c57ece9493c2465797b30188c44b6657af1b490ad8724389a6"
+					]
+				}
+			}
+		},
+		{
 			"version": "v0.1.1",
 			"published": "2025-03-27T09:41:26Z",
 			"win64": {

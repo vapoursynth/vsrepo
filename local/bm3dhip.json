@@ -28,6 +28,19 @@
 	],
 	"releases": [
 		{
+			"version": "R2.15",
+			"published": "2025-08-23T01:25:50Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.15/VapourSynth-BM3DHIP-R2.15.7z",
+				"files": {
+					"bm3dhip.dll": [
+						"VapourSynth-BM3DHIP-R2.15/bm3dhip.dll",
+						"68c0e5a051ad7bc2d9f6cac5bfdea9d68a9a449a4ecada2d4b67fc7c0b474f4e"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2.14",
 			"published": "2023-11-11T07:13:42Z",
 			"win64": {

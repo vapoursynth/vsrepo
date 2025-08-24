@@ -17,6 +17,23 @@
 	],
 	"releases": [
 		{
+			"version": "v8",
+			"published": "2025-08-22T11:13:07Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v8/vs-dfttest2-cuda-windows-v8.7z",
+				"files": {
+					"dfttest2_cuda.dll": [
+						"vs-dfttest2-cuda-windows-v8/dfttest2_cuda.dll",
+						"5b8e2dc03c83df3bcc3f27714c47f5ff156aa87fd5f8b273bd4db8fad868a955"
+					],
+					"dfttest2_nvrtc.dll": [
+						"vs-dfttest2-cuda-windows-v8/dfttest2_nvrtc.dll",
+						"c56b6cf0f61f182cffe9115a689d728d136958750745648ca8575dcee304a413"
+					]
+				}
+			}
+		},
+		{
 			"version": "v7",
 			"published": "2024-04-27T07:56:31Z",
 			"win64": {

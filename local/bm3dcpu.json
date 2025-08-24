@@ -13,6 +13,19 @@
 	],
 	"releases": [
 		{
+			"version": "R2.15",
+			"published": "2025-08-23T01:25:50Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA/releases/download/R2.15/VapourSynth-BM3DCPU-R2.15.7z",
+				"files": {
+					"BM3DCPU-znver2.dll": [
+						"VapourSynth-BM3DCPU-R2.15/bm3dcpu-znver2.dll",
+						"fb8cbf0a33fd80e2fc15b4b60f1b006b3c3f5e9698949dd930d683b49fe67fa1"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2.14",
 			"published": "2023-11-11T07:13:42Z",
 			"win64": {

@@ -16,6 +16,19 @@
 	],
 	"releases": [
 		{
+			"version": "v8",
+			"published": "2025-08-22T11:13:07Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v8/dfttest2.py",
+				"files": {
+					"dfttest2.py": [
+						"dfttest2.py",
+						"dc235a7b4c6a5e57ea1f0573e3743fb2d995a6709f859720d7456fe254a79cd4"
+					]
+				}
+			}
+		},
+		{
 			"version": "v7",
 			"published": "2024-04-27T07:56:31Z",
 			"script": {

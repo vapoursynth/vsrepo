@@ -19,6 +19,19 @@
 	],
 	"releases": [
 		{
+			"version": "r12",
+			"published": "2025-08-22T11:34:27Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r12/VapourSynth-BilateralGPU_RTC-r12.7z",
+				"files": {
+					"BilateralGPU_RTC.dll": [
+						"VapourSynth-BilateralGPU_RTC-r12/BilateralGPU_RTC.dll",
+						"dc8e0fb99d2745ce21b80fdb0b1c6bceae9b8286cb5f563101aeb8a827a16a35"
+					]
+				}
+			}
+		},
+		{
 			"version": "r10",
 			"published": "2023-10-18T01:46:30Z",
 			"win64": {

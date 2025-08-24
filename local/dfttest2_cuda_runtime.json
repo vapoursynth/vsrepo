@@ -8,6 +8,19 @@
 	"namespace": "dfttest2_cuda_runtime",
 	"releases": [
 		{
+			"version": "v8",
+			"published": "2025-08-22T11:13:07Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v8/cufft-windows-v8.7z",
+				"files": {
+					"vsmlrt-cuda/cufft64_11.dll": [
+						"vsmlrt-cuda/cufft64_11.dll",
+						"5b90655ca9cdf5d91cbdf2c72b995ec937eed0aef2d6954370c711b45c929b35"
+					]
+				}
+			}
+		},
+		{
 			"version": "v7",
 			"published": "2024-04-27T07:56:31Z",
 			"win64": {

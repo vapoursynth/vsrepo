@@ -15,6 +15,32 @@
 	],
 	"releases": [
 		{
+			"version": "r6",
+			"published": "2025-09-01T16:42:57Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r6/EEDI3-r6.7z",
+				"files": {
+					"EEDI3m.dll": [
+						"EEDI3m.dll",
+						"4d80493f4a5a4f7f1556a3566ab42191fda36c5b53d5c46c1f4ae0766044313c"
+					]
+				}
+			}
+		},
+		{
+			"version": "r5",
+			"published": "2025-09-01T05:28:31Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r5/EEDI3-r5.7z",
+				"files": {
+					"EEDI3m.dll": [
+						"EEDI3m.dll",
+						"df78abeeb95a0d5b727e731bffdcc760f59645fda22ec1cad74f5b5fdbabe5fb"
+					]
+				}
+			}
+		},
+		{
 			"version": "r4",
 			"published": "2018-12-11T13:15:23Z",
 			"win32": {
@@ -54,6 +80,19 @@
 					"EEDI3m.dll": [
 						"Win64/EEDI3m.dll",
 						"343f245944dfd55fcd9ca85313c071b1436e3ea0ef81e27aaf20c8eb22211bc6"
+					]
+				}
+			}
+		},
+		{
+			"version": "create-package",
+			"published": "",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r5/EEDI3-r5.7z",
+				"files": {
+					"EEDI3m.dll": [
+						"EEDI3m.dll",
+						"df78abeeb95a0d5b727e731bffdcc760f59645fda22ec1cad74f5b5fdbabe5fb"
 					]
 				}
 			}

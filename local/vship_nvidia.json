@@ -8,6 +8,19 @@
 	"namespace": "vship_nvidia",
 	"releases": [
 		{
+			"version": "v3.0.2-PreRelease",
+			"published": "2025-07-16T13:50:02Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v3.0.2-PreRelease/vship_AMD.dll",
+				"files": {
+					"vship_nvidia.dll": [
+						"vship_AMD.dll",
+						"95faba46bae4988aae6ccfee9ae12e0ff29a9133ff6dbc440dda4ea76a8a11e7"
+					]
+				}
+			}
+		},
+		{
 			"version": "v3.0.1",
 			"published": "2025-06-24T07:04:07Z",
 			"win64": {

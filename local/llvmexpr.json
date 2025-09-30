@@ -1,0 +1,158 @@
+{
+	"name": "llvmexpr",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "A VapourSynth filter for evaluating complex, per-pixel mathematical or logical expressions. It utilizes an LLVM-based JIT (Just-In-Time) compiler to translate expressions into native code. Feature-rich alternative to akarin.Expr.",
+	"doom9": "https://forum.doom9.org/showthread.php?t=186529",
+	"github": "https://github.com/yuygfgg/Vapoursynth-llvmexpr",
+	"identifier": "com.yuygfgg.llvmexpr",
+	"namespace": "llvmexpr",
+	"ignore": [
+		"R2"
+	],
+	"releases": [
+		{
+			"version": "R2.1",
+			"published": "2025-09-30T09:16:52Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R2.1/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"d0e10ff3602ada523e4a26c6d5a0d42754b6ccf45edae1e62cb895ff255967cf"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.10",
+			"published": "2025-09-25T14:19:37Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.10/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"51b71f80abc76b250d3ea38faabba9e568f79b3e6c708f1fc5cb553df451fb2c"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.9",
+			"published": "2025-09-24T00:46:03Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.9/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"d84a2ea93a90d7f5cd40c0d4ee9b4c42fed0cf99467326e0706446dfe3dac46b"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.8",
+			"published": "2025-09-23T14:27:02Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.8/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"e4fe1dedb6c96b332c5b70600fe505e4c33c81e75d737efb462cfc6350e543de"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.7",
+			"published": "2025-09-23T07:45:17Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.7/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"a8955c2c64520e01f48ebe24ab8c620697d50fd68e01ba40a25c7504a94d4d89"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.6",
+			"published": "2025-09-22T06:56:59Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.6/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"d55a254b126eece7c6980fc1a336302a802e2c1be551a70c6decaaedfd010e15"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.5",
+			"published": "2025-09-20T15:04:37Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.5/llvmexpr-windows-x64-static-llvm20.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"b9c5db146c680015e2a900ea2a5dd8d7180b1c5a1d7c6b2eb855a31d68df4625"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.4",
+			"published": "2025-09-20T14:07:09Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.4/llvmexpr-windows-x64-static-llvm20.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"72cdb2ba617059d370a78326b3b0e35c26fec198fa7f4055136a054889cc0521"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.3",
+			"published": "2025-09-19T02:23:22Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.3/llvmexpr-windows-x64-static-llvm20.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"b4acc8bfdd74d58c14bbe220cab25500c10485d5c6315bf6e2692060a5bdaa40"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.2",
+			"published": "2025-09-18T14:04:29Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.2/llvmexpr-windows-x64-static-llvm20.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"51a76bbf2ab30788226b585d5e1307f5b650f416c3518b54aa8c9ced201135c2"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.1",
+			"published": "2025-09-17T12:11:45Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R1.1/llvmexpr-windows-x64-static-llvm20.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"9cdd27bf32eeb8296283acda2f83455cb1bda327d6439dfc56635938d5674cbd"
+					]
+				}
+			}
+		}
+	]
+}

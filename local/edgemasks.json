@@ -1,0 +1,24 @@
+{
+	"name": "EdgeMasks",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Creates an edge mask using various operators",
+	"github": "https://github.com/HolyWu/VapourSynth-EdgeMasks",
+	"identifier": "com.holywu.edgemasks",
+	"namespace": "edgemasks",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2025-10-03T16:25:46Z",
+			"win64": {
+				"url": "https://github.com/HolyWu/VapourSynth-EdgeMasks/releases/download/r1/EdgeMasks-r1.7z",
+				"files": {
+					"EdgeMasks.dll": [
+						"EdgeMasks.dll",
+						"3757ca704f6d369503ccb28c4ec0e2157ca1c531e693bbb6316f9a0dee8687ab"
+					]
+				}
+			}
+		}
+	]
+}

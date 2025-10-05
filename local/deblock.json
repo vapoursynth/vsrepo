@@ -14,6 +14,19 @@
 	],
 	"releases": [
 		{
+			"version": "r7",
+			"published": "2025-10-04T14:20:17Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock/releases/download/r7/Deblock-r7.7z",
+				"files": {
+					"Deblock.dll": [
+						"Deblock.dll",
+						"137b36310acc209ee29489598acaba685c2998c8c4d2dae30c37ec7fa01ffb07"
+					]
+				}
+			}
+		},
+		{
 			"version": "r6.1",
 			"published": "2024-09-30T20:52:26Z",
 			"linux-glibc-x86_64": {

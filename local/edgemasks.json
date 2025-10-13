@@ -8,6 +8,45 @@
 	"namespace": "edgemasks",
 	"releases": [
 		{
+			"version": "r3.1",
+			"published": "2025-10-07T16:38:28Z",
+			"win64": {
+				"url": "https://github.com/HolyWu/VapourSynth-EdgeMasks/releases/download/r3.1/EdgeMasks-r3.1.7z",
+				"files": {
+					"EdgeMasks.dll": [
+						"EdgeMasks.dll",
+						"627f90a5704b272c24b5e6ca568c7a408de8ed5a576689be9a7332ef7c2cd34a"
+					]
+				}
+			}
+		},
+		{
+			"version": "r3",
+			"published": "2025-10-07T04:28:29Z",
+			"win64": {
+				"url": "https://github.com/HolyWu/VapourSynth-EdgeMasks/releases/download/r3/EdgeMasks-r3.7z",
+				"files": {
+					"EdgeMasks.dll": [
+						"EdgeMasks.dll",
+						"2ec4f02b3024bfc27ca1f53f634f32bc16fb84f624ffc9270fb3e5207e43337b"
+					]
+				}
+			}
+		},
+		{
+			"version": "r2",
+			"published": "2025-10-06T15:54:29Z",
+			"win64": {
+				"url": "https://github.com/HolyWu/VapourSynth-EdgeMasks/releases/download/r2/EdgeMasks-r2.7z",
+				"files": {
+					"EdgeMasks.dll": [
+						"EdgeMasks.dll",
+						"fa2a420a8a9a01901b8f8bc6ad283b063fe18df5afea287e29de4065a8411db1"
+					]
+				}
+			}
+		},
+		{
 			"version": "r1",
 			"published": "2025-10-03T16:25:46Z",
 			"win64": {

@@ -12,6 +12,32 @@
 	],
 	"releases": [
 		{
+			"version": "R3.1",
+			"published": "2025-10-22T07:29:54Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R3.1/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"59e7844d216c288e060fa0dcc0f438d3b2f066209f006c7941c6d70932e06286"
+					]
+				}
+			}
+		},
+		{
+			"version": "R3",
+			"published": "2025-10-17T15:04:38Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R3/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"1d0916f89084d1d195639335ae2dc5c49a97db47d794d3331860dd5ff8232ae6"
+					]
+				}
+			}
+		},
+		{
 			"version": "R2.3",
 			"published": "2025-10-03T15:46:15Z",
 			"win64": {

@@ -8,6 +8,19 @@
 	"namespace": "fftspectrum_rs",
 	"releases": [
 		{
+			"version": "v1.0.10",
+			"published": "2025-10-22T20:06:12Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-fftspectrum-rs/releases/download/v1.0.10/fftspectrum_rs-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"fftspectrum_rs.dll": [
+						"fftspectrum_rs.dll",
+						"05471977b7188bf8bb17874504206b710e8e0e862c2634c583de2f2a245aa387"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.0.9",
 			"published": "2025-09-08T22:18:01Z",
 			"win64": {

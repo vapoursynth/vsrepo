@@ -12,11 +12,11 @@
 			"version": "R14",
 			"published": "2025-10-27T07:19:49Z",
 			"win64": {
-				"url": "https://github.com/vapoursynth/bestsource/releases/download/R14/BestSource-R14.7z",
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R14/BestSource-R14-VS-only-ci.7z",
 				"files": {
-					"BestSource.dll": [
-						"BestSource.dll",
-						"297ff6755ea60a9c42a423295379f39d08882b68744a548b9b3415044e692eff"
+					"bestsource.dll": [
+						"bestsource.dll",
+						"8a1841ff671989de0d327cab67e5ef923d19cb4ea444c96d2e10921f05ef3bda"
 					]
 				}
 			}

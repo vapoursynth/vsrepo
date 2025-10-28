@@ -15,8 +15,8 @@
 				"url": "https://github.com/vapoursynth/bestsource/releases/download/R14/BestSource-R14.7z",
 				"files": {
 					"BestSource.dll": [
-						"bestsource.dll",
-						"8a1841ff671989de0d327cab67e5ef923d19cb4ea444c96d2e10921f05ef3bda"
+						"BestSource.dll",
+						"297ff6755ea60a9c42a423295379f39d08882b68744a548b9b3415044e692eff"
 					]
 				}
 			}

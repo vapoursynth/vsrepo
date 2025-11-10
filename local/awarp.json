@@ -1,0 +1,24 @@
+{
+	"name": "AWarp",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "AWarp filter modified from https://github.com/dubhater/vapoursynth-awarpsharp2",
+	"github": "https://github.com/HolyWu/VapourSynth-AWarp",
+	"identifier": "com.holywu.awarp",
+	"namespace": "awarp",
+	"releases": [
+		{
+			"version": "r1",
+			"published": "2025-11-09T17:08:36Z",
+			"win64": {
+				"url": "https://github.com/HolyWu/VapourSynth-AWarp/releases/download/r1/AWarp-r1.7z",
+				"files": {
+					"AWarp.dll": [
+						"AWarp.dll",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					]
+				}
+			}
+		}
+	]
+}

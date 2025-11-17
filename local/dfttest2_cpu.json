@@ -13,6 +13,19 @@
 	],
 	"releases": [
 		{
+			"version": "v9",
+			"published": "2025-09-06T07:43:29Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v9/vs-dfttest2-cpu-windows-v9.7z",
+				"files": {
+					"dfttest2_cpu.dll": [
+						"vs-dfttest2-cpu-windows-v9/dfttest2_cpu.dll",
+						"3113b704a8d5c1f25d11864358df85f139ce552b49f19ef8720288597a428486"
+					]
+				}
+			}
+		},
+		{
 			"version": "v8",
 			"published": "2025-08-22T11:13:07Z",
 			"win64": {

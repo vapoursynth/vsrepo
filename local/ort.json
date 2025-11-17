@@ -25,6 +25,35 @@
 	],
 	"releases": [
 		{
+			"version": "v15.14",
+			"published": "2025-11-08T02:41:21Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.14/VSORT-Windows-x64.v15.14.7z",
+				"files": {
+					"vsort.dll": [
+						"vsort.dll",
+						"4900b945681aa1ec07f16b4c8f8e87e58d69834ce027a522e5f9304f6049697d"
+					],
+					"DirectML.dll": [
+						"vsort/DirectML.dll",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					],
+					"onnxruntime.dll": [
+						"vsort/onnxruntime.dll",
+						"0b7b1c005268bb6c8c3b7a2248faa4cc993decda5e61385e2dc1b95cd61954d1"
+					],
+					"onnxruntime_providers_cuda.dll": [
+						"vsort/onnxruntime_providers_cuda.dll",
+						"fc6ba4c94f7b56c913c1b58bd4473e730054d51a8f6e1eb7bd73ac1d9e97e882"
+					],
+					"onnxruntime_providers_shared.dll": [
+						"vsort/onnxruntime_providers_shared.dll",
+						"4506a35c9084293c3258415867b14af53ea7e04e081f8fbda3d70d815e8471ea"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.13",
 			"published": "2025-07-24T02:08:20Z",
 			"win64": {

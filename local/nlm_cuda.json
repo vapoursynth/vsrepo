@@ -11,6 +11,19 @@
 	],
 	"releases": [
 		{
+			"version": "v3",
+			"published": "2025-09-06T07:52:11Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-nlm-cuda/releases/download/v3/vs-nlm-cuda-windows-v3.7z",
+				"files": {
+					"vsnlm_cuda.dll": [
+						"vs-nlm-cuda-windows-v3/vsnlm_cuda.dll",
+						"37fbbb0ebcf0cbda46662031adc32871d07e552a0e35d181f57bad0d17af90b6"
+					]
+				}
+			}
+		},
+		{
 			"version": "v2",
 			"published": "2025-08-22T11:29:24Z",
 			"win64": {

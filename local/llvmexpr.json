@@ -12,6 +12,19 @@
 	],
 	"releases": [
 		{
+			"version": "R3.2",
+			"published": "2025-10-30T15:10:57Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-llvmexpr/releases/download/R3.2/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"1ce5c69c0ba8199cc4940481bf664babca81d3a55dc2235bcf7031d122d905ce"
+					]
+				}
+			}
+		},
+		{
 			"version": "R3.1",
 			"published": "2025-10-22T07:29:54Z",
 			"win64": {

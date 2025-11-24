@@ -9,6 +9,19 @@
 	"namespace": "bs",
 	"releases": [
 		{
+			"version": "R15",
+			"published": "2025-11-20T07:14:43Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R15/BestSource-R15-VS-only-ci.7z",
+				"files": {
+					"bestsource.dll": [
+						"bestsource.dll",
+						"fa4f2d71877b800ee92a0b090dc606eecbd16f2bb68d00f90337424276cb7e25"
+					]
+				}
+			}
+		},
+		{
 			"version": "R14",
 			"published": "2025-10-27T07:19:49Z",
 			"win64": {

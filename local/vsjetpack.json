@@ -9,6 +9,14 @@
 	"wheelname": "vsjetpack",
 	"releases": [
 		{
+			"version": "1.0.0rc1",
+			"published": "2025-11-21T23:12:42.165452Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/85/5d/3d75b81fe13de60e54daac754edf5aff903118df54d5c516d50f62760bac/vsjetpack-1.0.0rc1-py3-none-any.whl",
+				"hash": "4d0ca39b84ddd613d60e70f4b0cd0bae7c0fc7b8cbbf7cf4ebdc407d58bb4bf3"
+			}
+		},
+		{
 			"version": "0.8.5",
 			"published": "2025-10-26T18:41:07.539718Z",
 			"wheel": {

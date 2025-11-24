@@ -12,6 +12,19 @@
 	],
 	"releases": [
 		{
+			"version": "R3.3",
+			"published": "2025-11-20T05:02:30Z",
+			"win64": {
+				"url": "https://github.com/Sunflower-Dolls/Vapoursynth-llvmexpr/releases/download/R3.3/llvmexpr-windows-x64-static-llvm21.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"6b21be2e2f92cfe7764851ae18ee048169505027239925a745ef94d63c054ec9"
+					]
+				}
+			}
+		},
+		{
 			"version": "R3.2",
 			"published": "2025-10-30T15:10:57Z",
 			"win64": {

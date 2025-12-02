@@ -8,6 +8,19 @@
 	"namespace": "vship_nvidia",
 	"releases": [
 		{
+			"version": "v4.0.1",
+			"published": "2025-11-27T16:11:41Z",
+			"win64": {
+				"url": "https://github.com/Line-fr/Vship/releases/download/v4.0.1/libvship_NVIDIA.dll",
+				"files": {
+					"vship_nvidia.dll": [
+						"libvship_NVIDIA.dll",
+						"107a9728de30859652ae2e7ce3c4dff4402eddd4fb2f33437d1bc9c05f16a2c3"
+					]
+				}
+			}
+		},
+		{
 			"version": "v4.0.0",
 			"published": "2025-11-18T11:46:21Z",
 			"win64": {

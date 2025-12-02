@@ -8,6 +8,19 @@
 	"namespace": "edgemasks",
 	"releases": [
 		{
+			"version": "r3.2",
+			"published": "2025-11-30T01:53:05Z",
+			"win64": {
+				"url": "https://github.com/HolyWu/VapourSynth-EdgeMasks/releases/download/r3.2/EdgeMasks-r3.2.7z",
+				"files": {
+					"EdgeMasks.dll": [
+						"EdgeMasks.dll",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					]
+				}
+			}
+		},
+		{
 			"version": "r3.1",
 			"published": "2025-10-07T16:38:28Z",
 			"win64": {

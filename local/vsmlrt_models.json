@@ -31,15 +31,15 @@
 				"files": {
 					"models/RealESRGANv2/RealESRGANv2-animevideo-xsx2.onnx": [
 						"models/RealESRGANv2/RealESRGANv2-animevideo-xsx2.onnx",
-						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+						"6fad590f96df553a5cc348a9c5129e7874504a7dcd414e4a15fb0b281fca7e0c"
 					],
 					"models/RealESRGANv2/RealESRGANv2-animevideo-xsx4.onnx": [
 						"models/RealESRGANv2/RealESRGANv2-animevideo-xsx4.onnx",
-						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+						"414de3a5da4c56652c99f3bc0b960910e3561835a6c7a9cca546475bc4792158"
 					],
 					"models/RealESRGANv2/realesr-animevideov3.onnx": [
 						"models/RealESRGANv2/realesr-animevideov3.onnx",
-						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+						"58425bdf2a28df7109aeefdc94d1b7366eac85414f6cd6f2fba41259f9d3307f"
 					],
 					"models/cugan/pro-conservative-up2x.onnx": [
 						"models/cugan/pro-conservative-up2x.onnx",

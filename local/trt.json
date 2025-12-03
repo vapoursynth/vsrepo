@@ -15,8 +15,7 @@
 		"io.github.amusementclub.vsmlrt_script",
 		"io.github.amusementclub.vsmlrt_models",
 		"io.github.amusementclub.vsmlrt_ext_models",
-		"io.github.amusementclub.vsmlrt_contrib_models",
-		"io.github.amusementclub.vsmlrt_cuda_runtime"
+		"io.github.amusementclub.vsmlrt_contrib_models"
 	],
 	"ignore": [
 		"model-20211209",

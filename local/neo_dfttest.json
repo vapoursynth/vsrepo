@@ -13,6 +13,50 @@
 	],
 	"releases": [
 		{
+			"version": "r11",
+			"published": "2025-12-07T00:55:53Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest/releases/download/r11/neo_DFTTest-r11.7z",
+				"files": {
+					"neo-dfttest.dll": [
+						"x86/neo-dfttest.dll",
+						"8dc11975b415b33aa45f3ff69f45ab44a7f376c468d3adf3b0ba276d4ef4bc68"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest/releases/download/r11/neo_DFTTest-r11.7z",
+				"files": {
+					"neo-dfttest.dll": [
+						"x64/neo-dfttest.dll",
+						"acfe8d60204e12c0e3fcb19614d1b6b8222a1879b128ae3b3379aa640676bcbc"
+					]
+				}
+			}
+		},
+		{
+			"version": "r10",
+			"published": "2025-12-05T03:53:04Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest/releases/download/r10/neo_DFTTest-r10.7z",
+				"files": {
+					"neo-dfttest.dll": [
+						"x86/neo-dfttest.dll",
+						"8548f3a9ced8b8295c20ae21dfdeb8e50d06215b1ee1383e8e6d0c74797453da"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest/releases/download/r10/neo_DFTTest-r10.7z",
+				"files": {
+					"neo-dfttest.dll": [
+						"x64/neo-dfttest.dll",
+						"6ce9c7c6e0f59f2ab9c6de791b73342d312db3518dc6da057adcdd2697285ee1"
+					]
+				}
+			}
+		},
+		{
 			"version": "r9",
 			"published": "2025-12-01T01:02:31Z",
 			"win32": {

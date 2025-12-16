@@ -8,6 +8,19 @@
 	"namespace": "vszip",
 	"releases": [
 		{
+			"version": "R11",
+			"published": "2025-12-14T16:56:50Z",
+			"win64": {
+				"url": "https://github.com/dnjulek/vapoursynth-zip/releases/download/R11/vapoursynth-zip-r11-windows-x86_64.zip",
+				"files": {
+					"vszip.dll": [
+						"vszip.dll",
+						"aa6d916baec38963080e0479030f1427652eeb3f2e9f7197cb7cb382bc1c6c39"
+					]
+				}
+			}
+		},
+		{
 			"version": "R10",
 			"published": "2025-09-21T23:30:32Z",
 			"win64": {

@@ -8,6 +8,19 @@
 	"namespace": "cambi",
 	"releases": [
 		{
+			"version": "v1.1.4",
+			"published": "2025-12-22T15:09:51Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-cambi/releases/download/v1.1.4/cambi-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"cambi.dll": [
+						"cambi.dll",
+						"4b0184607855f5534348782f12bb56a8ebf4ce3c7a90efdddc9003944c3d6840"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.1.3",
 			"published": "2025-03-27T15:59:05Z",
 			"win64": {

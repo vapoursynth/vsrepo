@@ -12,6 +12,32 @@
 	],
 	"releases": [
 		{
+			"version": "R4.3",
+			"published": "2025-12-19T02:07:41Z",
+			"win64": {
+				"url": "https://github.com/Sunflower-Dolls/Vapoursynth-llvmexpr/releases/download/R4.3/llvmexpr-windows-x64-static-llvm21-static-shaderc.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"f5875f7ff1fa53c89ea05c6fd03237f79cb07114f1a081b5f0ffcb119d2596b0"
+					]
+				}
+			}
+		},
+		{
+			"version": "R4.2",
+			"published": "2025-12-16T13:55:50Z",
+			"win64": {
+				"url": "https://github.com/Sunflower-Dolls/Vapoursynth-llvmexpr/releases/download/R4.2/llvmexpr-windows-x64-static-llvm21-static-shaderc.zip",
+				"files": {
+					"libllvmexpr.dll": [
+						"libllvmexpr.dll",
+						"75a402fdc7406719e82f49f6bf073ca9508496191d1092b13fc8b13c787f8ec0"
+					]
+				}
+			}
+		},
+		{
 			"version": "R4.1",
 			"published": "2025-12-15T11:56:56Z",
 			"win64": {

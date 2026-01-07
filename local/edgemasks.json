@@ -18,6 +18,33 @@
 						"2f94f8c26ad41f06b304b8dbeb2c670d6756c12b093f38ee6c44c3c92a8ac280"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.edgemasks/r3.2/linux-glibc-x86_64/2026-01-07T00.36.31%2B00.00Z/EdgeMasks-r3.2-linux-glibc-x86_64.zip",
+				"files": {
+					"edgemasks.so": [
+						"edgemasks.so",
+						"683623df4e51bbd1542bb236bc4d83ddb2d3952e28b54736f94c7379ef5f12f8"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.edgemasks/r3.2/darwin-x86_64/2026-01-07T00.39.18%2B00.00Z/EdgeMasks-r3.2-darwin-x86_64.zip",
+				"files": {
+					"edgemasks.dylib": [
+						"edgemasks.dylib",
+						"fbbaf62d5bbc43b2d0e231969d0e2e9de480077217da4b945236eec3984c3ccc"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.edgemasks/r3.2/darwin-aarch64/2026-01-07T00.39.00%2B00.00Z/EdgeMasks-r3.2-darwin-aarch64.zip",
+				"files": {
+					"edgemasks.dylib": [
+						"edgemasks.dylib",
+						"02c18d252e9a2b155074bba3200abdf12bb73aedab18304adc665337d1dc1ab6"
+					]
+				}
 			}
 		},
 		{

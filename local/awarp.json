@@ -18,6 +18,33 @@
 						"c101ba7d8a5e3f311cc43148f0b6b63916b2d4a9437cd30203dda867ef4d15c2"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.awarp/r2/linux-glibc-x86_64/2026-01-07T00.36.16%2B00.00Z/AWarp-r2-linux-glibc-x86_64.zip",
+				"files": {
+					"awarp.so": [
+						"awarp.so",
+						"ab6c69592be50a0617cc94507115935471c1f275fba37956fc35285ed4b6c175"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.awarp/r2/darwin-x86_64/2026-01-07T00.39.01%2B00.00Z/AWarp-r2-darwin-x86_64.zip",
+				"files": {
+					"awarp.dylib": [
+						"awarp.dylib",
+						"fda6cff5c305abc938a1be5557217fa48f1363b33d2d05d8eac7b02834f99b0f"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.awarp/r2/darwin-aarch64/2026-01-07T00.38.49%2B00.00Z/AWarp-r2-darwin-aarch64.zip",
+				"files": {
+					"awarp.dylib": [
+						"awarp.dylib",
+						"3b9d5c7e32625a80175a151751894fac67e8c7b021e1158e31b3603a14254cad"
+					]
+				}
 			}
 		},
 		{

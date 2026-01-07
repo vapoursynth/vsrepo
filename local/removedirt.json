@@ -34,6 +34,33 @@
 						"bca297bd8120c43521c966dc69691b50ace8d6d97bef8b6a4e88551d9e513290"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.removedirt/v1.1/linux-glibc-x86_64/2026-01-07T00.36.36%2B00.00Z/RemoveDirt-v1.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libremovedirt.so": [
+						"libremovedirt.so",
+						"51c773f457a5433258b697aac52f73ac813dd2c4694de04882fda50594741f79"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.removedirt/v1.1/darwin-x86_64/2026-01-07T00.39.26%2B00.00Z/RemoveDirt-v1.1-darwin-x86_64.zip",
+				"files": {
+					"libremovedirt.dylib": [
+						"libremovedirt.dylib",
+						"c24e510a35c0f6cd266c84f8ca078fff68f6d23b7b18cf46ed1a3e4db56a8c15"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.removedirt/v1.1/darwin-aarch64/2026-01-07T00.39.06%2B00.00Z/RemoveDirt-v1.1-darwin-aarch64.zip",
+				"files": {
+					"libremovedirt.dylib": [
+						"libremovedirt.dylib",
+						"5fa82f7b204203caa9d935867ff3699102281fc069be07e2846d03fb215ed700"
+					]
+				}
 			}
 		},
 		{

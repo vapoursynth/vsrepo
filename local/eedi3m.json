@@ -15,6 +15,19 @@
 	],
 	"releases": [
 		{
+			"version": "r8",
+			"published": "2025-12-29T10:14:46Z",
+			"win64": {
+				"url": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI3/releases/download/r8/EEDI3-r8.7z",
+				"files": {
+					"EEDI3m.dll": [
+						"EEDI3m.dll",
+						"8fc1a433112707164c1a87d2c9e78709822b7ca89325f0d691d36337f6bf9051"
+					]
+				}
+			}
+		},
+		{
 			"version": "r7",
 			"published": "2025-09-14T15:07:18Z",
 			"win64": {

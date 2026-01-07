@@ -9,6 +9,19 @@
 	"namespace": "bs",
 	"releases": [
 		{
+			"version": "R16",
+			"published": "2026-01-07T18:16:12Z",
+			"win64": {
+				"url": "https://github.com/vapoursynth/bestsource/releases/download/R16/BestSource-R16-VS-only-ci.7z",
+				"files": {
+					"bestsource.dll": [
+						"bestsource.dll",
+						"9ea0a9fa7474390244ad2cf880789f7ab887ef304bdc0ee7d139f04c850c2868"
+					]
+				}
+			}
+		},
+		{
 			"version": "R15",
 			"published": "2025-11-20T07:14:43Z",
 			"win64": {
@@ -17,6 +30,33 @@
 					"bestsource.dll": [
 						"bestsource.dll",
 						"fa4f2d71877b800ee92a0b090dc606eecbd16f2bb68d00f90337424276cb7e25"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R15/linux-glibc-x86_64/2026-01-06T23.35.08%2B00.00Z/BestSource-R15-linux-glibc-x86_64.zip",
+				"files": {
+					"bestsource.so": [
+						"bestsource.so",
+						"4a2e0655cddbca7bb4982d4b48007370ba3001003b6a4637991fc4a68b0ae092"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R15/darwin-x86_64/2026-01-06T23.50.49%2B00.00Z/BestSource-R15-darwin-x86_64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"9e1bed5229916f7e75f6491d91852fae56bb4ca2bee7a1cea594a2abb602888b"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R15/darwin-aarch64/2026-01-06T23.39.50%2B00.00Z/BestSource-R15-darwin-aarch64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"2a3bb3061a9697b5dd3be4c131c1cb9c489dbd9b2c09f3b45ef221759bf18fab"
 					]
 				}
 			}

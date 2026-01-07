@@ -9,6 +9,32 @@
 	"namespace": "zscene",
 	"releases": [
 		{
+			"version": "0.3",
+			"published": "2025-12-30T19:21:30Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zscene/releases/download/0.3/zscene-x86_64-windows.zip",
+				"files": {
+					"zscene.dll": [
+						"zscene.dll",
+						"ec472e69f0e9334636e6ed9fdbd9fc3245df649e79311ca5c791c6b68a96ee63"
+					]
+				}
+			}
+		},
+		{
+			"version": "0.2",
+			"published": "2025-12-29T01:53:46Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zscene/releases/download/0.2/zscene-x86_64-windows.zip",
+				"files": {
+					"zscene.dll": [
+						"zscene.dll",
+						"5fb18967ce3431667ca8c2ab87cc600c09cff951771532e897efb72fa1384ce3"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.1",
 			"published": "2025-06-02T19:47:19Z",
 			"win64": {

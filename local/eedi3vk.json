@@ -8,6 +8,32 @@
 	"namespace": "eedi3vk",
 	"releases": [
 		{
+			"version": "R1.2",
+			"published": "2025-12-29T11:15:22Z",
+			"win64": {
+				"url": "https://github.com/Sunflower-Dolls/Vapoursynth-EEDI3VK/releases/download/R1.2/release-windows-amd64.zip",
+				"files": {
+					"libeedi3vk.dll": [
+						"release-windows-amd64/libeedi3vk.dll",
+						"35f0db97cdff1ca2061a41c965ec373e6dcdf00b2b664884e8c7a205cf90ba0e"
+					]
+				}
+			}
+		},
+		{
+			"version": "R1.1",
+			"published": "2025-12-29T10:39:52Z",
+			"win64": {
+				"url": "https://github.com/Sunflower-Dolls/Vapoursynth-EEDI3VK/releases/download/R1.1/release-windows-amd64.zip",
+				"files": {
+					"libeedi3vk.dll": [
+						"release-windows-amd64/libeedi3vk.dll",
+						"38306e7fbfe88fe48ab35d80ff8c02d678a4eb5cc13801d82ec13b8ab274a61e"
+					]
+				}
+			}
+		},
+		{
 			"version": "R1",
 			"published": "2025-12-29T06:08:50Z",
 			"win64": {

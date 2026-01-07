@@ -24,6 +24,33 @@
 						"4fa23e644d51cf601f2f719938c7752c45b1f5cd0d84dd2559bbf6f42ea8d771"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.deblock/r7.1/linux-glibc-x86_64/2026-01-06T23.35.16%2B00.00Z/Deblock-r7.1-linux-glibc-x86_64.zip",
+				"files": {
+					"libdeblock.so": [
+						"libdeblock.so",
+						"1a159e889fcbfbd5ab203eebdd91702b1e24e314522cc033ca32019cf7bc09cf"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.deblock/r7.1/darwin-x86_64/2026-01-06T23.51.04%2B00.00Z/Deblock-r7.1-darwin-x86_64.zip",
+				"files": {
+					"libdeblock.dylib": [
+						"libdeblock.dylib",
+						"d21ba667e130df1b19e697480ba3c6d112f934e92ba6feef5c9a25cf30c24946"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.deblock/r7.1/darwin-aarch64/2026-01-06T23.40.01%2B00.00Z/Deblock-r7.1-darwin-aarch64.zip",
+				"files": {
+					"libdeblock.dylib": [
+						"libdeblock.dylib",
+						"1ce9a1de3b9e29defe433304f06eb6f838a44d626bde8fb4723769105e8120eb"
+					]
+				}
 			}
 		},
 		{

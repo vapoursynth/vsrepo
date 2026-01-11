@@ -12,6 +12,37 @@
 	],
 	"releases": [
 		{
+			"version": "3bd542a",
+			"published": "2026-01-10T23:46:07Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/xxx.abc.znedi3/3bd542a/linux-glibc-x86_64/2026-01-10T23.46.05%2B00.00Z/ZNEDI3-3bd542a-linux-glibc-x86_64.zip",
+				"files": {
+					"libvsznedi3.so": [
+						"libvsznedi3.so",
+						"5c5d68f67cedcbf6f3dd38d6d06b7d97d2ec8af699ee33bc30c660ca471f3554"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/xxx.abc.znedi3/3bd542a/darwin-x86_64/2026-01-10T23.47.38%2B00.00Z/ZNEDI3-3bd542a-darwin-x86_64.zip",
+				"files": {
+					"libvsznedi3.dylib": [
+						"libvsznedi3.dylib",
+						"9b868bd7384313a276011f273b51080026daddec062ea66268facc6f721a9569"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/xxx.abc.znedi3/3bd542a/darwin-aarch64/2026-01-10T23.46.58%2B00.00Z/ZNEDI3-3bd542a-darwin-aarch64.zip",
+				"files": {
+					"libvsznedi3.dylib": [
+						"libvsznedi3.dylib",
+						"6283ebc71072a1f3d1430993d9133822e6735da1b5e1ae83ff1033f1e6ee25a6"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2.1",
 			"published": "2021-09-22T01:45:11Z",
 			"win64": {

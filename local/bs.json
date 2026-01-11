@@ -19,6 +19,33 @@
 						"9ea0a9fa7474390244ad2cf880789f7ab887ef304bdc0ee7d139f04c850c2868"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R16/linux-glibc-x86_64/2026-01-10T19.01.50%2B00.00Z/BestSource-R16-linux-glibc-x86_64.zip",
+				"files": {
+					"bestsource.so": [
+						"bestsource.so",
+						"1e04f8feb03d4f658ad1e07698b39e4d22b43fa5539c41faef3ddd71caabc0c7"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R16/darwin-x86_64/2026-01-10T19.07.30%2B00.00Z/BestSource-R16-darwin-x86_64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"1edee264672ad84c6bba41c40989424f17ce852f92ce5edf433ef3d43689ece4"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.bestsource/R16/darwin-aarch64/2026-01-10T18.55.40%2B00.00Z/BestSource-R16-darwin-aarch64.zip",
+				"files": {
+					"bestsource.dylib": [
+						"bestsource.dylib",
+						"185e2b2dd93086aa0d858c9d56ce61a8ae6279d95da6fecc7e4f2681a3266ccd"
+					]
+				}
 			}
 		},
 		{

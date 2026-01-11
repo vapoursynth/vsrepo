@@ -8,6 +8,19 @@
 	"namespace": "vship_amd",
 	"releases": [
 		{
+			"version": "v4.1.0",
+			"published": "2026-01-11T00:07:05Z",
+			"win64": {
+				"url": "https://codeberg.org/Line-fr/Vship/releases/download/v4.1.0/libvship_AMD.zip",
+                "files": {
+                    "libvship_AMD.dll": [
+                        "libvship_AMD.dll",
+                        "b2bbcd161475d90f070dc6385e434772fcbe7441672e653c29f47800d916014e"
+                    ]
+                }
+			}
+		},
+		{
 			"version": "v4.0.2",
 			"published": "2025-12-15T15:55:24Z",
 			"win64": {

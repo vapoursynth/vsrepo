@@ -1,0 +1,24 @@
+{
+	"name": "ATWT",
+	"type": "VSPlugin",
+	"category": "Other",
+	"description": "Implements the À Trous Wavelet Transform for frequency separation. It decomposes a video clip into multiple frequency layers (Detail) and a residual layer (Base).",
+	"github": "https://github.com/yuygfgg/Vapoursynth-ATWT",
+	"identifier": "com.yuygfgg.atwt",
+	"namespace": "atwt",
+	"releases": [
+		{
+			"version": "R1",
+			"published": "2026-01-18T13:28:30Z",
+			"win64": {
+				"url": "https://github.com/yuygfgg/Vapoursynth-ATWT/releases/download/R1/release-windows-amd64.zip",
+				"files": {
+					"atwt.dll": [
+						"atwt.dll",
+						"b9dc8852a21928d0aae1141b8e7444daec1afbda578f8171b03faf16f2a03d28"
+					]
+				}
+			}
+		}
+	]
+}

@@ -8,6 +8,19 @@
 	"namespace": "dfttest2_cuda_runtime",
 	"releases": [
 		{
+			"version": "v10",
+			"published": "2026-01-20T01:56:38Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v10/cufft-windows-v10.7z",
+				"files": {
+					"vsmlrt-cuda/cufft64_12.dll": [
+						"vsmlrt-cuda/cufft64_12.dll",
+						"7b437a41a6e45803079aae38d794f5aa10012dcc2194884d9c29551bb369c768"
+					]
+				}
+			}
+		},
+		{
 			"version": "v9",
 			"published": "2025-09-06T07:43:29Z",
 			"win64": {

@@ -18,6 +18,42 @@
 						"d44b01a94980d7d6e5ae1f6d8640812bb6ac2ae13067098bdaa39a4b5aefee83"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.hysteresis/v1.0.6/linux-glibc-x86_64/2026-01-18T16.40.59%2B00.00Z/Hysteresis-v1.0.6-linux-glibc-x86_64.zip",
+				"files": {
+					"libhysteresis.so": [
+						"libhysteresis.so",
+						"014a28aa5c8dcb521b4e80c549ad4cdc55d044ee09afb144d85b2b9a61dbd33c"
+					]
+				}
+			},
+			"linux-glibc-x86_64-v3": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.hysteresis/v1.0.6/linux-glibc-x86_64-v3/2026-01-18T16.40.54%2B00.00Z/Hysteresis-v1.0.6-linux-glibc-x86_64-v3.zip",
+				"files": {
+					"libhysteresis.so": [
+						"libhysteresis.so",
+						"9e20a6235617bca9e92042dd17cb0a43a8f75a9ab98e537367cee5a452d340fb"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.hysteresis/v1.0.6/darwin-x86_64/2026-01-18T16.41.21%2B00.00Z/Hysteresis-v1.0.6-darwin-x86_64.zip",
+				"files": {
+					"libhysteresis.dylib": [
+						"libhysteresis.dylib",
+						"d9655739bdb2221e2bfc903a83b043409996ce968221918b62b5234aa3ee75b9"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.hysteresis/v1.0.6/darwin-aarch64/2026-01-18T16.40.57%2B00.00Z/Hysteresis-v1.0.6-darwin-aarch64.zip",
+				"files": {
+					"libhysteresis.dylib": [
+						"libhysteresis.dylib",
+						"1e30f69adbfd6edb097e0f5e7c376d35ac98f9b047a1c478c4cc908dba5b19f1"
+					]
+				}
 			}
 		},
 		{

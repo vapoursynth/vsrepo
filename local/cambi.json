@@ -18,6 +18,42 @@
 						"4b0184607855f5534348782f12bb56a8ebf4ce3c7a90efdddc9003944c3d6840"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.cambi/v1.1.4/linux-glibc-x86_64/2026-01-18T01.18.59%2B00.00Z/cambi-v1.1.4-linux-glibc-x86_64.zip",
+				"files": {
+					"libcambi.so": [
+						"libcambi.so",
+						"1531289ea6aa0e4212ed151ead2b8e4b5c073cbe5f5d9d41c6d02b3f266976a2"
+					]
+				}
+			},
+			"linux-glibc-x86_64-v3": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.cambi/v1.1.4/linux-glibc-x86_64-v3/2026-01-18T01.20.13%2B00.00Z/cambi-v1.1.4-linux-glibc-x86_64-v3.zip",
+				"files": {
+					"libcambi.so": [
+						"libcambi.so",
+						"0490256eab39899764be742c35eb6b9f422264c76fb047646e38e1ab47884da9"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.cambi/v1.1.4/darwin-x86_64/2026-01-18T01.34.10%2B00.00Z/cambi-v1.1.4-darwin-x86_64.zip",
+				"files": {
+					"libcambi.dylib": [
+						"libcambi.dylib",
+						"6eb06b2b6babc7df85531df301c2ff73aae74cf008761b5ce31a483d12183b00"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.cambi/v1.1.4/darwin-aarch64/2026-01-18T01.32.00%2B00.00Z/cambi-v1.1.4-darwin-aarch64.zip",
+				"files": {
+					"libcambi.dylib": [
+						"libcambi.dylib",
+						"a69c6e8a3897314b942ef062fb3474ea2249bf4b77cdcbfa219fe07bc20b3a50"
+					]
+				}
 			}
 		},
 		{

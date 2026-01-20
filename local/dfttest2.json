@@ -16,6 +16,19 @@
 	],
 	"releases": [
 		{
+			"version": "v10",
+			"published": "2026-01-20T01:56:38Z",
+			"script": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v10/dfttest2.py",
+				"files": {
+					"dfttest2.py": [
+						"dfttest2.py",
+						"dc235a7b4c6a5e57ea1f0573e3743fb2d995a6709f859720d7456fe254a79cd4"
+					]
+				}
+			}
+		},
+		{
 			"version": "v9",
 			"published": "2025-09-06T07:43:29Z",
 			"script": {

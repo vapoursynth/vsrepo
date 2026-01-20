@@ -18,6 +18,42 @@
 						"a139ecc1e89166f5fba55c34c754461a65d3351da8460efd1ab28dc320db770b"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/ng.opusga.bore/v1.0.0/linux-glibc-x86_64/2026-01-17T03.52.15%2B00.00Z/bore-v1.0.0-linux-glibc-x86_64.zip",
+				"files": {
+					"libbore.so": [
+						"libbore.so",
+						"292aabb7edcc7a73e3773992ce99c837617fbba576e14b9ffe97548ec61e2b07"
+					]
+				}
+			},
+			"linux-glibc-x86_64-v3": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/ng.opusga.bore/v1.0.0/linux-glibc-x86_64-v3/2026-01-17T03.53.59%2B00.00Z/bore-v1.0.0-linux-glibc-x86_64-v3.zip",
+				"files": {
+					"libbore.so": [
+						"libbore.so",
+						"1cbbef20664ede2f010ad885dccba3ebf442e60760c21229efb58b9abc32aaa4"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/ng.opusga.bore/v1.0.0/darwin-x86_64/2026-01-17T04.05.02%2B00.00Z/bore-v1.0.0-darwin-x86_64.zip",
+				"files": {
+					"libbore.dylib": [
+						"libbore.dylib",
+						"a88b7b1ad2e37bf5d54ebd8838736b08bb20a532d34d0fb912cfd9d26ab66956"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/ng.opusga.bore/v1.0.0/darwin-aarch64/2026-01-17T04.01.36%2B00.00Z/bore-v1.0.0-darwin-aarch64.zip",
+				"files": {
+					"libbore.dylib": [
+						"libbore.dylib",
+						"1edb6cc5f3220f1a3d773fc4ba8a3be7bec18b063e149fa6721973e873b87e9b"
+					]
+				}
 			}
 		},
 		{

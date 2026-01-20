@@ -38,6 +38,15 @@
 						"d925c3f25c0ec6d4f102b0248b8706cb309e99f580937de234e21c60c2512697"
 					]
 				}
+			},
+			"linux-glibc-x86_64-v3": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.vapoursynth.removegrainvs/git-89ca38a/linux-glibc-x86_64-v3/2026-01-12T12.48.55%2B00.00Z/RemoveGrain-git-89ca38a-linux-glibc-x86_64-v3.zip",
+				"files": {
+					"libremovegrain.so": [
+						"libremovegrain.so",
+						"a31f41a5cf12444e70266ce8c6a14551c484dad4dd9d5959b9a4626df3b5c534"
+					]
+				}
 			}
 		},
 		{

@@ -18,6 +18,42 @@
 						"05471977b7188bf8bb17874504206b710e8e0e862c2634c583de2f2a245aa387"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.fftspectrum_rs/v1.0.10/linux-glibc-x86_64/2026-01-18T16.40.44%2B00.00Z/FFTSpectrum-rs-v1.0.10-linux-glibc-x86_64.zip",
+				"files": {
+					"libfftspectrum_rs.so": [
+						"libfftspectrum_rs.so",
+						"4ab5868c7d2d7a82581816df60e81534acac6338c1bd707519125b431959089d"
+					]
+				}
+			},
+			"linux-glibc-x86_64-v3": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.fftspectrum_rs/v1.0.10/linux-glibc-x86_64-v3/2026-01-18T16.40.39%2B00.00Z/FFTSpectrum-rs-v1.0.10-linux-glibc-x86_64-v3.zip",
+				"files": {
+					"libfftspectrum_rs.so": [
+						"libfftspectrum_rs.so",
+						"ae8cc6edf8e596cf18f1225b99e9534cf495a74505494aae8ef56d5f2fc8cf92"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.fftspectrum_rs/v1.0.10/darwin-x86_64/2026-01-18T16.40.56%2B00.00Z/FFTSpectrum-rs-v1.0.10-darwin-x86_64.zip",
+				"files": {
+					"libfftspectrum_rs.dylib": [
+						"libfftspectrum_rs.dylib",
+						"3eac588c159e190fa6e77ab22a44d2e7746b08a813b806daac8488e125f41abf"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/sgt.fftspectrum_rs/v1.0.10/darwin-aarch64/2026-01-18T16.40.38%2B00.00Z/FFTSpectrum-rs-v1.0.10-darwin-aarch64.zip",
+				"files": {
+					"libfftspectrum_rs.dylib": [
+						"libfftspectrum_rs.dylib",
+						"9b3785f72e8b17eed5953593050f7554ffdbe7378c96054ac144e42978528467"
+					]
+				}
 			}
 		},
 		{

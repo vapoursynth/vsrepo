@@ -17,6 +17,23 @@
 	],
 	"releases": [
 		{
+			"version": "v10",
+			"published": "2026-01-20T01:56:38Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-dfttest2/releases/download/v10/vs-dfttest2-cuda-windows-v10.7z",
+				"files": {
+					"dfttest2_cuda.dll": [
+						"vs-dfttest2-cuda-windows-v10/dfttest2_cuda.dll",
+						"fa5569350f9c4e5d4c4442ed7fd3802ab0a0d5c600d383f0fc2433e695a405cd"
+					],
+					"dfttest2_nvrtc.dll": [
+						"vs-dfttest2-cuda-windows-v10/dfttest2_nvrtc.dll",
+						"14ed08734804461be3db0ebcd20f4fccf4c75f032a4c2fb63a68a1de50f4059a"
+					]
+				}
+			}
+		},
+		{
 			"version": "v9",
 			"published": "2025-09-06T07:43:29Z",
 			"win64": {

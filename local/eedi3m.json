@@ -25,6 +25,33 @@
 						"8fc1a433112707164c1a87d2c9e78709822b7ca89325f0d691d36337f6bf9051"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.eedi3/r8/linux-glibc-x86_64/2026-01-15T20.47.25%2B00.00Z/EEDI3m-r8-linux-glibc-x86_64.zip",
+				"files": {
+					"libeedi3m.so": [
+						"libeedi3m.so",
+						"d8cdb86be7e77d9872fc19ee7468da18a72831adcdd743483fdc75a497564156"
+					]
+				}
+			},
+			"linux-glibc-x86_64-v3": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.eedi3/r8/linux-glibc-x86_64-v3/2026-01-15T20.49.39%2B00.00Z/EEDI3m-r8-linux-glibc-x86_64-v3.zip",
+				"files": {
+					"libeedi3m.so": [
+						"libeedi3m.so",
+						"c62ae34507683cb54c3b8a6f73461bd27175b5d6afa6e0b66941105f1ff9fbd9"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.eedi3/r8/darwin-x86_64/2026-01-15T20.48.25%2B00.00Z/EEDI3m-r8-darwin-x86_64.zip",
+				"files": {
+					"libeedi3m.dylib": [
+						"libeedi3m.dylib",
+						"b13ea165cbf9216f64902a3ac12aef617feb7cab230083c84d51b12558a6886b"
+					]
+				}
 			}
 		},
 		{

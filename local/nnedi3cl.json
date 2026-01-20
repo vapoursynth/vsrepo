@@ -31,6 +31,15 @@
 						"4dfb34d51d5b277973ccb2dfb922de702258cf6a1b9eb62de990dd1d72c04a2a"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.holywu.nnedi3cl/r8/linux-glibc-x86_64/2026-01-15T23.17.00%2B00.00Z/NNEDI3CL-r8-linux-glibc-x86_64.zip",
+				"files": {
+					"libnnedi3cl.so": [
+						"libnnedi3cl.so",
+						"be2a69205e30e66148b39edad4e7cc194243cfce461981341beeae7b123f5128"
+					]
+				}
 			}
 		},
 		{

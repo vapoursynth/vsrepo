@@ -18,6 +18,15 @@
 						"35f0db97cdff1ca2061a41c965ec373e6dcdf00b2b664884e8c7a205cf90ba0e"
 					]
 				}
+			},
+			"linux-glibc-x86_64-v3": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.yuygfgg.eedi3vk/R1.2/linux-glibc-x86_64-v3/2026-01-17T00.06.31%2B00.00Z/EEDI3VK-R1.2-linux-glibc-x86_64-v3.zip",
+				"files": {
+					"libeedi3vk.so": [
+						"libeedi3vk.so",
+						"113da31672847be527cb2da2e5eb08066bb1137959d34797f961fe4eff50745f"
+					]
+				}
 			}
 		},
 		{

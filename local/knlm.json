@@ -13,6 +13,19 @@
 	],
 	"releases": [
 		{
+			"version": "git:ca424fa",
+			"published": "2026-01-15T22:43:22Z",
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.Khanattila.KNLMeansCL/git-ca424fa/linux-glibc-x86_64/2026-01-15T22.43.20%2B00.00Z/KNLMeansCL-git-ca424fa-linux-glibc-x86_64.zip",
+				"files": {
+					"libknlmeanscl.so": [
+						"libknlmeanscl.so",
+						"4c91a7db298b049264f4cebb78badc902476f0cd92a06d353128f9421aabbd58"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.1.1",
 			"published": "2018-01-29T15:31:04Z",
 			"win32": {

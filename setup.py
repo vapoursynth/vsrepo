@@ -3,22 +3,16 @@ from os import path
 
 import platform
 
-modules = []
+modules = ["vsrepo", "vsrupdate"]
 packages = [
     "vsgenstubs4"
 ]
-requirements = []
+requirements = ["tqdm"]
 entrypoints = [
     "vsgenstubs4=vsgenstubs4:main",
+    "vsrepo=vsrepo:noop",
+    "vsrupdate=vsrupdate:noop"
 ]
-
-if platform.platform().startswith("Windows"):
-    modules.extend(["vsrepo", "vsrupdate"])
-    entrypoints.extend([
-        "vsrepo=vsrepo:noop",
-        "vsrupdate=vsrupdate:noop"
-    ])
-    requirements.append("tqdm")
 
 here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:

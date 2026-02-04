@@ -18,6 +18,33 @@
 						"dd43ff88b7e5e072bed426b84c6359628bc3561bcf8aab97f4250541fc14518b"
 					]
 				}
+			},
+			"linux-glibc-x86_64-v3": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.yuygfgg.areafilter/R2/linux-glibc-x86_64-v3/2026-01-20T15.45.40%2B00.00Z/AreaFilter-R2-linux-glibc-x86_64-v3.zip",
+				"files": {
+					"libareafilter.so": [
+						"libareafilter.so",
+						"709d263e07345ff208953185763eaded04a4d5fbde8d9ca37bf37a618a68a06a"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.yuygfgg.areafilter/R2/darwin-x86_64/2026-01-20T15.46.05%2B00.00Z/AreaFilter-R2-darwin-x86_64.zip",
+				"files": {
+					"libareafilter.dylib": [
+						"libareafilter.dylib",
+						"990ea8db59aece6a2bca12155ce88efb9d2f144dd40cc6779df4f3297bad015d"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.yuygfgg.areafilter/R2/darwin-aarch64/2026-01-20T15.44.37%2B00.00Z/AreaFilter-R2-darwin-aarch64.zip",
+				"files": {
+					"libareafilter.dylib": [
+						"libareafilter.dylib",
+						"2e91b1f359595cf14ab261d3d3a0b886b3cc1ca1a3677bf5eb87542561d6ddc6"
+					]
+				}
 			}
 		},
 		{

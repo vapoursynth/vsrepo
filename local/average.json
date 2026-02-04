@@ -22,6 +22,42 @@
 						"7ee0f78b3c7793afc5bd5dfa650d74d0bde595a66426fa0c7c38647ba2399541"
 					]
 				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/eoe-nephren.average/v0.5.0-beta/linux-glibc-x86_64/2026-01-20T15.06.38%2B00.00Z/vs-average-v0.5.0-beta-linux-glibc-x86_64.zip",
+				"files": {
+					"libvs_average.so": [
+						"libvs_average.so",
+						"89544bbe915a0aa0da091b1291d8d91998a57d00fd8c36c323e092024789d393"
+					]
+				}
+			},
+			"linux-glibc-x86_64-v3": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/eoe-nephren.average/v0.5.0-beta/linux-glibc-x86_64-v3/2026-01-20T15.09.54%2B00.00Z/vs-average-v0.5.0-beta-linux-glibc-x86_64-v3.zip",
+				"files": {
+					"libvs_average.so": [
+						"libvs_average.so",
+						"559dd339e1f50bc13dd0274a8cbeb0093fd868d0ac67db516652dee15b3ad850"
+					]
+				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/eoe-nephren.average/v0.5.0-beta/darwin-x86_64/2026-01-20T15.10.36%2B00.00Z/vs-average-v0.5.0-beta-darwin-x86_64.zip",
+				"files": {
+					"libvs_average.dylib": [
+						"libvs_average.dylib",
+						"f11d3bfcf9aa6a244e74dd3eb336410a46a5b8accc8758298de0fb7eaba47bca"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/eoe-nephren.average/v0.5.0-beta/darwin-aarch64/2026-01-20T15.09.53%2B00.00Z/vs-average-v0.5.0-beta-darwin-aarch64.zip",
+				"files": {
+					"libvs_average.dylib": [
+						"libvs_average.dylib",
+						"4354c520223f39a4e860b3260018cf9ffc3c1b7c4f76edd420a61f1fa48dc285"
+					]
+				}
 			}
 		},
 		{

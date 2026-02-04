@@ -18,6 +18,24 @@
 						"b9dc8852a21928d0aae1141b8e7444daec1afbda578f8171b03faf16f2a03d28"
 					]
 				}
+			},
+			"darwin-x86_64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.yuygfgg.atwt/R1/darwin-x86_64/2026-01-20T15.09.59%2B00.00Z/ATWT-R1-darwin-x86_64.zip",
+				"files": {
+					"libatwt.dylib": [
+						"libatwt.dylib",
+						"7d6749398f7336d154e81fdc00449c9c2e05827b6f8a0cbf4027ae0929825464"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/Stefan-Olt/vs-plugin-build/releases/download/vsplugin/com.yuygfgg.atwt/R1/darwin-aarch64/2026-01-20T15.09.36%2B00.00Z/ATWT-R1-darwin-aarch64.zip",
+				"files": {
+					"libatwt.dylib": [
+						"libatwt.dylib",
+						"a89eb9b516291d7275ee95cc4b80e757a911b1ebd8133cd090b7ccac033616c5"
+					]
+				}
 			}
 		}
 	]

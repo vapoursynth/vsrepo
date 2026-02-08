@@ -26,6 +26,23 @@
 	],
 	"releases": [
 		{
+			"version": "v15.15",
+			"published": "2026-02-05T01:37:57Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.15/VSTRT-Windows-x64.v15.15.7z",
+				"files": {
+					"vsmlrt-cuda/trtexec.exe": [
+						"vsmlrt-cuda/trtexec.exe",
+						"9df3f39af59dc4e91d8ca7492eb6ba46a075ca2e52fa6e9fa64ce7d573172f22"
+					],
+					"vstrt.dll": [
+						"vstrt.dll",
+						"d9a9cd210ba1feaf9139c2764c2ce092ffd808d4627e692f49e766e65d823a29"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.14",
 			"published": "2025-11-08T02:41:21Z",
 			"win64": {

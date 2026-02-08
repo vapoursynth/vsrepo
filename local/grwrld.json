@@ -8,6 +8,19 @@
 	"namespace": "grwrld",
 	"releases": [
 		{
+			"version": "1.0.3",
+			"published": "2026-02-05T11:47:14Z",
+			"win64": {
+				"url": "https://github.com/Asd-g/AviSynthPlus-grayworld/releases/download/1.0.3/grayworld-1.0.3.7z",
+				"files": {
+					"grayworld.dll": [
+						"x64/grayworld.dll",
+						"f9eb752aac6c354b445d657716325aff287a79fa50a0cf36d1a7f614b748017c"
+					]
+				}
+			}
+		},
+		{
 			"version": "1.0.2",
 			"published": "2022-04-10T21:40:46Z",
 			"win32": {

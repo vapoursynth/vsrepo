@@ -29,6 +29,47 @@
 	],
 	"releases": [
 		{
+			"version": "v15.15",
+			"published": "2026-02-05T01:37:57Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-mlrt/releases/download/v15.15/contrib-models.v15.15.7z",
+				"files": {
+					"models/RealESRGANv2/Ani4Kv2-G6i2-Compact.onnx": [
+						"models/RealESRGANv2/Ani4Kv2-G6i2-Compact.onnx",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					],
+					"models/RealESRGANv2/Ani4Kv2-G6i2-UltraCompact.onnx": [
+						"models/RealESRGANv2/Ani4Kv2-G6i2-UltraCompact.onnx",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					],
+					"models/RealESRGANv2/animejanaiV2L1.onnx": [
+						"models/RealESRGANv2/animejanaiV2L1.onnx",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					],
+					"models/RealESRGANv2/animejanaiV2L2.onnx": [
+						"models/RealESRGANv2/animejanaiV2L2.onnx",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					],
+					"models/RealESRGANv2/animejanaiV2L3.onnx": [
+						"models/RealESRGANv2/animejanaiV2L3.onnx",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					],
+					"models/RealESRGANv2/animejanaiV3-HD-L1.onnx": [
+						"models/RealESRGANv2/animejanaiV3-HD-L1.onnx",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					],
+					"models/RealESRGANv2/animejanaiV3-HD-L2.onnx": [
+						"models/RealESRGANv2/animejanaiV3-HD-L2.onnx",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					],
+					"models/RealESRGANv2/animejanaiV3-HD-L3.onnx": [
+						"models/RealESRGANv2/animejanaiV3-HD-L3.onnx",
+						"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+					]
+				}
+			}
+		},
+		{
 			"version": "v15.14",
 			"published": "2025-11-08T02:41:21Z",
 			"win64": {

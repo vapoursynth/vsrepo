@@ -1,0 +1,106 @@
+{
+	"name": "FelBaker",
+	"type": "VSPlugin",
+	"description": "DV P7 FEL baking plugin. High-performance DoViBaker port with VS built-in resizer support.",
+	"website": "https://github.com/bbeny123/felbaker",
+	"category": "Resizing and Format Conversion",
+	"identifier": "com.vapoursynth.felbaker",
+	"namespace": "fel",
+	"github": "https://github.com/bbeny123/felbaker",
+	"releases": [
+		{
+			"version": "1.0.0",
+			"published": "2026-02-08T13:45:26Z",
+			"win64": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-win-x64-avx2.zip",
+				"files": {
+					"felbaker.dll": [
+						"felbaker.dll",
+						"2ad5d7a80c502c370ed533c426d1ea9d642ae686b08771a130e0c01c0c0fcd4d"
+					]
+				}
+			},
+			"win64-v4": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-win-x64-avx512.zip",
+				"files": {
+					"felbaker.dll": [
+						"felbaker.dll",
+						"c62a841de8eb20a0e79163e3483e167482d847b24bb2953a0601c36143b83247"
+					]
+				}
+			},
+			"win64-aarch64": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-win-arm64-v8.2.zip",
+				"files": {
+					"felbaker.dll": [
+						"felbaker.dll",
+						"2f4dc37390feca4439343c626c102a3e27945338de989ea3f405ae1bad6837fa"
+					]
+				}
+			},
+			"win64-aarch64-v9.2": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-win-arm64-v9.2.zip",
+				"files": {
+					"felbaker.dll": [
+						"felbaker.dll",
+						"526f2437777a18a0772729570523fbf18a6bbd3d26fff69831a04f4cbc3ae19f"
+					]
+				}
+			},
+			"darwin-aarch64": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-macos-arm64-m1.zip",
+				"files": {
+					"libfelbaker.dylib": [
+						"libfelbaker.dylib",
+						"a9d4fa0282df2224839382ad56de38db12914979e68d6b5e31bd7bb69c6b99f5"
+					]
+				}
+			},
+			"darwin-aarch64-m4": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-macos-arm64-m4.zip",
+				"files": {
+					"libfelbaker.dylib": [
+						"libfelbaker.dylib",
+						"7c6526ead160223b8997788bae163e865e43111861577a13bd832bf844d060d6"
+					]
+				}
+			},
+			"linux-glibc-x86_64": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-linux-x64-avx2.zip",
+				"files": {
+					"libfelbaker.so": [
+						"libfelbaker.so",
+						"29cbe4941b13bd7bc1fc90e1b9bc073c44e5692f4288532123680e415c0ae4ec"
+					]
+				}
+			},
+			"linux-glibc-x86_64-v4": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-linux-x64-avx512.zip",
+				"files": {
+					"libfelbaker.so": [
+						"libfelbaker.so",
+						"f3ddab531f8f90898181380fe3f0b0964d122114195e48440969e828b0224434"
+					]
+				}
+			},
+			"linux-glibc-aarch64": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-linux-arm64-v8.2.zip",
+				"files": {
+					"libfelbaker.so": [
+						"libfelbaker.so",
+						"3737008c751ef7c9ae05c2f0e6476e7953de66c5c2f8ef5720ec0e264a7a0648"
+					]
+				}
+			},
+			"linux-glibc-aarch64-v9.2": {
+				"url": "https://github.com/bbeny123/felbaker/releases/download/1.0.0/felbaker-linux-arm64-v9.2.zip",
+				"files": {
+					"libfelbaker.so": [
+						"libfelbaker.so",
+						"0615662e4549f9388c762faacbbae3bab8840ad1c9b646b97491531ad351cd9a"
+					]
+				}
+			}
+		}
+	]
+}

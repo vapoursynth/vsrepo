@@ -8,6 +8,19 @@
 	"namespace": "manipmv",
 	"releases": [
 		{
+			"version": "1.2.2",
+			"published": "2026-02-19T00:40:10Z",
+			"win64": {
+				"url": "https://github.com/Mikewando/manipulate-motion-vectors/releases/download/1.2.2/manipmv.dll",
+				"files": {
+					"manipmv.dll": [
+						"manipmv.dll",
+						"60f44a2572f481ea0e943cce79b05cfbd948518269924319865948a0c6df1809"
+					]
+				}
+			}
+		},
+		{
 			"version": "1.2.1",
 			"published": "2025-08-03T16:56:32Z",
 			"win64": {

@@ -8,6 +8,32 @@
 	"namespace": "artyfox",
 	"releases": [
 		{
+			"version": "R18",
+			"published": "2026-02-18T11:35:20Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R18/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"8a571c3d11edf5526e45dabc337dc96f9fab7951fab85c1504f7e72b6bb425cd"
+					]
+				}
+			}
+		},
+		{
+			"version": "R17.2",
+			"published": "2026-02-10T08:11:26Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R17.2/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"d6b8fb4b761ab9eaefa23537f15098b17c3504f48a4317d35015b6dc7ddddcde"
+					]
+				}
+			}
+		},
+		{
 			"version": "R17.1",
 			"published": "2026-02-09T19:34:18Z",
 			"win64": {

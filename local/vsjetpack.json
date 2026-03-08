@@ -9,6 +9,22 @@
 	"wheelname": "vsjetpack",
 	"releases": [
 		{
+			"version": "1.2.1",
+			"published": "2026-03-02T02:42:33.469122Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/87/54/72eda2144397708d6566b8ae4b462a1f820ddcf6776de400108739619f75/vsjetpack-1.2.1-py3-none-any.whl",
+				"hash": "fc1c9c78019ddfdfc641694dadda6b616a0b39c6a923ddc6f88ff2b4670948b6"
+			}
+		},
+		{
+			"version": "1.2.0",
+			"published": "2026-03-01T19:45:40.567170Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/ec/8e/551e58a448e3a1eaa0e5c9cde62e509778ce599deb1fa6cfae8d805f51e0/vsjetpack-1.2.0-py3-none-any.whl",
+				"hash": "f10816d535f13f0bbc6311e5b3946d03db55dfea0dd4cb09abb0a3027c1fabd3"
+			}
+		},
+		{
 			"version": "1.1.0",
 			"published": "2026-01-27T19:47:02.100316Z",
 			"wheel": {

@@ -39,6 +39,8 @@ import sys
 import tempfile
 import urllib.request
 import zipfile
+import vapoursynth
+import site
 from typing import Iterator, List, MutableMapping, Optional, Tuple
 from pathlib import Path
 
@@ -53,44 +55,8 @@ try:
 except ImportError:
     pass
 
-bundled_api3_plugins = ['com.vapoursynth.avisource', 'com.vapoursynth.eedi3', 'com.vapoursynth.imwri', 'com.vapoursynth.misc', 'com.vapoursynth.morpho', 'com.vapoursynth.removegrainvs', 'com.vapoursynth.subtext', 'com.vapoursynth.vinverse', 'org.ivtc.v', 'com.nodame.histogram']
-
-
 def is_venv() -> bool:
     return hasattr(sys, "real_prefix") or (hasattr(sys, "base_prefix") and sys.base_prefix != sys.prefix)
-
-def get_portable_vs_path(directory, filename: str = 'portable.vs', limit: int = 3) -> Optional[str]:
-    path = Path(directory)
-    found_files = [file for file in path.glob(filename) if file.is_file()]
-
-    if not found_files:
-        if (path != path.parent) and (limit >= 1):
-            return get_portable_vs_path(path.parent, filename, (limit-1))
-        else:
-            return None
-    else:
-        return found_files[0]
-    
-def detect_vapoursynth_installation() -> str:
-    try:
-        spec = imputil.find_spec("vapoursynth")
-        if spec is None:
-            raise ModuleNotFoundError()
-    except (ValueError, ModuleNotFoundError):
-        print("Could not detect vapoursynth.")
-        sys.exit(1)
-
-    if not spec.has_location:
-        try:
-            import vapoursynth
-        except ImportError:
-            print("The vapoursynth-module could not be found or imported.")
-        else:
-            return vapoursynth.__file__
-    if spec.origin is None:
-        print("VapourSynth's origin could not be determined.")
-        sys.exit(1)
-    return spec.origin
 
 def detect_target() -> Optional[str]:
     pl = platform.uname()
@@ -112,75 +78,15 @@ def detect_target() -> Optional[str]:
             return 'darwin-aarch64'
     return None
 
-def is_sitepackage_install_portable() -> bool:
-    if args.portable:
-        return False
-
-    vapoursynth_path = detect_vapoursynth_installation()
-    portable_path = get_portable_vs_path(vapoursynth_path)
-
-    if(portable_path):
-        return os.path.exists(portable_path)
-    return False
-
-def is_sitepackage_install() -> bool:
-    if args.portable:
-        return False
-
-    vapoursynth_path = detect_vapoursynth_installation()
-    base_path = os.path.dirname(vapoursynth_path)
-
-    # We reside in a venv.
-    if is_venv():
-        # VapourSynth has not been installed as a package.
-        # Assume no site-package install
-        if len(glob.glob(os.path.join(base_path, 'VapourSynth-*.dist-info'))) == 0:
-            return False
-
-        if os.path.exists(os.path.join(base_path, "portable.vs")):
-            return True
-
-        # Assume this is not a global install.
-        return False
-
-    # We do not reside in a venv.
-    else:
-        # pip install vapoursynth-portable
-        # Install all packages to site-packages and treat them as packages.
-        if len(glob.glob(os.path.join(base_path, 'VapourSynth_portable-*.dist-info'))) > 0:
-            return True
-
-        # This is a portable installation, this cannot be a site-package install.
-        if os.path.exists(os.path.join(base_path, "portable.vs")):
-            return False
-
-        # This is a global install. Install dist-info files.
-        return True
-
-def get_vs_installation_site() -> str:
-    if is_venv():
-        try:
-            return os.path.dirname(detect_vapoursynth_installation())
-        except ImportError:
-            import setuptools
-            return os.path.dirname(os.path.dirname(setuptools.__file__))
-
-    import site
-    return site.getusersitepackages()
-
-
 parser = argparse.ArgumentParser(description='A simple VapourSynth package manager')
 parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'upgrade-all', 'uninstall', 'installed', 'available', 'paths', "genstubs", "gendistinfo"])
 parser.add_argument('package', nargs='*', help='identifier, namespace or module to install, upgrade or uninstall')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
-parser.add_argument('-p', action='store_true', dest='portable', help='use paths suitable for portable installs')
 parser.add_argument('-d', action='store_true', dest='skip_deps', help='skip installing dependencies')
 if is_windows:
     parser.add_argument('-t', choices=['win32', 'win64'], default=detect_target(), dest='target', help='binaries to install, defaults to python\'s architecture')
 else:
     parser.add_argument('-t', default=detect_target(), dest='target', help='binaries to install, defaults to python\'s architecture')
-parser.add_argument('-b', dest='binary_path', help='custom binary install path')
-parser.add_argument('-s', dest='script_path', help='custom script install path')
 args = parser.parse_args()
 
 if args.target == None:
@@ -190,82 +96,16 @@ if args.target == None:
 vs_target = args.target
 
 file_dirname: str = os.path.dirname(os.path.abspath(__file__))
-portable_vs_path = os.path.dirname(get_portable_vs_path(detect_vapoursynth_installation())) if get_portable_vs_path(detect_vapoursynth_installation()) else ""
-is_portable_vs = False
 
-if(portable_vs_path and not args.portable):
-    is_portable_vs = True
-
-
-# VSRepo is installed to the site-packages.
-if os.path.abspath(file_dirname).startswith(os.path.abspath(sys.prefix)):
-    file_dirname = os.getcwd()
-
-if args.binary_path is not None:
-    plugin_path = args.binary_path
-
-elif args.portable:
-    plugin_path = os.path.join(file_dirname, 'vs-plugins')
-
-elif is_sitepackage_install_portable():
-    vapoursynth_path = detect_vapoursynth_installation()
-    base_path = os.path.dirname(get_portable_vs_path(vapoursynth_path))
-    plugin_path = os.path.join(base_path, 'vs-plugins')
-    del vapoursynth_path
-
-else:
-    if is_windows:
-        pluginparent = [str(os.getenv("APPDATA")), 'VapourSynth']
-        plugin_path = os.path.join(*pluginparent, 'plugins64') if vs_target == 'win64' else os.path.join(*pluginparent, 'plugins32')
-    else:
-        plugin_path = os.path.join('/usr', 'local', 'lib', 'vapoursynth') if os.geteuid() == 0 else os.path.join(str(os.getenv("HOME")), '.local', 'lib', 'vapoursynth')
+plugin_path =  os.path.join(vapoursynth.get_plugin_dir(), 'vsrepo')
 
 if (args.operation in ['install', 'upgrade', 'uninstall']) and ((args.package is None) or len(args.package) == 0):
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
-if args.portable or is_portable_vs:
-    package_json_path = os.path.join(file_dirname, 'vspackages3.json')
-elif is_windows:
-    package_json_path = os.path.join(*pluginparent, 'vsrepo', 'vspackages3.json')
-else:
-    package_json_path = os.path.join(str(os.getenv("HOME")), '.config', 'vsrepo', 'vspackages3.json')
-
-if is_sitepackage_install():
-    if is_venv():
-        try:
-            import setuptools
-            site_package_dir: Optional[str] = os.path.dirname(os.path.dirname(setuptools.__file__))
-            del setuptools
-        except ImportError:
-            site_package_dir = None
-    else:
-        if(is_portable_vs):
-            site_package_dir = os.path.join(base_path, 'vs-scripts') if os.path.exists(os.path.join(base_path, 'vs-scripts')) else os.path.dirname(detect_vapoursynth_installation())
-        else:
-            import site
-            if is_windows or os.geteuid() != 0:
-                site_package_dir = site.getusersitepackages()
-            else:
-                site_package_dirs = site.getsitepackages()
-                site_package_dir = site_package_dirs[0]
-                for s in site_package_dirs:
-                    if s.startswith('/usr/local/'):
-                        site_package_dir = s
-                        break
-else:
-    site_package_dir = None
-
-py_script_path: str = file_dirname if args.portable else (site_package_dir if site_package_dir is not None else get_vs_installation_site())
-if(is_portable_vs):
-    py_script_path = os.path.join(base_path, 'vs-scripts') if os.path.exists(os.path.join(base_path, 'vs-scripts')) else os.path.dirname(detect_vapoursynth_installation())
-
-if args.script_path is not None:
-    py_script_path = args.script_path
-
-os.makedirs(py_script_path, exist_ok=True)
-os.makedirs(plugin_path, exist_ok=True)
-os.makedirs(os.path.dirname(package_json_path), exist_ok=True)
+package_json_path = os.path.join(file_dirname, 'vspackages3.json')
+site_package_dir = os.path.dirname(os.path.dirname(vapoursynth.__file__)) if is_venv() else site.getusersitepackages()
+py_script_path = site_package_dir
 
 if is_windows:
     cmd7zip_path: str = os.path.join(file_dirname, '7z.exe')
@@ -699,10 +539,6 @@ def install_files(p: MutableMapping) -> Tuple[int, int]:
 
 def install_package(name: str) -> Tuple[int, int, int]:
     p = get_package_from_name(name)
-    if get_vapoursynth_api_version() <= 3:
-        if p['identifier'] in bundled_api3_plugins:
-            print('Binaries are already bundled for ' + p['name'] + ', skipping installation')
-            return (0, 0, 0)
     if can_install(p):
         inst = (0, 0, 0)
         if not args.skip_deps:

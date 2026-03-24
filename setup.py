@@ -7,7 +7,7 @@ modules = ["vsrepo", "vsrupdate"]
 packages = [
     "vsgenstubs4"
 ]
-requirements = ["tqdm"]
+requirements = []
 entrypoints = [
     "vsgenstubs4=vsgenstubs4:main",
     "vsrepo=vsrepo:noop",
@@ -20,7 +20,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="vsrepo",
-    version="50",
+    version="51",
     description="A simple package repository for VapourSynth.",
     long_description = long_description,
     long_description_content_type = "text/markdown",

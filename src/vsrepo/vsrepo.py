@@ -648,8 +648,13 @@ def update_package_definition(url: str) -> None:
         localmtimeval = os.path.getmtime(package_json_path)
     except:
         pass
-    localmtime = email.utils.formatdate(localmtimeval + 10, usegmt=True)
-    req_obj = urllib.request.Request(url, headers={ 'If-Modified-Since': localmtime, 'User-Agent': 'VSRepo' })
+
+    headers = {'User-Agent': 'VSRepo'}
+    if package_list is not None:
+        localmtime = email.utils.formatdate(localmtimeval + 10, usegmt=True)
+        headers['If-Modified-Since'] = localmtime
+
+    req_obj = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req_obj) as urlreq:
             remote_modtime = email.utils.mktime_tz(email.utils.parsedate_tz(urlreq.info()['Last-Modified']))
@@ -659,7 +664,7 @@ def update_package_definition(url: str) -> None:
                     with open(package_json_path, 'wb') as dstfile:
                         dstfile.write(pkgfile.read())
                     os.utime(package_json_path, times=(remote_modtime, remote_modtime))
-    except urllib.error.HTTPError as httperr:
+    except urllib.request.HTTPError as httperr:
         if httperr.code == 304:
             print('Local definitions already up to date: ' + email.utils.formatdate(localmtimeval, usegmt=True))
         else:

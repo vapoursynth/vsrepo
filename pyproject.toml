@@ -24,7 +24,6 @@ Issues = "https://github.com/vapoursynth/vsrepo/issues"
 
 [project.scripts]
 vsrepo = "vsrepo.vsrepo:noop"
-vsrupdate = "vsrepo.vsrupdate:noop"
 
 [dependency-groups]
 dev = ["flit"]

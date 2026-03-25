@@ -41,6 +41,7 @@ import urllib.request
 import zipfile
 import vapoursynth
 import site
+import tqdm
 from typing import Iterator, List, MutableMapping, Optional, Tuple
 from pathlib import Path
 
@@ -50,10 +51,6 @@ try:
 except ImportError:
     is_windows = False
 
-try:
-    import tqdm  # type: ignore
-except ImportError:
-    pass
 
 def is_venv() -> bool:
     return hasattr(sys, "real_prefix") or (hasattr(sys, "base_prefix") and sys.base_prefix != sys.prefix)
@@ -123,7 +120,7 @@ download_cache: MutableMapping = {}
 
 def fetch_ur1(url: str, desc: Optional[str] = None) -> bytearray:
     with urllib.request.urlopen(url) as urlreq:
-        if ('tqdm' in sys.modules) and (urlreq.headers['content-length'] is not None):
+        if urlreq.headers['content-length'] is not None:
             size = int(urlreq.headers['content-length'])
             remaining = size
             data = bytearray()
@@ -651,8 +648,13 @@ def update_package_definition(url: str) -> None:
         localmtimeval = os.path.getmtime(package_json_path)
     except:
         pass
-    localmtime = email.utils.formatdate(localmtimeval + 10, usegmt=True)
-    req_obj = urllib.request.Request(url, headers={ 'If-Modified-Since': localmtime, 'User-Agent': 'VSRepo' })
+
+    headers = {'User-Agent': 'VSRepo'}
+    if package_list is not None:
+        localmtime = email.utils.formatdate(localmtimeval + 10, usegmt=True)
+        headers['If-Modified-Since'] = localmtime
+
+    req_obj = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req_obj) as urlreq:
             remote_modtime = email.utils.mktime_tz(email.utils.parsedate_tz(urlreq.info()['Last-Modified']))
@@ -662,7 +664,7 @@ def update_package_definition(url: str) -> None:
                     with open(package_json_path, 'wb') as dstfile:
                         dstfile.write(pkgfile.read())
                     os.utime(package_json_path, times=(remote_modtime, remote_modtime))
-    except urllib.error.HTTPError as httperr:
+    except urllib.request.HTTPError as httperr:
         if httperr.code == 304:
             print('Local definitions already up to date: ' + email.utils.formatdate(localmtimeval, usegmt=True))
         else:
@@ -696,11 +698,11 @@ def get_vapoursynth_api_version() -> int:
 def update_genstubs() -> None:
     sys.path.append(os.path.dirname(__file__))
 
-    from vsgenstubs4 import main as genstubs4
+    from vsstubs import output_stubs
+    from vsstubs.utils import _get_default_stubs_path
 
     print("Updating VapourSynth stubs")
-
-    genstubs4([])
+    output_stubs(None, _get_default_stubs_path())
 
 def rebuild_distinfo() -> None:
     print("Rebuilding dist-info dirs for other python package installers")

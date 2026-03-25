@@ -1,0 +1,30 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+dynamic = ["version"]
+name = "vsrepo"
+requires-python = ">=3.12"
+authors = [{ name = "Fredrik Mellbin", email = "fredrik.mellbin@gmail.com" }]
+maintainers = [
+    { name = "theChaosCoder", email = "thechaoscoder@gmail.com" },
+    { name = "Fredrik Mellbin", email = "fredrik.mellbin@gmail.com" },
+]
+readme = "README.md"
+description = "A simple package repository for VapourSynth."
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["vapoursynth>=74rc1", "vsstubs>=1.1.2", "tqdm"]
+
+[project.urls]
+Home = "https://www.vapoursynth.com/"
+Repository = "https://github.com/vapoursynth/vsrepo.git"
+Issues = "https://github.com/vapoursynth/vsrepo/issues"
+
+[project.scripts]
+vsrepo = "vsrepo.vsrepo:noop"
+vsrupdate = "vsrepo.vsrupdate:noop"
+
+[dependency-groups]
+dev = ["flit"]

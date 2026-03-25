@@ -696,11 +696,11 @@ def get_vapoursynth_api_version() -> int:
 def update_genstubs() -> None:
     sys.path.append(os.path.dirname(__file__))
 
-    from vsgenstubs4 import main as genstubs4
+    from vsstubs import output_stubs
+    from vsstubs.utils import _get_default_stubs_path
 
     print("Updating VapourSynth stubs")
-
-    genstubs4([])
+    output_stubs(None, _get_default_stubs_path())
 
 def rebuild_distinfo() -> None:
     print("Rebuilding dist-info dirs for other python package installers")

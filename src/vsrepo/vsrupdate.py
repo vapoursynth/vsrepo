@@ -33,6 +33,7 @@ import subprocess
 import difflib
 import ftplib
 import zipfile
+import tqdm
 from typing import Any, List, MutableMapping, Optional, Dict, Sequence, Tuple, TypeVar, Union
 
 is_windows: bool = True
@@ -41,11 +42,6 @@ try:
     import winreg
 except ImportError:
     is_windows = False
-
-try:
-    import tqdm  # type: ignore
-except ImportError:
-    pass
 
 parser = argparse.ArgumentParser(description='Package list generator for VSRepo')
 parser.add_argument('operation', choices=['compile', 'update-local', 'upload', 'create-package'])
@@ -117,7 +113,7 @@ def get_pypi_api_url(name: str):
 def fetch_url(url: str, desc: Optional[str] = None, token: Optional[str] = None) -> bytearray:
     req = urllib.request.Request(url, headers={'Authorization': 'token ' + token}) if token is not None else urllib.request.Request(url)
     with urllib.request.urlopen(req) as urlreq:
-        if ('tqdm' in sys.modules) and (urlreq.headers['content-length'] is not None):
+        if urlreq.headers['content-length'] is not None:
             size = int(urlreq.headers['content-length'])
             remaining = size
             data = bytearray()

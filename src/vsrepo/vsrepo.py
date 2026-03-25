@@ -41,6 +41,7 @@ import urllib.request
 import zipfile
 import vapoursynth
 import site
+import tqdm
 from typing import Iterator, List, MutableMapping, Optional, Tuple
 from pathlib import Path
 
@@ -50,10 +51,6 @@ try:
 except ImportError:
     is_windows = False
 
-try:
-    import tqdm  # type: ignore
-except ImportError:
-    pass
 
 def is_venv() -> bool:
     return hasattr(sys, "real_prefix") or (hasattr(sys, "base_prefix") and sys.base_prefix != sys.prefix)
@@ -123,7 +120,7 @@ download_cache: MutableMapping = {}
 
 def fetch_ur1(url: str, desc: Optional[str] = None) -> bytearray:
     with urllib.request.urlopen(url) as urlreq:
-        if ('tqdm' in sys.modules) and (urlreq.headers['content-length'] is not None):
+        if urlreq.headers['content-length'] is not None:
             size = int(urlreq.headers['content-length'])
             remaining = size
             data = bytearray()

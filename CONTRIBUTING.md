@@ -18,7 +18,7 @@ The use of a virtual environment (`venv`) is recommended:
 
 3.  **Install in editable mode with development dependencies:**
     ```powershell
-    pip install -e .[tqdm] --group dev
+    pip install -e . --group dev
     ```
 
 ## Building and Publishing

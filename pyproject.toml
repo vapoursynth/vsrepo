@@ -15,10 +15,7 @@ readme = "README.md"
 description = "A simple package repository for VapourSynth."
 license = "MIT"
 license-files = ["LICENSE"]
-dependencies = ["vapoursynth>=74rc1", "vsstubs>=1.1.2"]
-
-[project.optional-dependencies]
-tqdm = ["tqdm"]
+dependencies = ["vapoursynth>=74rc1", "vsstubs>=1.1.2", "tqdm"]
 
 [project.urls]
 Home = "https://www.vapoursynth.com/"

@@ -100,7 +100,11 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) and ((args.package is
     print('Package argument required for install, upgrade and uninstall operations')
     sys.exit(1)
 
-package_json_path = os.path.join(file_dirname, 'vspackages3.json')
+if is_windows:
+    package_json_path = os.path.join(str(os.getenv("APPDATA")), 'vsrepo', 'vspackages3.json')
+else:
+    package_json_path = os.path.join(str(os.getenv("HOME")), '.config', 'vsrepo', 'vspackages3.json')
+
 site_package_dir = os.path.dirname(os.path.dirname(vapoursynth.__file__)) if is_venv() else site.getusersitepackages()
 py_script_path = site_package_dir
 
@@ -659,6 +663,10 @@ def update_package_definition(url: str) -> None:
         with urllib.request.urlopen(req_obj) as urlreq:
             remote_modtime = email.utils.mktime_tz(email.utils.parsedate_tz(urlreq.info()['Last-Modified']))
             data = urlreq.read()
+            try:
+                os.mkdir(os.path.dirname(package_json_path))
+            except FileExistsError:
+                pass
             with zipfile.ZipFile(io.BytesIO(data), 'r') as zf:
                 with zf.open('vspackages3.json') as pkgfile:
                     with open(package_json_path, 'wb') as dstfile:

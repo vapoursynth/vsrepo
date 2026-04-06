@@ -51,6 +51,12 @@ try:
 except ImportError:
     is_windows = False
 
+file_dirname: str = os.path.dirname(os.path.abspath(__file__))
+
+def is_portable() -> bool:
+    if not is_windows:
+        return False
+    return os.path.exists(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(file_dirname))), "_ctypes.pyd"))
 
 def is_venv() -> bool:
     return hasattr(sys, "real_prefix") or (hasattr(sys, "base_prefix") and sys.base_prefix != sys.prefix)
@@ -92,8 +98,6 @@ if args.target == None:
 
 vs_target = args.target
 
-file_dirname: str = os.path.dirname(os.path.abspath(__file__))
-
 plugin_path =  os.path.join(vapoursynth.get_plugin_dir(), 'vsrepo')
 
 if (args.operation in ['install', 'upgrade', 'uninstall']) and ((args.package is None) or len(args.package) == 0):
@@ -105,7 +109,7 @@ if is_windows:
 else:
     package_json_path = os.path.join(str(os.getenv("HOME")), '.config', 'vsrepo', 'vspackages3.json')
 
-site_package_dir = os.path.dirname(os.path.dirname(vapoursynth.__file__)) if is_venv() else site.getusersitepackages()
+site_package_dir = os.path.dirname(os.path.dirname(vapoursynth.__file__)) if is_venv() or is_portable() else site.getusersitepackages()
 py_script_path = site_package_dir
 
 if is_windows:

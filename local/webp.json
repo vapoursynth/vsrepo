@@ -8,6 +8,19 @@
 	"namespace": "webp",
 	"releases": [
 		{
+			"version": "v1.0.10",
+			"published": "2026-03-11T21:25:53Z",
+			"win64": {
+				"url": "https://github.com/sgt0/vapoursynth-webp/releases/download/v1.0.10/webp-x86_64-pc-windows-gnu.zip",
+				"files": {
+					"webp.dll": [
+						"webp.dll",
+						"09d6411799100bdfda6c3859b6251e445339f30aef0c56262b1d991e8c90d535"
+					]
+				}
+			}
+		},
+		{
 			"version": "v1.0.9",
 			"published": "2025-06-16T22:51:33Z",
 			"win64": {

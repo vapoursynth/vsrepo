@@ -13,6 +13,28 @@
 	],
 	"releases": [
 		{
+			"version": "r12",
+			"published": "2026-03-19T20:16:27Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest/releases/download/r12/neo_DFTTest-r12.7z",
+				"files": {
+					"neo-dfttest.dll": [
+						"x86/neo-dfttest.dll",
+						"0be953f240fab0594273a6ea763fd50c41bd837a838208b5563f808ad6974363"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_DFTTest/releases/download/r12/neo_DFTTest-r12.7z",
+				"files": {
+					"neo-dfttest.dll": [
+						"x64/neo-dfttest.dll",
+						"85d602689e21f852a90c228e2093c14655eec0b9e0a07291882e8cac7595052f"
+					]
+				}
+			}
+		},
+		{
 			"version": "r11",
 			"published": "2025-12-07T00:55:53Z",
 			"win32": {

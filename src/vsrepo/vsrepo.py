@@ -105,7 +105,7 @@ if (args.operation in ['install', 'upgrade', 'uninstall']) and ((args.package is
     sys.exit(1)
 
 if is_portable:
-    package_json_path = os.path.join(file_dirname, 'vspackages3.json')
+    package_json_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(file_dirname))), 'vspackages3.json')
 elif is_windows:
     package_json_path = os.path.join(str(os.getenv("APPDATA")), 'vsrepo', 'vspackages3.json')
 else:

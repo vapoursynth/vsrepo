@@ -39,10 +39,11 @@ import sys
 import tempfile
 import urllib.request
 import zipfile
+import py7zr
 import vapoursynth
 import site
 import tqdm
-from typing import Iterator, List, MutableMapping, Optional, Tuple
+from typing import Iterator, List, MutableMapping, Optional, Tuple, override
 from pathlib import Path
 
 try:
@@ -113,17 +114,6 @@ else:
 
 site_package_dir = os.path.dirname(os.path.dirname(vapoursynth.__file__)) if is_venv() or is_portable() else site.getusersitepackages()
 py_script_path = site_package_dir
-
-if is_windows:
-    cmd7zip_path: str = os.path.join(file_dirname, '7z.exe')
-    if not os.path.isfile(cmd7zip_path):
-        try:
-            with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
-                cmd7zip_path = os.path.join(winreg.QueryValueEx(regkey, 'Path')[0], '7z.exe')
-        except:
-            cmd7zip_path = '7z.exe'
-else:
-    cmd7zip_path = '7z'
 
 installed_packages: MutableMapping = {}
 download_cache: MutableMapping = {}
@@ -446,6 +436,42 @@ Platform: All""")
                 pass
             w.writerow([filename, sha256hex, length])
 
+class MyIO(py7zr.Py7zIO):
+    def __init__(self, limit):
+        self._limit = limit
+        self._buffer = bytearray()
+
+    @override
+    def write(self, s: Union[bytes, bytearray]):
+        self._buffer.extend(s[:self._limit - len(self._buffer)])
+
+    @override
+    def read(self, size: Optional[int] = None) -> bytes:
+        size = self.size() if size is None else size
+        return self._buffer[:size]
+
+    @override
+    def seek(self, offset: int, whence: int = 0) -> int:
+        return 0
+
+    @override
+    def flush(self) -> None:
+        pass
+
+    @override
+    def size(self) -> int:
+        return len(self._buffer)
+
+class MyFactory(py7zr.WriterFactory):
+    def __init__(self, size):
+        self.size = size
+        self.products = {}
+
+    @override
+    def create(self, filename: str) -> Py7zIO:
+        product = MyIO(self.size)
+        self.products[filename] = product
+        return product
 
 def install_files(p: MutableMapping) -> Tuple[int, int]:
     err = (0, 1)
@@ -522,14 +548,22 @@ def install_files(p: MutableMapping) -> Tuple[int, int]:
             with open(tffd, mode='wb') as tf:
                 tf.write(data)
             result_cache = {}
+            factory = MyFactory(1024 * 1024 * 512)
+            filename_list = []
+            for install_fn in install_rel[bin_name]['files']:
+                filename_list.append(install_rel[bin_name]['files'][install_fn][0])
+            with py7zr.SevenZipFile(tfpath, 'r') as archive:
+                archive.extract(targets=filename_list, factory=factory)
+                
             for install_fn in install_rel[bin_name]['files']:
                 fn_props = install_rel[bin_name]['files'][install_fn]
-                result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, fn_props[0]], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                result.check_returncode()
-                hash_result = check_hash(result.stdout, fn_props[1])
+                buffer = factory.products[fn_props[0]]
+                file_data = buffer.read()
+                print(len(file_data))
+                hash_result = check_hash(file_data, fn_props[1])
                 if not hash_result[0]:
                     raise Exception('Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])
-                result_cache[install_fn] = (result.stdout, fn_props[1])
+                result_cache[install_fn] = (file_data, fn_props[1])
             uninstall_files(p)
             for install_fn in install_rel[bin_name]['files']:
                 os.makedirs(os.path.join(dest_path, os.path.split(install_fn)[0]), exist_ok=True)

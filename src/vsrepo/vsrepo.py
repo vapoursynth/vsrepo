@@ -548,18 +548,23 @@ def install_files(p: MutableMapping) -> Tuple[int, int]:
             with open(tffd, mode='wb') as tf:
                 tf.write(data)
             result_cache = {}
-            factory = MyFactory(1024 * 1024 * 512)
             filename_list = []
             for install_fn in install_rel[bin_name]['files']:
                 filename_list.append(install_rel[bin_name]['files'][install_fn][0])
-            with py7zr.SevenZipFile(tfpath, 'r') as archive:
-                archive.extract(targets=filename_list, factory=factory)
                 
+            factory = MyFactory(1024 * 1024 * 512)    
+            if url.endswith('.7z'):
+                with py7zr.SevenZipFile(tfpath, 'r') as archive:
+                    archive.extract(targets=filename_list, factory=factory)
+            else:
+                with zipfile.ZipFile(tfpath, 'r') as archive:
+                    for filename in filename_list:
+                        factory.create(filename)
+                        factory.products[filename].write(archive.read(filename))
+
             for install_fn in install_rel[bin_name]['files']:
                 fn_props = install_rel[bin_name]['files'][install_fn]
-                buffer = factory.products[fn_props[0]]
-                file_data = buffer.read()
-                print(len(file_data))
+                file_data = factory.products[fn_props[0]].read()
                 hash_result = check_hash(file_data, fn_props[1])
                 if not hash_result[0]:
                     raise Exception('Hash mismatch for ' + install_fn + ' got ' + hash_result[1] + ' but expected ' + hash_result[2])

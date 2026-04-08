@@ -1,6 +1,6 @@
 ##    MIT License
 ##
-##    Copyright (c) 2018-2020 Fredrik Mellbin
+##    Copyright (c) 2018-2026 Fredrik Mellbin
 ##
 ##    Permission is hereby granted, free of charge, to any person obtaining a copy
 ##    of this software and associated documentation files (the "Software"), to deal
@@ -114,6 +114,17 @@ else:
 
 site_package_dir = os.path.dirname(os.path.dirname(vapoursynth.__file__)) if is_venv() or is_portable() else site.getusersitepackages()
 py_script_path = site_package_dir
+
+if is_windows:
+    cmd7zip_path: str = os.path.join(file_dirname, '7z.exe')
+    if not os.path.isfile(cmd7zip_path):
+        try:
+            with winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, 'SOFTWARE\\7-Zip', reserved=0, access=winreg.KEY_READ) as regkey:
+                cmd7zip_path = os.path.join(winreg.QueryValueEx(regkey, 'Path')[0], '7z.exe')
+        except:
+            cmd7zip_path = '7z.exe'
+else:
+    cmd7zip_path = '7z'
 
 installed_packages: MutableMapping = {}
 download_cache: MutableMapping = {}
@@ -554,8 +565,15 @@ def install_files(p: MutableMapping) -> Tuple[int, int]:
                 
             factory = MyFactory(1024 * 1024 * 512)    
             if url.endswith('.7z'):
-                with py7zr.SevenZipFile(tfpath, 'r') as archive:
-                    archive.extract(targets=filename_list, factory=factory)
+                try:
+                    with py7zr.SevenZipFile(tfpath, 'r') as archive:
+                        archive.extract(targets=filename_list, factory=factory)
+                except py7zr.exceptions.UnsupportedCompressionMethodError:
+                    for filename in filename_list:
+                        result = subprocess.run([cmd7zip_path, "e", "-so", tfpath, filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        result.check_returncode()
+                        factory.create(filename)
+                        factory.products[filename].write(result.stdout)
             else:
                 with zipfile.ZipFile(tfpath, 'r') as archive:
                     for filename in filename_list:

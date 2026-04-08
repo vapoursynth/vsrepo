@@ -87,10 +87,7 @@ parser.add_argument('operation', choices=['install', 'update', 'upgrade', 'upgra
 parser.add_argument('package', nargs='*', help='identifier, namespace or module to install, upgrade or uninstall')
 parser.add_argument('-f', action='store_true', dest='force', help='force upgrade for packages where the current version is unknown')
 parser.add_argument('-d', action='store_true', dest='skip_deps', help='skip installing dependencies')
-if is_windows:
-    parser.add_argument('-t', choices=['win32', 'win64'], default=detect_target(), dest='target', help='binaries to install, defaults to python\'s architecture')
-else:
-    parser.add_argument('-t', default=detect_target(), dest='target', help='binaries to install, defaults to python\'s architecture')
+parser.add_argument('-t', default=detect_target(), dest='target', help='binaries to install, defaults to python\'s architecture')
 args = parser.parse_args()
 
 if args.target == None:

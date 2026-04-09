@@ -434,7 +434,7 @@ def update_package(name: str) -> int:
 def verify_package(pfile: MutableMapping, existing_identifiers: Sequence[str]) -> None:
     name: str = pfile['name']
     for key in pfile.keys():
-        if key not in ('name', 'type', 'device', 'api', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases', 'updatemode', 'gitbranch'):
+        if key not in ('name', 'type', 'device', 'api', 'description', 'website', 'category', 'identifier', 'modulename', 'wheelname', 'namespace', 'github', 'doom9', 'dependencies', 'ignore', 'releases', 'updatemode', 'gitbranch', 'pypiname'):
             raise Exception(f'Unknown key: {key} in {name}')
     if pfile['type'] not in ('VSPlugin', 'PyScript', 'PyWheel'):
         raise Exception('Invalid type in ' + name)

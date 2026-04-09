@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "VSMask aims to provide tools and functions to manage, create, and manipulate masks in VapourSynth",
 	"github": "https://github.com/Irrational-Encoding-Wizardry/vsmask",
+	"pypiname": "vsmask",
 	"identifier": "vsmask",
 	"modulename": "vsmask",
 	"wheelname": "vsmask",

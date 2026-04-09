@@ -4,6 +4,7 @@
 	"category": "Resizing and Format Conversion",
 	"description": "Wrappers for aa/scaling plugins and functions, aimed to have compatibility with vs-kernels scalers.",
 	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-aa",
+	"pypiname": "vsaa",
 	"identifier": "vsaa",
 	"modulename": "vsaa",
 	"wheelname": "vsaa",

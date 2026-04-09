@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Collection of dehaloing VapourSynth functions",
 	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-dehalo",
+	"pypiname": "vsdehalo",
 	"identifier": "vsdehalo",
 	"modulename": "vsdehalo",
 	"wheelname": "vsdehalo",

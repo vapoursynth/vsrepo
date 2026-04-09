@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "AWarp filter modified from https://github.com/dubhater/vapoursynth-awarpsharp2",
 	"github": "https://github.com/HolyWu/VapourSynth-AWarp",
+	"pypiname": "vapoursynth-awarp",
 	"identifier": "com.holywu.awarp",
 	"namespace": "awarp",
 	"releases": [

@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "SwinIR function for VapourSynth, based on https://github.com/JingyunLiang/SwinIR",
 	"github": "https://github.com/HolyWu/vs-swinir",
+	"pypiname": "vsswinir",
 	"device": [
 		"cuda"
 	],

@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Helpers for writing RPN expressions",
 	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-exprtools",
+	"pypiname": "vsexprtools",
 	"identifier": "vsexprtools",
 	"modulename": "vsexprtools",
 	"wheelname": "vsexprtools",

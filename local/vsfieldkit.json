@@ -6,6 +6,7 @@
 	"website": "https://vsfieldkit.justinarthur.com",
 	"doom9": "https://forum.doom9.org/showthread.php?t=184063",
 	"github": "https://github.com/JustinTArthur/vsfieldkit",
+	"pypiname": "vsfieldkit",
 	"identifier": "vsfieldkit",
 	"modulename": "vsfieldkit",
 	"wheelname": "vsfieldkit",

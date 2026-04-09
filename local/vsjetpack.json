@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "vs-jetpack provides a collection of Python modules for filtering video using VapourSynth. These include modules for scaling, masking, denoising, debanding, dehaloing, deinterlacing, and antialiasing, as well as general utility functions.",
 	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-jetpack",
+	"pypiname": "vsjetpack",
 	"identifier": "vsjetpack",
 	"modulename": "vsjetpack",
 	"wheelname": "vsjetpack",

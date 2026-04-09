@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-Shot Cross-Dataset Transfer, based on https://github.com/isl-org/MiDaS.",
 	"github": "https://github.com/HolyWu/vs-midas",
+	"pypiname": "vsmidas",
 	"identifier": "vsmidas",
 	"modulename": "vsmidas",
 	"wheelname": "vsmidas",

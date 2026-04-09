@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Creates an edge mask using various operators",
 	"github": "https://github.com/HolyWu/VapourSynth-EdgeMasks",
+	"pypiname": "vapoursynth-edgemasks",
 	"identifier": "com.holywu.edgemasks",
 	"namespace": "edgemasks",
 	"releases": [

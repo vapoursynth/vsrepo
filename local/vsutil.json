@@ -8,6 +8,7 @@
 	"modulename": "vsutil",
 	"wheelname": "vsutil",
 	"github": "https://github.com/Irrational-Encoding-Wizardry/vsutil",
+	"pypiname": "vsutil",
 	"releases": [
 		{
 			"version": "0.8.0",

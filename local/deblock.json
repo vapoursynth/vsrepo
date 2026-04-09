@@ -8,6 +8,7 @@
 	"identifier": "com.holywu.deblock",
 	"namespace": "deblock",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Deblock",
+	"pypiname": "vapoursynth-deblock",
 	"ignore": [
 		"r1",
 		"r6.1"

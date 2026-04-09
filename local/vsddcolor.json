@@ -4,6 +4,7 @@
 	"category": "Color/Levels",
 	"description": "Towards Photo-Realistic Image Colorization via Dual Decoders, based on https://github.com/piddnad/DDColor.",
 	"github": "https://github.com/HolyWu/vs-ddcolor",
+	"pypiname": "vsddcolor",
 	"identifier": "vsddcolor",
 	"modulename": "vsddcolor",
 	"wheelname": "vsddcolor",

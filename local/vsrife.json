@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "RIFE: Real-Time Intermediate Flow Estimation for Video Frame Interpolation. Ported from https://github.com/hzwer/arXiv2020-RIFE",
 	"github": "https://github.com/HolyWu/vs-rife",
+	"pypiname": "vsrife",
 	"identifier": "vsrife",
 	"modulename": "vsrife",
 	"wheelname": "vsrife",

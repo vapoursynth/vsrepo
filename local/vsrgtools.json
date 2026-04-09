@@ -4,6 +4,7 @@
 	"category": "Denoising",
 	"description": "Wrapper for RGVS, RGSF, and various other functions",
 	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vs-rgtools",
+	"pypiname": "vsrgtools",
 	"identifier": "vsrgtools",
 	"modulename": "vsrgtools",
 	"wheelname": "vsrgtools",

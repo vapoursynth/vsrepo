@@ -5,6 +5,7 @@
 	"description": "A fast PNG writer. Faster than imwri",
 	"doom9": "https://forum.doom9.org/showthread.php?t=184097",
 	"github": "https://github.com/Mikewando/vsfpng",
+	"pypiname": "vsfpng",
 	"identifier": "tools.mike.fpng",
 	"namespace": "fpng",
 	"releases": [

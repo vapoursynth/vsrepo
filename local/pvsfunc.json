@@ -5,6 +5,7 @@
 	"description": "PHOENiX's compilation of VapourSynth Script's and Functions",
 	"doom9": "https://forum.doom9.org/showthread.php?t=180426",
 	"github": "https://github.com/rlaPHOENiX/pvsfunc",
+	"pypiname": "pvsfunc",
 	"identifier": "pvsfunc",
 	"modulename": "pvsfunc",
 	"wheelname": "pvsfunc",

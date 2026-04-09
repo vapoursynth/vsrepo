@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Attaches the match metrics calculated by Telecide (decomb package) to frames as properties",
 	"github": "https://github.com/vapoursynth/dmetrics",
+	"pypiname": "vapoursynth-dmetrics",
 	"identifier": "com.vapoursynth.dmetrics",
 	"namespace": "dmetrics",
 	"api": 4,

@@ -5,6 +5,7 @@
 	"description": "Spatio-temporal dotcrawl and rainbow remover for VapourSynth",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173029",
 	"github": "https://github.com/myrsloik/DotKill",
+	"pypiname": "vapoursynth-dotkill",
 	"identifier": "com.vapoursynth.dotkill",
 	"namespace": "dotkill",
 	"releases": [

@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Various functions and utils",
 	"github": "https://github.com/Setsugennoao/stgfunc",
+	"pypiname": "stgfunc",
 	"identifier": "stgfunc",
 	"modulename": "stgfunc",
 	"wheelname": "stgfunc",

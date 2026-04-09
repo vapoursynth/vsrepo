@@ -8,6 +8,7 @@
 	"identifier": "havsfunc",
 	"modulename": "havsfunc",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/havsfunc",
+	"pypiname": "havsfunc",
 	"updatemode": "git-commits",
 	"device": [
 		"cpu",

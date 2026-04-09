@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "DPIR function for VapourSynth, based on https://github.com/cszn/DPIR.",
 	"github": "https://github.com/HolyWu/vs-dpir",
+	"pypiname": "vsdpir",
 	"identifier": "vsdpir",
 	"modulename": "vsdpir",
 	"wheelname": "vsdpir",

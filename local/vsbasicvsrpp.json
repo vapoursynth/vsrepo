@@ -5,6 +5,7 @@
 	"description": "BasicVSR++: Improving Video Super-Resolution with Enhanced Propagation and Alignment",
 	"doom9": "https://forum.doom9.org/showthread.php?t=183156",
 	"github": "https://github.com/HolyWu/vs-basicvsrpp",
+	"pypiname": "vsbasicvsrpp",
 	"identifier": "vsbasicvsrpp",
 	"modulename": "vsbasicvsrpp",
 	"wheelname": "vsbasicvsrpp",

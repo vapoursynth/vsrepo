@@ -8,6 +8,7 @@
 	"identifier": "com.sources.d2vsource",
 	"namespace": "d2v",
 	"github": "https://github.com/dwbuiten/d2vsource",
+	"pypiname": "vapoursynth-d2vsource",
 	"ignore": [
 		"beta1",
 		"beta2",

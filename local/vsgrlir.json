@@ -4,6 +4,7 @@
 	"category": "Denoising",
 	"description": "Efficient and Explicit Modelling of Image Hierarchies for Image Restoration, based on https://github.com/ofsoundof/GRL-Image-Restoration.",
 	"github": "https://github.com/HolyWu/vs-grlir",
+	"pypiname": "vsgrlir",
 	"identifier": "vsgrlir",
 	"modulename": "vsgrlir",
 	"wheelname": "vsgrlir",

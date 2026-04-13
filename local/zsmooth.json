@@ -5,6 +5,7 @@
 	"description": "Cross-platform smoothing functions written in Zig",
 	"doom9": "https://forum.doom9.org/showthread.php?t=185465",
 	"github": "https://github.com/adworacz/zsmooth",
+	"pypiname": "vapoursynth-zsmooth",
 	"identifier": "com.adub.zsmooth",
 	"namespace": "zsmooth",
 	"releases": [

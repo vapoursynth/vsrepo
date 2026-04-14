@@ -2,7 +2,7 @@
 	"name": "Neo MiniDeen",
 	"type": "VSPlugin",
 	"description": "MiniDeen is a spatial denoising filter. It replaces every pixel with the average of its neighbourhood.",
-	"website": "https://github.com/dubhater/vapoursynth-minideen",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-minideen",
 	"github": "https://github.com/HomeOfAviSynthPlusEvolution/MiniDeen",
 	"doom9": "https://forum.doom9.org/showthread.php?t=176554",
 	"category": "Denoising",

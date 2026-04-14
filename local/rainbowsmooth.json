@@ -2,12 +2,12 @@
 	"name": "RainbowSmooth",
 	"type": "PyScript",
 	"description": "RainbowSmooth is a script which adds edge detection to SmoothUV. It is a port of the Avisynth function rainbow_smooth()",
-	"website": "https://github.com/dubhater/vapoursynth-smoothuv",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175520",
 	"category": "Dot Crawl and Rainbows",
 	"identifier": "rainbowsmooth",
 	"modulename": "RainbowSmooth",
-	"github": "https://github.com/dubhater/vapoursynth-smoothuv",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv",
 	"updatemode": "git-commits",
 	"dependencies": [
 		"com.nodame.smoothuv",
@@ -19,10 +19,10 @@
 			"version": "git:d75886e",
 			"published": "2022-02-22T15:53:59Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-smoothuv/zipball/d75886e6876c7ec45010cc735d69985bab3936df",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-smoothuv/zipball/d75886e6876c7ec45010cc735d69985bab3936df",
 				"files": {
 					"RainbowSmooth.py": [
-						"dubhater-vapoursynth-smoothuv-d75886e/RainbowSmooth.py",
+						"dubhatervapoursynth-vapoursynth-smoothuv-d75886e/RainbowSmooth.py",
 						"6dc54316dcff140864bef8f576d98021ba6ab1502fb09d80114a5a8ee1762de7"
 					]
 				}
@@ -32,10 +32,10 @@
 			"version": "v2",
 			"published": "2018-07-08T19:38:32Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-smoothuv/zipball/v2",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-smoothuv/zipball/v2",
 				"files": {
 					"RainbowSmooth.py": [
-						"dubhater-vapoursynth-smoothuv-64e5c8f/RainbowSmooth.py",
+						"dubhatervapoursynth-vapoursynth-smoothuv-64e5c8f/RainbowSmooth.py",
 						"3f058ef1d5abe2201564d0aad0142422476b6b10daa83c43c87d0e496f8c5864"
 					]
 				}
@@ -45,10 +45,10 @@
 			"version": "v1",
 			"published": "2018-06-10T20:18:39Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-smoothuv/zipball/v1",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-smoothuv/zipball/v1",
 				"files": {
 					"RainbowSmooth.py": [
-						"dubhater-vapoursynth-smoothuv-b9b78ed/RainbowSmooth.py",
+						"dubhatervapoursynth-vapoursynth-smoothuv-b9b78ed/RainbowSmooth.py",
 						"3f058ef1d5abe2201564d0aad0142422476b6b10daa83c43c87d0e496f8c5864"
 					]
 				}

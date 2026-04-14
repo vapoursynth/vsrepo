@@ -2,18 +2,18 @@
 	"name": "Bifrost",
 	"type": "VSPlugin",
 	"description": "A rainbow remover based on the Bifrost filter for Avisynth",
-	"website": "https://github.com/dubhater/vapoursynth-bifrost",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost",
 	"doom9": "https://forum.doom9.org/showthread.php?t=169758",
 	"category": "Dot Crawl and Rainbows",
 	"identifier": "com.nodame.bifrost",
 	"namespace": "bifrost",
-	"github": "https://github.com/dubhater/vapoursynth-bifrost",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost",
 	"releases": [
 		{
 			"version": "v3.0",
 			"published": "2024-05-08T20:21:32Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
 				"files": {
 					"bifrost.dll": [
 						"x86/bifrost.dll",
@@ -22,7 +22,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost/releases/download/v3.0/Bifrost-3.0.7z",
 				"files": {
 					"bifrost.dll": [
 						"x64/bifrost.dll",
@@ -62,7 +62,7 @@
 			"version": "v2.2",
 			"published": "2014-05-16T09:05:10Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.2/vapoursynth-bifrost-v2.2-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost/releases/download/v2.2/vapoursynth-bifrost-v2.2-win32.7z",
 				"files": {
 					"libbifrost.dll": [
 						"libbifrost.dll",
@@ -71,7 +71,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.2/vapoursynth-bifrost-v2.2-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost/releases/download/v2.2/vapoursynth-bifrost-v2.2-win64.7z",
 				"files": {
 					"libbifrost.dll": [
 						"libbifrost.dll",
@@ -84,7 +84,7 @@
 			"version": "v2.1",
 			"published": "2013-12-02T14:01:44Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.1/vapoursynth-bifrost-v2.1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost/releases/download/v2.1/vapoursynth-bifrost-v2.1-win32.7z",
 				"files": {
 					"libbifrost.dll": [
 						"libbifrost.dll",
@@ -93,7 +93,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.1/vapoursynth-bifrost-v2.1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost/releases/download/v2.1/vapoursynth-bifrost-v2.1-win64.7z",
 				"files": {
 					"libbifrost.dll": [
 						"libbifrost.dll",
@@ -110,7 +110,7 @@
 			"version": "v2.0",
 			"published": "2013-11-09T14:45:17Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.0/vapoursynth-bifrost-v2.0-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost/releases/download/v2.0/vapoursynth-bifrost-v2.0-win32.7z",
 				"files": {
 					"libbifrost.dll": [
 						"libbifrost.dll",
@@ -119,7 +119,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-bifrost/releases/download/v2.0/vapoursynth-bifrost-v2.0-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-bifrost/releases/download/v2.0/vapoursynth-bifrost-v2.0-win64.7z",
 				"files": {
 					"libbifrost.dll": [
 						"libbifrost.dll",

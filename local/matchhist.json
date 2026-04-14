@@ -2,7 +2,7 @@
 	"name": "MatchHistogram",
 	"type": "VSPlugin",
 	"description": "MatchHistogram modifies one clip's histogram to match the histogram of another clip. Will produce weird results if frame contents are dissimilar.",
-	"github": "https://github.com/dubhater/vapoursynth-matchhistogram",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-matchhistogram",
 	"category": "Color/Levels",
 	"identifier": "com.nodame.matchhistogram",
 	"namespace": "matchhist",
@@ -11,7 +11,7 @@
 			"version": "v2",
 			"published": "2019-09-07T19:01:41Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-matchhistogram/releases/download/v2/vapoursynth-matchhistogram-v2-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-matchhistogram/releases/download/v2/vapoursynth-matchhistogram-v2-win32.7z",
 				"files": {
 					"libmatchhistogram.dll": [
 						"libmatchhistogram.dll",
@@ -20,7 +20,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-matchhistogram/releases/download/v2/vapoursynth-matchhistogram-v2-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-matchhistogram/releases/download/v2/vapoursynth-matchhistogram-v2-win64.7z",
 				"files": {
 					"libmatchhistogram.dll": [
 						"libmatchhistogram.dll",
@@ -60,7 +60,7 @@
 			"version": "v1",
 			"published": "2019-09-06T14:01:29Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-matchhistogram/releases/download/v1/vapoursynth-matchhistogram-v1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-matchhistogram/releases/download/v1/vapoursynth-matchhistogram-v1-win32.7z",
 				"files": {
 					"libmatchhistogram.dll": [
 						"libmatchhistogram.dll",
@@ -69,7 +69,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-matchhistogram/releases/download/v1/vapoursynth-matchhistogram-v1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-matchhistogram/releases/download/v1/vapoursynth-matchhistogram-v1-win64.7z",
 				"files": {
 					"libmatchhistogram.dll": [
 						"libmatchhistogram.dll",

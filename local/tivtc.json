@@ -4,7 +4,7 @@
 	"category": "Inverse Telecine",
 	"description": "Field matching and decimation",
 	"doom9": "https://forum.doom9.org/showthread.php?t=182536",
-	"github": "https://github.com/dubhater/vapoursynth-tivtc",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-tivtc",
 	"identifier": "com.nodame.tivtc",
 	"namespace": "tivtc",
 	"releases": [
@@ -12,7 +12,7 @@
 			"version": "v2",
 			"published": "2021-03-17T17:36:11Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-tivtc/releases/download/v2/vapoursynth-tivtc-v2-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-tivtc/releases/download/v2/vapoursynth-tivtc-v2-win32.7z",
 				"files": {
 					"libtivtc.dll": [
 						"libtivtc.dll",
@@ -21,7 +21,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-tivtc/releases/download/v2/vapoursynth-tivtc-v2-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-tivtc/releases/download/v2/vapoursynth-tivtc-v2-win64.7z",
 				"files": {
 					"libtivtc.dll": [
 						"libtivtc.dll",

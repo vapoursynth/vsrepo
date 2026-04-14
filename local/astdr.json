@@ -2,11 +2,11 @@
 	"name": "ASTDR",
 	"type": "PyScript",
 	"description": "ASTDR is a derainbow function. ASTDRmc performs motion compensation before calling ASTDR",
-	"website": "https://github.com/dubhater/vapoursynth-astdr",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-astdr",
 	"category": "Dot Crawl and Rainbows",
 	"identifier": "ASTDR",
 	"modulename": "ASTDR",
-	"github": "https://github.com/dubhater/vapoursynth-astdr",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-astdr",
 	"dependencies": [
 		"adjust",
 		"chikuzen.does.not.have.his.own.domain.focus2",
@@ -25,10 +25,10 @@
 			"version": "v4",
 			"published": "2022-07-14T16:32:41Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-astdr/zipball/v4",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-astdr/zipball/v4",
 				"files": {
 					"ASTDR.py": [
-						"dubhater-vapoursynth-astdr-fde2c98/ASTDR.py",
+						"dubhatervapoursynth-vapoursynth-astdr-fde2c98/ASTDR.py",
 						"2c22c71b21c25557f6aba2739c584388d8c1d6a004a3c367a71212db14418694"
 					]
 				}
@@ -38,10 +38,10 @@
 			"version": "v3",
 			"published": "2020-07-30T11:49:39Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-astdr/zipball/v3",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-astdr/zipball/v3",
 				"files": {
 					"ASTDR.py": [
-						"dubhater-vapoursynth-astdr-69ded1f/ASTDR.py",
+						"dubhatervapoursynth-vapoursynth-astdr-69ded1f/ASTDR.py",
 						"47beaa99c80f0507d1064af5a49d718f4935f04f055bf8aa40daf3919b28dae8"
 					]
 				}
@@ -51,10 +51,10 @@
 			"version": "v2",
 			"published": "2018-11-29T20:08:34Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-astdr/zipball/v2",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-astdr/zipball/v2",
 				"files": {
 					"ASTDR.py": [
-						"dubhater-vapoursynth-astdr-cb72b97/ASTDR.py",
+						"dubhatervapoursynth-vapoursynth-astdr-cb72b97/ASTDR.py",
 						"fb1429f5243f5ff919379a80c883745d4e8c40fcc8d8d762d8bd0c76e55d09f0"
 					]
 				}
@@ -64,10 +64,10 @@
 			"version": "v1",
 			"published": "2018-09-06T17:56:05Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-astdr/zipball/v1",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-astdr/zipball/v1",
 				"files": {
 					"ASTDR.py": [
-						"dubhater-vapoursynth-astdr-969fd06/ASTDR.py",
+						"dubhatervapoursynth-vapoursynth-astdr-969fd06/ASTDR.py",
 						"f812b202ee698e5c9d65c560881c909ac9b2451a07a336796c9e8a2b3a3434b6"
 					]
 				}

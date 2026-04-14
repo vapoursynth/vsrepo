@@ -2,17 +2,17 @@
 	"name": "TemporalMedian",
 	"type": "VSPlugin",
 	"description": "TemporalMedian is a temporal denoising filter. It replaces every pixel with the median of its temporal neighbourhood. This filter will introduce ghosting, so use with caution.",
-	"website": "https://github.com/dubhater/vapoursynth-temporalmedian",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-temporalmedian",
 	"category": "Denoising",
 	"identifier": "com.nodame.temporalmedian",
 	"namespace": "tmedian",
-	"github": "https://github.com/dubhater/vapoursynth-temporalmedian",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-temporalmedian",
 	"releases": [
 		{
 			"version": "v1",
 			"published": "2018-07-25T11:16:03Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-temporalmedian/releases/download/v1/vapoursynth-temporalmedian-v1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-temporalmedian/releases/download/v1/vapoursynth-temporalmedian-v1-win32.7z",
 				"files": {
 					"libtemporalmedian.dll": [
 						"libtemporalmedian.dll",
@@ -21,7 +21,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-temporalmedian/releases/download/v1/vapoursynth-temporalmedian-v1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-temporalmedian/releases/download/v1/vapoursynth-temporalmedian-v1-win64.7z",
 				"files": {
 					"libtemporalmedian.dll": [
 						"libtemporalmedian.dll",

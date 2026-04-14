@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"category": "Other",
 	"description": "WWXD is basically Xvid's frame type decision code stuffed into a VapourSynth plugin. The output is somewhat different from Scxvid's, because Xvid's decisions are also affected by data calculated while encoding frames. ",
-	"github": "https://github.com/dubhater/vapoursynth-wwxd",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-wwxd",
 	"identifier": "com.nodame.wwxd",
 	"namespace": "wwxd",
 	"releases": [
@@ -11,7 +11,7 @@
 			"version": "v1.0",
 			"published": "2014-04-28T15:30:38Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-wwxd/releases/download/v1.0/libwwxd32.dll",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-wwxd/releases/download/v1.0/libwwxd32.dll",
 				"files": {
 					"libwwxd32.dll": [
 						"libwwxd32.dll",
@@ -20,7 +20,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-wwxd/releases/download/v1.0/libwwxd64.dll",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-wwxd/releases/download/v1.0/libwwxd64.dll",
 				"files": {
 					"libwwxd64.dll": [
 						"libwwxd64.dll",

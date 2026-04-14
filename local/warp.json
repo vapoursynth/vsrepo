@@ -2,18 +2,18 @@
 	"name": "AWarpSharp2",
 	"type": "VSPlugin",
 	"description": "AWarpSharp2 sharpens edges by warping them.",
-	"website": "https://github.com/dubhater/vapoursynth-awarpsharp2",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2",
 	"doom9": "https://forum.doom9.org/showthread.php?t=172721",
 	"category": "Other",
 	"identifier": "com.nodame.awarpsharp2",
 	"namespace": "warp",
-	"github": "https://github.com/dubhater/vapoursynth-awarpsharp2",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2",
 	"releases": [
 		{
 			"version": "v4",
 			"published": "2018-06-15T09:39:12Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win32.7z",
 				"files": {
 					"libawarpsharp2.dll": [
 						"libawarpsharp2.dll",
@@ -22,7 +22,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2/releases/download/v4/vapoursynth-awarpsharp2-v4-win64.7z",
 				"files": {
 					"libawarpsharp2.dll": [
 						"libawarpsharp2.dll",
@@ -62,7 +62,7 @@
 			"version": "v3",
 			"published": "2016-08-28T19:43:08Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v3/vapoursynth-awarpsharp2-v3-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2/releases/download/v3/vapoursynth-awarpsharp2-v3-win32.7z",
 				"files": {
 					"libawarpsharp2.dll": [
 						"libawarpsharp2.dll",
@@ -71,7 +71,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v3/vapoursynth-awarpsharp2-v3-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2/releases/download/v3/vapoursynth-awarpsharp2-v3-win64.7z",
 				"files": {
 					"libawarpsharp2.dll": [
 						"libawarpsharp2.dll",
@@ -84,7 +84,7 @@
 			"version": "v2",
 			"published": "2016-06-10T18:03:37Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v2/vapoursynth-awarpsharp2-v2-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2/releases/download/v2/vapoursynth-awarpsharp2-v2-win32.7z",
 				"files": {
 					"libawarpsharp2.dll": [
 						"libawarpsharp2.dll",
@@ -93,7 +93,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v2/vapoursynth-awarpsharp2-v2-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2/releases/download/v2/vapoursynth-awarpsharp2-v2-win64.7z",
 				"files": {
 					"libawarpsharp2.dll": [
 						"libawarpsharp2.dll",
@@ -106,7 +106,7 @@
 			"version": "v1",
 			"published": "2015-10-06T19:24:24Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v1/vapoursynth-awarpsharp2-v1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2/releases/download/v1/vapoursynth-awarpsharp2-v1-win32.7z",
 				"files": {
 					"libawarpsharp2.dll": [
 						"libawarpsharp2.dll",
@@ -115,7 +115,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-awarpsharp2/releases/download/v1/vapoursynth-awarpsharp2-v1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-awarpsharp2/releases/download/v1/vapoursynth-awarpsharp2-v1-win64.7z",
 				"files": {
 					"libawarpsharp2.dll": [
 						"libawarpsharp2.dll",

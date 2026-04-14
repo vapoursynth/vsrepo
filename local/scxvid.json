@@ -2,17 +2,17 @@
 	"name": "Scxvid",
 	"type": "VSPlugin",
 	"description": "Scene change detection plugin for VapourSynth, using xvidcore.",
-	"website": "https://github.com/dubhater/vapoursynth-scxvid",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-scxvid",
 	"category": "Other",
 	"identifier": "com.nodame.scxvid",
 	"namespace": "scxvid",
-	"github": "https://github.com/dubhater/vapoursynth-scxvid",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-scxvid",
 	"releases": [
 		{
 			"version": "v1",
 			"published": "2014-12-24T21:23:24Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-scxvid/releases/download/v1/vapoursynth-scxvid-v1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-scxvid/releases/download/v1/vapoursynth-scxvid-v1-win32.7z",
 				"files": {
 					"libscxvid.dll": [
 						"libscxvid.dll",
@@ -21,7 +21,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-scxvid/releases/download/v1/vapoursynth-scxvid-v1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-scxvid/releases/download/v1/vapoursynth-scxvid-v1-win64.7z",
 				"files": {
 					"libscxvid.dll": [
 						"libscxvid.dll",

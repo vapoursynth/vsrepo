@@ -2,18 +2,18 @@
 	"name": "SmoothUV",
 	"type": "VSPlugin",
 	"description": "A spatial derainbow filter",
-	"website": "https://github.com/dubhater/vapoursynth-smoothuv",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv",
 	"doom9": "https://forum.doom9.org/showthread.php?t=175520",
 	"category": "Dot Crawl and Rainbows",
 	"identifier": "com.nodame.smoothuv",
 	"namespace": "smoothuv",
-	"github": "https://github.com/dubhater/vapoursynth-smoothuv",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv",
 	"releases": [
 		{
 			"version": "v3",
 			"published": "2022-06-01T16:40:59Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v3/vapoursynth-smoothuv-v3-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv/releases/download/v3/vapoursynth-smoothuv-v3-win32.7z",
 				"files": {
 					"libsmoothuv.dll": [
 						"libsmoothuv.dll",
@@ -22,7 +22,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v3/vapoursynth-smoothuv-v3-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv/releases/download/v3/vapoursynth-smoothuv-v3-win64.7z",
 				"files": {
 					"libsmoothuv.dll": [
 						"libsmoothuv.dll",
@@ -44,7 +44,7 @@
 			"version": "v2",
 			"published": "2018-07-08T19:38:32Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win32.7z",
 				"files": {
 					"libsmoothuv.dll": [
 						"libsmoothuv.dll",
@@ -53,7 +53,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv/releases/download/v2/vapoursynth-smoothuv-v2-win64.7z",
 				"files": {
 					"libsmoothuv.dll": [
 						"libsmoothuv.dll",
@@ -66,7 +66,7 @@
 			"version": "v1",
 			"published": "2018-06-10T20:18:39Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v1/vapoursynth-smoothuv-v1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv/releases/download/v1/vapoursynth-smoothuv-v1-win32.7z",
 				"files": {
 					"libsmoothuv.dll": [
 						"libsmoothuv.dll",
@@ -75,7 +75,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-smoothuv/releases/download/v1/vapoursynth-smoothuv-v1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-smoothuv/releases/download/v1/vapoursynth-smoothuv-v1-win64.7z",
 				"files": {
 					"libsmoothuv.dll": [
 						"libsmoothuv.dll",

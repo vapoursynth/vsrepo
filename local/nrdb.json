@@ -2,7 +2,7 @@
 	"name": "NRDB",
 	"type": "PyScript",
 	"description": "NRDB is a debanding function. It removes the noise in the input clip, debands, and adds the noise back. This is a port of the Avisynth function of the same name.",
-	"github": "https://github.com/dubhater/vapoursynth-nrdb",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-nrdb",
 	"category": "Other",
 	"identifier": "nrdb",
 	"modulename": "nrdb",
@@ -15,10 +15,10 @@
 			"version": "git:dd2f56a",
 			"published": "2022-02-05T14:16:48Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-nrdb/zipball/dd2f56a2e34cf73b74f34543479a68a6bc591c81",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-nrdb/zipball/dd2f56a2e34cf73b74f34543479a68a6bc591c81",
 				"files": {
 					"NRDB.py": [
-						"dubhater-vapoursynth-nrdb-dd2f56a/NRDB.py",
+						"dubhatervapoursynth-vapoursynth-nrdb-dd2f56a/NRDB.py",
 						"f54696461da6f20aed47dde50d8318f0a738c07dc7bc2d01032f7d85548957d0"
 					]
 				}
@@ -28,10 +28,10 @@
 			"version": "v2",
 			"published": "2020-05-06T17:53:52Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-nrdb/zipball/v2",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-nrdb/zipball/v2",
 				"files": {
 					"NRDB.py": [
-						"dubhater-vapoursynth-nrdb-236b729/NRDB.py",
+						"dubhatervapoursynth-vapoursynth-nrdb-236b729/NRDB.py",
 						"6f74ebc5da4a157a51b8599c3d2be0040b2d4f50b7a26b8a4794948478c7dc3d"
 					]
 				}
@@ -41,10 +41,10 @@
 			"version": "v1",
 			"published": "2020-05-01T16:57:46Z",
 			"script": {
-				"url": "https://api.github.com/repos/dubhater/vapoursynth-nrdb/zipball/v1",
+				"url": "https://api.github.com/repos/dubhatervapoursynth/vapoursynth-nrdb/zipball/v1",
 				"files": {
 					"NRDB.py": [
-						"dubhater-vapoursynth-nrdb-951f7cd/NRDB.py",
+						"dubhatervapoursynth-vapoursynth-nrdb-951f7cd/NRDB.py",
 						"f8dd213ebe0192f81485fad54d2da411d36da22879ef377fe6816d7947de3dfe"
 					]
 				}

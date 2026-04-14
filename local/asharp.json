@@ -2,7 +2,7 @@
 	"name": "ASharp",
 	"type": "VSPlugin",
 	"description": "Adaptive sharpening filter",
-	"github": "https://github.com/dubhater/vapoursynth-asharp",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-asharp",
 	"category": "Sharpening",
 	"identifier": "com.nodame.asharp",
 	"namespace": "asharp",
@@ -11,7 +11,7 @@
 			"version": "v1",
 			"published": "2020-05-02T17:05:39Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-asharp/releases/download/v1/vapoursynth-asharp-v1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-asharp/releases/download/v1/vapoursynth-asharp-v1-win32.7z",
 				"files": {
 					"libasharp.dll": [
 						"libasharp.dll",
@@ -20,7 +20,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-asharp/releases/download/v1/vapoursynth-asharp-v1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-asharp/releases/download/v1/vapoursynth-asharp-v1-win64.7z",
 				"files": {
 					"libasharp.dll": [
 						"libasharp.dll",

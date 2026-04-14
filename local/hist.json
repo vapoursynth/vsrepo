@@ -3,7 +3,7 @@
 	"type": "VSPlugin",
 	"category": "Other",
 	"description": "Port of the Histogram() function from Avisynth.",
-	"github": "https://github.com/dubhater/vapoursynth-histogram",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-histogram",
 	"identifier": "com.nodame.histogram",
 	"namespace": "hist",
 	"releases": [
@@ -11,7 +11,7 @@
 			"version": "v2",
 			"published": "2018-06-07T17:49:53Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-histogram/releases/download/v2/vapoursynth-histogram-v2-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-histogram/releases/download/v2/vapoursynth-histogram-v2-win32.7z",
 				"files": {
 					"libhistogram.dll": [
 						"libhistogram.dll",
@@ -20,7 +20,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-histogram/releases/download/v2/vapoursynth-histogram-v2-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-histogram/releases/download/v2/vapoursynth-histogram-v2-win64.7z",
 				"files": {
 					"libhistogram.dll": [
 						"libhistogram.dll",
@@ -60,7 +60,7 @@
 			"version": "v1.0",
 			"published": "2013-10-01T09:08:06Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-histogram/releases/download/v1.0/vapoursynth-histogram-v1.0-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-histogram/releases/download/v1.0/vapoursynth-histogram-v1.0-win32.7z",
 				"files": {
 					"libhistogram.dll": [
 						"libhistogram.dll",
@@ -69,7 +69,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-histogram/releases/download/v1.0/vapoursynth-histogram-v1.0-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-histogram/releases/download/v1.0/vapoursynth-histogram-v1.0-win64.7z",
 				"files": {
 					"libhistogram.dll": [
 						"libhistogram.dll",

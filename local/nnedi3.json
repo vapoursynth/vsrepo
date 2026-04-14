@@ -2,12 +2,12 @@
 	"name": "NNEDI3",
 	"type": "VSPlugin",
 	"description": "Field interpolator/deinterlacer",
-	"website": "https://github.com/dubhater/vapoursynth-nnedi3",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3",
 	"doom9": "https://forum.doom9.org/showthread.php?t=166434",
 	"category": "Deinterlacing",
 	"identifier": "com.deinterlace.nnedi3",
 	"namespace": "nnedi3",
-	"github": "https://github.com/dubhater/vapoursynth-nnedi3",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3",
 	"dependencies": [
 		"com.deinterlace.nnedi3.weights"
 	],
@@ -16,7 +16,7 @@
 			"version": "v12",
 			"published": "2018-09-29T16:09:17Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v12/vapoursynth-nnedi3-v12-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v12/vapoursynth-nnedi3-v12-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -25,7 +25,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v12/vapoursynth-nnedi3-v12-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v12/vapoursynth-nnedi3-v12-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -65,7 +65,7 @@
 			"version": "v11",
 			"published": "2017-01-19T14:09:25Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v11/vapoursynth-nnedi3-v11-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v11/vapoursynth-nnedi3-v11-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -74,7 +74,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v11/vapoursynth-nnedi3-v11-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v11/vapoursynth-nnedi3-v11-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -87,7 +87,7 @@
 			"version": "v10",
 			"published": "2016-08-27T13:13:12Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v10/vapoursynth-nnedi3-v10-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v10/vapoursynth-nnedi3-v10-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -96,7 +96,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v10/vapoursynth-nnedi3-v10-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v10/vapoursynth-nnedi3-v10-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -109,7 +109,7 @@
 			"version": "v9",
 			"published": "2016-08-23T16:38:03Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v9/vapoursynth-nnedi3-v9-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v9/vapoursynth-nnedi3-v9-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -118,7 +118,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v9/vapoursynth-nnedi3-v9-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v9/vapoursynth-nnedi3-v9-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -131,7 +131,7 @@
 			"version": "v8",
 			"published": "2016-01-24T12:19:16Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v8/vapoursynth-nnedi3-v8-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v8/vapoursynth-nnedi3-v8-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -140,7 +140,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v8/vapoursynth-nnedi3-v8-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v8/vapoursynth-nnedi3-v8-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -153,7 +153,7 @@
 			"version": "v7",
 			"published": "2015-09-08T20:37:15Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v7/vapoursynth-nnedi3-v7-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v7/vapoursynth-nnedi3-v7-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -162,7 +162,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v7/vapoursynth-nnedi3-v7-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v7/vapoursynth-nnedi3-v7-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -175,7 +175,7 @@
 			"version": "v6",
 			"published": "2015-09-08T10:12:45Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v6/vapoursynth-nnedi3-v6-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v6/vapoursynth-nnedi3-v6-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -184,7 +184,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v6/vapoursynth-nnedi3-v6-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v6/vapoursynth-nnedi3-v6-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -197,7 +197,7 @@
 			"version": "v5",
 			"published": "2015-04-22T18:26:22Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v5/vapoursynth-nnedi3-v5-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v5/vapoursynth-nnedi3-v5-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -206,7 +206,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v5/vapoursynth-nnedi3-v5-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v5/vapoursynth-nnedi3-v5-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -219,7 +219,7 @@
 			"version": "v4",
 			"published": "2015-03-09T18:55:08Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v4/vapoursynth-nnedi3-v4-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v4/vapoursynth-nnedi3-v4-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -228,7 +228,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v4/vapoursynth-nnedi3-v4-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v4/vapoursynth-nnedi3-v4-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -241,7 +241,7 @@
 			"version": "v3",
 			"published": "2015-02-22T19:59:30Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v3/vapoursynth-nnedi3-v3-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v3/vapoursynth-nnedi3-v3-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -250,7 +250,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v3/vapoursynth-nnedi3-v3-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v3/vapoursynth-nnedi3-v3-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -263,7 +263,7 @@
 			"version": "v2.1",
 			"published": "2014-08-24T17:22:21Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v2.1/vapoursynth-nnedi3-v2.1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v2.1/vapoursynth-nnedi3-v2.1-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -272,7 +272,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v2.1/vapoursynth-nnedi3-v2.1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v2.1/vapoursynth-nnedi3-v2.1-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -285,7 +285,7 @@
 			"version": "v2.0",
 			"published": "2014-08-19T08:35:23Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v2.0/vapoursynth-nnedi3-v2.0-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v2.0/vapoursynth-nnedi3-v2.0-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -294,7 +294,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v2.0/vapoursynth-nnedi3-v2.0-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v2.0/vapoursynth-nnedi3-v2.0-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -307,7 +307,7 @@
 			"version": "v1.1",
 			"published": "2013-12-15T20:03:42Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v1.1/vapoursynth-nnedi3-v1.1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v1.1/vapoursynth-nnedi3-v1.1-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -316,7 +316,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v1.1/vapoursynth-nnedi3-v1.1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v1.1/vapoursynth-nnedi3-v1.1-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -329,7 +329,7 @@
 			"version": "v1.0",
 			"published": "2013-09-28T20:39:56Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v1.0/vapoursynth-nnedi3-v1.0-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v1.0/vapoursynth-nnedi3-v1.0-win32.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",
@@ -338,7 +338,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-nnedi3/releases/download/v1.0/vapoursynth-nnedi3-v1.0-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-nnedi3/releases/download/v1.0/vapoursynth-nnedi3-v1.0-win64.7z",
 				"files": {
 					"libnnedi3.dll": [
 						"libnnedi3.dll",

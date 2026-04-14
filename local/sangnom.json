@@ -4,7 +4,7 @@
 	"description": "SangNom is a single field deinterlacer using edge-directed interpolation but nowadays it's mainly used in anti-aliasing scripts.",
 	"website": "https://bitbucket.org/James1201/vapoursynth-sangnom",
 	"doom9": "https://forum.doom9.org/showthread.php?t=173752",
-	"github": "https://github.com/dubhater/vapoursynth-sangnom",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-sangnom",
 	"category": "Deinterlacing",
 	"identifier": "com.mio.sangnom",
 	"namespace": "sangnom",
@@ -13,7 +13,7 @@
 			"version": "r42",
 			"published": "2020-08-03T09:06:54Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-sangnom/releases/download/r42/vapoursynth-sangnom-r42-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-sangnom/releases/download/r42/vapoursynth-sangnom-r42-win32.7z",
 				"files": {
 					"libsangnom.dll": [
 						"libsangnom.dll",
@@ -22,7 +22,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-sangnom/releases/download/r42/vapoursynth-sangnom-r42-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-sangnom/releases/download/r42/vapoursynth-sangnom-r42-win64.7z",
 				"files": {
 					"libsangnom.dll": [
 						"libsangnom.dll",
@@ -62,7 +62,7 @@
 			"version": "r41",
 			"published": "2019-03-14T17:37:21Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-sangnom/releases/download/r41/vapoursynth-sangnom-r41-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-sangnom/releases/download/r41/vapoursynth-sangnom-r41-win32.7z",
 				"files": {
 					"libsangnom.dll": [
 						"libsangnom.dll",
@@ -71,7 +71,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-sangnom/releases/download/r41/vapoursynth-sangnom-r41-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-sangnom/releases/download/r41/vapoursynth-sangnom-r41-win64.7z",
 				"files": {
 					"libsangnom.dll": [
 						"libsangnom.dll",

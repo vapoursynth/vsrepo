@@ -2,17 +2,17 @@
 	"name": "SSIQ",
 	"type": "VSPlugin",
 	"description": "Spatial derainbowing filter",
-	"website": "https://github.com/dubhater/vapoursynth-ssiq",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-ssiq",
 	"category": "Dot Crawl and Rainbows",
 	"identifier": "com.nodame.ssiq",
 	"namespace": "ssiq",
-	"github": "https://github.com/dubhater/vapoursynth-ssiq",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-ssiq",
 	"releases": [
 		{
 			"version": "v1.0",
 			"published": "2013-10-01T09:25:56Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-ssiq/releases/download/v1.0/vapoursynth-ssiq-v1.0-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-ssiq/releases/download/v1.0/vapoursynth-ssiq-v1.0-win32.7z",
 				"files": {
 					"libssiq.dll": [
 						"libssiq.dll",
@@ -21,7 +21,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-ssiq/releases/download/v1.0/vapoursynth-ssiq-v1.0-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-ssiq/releases/download/v1.0/vapoursynth-ssiq-v1.0-win64.7z",
 				"files": {
 					"libssiq.dll": [
 						"libssiq.dll",

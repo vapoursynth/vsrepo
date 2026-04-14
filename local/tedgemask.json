@@ -2,7 +2,7 @@
 	"name": "TEdgeMask",
 	"type": "VSPlugin",
 	"description": "TEdgeMask is an edge detection filter. This is a port of the TEdgeMask/TEMmod Avisynth plugins.",
-	"github": "https://github.com/dubhater/vapoursynth-tedgemask",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-tedgemask",
 	"doom9": "https://forum.doom9.org/showthread.php?t=176196",
 	"category": "Other",
 	"identifier": "com.nodame.tedgemask",
@@ -12,7 +12,7 @@
 			"version": "v1",
 			"published": "2019-03-13T14:16:09Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-tedgemask/releases/download/v1/vapoursynth-tedgemask-v1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-tedgemask/releases/download/v1/vapoursynth-tedgemask-v1-win32.7z",
 				"files": {
 					"libtedgemask.dll": [
 						"libtedgemask.dll",
@@ -21,7 +21,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-tedgemask/releases/download/v1/vapoursynth-tedgemask-v1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-tedgemask/releases/download/v1/vapoursynth-tedgemask-v1-win64.7z",
 				"files": {
 					"libtedgemask.dll": [
 						"libtedgemask.dll",

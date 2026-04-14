@@ -2,17 +2,17 @@
 	"name": "DeDot",
 	"type": "VSPlugin",
 	"description": "Dedot is a temporal cross color (rainbow) and cross luminance (dotcrawl) reduction filter.",
-	"website": "https://github.com/dubhater/vapoursynth-dedot",
+	"website": "https://github.com/dubhatervapoursynth/vapoursynth-dedot",
 	"category": "Dot Crawl and Rainbows",
 	"identifier": "com.nodame.dedot",
 	"namespace": "dedot",
-	"github": "https://github.com/dubhater/vapoursynth-dedot",
+	"github": "https://github.com/dubhatervapoursynth/vapoursynth-dedot",
 	"releases": [
 		{
 			"version": "v1",
 			"published": "2018-08-04T19:41:01Z",
 			"win32": {
-				"url": "https://github.com/dubhater/vapoursynth-dedot/releases/download/v1/vapoursynth-dedot-v1-win32.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-dedot/releases/download/v1/vapoursynth-dedot-v1-win32.7z",
 				"files": {
 					"libdedot.dll": [
 						"libdedot.dll",
@@ -21,7 +21,7 @@
 				}
 			},
 			"win64": {
-				"url": "https://github.com/dubhater/vapoursynth-dedot/releases/download/v1/vapoursynth-dedot-v1-win64.7z",
+				"url": "https://github.com/dubhatervapoursynth/vapoursynth-dedot/releases/download/v1/vapoursynth-dedot-v1-win64.7z",
 				"files": {
 					"libdedot.dll": [
 						"libdedot.dll",

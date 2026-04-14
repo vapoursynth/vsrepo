@@ -6,6 +6,7 @@
 	"doom9": "https://forum.doom9.org/showthread.php?t=173752",
 	"github": "https://github.com/dubhatervapoursynth/vapoursynth-sangnom",
 	"category": "Deinterlacing",
+	"pypiname": "vapoursynth-sangnom",
 	"identifier": "com.mio.sangnom",
 	"namespace": "sangnom",
 	"releases": [

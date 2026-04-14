@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Hysteresis filter as a VapourSynth plugin, with the same API as misc.Hysteresis() from vs-miscfilters-obsolete",
 	"github": "https://github.com/sgt0/vapoursynth-hysteresis",
+	"pypiname": "vapoursynth-hysteresis",
 	"identifier": "sgt.hysteresis",
 	"namespace": "hysteresis",
 	"releases": [

@@ -5,6 +5,7 @@
 	"website": "https://github.com/EleonoreMizo/fmtconv",
 	"doom9": "https://forum.doom9.org/showthread.php?t=166504",
 	"category": "Resizing and Format Conversion",
+	"pypiname": "vapoursynth-fmtconv",
 	"identifier": "fmtconv",
 	"namespace": "fmtc",
 	"github": "https://github.com/EleonoreMizo/fmtconv",

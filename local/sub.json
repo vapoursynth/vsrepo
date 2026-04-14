@@ -5,6 +5,7 @@
 	"description": "Subtitle plugin for VapourSynth based on libass.",
 	"website": "https://github.com/vapoursynth/subtext/blob/master/docs/subtext.rst",
 	"github": "https://github.com/vapoursynth/subtext",
+	"pypiname": "vapoursynth-subtext",
 	"identifier": "biz.srsfckn.subtext",
 	"namespace": "sub",
 	"api": 4,

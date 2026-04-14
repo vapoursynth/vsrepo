@@ -4,6 +4,7 @@
 	"description": "Scene change detection plugin for VapourSynth, using xvidcore.",
 	"website": "https://github.com/dubhatervapoursynth/vapoursynth-scxvid",
 	"category": "Other",
+	"pypiname": "vapoursynth-scxvid",
 	"identifier": "com.nodame.scxvid",
 	"namespace": "scxvid",
 	"github": "https://github.com/dubhatervapoursynth/vapoursynth-scxvid",

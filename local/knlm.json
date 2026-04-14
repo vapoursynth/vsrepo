@@ -5,6 +5,7 @@
 	"website": "https://github.com/Khanattila/KNLMeansCL",
 	"doom9": "https://forum.doom9.org/showthread.php?t=171379",
 	"category": "Denoising",
+	"pypiname": "vapoursynth-knlmeanscl",
 	"identifier": "com.Khanattila.KNLMeansCL",
 	"namespace": "knlm",
 	"github": "https://github.com/Khanattila/KNLMeansCL",

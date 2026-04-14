@@ -5,6 +5,7 @@
 	"website": "https://github.com/Irrational-Encoding-Wizardry/descale",
 	"doom9": "https://forum.doom9.org/showthread.php?t=174570",
 	"category": "Resizing and Format Conversion",
+	"pypiname": "vapoursynth-descale",
 	"identifier": "tegaf.asi.xe",
 	"namespace": "descale",
 	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-descale",

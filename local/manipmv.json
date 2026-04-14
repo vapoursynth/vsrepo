@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "A vapoursynth plugin to do potentially useful things with motion vectors that have already been generated.",
 	"github": "https://github.com/Mikewando/manipulate-motion-vectors",
+	"pypiname": "vapoursynth-manipmv",
 	"identifier": "tools.mike.manipmv",
 	"namespace": "manipmv",
 	"releases": [

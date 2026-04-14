@@ -4,6 +4,7 @@
 	"description": "Convert HDR to SDR",
 	"website": "https://rationalqm.us/hdr",
 	"category": "Color/Levels",
+	"pypiname": "vapoursynth-dghdrtosdr",
 	"identifier": "com.vapoursynth.dghdrtosdr",
 	"namespace": "dghdrtosdr",
 	"device": [

@@ -4,6 +4,7 @@
 	"description": "A simple filter that fills the borders of a clip, without changing the clip's dimensions",
 	"website": "https://github.com/dubhatervapoursynth/vapoursynth-fillborders",
 	"category": "Other",
+	"pypiname": "vapoursynth-fillborders",
 	"identifier": "com.nodame.fillborders",
 	"namespace": "fb",
 	"github": "https://github.com/dubhatervapoursynth/vapoursynth-fillborders",

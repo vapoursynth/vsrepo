@@ -5,6 +5,7 @@
 	"description": "Scene change detection. Reads scene data from a given file. Adds the pertinent _SceneChangePrev and _SceneChangeNext properties to each frame.",
 	"doom9": "https://forum.doom9.org/showthread.php?t=186359",
 	"github": "https://github.com/adworacz/zscene",
+	"pypiname": "vapoursynth-zscene",
 	"identifier": "com.adub.zscene",
 	"namespace": "zscene",
 	"releases": [

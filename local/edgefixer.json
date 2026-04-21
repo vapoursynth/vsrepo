@@ -7,6 +7,7 @@
 	"identifier": "the.weather.channel",
 	"namespace": "edgefixer",
 	"github": "https://github.com/sekrit-twc/EdgeFixer",
+	"pypiname": "vapoursynth-edgefixer",
 	"releases": [
 		{
 			"version": "r2",

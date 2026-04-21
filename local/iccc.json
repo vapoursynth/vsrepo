@@ -5,6 +5,7 @@
 	"description": "Little CMS based ICC profile simulation for VapourSynth.",
 	"doom9": "https://forum.doom9.org/showthread.php?t=183115",
 	"github": "https://github.com/YomikoR/VapourSynth-ICCConvert",
+	"pypiname": "vapoursynth-iccconvert",
 	"identifier": "yomiko.collection.iccconvert",
 	"namespace": "iccc",
 	"api": 4,

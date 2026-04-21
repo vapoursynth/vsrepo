@@ -7,6 +7,7 @@
 	"identifier": "com.holywu.dctfilter",
 	"namespace": "dctf",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DCTFilter",
+	"pypiname": "vapoursynth-dctfilter",
 	"dependencies": [
 		"org.fftw.fftw3"
 	],

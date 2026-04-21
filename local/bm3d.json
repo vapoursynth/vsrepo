@@ -8,6 +8,7 @@
 	"identifier": "com.vapoursynth.bm3d",
 	"namespace": "bm3d",
 	"github": "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D",
+	"pypiname": "vapoursynth-bm3d",
 	"dependencies": [
 		"org.fftw.fftw3"
 	],

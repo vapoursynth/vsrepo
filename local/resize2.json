@@ -4,6 +4,7 @@
 	"category": "Resizing and Format Conversion",
 	"description": "resize2",
 	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-resize2",
+	"pypiname": "vapoursynth-resize2",
 	"identifier": "dev.setsugen.resize2",
 	"namespace": "resize2",
 	"releases": [

@@ -4,6 +4,7 @@
 	"category": "Denoising",
 	"description": "Non-local means denoise filter implemented in ISPC. Drop-in replacement of the venerable KNLMeansCL, but without the OpenCL dependency (CPU only).",
 	"github": "https://github.com/AmusementClub/vs-nlm-ispc",
+	"pypiname": "vapoursynth-nlm-ispc",
 	"identifier": "io.github.amusementclub.vs-nlm-ispc",
 	"namespace": "nlm_ispc",
 	"releases": [

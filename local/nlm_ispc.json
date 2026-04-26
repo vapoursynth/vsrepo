@@ -9,6 +9,19 @@
 	"namespace": "nlm_ispc",
 	"releases": [
 		{
+			"version": "v4",
+			"published": "2026-04-19T01:05:27Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/vs-nlm-ispc/releases/download/v4/vs-nlm-ispc-windows-x64.v4.7z",
+				"files": {
+					"vsnlm_ispc.dll": [
+						"bin/vsnlm_ispc.dll",
+						"d6b9b7d2693cf122146ffd5fe752edbaf12f4f00534d17a93e586a8bcf305a5c"
+					]
+				}
+			}
+		},
+		{
 			"version": "v2",
 			"published": "2022-04-18T02:34:54Z",
 			"win64": {

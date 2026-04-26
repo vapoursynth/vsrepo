@@ -9,6 +9,9 @@
 	"identifier": "org.ivtc.v",
 	"namespace": "vivtc",
 	"api": 4,
+	"ignore": [
+		"R2"
+	],
 	"releases": [
 		{
 			"version": "R1",

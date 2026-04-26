@@ -13,7 +13,8 @@
 		"org.fftw.fftw3"
 	],
 	"ignore": [
-		"r9"
+		"r9",
+		"r10"
 	],
 	"releases": [
 		{

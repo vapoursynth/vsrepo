@@ -12,6 +12,10 @@
 	"dependencies": [
 		"org.fftw.fftw3"
 	],
+	"ignore": [
+		"v26",
+		"v25"
+	],
 	"releases": [
 		{
 			"version": "v24",

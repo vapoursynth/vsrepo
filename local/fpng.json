@@ -8,6 +8,10 @@
 	"pypiname": "vsfpng",
 	"identifier": "tools.mike.fpng",
 	"namespace": "fpng",
+	"ignore": [
+		"1.1",
+		"1.2"
+	],
 	"releases": [
 		{
 			"version": "1.0",

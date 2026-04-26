@@ -8,6 +8,9 @@
 	"identifier": "com.vapoursynth.dmetrics",
 	"namespace": "dmetrics",
 	"api": 4,
+	"ignore": [
+		"R2"
+	],
 	"releases": [
 		{
 			"version": "R1",

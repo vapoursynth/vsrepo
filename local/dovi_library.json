@@ -51,6 +51,19 @@
 	],
 	"releases": [
 		{
+			"version": "2.3.2",
+			"published": "2026-04-05T13:17:42Z",
+			"win64": {
+				"url": "https://github.com/quietvoid/dovi_tool/releases/download/2.3.2/libdovi-3.3.2-x86_64-pc-windows-msvc.zip",
+				"files": {
+					"dovi.dll": [
+						"dovi.dll",
+						"9fbfc6505bd39b0688a776007ff017320f36b65a5163b32df367bc37d1110e5b"
+					]
+				}
+			}
+		},
+		{
 			"version": "2.3.1",
 			"published": "2025-08-22T10:59:18Z",
 			"win64": {

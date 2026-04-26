@@ -10,6 +10,9 @@
 	"namespace": "descale",
 	"github": "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-descale",
 	"api": 4,
+	"ignore": [
+		"r12"
+	],
 	"releases": [
 		{
 			"version": "r11",

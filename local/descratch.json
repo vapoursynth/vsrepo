@@ -9,6 +9,9 @@
 	"pypiname": "vapoursynth-descratch",
 	"identifier": "com.vapoursynth.descratch",
 	"namespace": "descratch",
+	"ignore": [
+		"R4"
+	],
 	"releases": [
 		{
 			"version": "R3",

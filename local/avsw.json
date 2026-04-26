@@ -10,6 +10,23 @@
 	"github": "https://github.com/sekrit-twc/avsproxy",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2026-04-25T23:19:56Z",
+			"win64": {
+				"url": "https://github.com/sekrit-twc/avsproxy/releases/download/r3/avsproxy_r3.7z",
+				"files": {
+					"avsproxy.dll": [
+						"avsproxy.dll",
+						"84cffb7d4250539b8d4ec0a35dd71d62c75421e6a726f6be6fb9897ea77cd71a"
+					],
+					"avshost_native.exe": [
+						"avshost_native.exe",
+						"a6f99e025c76b3f334ec6bcd904c77dcfdd981c4450c603062bf758eda1eac69"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2021-08-29T23:00:38Z",
 			"win64": {

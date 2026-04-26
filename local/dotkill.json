@@ -8,6 +8,9 @@
 	"pypiname": "vapoursynth-dotkill",
 	"identifier": "com.vapoursynth.dotkill",
 	"namespace": "dotkill",
+	"ignore": [
+		"R3"
+	],
 	"releases": [
 		{
 			"version": "R2",

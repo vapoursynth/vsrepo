@@ -8,6 +8,10 @@
 	"identifier": "com.nodame.scxvid",
 	"namespace": "scxvid",
 	"github": "https://github.com/dubhatervapoursynth/vapoursynth-scxvid",
+	"ignore": [
+		"v2",
+		"v3"
+	],
 	"releases": [
 		{
 			"version": "v1",

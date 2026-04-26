@@ -8,6 +8,9 @@
 	"identifier": "com.nodame.fillborders",
 	"namespace": "fb",
 	"github": "https://github.com/dubhatervapoursynth/vapoursynth-fillborders",
+	"ignore": [
+		"v3"
+	],
 	"releases": [
 		{
 			"version": "v2",

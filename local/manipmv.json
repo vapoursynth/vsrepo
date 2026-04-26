@@ -7,6 +7,9 @@
 	"pypiname": "vapoursynth-manipmv",
 	"identifier": "tools.mike.manipmv",
 	"namespace": "manipmv",
+	"ignore": [
+		"1.3.0"
+	],
 	"releases": [
 		{
 			"version": "1.2.2",

@@ -7,7 +7,21 @@
 	"identifier": "day.simultaneous.4",
 	"namespace": "timecube",
 	"github": "https://github.com/sekrit-twc/timecube",
+	"pypiname": "vapoursynth-timecube",
 	"releases": [
+		{
+			"version": "r4",
+			"published": "2026-04-25T23:06:53Z",
+			"win64": {
+				"url": "https://github.com/sekrit-twc/timecube/releases/download/r4/timecube_r4.7z",
+				"files": {
+					"vscube.dll": [
+						"vscube.dll",
+						"fbfe2c7ed2a5cf587af52ddaaf400a3b61b94d3b1fd80829a33da98e4f04a252"
+					]
+				}
+			}
+		},
 		{
 			"version": "r3.1",
 			"published": "2022-01-28T23:07:31Z",

@@ -19,6 +19,32 @@
 	],
 	"releases": [
 		{
+			"version": "r14",
+			"published": "2026-04-17T14:46:32Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r14/VapourSynth-BilateralGPU_RTC-r14.7z",
+				"files": {
+					"BilateralGPU_RTC.dll": [
+						"VapourSynth-BilateralGPU_RTC-r14/BilateralGPU_RTC.dll",
+						"863f6272c72a15190d9217bd829495f7e7bf528558420ae920b81ea613ed6366"
+					]
+				}
+			}
+		},
+		{
+			"version": "r13",
+			"published": "2025-09-06T07:53:17Z",
+			"win64": {
+				"url": "https://github.com/WolframRhodium/VapourSynth-BilateralGPU/releases/download/r13/VapourSynth-BilateralGPU_RTC-r13.7z",
+				"files": {
+					"BilateralGPU_RTC.dll": [
+						"VapourSynth-BilateralGPU_RTC-r13/BilateralGPU_RTC.dll",
+						"caae25ec547cd48fae9fa09d17cb528bdf89a0c4d6e30e2143a7c014715f7b74"
+					]
+				}
+			}
+		},
+		{
 			"version": "r12",
 			"published": "2025-08-22T11:34:27Z",
 			"win64": {

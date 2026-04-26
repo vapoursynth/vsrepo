@@ -6,10 +6,24 @@
 	"github": "https://github.com/AmusementClub/VapourSynth-WNNM",
 	"identifier": "com.wolframrhodium.wnnm",
 	"namespace": "wnnm",
+	"pypiname": "vapoursynth-wnnm",
 	"device": [
 		"cuda"
 	],
 	"releases": [
+		{
+			"version": "v3",
+			"published": "2026-04-24T12:05:35Z",
+			"win64": {
+				"url": "https://github.com/AmusementClub/VapourSynth-WNNM/releases/download/v3/VapourSynth-WNNM-v3.7z",
+				"files": {
+					"wnnm.dll": [
+						"wnnm.dll",
+						"a1d29296b8095f5355b79c239dc6491de9f4f196110f25d2e6ea807f2eae3247"
+					]
+				}
+			}
+		},
 		{
 			"version": "v2",
 			"published": "2022-12-13T12:03:16Z",

@@ -10,6 +10,28 @@
 	"pypiname": "vapoursynth-edgefixer",
 	"releases": [
 		{
+			"version": "r2.1",
+			"published": "2026-04-21T02:45:21Z",
+			"win32": {
+				"url": "https://github.com/sekrit-twc/EdgeFixer/releases/download/r2.1/EdgeFixer_r2.1.7z",
+				"files": {
+					"EdgeFixer.dll": [
+						"EdgeFixer_r2.1/x86/EdgeFixer.dll",
+						"74202b65520855892b938d53cd9798065435b6d738a28eee3d4f965a2d57c624"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/sekrit-twc/EdgeFixer/releases/download/r2.1/EdgeFixer_r2.1.7z",
+				"files": {
+					"EdgeFixer.dll": [
+						"EdgeFixer_r2.1/x64/EdgeFixer.dll",
+						"5e465a34a7f441ce789fd3e417f10871eacd71d876abfdc47304ab720155133d"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2020-08-22T19:03:08Z",
 			"win32": {

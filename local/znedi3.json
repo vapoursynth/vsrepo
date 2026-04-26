@@ -7,10 +7,24 @@
 	"identifier": "xxx.abc.znedi3",
 	"namespace": "znedi3",
 	"github": "https://github.com/sekrit-twc/znedi3",
+	"pypiname": "vapoursynth-znedi3",
 	"dependencies": [
 		"com.deinterlace.nnedi3.weights"
 	],
 	"releases": [
+		{
+			"version": "r3",
+			"published": "2026-04-25T23:18:02Z",
+			"win64": {
+				"url": "https://github.com/sekrit-twc/znedi3/releases/download/r3/znedi3_r3.7z",
+				"files": {
+					"vsznedi3.dll": [
+						"vsznedi3.dll",
+						"4fffd4f7cb75372f1e08b2033519ec50f9ffbf564399a42c73b987ad8acd6a5f"
+					]
+				}
+			}
+		},
 		{
 			"version": "3bd542a",
 			"published": "2026-01-10T23:46:07Z",

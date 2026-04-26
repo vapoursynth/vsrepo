@@ -9,6 +9,9 @@
 	"pypiname": "vapoursynth-sangnom",
 	"identifier": "com.mio.sangnom",
 	"namespace": "sangnom",
+	"ignore": [
+		"r43"
+	],
 	"releases": [
 		{
 			"version": "r42",

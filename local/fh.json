@@ -8,6 +8,10 @@
 	"pypiname": "vapoursynth-fieldhint",
 	"identifier": "com.nodame.fieldhint",
 	"namespace": "fh",
+	"ignore": [
+		"v4",
+		"v5"
+	],
 	"releases": [
 		{
 			"version": "v3",

@@ -10,6 +10,19 @@
 	"namespace": "zscene",
 	"releases": [
 		{
+			"version": "0.5",
+			"published": "2026-04-15T15:28:42Z",
+			"win64": {
+				"url": "https://github.com/adworacz/zscene/releases/download/0.5/zscene-x86_64-windows.zip",
+				"files": {
+					"zscene.dll": [
+						"zscene.dll",
+						"deadb0109e910f6208ef09c3e45c8d4d88fc7af7d4ecf58cd640107ca897b91c"
+					]
+				}
+			}
+		},
+		{
 			"version": "0.4",
 			"published": "2026-02-11T23:38:32Z",
 			"win64": {

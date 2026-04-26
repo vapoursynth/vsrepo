@@ -11,7 +11,8 @@
 	"pypiname": "vapoursynth-deblock",
 	"ignore": [
 		"r1",
-		"r6.1"
+		"r6.1",
+		"r8"
 	],
 	"releases": [
 		{

@@ -7,6 +7,9 @@
 	"pypiname": "vapoursynth-edgemasks",
 	"identifier": "com.holywu.edgemasks",
 	"namespace": "edgemasks",
+	"ignore": [
+		"r4"
+	],
 	"releases": [
 		{
 			"version": "r3.2",

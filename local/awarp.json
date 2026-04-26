@@ -7,6 +7,9 @@
 	"pypiname": "vapoursynth-awarp",
 	"identifier": "com.holywu.awarp",
 	"namespace": "awarp",
+	"ignore": [
+		"r3"
+	],
 	"releases": [
 		{
 			"version": "r2",

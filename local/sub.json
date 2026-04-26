@@ -9,6 +9,9 @@
 	"identifier": "biz.srsfckn.subtext",
 	"namespace": "sub",
 	"api": 4,
+	"ignore": [
+		"R6"
+	],
 	"releases": [
 		{
 			"version": "R5",

@@ -6,6 +6,7 @@
 	"github": "https://github.com/AmusementClub/vs-dfttest2",
 	"identifier": "io.github.amusementclub.dfttest2_cuda",
 	"namespace": "dfttest2_cuda",
+	"pypiname": "vapoursynth-dfttest2-cuda",
 	"device": [
 		"cuda"
 	],

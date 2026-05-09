@@ -6,6 +6,7 @@
 	"github": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA",
 	"identifier": "com.wolframrhodium.bm3dcuda",
 	"namespace": "bm3dcuda",
+	"pypiname": "vapoursynth-bm3dcuda",
 	"device": [
 		"cuda"
 	],

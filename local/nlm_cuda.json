@@ -6,6 +6,7 @@
 	"github": "https://github.com/AmusementClub/vs-nlm-cuda",
 	"identifier": "io.github.amusementclub.nlm_cuda",
 	"namespace": "nlm_cuda",
+	"pypiname": "vapoursynth-nlm-cuda",
 	"device": [
 		"cuda"
 	],

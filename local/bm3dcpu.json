@@ -6,6 +6,7 @@
 	"github": "https://github.com/WolframRhodium/VapourSynth-BM3DCUDA",
 	"identifier": "com.wolframrhodium.bm3dcpu",
 	"namespace": "bm3dcpu",
+	"pypiname": "vapoursynth-bm3dcpu",
 	"ignore": [
 		"R1",
 		"R2",

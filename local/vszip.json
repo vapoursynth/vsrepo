@@ -6,6 +6,7 @@
 	"github": "https://github.com/dnjulek/vapoursynth-zip",
 	"identifier": "com.julek.vszip",
 	"namespace": "vszip",
+	"pypiname": "vapoursynth-vszip",
 	"releases": [
 		{
 			"version": "R13",

@@ -6,6 +6,7 @@
 	"github": "https://github.com/sgt0/vapoursynth-fftspectrum-rs",
 	"identifier": "sgt.fftspectrum_rs",
 	"namespace": "fftspectrum_rs",
+	"pypiname": "vapoursynth-fftspectrum-rs",
 	"releases": [
 		{
 			"version": "v1.0.13",

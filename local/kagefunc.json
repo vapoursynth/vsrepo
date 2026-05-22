@@ -7,6 +7,7 @@
 	"identifier": "kagefunc",
 	"modulename": "kagefunc",
 	"github": "https://github.com/Irrational-Encoding-Wizardry/kagefunc",
+	"pypiname": "kagefunc",
 	"updatemode": "git-commits",
 	"dependencies": [
 		"biz.srsfckn.subtext",

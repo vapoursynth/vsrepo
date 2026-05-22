@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Contrast Aware Multiscale Banding Index (CAMBI).",
 	"github": "https://github.com/sgt0/vapoursynth-cambi",
+	"pypiname": "vapoursynth-cambi",
 	"identifier": "sgt.cambi",
 	"namespace": "cambi",
 	"releases": [

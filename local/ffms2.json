@@ -8,6 +8,7 @@
 	"identifier": "com.vapoursynth.ffms2",
 	"namespace": "ffms2",
 	"github": "https://github.com/FFMS/ffms2",
+	"pypiname": "vapoursynth-ffms2",
 	"ignore": [
 		"ffms-2.17",
 		"2.18",

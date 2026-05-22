@@ -7,6 +7,7 @@
 	"identifier": "com.nodame.dedot",
 	"namespace": "dedot",
 	"github": "https://github.com/dubhatervapoursynth/vapoursynth-dedot",
+	"pypiname": "vapoursynth-dedot",
 	"releases": [
 		{
 			"version": "v1",

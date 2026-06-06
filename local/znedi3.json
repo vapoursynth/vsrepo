@@ -13,6 +13,32 @@
 	],
 	"releases": [
 		{
+			"version": "r3.2",
+			"published": "2026-06-06T00:40:20Z",
+			"win64": {
+				"url": "https://github.com/sekrit-twc/znedi3/releases/download/r3.2/znedi3_r3.2.7z",
+				"files": {
+					"vsznedi3.dll": [
+						"vsznedi3.dll",
+						"b3a4358ebacdaf92387d40f15b92521dc445c9338cde895f2d491edfb10a7579"
+					]
+				}
+			}
+		},
+		{
+			"version": "r3.1",
+			"published": "2026-05-19T01:12:34Z",
+			"win64": {
+				"url": "https://github.com/sekrit-twc/znedi3/releases/download/r3.1/znedi3_r3.1.7z",
+				"files": {
+					"vsznedi3.dll": [
+						"vsznedi3.dll",
+						"3a3b21f8f38ebc9ba83cf33cd10fc7e4e6e7b90762f454f0c82b1a014eeb183d"
+					]
+				}
+			}
+		},
+		{
 			"version": "r3",
 			"published": "2026-04-25T23:18:02Z",
 			"win64": {

@@ -352,6 +352,10 @@ def get_latest_installable_release(p: MutableMapping) -> Optional[MutableMapping
 def can_install(p: MutableMapping) -> bool:
     return get_latest_installable_release(p) is not None
 
+def print_pypi_notice(p: MutableMapping) -> None:
+    print("Package '{}' is no longer available through vsrepo and must be installed / updated via pip instead:".format(p['name']))
+    print("    pip install {}".format(p['pypiname']))
+
 
 def make_pyversion(version: str, index: int) -> str:
     PEP440REGEX = re.compile(r"(\d+!)?\d+(\.\d+)*((?:a|b|rc)\d+)?(\.post\d+)?(\.dev\d+)?(\+[a-zA-Z0-9]+)?")
@@ -600,6 +604,9 @@ def install_files(p: MutableMapping) -> Tuple[int, int]:
 
 def install_package(name: str) -> Tuple[int, int, int]:
     p = get_package_from_name(name)
+    if p.get('pypiname'):
+        print_pypi_notice(p)
+        return (0, 0, 1)
     if can_install(p):
         inst = (0, 0, 0)
         if not args.skip_deps:
@@ -634,6 +641,9 @@ def upgrade_files(p: MutableMapping) -> Tuple[int, int, int]:
 def upgrade_package(name, force) -> Tuple[int, int, int]:
     inst = (0, 0, 0)
     p = get_package_from_name(name)
+    if p.get('pypiname'):
+        print_pypi_notice(p)
+        return inst
     if not is_package_installed(p['identifier']):
         print('Package ' + p['name'] + ' not installed, can\'t upgrade')
     elif is_package_upgradable(p['identifier'], force):
@@ -653,6 +663,9 @@ def upgrade_all_packages(force: bool) -> Tuple[int, int, int]:
             pkg = get_package_from_id(id, True)
             if pkg is None:
                 return inst
+            if pkg.get('pypiname'):
+                print_pypi_notice(pkg)
+                continue
             res = upgrade_files(pkg)
             inst = (inst[0] + res[0], inst[1] + res[1], inst[2] + res[2])
     return inst

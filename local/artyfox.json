@@ -8,6 +8,110 @@
 	"namespace": "artyfox",
 	"releases": [
 		{
+			"version": "R20.5",
+			"published": "2026-07-09T14:32:32Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R20.5/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"8a5e649143c7537ccb9559adacf6524c85c13c6b499b113c92e85e90f80265ae"
+					]
+				}
+			}
+		},
+		{
+			"version": "R20.4",
+			"published": "2026-06-28T12:32:04Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R20.4/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"cb4720db2d1b5396701a1892447a24cff1149015c448684d44e66d9834ee6697"
+					]
+				}
+			}
+		},
+		{
+			"version": "R20.3",
+			"published": "2026-06-25T04:53:14Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R20.3/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"ff68adc45a8558dc280c2098ac23a69d1e6f5a478d0baf651c1f46672bfa96ad"
+					]
+				}
+			}
+		},
+		{
+			"version": "R20.2",
+			"published": "2026-06-23T18:47:18Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R20.2/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"26364cc636f947ec6cdb4fd865a6be99ceeeddabab50802d22f7b7d19fa40d3d"
+					]
+				}
+			}
+		},
+		{
+			"version": "R20.1",
+			"published": "2026-06-20T16:56:02Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R20.1/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"5dee5767d41c4a0458b926dd4d1dd2e8258acbc22c0e9c88cb95dc7940d80306"
+					]
+				}
+			}
+		},
+		{
+			"version": "R20",
+			"published": "2026-06-20T14:49:15Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R20/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"29ca5b699acc87e7bff44ab29574f5d81002f3714247bbc83a606975e5a7667a"
+					]
+				}
+			}
+		},
+		{
+			"version": "R19",
+			"published": "2026-06-13T12:38:51Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R19/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"2a3100a1449a27b461a473022d1feb0bc3813902c5eb3e8cef2f24aa2f985929"
+					]
+				}
+			}
+		},
+		{
+			"version": "R18.3",
+			"published": "2026-06-09T19:16:44Z",
+			"win64": {
+				"url": "https://github.com/artyfoxx/artyfox-plugin/releases/download/R18.3/artyfox.zip",
+				"files": {
+					"artyfox.dll": [
+						"artyfox.dll",
+						"a6836f8d718ae910922551febd97a7c24669a145f073946dc5c6345115bc1b47"
+					]
+				}
+			}
+		},
+		{
 			"version": "R18.2",
 			"published": "2026-06-06T08:17:15Z",
 			"win64": {

@@ -10,6 +10,38 @@
 	"wheelname": "vsjetpack",
 	"releases": [
 		{
+			"version": "2.1.1",
+			"published": "2026-07-06T16:47:13.759599Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/60/89/d64b5b0930124850137d73f7d374f1eba9d569e9cbf7e309d5723c25a9c8/vsjetpack-2.1.1-py3-none-any.whl",
+				"hash": "8355a4715f8c6c17896b7f0d5f3f453216aeb4f73285ca27e9ac5ae37e611b69"
+			}
+		},
+		{
+			"version": "2.1.0",
+			"published": "2026-07-01T22:04:08.890699Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/07/23/2fa8b14c498fb2d6de66e4ba2f6448326b785712090dc6c88bcda8110565/vsjetpack-2.1.0-py3-none-any.whl",
+				"hash": "6a71d0633e4e69176b6d05d5f81e1992dd4a5b0185d0e37d591544032dd3e8ff"
+			}
+		},
+		{
+			"version": "2.0.0",
+			"published": "2026-06-25T20:46:30.212103Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/e4/cd/70d6c176e9e537bda00023f74a845dae7e0fae02bb8dafacdf2a47a0b914/vsjetpack-2.0.0-py3-none-any.whl",
+				"hash": "14da314243afa3f5ffcdb454059cd8ba496d1c0304fcf7ca54408c0885d06200"
+			}
+		},
+		{
+			"version": "2.0.0rc2",
+			"published": "2026-06-12T17:04:31.673304Z",
+			"wheel": {
+				"url": "https://files.pythonhosted.org/packages/d1/12/16b67ebfa47f60f6893250683feed7b45754f174f6a939869c9e7da839fb/vsjetpack-2.0.0rc2-py3-none-any.whl",
+				"hash": "ba8f10b84dc166769f1e60485cd37f88422c684a5a9bb4c8f3ddc9f342a8a16f"
+			}
+		},
+		{
 			"version": "2.0.0rc1",
 			"published": "2026-06-05T18:52:15.623628Z",
 			"wheel": {

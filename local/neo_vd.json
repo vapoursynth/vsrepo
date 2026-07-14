@@ -9,6 +9,28 @@
 	"namespace": "neo_vd",
 	"releases": [
 		{
+			"version": "r3",
+			"published": "2026-06-08T05:23:12Z",
+			"win32": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_Vague_Denoiser/releases/download/r3/Release_r3.zip",
+				"files": {
+					"neo-vague-denoiser.dll": [
+						"msvc-x86/neo-vague-denoiser.dll",
+						"395f7525d01713015ab015e3247ba91e26ba1fa6d16c726b29db38c56ef7d80b"
+					]
+				}
+			},
+			"win64": {
+				"url": "https://github.com/HomeOfAviSynthPlusEvolution/neo_Vague_Denoiser/releases/download/r3/Release_r3.zip",
+				"files": {
+					"neo-vague-denoiser.dll": [
+						"msvc-x64/neo-vague-denoiser.dll",
+						"7b435ee550622968a64f57443b807090dcc95187fef46baaacb864d3ded82a6a"
+					]
+				}
+			}
+		},
+		{
 			"version": "r2",
 			"published": "2020-06-22T03:49:47Z",
 			"win32": {

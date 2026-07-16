@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Basic audio functions",
 	"github": "https://github.com/ropagr/VS-AudioTools",
+	"pypiname": "vapoursynth-atools",
 	"identifier": "com.ropagr.atools",
 	"namespace": "atools",
 	"releases": [

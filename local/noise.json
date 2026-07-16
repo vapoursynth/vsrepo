@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "Generates film like noise or other effects (like rain) by adding random noise to a video clip",
 	"github": "https://github.com/wwww-wwww/vs-noise",
+	"pypiname": "vsnoise",
 	"identifier": "moe.grass.addnoise",
 	"namespace": "noise",
 	"releases": [

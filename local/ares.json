@@ -4,6 +4,7 @@
 	"category": "Resizing and Format Conversion",
 	"description": "Audio sample rate and sample type converter",
 	"github": "https://github.com/ropagr/VapourSynth-AudioResample",
+	"pypiname": "vapoursynth-ares",
 	"identifier": "com.ropagr.ares",
 	"namespace": "ares",
 	"releases": [

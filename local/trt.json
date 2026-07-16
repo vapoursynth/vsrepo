@@ -5,6 +5,7 @@
 	"description": "TensorRT ML Filter. Optimized CUDA runtime.",
 	"website": "https://github.com/AmusementClub/vs-mlrt/wiki",
 	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"pypiname": "vapoursynth-mlrt-trt",
 	"identifier": "io.github.amusementclub.vs_tensorrt",
 	"namespace": "trt",
 	"device": [

@@ -6,6 +6,7 @@
 	"identifier": "dfttest2",
 	"modulename": "dfttest2_script",
 	"github": "https://github.com/AmusementClub/vs-dfttest2",
+	"pypiname": "dfttest2",
 	"device": [
 		"cpu",
 		"cuda"

@@ -5,6 +5,7 @@
 	"description": "NCNN-based ML GPU (Vulkan) Filter Runtime. Includes support for on-the-fly ONNX to ncnn native format conversion.",
 	"website": "https://github.com/AmusementClub/vs-mlrt/wiki",
 	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"pypiname": "vapoursynth-mlrt-ncnn",
 	"identifier": "io.github.amusementclub.vs_ncnn",
 	"namespace": "ncnn",
 	"device": [

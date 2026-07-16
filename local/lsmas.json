@@ -7,6 +7,7 @@
 	"identifier": "systems.innocent.lsmas",
 	"namespace": "lsmas",
 	"github": "https://github.com/HomeOfAviSynthPlusEvolution/L-SMASH-Works",
+	"pypiname": "vapoursynth-lsmas",
 	"ignore": [
 		"r935+2"
 	],

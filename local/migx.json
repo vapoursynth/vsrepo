@@ -4,6 +4,7 @@
 	"category": "Other",
 	"description": "MIGraphX is a highly optimized AI inference runtime for AMD GPUs. It also uses benchmarking to find the optimal kernel",
 	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"pypiname": "vapoursynth-mlrt-migx",
 	"identifier": "io.github.amusementclub.vs_migraphx",
 	"namespace": "migx",
 	"device": [

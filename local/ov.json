@@ -5,6 +5,7 @@
 	"description": "OpenVINO ML Filter Runtime. Optimized for CPU.",
 	"website": "https://github.com/AmusementClub/vs-mlrt/wiki",
 	"github": "https://github.com/AmusementClub/vs-mlrt",
+	"pypiname": "vapoursynth-mlrt-ov",
 	"identifier": "io.github.amusementclub.vs_openvino",
 	"namespace": "ov",
 	"dependencies": [
